@@ -1,0 +1,45 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	section.section-home-slider
+		.home-slider.js-home-slider
+			.home-slider-slide
+				img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				.hms-info
+					.hms-info__top
+						.hms-info__title Семинар Крийя
+					.hms-info__bottom
+						.hms-info__area Москва
+						.hms-info__date 20 февраля 2021
+			.home-slider-slide
+				img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				.hms-info
+					.hms-info__top
+						.hms-info__title Семинар Крийя 2
+					.hms-info__bottom
+						.hms-info__area Ростов-на-Дону
+						.hms-info__date 35 марта 2022
+			.home-slider-slide
+				img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				.hms-info
+					.hms-info__top
+						.hms-info__title Семинар Крийя 3
+					.hms-info__bottom
+						.hms-info__area Новосибирск
+						.hms-info__date 40 апреля 2023
+	section.section-home-quote
+		.container
+			.hm-quote
+				.hm-quote__main Практикуя Крийя йогу мы создаём свою жизнь <br> и освобождаемся от влияний
+				.hm-quote__info Наука Крийя — это высший метод постижения Закона Вселенной, где истинный ответ приходит из глубин внутреннего Я. <br> 10 минут практики Крийя эквивалентно 20-ти годам естественной эволюции человека.
+				.hm-quote__name Мастер Имрам
+			.hr

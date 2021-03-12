@@ -1,0 +1,177 @@
+.section-home-slider {}
+
+.home-slider {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	max-width: 100%;
+
+
+
+	.slick-dots {
+		position: absolute;
+
+		z-index: 4;
+		left: 95px;
+		top: 50%;
+		transform: translate(0, -50%);
+		margin-top: 4px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		list-style: none;
+
+		li {
+			margin: 11px 0;
+			list-style: none;
+
+			width: 9px;
+			height: 9px;
+			border: 1px solid #FFFFFF;
+			box-sizing: border-box;
+			border-radius: 50%;
+			transition: .3s;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: #ffffff;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+				transition: .3s;
+
+			}
+
+			&.slick-active {
+				&::before {
+					opacity: 1;
+				}
+			}
+
+			button {
+				display: none;
+			}
+		}
+	}
+}
+
+.home-slider-slide {
+	position: relative;
+	height: calc(100vh - 90px);
+
+	&::before {
+		z-index: 3;
+		display: block;
+		width: 533px;
+		height: 100%;
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: linear-gradient(90deg, rgba(3, 17, 83, 0.67) 0%, rgba(28, 40, 94, 0) 100%);
+	}
+}
+
+.hms-pic {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.hms-info {
+	position: absolute;
+	left: 103px;
+	//bottom: 81px;
+    bottom: 88px;
+	z-index: 4;
+
+	&__top {}
+
+
+	&__title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		line-height: 59px;
+		letter-spacing: -1.2px;
+		color: #FFFFFF;
+	}
+
+	&__bottom {
+		margin-top: 19px;
+		display: flex;
+		align-items: center;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		line-height: 22px;
+		letter-spacing: -0.7px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+	}
+
+	&__area {
+		margin-right: 23px;
+	}
+
+	&__date {
+		font-weight: 300;
+	}
+}
+
+
+.section-home-quote {
+    padding-top: 139px;}
+
+.hm-quote {
+	&__main {
+		font-family: 'Savoye LET';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 58px;
+		line-height: 59px;
+		text-align: center;
+		letter-spacing: -1.73px;
+		color: #3E434D;
+		&::after{
+			content: '';
+			display: inline-block;
+			margin-right: -27px;
+		}
+	}
+
+	&__info {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 33px;
+		text-align: center;
+		color: #53565A;
+		margin-left: 30px;
+		letter-spacing: -0.04px;
+		margin-top: 35px;
+	}
+
+	&__name {
+		font-size: 17px;
+		line-height: 21px;
+		text-align: center;
+		color: #53565A;
+		margin-top: 42px;
+	}
+
+	br {}
+}
+
+.hr {}
