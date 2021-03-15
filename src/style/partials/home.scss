@@ -1,4 +1,3 @@
-
 .btn {
 	//min-height: 43px;
 	width: 256px;
@@ -28,7 +27,7 @@
 	transition-duration: .2s;
 	cursor: pointer;
 
-	&:hover{
+	&:hover {
 		border-color: #AFB4BF;
 		color: #AFB4BF;
 	}
@@ -183,7 +182,7 @@
 }
 
 body {
-	width: calc(100% + 17px);
+	//width: calc(100% + 17px);
 }
 
 .hm-quote {
@@ -402,3 +401,142 @@ body {
 	margin-left: -4px;
 
 }
+
+
+.read-more {
+	cursor: pointer;
+	display: inline-flex;
+	font-size: 17px;
+	color: #25378D;
+
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: normal;
+	position: relative;
+	padding-right: 10px;
+	transition-duration: .2s;
+
+	&::after {
+		transition-duration: .2s;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		content: '';
+		display: block;
+		background: url(../img/arrow-more.svg) no-repeat center center;
+		background-size: contain;
+		width: 6px;
+		height: 12px;
+		margin-top: 2px;
+	}
+
+	&:hover {
+		&::after {
+
+			right: -5px;
+		}
+
+		text-decoration: underline;
+	}
+
+}
+
+
+////////////////////////////
+
+
+
+.section-cria-medet {}
+
+.cria-medet {
+	.video-preview {
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	&__text {}
+
+	&__title {}
+
+	&__out {}
+
+	&__main {}
+
+	&__read-more {
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+}
+
+
+////////////////////////////
+
+
+
+.section-part-wsidebar {}
+
+.part-wsidebar {
+	display: flex;
+	justify-content: space-between;
+	&__main {
+		width: calc(100% - 358px);
+	}
+
+	&__sidebar {
+		width: 266px;
+		background: red;
+		color: #ffffff;
+		text-align: center;
+	}
+
+}
+
+.master-links {}
+
+.master-link {
+	&__pic {
+		img {}
+	}
+
+	&__text {}
+
+
+	&__title {}
+
+	&__more {}
+
+	&:hover {}
+
+	&:active {}
+
+	&:focus {}
+}
+
+.section-science-kria {
+	.scikria-item {}
+
+	.scikria-item-pic {
+		img {}
+	}
+
+	.scikria-item-text {
+		&__title {}
+
+		&__title2 {}
+
+		&__main {}
+
+		&__more {}
+	}
+
+	&--2 {}
+}
+
+.section-hmlearn {}
