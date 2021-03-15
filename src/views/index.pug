@@ -42,4 +42,120 @@ block main
 				.hm-quote__main Практикуя Крийя йогу мы создаём свою жизнь <br> и освобождаемся от влияний
 				.hm-quote__info Наука Крийя — это высший метод постижения Закона Вселенной, где истинный ответ приходит из глубин внутреннего Я. <br> 10 минут практики Крийя эквивалентно 20-ти годам естественной эволюции человека.
 				.hm-quote__name Мастер Имрам
-			.hr
+	.container
+		.hr
+	section.section-home-events
+		.container
+			.hm-events-slider.js-hm-events-slider
+				each val in [1, 2, 3, 4, 5]
+					.hm-events-slide__wrap
+						a.hm-events-slide(href="")
+							.hm-events-slide__pic
+								img(src="img/events/1.jpg", alt="")
+							.hm-events-slide__text
+								.hm-events-slide__name Мини-Ретрит
+								.hm-events-slide__meta
+									.hm-events-slide__area Москва
+									.hm-events-slide__date 20 февраля 2021
+								.hm-events-slide__info  Интенсивная групповая практика Крийя с Мастером. Сатсанги и ответы на вопросы.
+					.hm-events-slide__wrap
+						a.hm-events-slide(href="")
+							.hm-events-slide__pic
+								img(src="img/events/3.jpg", alt="")
+							.hm-events-slide__text
+								.hm-events-slide__name Семинар Имрам Крийя
+								.hm-events-slide__meta
+									.hm-events-slide__area Москва
+									.hm-events-slide__date 20 февраля 2021
+								.hm-events-slide__info Интенсивный 2-дневный курс обучения Крийя, на котором даются  6 из 7 ступеней Крийя.
+					.hm-events-slide__wrap
+						a.hm-events-slide(href="")
+							.hm-events-slide__pic
+								img(src="img/events/1.jpg", alt="")
+							.hm-events-slide__text
+								.hm-events-slide__name Мини-Ретрит
+								.hm-events-slide__meta
+									.hm-events-slide__area Москва
+									.hm-events-slide__date 20 февраля 2021
+								.hm-events-slide__info Интенсивная групповая практика Крийя с Мастером. Сатсанги и ответы на вопросы.
+
+			.hm-events-btn-wrap
+				a.btn(href="") Все мероприятия
+	.container
+		.hr
+
+	section.section-cria-medet
+		.container
+			.cria-medet
+				a.video-preview(href="", data-fancybox="")
+				.cria-medet__text
+					h2.cria-medet__title Медитация Крийя
+					.cria-medet__out Медитация – это выход за пределы ума
+					.cria-medet__main Это способность сохранить концентрацию на высокой Идее вплоть до ее полного проявления в вашем сознании, за пределами обычного ума.
+
+					a.cria-medet__read-more.read-more(href="") Подробнее
+
+	.container
+		.hr
+
+	section.section-part-wsidebar
+		.container
+			.part-wsidebar
+				.part-wsidebar__main
+					section.master-links
+						a.master-link(href="")
+							.master-link__pic
+								img(src="img/mlinks/1.jpg", alt="")
+							.master-link__text
+								.master-link__title События недели
+								.master-link__more.read-more Подробнее
+						a.master-link(href="")
+							.master-link__pic
+								img(src="img/mlinks/1.jpg", alt="")
+							.master-link__text
+								.master-link__title Статьи Мастера
+								.master-link__more.read-more Подробнее
+
+					.hr
+
+					section.section-science-kria
+						.scikria-item
+							.scikria-item-pic
+								img(src="img/scicria/1.jpg", alt="")
+							.scikria-item-text
+								h2.scikria-item-text__title Наука Крийя
+								.scikria-item-text__title2  Метод быстрой трансформации
+								.scikria-item-text__main Крийя является физическим, духовным и научным методом, посредством которого ускоряется развитие и достигается самореализация.
+								.scikria-item-text__more.read-more Подробнее
+						.scikria-item
+							.scikria-item-pic
+								img(src="img/scicria/2.jpg", alt="")
+							.scikria-item-text
+								h2.scikria-item-text__title О Мастере
+								.scikria-item-text__title2 Инициирует трансцендентность Крийя
+								.scikria-item-text__main Благодаря многолетней практике - садхане, Имрам достиг Реализации, т.е. Единства с Высшим Я, что в йоге рассматривается как Нирвикальпа Самадхи.
+								.scikria-item-text__more.read-more Подробнее
+
+					section.section-hmlearn(style="background-image:url(img/hmlearn.jpg);")
+
+
+					section.section-science-kria.section-science-kria--2
+						.scikria-item
+							.scikria-item-pic
+								img(src="img/scicria/1.jpg", alt="")
+							.scikria-item-text
+								h2.scikria-item-text__title Наука Крийя
+								.scikria-item-text__title2  Метод быстрой трансформации
+								.scikria-item-text__main Крийя является физическим, духовным и научным методом, посредством которого ускоряется развитие и достигается самореализация.
+								.scikria-item-text__more.read-more Подробнее
+						.scikria-item
+							.scikria-item-pic
+								img(src="img/scicria/2.jpg", alt="")
+							.scikria-item-text
+								h2.scikria-item-text__title О Мастере
+								.scikria-item-text__title2 Инициирует трансцендентность Крийя
+								.scikria-item-text__main Благодаря многолетней практике - садхане, Имрам достиг Реализации, т.е. Единства с Высшим Я, что в йоге рассматривается как Нирвикальпа Самадхи.
+								.scikria-item-text__more.read-more Подробнее
+
+
+				.part-wsidebar__sidebar

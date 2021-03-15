@@ -96,8 +96,10 @@
 		height: auto;
 		display: block;
 	}
-
-	&:hover {}
+	transition-duration: .2s;
+	&:hover {
+		opacity: .7;
+	}
 
 	&:active {}
 
@@ -133,7 +135,7 @@
 		transition-duration: .2s;
 
 		&:hover {
-			opacity: .7;
+			text-decoration-line: underline;
 		}
 
 		&:active {}
@@ -161,7 +163,7 @@
 	transition-duration: .2s;
 
 	&:hover {
-		opacity: .7;
+		text-decoration-line: underline;
 	}
 }
 
@@ -211,7 +213,13 @@
 
 		&:active {}
 
-		&:focus {}
+		&:focus {
+
+			svg path {
+				background: #29356E;
+				fill: red;
+			}
+		}
 	}
 
 	svg {
@@ -236,7 +244,8 @@
 		transition-duration: .2s;
 
 		&:hover {
-			opacity: .7;
+			text-decoration-line: underline;
 		}
 	}
 }
+
