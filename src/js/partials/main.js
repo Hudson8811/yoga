@@ -30,4 +30,149 @@ $(document).ready(function () {
 	}
 
 
+
+
+	my_songs = [{
+			"name": "Казачья",
+			"artist": "Игорь растеряев",
+			"album": "Звонарь",
+			"url": "img/song/track2.mp3",
+			"cover_art_url": "img/mlinks/1.jpg",
+			"orig_link": "https://itunes.com/1.mp3"
+		}, {
+			"name": "ASATO MA SAT GAMAYA",
+			"artist": "Ever New Joy",
+			"album": "Album Name",
+			"url": "img/song/track1.mp3",
+			"cover_art_url": "img/track1-cover.jpg",
+			"orig_link": "https://itunes.com/2.mp3"
+		},
+		{
+			"name": "Русская дорога.",
+			"artist": "Игорь растеряев",
+			"album": "Звонарь",
+			"url": "img/song/track3.mp3",
+			"cover_art_url": "img/mlinks/2.jpg",
+			"orig_link": "https://itunes.com/3.mp3"
+		}
+	];
+
+
+	var playlist = '';
+	my_songs.forEach(function (currentValue, index) {
+		playlist += '<div class="custom-audio-playlist amplitude-song-container amplitude-play-pause amplitude-paused amplitude-active-song-container" data-amplitude-song-index="' + index + '"><div class="custom-audio-playlist__artist">' + currentValue['artist'] + '</div><div class="custom-audio-playlist__song">' + currentValue['name'] + '</div></div>';
+	});
+	$('.music-player__playlist').append(playlist);
+
+
+
+	var soundRS = $('.js-song-progress-slider').rangeslider({
+		rangeClass: 'rangeslider soundRS',
+		disabledClass: 'rangeslider--disabled soundRS--disabled',
+		horizontalClass: 'rangeslider--horizontal soundRS--horizontal',
+		verticalClass: 'rangeslider--vertical soundRS--vertical',
+		fillClass: 'rangeslider__fill soundRS__fill',
+		handleClass: 'rangeslider__handle soundRS__handle',
+		polyfill: false,
+
+		onSlide: function (position, value) {
+			Amplitude.setSongPlayedPercentage(value)
+		},
+	});
+
+
+	var soundRS__progressContainer = $('.soundRS__progress-container');
+	var soundRS__fill = $('.soundRS__fill');
+	var soundRS__handle = $('.soundRS__handle');
+
+	function changeOrigLink() {
+		var idx = Amplitude.getActiveIndex();
+		console.log('idx' + idx);
+		$('#song-orig-link').attr('href', my_songs[idx]['orig_link']);
+	}
+	Amplitude.init({
+		"songs": my_songs,
+		"volume": 100,
+		//debug: true,
+		callbacks: {
+			timeupdate: function () {
+				var w = soundRS__progressContainer.width();
+				var percentage = Amplitude.getSongPlayedPercentage();
+				soundRS__fill.css('width', w / 100 * percentage + 'px');
+				soundRS__handle.css('left', 'calc(' + percentage + '% - 0px)');
+				//console.log(Amplitude.getSongPlayedPercentage());
+			},
+			initialized: function () {
+				changeOrigLink();
+			},
+			song_change: function () {
+				changeOrigLink();
+			}
+			/*,
+
+			stop: function(){
+				console.log("Audio has been stopped.")
+			},
+			pause: function(){
+				console.log("Audio has been stopped.")
+			},
+			play: function(){
+				console.log("Audio has been stopped.")
+			}*/
+		}
+	});
+	var volume_orientation = (window.matchMedia("(min-width: 1025px)").matches) ? 'horizontal' : 'vertical';
+	var mpVolumeRS_inp = $('.js-volume-slider');
+	var mpVolumeRS = mpVolumeRS_inp.rangeslider({
+			rangeClass: 'rangeslider volumeRS',
+			disabledClass: 'rangeslider--disabled volumeRS--disabled',
+			horizontalClass: 'rangeslider--horizontal volumeRS--horizontal',
+			verticalClass: 'rangeslider--vertical volumeRS--vertical',
+			fillClass: 'rangeslider__fill volumeRS__fill',
+			handleClass: 'rangeslider__handle volumeRS__handle',
+			orientation: volume_orientation,
+			polyfill: false,
+			onInit: function () {
+				//mpVolumeRS.rangeslider('update', true);
+			}
+		})
+		.on('input', function () {
+			mpVolumeRS_inp.val(this.value);
+		});
+	/*function soundRSevent() {
+	};
+	setInterval(soundRSevent, 1000);*/
+
+	/*mpVolumeRS.rangeslider({orientation: 'horizontal'});
+	mpVolumeRS.rangeslider({orientation: 'horizontal'});
+	mpVolumeRS.rangeslider({orientation: 'horizontal'});
+	mpVolumeRS.rangeslider({orientation: 'horizontal'});
+	mpVolumeRS.rangeslider({orientation: 'horizontal'});*/
+
+	//$("#js-song-progress-slider").rangeslider('update', true);
+	Amplitude.setRepeat(true);
+	Amplitude.pause();
+
+	$('input, div, progress').on('progress', function () {
+		console.log($(this).val());
+	});
+
+	/*
+	//Shows the playlist
+	document.getElementsByClassName('show-playlist')[0].addEventListener('click', function () {
+		document.getElementById('white-player-playlist-container').classList.remove('slide-out-top');
+		document.getElementById('white-player-playlist-container').classList.add('slide-in-top');
+		document.getElementById('white-player-playlist-container').style.display = "block";
+	});
+
+	//Hides the playlist
+	document.getElementsByClassName('close-playlist')[0].addEventListener('click', function () {
+		document.getElementById('white-player-playlist-container').classList.remove('slide-in-top');
+		document.getElementById('white-player-playlist-container').classList.add('slide-out-top');
+		document.getElementById('white-player-playlist-container').style.display = "none";
+	});
+
+*/
+
+
 });
