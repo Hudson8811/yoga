@@ -447,24 +447,72 @@ body {
 
 
 
-.section-cria-medet {}
+.section-cria-medet {
+	padding-top: 93px;
+	padding-bottom: 93px;
+}
 
 .cria-medet {
-	.video-preview {
+	display: flex;
+	.video-preview-wrapper {
+		max-width: 580px;
+		position: relative;
+		width: 100%;
+		margin-right: 34px;
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 358/580 * 100%;
+		}
 		&:hover {}
 
 		&:active {}
 
 		&:focus {}
+		
+	}
+	.video-preview {
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		height: 100%;
+	}
+	.video-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-49%,-50%);
+		width: 116px;
+		height: 116px;
+	}
+	&__text {
+		font-family: "Proxima Nova";
+		color: #53565A;
+		padding-top: 20px;
+		max-width: 470px;
 	}
 
-	&__text {}
+	&__title {
+		font-size: 35px;
+		line-height: 59px;
+		letter-spacing: -0.03em;
+		margin-bottom: 12px;
+	}
 
-	&__title {}
+	&__out {
+		font-size: 22px;
+		line-height: 30px;
+		margin-bottom: 3px;
+	}
 
-	&__out {}
-
-	&__main {}
+	&__main {
+		font-size: 17px;
+		line-height: 30px;
+		margin-bottom: 13px;
+	}
 
 	&__read-more {
 		&:hover {}
@@ -498,17 +546,56 @@ body {
 
 }
 
-.master-links {}
+.master-links {
+	display: flex;
+	padding-top: 93px;
+	padding-bottom: 93px;
+}
 
 .master-link {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:not(:last-child) {
+		margin-right: 37px;
+	}
 	&__pic {
-		img {}
+		position: relative;
+		max-width: 402px;
+		width: 100%;
+		margin-bottom: 9px;
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 248/402 * 100%;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
+		}
 	}
 
-	&__text {}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #3E434D;
+	}
 
 
-	&__title {}
+	&__title {
+		font-size: 28px;
+		line-height: 45px;
+		text-align: center;
+		letter-spacing: -0.03em;
+		margin-bottom: 5px;
+	}
 
 	&__more {}
 
@@ -520,23 +607,126 @@ body {
 }
 
 .section-science-kria {
-	.scikria-item {}
-
+	padding-top: 93px;
+	padding-bottom: 93px;
+	&--2 {
+		.scikria-item {
+			display: flex;
+			justify-content: space-between;
+			&:first-child {
+				margin-bottom: 93px;
+			}
+			.scikria-item-text__title2 {
+				margin-bottom: 4px;
+			}
+		}
+	}
+}
+.scikria-item {
+	display: flex;
+	justify-content: space-between;
+	&:first-child {
+		margin-bottom: 89px;
+	}
+	&:last-child {
+		flex-direction: row-reverse;
+		.scikria-item-pic {
+			margin-left: 5px;
+			margin-right: 0;
+		}
+		.scikria-item-text {
+			&__title2 {
+				font-size: 22px;
+				line-height: 36px;
+				margin-bottom: 7px;
+			}
+		}
+	}
 	.scikria-item-pic {
-		img {}
+		margin-right: 20px;
 	}
-
-	.scikria-item-text {
-		&__title {}
-
-		&__title2 {}
-
-		&__main {}
-
-		&__more {}
-	}
-
-	&--2 {}
 }
 
-.section-hmlearn {}
+.scikria-item-pic {
+	max-width: 403px;
+	width: 100%;
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		padding-top: 248.88/403 * 100%;
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.scikria-item-text {
+	padding-top: 15px;
+	max-width: 403px;
+	font-family: "Proxima Nova";
+	color: #3E434D;
+
+	&__title {
+		font-size: 35px;
+		line-height: 35px;
+		letter-spacing: -0.03em;
+		margin-bottom: 20px;
+	}
+
+	&__title2 {
+		font-size: 22px;
+		line-height: 36px;
+		margin-bottom: 1px;
+	}
+
+	&__main {
+		font-size: 17px;
+		line-height: 29px;
+		margin-bottom: 13px;
+		& span {
+			display: block;
+		}
+	}
+
+	&__more {}
+}
+
+.section-hmlearn {
+	padding-top: 400/842 * 100%;
+	position: relative;
+}
+
+.banner {
+	position: relative;
+	&__content {
+		position: absolute;
+		top: 22.4%;
+		left: 52%;
+		max-width: 317px;
+		color: #3E434D;
+		font-family: "Proxima Nova";
+	}
+	&__title {
+		margin-bottom: 5px;
+		font-size: 35px;
+		line-height: 35px;
+		letter-spacing: -0.03em;
+	}
+
+	&__title2 {
+		margin-bottom: 27px;
+		font-size: 22px;
+		line-height: 36px;
+	}
+
+	&__more {
+
+	}
+}
