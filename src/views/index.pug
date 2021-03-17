@@ -187,8 +187,9 @@ block main
 									img.social__icon.master__social-icon(src="img/icons/social-fb.svg")
 								a.social__link.master__social-link(href="#")
 									img.social__icon.master__social-icon(src="img/icons/social-vk.svg")
+
 					.insta-widget
-						.insta-widget__title INSTAGRAM
+						.insta-widget__title.custom-widget-title INSTAGRAM
 						.insta-widget__content
 							a.insta-widget__item(href="")
 								img(src="img/insta-widget/insta-1.jpg", alt="")
@@ -199,7 +200,7 @@ block main
 							a.insta-widget__item(href="")
 								img(src="img/insta-widget/insta-4.jpg", alt="")
 
-					.y-restyle
+					//.y-restyle
 						#instagram-new-1.widget.widget_instagram-new
 							h3.widget-title.separator
 								span Instagram
@@ -218,20 +219,60 @@ block main
 										img(src='https://scontent-waw1-1.cdninstagram.com/v/t51.2885-15/46305322_360307218053951_1077792454901497856_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=qKLDRJ3u4w8AX_LXxjy&_nc_ht=scontent-waw1-1.cdninstagram.com&oh=35f5d1960d80a93af7a6bc76509b0a0f&oe=6078BEB0' onerror="this.onerror=null; this.src='https://scontent-waw1-1.cdninstagram.com/v/t51.2885-15/46305322_360307218053951_1077792454901497856_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=qKLDRJ3u4w8AX_LXxjy&_nc_ht=scontent-waw1-1.cdninstagram.com&oh=35f5d1960d80a93af7a6bc76509b0a0f&oe=6078BEB0'" alt='')
 							a.insta-follow-link(href='//instagram.com/malina_person' target='_blank') @ malina_person
 
-					.y-restyle
-						#malinasubscribe-1.widget.widget_malinasubscribe
-							h3.widget-title.separator
-								span Newsletter
-							p.info-text Get the latest fashion trends, the best in travel and my life.
-							form#newsletter-malinasubscribe-1(method='POST')
-								.newsletter-form
-									.newsletter-email
-										input(type='email' name='subscriber_email' placeholder='Введите ваш e-mail')
-										input#website(type='text' name='website')
-									.newsletter-submit
-										input#message(type='text' name='message')
-										input(type='hidden' name='malina_submit_subscription_malinasubscribe-1' value='Submit')
-										button(type='submit' name='submit_form') &Pcy;&ocy;&dcy;&pcy;&icy;&scy;&acy;&tcy;&softcy;&scy;&yacy;
+					.csubscr-widget
+						.csubscr-widget__inner
+							.csubscr-widget__title  Присоединяйтесь
+							.csubscr-widget__description Получите доступ к платформе Имрам Крийя
+							.csubscr-widget__inp-wrap
+								input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
+							.btn.btn--square.csubscr-widget__btn отправить
+
+					//.y-restyle
+							.widget.widget_malinasubscribe
+								h3.widget-title.separator
+									span Newsletter
+								p.info-text Get the latest fashion trends, the best in travel and my life.
+								form#newsletter-malinasubscribe-1(method='POST')
+									.newsletter-form
+										.newsletter-email
+											input(type='email' name='subscriber_email' placeholder='Введите ваш e-mail')
+											input#website(type='text' name='website')
+										.newsletter-submit
+											input#message(type='text' name='message')
+											input(type='hidden' name='malina_submit_subscription_malinasubscribe-1' value='Submit')
+											button(type='submit' name='submit_form') &Pcy;&ocy;&dcy;&pcy;&icy;&scy;&acy;&tcy;&softcy;&scy;&yacy;
+
+					.slider-news-widget
+						.slider-news-widget__title.custom-widget-title Онлайн курсы
+						.slnewsw-slider.js-slnewsw-slider
+							a.slnewsw-slider-item(href="")
+								.slnewsw-slider-item__pic
+									img(src="img/online-courses.jpg", alt="")
+								.slnewsw-slider-item__name Базовый курс медитации
+							a.slnewsw-slider-item(href="")
+								.slnewsw-slider-item__pic
+									img(src="img/online-courses.jpg", alt="")
+								.slnewsw-slider-item__name Базовый курс медитации2
+							a.slnewsw-slider-item(href="")
+								.slnewsw-slider-item__pic
+									img(src="img/online-courses.jpg", alt="")
+								.slnewsw-slider-item__name Базовый курс медитации3
+
+					.slider-news-widget
+						.slider-news-widget__title.custom-widget-title Видео недели
+						.slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
+							a.slnewsw-slider-item(href="")
+								.slnewsw-slider-item__pic
+									img(src="img/online-courses.jpg", alt="")
+								.slnewsw-slider-item__name Базовый курс медитации
+							a.slnewsw-slider-item(href="")
+								.slnewsw-slider-item__pic
+									img(src="img/online-courses.jpg", alt="")
+								.slnewsw-slider-item__name Базовый курс медитации2
+							a.slnewsw-slider-item(href="")
+								.slnewsw-slider-item__pic
+									img(src="img/online-courses.jpg", alt="")
+								.slnewsw-slider-item__name Базовый курс медитации3
 
 
 
