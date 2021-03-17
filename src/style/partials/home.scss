@@ -454,16 +454,19 @@ body {
 
 .cria-medet {
 	display: flex;
+
 	.video-preview-wrapper {
 		max-width: 580px;
 		position: relative;
 		width: 100%;
 		margin-right: 36px;
+
 		&::before {
 			content: '';
 			display: block;
 			padding-top: 358/580 * 100%;
 		}
+
 		&:hover {}
 
 		&:active {}
@@ -471,6 +474,7 @@ body {
 		&:focus {}
 
 	}
+
 	.video-preview {
 		position: absolute;
 		top: 0;
@@ -480,14 +484,16 @@ body {
 		width: 100%;
 		height: 100%;
 	}
+
 	.video-play {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-49%,-50%);
+		transform: translate(-49%, -50%);
 		width: 116px;
 		height: 116px;
 	}
+
 	&__text {
 		font-family: "Proxima Nova";
 		color: #53565A;
@@ -533,6 +539,7 @@ body {
 .part-wsidebar {
 	display: flex;
 	justify-content: space-between;
+
 	&__main {
 		width: calc(100% - 358px);
 	}
@@ -558,19 +565,23 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	&:not(:last-child) {
 		margin-right: 37px;
 	}
+
 	&__pic {
 		position: relative;
 		max-width: 402px;
 		width: 100%;
 		margin-bottom: 9px;
+
 		&::before {
 			content: '';
 			display: block;
 			padding-top: 248/402 * 100%;
 		}
+
 		img {
 			position: absolute;
 			top: 0;
@@ -610,32 +621,41 @@ body {
 .section-science-kria {
 	padding-top: 93px;
 	padding-bottom: 93px;
+
 	&--2 {
 		padding-bottom: 94px;
+
 		.scikria-item {
 			display: flex;
 			justify-content: space-between;
+
 			&:first-child {
 				margin-bottom: 93px;
 			}
+
 			.scikria-item-text__title2 {
 				margin-bottom: 4px;
 			}
 		}
 	}
 }
+
 .scikria-item {
 	display: flex;
 	justify-content: space-between;
+
 	&:first-child {
 		margin-bottom: 89px;
 	}
+
 	&:last-child {
 		flex-direction: row-reverse;
+
 		.scikria-item-pic {
 			margin-left: 5px;
 			margin-right: 0;
 		}
+
 		.scikria-item-text {
 			&__title2 {
 				font-size: 22px;
@@ -644,6 +664,7 @@ body {
 			}
 		}
 	}
+
 	.scikria-item-pic {
 		margin-right: 20px;
 	}
@@ -653,11 +674,13 @@ body {
 	max-width: 403px;
 	width: 100%;
 	position: relative;
+
 	&::before {
 		content: '';
 		display: block;
 		padding-top: 248.88/403 * 100%;
 	}
+
 	img {
 		position: absolute;
 		top: 0;
@@ -692,6 +715,7 @@ body {
 		font-size: 17px;
 		line-height: 29px;
 		margin-bottom: 13px;
+
 		& span {
 			display: block;
 		}
@@ -708,6 +732,7 @@ body {
 
 .banner {
 	position: relative;
+
 	&__content {
 		position: absolute;
 		top: 22.4%;
@@ -715,6 +740,7 @@ body {
 		max-width: 317px;
 		font-family: "Proxima Nova";
 	}
+
 	&__title {
 		margin-bottom: 5px;
 		font-size: 35px;
@@ -737,15 +763,19 @@ body {
 	padding-top: 400/842 * 100%;
 	position: relative;
 	color: #fff;
+
 	.banner__content {
 		left: 52%;
 	}
+
 	.banner__more {
 		color: #fff;
+
 		&::after {
 			background: url('../img/arrow-more_white.svg') no-repeat center center;
 		}
 	}
+
 	.banner__title {
 		margin-bottom: 13px;
 	}
@@ -753,16 +783,19 @@ body {
 
 .hm-quote-practice {
 	padding-top: 153px;
+
 	.quote-bg {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+
 	&__content {
 		padding-top: 80px;
 		padding-bottom: 149px;
 
 	}
+
 	&__main {
 		font-family: "Savoye LET";
 		font-size: 45px;
@@ -772,6 +805,7 @@ body {
 		margin-right: 7px;
 		margin-bottom: 32px;
 	}
+
 	&__name {
 		font-family: Montserrat;
 		font-style: normal;
@@ -839,21 +873,25 @@ body {
 .hm-feedback {
 	padding-top: 150px;
 	padding-bottom: 93px;
+
 	&__content {
 		display: flex;
 		margin-left: -4px;
 	}
+
 	&__img-wrapper {
 		position: relative;
 		max-width: 588px;
 		width: 100%;
 		margin-right: 30px;
+
 		&::before {
 			content: '';
 			display: block;
 			padding-top: 364/588 * 100%;
 		}
 	}
+
 	&__img {
 		position: absolute;
 		top: 0;
@@ -862,17 +900,20 @@ body {
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+
 		&-play {
 			position: absolute;
 			top: 49%;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
 
 		}
 	}
+
 	&__text {
 		padding-top: 19px;
 		color: #3E434D;
+
 		&-title {
 			font-family: "Proxima Nova";
 			font-size: 35px;
@@ -880,41 +921,49 @@ body {
 			letter-spacing: -0.037em;
 			margin-bottom: 10px;
 		}
+
 		&-out {
 			font-family: "Proxima Nova";
 			font-size: 22px;
 			line-height: 36px;
 		}
+
 		&-info {
 			font-size: 17px;
 			line-height: 30px;
 			margin-bottom: 12px;
+
 			span {
 				display: block;
 			}
 		}
 	}
+
 	&__btn-wrap {
 		display: flex;
-    	align-items: center;
-    	justify-content: center;
+		align-items: center;
+		justify-content: center;
+
 		.btn {
 			width: 266px;
 		}
 	}
+
 	&__arrow {
 		position: absolute;
 		top: 50%;
 
 		&-next {
 			right: -9.5%;
-			transform: translate(-50%,-59%);
+			transform: translate(-50%, -59%);
 		}
+
 		&-prev {
 			left: -9.2%;
-			transform: translate(50%,-58%);
+			transform: translate(50%, -58%);
 		}
 	}
+
 	.slick-initialized .slick-slide {
 		display: flex;
 	}
@@ -923,6 +972,7 @@ body {
 
 .hm-feedback-slide {
 	margin-bottom: 75px;
+
 	.slick-dots {
 		position: absolute;
 
@@ -985,6 +1035,7 @@ body {
 	&__img-wrapper {
 		position: relative;
 		width: calc(25% - 6px);
+
 		&::after {
 			content: '';
 			display: block;
@@ -1015,7 +1066,8 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
+
 		p {
 			text-align: center;
 			font-size: 13px;
@@ -1028,12 +1080,14 @@ body {
 .master {
 	padding-top: 84px;
 	padding-bottom: 57px;
+
 	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 	}
+
 	&__title {
 		font-weight: 600;
 		font-size: 13px;
@@ -1043,6 +1097,7 @@ body {
 		position: relative;
 		padding-bottom: 6px;
 		margin-bottom: 22px;
+
 		&::after {
 			position: absolute;
 			bottom: 0;
@@ -1056,17 +1111,20 @@ body {
 
 		}
 	}
+
 	&__img-wrapper {
 		position: relative;
 		max-width: 164px;
 		width: 100%;
 		margin-bottom: 28px;
+
 		&::after {
 			content: '';
 			display: block;
 			padding-top: 100%;
 		}
 	}
+
 	&__img {
 		position: absolute;
 		top: 0;
@@ -1076,14 +1134,17 @@ body {
 		object-position: center;
 		object-fit: cover;
 	}
+
 	&__info {
 		font-size: 13px;
 		line-height: 21px;
 		margin-bottom: 29px;
+
 		span {
 			display: block;
 		}
 	}
+
 	&__social {
 		margin-right: -3px;
 	}
@@ -1091,12 +1152,34 @@ body {
 
 .social {
 	display: flex;
+
 	&__link {
 		&:not(:last-child) {
 			margin-right: 9px;
 		}
 	}
-	&__icon {
-		
+
+	&__icon {}
+}
+
+
+////////////////////////////
+
+
+.insta-widget {
+	&__title {}
+
+	&__content {
 	}
 }
+
+.insta-widget__item {
+	img {}
+
+	&:hover {}
+
+	&:active {}
+
+	&:focus {}
+}
+////////////////////
