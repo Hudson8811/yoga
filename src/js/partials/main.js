@@ -128,6 +128,11 @@ $(document).ready(function () {
 			.addClass('amplitude-paused').removeClass('amplitude-playing');
 	}
 
+	function pausePlaylist() {
+		var idx = Amplitude.getActiveIndex();
+		$('.musicpl-playlist-item.amplitude-playing').addClass('amplitude-paused').removeClass('amplitude-playing');
+	}
+
 	Amplitude.init({
 		"songs": my_songs,
 		"volume": 100,
@@ -142,17 +147,17 @@ $(document).ready(function () {
 			},
 			initialized: function () {
 				changeOrigLink();
-				actualizePlaylist();
+				pausePlaylist();
 			},
 			song_change: function () {
 				changeOrigLink();
 				actualizePlaylist();
 			},
 			stop: function () {
-				actualizePlaylist();
+				pausePlaylist();
 			},
 			pause: function () {
-				actualizePlaylist();
+				pausePlaylist();
 			},
 			play: function () {
 				actualizePlaylist();
