@@ -1091,9 +1091,12 @@ body {
 
 .social {
 	display: flex;
-	&__icon {
+	&__link {
 		&:not(:last-child) {
 			margin-right: 9px;
 		}
+	}
+	&__icon {
+		
 	}
 }
