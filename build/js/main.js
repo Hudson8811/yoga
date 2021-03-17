@@ -221,7 +221,9 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
+		arrows: true,
 		dots: true,
+		prevArrow: '<div class="hm-feedback__arrow hm-feedback__arrow-prev"><img src="../img/hm-feedback/arrow-prev.svg"></div>',
+		nextArrow: '<div class="hm-feedback__arrow hm-feedback__arrow-next"><img src="../img/hm-feedback/arrow-next.svg"></div>',
 	});
 });
