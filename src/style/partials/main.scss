@@ -129,3 +129,10 @@ html {
 	height: 1px;
 	width: 100%;
 }
+
+//START сбрасываем исходные
+
+ul li, ol li {
+    padding: 0px 0;
+}
+//END сбрасываем исходные
