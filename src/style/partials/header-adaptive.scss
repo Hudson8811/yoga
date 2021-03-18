@@ -28,7 +28,7 @@
 	}
 }
 
-//начало мобилки
+//начало планшета
 @media screen and (max-width:1150px) {
 	.site-header__inner {
 		min-height: 61px;
@@ -41,6 +41,7 @@
 		padding: 10px 14px;
 		padding: 10px 12px;
 		@include hov();
+
 		span {
 			display: none;
 		}
@@ -59,7 +60,7 @@
 		margin-left: 0;
 	}
 
-	.sh-lang-switcher{
+	.sh-lang-switcher {
 		padding: 8px;
 		margin-right: 2px;
 	}
@@ -76,7 +77,8 @@
 		padding: 18px;
 		cursor: pointer;
 		transition-duration: .2s;
-			@include hov();
+		@include hov();
+
 		span,
 		span::before,
 		span::after {
@@ -121,4 +123,68 @@
 		}
 	}
 
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.sh-burger {
+		width: 16px;
+		height: 12px;
+		padding: 18px;
+	}
+
+
+	.sh-burger span,
+	.sh-burger span::after,
+	.sh-burger span::before {
+		position: absolute;
+		width: 16px;
+		height: 1px;
+		margin-left: -8px;
+		margin-top: -1px;
+	}
+
+	.sh-burger span::before {
+		transform: translateY(-4px);
+	}
+
+	.sh-burger span::after {
+		transform: translateY(6px);
+	}
+
+
+
+
+	.sh-lang-switcher {
+		padding: 8px;
+		margin-right: 2px;
+	}
+	.lang-switcher {
+		font-size: 17px;
+		line-height: 21px;
+	}
+
+	.container {
+		overflow: hidden;
+	}
+
+	.site-header__inner {
+		min-height: 53px;
+		padding-left: 14px;
+		padding-right: 2px;
+	}
+
+	.sh-logo {
+		width: 75px;
+	}
+
+	.sh-authorize__link {
+		padding: 13px 12px 10px;
+
+		svg {
+			width: 10px;
+			display: block;
+		}
+	}
 }

@@ -1,21 +1,28 @@
 //десктоп держим правками до 1151px включительно
 
-@media screen and (max-width: 1150px){//тут начинается планшетный вид
-	.container{
+@media screen and (max-width: 1150px) {
+
+	//тут начинается планшетный вид
+	.container {
 		width: 582px;
 		max-width: calc(100% - 36px * 2);
 	}
-	.container--long{//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
+
+	.container--long {
+		//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
 		width: 697px;
 	}
+
 	.read-more {
 		font-size: 15px;
+
 		&::after {
 			width: 5px;
 			height: 9px;
 			margin-top: 4px;
 		}
 	}
+
 	.section-cria-medet {
 		padding-top: 58px;
 		padding-bottom: 57px;
@@ -25,6 +32,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
 		.video-preview-wrapper {
 			position: relative;
 			width: 100%;
@@ -32,7 +40,7 @@
 		}
 
 		.video-play {
-			transform: translate(-49%,-49%);
+			transform: translate(-49%, -49%);
 			width: 71px;
 			height: 71px;
 		}
@@ -79,6 +87,7 @@
 			&:focus {}
 		}
 	}
+
 	.part-wsidebar {
 		flex-direction: column;
 	}
@@ -86,6 +95,7 @@
 	.part-wsidebar__main {
 		width: 100%;
 	}
+
 	.master-links {
 		display: flex;
 		padding-top: 57px;
@@ -153,22 +163,385 @@
 
 
 	/////////////////////
-	.home-slider-slide::after{
-	padding-top: 61.848958%;
+	.home-slider-slide::after {
+		padding-top: 61.848958%;
 	}
+
+	.home-slider-slide::before {
+		width: 475px;
+	}
+
+	.home-slider .slick-dots {
+		left: 36px;
+		margin-top: 0;
+	}
+
+	.home-slider .slick-dots {}
+
+	.home-slider .slick-dots li {
+		margin: 7px 0;
+	}
+
+	.hms-info {
+		left: 36px;
+		bottom: 52px;
+	}
+
+	.hms-info__top {}
+
+	.hms-info__title {
+		font-size: 32px;
+		line-height: 1.2;
+		font-weight: 300;
+		letter-spacing: -1px;
+	}
+
+	.hms-info__bottom {
+		font-size: 15px;
+		letter-spacing: -.3px;
+		margin-top: 7px;
+	}
+
+	//////////////////////////
+
+	.section-home-quote {
+		padding-top: 82px;
+		padding-bottom: 55px;
+	}
+
+	.hm-quote {
+		margin-left: 0;
+
+		&__info {
+			font-size: 15px;
+			line-height: 24px;
+			text-align: center;
+			margin: 35px auto 0;
+			width: 470px;
+			max-width: 100%;
+		}
+
+		&__name {
+			font-size: 15px;
+			line-height: 22px;
+			text-align: center;
+			margin-top: 47px;
+			padding-left: 0;
+		}
+
+	}
+
+	.hm-quote__main {
+		br {
+			display: none;
+		}
+	}
+
+	.hm-quote__main::after {
+		display: none;
+	}
+
+	//////////////////////////
+
+
+	.section-home-events {
+		padding-top: 59px;
+		padding-bottom: 59px;
+	}
+
+
+	.hm-events-slide {
+		text-align: center;
+
+		&__pic {
+			img {}
+		}
+
+		&__text {}
+
+		&__name {
+			font-size: 31px;
+			line-height: 1.2;
+			margin-top: 29px;
+		}
+
+		&__meta {
+			font-size: 15px;
+			line-height: 18px;
+		}
+
+		&__area {
+			margin-right: 11px;
+		}
+
+		&__date {}
+
+		&__info {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 24px;
+			margin-top: 12px;
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	.hm-events-slider .slick-dots {
+		margin-top: -8px;
+		flex-wrap: wrap;
+		margin-bottom: -10px;
+
+		li {
+			margin-bottom: 10px;
+		}
+
+	}
+
+	.hm-events-btn-wrap {
+		margin-top: 23px;
+	}
+
+
+	//////////////////////////////
+
+	.btn {
+		height: 43px;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 21px;
+		width: auto;
+		min-width: 202px;
+	}
+
+
+	//////////////////////////////
+
 
 }
 
 //планшетный вид нам адаптировать не приходится
 
 
-@media screen and (max-width: 767px ){//на 767 начинается мобилка. её делаем как на смм. Только в данном случае под 360
-	.container{//если где-то нужен другой контейнер - там прописывай его ширну доп классом
+@media screen and (max-width: 767px) {
+
+	//на 767 начинается мобилка. её делаем как на смм. Только в данном случае под 360
+	.container {
+		//если где-то нужен другой контейнер - там прописывай его ширну доп классом
 		width: vw(333);
 		max-width: calc(100% - #{vw(14)} * 2);
 	}
-	.container--hr{//этот класс проаиши обёрткам .container дивов .hr
+
+	.container--hr {
+		//этот класс проаиши обёрткам .container дивов .hr
 		width: vw(333);
 	}
-}
 
+
+	/////////////////////////////////
+	.home-slider {
+		.slick-dots {
+			left: 50%;
+			margin-top: 0;
+			top: auto;
+			bottom: vw(37);
+			display: flex;
+			flex-direction: row;
+			transform: translate(-50%, 0);
+
+			li {
+				width: vw(9);
+				height: vw(9);
+				margin: vw(0) vw(7);
+			}
+		}
+	}
+
+	.home-slider-slide {
+		&::after {
+			padding-top: calc(100vh - 53px);
+		}
+
+		&::before {
+			bottom: 0;
+			top: auto;
+			width: 100%;
+			height: vw(179);
+			background: linear-gradient(0deg, rgba(3, 17, 83, 0.84) 0%, rgba(28, 40, 94, 0) 100%);
+		}
+	}
+
+
+
+	.hms-info {
+		width: calc(100% - #{vw(40)});
+		left: vw(20);
+		bottom: vw(77);
+		text-align: center;
+
+		&__top {}
+
+		&__title {
+			font-weight: 300;
+			font-size: vw(32);
+			line-height: vw(59);
+		}
+
+		&__bottom {
+			font-weight: 300;
+			font-size: vw(15);
+			line-height: vw(22);
+			justify-content: center;
+			letter-spacing: vw(-0.6);
+			margin-top: vw(-4);
+		}
+
+		&__area {
+			font-weight: 300;
+		}
+
+		&__date {
+			font-weight: 300;
+		}
+	}
+
+	/////////////////////////////////
+
+
+	.hidemob {
+		display: none !important;
+	}
+
+	.section-home-quote {
+		padding: vw(85) 0 vw(55);
+	}
+
+	.hm-quote {
+		padding: 0;
+
+		&__main {
+			font-size: vw(39);
+			line-height: 1;
+			//width: vw(258);
+			margin: 0 auto;
+			/* or 100% */
+
+			text-align: center;
+			letter-spacing: -0.03em;
+		}
+
+		&__info {
+			font-size: vw(15);
+			line-height: vw(24);
+			margin: vw(21) auto 0;
+			width: vw(316);
+		}
+
+		&__name {
+			font-size: vw(15);
+			line-height: vw(22);
+			margin-top: vw(23);
+		}
+
+		br {}
+	}
+
+	////////////////////
+
+
+	.section-home-events {
+		padding-top: vw(32);
+		padding-bottom: vw(59);
+	}
+
+	.hm-events-slider {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.hm-events-slide__wrap {
+		padding-left: 0;
+	}
+
+	.hm-events-slide {
+
+		&__pic {
+			width: vw(266);
+			max-width: 100%;
+			margin: 0 auto;
+			img {}
+		}
+
+		&__text {}
+
+		&__name {
+			font-size: vw(31);
+			line-height: 1.2;
+			margin-top: vw(29);
+		}
+
+		&__meta {
+			font-size: vw(15);
+			line-height: vw(18);
+			margin-top: vw(9);
+		}
+
+		&__area {
+			margin-right: vw(11);
+		}
+
+		&__date {}
+
+		&__info {
+			font-style: normal;
+			font-weight: 300;
+			font-size: vw(15);
+			line-height: vw(24);
+			margin-top: vw(12);
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	.hm-events-slider .slick-dots {
+		margin-top: vw(29);
+		flex-wrap: wrap;
+		margin-bottom: 0;
+		margin-left: 0;
+
+		li {
+			margin-bottom: vw(10);
+			width: vw(9);
+			height: vw(9);
+			margin: 0 vw(7);
+		}
+
+	}
+
+	.hm-events-btn-wrap {
+		margin-top: vw(23);
+	}
+
+	.hm-events-btn-wrap {
+		margin-top: vw(36);
+	}
+
+	.btn {
+		height: vw(43);
+		font-weight: 500;
+		font-size: vw(12);
+		line-height: vw(21);
+		width: auto;
+		min-width: vw(202);
+		padding: vw(14) vw(15);
+	}
+}

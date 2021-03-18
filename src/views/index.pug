@@ -39,15 +39,15 @@ block main
 	section.section-home-quote
 		.container
 			.hm-quote
-				.hm-quote__main Практикуя Крийя йогу мы создаём свою жизнь <br> и освобождаемся от влияний
+				.hm-quote__main Практикуя Крийя йогу мы&nbsp;создаём свою жизнь <br> и&nbsp;освобождаемся от влияний
 				.hm-quote__info Наука Крийя — это высший метод постижения Закона Вселенной, где истинный ответ приходит из глубин внутреннего Я. <br> 10 минут практики Крийя эквивалентно 20-ти годам естественной эволюции человека.
 				.hm-quote__name Мастер Имрам
-	.container
+	.container.container--long.hidemob
 		.hr
 	section.section-home-events
 		.container
 			.hm-events-slider.js-hm-events-slider
-				each val in [1, 2, 3, 4, 5]
+				each val in [1, 2, 3/*, 4, 5*/]
 					.hm-events-slide__wrap
 						a.hm-events-slide(href="")
 							.hm-events-slide__pic
@@ -81,13 +81,14 @@ block main
 
 			.hm-events-btn-wrap
 				a.btn(href="") Все мероприятия
-	.container.container--long
+
+	.container.container--long.hidemob
 		.hr
 
 	section.section-cria-medet
 		.container
 			.cria-medet
-				a.video-preview-wrapper(href="", data-fancybox="")
+				a.video-preview-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
 					img.video-preview(src="img/scicria/medet.jpg")
 					img.video-play(src="img/icons/play-video.svg")
 				.cria-medet__text
@@ -366,7 +367,7 @@ block main
 		.container
 			.hm-feedback-slide
 				.hm-feedback__content
-					.hm-feedback__img-wrapper
+					a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
 						img.hm-feedback__img(src="img/hm-feedback/preview.jpg")
 						img.hm-feedback__img-play(src="img/icons/play-video.svg")
 					.hm-feedback__text
@@ -377,7 +378,7 @@ block main
 							span удивительная атмосфера и незабываемые воспоминания.
 						.hm-feedback__more.read-more Подробнее
 				.hm-feedback__content
-					.hm-feedback__img-wrapper
+					a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
 						img.hm-feedback__img(src="img/hm-feedback/preview.jpg")
 						img.hm-feedback__img-play(src="img/icons/play-video.svg")
 					.hm-feedback__text
@@ -388,7 +389,7 @@ block main
 							span удивительная атмосфера и незабываемые воспоминания.
 						.hm-feedback__more.read-more Подробнее
 				.hm-feedback__content
-					.hm-feedback__img-wrapper
+					a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
 						img.hm-feedback__img(src="img/hm-feedback/preview.jpg")
 						img.hm-feedback__img-play(src="img/icons/play-video.svg")
 					.hm-feedback__text
