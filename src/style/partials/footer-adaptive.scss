@@ -181,71 +181,72 @@
 
 	.site-footer {
 		margin-top: 0;
-		padding-top: 93px;
+		padding-top: vw(93);
 	}
 
 	.container--sfoo {
-		width: 696px;
+		width: vw(696);
 	}
 
 	.sfoo-top {
-		margin-bottom: 41px;
+		margin-bottom: vw(41);
 
 	}
 
 	.sfoo-col {
 		&__title {
-			padding: 13px 0 14px;
-			font-size: 15px;
+			padding: vw(13) 0 vw(14);
+			font-size: vw(15);
 
 			span {
-				padding-right: 20px;
+				padding-right: vw(20);
 			}
 		}
 
 		&__plus {
-			padding: 5px 15px;
-			margin: -5px 0;
-			min-width: 39px;
-			width: 39px;
+			padding: vw(5) vw(15);
+			margin: vw(-5) 0;
+			min-width: vw(39);
+			width: vw(39);
 		}
 	}
 
 	.sfoo-list {
-		margin: 0 0 15px;
+		margin: 0 0 vw(15);
 
 		&__item {
-			line-height: 32px;
+			line-height: vw(32);
 		}
 	}
 
 	.sfoo-bottom {
-		font-size: 13px;
-		padding: 12px 0 18px;
+		font-size: vw(13);
+		padding: vw(12) 0 vw(11);
 	}
 
 	.sfoo-copywryting {
-		margin-top: 24px;
+		margin-top: vw(24);
 	}
 
 	.sfoo-bottom-menu {
-		width: 348px;
-		margin-left: -28px;
+		width: vw(348);
+		margin-left: vw(-28);
 		max-width: auto;
-		margin-top: 31px;
+		margin-top: vw(31);
 		flex-wrap: wrap;
 		justify-content: flex-start;
 
 		&__item {
 			padding: 0;
-			margin-left: 28px;
-			//margin-left: -20px;
-			//padding-left: 20px;
-			//margin-right: 20px;
+			margin-left: vw(28);
+			margin-bottom: vw(13);
+			//margin-left: vw(-20);
+			//padding-left: vw(20);
+			//margin-right: vw(20);
 			&::before{
 				position: absolute;
-				height: 15px;
-				width: 1px;
+				height: vw(15);
+				width: vw(1);
 				top: 50%;
 				-webkit-transform: translate(0,-50%);
 				transform: translate(0,-50%);
@@ -253,6 +254,7 @@
 				content: '';
 				display: block;
 				background: #e1e1e1;
+				left: vw(-13);
 			}
 			&:not(:last-child) {
 				padding-right: 0;
@@ -273,12 +275,12 @@
 	.ssocials--sfoo {
 
 		.ssocials-item {
-			padding: 9px 10px 5px;
-			margin: 0 1px;
+			padding: vw(9) vw(10) vw(5);
+			margin: 0 vw(1);
 
 			svg {
-				max-width: 17px;
-				max-height: 17px;
+				max-width: vw(17);
+				max-height: vw(17);
 			}
 		}
 	}
