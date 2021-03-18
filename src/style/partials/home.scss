@@ -961,6 +961,17 @@ body {
 	&__arrow {
 		position: absolute;
 		top: 50%;
+		svg path {
+			transition-duration: .2s;
+		}
+		&:hover {
+			svg path:first-child {
+				stroke: #6974A9;
+			}
+			svg path:last-child {
+				fill: #6974A9;
+			}
+		}
 
 		&-next {
 			right: -9.5%;
