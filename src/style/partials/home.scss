@@ -57,10 +57,10 @@
 		position: absolute;
 
 		z-index: 4;
-		left: 95px;
+		left: 94px;
 		top: 50%;
 		transform: translate(0, -50%);
-		margin-top: 4px;
+		margin-top: 1px;
 
 		display: flex;
 		flex-direction: column;
@@ -109,7 +109,8 @@
 
 .home-slider-slide {
 	position: relative;
-	height: calc(100vh - 90px);
+	//max-height: calc(100vh - 90px);
+	height: auto !important;
 
 	&::before {
 		z-index: 3;
@@ -121,6 +122,15 @@
 		left: 0;
 		top: 0;
 		background: linear-gradient(90deg, rgba(3, 17, 83, 0.67) 0%, rgba(28, 40, 94, 0) 100%);
+	}
+
+	&::after {
+		position: relative;
+		content: '';
+		display: block;
+		width: 100%;
+
+		padding-top: 46.1458%;
 	}
 }
 
@@ -1453,7 +1463,8 @@ input.email-cinp {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		&+.wnevents-widget__item{
+
+		&+.wnevents-widget__item {
 			margin-top: 29px;
 		}
 	}
@@ -1480,7 +1491,7 @@ input.email-cinp {
 
 .wnevents-widget__title {
 	margin: 0 auto;
-	display:  flex;
+	display: flex;
 	background: #fff;
 	position: relative;
 	z-index: 2;
@@ -1498,5 +1509,5 @@ input.email-cinp {
 	text-align: center;
 	text-transform: uppercase;
 	color: #53565A;
-    padding: 9px 22px 9px;
+	padding: 9px 22px 9px;
 }
