@@ -469,14 +469,16 @@ body {
 		position: relative;
 		width: 100%;
 		margin-right: 36px;
-
+		transition:opacity .3s ease ;
 		&::before {
 			content: '';
 			display: block;
 			padding-top: 358/580 * 100%;
 		}
 
-		&:hover {}
+		&:hover {
+			opacity: .6;
+		}
 
 		&:active {}
 
@@ -734,6 +736,7 @@ body {
 }
 
 .section-hmlearn {
+	background-image: url('../img/hmlearn.jpg');
 	padding-top: 400/842 * 100%;
 	position: relative;
 	color: #3E434D;
@@ -767,8 +770,15 @@ body {
 		color: #25378D;
 	}
 }
-
+.tablet-content {
+	display: none;
+}
+.csubscr-widget__logo-wrapper {
+	display: none;
+}
 .section-hmlearn2 {
+	background-image: url('../img/hmlearn2.jpg');
+
 	padding-top: 400/842 * 100%;
 	position: relative;
 	color: #fff;
@@ -1087,12 +1097,15 @@ body {
 		align-items: center;
 		justify-content: center;
 		transform: translate(-50%, -50%);
-
+		
 		p {
 			text-align: center;
 			font-size: 13px;
 			line-height: 21px;
 			margin-top: -11px;
+		}
+		&:hover {
+			
 		}
 	}
 }
@@ -1172,8 +1185,15 @@ body {
 
 .social {
 	display: flex;
-
+	svg rect{
+		transition: 0.3s ease fill;
+	}
 	&__link {
+		&:hover {
+			svg rect{
+				fill: #25378D;
+			}
+		}
 		&:not(:last-child) {
 			margin-right: 9px;
 		}
@@ -1520,5 +1540,5 @@ input.email-cinp {
 	text-transform: uppercase;
 	color: #53565A;
 	padding: 9px 22px 9px;
-	
+
 }
