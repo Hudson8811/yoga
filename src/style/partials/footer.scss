@@ -45,8 +45,11 @@
 		font-size: 13px;
 		line-height: 38px;
 		color: #53565A;
+		transition: .3s;
 
-		&:hover {}
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&:active {}
 

@@ -158,3 +158,11 @@ ul li, ol li {
     padding: 0px 0;
 }
 //END сбрасываем исходные
+.slick-dots {
+	li {
+		cursor: pointer;
+	}
+}
+.slick-arrow {
+	cursor: pointer;
+}

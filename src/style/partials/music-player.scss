@@ -234,12 +234,12 @@
 	&__play {
 		position: absolute;
 		top: 50%;
-		left: 50%;
-		margin-top: -6px;
-		margin-left: -6px;
+		left: 52%;
+		// margin-top: -6px;
+		// margin-left: -6px;
 		transition-duration: .2s;
 		opacity: 0;
-
+		transform: translate(-50%,-50%);
 		img,
 		svg {
 			display: block;
@@ -248,6 +248,9 @@
 			object-fit: contain;
 			object-position: center center;
 		}
+	}
+	&__play {
+		left: 55%	;
 	}
 
 	&.amplitude-paused {
