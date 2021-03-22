@@ -36,32 +36,39 @@
 @media screen and (max-width: 768px) {
     .music-player {
         margin: 0 auto;
-        margin-bottom: 94px;
+        margin-bottom: vw(94);
         width: 100%;
-        padding: 34px 24px 10px;
+        padding: vw(34) vw(24) vw(10);
         &__album-art {
-            width: 116px;
+            width: vw(115);
+        }
+        &__song-name {
+                margin-top: vw(20);
+                font-size: vw(13);
         }
         &__song-artist {
-            margin-top: 8px;
+            margin-top: vw(8);
+            font-size: vw(13    );
         }
         &__time-progress {
-            margin-top: 28px;
+            margin-top: vw(28);
+        }
+        &__current-time {
         }
         .musicpl-bottom-controls {
-            margin-bottom: 12px;
+            margin-bottom: vw(12);
         }
         .music-player-top__prev {
-            left: 25px;
+            left: vw(25);
         }
         .music-player-top__next {
-            right: 25px;
+            right: vw(25);
         }
         .music-player-top__next, .music-player-top__prev {
             position: absolute;
-            top: 79px;
-            width: 28px;
-            height: 28px;
+            top: vw(79);
+            width: vw(28);
+            height: vw(28);
             cursor: pointer;
         }
     }
