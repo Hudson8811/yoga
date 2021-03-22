@@ -974,9 +974,19 @@
 			margin-bottom: vw(93);
 		}
 	}
-	.section-science-kria--2 .scikria-item:last-child .scikria-item-text {
-		padding-left: 10px;
-		padding-right: 10px;
+	.section-science-kria--2 .scikria-item:last-child {
+		.scikria-item-text  {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.section-science-kria--2 .scikria-item:first-child {
+		.scikria-item-pic {
+			margin-bottom: vw(24);
+		}
+		.scikria-item-text__title2 {
+			margin-bottom: vw(12);
+		}
 	}
 	.section-home-events {
 		padding-top: vw(32);
@@ -1251,7 +1261,7 @@
 			&-out {
 				font-size: vw(19);
 				line-height: vw(30);
-				margin-bottom: vw(8);
+				margin-bottom: vw(3);
 			}
 			&-info {
 				font-size: vw(15);
@@ -1347,7 +1357,7 @@
 		}
 		.email-cinp {
 			font-size: vw(13);
-			padding: vw(13) vw(20) vw(13);
+			padding: vw(13) vw(46) vw(13);
 			height: vw(43);
 			background-image: url(../img/mail.svg);
 			background-size: vw(21) auto;
@@ -1401,7 +1411,7 @@
 		.slnewsw-slider-item__name {
 			font-size: vw(19);
 			line-height: vw(29);
-			margin-top: vw(13);
+			margin-top: vw(17);
 		}
 	}
 	.events-widget-wrap {

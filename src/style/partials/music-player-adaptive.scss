@@ -55,6 +55,12 @@
         }
         &__current-time {
         }
+        &__controls {
+            margin-top: vw(2);
+        }
+        .musicpl-bottom-controls__orig_link {
+            display: none;
+        }
         .musicpl-bottom-controls {
             margin-bottom: vw(12);
         }
@@ -70,6 +76,20 @@
             width: vw(28);
             height: vw(28);
             cursor: pointer;
+        }
+        .music-player__next, .music-player__prev {
+            width: vw(36);
+            height: vw(36);
+            img {
+                width: vw(12);
+                height: vw(14);
+            }
+        }
+        .music-player-mainctrl {
+            width: vw(36);
+            min-width: vw(36);
+            height: vw(36);
+            margin: 0 vw(10);
         }
     }
 }
