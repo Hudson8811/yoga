@@ -42,7 +42,9 @@
 		border-radius: 5px;
 	}
 }
-
+.hm-quote-practice-mob{
+	display: none;
+}
 .section-home-slider {}
 
 .home-slider {
@@ -736,14 +738,32 @@ body {
 }
 
 .section-hmlearn {
-	background-image: url('../img/hmlearn.jpg');
 	padding-top: 400/842 * 100%;
 	position: relative;
 	color: #3E434D;
+	
 }
 
 .banner {
 	position: relative;
+	&__picture {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		source {
+			width: 100%;
+			height: 100%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
 
 	&__content {
 		position: absolute;
@@ -777,7 +797,6 @@ body {
 	display: none;
 }
 .section-hmlearn2 {
-	background-image: url('../img/hmlearn2.jpg');
 
 	padding-top: 400/842 * 100%;
 	position: relative;
@@ -1352,6 +1371,9 @@ input.email-cinp {
 	padding-bottom: 33px;
 	position: relative;
 	z-index: 1;
+	.slick-dots {
+		display: none!important;
+	}
 }
 
 .slnewsw-slider-item {

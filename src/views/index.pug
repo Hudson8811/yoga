@@ -138,11 +138,28 @@ block main
 								.scikria-item-text__more.read-more Подробнее
 
 					section.banner.section-hmlearn
+						picture.banner__picture
+							source.banner__source(srcset="img/hmlearn.jpg" media="(max-width: 767px)")
+							img(src="img/hmlearn.jpg")
 						.banner__content
 							.banner__title Обучение
 							.banner__title2 Курсы. Медитация. Практика
 							.banner__more.read-more Подробнее
 
+					section.hm-quote-practice.hm-quote-practice-mob
+						.quote-bg(style="background-image:url(img/quote-bg.jpg);")
+							img.hm-quote-practice__img(src="img/icons/quotes.svg")
+							.container.container--extra-long
+								.hm-quote-practice__content.quotes-slide
+									.quote-slide
+										.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
+										.hm-quote-practice__name Мастер Имрам
+									.quote-slide
+										.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
+										.hm-quote-practice__name Мастер Имрам
+									.quote-slide
+										.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
+										.hm-quote-practice__name Мастер Имрам
 					section.section-science-kria.section-science-kria--2
 						.scikria-item
 							.scikria-item-pic
@@ -165,6 +182,9 @@ block main
 								.scikria-item-text__more.read-more Подробнее
 
 					section.banner.section-hmlearn2
+						picture.banner__picture
+							source.banner__source(srcset="img/hmlearn2-mob.jpg" media="(max-width: 767px)")
+							img(src="img/hmlearn2.jpg")
 						.banner__content
 							.banner__title Записи мероприятий
 							.banner__title2 Вебинары. Лекции. Сатсанги.
@@ -350,7 +370,7 @@ block main
 							.music-player__playlist
 
 
-	section.hm-quote-practice
+	section.hm-quote-practice.hm-quote-practice-desc
 		.quote-bg(style="background-image:url(img/quote-bg.jpg);")
 			.container.container--extra-long
 				.hm-quote-practice__content.quotes-slide

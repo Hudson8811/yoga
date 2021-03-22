@@ -312,7 +312,11 @@
 
 	.banner {
 		position: relative;
-
+		&__picture {
+			img {
+				display: none;
+			}
+		}
 		&__content {
 			position: absolute;
 			top: 26.9%;
@@ -471,6 +475,7 @@
 		justify-content: space-between;
 		.slider-news-widget {
 			width: calc(50% - 20px);
+			margin-bottom: 84px;
 		}
 		.slnewsw-slider-item__pic {
 			position: relative;
@@ -484,6 +489,66 @@
 		}
 		.slnewsw-slider-item {
 			width: 100%;
+		}
+		.slnewsw-slider {
+			.slnewsw-arrow {
+				display: none!important;
+			}
+			.slick-dots {
+				display: flex!important;
+				align-items: center;
+				list-style: none;
+				position: absolute;
+
+				z-index: 4;
+				left: 50%;
+				bottom: 4px;
+				transform: translate(-50%, -50%);
+				margin-top: 1px;
+
+				
+
+				li {
+					margin: 0 7px;
+					list-style: none;
+		
+					width: 9px;
+					height: 9px;
+					border: 1px solid #25378D;
+					box-sizing: border-box;
+					border-radius: 50%;
+					transition: .3s;
+					position: relative;
+		
+					&::before {
+						content: '';
+						display: block;
+						width: 100%;
+						height: 100%;
+						background: #25378D;
+						border-radius: 50%;
+						position: absolute;
+						left: 0;
+						top: 0;
+						opacity: 0;
+						transition: .3s;
+		
+					}
+		
+					&.slick-active {
+						&::before {
+							opacity: 1;
+						}
+					}
+		
+					button {
+						display: none;
+					}
+				}
+			}
+			.slick-arrow {
+				display: none;
+			}
 		}
 	}
 	.csubscr-widget {
@@ -503,6 +568,7 @@
 
 	}
 	.events-widget-wrap {
+		padding-bottom: 44px;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
@@ -513,6 +579,7 @@
 			bottom: -5.3%;
 		}
 	}
+	
 	.hm-quote-practice {
 		padding-top: 93px;
 		&__content {
@@ -663,6 +730,38 @@
 
 }
 
+.newposts-widget {
+	width: 50%;
+	.newposts-widget-item+.newposts-widget-item {
+		margin-top: 23px;
+	}
+	&__title {
+		font-size: 15px;
+		padding-bottom: 33px;
+	}
+	.newposts-widget-item__title {
+		font-size: 19px;
+		line-height: 29px;
+		line-height: 30px;
+	}
+	.newposts-widget-item__date {
+		font-size: 15px;
+		line-height: 21px;
+		margin-top: -2px;
+	}
+}
+.wnevents-widget {
+	margin-bottom: 50px;
+	width: 50%;
+	padding:0 20px 0 25px;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	.wnevents-widget__item:last-child {
+		margin-top: 0;
+	}
+}
+
 
 .hm-events-slider .slick-dots {
 	margin-top: -8px;
@@ -679,6 +778,7 @@
 	margin-top: 23px;
 }
 
+		
 
 //////////////////////////////
 
@@ -690,7 +790,6 @@
 	width: auto;
 	min-width: 202px;
 }
-
 
 //////////////////////////////
 
@@ -747,7 +846,9 @@
 		}
 	}
 
-
+	.hm-quote-practice-desc {
+		display: none;
+	}
 
 	.hms-info {
 		width: calc(100% - #{vw(40)});
@@ -783,6 +884,35 @@
 
 	/////////////////////////////////
 
+	.hm-quote-practice-mob {
+		display: block;
+		.quote-bg {
+			background-image: none!important;
+		}
+	}
+	.hm-quote-practice {
+		&__img {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&__content {
+			padding-top: vw(46);
+		}
+		br {
+			display: none;
+		}
+		&__main {
+			margin-bottom: 24px;
+		}
+		&__name {
+			font-size: 15px;
+		}
+		.slick-dots {
+			bottom: 11.6%;
+			left: 51%;
+		}
+	}
 
 	.hidemob {
 		display: none !important;
@@ -816,15 +946,20 @@
 		&__name {
 			font-size: vw(15);
 			line-height: vw(22);
-			margin-top: vw(23);
+			margin-top: vw(27);
 		}
 
 		br {}
 	}
 
 	////////////////////
-
-
+	.section-science-kria--2 {
+		padding-top: 57px;
+	}
+	.section-science-kria--2 .scikria-item:last-child .scikria-item-text {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	.section-home-events {
 		padding-top: vw(32);
 		padding-bottom: vw(59);
@@ -918,7 +1053,8 @@
 		padding: vw(14) vw(15);
 	}
 	.section-cria-medet {
-		padding-top: vw(35);
+		padding-top: vw(32);
+		padding-bottom: vw(57);
 	}
 	.read-more {
 		font-size: vw(15);
@@ -930,7 +1066,7 @@
 			font-weight: 300;
 			font-size: vw(19);
 			line-height: vw(30);
-			margin-bottom: vw(7);
+			margin-bottom: vw(13);
 		}
 		.video-preview-wrapper {
 			max-width: vw(580);
@@ -941,7 +1077,7 @@
 		}
 		&__title {
 			font-size: vw(32);
-			margin-bottom: vw(10);
+			margin-bottom: vw(12);
 			line-height: vw(32);
 		}
 
@@ -955,7 +1091,7 @@
 			padding-left: vw(2);
 		}
 		&__text {
-			padding-top: vw(34);
+			padding-top: vw(30);
 		}
 	}
 	.master-links {
@@ -988,6 +1124,7 @@
 		&-text {
 			text-align: center;
 			max-width: vw(354);
+			padding-left: 0;
 			&__title {
 				margin-bottom: vw(9);
 				font-size: vw(32);
@@ -1063,6 +1200,113 @@
 			text-align: center;
 			.banner__title2 {
 				margin-bottom: 10px;
+			}
+		}
+	}
+	.hm-feedback-slide {
+		margin-bottom: 60px;
+		.slick-dots {
+			bottom: -5.3%;
+		}
+	}
+	.hm-feedback {
+		padding-bottom: 94px;
+	}
+	.master {
+		padding-bottom: vw(86);
+		&__title {
+			font-size: vw(15);
+			line-height: vw(30);
+			padding-bottom: vw(16);
+			margin-bottom: vw(22);
+		}
+		&__img-wrapper {
+			max-width: vw(135);
+			margin-bottom: vw(31);
+		}
+		&__img {
+		}
+		&__info {
+			font-size: vw(15);
+			text-align: center;
+			max-width: vw(240);
+			line-height: vw(24);
+			margin-bottom: vw(27);
+			span {
+				display: block;
+			}
+		}
+	}
+	.insta-widget {
+		padding-bottom: 95px;
+		&__content {
+			padding: 0 31px;
+		}
+		&__item {
+			width: calc(50% - 4px);
+			img {
+				height: auto;
+			}
+			&:nth-child(4) {
+				display: block;
+			}
+		}
+		
+	}
+	.csubscr-widget {
+		width: 81%;
+		padding: 14px 9% 35px;
+		&__logo {
+			display: none;
+		}
+		&__description {
+			margin-bottom: 26px;
+		}
+	}
+	.slider-news-widget-wrap {
+		padding-top: 91px;
+		padding-left: 33px;
+		padding-right: 33px;
+		flex-direction: column;
+		.slider-news-widget  {
+			width: 100%;
+			&:last-child {
+				.slnewsw-slider {
+					margin: 0 -34px;
+				}
+				.slnewsw-slider-item__pic {
+					padding-top: 0%;
+				}
+			}
+		}
+		.custom-widget-title {
+			font-size: 15px;
+		}
+		.slnewsw-slider-item__pic {
+			padding-top: 38%;
+		}
+		.slnewsw-slider-item__name {
+			font-size: 19px;
+		}
+	}
+	.events-widget-wrap {
+		flex-direction: column;
+		.newposts-widget {
+			width: 100%;
+			margin-bottom: 93px;
+			
+		}
+		.wnevents-widget {
+			width: 100%;
+			padding: 0 32px 0 32px;
+			margin-bottom: 8px;
+			flex-direction: column;
+			&__item {
+				margin-bottom: 45px;
+			}
+			&__title {
+				font-size: 15px;
+				padding: 6px 20px 7px;
 			}
 		}
 	}

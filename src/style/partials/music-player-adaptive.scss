@@ -1,0 +1,68 @@
+@media screen and (max-width: 1150px) {
+    .music-player {
+        margin: 0 auto;
+        margin-bottom: 59px;
+        width: 92%;
+        padding: 34px 35px 10px;
+        &__album-art {
+            width: 102px;
+        }
+        &__song-artist {
+            margin-top: 8px;
+        }
+        &__time-progress {
+            margin-top: 28px;
+        }
+        .musicpl-bottom-controls {
+            margin-bottom: 12px;
+        }
+        .music-player-top__prev {
+            left: 25px;
+        }
+        .music-player-top__next {
+            right: 25px;
+        }
+        .music-player-top__next, .music-player-top__prev {
+            position: absolute;
+            top: 79px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .music-player {
+        margin: 0 auto;
+        margin-bottom: 94px;
+        width: 100%;
+        padding: 34px 24px 10px;
+        &__album-art {
+            width: 116px;
+        }
+        &__song-artist {
+            margin-top: 8px;
+        }
+        &__time-progress {
+            margin-top: 28px;
+        }
+        .musicpl-bottom-controls {
+            margin-bottom: 12px;
+        }
+        .music-player-top__prev {
+            left: 25px;
+        }
+        .music-player-top__next {
+            right: 25px;
+        }
+        .music-player-top__next, .music-player-top__prev {
+            position: absolute;
+            top: 79px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+        }
+    }
+}
