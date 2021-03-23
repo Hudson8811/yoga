@@ -316,9 +316,7 @@
 	.banner {
 		position: relative;
 		&__picture {
-			img {
-				display: none;
-			}
+			
 		}
 		&__content {
 			position: absolute;
@@ -1217,6 +1215,12 @@
 		&__content {
 			max-width: vw(254);
 		}
+		&__picture {
+			img {
+				display: none;
+			}
+		}
+		
 		&__title {
 			margin-bottom: vw(10);
 			line-height: vw(35);

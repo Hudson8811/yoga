@@ -1,0 +1,26 @@
+.category {
+    padding-top: 92px;
+    &__title {
+        padding-bottom: 17px;
+        &::after {
+            bottom: 5px;
+        }
+    }
+    &__list {
+        font-size: 17px;
+        line-height: 44px;
+        text-align: center;
+        color: #53565A;
+        list-style: none;
+    }
+
+    &__list-item {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__link {
+
+    }
+}
