@@ -1315,6 +1315,12 @@
 				margin-bottom: vw(12);
 			}
 		}
+		.container {
+			max-width: calc(100%)
+		}
+		&__arrow {
+			display: none!important;
+		}
 		.slick-dots {
 			li {
 				width: vw(9);
@@ -1322,6 +1328,7 @@
 				margin: 0 vw(7	);
 			}
 		}
+		
 	}
 	.master {
 		padding-top: vw(52);
@@ -1389,7 +1396,7 @@
 	}
 	.csubscr-widget {
 		width: 81%;
-		padding: vw(14) 9% vw(35);
+		padding: vw(32) 9% vw(35);
 		&__logo-wrapper {
 			margin-bottom: vw(20);
 		}
