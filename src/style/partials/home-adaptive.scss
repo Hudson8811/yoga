@@ -1,7 +1,9 @@
 //десктоп держим правками до 1151px включительно
 
 @media screen and (max-width: 1150px) {
-
+	.no-desc {
+		display: block;
+	}
 	//тут начинается планшетный вид
 	.container {
 		width: 582px;
@@ -12,13 +14,20 @@
 		//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
 		width: 697px;
 	}
-
+	.no-tablet {
+		display: none;
+	}
 	.container--extra-long {
 		width: 697px;
 		max-width: calc(100% - 35px * 2);
 	}
+	.part-wsidebar {
+		flex-direction: column;
+
+	}
 	.part-wsidebar__sidebar {
-		display: none;
+		display: block;
+		width: 100%;
 	}
 	.read-more {
 		font-size: 15px;
@@ -28,7 +37,10 @@
 			height: 9px;
 		}
 	}
-
+	.quote-bg {
+		margin: 0 -18.7vw;
+		// width: calc(100% + 35px * 2)
+	}
 	.section-cria-medet {
 		padding-top: 58px;
 		padding-bottom: 57px;
@@ -102,7 +114,7 @@
 	}
 
 	.part-wsidebar {
-		flex-direction: column;
+		
 	}
 
 	.part-wsidebar__main {
@@ -813,7 +825,9 @@
 		width: vw(333);
 	}
 
-
+	.no-mob {
+		display: none;
+	}
 	/////////////////////////////////
 	.home-slider {
 		.slick-dots {
@@ -891,7 +905,13 @@
 			background-image: none!important;
 		}
 	}
+	.part-wsidebar__main {
+		width: 100%;
+		flex-direction: column;
+		display: flex;
+	}
 	.hm-quote-practice {
+		order: 3;
 		padding-top: vw(91);
 		&__img {
 			position: absolute;
@@ -967,10 +987,12 @@
 
 	////////////////////
 	.section-science-kria {
+		order: 0;
 		padding-top: vw(58);
 		padding-bottom: vw(93);
 	}
 	.section-science-kria--2 {
+		order: 2;
 		padding-top: vw(58);
 		padding-bottom: vw(90);
 		.scikria-item .scikria-item-text__title2 {
@@ -1041,7 +1063,9 @@
 			line-height: vw(18);
 			margin-top: vw(9);
 		}
-
+		.part-wsidebar__main {
+			flex-direction: column;
+		}
 		&__area {
 			margin-right: vw(11);
 		}
@@ -1142,6 +1166,7 @@
 	.master-links {
 		flex-direction: column;
 		padding: vw(35) vw(32);
+		order: 0;
 	}
 	.master-link {
 		&:not(:last-child) {
@@ -1231,8 +1256,10 @@
 			line-height: vw(26);
 		}
 	}
+	
 	.section-hmlearn {
 		background-image: url('../img/hmlearn-mob.jpg');
+		order: 0;
 		.banner__content {
 			top: vw(54);
     		left: vw(43);
@@ -1243,6 +1270,7 @@
 		}
 	}
 	.section-hmlearn2 {
+		order: 2;
 		background-image: url('../img/hmlearn2-mob.jpg');
 		.banner__content {
 			top: vw(51);
@@ -1262,6 +1290,7 @@
 	.hm-feedback {
 		padding-bottom: vw(94);
 		padding-top: vw(93);
+		order: 4;
 		&__img-wrapper {
 			max-width: vw(588);
 		}
@@ -1329,6 +1358,9 @@
 				height: vw(36);
 			}
 		}
+	}
+	.hm-quote-practice  {
+		order: 1;
 	}
 	.insta-widget {
 		padding-bottom: vw(95);

@@ -19,6 +19,12 @@ block main
             .part-wsidebar
                 .part-wsidebar__main
                     include components/article-master/new-article
+                    .container.container--extra-long
+                        .hr
+                    include components/article-master/category-slider
+                    .container.container--extra-long
+                        .hr
+                    include components/article-master/band
                 .part-wsidebar__sidebar
                     .category
                         .category__title.custom-widget-title Категории
@@ -36,7 +42,7 @@ block main
                             li.category__list-item
                                 a.category__link(href="#") Семья и дети
                     .hr
-                    .master
+                    .master.master_article
                         .master__content
                             .master__title О мастере
                             .master__img-wrapper
@@ -139,19 +145,6 @@ block main
                                     img(src="img/online-courses.jpg", alt="")
                                 .slnewsw-slider-item__name Базовый курс медитации3
 
-                    .newposts-widget
-                        .newposts-widget__title.custom-widget-title Новые статьи
-                        .newposts-widget__items
-                            a.newposts-widget-item(href="")
-                                .newposts-widget-item__title Что такое осознанность
-                                .newposts-widget-item__date 28 Января 2021
-                            a.newposts-widget-item(href="")
-                                .newposts-widget-item__title Глубина общения
-                                .newposts-widget-item__date 28 Января 2021
-                            a.newposts-widget-item(href="")
-                                .newposts-widget-item__title Как стать счастливым
-                                .newposts-widget-item__date 28 Января 2021
-
                     .wnevents-widget
                         a.wnevents-widget__item(href="")
                             .wnevents-widget__pic
@@ -211,5 +204,17 @@ block main
                                             input.amplitude-volume-slide.js-volume-slider(type='range' min="0" max="100" value='100')
                                         img(src="img/player-controls/volume.svg", alt="")
                         .music-player__playlist-container
-                            .music-player__playlist
-
+                            .music-player__playlist 
+    section.hm-galery
+        .container.container--extra-long
+            .hm-galery__row
+                .hm-galery__img-wrapper
+                    img.hm-galery__img(src="img/gallery/photo1.jpg")
+                .hm-galery__img-wrapper
+                    img.hm-galery__img(src="img/gallery/photo2.jpg")
+                .hm-galery__img-wrapper
+                    img.hm-galery__img(src="img/gallery/photo3.jpg")
+                .hm-galery__img-wrapper
+                    img.hm-galery__img(src="img/gallery/photo4.jpg")
+                a.hm-galery__white-box(href="#")
+                    p Все<br/>фотографии
