@@ -61,7 +61,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	color: #323340;
+	color: #53565A;
 	background: #ffffff;
 	font-family: $mainFont;
 	font-size: 16px;
@@ -84,6 +84,9 @@ body {
 	margin: 0 auto;
 }
 
+.slick-dots li:first-child:last-child{
+	opacity: 0 !important;
+}
 
 //десктоп держим правками до 1151px включительно
 

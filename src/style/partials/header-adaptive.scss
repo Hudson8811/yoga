@@ -30,6 +30,11 @@
 
 //начало планшета
 @media screen and (max-width:1150px) {
+	.site-header{
+		&+*{
+			margin-top: 61px;
+		}
+	}
 	.site-header__inner {
 		min-height: 61px;
 		width: 100%;
@@ -169,6 +174,11 @@
 		overflow: hidden;
 	}
 
+	.site-header{
+		&+*{
+			margin-top: 53px;
+		}
+	}
 	.site-header__inner {
 		min-height: 53px;
 		padding-left: 14px;

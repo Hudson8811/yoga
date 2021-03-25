@@ -10,6 +10,7 @@ block vars
 
 
 block main
+    include components/article-master/maslider
     include components/article-master/subscribe
     include components/article-master/quote-true
     .container.container--extra-long
@@ -204,7 +205,7 @@ block main
                                             input.amplitude-volume-slide.js-volume-slider(type='range' min="0" max="100" value='100')
                                         img(src="img/player-controls/volume.svg", alt="")
                         .music-player__playlist-container
-                            .music-player__playlist 
+                            .music-player__playlist
     section.hm-galery
         .container.container--extra-long
             .hm-galery__row
