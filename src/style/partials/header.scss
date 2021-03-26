@@ -148,7 +148,8 @@
 		transition-duration: .2s;
 
 		&:hover {
-			text-decoration-line: underline;
+			//text-decoration-line: underline;
+			color: #53565A;
 		}
 
 		&:active {}
@@ -176,7 +177,8 @@
 	transition-duration: .2s;
 
 	&:hover {
-		text-decoration-line: underline;
+		color: #53565A;
+		//text-decoration-line: underline;
 	}
 }
 
@@ -257,7 +259,8 @@
 		transition-duration: .2s;
 
 		&:hover {
-			text-decoration-line: underline;
+			color: #53565A;
+			//text-decoration-line: underline;
 		}
 	}
 }

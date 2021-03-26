@@ -88,16 +88,16 @@ $(document).ready(function () {
 
 
 
-	tippyTitle="Поделиться";//Не забыть сделать мультиязычным
+	tippyTitle = "Поделиться"; //Не забыть сделать мультиязычным
 	tippy(document.querySelectorAll('.js-share'), {
 		theme: 'custom-share',
 
 		content(reference) {
-			return ('<div class="share-tip__inner"><div class="share-tip__title">'+tippyTitle+'</div><div class="share-tip__links"> '+
-			'  <a href="http://www.facebook.com/sharer.php?u='+encodeURI(reference.getAttribute('data-url'))+'&title='+encodeURI(reference.getAttribute('data-title'))+'&description='+encodeURI(reference.getAttribute('data-description'))+'&picture='+encodeURI(reference.getAttribute('data-picture'))+'" onclick="window.open(this.href, this.title, \'toolbar=0, status=0, width=548, height=325\'); return false" target="_parent"  class="share-tip__link share-tip__link--fb"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.264 9.687l.465-3.055H6.773V4.64c0-.863.399-1.66 1.727-1.66h1.361V.357S8.633.125 7.471.125c-2.424 0-4.018 1.494-4.018 4.15v2.357H.73v3.055h2.723v7.438h3.32V9.687h2.49z" fill="#fff"/></svg></a> '+
+			return ('<div class="share-tip__inner"><div class="share-tip__title">' + tippyTitle + '</div><div class="share-tip__links"> ' +
+				'  <a href="http://www.facebook.com/sharer.php?u=' + encodeURI(reference.getAttribute('data-url')) + '&title=' + encodeURI(reference.getAttribute('data-title')) + '&description=' + encodeURI(reference.getAttribute('data-description')) + '&picture=' + encodeURI(reference.getAttribute('data-picture')) + '" onclick="window.open(this.href, this.title, \'toolbar=0, status=0, width=548, height=325\'); return false" target="_parent"  class="share-tip__link share-tip__link--fb"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.264 9.687l.465-3.055H6.773V4.64c0-.863.399-1.66 1.727-1.66h1.361V.357S8.633.125 7.471.125c-2.424 0-4.018 1.494-4.018 4.15v2.357H.73v3.055h2.723v7.438h3.32V9.687h2.49z" fill="#fff"/></svg></a> ' +
 
-			'<a  href="http://vkontakte.ru/share.php?url='+encodeURI(reference.getAttribute('data-url'))+'&title='+encodeURI(reference.getAttribute('data-title'))+'&description='+encodeURI(reference.getAttribute('data-description'))+'&image='+encodeURI(reference.getAttribute('data-picture'))+'&noparse=true" onclick="window.open(this.href, this.title, \'toolbar=0, status=0, width=548, height=325\'); return false" title="VK" target="_parent"  class="share-tip__link  share-tip__link--vk"><svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.096 1.042c.1-.398 0-.73-.598-.73h-1.959c-.498 0-.73.266-.863.564 0 0-.996 2.424-2.39 4.018-.466.432-.665.598-.93.598-.1 0-.3-.166-.3-.565V1.042c0-.498-.132-.73-.564-.73H7.437c-.332 0-.498.232-.498.465 0 .465.698.564.764 1.892v2.89c0 .63-.1.763-.365.763-.664 0-2.258-2.457-3.22-5.246-.2-.532-.4-.764-.897-.764H1.26c-.53 0-.663.266-.663.564 0 .532.664 3.088 3.088 6.508 1.627 2.325 3.918 3.553 5.976 3.553 1.229 0 1.395-.266 1.395-.73 0-2.225-.1-2.457.498-2.457.299 0 .797.166 1.959 1.294 1.328 1.329 1.56 1.893 2.29 1.893h1.96c.564 0 .83-.266.664-.83-.366-1.129-2.856-3.52-2.989-3.686-.298-.365-.199-.53 0-.863 0 0 2.391-3.387 2.657-4.516z" fill="#fff"/></svg></a></div></div>');
-		  },
+				'<a  href="http://vkontakte.ru/share.php?url=' + encodeURI(reference.getAttribute('data-url')) + '&title=' + encodeURI(reference.getAttribute('data-title')) + '&description=' + encodeURI(reference.getAttribute('data-description')) + '&image=' + encodeURI(reference.getAttribute('data-picture')) + '&noparse=true" onclick="window.open(this.href, this.title, \'toolbar=0, status=0, width=548, height=325\'); return false" title="VK" target="_parent"  class="share-tip__link  share-tip__link--vk"><svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.096 1.042c.1-.398 0-.73-.598-.73h-1.959c-.498 0-.73.266-.863.564 0 0-.996 2.424-2.39 4.018-.466.432-.665.598-.93.598-.1 0-.3-.166-.3-.565V1.042c0-.498-.132-.73-.564-.73H7.437c-.332 0-.498.232-.498.465 0 .465.698.564.764 1.892v2.89c0 .63-.1.763-.365.763-.664 0-2.258-2.457-3.22-5.246-.2-.532-.4-.764-.897-.764H1.26c-.53 0-.663.266-.663.564 0 .532.664 3.088 3.088 6.508 1.627 2.325 3.918 3.553 5.976 3.553 1.229 0 1.395-.266 1.395-.73 0-2.225-.1-2.457.498-2.457.299 0 .797.166 1.959 1.294 1.328 1.329 1.56 1.893 2.29 1.893h1.96c.564 0 .83-.266.664-.83-.366-1.129-2.856-3.52-2.989-3.686-.298-.365-.199-.53 0-.863 0 0 2.391-3.387 2.657-4.516z" fill="#fff"/></svg></a></div></div>');
+		},
 		allowHTML: true,
 		placement: 'bottom',
 		interactive: true,
@@ -118,6 +118,29 @@ $(document).ready(function () {
 		nextArrow: '<div class="article-arrow article-arrow--next"><svg width="10" height="19" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6363 11.8128L1.80825 21.6513C1.63548 21.8448 1.40798 21.9658 1.1643 21.9938C0.920633 22.0217 0.675783 21.9549 0.471259 21.8047L0.313966 21.6513L0.176336 21.476C0.0613737 21.2848 -3.58412e-06 21.0598 -3.54495e-06 20.8296C-3.50577e-06 20.5994 0.0613738 20.3744 0.176336 20.1832L0.313966 20.0079C0.356759 19.9457 0.410226 19.8935 0.471259 19.8545L7.6674 11.8128C7.86431 11.5912 7.97477 11.292 7.97477 10.9801C7.97477 10.6683 7.86431 10.369 7.6674 10.1475L0.471262 2.06193L0.31397 1.90854C0.175245 1.71168 0.0998399 1.46862 0.09984 1.21831C0.09984 0.968002 0.175245 0.72494 0.31397 0.528083L0.4516 0.352787L0.608893 0.199401C0.783489 0.0693911 0.988759 1.77744e-07 1.19874 2.15492e-07C1.40873 2.5324e-07 1.61399 0.0693913 1.78859 0.199401L1.94588 0.352787L10.0464 9.35864L10.7739 10.1913C10.9417 10.4298 11.0209 10.7309 10.9953 11.0326C10.9697 11.3343 10.8412 11.6136 10.6363 11.8128Z" fill="#AFB4BF"/></svg></div>',
 	});
 
+
+
+	$('.js-jarallax-1').jarallax({
+		speed: 0.6,
+		imgWidth: 1920,
+		imgHeight: 1862
+	})
+
+	$(".js-top-btn").click(function () {
+	$("html, body").animate({scrollTop: 0}, 1000);
+	});
+
+	wow = new WOW({
+		boxClass: 'wow', // default
+		animateClass: 'animated', // default
+		offset: 0, // default
+		mobile: true, // default
+		live: true // default
+	})
+	wow.init();
+$(".js-top-btn").click(function () {
+   $("html, body").animate({scrollTop: 0}, 1000);
+});
 });
 
 

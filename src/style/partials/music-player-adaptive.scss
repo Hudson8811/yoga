@@ -59,7 +59,12 @@
             margin-top: vw(2);
         }
         .musicpl-bottom-controls__orig_link {
-            display: none;
+           // display: none;
+           img{
+
+			width:  10px;
+			height: auto;
+           }
         }
         .musicpl-bottom-controls {
             margin-bottom: vw(12);

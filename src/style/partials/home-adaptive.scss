@@ -1,6 +1,15 @@
+
+@media screen and (min-width: 1151px) {
+	.wnevents-widget__title {
+		min-width: 178px;
+	}
+}
+
+
 //десктоп держим правками до 1151px включительно
 
 @media screen and (max-width: 1150px) {
+
 	.no-desc {
 		display: block;
 	}
@@ -25,6 +34,11 @@
 		flex-direction: column;
 
 	}
+	.section-part-wsidebar {
+		overflow: hidden;
+		max-width: 100%;
+	}
+
 	.part-wsidebar__sidebar {
 		display: block;
 		width: 100%;
@@ -114,7 +128,7 @@
 	}
 
 	.part-wsidebar {
-		
+
 	}
 
 	.part-wsidebar__main {
@@ -328,7 +342,7 @@
 	.banner {
 		position: relative;
 		&__picture {
-			
+
 		}
 		&__content {
 			position: absolute;
@@ -519,12 +533,12 @@
 				transform: translate(-50%, -50%);
 				margin-top: 1px;
 
-				
+
 
 				li {
 					margin: 0 7px;
 					list-style: none;
-		
+
 					width: 9px;
 					height: 9px;
 					border: 1px solid #25378D;
@@ -532,7 +546,7 @@
 					border-radius: 50%;
 					transition: .3s;
 					position: relative;
-		
+
 					&::before {
 						content: '';
 						display: block;
@@ -545,15 +559,15 @@
 						top: 0;
 						opacity: 0;
 						transition: .3s;
-		
+
 					}
-		
+
 					&.slick-active {
 						&::before {
 							opacity: 1;
 						}
 					}
-		
+
 					button {
 						display: none;
 					}
@@ -592,13 +606,13 @@
 			bottom: -5.3%;
 		}
 	}
-	
+
 	.hm-quote-practice {
 		padding-top: 93px;
 		&__content {
 			padding-top: 89px;
 			padding-bottom: 98px;
-			
+
 		}
 		&__main {
 			font-size: 32px;
@@ -791,7 +805,7 @@
 	margin-top: 23px;
 }
 
-		
+
 
 //////////////////////////////
 
@@ -925,7 +939,7 @@
 		br {
 			display: none;
 		}
-		
+
 		&__main {
 			font-size: vw(32);
 			line-height: vw(32);
@@ -935,7 +949,7 @@
 			line-height: vw(21);
 			font-size: vw(15);
 		}
-		
+
 		.slick-dots {
 			bottom: 11.6%;
 			left: 51%;
@@ -1123,7 +1137,7 @@
 		padding-top: vw(32);
 		padding-bottom: vw(54);
 	}
-	
+
 	.read-more {
 		font-size: vw(15);
 	}
@@ -1162,7 +1176,7 @@
 			padding-top: vw(32);
 		}
 	}
-	
+
 	.master-links {
 		flex-direction: column;
 		padding: vw(35) vw(32);
@@ -1245,7 +1259,7 @@
 				display: none;
 			}
 		}
-		
+
 		&__title {
 			margin-bottom: vw(10);
 			line-height: vw(35);
@@ -1256,7 +1270,7 @@
 			line-height: vw(26);
 		}
 	}
-	
+
 	.section-hmlearn {
 		background-image: url('../img/hmlearn-mob.jpg');
 		order: 0;
@@ -1328,7 +1342,7 @@
 				margin: 0 vw(7	);
 			}
 		}
-		
+
 	}
 	.master {
 		padding-top: vw(52);
@@ -1356,7 +1370,7 @@
 			}
 		}
 		&__social-link {
-			
+
 			&:not(:last-child) {
 				margin-right: vw(9);
 			}
@@ -1392,7 +1406,7 @@
 				display: block;
 			}
 		}
-		
+
 	}
 	.csubscr-widget {
 		width: 81%;
@@ -1419,7 +1433,7 @@
 			background-size: vw(21) auto;
 			background-position: vw(20) center;
 		}
-		
+
 		&__title {
 			font-size: vw(17);
 		}
