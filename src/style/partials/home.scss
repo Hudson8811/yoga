@@ -519,15 +519,31 @@ body {
 		width: 100%;
 		margin-right: 36px;
 		transition: opacity .3s ease;
-
+		overflow: hidden;
+		border-radius: 5px;
 		&::before {
 			content: '';
 			display: block;
 			padding-top: 358/580 * 100%;
 		}
-
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(37,55,141,.1);
+			backdrop-filter: blur(2px);
+			z-index: 3;
+			opacity: 0;
+			transition-duration: .4s;
+		}
 		&:hover {
-			opacity: .6;
+			&::after{
+				opacity: 1;
+			}
 		}
 
 		&:active {}
@@ -715,12 +731,19 @@ body {
 		margin-bottom: 89px;
 	}
 
+	.scikria-item-pic {
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
 	&:last-child {
 		flex-direction: row-reverse;
 
 		.scikria-item-pic {
 			margin-left: 5px;
 			margin-right: 0;
+			border-radius: 5px;
+			overflow: hidden;
 		}
 
 		.scikria-item-text {

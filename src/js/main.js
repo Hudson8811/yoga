@@ -9,7 +9,8 @@
 //= libs/tippy-bundle.umd.min.js
 //= libs/picturefill.min.js
 //= libs/jarallax.min.js
-//= libs/wow.min.js
+//= libs/aos.js
+//      libs/wow.min.js
 
 /* my scripts */
 
