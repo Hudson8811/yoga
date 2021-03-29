@@ -1741,6 +1741,18 @@
 	}
 </style>
     <link href="css/main.css" rel="stylesheet">
+    <script>
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      // We listen to the resize event
+      window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    </script>
     <!--title= `${page.title}`-->
   </head>
   <body>
@@ -1788,7 +1800,7 @@
               </div>
             </div>
           </div>
-          <div class="home-slider-slide"><img class="hms-pic" src="img/home-slider-pic.jpg" alt="">
+          <div class="home-slider-slide"><img class="hms-pic" src="img/hmlearn2.jpg" alt="">
             <div class="hms-info">
               <div class="hms-info__top">
                 <div class="hms-info__title">Семинар Крийя 2</div>
@@ -2033,7 +2045,7 @@
               <section class="hm-feedback no-desc">
                 <div class="container">
                   <div class="hm-feedback-slide">
-                    <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/hm-feedback/preview.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
+                    <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/retrit-reviews.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
                       <div class="hm-feedback__text">
                         <div class="hm-feedback__text-title">Отзывы о Ретрите</div>
                         <div class="hm-feedback__text-out">Интервью с участниками</div>
@@ -2041,7 +2053,7 @@
                         <div class="hm-feedback__more read-more">Подробнее</div>
                       </div>
                     </div>
-                    <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/hm-feedback/preview.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
+                    <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/retrit-reviews.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
                       <div class="hm-feedback__text">
                         <div class="hm-feedback__text-title">Отзывы о Ретрите</div>
                         <div class="hm-feedback__text-out">Интервью с участниками</div>
@@ -2049,7 +2061,7 @@
                         <div class="hm-feedback__more read-more">Подробнее</div>
                       </div>
                     </div>
-                    <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/hm-feedback/preview.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
+                    <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/retrit-reviews.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
                       <div class="hm-feedback__text">
                         <div class="hm-feedback__text-title">Отзывы о Ретрите</div>
                         <div class="hm-feedback__text-out">Интервью с участниками</div>
@@ -2211,8 +2223,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="music-player__playlist-container">
-                  <div class="music-player__playlist"></div>
+                <div class="music-player__playlist-container" id="music-player__playlist-container" style="display:none;">
+                  <div class="music-player__playlist" id="music-player__playlist"></div>
                 </div>
               </div>
             </div>
@@ -2243,7 +2255,7 @@
         <section class="hm-feedback">
           <div class="container">
             <div class="hm-feedback-slide">
-              <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/hm-feedback/preview.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
+              <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/retrit-reviews.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
                 <div class="hm-feedback__text">
                   <div class="hm-feedback__text-title">Отзывы о Ретрите</div>
                   <div class="hm-feedback__text-out">Интервью с участниками</div>
@@ -2251,7 +2263,7 @@
                   <div class="hm-feedback__more read-more">Подробнее</div>
                 </div>
               </div>
-              <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/hm-feedback/preview.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
+              <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/retrit-reviews.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
                 <div class="hm-feedback__text">
                   <div class="hm-feedback__text-title">Отзывы о Ретрите</div>
                   <div class="hm-feedback__text-out">Интервью с участниками</div>
@@ -2259,7 +2271,7 @@
                   <div class="hm-feedback__more read-more">Подробнее</div>
                 </div>
               </div>
-              <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/hm-feedback/preview.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
+              <div class="hm-feedback__content"><a class="hm-feedback__img-wrapper" href="https://youtu.be/0nTor2By_vg" data-fancybox><img class="hm-feedback__img" src="img/retrit-reviews.jpg"><img class="hm-feedback__img-play" src="img/icons/play-video.svg"></a>
                 <div class="hm-feedback__text">
                   <div class="hm-feedback__text-title">Отзывы о Ретрите</div>
                   <div class="hm-feedback__text-out">Интервью с участниками</div>

@@ -34,11 +34,6 @@
   }
 }
 
-@mixin blur(){
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-}
-
 @mixin scalepic(){
   overflow: hidden;
   img{

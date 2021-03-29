@@ -1,54 +1,54 @@
 my_songs = [{
-	"name": "Казачья",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAYA",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога.",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}, {
-	"name": "Казачья2",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAY2",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога2",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}
+		"name": "Казачья",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAYA",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога.",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}, {
+		"name": "Казачья2",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAY2",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога2",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}
 ];
 
 $(document).ready(function () {
@@ -136,27 +136,27 @@ $(document).ready(function () {
 				//$('#mpl-icon-slider').slick('slickGoTo', idx);
 
 
-				var slide_idx= $('#mpl-icon-slider').slick('slickCurrentSlide');
-				var count=$('#mpl-icon-slider').slick('getSlick').slideCount;
+				var slide_idx = $('#mpl-icon-slider').slick('slickCurrentSlide');
+				var count = $('#mpl-icon-slider').slick('getSlick').slideCount;
 				/*console.log(idx);
 				console.log(slide_idx);
 				console.log(count-1);
 				console.log('------');*/
 
-				if(count-1===slide_idx && idx===0){
+				if (count - 1 === slide_idx && idx === 0) {
 					$('#mpl-icon-slider').slick('slickNext');
-				}
-				else{
-					if(count-1===idx && slide_idx===0){
+				} else {
+					if (count - 1 === idx && slide_idx === 0) {
 						$('#mpl-icon-slider').slick('slickPrev');
-					}
-					else{
+					} else {
 						$('#mpl-icon-slider').slick('slickGoTo', idx);
 					}
 				}
 				changeOrigLink();
 				actualizePlaylist();
-				setTimeout(function(){$('#music-player').removeClass('music-player--lock');},350);
+				setTimeout(function () {
+					$('#music-player').removeClass('music-player--lock');
+				}, 350);
 
 			},
 			stop: function () {
@@ -175,18 +175,18 @@ $(document).ready(function () {
 	$('.volumeRS-wrap').addClass((window.matchMedia("(min-width: 1351px)").matches) ? 'volumeRS-wrap--horizontal' : 'volumeRS-wrap--vertical');
 	var mpVolumeRS_inp = $('.js-volume-slider');
 	var mpVolumeRS = mpVolumeRS_inp.rangeslider({
-		rangeClass: 'rangeslider volumeRS',
-		disabledClass: 'rangeslider--disabled volumeRS--disabled',
-		horizontalClass: 'rangeslider--horizontal volumeRS--horizontal',
-		verticalClass: 'rangeslider--vertical volumeRS--vertical',
-		fillClass: 'rangeslider__fill volumeRS__fill',
-		handleClass: 'rangeslider__handle volumeRS__handle',
-		orientation: volume_orientation,
-		polyfill: false,
-		onInit: function () {
-			//$(this).rangeslider('update', true);
-		}
-	})
+			rangeClass: 'rangeslider volumeRS',
+			disabledClass: 'rangeslider--disabled volumeRS--disabled',
+			horizontalClass: 'rangeslider--horizontal volumeRS--horizontal',
+			verticalClass: 'rangeslider--vertical volumeRS--vertical',
+			fillClass: 'rangeslider__fill volumeRS__fill',
+			handleClass: 'rangeslider__handle volumeRS__handle',
+			orientation: volume_orientation,
+			polyfill: false,
+			onInit: function () {
+				//$(this).rangeslider('update', true);
+			}
+		})
 		.on('input', function () {
 			Amplitude.setVolume(this.value);
 		});
@@ -204,6 +204,31 @@ $(document).ready(function () {
 		$(this).parent().removeClass('musicpl-bottom-controls__volume--active');
 	});
 
+	$(document).click(function (e) {
+		if ($(e.target).closest('.musicpl-bottom-controls__volume').length > 0) {
+			// клик внутри элемента
+			//return;
+		}
+		else{
+			$('.musicpl-bottom-controls__volume').removeClass('musicpl-bottom-controls__volume--active');
+		}
+
+		if ($(e.target).closest('#music-player__playlist, .musicpl-bottom-controls__playlist').length > 0) {
+			// клик внутри элемента
+			//return;
+		}
+		else{
+			$("#music-player__playlist-container").slideUp(500);
+			setTimeout(function () {
+				$("#music-player").removeClass('music-player--playlist-on');
+				$("#music-player__playlist .musicpl-playlist-item--visible").removeClass('musicpl-playlist-item--visible');
+			}, 500);
+		}
+
+	});
+
+
+
 	mpVolumeRS_inp.rangeslider('update', true);
 	setTimeout(function () {
 		mpVolumeRS_inp.rangeslider('update', true);
@@ -214,7 +239,20 @@ $(document).ready(function () {
 
 
 	$('.musicpl-bottom-controls__playlist').click(function () {
-		$("#music-player").toggleClass('music-player--playlist-on');
+		if (!$("#music-player").hasClass('music-player--playlist-on')) {
+			$("#music-player").addClass('music-player--playlist-on');
+			$("#music-player__playlist-container").slideDown(500);
+			setTimeout(function () {
+				$("#music-player__playlist .musicpl-playlist-item").addClass('musicpl-playlist-item--visible');
+			}, 500);
+
+		} else {
+			$("#music-player__playlist-container").slideUp(500);
+			setTimeout(function () {
+				$("#music-player").removeClass('music-player--playlist-on');
+				$("#music-player__playlist .musicpl-playlist-item--visible").removeClass('musicpl-playlist-item--visible');
+			}, 500);
+		}
 	});
 	/*function soundRSevent() {
 	};

@@ -147,8 +147,8 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		arrows: true,
 		dots: true,
-		prevArrow: '<div class="hm-feedback__arrow hm-feedback__arrow-prev"><svg width="36" height="36" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.1984 13.0936L15.0137 8.17435C15.1079 8.07759 15.232 8.01709 15.3649 8.00311C15.4978 7.98913 15.6314 8.02254 15.7429 8.09766L15.8287 8.17435L15.9038 8.262C15.9665 8.35761 16 8.47011 16 8.5852C16 8.70029 15.9665 8.81279 15.9038 8.9084L15.8287 8.99605C15.8054 9.02717 15.7762 9.05324 15.7429 9.07274L11.8178 13.0936C11.7104 13.2044 11.6501 13.354 11.6501 13.5099C11.6501 13.6659 11.7104 13.8155 11.8178 13.9263L15.7429 17.969L15.8287 18.0457C15.9044 18.1442 15.9455 18.2657 15.9455 18.3908C15.9455 18.516 15.9044 18.6375 15.8287 18.736L15.7537 18.8236L15.6679 18.9003C15.5726 18.9653 15.4607 19 15.3461 19C15.2316 19 15.1196 18.9653 15.0244 18.9003L14.9386 18.8236L10.5201 14.3207L10.1233 13.9044C10.0318 13.7851 9.98861 13.6345 10.0026 13.4837C10.0165 13.3328 10.0866 13.1932 10.1984 13.0936Z" fill="#AFB4BF"/></svg></div>',
-		nextArrow: '<div class="hm-feedback__arrow hm-feedback__arrow-next"><svg width="36" height="36" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M17.8016 14.9074L12.9863 19.8266C12.8921 19.9234 12.768 19.9839 12.6351 19.9979C12.5022 20.0118 12.3686 19.9784 12.2571 19.9033L12.1713 19.8266L12.0962 19.739C12.0335 19.6434 12 19.5309 12 19.4158C12 19.3007 12.0335 19.1882 12.0962 19.0926L12.1713 19.0049C12.1946 18.9738 12.2238 18.9477 12.2571 18.9282L16.1822 14.9074C16.2896 14.7966 16.3499 14.647 16.3499 14.491C16.3499 14.3351 16.2896 14.1855 16.1822 14.0747L12.2571 10.0319L12.1713 9.95525C12.0956 9.85682 12.0545 9.73529 12.0545 9.61013C12.0545 9.48498 12.0956 9.36345 12.1713 9.26502L12.2463 9.17737L12.3321 9.10068C12.4274 9.03567 12.5393 9.00098 12.6539 9.00098C12.7684 9.00098 12.8804 9.03567 12.9756 9.10068L13.0614 9.17737L17.4799 13.6803L17.8767 14.0966C17.9682 14.2159 18.0114 14.3664 17.9974 14.5173C17.9835 14.6681 17.9134 14.8078 17.8016 14.9074Z" fill="#AFB4BF"/></svg></div>',
+		prevArrow: '<div class="hm-feedback__arrow hm-feedback__arrow--prev"><svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6363 11.8128L1.80825 21.6513C1.63548 21.8448 1.40798 21.9658 1.1643 21.9938C0.920633 22.0217 0.675783 21.9549 0.471259 21.8047L0.313966 21.6513L0.176336 21.476C0.0613737 21.2848 -3.58412e-06 21.0598 -3.54495e-06 20.8296C-3.50577e-06 20.5994 0.0613738 20.3744 0.176336 20.1832L0.313966 20.0079C0.356759 19.9457 0.410226 19.8935 0.471259 19.8545L7.6674 11.8128C7.86431 11.5912 7.97477 11.292 7.97477 10.9801C7.97477 10.6683 7.86431 10.369 7.6674 10.1475L0.471262 2.06193L0.31397 1.90854C0.175245 1.71168 0.0998399 1.46862 0.09984 1.21831C0.09984 0.968002 0.175245 0.72494 0.31397 0.528083L0.4516 0.352787L0.608893 0.199401C0.783489 0.0693911 0.988759 1.77744e-07 1.19874 2.15492e-07C1.40873 2.5324e-07 1.61399 0.0693913 1.78859 0.199401L1.94588 0.352787L10.0464 9.35864L10.7739 10.1913C10.9417 10.4298 11.0209 10.7309 10.9953 11.0326C10.9697 11.3343 10.8412 11.6136 10.6363 11.8128Z" fill="#AFB4BF"></path></svg></div>',
+		nextArrow: '<div class="hm-feedback__arrow hm-feedback__arrow--next"><svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6363 11.8128L1.80825 21.6513C1.63548 21.8448 1.40798 21.9658 1.1643 21.9938C0.920633 22.0217 0.675783 21.9549 0.471259 21.8047L0.313966 21.6513L0.176336 21.476C0.0613737 21.2848 -3.58412e-06 21.0598 -3.54495e-06 20.8296C-3.50577e-06 20.5994 0.0613738 20.3744 0.176336 20.1832L0.313966 20.0079C0.356759 19.9457 0.410226 19.8935 0.471259 19.8545L7.6674 11.8128C7.86431 11.5912 7.97477 11.292 7.97477 10.9801C7.97477 10.6683 7.86431 10.369 7.6674 10.1475L0.471262 2.06193L0.31397 1.90854C0.175245 1.71168 0.0998399 1.46862 0.09984 1.21831C0.09984 0.968002 0.175245 0.72494 0.31397 0.528083L0.4516 0.352787L0.608893 0.199401C0.783489 0.0693911 0.988759 1.77744e-07 1.19874 2.15492e-07C1.40873 2.5324e-07 1.61399 0.0693913 1.78859 0.199401L1.94588 0.352787L10.0464 9.35864L10.7739 10.1913C10.9417 10.4298 11.0209 10.7309 10.9953 11.0326C10.9697 11.3343 10.8412 11.6136 10.6363 11.8128Z" fill="#AFB4BF"></path></svg></div>',
 
 	});
 	$('.js-slnewsw-slider').slick({
@@ -289,56 +289,56 @@ $('.category-slider').slick({
 	nextArrow: '<div class="article-arrow article-arrow--next"><svg width="10" height="19" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6363 11.8128L1.80825 21.6513C1.63548 21.8448 1.40798 21.9658 1.1643 21.9938C0.920633 22.0217 0.675783 21.9549 0.471259 21.8047L0.313966 21.6513L0.176336 21.476C0.0613737 21.2848 -3.58412e-06 21.0598 -3.54495e-06 20.8296C-3.50577e-06 20.5994 0.0613738 20.3744 0.176336 20.1832L0.313966 20.0079C0.356759 19.9457 0.410226 19.8935 0.471259 19.8545L7.6674 11.8128C7.86431 11.5912 7.97477 11.292 7.97477 10.9801C7.97477 10.6683 7.86431 10.369 7.6674 10.1475L0.471262 2.06193L0.31397 1.90854C0.175245 1.71168 0.0998399 1.46862 0.09984 1.21831C0.09984 0.968002 0.175245 0.72494 0.31397 0.528083L0.4516 0.352787L0.608893 0.199401C0.783489 0.0693911 0.988759 1.77744e-07 1.19874 2.15492e-07C1.40873 2.5324e-07 1.61399 0.0693913 1.78859 0.199401L1.94588 0.352787L10.0464 9.35864L10.7739 10.1913C10.9417 10.4298 11.0209 10.7309 10.9953 11.0326C10.9697 11.3343 10.8412 11.6136 10.6363 11.8128Z" fill="#AFB4BF"/></svg></div>',
 });
 my_songs = [{
-	"name": "Казачья",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAYA",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога.",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}, {
-	"name": "Казачья2",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAY2",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога2",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}
+		"name": "Казачья",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAYA",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога.",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}, {
+		"name": "Казачья2",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAY2",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога2",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}
 ];
 
 $(document).ready(function () {
@@ -426,27 +426,27 @@ $(document).ready(function () {
 				//$('#mpl-icon-slider').slick('slickGoTo', idx);
 
 
-				var slide_idx= $('#mpl-icon-slider').slick('slickCurrentSlide');
-				var count=$('#mpl-icon-slider').slick('getSlick').slideCount;
+				var slide_idx = $('#mpl-icon-slider').slick('slickCurrentSlide');
+				var count = $('#mpl-icon-slider').slick('getSlick').slideCount;
 				/*console.log(idx);
 				console.log(slide_idx);
 				console.log(count-1);
 				console.log('------');*/
 
-				if(count-1===slide_idx && idx===0){
+				if (count - 1 === slide_idx && idx === 0) {
 					$('#mpl-icon-slider').slick('slickNext');
-				}
-				else{
-					if(count-1===idx && slide_idx===0){
+				} else {
+					if (count - 1 === idx && slide_idx === 0) {
 						$('#mpl-icon-slider').slick('slickPrev');
-					}
-					else{
+					} else {
 						$('#mpl-icon-slider').slick('slickGoTo', idx);
 					}
 				}
 				changeOrigLink();
 				actualizePlaylist();
-				setTimeout(function(){$('#music-player').removeClass('music-player--lock');},350);
+				setTimeout(function () {
+					$('#music-player').removeClass('music-player--lock');
+				}, 350);
 
 			},
 			stop: function () {
@@ -465,18 +465,18 @@ $(document).ready(function () {
 	$('.volumeRS-wrap').addClass((window.matchMedia("(min-width: 1351px)").matches) ? 'volumeRS-wrap--horizontal' : 'volumeRS-wrap--vertical');
 	var mpVolumeRS_inp = $('.js-volume-slider');
 	var mpVolumeRS = mpVolumeRS_inp.rangeslider({
-		rangeClass: 'rangeslider volumeRS',
-		disabledClass: 'rangeslider--disabled volumeRS--disabled',
-		horizontalClass: 'rangeslider--horizontal volumeRS--horizontal',
-		verticalClass: 'rangeslider--vertical volumeRS--vertical',
-		fillClass: 'rangeslider__fill volumeRS__fill',
-		handleClass: 'rangeslider__handle volumeRS__handle',
-		orientation: volume_orientation,
-		polyfill: false,
-		onInit: function () {
-			//$(this).rangeslider('update', true);
-		}
-	})
+			rangeClass: 'rangeslider volumeRS',
+			disabledClass: 'rangeslider--disabled volumeRS--disabled',
+			horizontalClass: 'rangeslider--horizontal volumeRS--horizontal',
+			verticalClass: 'rangeslider--vertical volumeRS--vertical',
+			fillClass: 'rangeslider__fill volumeRS__fill',
+			handleClass: 'rangeslider__handle volumeRS__handle',
+			orientation: volume_orientation,
+			polyfill: false,
+			onInit: function () {
+				//$(this).rangeslider('update', true);
+			}
+		})
 		.on('input', function () {
 			Amplitude.setVolume(this.value);
 		});
@@ -494,6 +494,31 @@ $(document).ready(function () {
 		$(this).parent().removeClass('musicpl-bottom-controls__volume--active');
 	});
 
+	$(document).click(function (e) {
+		if ($(e.target).closest('.musicpl-bottom-controls__volume').length > 0) {
+			// клик внутри элемента
+			//return;
+		}
+		else{
+			$('.musicpl-bottom-controls__volume').removeClass('musicpl-bottom-controls__volume--active');
+		}
+
+		if ($(e.target).closest('#music-player__playlist, .musicpl-bottom-controls__playlist').length > 0) {
+			// клик внутри элемента
+			//return;
+		}
+		else{
+			$("#music-player__playlist-container").slideUp(500);
+			setTimeout(function () {
+				$("#music-player").removeClass('music-player--playlist-on');
+				$("#music-player__playlist .musicpl-playlist-item--visible").removeClass('musicpl-playlist-item--visible');
+			}, 500);
+		}
+
+	});
+
+
+
 	mpVolumeRS_inp.rangeslider('update', true);
 	setTimeout(function () {
 		mpVolumeRS_inp.rangeslider('update', true);
@@ -504,7 +529,20 @@ $(document).ready(function () {
 
 
 	$('.musicpl-bottom-controls__playlist').click(function () {
-		$("#music-player").toggleClass('music-player--playlist-on');
+		if (!$("#music-player").hasClass('music-player--playlist-on')) {
+			$("#music-player").addClass('music-player--playlist-on');
+			$("#music-player__playlist-container").slideDown(500);
+			setTimeout(function () {
+				$("#music-player__playlist .musicpl-playlist-item").addClass('musicpl-playlist-item--visible');
+			}, 500);
+
+		} else {
+			$("#music-player__playlist-container").slideUp(500);
+			setTimeout(function () {
+				$("#music-player").removeClass('music-player--playlist-on');
+				$("#music-player__playlist .musicpl-playlist-item--visible").removeClass('musicpl-playlist-item--visible');
+			}, 500);
+		}
 	});
 	/*function soundRSevent() {
 	};
