@@ -25,7 +25,7 @@
 
 	.container--long {
 		//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
-		width: 697px;
+		width: 6976x;
 	}
 
 	.no-tablet {
@@ -33,7 +33,7 @@
 	}
 
 	.container--extra-long {
-		width: 697px;
+		width: 696px;
 		max-width: calc(100% - 35px * 2);
 	}
 
@@ -214,8 +214,8 @@
 		// margin: 0 -57px;
 
 		&--2 {
-			padding-bottom: 92px;
-			padding-top: 92px;
+				padding-bottom: 93px;
+				padding-top: 93px;
 
 			.scikria-item {
 				display: flex;
@@ -298,7 +298,7 @@
 		&::before {
 			content: '';
 			display: block;
-			padding-top: 248.88/403 * 100%;
+			padding-top: 61.82682%;
 		}
 
 		img {
@@ -381,14 +381,16 @@
 		}
 	}
 
-	.section-hmlearn {}
+	.section-hmlearn {
+		padding-top: 47.558%;
+	}
 
 	.tablet-content {
 		display: block;
 	}
 
 	.section-hmlearn2 {
-		padding-top: 331px;
+		padding-top: 47.558%;
 		position: relative;
 		color: #fff;
 
@@ -453,7 +455,7 @@
 		}
 
 		&__text {
-			padding-top: 31px;
+			padding-top: 32px;
 
 			&-title {
 				font-weight: 300;
@@ -511,7 +513,7 @@
 	}
 
 	.hm-feedback-slide {
-		margin-bottom: 23px;
+		margin-bottom: 22px;
 
 		.slick-dots {
 			margin-top: 19px;
@@ -544,15 +546,15 @@
 	.insta-widget {
 		&__content {
 			padding: 0;
+			margin-top: -1px;
 		}
 
 		&__item {
 
 			margin-right: 0;
-			width: calc(33.333333% - 3px);
+			width: calc(33.333333% - 4px);
 
 			img {
-				height: 173px;
 			}
 
 			&:nth-child(4) {
@@ -878,7 +880,7 @@
 			font-size: 19px;
 			line-height: 29px;
 			line-height: 30px;
-			min-width: 180px;
+			//min-width: 180px;
 		}
 
 		.newposts-widget-item__date {
@@ -898,6 +900,10 @@
 
 		.wnevents-widget__item:last-child {
 			margin-top: 0;
+		}
+		&--title{
+
+			min-width: 180px;
 		}
 	}
 

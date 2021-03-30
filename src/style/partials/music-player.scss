@@ -12,18 +12,23 @@
 
 .music-player-top {}
 
-.music-player-top__next,
-.music-player-top__prev {
+.music-player-top__arrow,
+.music-player-top__arrow {
 	position: absolute;
-	top: 46px;
-	width: 28px;
-	height: 28px;
+	top: 42px;
+	width: 6px;
+	box-sizing: content-box;
+	padding: 10px;
+	cursor: pointer;
 	cursor: pointer;
 
-	svg path {
+	svg {
+		width: 100%;
+		height: auto;
+		path {
 		transition-duration: .2s;
 	}
-
+	}
 	&:hover {
 		svg path {
 			fill: #6974A9;
@@ -38,11 +43,11 @@
 	}
 }
 
-.music-player-top__next {
+.music-player-top__arrow--next {
 	right: 42px;
 }
 
-.music-player-top__prev {
+.music-player-top__arrow--prev {
 	left: 42px;
 }
 
@@ -171,6 +176,7 @@
 	text-align: center;
 	font-family: 'Montserrat';
 	font-size: 13px;
+	color: #AFB4BF;
 	font-weight: normal;
 	font-style: normal;
 	line-height: 1;

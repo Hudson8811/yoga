@@ -3,10 +3,14 @@
 		margin: 0 auto;
 		margin-bottom: 59px;
 		width: 100%;
-		padding: 34px 35px 10px;
+		padding: 36px 35px 22px;
 
 		&__album-art {
-			width: 102px;
+			width: 100px;
+		}
+
+		&__song-name {
+			margin-top: 20px;
 		}
 
 		&__song-artist {
@@ -17,15 +21,24 @@
 			margin-top: 28px;
 		}
 
-		.musicpl-bottom-controls {
-			margin-bottom: 12px;
+		&__time-container {
+			margin-top: 9px;
 		}
 
-		.music-player-top__prev {
+		.musicpl-bottom-controls {
+			margin-top: 12px;
+		}
+
+		.music-player-top__arrow {
+			top: 75px;
+			width: 10px;
+		}
+
+		.music-player-top__arrow--prev {
 			left: 25px;
 		}
 
-		.music-player-top__next {
+		.music-player-top__arrow--next {
 			right: 25px;
 		}
 
@@ -36,7 +49,8 @@
 			width: 28px;
 			height: 28px;
 			cursor: pointer;
-			svg{
+
+			svg {
 				width: 100%;
 				height: auto;
 			}
