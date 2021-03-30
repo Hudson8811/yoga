@@ -2,6 +2,10 @@
 	.wnevents-widget__title {
 		min-width: 178px;
 	}
+
+	.csubscr-widget__logo {
+		display: none;
+	}
 }
 
 
@@ -21,7 +25,7 @@
 
 	.container--long {
 		//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
-		width: 697px;
+		width: 6976x;
 	}
 
 	.container--wery-long {
@@ -33,7 +37,7 @@
 	}
 
 	.container--extra-long {
-		width: 697px;
+		width: 696px;
 		max-width: calc(100% - 35px * 2);
 	}
 
@@ -214,8 +218,8 @@
 		// margin: 0 -57px;
 
 		&--2 {
-			padding-bottom: 92px;
-			padding-top: 92px;
+				padding-bottom: 93px;
+				padding-top: 93px;
 
 			.scikria-item {
 				display: flex;
@@ -298,7 +302,7 @@
 		&::before {
 			content: '';
 			display: block;
-			padding-top: 248.88/403 * 100%;
+			padding-top: 61.82682%;
 		}
 
 		img {
@@ -381,14 +385,16 @@
 		}
 	}
 
-	.section-hmlearn {}
+	.section-hmlearn {
+		padding-top: 47.558%;
+	}
 
 	.tablet-content {
 		display: block;
 	}
 
 	.section-hmlearn2 {
-		padding-top: 331px;
+		padding-top: 47.558%;
 		position: relative;
 		color: #fff;
 
@@ -427,14 +433,15 @@
 		&__white-box {
 			top: 49%;
 		}
-		&::before{
+
+		&::before {
 			display: none;
 		}
 	}
 
 	.hm-feedback {
 		padding-top: 93px;
-		padding-bottom: 58px;
+		padding-bottom: 59px;
 
 		&__content {
 			flex-direction: column;
@@ -446,11 +453,13 @@
 		}
 
 		&__img-play {
-			width: 70px;
+			width: 72px;
+			top: 50%;
+			left: 50%;
 		}
 
 		&__text {
-			padding-top: 31px;
+			padding-top: 32px;
 
 			&-title {
 				font-weight: 300;
@@ -478,14 +487,21 @@
 		}
 
 		&__arrow {
+			opacity: 1;
+			margin-top: 0;
+			top: 169px;
+			width: 10px;
+
+			svg {
+				width: 100%;
+			}
+
 			&--prev {
-				left: -11.2%;
-				top: 35%;
+				left: -33px;
 			}
 
 			&--next {
-				right: -10.5%;
-				top: 35%;
+				right: -33px;
 			}
 		}
 
@@ -500,20 +516,37 @@
 		}
 	}
 
+	.hm-feedback-slide {
+		margin-bottom: 22px;
+
+		.slick-dots {
+			margin-top: 19px;
+		}
+	}
+
+	.hm-feedback__img-wrapper {
+		max-width: 582px;
+		margin-right: 0;
+	}
+
 	.master {
 		padding-top: 48px;
 		padding-bottom: 51px;
 		&_video {
-			
+
 		}
 
 		&__info {
-			margin-bottom: 20px;
+			margin-bottom: 18px;
 
 			span {
 				display: inline;
 			}
 		}
+
+		&__img-wrapper {
+			margin-bottom: 30px;
+
 		&_article {
 			padding-top: 46px;
 		}
@@ -521,14 +554,16 @@
 
 	.insta-widget {
 		&__content {
-			padding: 0 25px;
+			padding: 0;
+			margin-top: -1px;
 		}
 
 		&__item {
+
+			margin-right: 0;
 			width: calc(33.333333% - 4px);
 
 			img {
-				height: 173px;
 			}
 
 			&:nth-child(4) {
@@ -538,14 +573,14 @@
 	}
 
 	.slider-news-widget-wrap {
-		padding-top: 93px;
-		padding-left: 25px;
-		padding-right: 25px;
+		padding-top: 92px;
+		padding-left: 0;
+		padding-right: 0;
 		display: flex;
 		justify-content: space-between;
 
 		.slider-news-widget {
-			width: calc(50% - 20px);
+			width: calc(50% - 18px);
 			margin-bottom: 84px;
 		}
 
@@ -591,13 +626,14 @@
 
 					width: 9px;
 					height: 9px;
-					border: 1px solid #25378D;
+					//border: 1px solid #25378D;
+					border: 1px solid #AFB4BF;
 					box-sizing: border-box;
 					border-radius: 50%;
-					transition: .3s;
+					transition:all .3s;
 					position: relative;
 
-					&::before {
+					/*&::before {
 						content: '';
 						display: block;
 						width: 100%;
@@ -610,9 +646,11 @@
 						opacity: 0;
 						transition: .3s;
 
-					}
+					}*/
 
 					&.slick-active {
+						background: #25378D;
+						border-color: #25378D;
 						&::before {
 							opacity: 1;
 						}
@@ -631,9 +669,9 @@
 	}
 
 	.csubscr-widget {
-		width: 91%;
+		width: 100%;
 		margin: 0 auto;
-		padding: 34px 28% 56px;
+		padding: 36px 0 57px;
 
 		&__logo-wrapper {
 			display: block;
@@ -643,25 +681,35 @@
 			margin-bottom: 20px;
 		}
 
+		&__logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 19px;
+
+			img {
+				display: block;
+				width: 35px;
+				height: auto;
+			}
+		}
+
 		&__inp-wrap {
-			margin-top: 14px;
+			margin-top: 12px;
+		}
+
+		&__inner {
+			width: 206px;
+			margin: 0 auto;
 		}
 
 	}
 
 	.events-widget-wrap {
-		padding-bottom: 44px;
+		padding-bottom: 43px;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
-	}
-
-	.hm-feedback-slide {
-		margin-bottom: 52px;
-
-		.slick-dots {
-			bottom: -5.3%;
-		}
 	}
 
 	.hm-quote-practice {
@@ -762,6 +810,10 @@
 		}
 	}
 
+	.hm-quote__info {
+		font-weight: 300;
+	}
+
 	.hm-quote__main::after {
 		display: none;
 	}
@@ -788,6 +840,7 @@
 			font-size: 31px;
 			line-height: 1.2;
 			margin-top: 29px;
+			font-weight: 300;
 		}
 
 		&__meta {
@@ -818,8 +871,10 @@
 	}
 
 	.newposts-widget {
-		width: 50%;
-
+		width: calc(50% - 18px);
+		.newposts-widget__items {
+			padding-top: 6px;
+		}
 		.newposts-widget-item+.newposts-widget-item {
 			margin-top: 23px;
 		}
@@ -827,25 +882,27 @@
 		&__title {
 			font-size: 15px;
 			padding-bottom: 33px;
+			font-weight: 400;
 		}
 
 		.newposts-widget-item__title {
 			font-size: 19px;
 			line-height: 29px;
 			line-height: 30px;
+			//min-width: 180px;
 		}
 
 		.newposts-widget-item__date {
 			font-size: 15px;
 			line-height: 21px;
-			margin-top: -2px;
+			margin-top: -1px;
 		}
 	}
 
 	.wnevents-widget {
 		margin-bottom: 50px;
-		width: 50%;
-		padding: 0 20px 0 25px;
+		width: calc(50% - 18px);
+		padding: 0;
 		display: flex;
 		flex-direction: column-reverse;
 		justify-content: space-between;
@@ -853,11 +910,15 @@
 		.wnevents-widget__item:last-child {
 			margin-top: 0;
 		}
+		&--title{
+
+			min-width: 180px;
+		}
 	}
 
 
 	.hm-events-slider .slick-dots {
-		margin-top: -8px;
+		margin-top: 29px;
 		flex-wrap: wrap;
 		margin-bottom: -10px;
 
@@ -871,7 +932,20 @@
 		margin-top: 23px;
 	}
 
+	.hm-events-arrow {
+		opacity: 1;
+		top: 126px;
+		width: 10px;
 
+	}
+
+	.hm-events-arrow--next {
+		right: -33px;
+	}
+
+	.hm-events-arrow--prev {
+		left: 5px;
+	}
 
 	//////////////////////////////
 
@@ -886,6 +960,26 @@
 
 	//////////////////////////////
 
+}
+
+@media screen and (max-width: 1150px) and (min-width: 768px) {
+	.part-wsidebar__sidebar {
+		display: block;
+		width: 100%;
+		width: 534px;
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hm-quote-practice__img {
+		display: none;
+	}
+
+	.section-part-wsidebar {
+		overflow: hidden;
+	}
 }
 
 //планшетный вид нам адаптировать не приходится
@@ -1190,10 +1284,12 @@
 
 		&:focus {}
 	}
-	.hm-events-arrow{
+
+	.hm-events-arrow {
 		opacity: 1;
 
 	}
+
 	.hm-events-slider .slick-dots {
 		margin-top: vw(29);
 		flex-wrap: wrap;
