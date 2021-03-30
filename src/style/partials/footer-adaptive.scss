@@ -171,7 +171,13 @@
 		}
 	}
 
-
+	.top-btn-wrap__inner{
+		width: 100%;
+		max-width: calc(100% - 70px);
+	}
+	.top-btn {
+		margin-bottom: 36px;
+	}
 }
 
 //начало мобилки
@@ -179,6 +185,26 @@
 
 @media screen and (max-width:767px) {
 
+	.top-btn-wrap__inner{
+		width: 92.5vw;
+		max-width: calc(100% - 3.88889vw * 2);
+		overflow: visible;
+	}
+
+	.top-btn {
+
+		width: vw(36);
+		height: vw(36);
+
+		border: 1px solid #DEE6E9;
+		box-sizing: border-box;
+		border-radius: 10px;
+
+		svg {
+			width: vw(10);
+			height: auto;
+		}
+	}
 	.site-footer {
 		margin-top: 0;
 		padding-top: vw(84);
@@ -208,7 +234,8 @@
 			margin: vw(-5) 0;
 			min-width: vw(39);
 			width: vw(39);
-			svg{
+
+			svg {
 				height: auto;
 			}
 		}
@@ -219,7 +246,7 @@
 
 		&__item {
 			line-height: vw(32);
-			
+
 		}
 	}
 
@@ -244,24 +271,27 @@
 			padding: 0;
 			margin-left: vw(28);
 			margin-bottom: vw(13);
+
 			//margin-left: vw(-20);
 			//padding-left: vw(20);
 			//margin-right: vw(20);
-			&::before{
+			&::before {
 				position: absolute;
 				height: vw(15);
 				width: vw(1);
 				top: 50%;
-				-webkit-transform: translate(0,-50%);
-				transform: translate(0,-50%);
+				-webkit-transform: translate(0, -50%);
+				transform: translate(0, -50%);
 				right: 0;
 				content: '';
 				display: block;
 				background: #e1e1e1;
 				left: vw(-13);
 			}
+
 			&:not(:last-child) {
 				padding-right: 0;
+
 				&::after {
 					display: none;
 				}

@@ -1,4 +1,53 @@
-@media screen and (max-width:1650px) {
+@media screen and (max-width:1650px) and (min-width:1151px) {
+	.sh-burger-wrap::after {
+		margin-left: 11px;
+	}
+
+	.sh-logo {
+		margin: 0px 22px;
+	}
+
+	.sh-menu-item {
+		padding: 0 5px 0 5px;
+	}
+
+	.sh-right {
+		margin-right: -6px;
+	}
+
+	.sh-authorize__link {
+
+		padding: 10px 17px 10px 9px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	.sh-socials::after {
+		margin-left: 10px;
+	}
+
+	.sh-socials::before {
+		margin-left: 24px;
+	}
+
+	.lang-switcher {
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	.sh-menu-item {
+		font-size: 15px;
+		line-height: 18px;
+		padding: 0 18px;
+	}
+
+	.sh-center {
+		padding-left: 0;
+		padding-right: 1.2%;
+	}
+}
+
+/*@media screen and (max-width:1650px) {
 	.sh-menu-item {
 		padding: 0 10px 0 11px;
 	}
@@ -8,12 +57,12 @@
 	}
 }
 
-@media screen and (max-width:1315px) {
+*/
+@media screen and (max-width:1305px) {
 	.sh-menu {
 		display: none;
 	}
 }
-
 
 //последний десктоп
 @media screen and (min-width:1151px) {
@@ -30,6 +79,12 @@
 
 //начало планшета
 @media screen and (max-width:1150px) {
+	.site-header {
+		&+* {
+			margin-top: 61px;
+		}
+	}
+
 	.site-header__inner {
 		min-height: 61px;
 		width: 100%;
@@ -160,6 +215,7 @@
 		padding: 8px;
 		margin-right: 2px;
 	}
+
 	.lang-switcher {
 		font-size: 17px;
 		line-height: 21px;
@@ -167,6 +223,12 @@
 
 	.container {
 		overflow: hidden;
+	}
+
+	.site-header {
+		&+* {
+			margin-top: 53px;
+		}
 	}
 
 	.site-header__inner {

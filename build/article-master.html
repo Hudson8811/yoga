@@ -1741,6 +1741,18 @@
 	}
 </style>
     <link href="css/main.css" rel="stylesheet">
+    <script>
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      // We listen to the resize event
+      window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    </script>
     <!--title= `${page.title}`-->
   </head>
   <body>
@@ -1775,11 +1787,60 @@
       </div>
     </header>
     <main class="main">
+      <div class="maslider-section">
+        <div class="maslider js-maslider">
+          <div class="maslider-slide">
+            <div class="maslider-slide__inner">
+              <picture>
+                <source srcset="img/maslider/mobile.jpg" media="(max-width: 767px)">
+                <source srcset="img/maslider/desktop.jpg"><img class="maslider-slide__img" srcset="img/maslider/desktop.jpg" alt="My default image">
+              </picture>
+              <div class="maslider-slide__title">Как возникает эго</div>
+            </div>
+          </div>
+          <div class="maslider-slide">
+            <div class="maslider-slide__inner">
+              <picture>
+                <source srcset="img/maslider/mobile.jpg" media="(max-width: 767px)">
+                <source srcset="img/maslider/desktop.jpg"><img class="maslider-slide__img" srcset="img/maslider/desktop.jpg" alt="My default image">
+              </picture>
+              <div class="maslider-slide__title">Как возникает эго</div>
+            </div>
+          </div>
+          <div class="maslider-slide">
+            <div class="maslider-slide__inner">
+              <picture>
+                <source srcset="img/maslider/mobile.jpg" media="(max-width: 767px)">
+                <source srcset="img/maslider/desktop.jpg"><img class="maslider-slide__img" srcset="img/maslider/desktop.jpg" alt="My default image">
+              </picture>
+              <div class="maslider-slide__title">Как возникает эго</div>
+            </div>
+          </div>
+          <div class="maslider-slide">
+            <div class="maslider-slide__inner">
+              <picture>
+                <source srcset="img/maslider/mobile.jpg" media="(max-width: 767px)">
+                <source srcset="img/maslider/desktop.jpg"><img class="maslider-slide__img" srcset="img/maslider/desktop.jpg" alt="My default image">
+              </picture>
+              <div class="maslider-slide__title">Как возникает эго</div>
+            </div>
+          </div>
+          <div class="maslider-slide">
+            <div class="maslider-slide__inner">
+              <picture>
+                <source srcset="img/maslider/mobile.jpg" media="(max-width: 767px)">
+                <source srcset="img/maslider/desktop.jpg"><img class="maslider-slide__img" srcset="img/maslider/desktop.jpg" alt="My default image">
+              </picture>
+              <div class="maslider-slide__title">Как возникает эго</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="subscribe">
         <div class="container subscribe__container">
           <div class="subscribe__content">
             <div class="subscribe__name">Статьи Мастера</div>
-            <div class="subscribe__inner"><img class="subscribe__icon" src="img/icons/subscribe.svg"><a class="subscribe__link" href="#">Подписаться</a></div>
+            <div class="subscribe__inner"><img class="js-share subscribe__icon" src="img/icons/subscribe.svg" data-title="Имрам Видео" data-url="http://imram.q7.by/videos" data-picture="http://htmlbook.ru/files/images/samcss/fig15-3.png" data-description="В этом разделе мы представляем уникальные материалы. Каждая статья несет в себе личный Опыт Мастера Имрама. Здесь вы найдете множество ключей, подсказок и ответов на самые животрепещущие вопросы."><a class="subscribe__link" href="#">Подписаться</a></div>
           </div>
         </div>
       </section>
@@ -2133,7 +2194,7 @@
                   </div>
                 </div>
                 <div class="music-player__playlist-container">
-                  <div class="music-player__playlist"> </div>
+                  <div class="music-player__playlist"></div>
                 </div>
               </div>
             </div>
@@ -2152,6 +2213,11 @@
         </div>
       </section>
     </main>
+    <div class="top-btn-wrap">
+      <div class="top-btn-wrap__inner container">
+        <div class="top-btn js-top-btn" id="top-btn"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8867 0.462901L23.6196 11.6986C23.8307 11.9185 23.9627 12.208 23.9932 12.5182C24.0237 12.8283 23.9508 13.1399 23.7869 13.4002L23.6196 13.6004L23.4284 13.7756C23.2198 13.9219 22.9743 14 22.7232 14C22.4721 14 22.2266 13.9219 22.018 13.7756L21.8268 13.6004C21.7589 13.5459 21.702 13.4779 21.6595 13.4002L12.8867 4.2415C12.645 3.99088 12.3185 3.85029 11.9783 3.85029C11.6381 3.85029 11.3117 3.99088 11.07 4.2415L2.24937 13.4002L2.08205 13.6004C1.86729 13.777 1.60213 13.8729 1.32907 13.8729C1.056 13.8729 0.790844 13.777 0.57609 13.6004L0.384858 13.4252L0.217528 13.225C0.0756992 13.0028 -5.50073e-08 12.7416 -6.66892e-08 12.4743C-7.83711e-08 12.2071 0.0756992 11.9458 0.217528 11.7236L0.384858 11.5234L10.2094 1.21361L11.1178 0.287735C11.378 0.0742574 11.7065 -0.0265813 12.0356 0.00600953C12.3647 0.0385994 12.6693 0.202135 12.8867 0.462901Z" fill="#AFB4BF"/></svg></div>
+      </div>
+    </div>
     <footer class="site-footer">
       <div class="container container--sfoo">
         <div class="sfoo-top">

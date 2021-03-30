@@ -50,10 +50,20 @@
 		}
 	}
 }
-
+.site-header{
+	&+*{
+		margin-top: 90px;
+	}
+}
 .site-header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
 	//display: none;
 	background: #ffffff;
+    z-index: 999;
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -97,7 +107,9 @@
 		height: auto;
 		display: block;
 	}
+
 	transition-duration: .2s;
+
 	&:hover {
 		opacity: .7;
 	}
@@ -136,7 +148,8 @@
 		transition-duration: .2s;
 
 		&:hover {
-			text-decoration-line: underline;
+			//text-decoration-line: underline;
+			color: #53565A;
 		}
 
 		&:active {}
@@ -164,7 +177,8 @@
 	transition-duration: .2s;
 
 	&:hover {
-		text-decoration-line: underline;
+		color: #53565A;
+		//text-decoration-line: underline;
 	}
 }
 
@@ -245,8 +259,32 @@
 		transition-duration: .2s;
 
 		&:hover {
-			text-decoration-line: underline;
+			color: #53565A;
+			//text-decoration-line: underline;
 		}
 	}
 }
 
+.sh-scrolled {
+	animation: animate-sh 0.4s ease-out forwards;
+}
+
+.sh-fixed {
+z-index: 999;
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
+	transition: height 0.4s ease-out;
+}
+
+@keyframes animate-sh {
+	from {
+		transform: translateY(-300px)
+	}
+
+	to {
+		transform: translateY(0)
+	}
+}
