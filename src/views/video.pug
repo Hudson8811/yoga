@@ -10,8 +10,7 @@ block vars
 
 
 block main
-    include components/article-master/maslider
-    include components/article-master/subscribe
+    include components/video/subscribe-video
     include components/article-master/quote-true
     .container.container--extra-long
         .hr
@@ -19,31 +18,36 @@ block main
         .container.container--extra-long
             .part-wsidebar
                 .part-wsidebar__main
-                    include components/article-master/new-article
+                    include components/video/new-video
                     .container.container--extra-long
                         .hr
                     include components/article-master/category-slider
                     .container.container--wery-long
                         .hr
-                    include components/article-master/band
+                    include components/video/band-video
+                    include components/video/section-youtube
                 .part-wsidebar__sidebar
-                    .category
+                    .category.category_video
                         .category__title.custom-widget-title Категории
                         ul.category__list
                             li.category__list-item
-                                a.category__link(href="#") Новые статьи
+                                a.category__link(href="#") Новые видео
                             li.category__list-item
                                 a.category__link(href="#") Наука Крийя
                             li.category__list-item
-                                a.category__link(href="#") Саморазвитие
+                                a.category__link(href="#") Медитация
                             li.category__list-item
-                                a.category__link(href="#") Творчество
+                                a.category__link(href="#") Саморазвитие
                             li.category__list-item
                                 a.category__link(href="#") Здоровье
                             li.category__list-item
                                 a.category__link(href="#") Семья и дети
+                            li.category__list-item
+                                a.category__link(href="#") Imram Music
+                            li.category__list-item
+                                a.category__link(href="#") Видео на английском
                     .hr
-                    .master.master_article
+                    .master.master_video
                         .master__content
                             .master__title О мастере
                             .master__img-wrapper
@@ -72,20 +76,22 @@ block main
                             a.insta-widget__item(href="")
                                 img(src="img/insta-widget/insta-4.jpg", alt="")
 
-                    .csubscr-and-slider-widget
-                        .csubscr-widget
+                    .csubscr-and-slider-widget.csubscr-and-slider-widget_video
+                        .csubscr-widget.csubscr-widget_video
                             .csubscr-widget__inner
-                                .csubscr-widget__title  Присоединяйтесь
+                                .csubscr-widget__form-logo_video
+                                    include ../img/icons/form-logo.svg
+                                .csubscr-widget__title Присоединяйтесь
                                 .csubscr-widget__description Получите доступ к платформе Имрам Крийя
                                 .csubscr-widget__inp-wrap
                                     input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
                                 .btn.btn--square.csubscr-widget__btn отправить
-                        a.wnevents-widget__item(href="")
+                        a.wnevents-widget__item.wnevents-widget__item_video(href="")
                             .wnevents-widget__pic
                                 img(src="img/wnevents-1.jpg", alt="")
                             .wnevents-widget__title События недели
 
-                    .slider-news-widget-wrap
+                    .slider-news-widget-wrap.slider-news-widget-wrap_video
                         .slider-news-widget
                             .slider-news-widget__title.custom-widget-title Онлайн курсы
                             .slnewsw-slider.js-slnewsw-slider
@@ -101,7 +107,6 @@ block main
                                     .slnewsw-slider-item__pic
                                         img(src="img/online-courses.jpg", alt="")
                                     .slnewsw-slider-item__name Базовый курс медитации3
-
                         .slider-news-widget
                             .slider-news-widget__title.custom-widget-title Видео недели
                             .slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
@@ -118,7 +123,20 @@ block main
                                         img(src="img/online-courses.jpg", alt="")
                                     .slnewsw-slider-item__name Базовый курс медитации3
 
-                    .wnevents-widget.wnevents-widget_article
+                        .newposts-widget
+                            .newposts-widget__title.custom-widget-title Новые статьи
+                            .newposts-widget__items
+                                a.newposts-widget-item(href="")
+                                    .newposts-widget-item__title Что такое осознанность
+                                    .newposts-widget-item__date 28 Января 2021
+                                a.newposts-widget-item(href="")
+                                    .newposts-widget-item__title Глубина общения
+                                    .newposts-widget-item__date 28 Января 2021
+                                a.newposts-widget-item(href="")
+                                    .newposts-widget-item__title Как стать счастливым
+                                    .newposts-widget-item__date 28 Января 2021
+
+                    .wnevents-widget.wnevents-widget_video
                         a.wnevents-widget__item(href="")
                             .wnevents-widget__pic
                                 img(src="img/wnevents-1.jpg", alt="")
@@ -177,7 +195,7 @@ block main
                                             input.amplitude-volume-slide.js-volume-slider(type='range' min="0" max="100" value='100')
                                         img(src="img/player-controls/volume.svg", alt="")
                         .music-player__playlist-container
-                            .music-player__playlist
+                            .music-player__playlist 
     section.hm-galery
         .container.container--extra-long
             .hm-galery__row

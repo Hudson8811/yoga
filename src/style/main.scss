@@ -27,12 +27,33 @@
 @import "partials/header-adaptive";
 @import "partials/footer-adaptive";
 
-@import "partials/article-master/subscribe.scss";
-@import "partials/article-master/quote-true.scss";
-@import "partials/article-master/category.scss";
+@import "partials/sections/subscribe.scss";
+@import "partials/sections/subscribe-adapt.scss";
+
+@import "partials/sections/quote-true.scss";
+@import "partials/sections/quote-true-adapt.scss";
+@import "partials/sections/category.scss";
+@import "partials/sections/category-adapt.scss";
 @import "partials/article-master/new-article.scss";
-@import "partials/article-master/category-slider.scss";
-@import "partials/article-master/band.scss";
+@import "partials/article-master/new-article-adapt.scss";
+@import "partials/sections/category-slider.scss";
+@import "partials/sections/category-slider-adapt.scss";
+@import "partials/sections/band.scss";
+@import "partials/sections/band-adapt.scss";
+@import "partials/article-master/article.scss";
+@import "partials/article-master/article-adapt.scss";
+@import "partials/video/new-video.scss";
+@import "partials/video/new-video-adapt.scss";
+@import "partials/video/section-youtube.scss";
+@import "partials/video/section-youtube-adapt.scss";
+@import "partials/video/video.scss";
+@import "partials/video/new-video-adapt.scss";
+
+
+
+
+
+
 
 
 

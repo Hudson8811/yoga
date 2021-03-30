@@ -13,18 +13,31 @@ padding-bottom: 96px;
         display: flex;
         flex-wrap: wrap;
         margin: -18px;
+        &_video {
+            margin-bottom: 17px;
+        }
     }
     
     &__card {
         width: 50%;
         padding: 18px;
+        &_video {
+        }
     }
     
     &__img-wrapper {
         margin-bottom: 17px;
         max-width: 403px;
+        &_video {
+            margin-bottom: 20px;
+        }
         &:after {
             padding-top: 100%;
+        }
+        &_video {
+            &:after {
+                padding-top: 250/403 * 100%;
+            }
         }
     }
     
@@ -37,6 +50,9 @@ padding-bottom: 96px;
     
     &__theme-wrapper {
         margin-bottom: 6px;
+        &_video {
+            margin-bottom: 14px;
+        }
     }
     
     &__theme-link {
@@ -61,3 +77,4 @@ padding-bottom: 96px;
 
     }
 }
+

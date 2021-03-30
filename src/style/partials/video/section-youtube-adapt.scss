@@ -1,0 +1,60 @@
+@media screen and (max-width: 1150px) {
+    .section-youtube {
+        border-top: 1px solid #DEE6E9;
+        padding-top: 55px;
+        padding-bottom: 61px;
+            &__container {
+                max-width: 100%;
+            }
+        
+            &__title {
+                margin-bottom: 29px;
+                text-align: center;
+                letter-spacing: -0.03em;
+            }
+        
+            &__row {
+                display: flex;
+                justify-content: center;
+                justify-content: flex-start;
+                width: 100%;
+                padding-left: 60px; 
+            }
+            
+            &__link {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-right: 0;
+                
+                &:not(:last-child) {
+                    margin-right: 69px;
+                }
+                &:nth-child(2) {
+                    margin-right: 56px;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                
+            }
+            
+            &__icon {
+                width: 93px;
+                margin-bottom: 4px;
+            }
+            
+            &__name {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 26px;
+                text-align: center;
+                color: #3E434D;
+            }
+        }
+}
+
+@media screen and (max-width: 767px) {
+    
+}

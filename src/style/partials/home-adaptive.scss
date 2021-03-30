@@ -28,6 +28,10 @@
 		width: 6976x;
 	}
 
+	.container--wery-long {
+		width: 697px;
+		max-width: calc(100%);
+	}
 	.no-tablet {
 		display: none;
 	}
@@ -528,6 +532,9 @@
 	.master {
 		padding-top: 48px;
 		padding-bottom: 51px;
+		&_video {
+
+		}
 
 		&__info {
 			margin-bottom: 18px;
@@ -540,6 +547,8 @@
 		&__img-wrapper {
 			margin-bottom: 30px;
 
+		&_article {
+			padding-top: 46px;
 		}
 	}
 
