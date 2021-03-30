@@ -42,6 +42,9 @@
 }
 
 @media screen and (max-width: 767px) {
+    .category_video {
+        order: 0;
+    }
     .category {
         padding-top: vw(50);
         padding-bottom: vw(41);
@@ -78,4 +81,5 @@
             
         }
     }
+   
 }

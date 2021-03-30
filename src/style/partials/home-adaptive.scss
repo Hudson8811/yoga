@@ -1483,7 +1483,12 @@
 	.master {
 		padding-top: vw(52);
 		padding-bottom: vw(86);
-
+		&_video {
+			padding-top: vw(50);
+			.master__content {
+				margin-left: -5px;
+			}
+		}
 		&__title {
 			font-size: vw(15);
 			line-height: vw(30);
