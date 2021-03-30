@@ -14,6 +14,11 @@
 		//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
 		width: 697px;
 	}
+
+	.container--wery-long {
+		width: 697px;
+		max-width: calc(100%);
+	}
 	.no-tablet {
 		display: none;
 	}
@@ -459,11 +464,17 @@
 	.master {
 		padding-top: 48px;
 		padding-bottom: 51px;
+		&_video {
+			
+		}
 		&__info {
 			margin-bottom: 20px;
 			span {
 				display: inline;
 			}
+		}
+		&_article {
+			padding-top: 46px;
 		}
 	}
 	.insta-widget {

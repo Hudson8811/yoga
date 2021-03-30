@@ -28,6 +28,14 @@
             display: block;
             padding-top: 100%;
         }
+        &_video {
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                padding-top: 250/403 * 100%;
+            }
+        }
     }
 
     &__img {
@@ -152,10 +160,10 @@
 @media screen and (max-width: 1150px) {
     .card {
         &__title {
-            font-weight: 500;
-            font-size: 22px;
+            font-size: 24px;
             line-height: 26px;
-            color: #53565A;
+            color: #3E434D;
+            
         }
 
         &__theme-link {
@@ -184,7 +192,9 @@
         font-size: 32px;
         line-height: 32px;
         color: #525865;
+        letter-spacing: normal;
     }
+   
 }
 
 @media screen and (max-width: 767px) {
