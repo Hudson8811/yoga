@@ -1849,22 +1849,22 @@
 			}
 		}
 
-		.wnevents-widget {
-			margin-top: vw(-5);
-			width: 100%;
-			padding: 0 vw(32) 0 vw(32);
-			margin-bottom: vw(8);
-			flex-direction: column;
+			.wnevents-widget {
+				margin-top: vw(-5);
+				width: 100%;
+				padding: 0 vw(32) 0 vw(32);
+				margin-bottom: vw(8);
+				flex-direction: column;
 
-			&__item {
-				margin-bottom: vw(48);
-			}
+				&__item {
+					margin-bottom: vw(48);
+				}
 
-			&__title {
-				font-size: vw(15);
-				padding: vw(6) vw(10) vw(7);
-				width: vw(182);
+				&__title {
+					font-size: vw(15);
+					padding: vw(6) vw(10) vw(7);
+					width: vw(182);
+				}
 			}
 		}
 	}
-}

@@ -1857,7 +1857,16 @@ input.email-cinp {
 
 
 ///////////////////////////////
-
+.wnevents-widget_article {
+	.wnevents-widget__item {
+		&:last-child {
+			display: none;
+		}
+	}
+	.wnevents-widget__pic {
+		padding-top: 24%;
+	}
+}
 
 
 .wnevents-widget {

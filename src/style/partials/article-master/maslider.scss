@@ -9,8 +9,8 @@
     }
     .maslider-slide__title {
         position: absolute;
-        top: 50%;
-        left: 56px;
+        top: 47%;
+        left: 55px;
         font-size: 35px;
         line-height: 26px;
         display: flex;
@@ -40,7 +40,7 @@
     }
     .article-arrow {
         position: absolute;
-        bottom: 28px;
+        bottom: 26px;
         width: 37px;
         height: 37px;
         background: #fff;
@@ -50,10 +50,10 @@
         border-radius: 50%;
         z-index: 100;
         &--prev {
-            left: 22px;
+            left: 15px;
         }
         &--next {
-            right: 22px;
+            right: 12px;
         }
     }
 }
