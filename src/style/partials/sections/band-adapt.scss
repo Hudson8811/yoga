@@ -92,6 +92,9 @@
     .band {
         padding-top: vw(24);
         padding-bottom: vw(90);
+        &_video {
+            padding-bottom: vw(57);
+        }
             &__container {
                 max-width: 100%;
                 width: 100%;
@@ -119,6 +122,12 @@
                 &:after {
                     padding-top: 100%;
                 }
+                &_video {
+                    max-width: vw(332);
+                    &:after {
+                        padding-top: 205/332 * 100%;
+                    }
+                }
             }
             
             &__img {
@@ -130,6 +139,9 @@
             
             &__theme-wrapper {
                 margin-bottom: vw(9);
+                &_video {
+                    margin-bottom: vw(17);
+                }
             }
             
             &__theme-link {

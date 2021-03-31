@@ -74,7 +74,7 @@
 @media screen and (max-width: 767px) {
     .new-video {
         padding-top: vw(43);
-        padding-bottom: vw(54);
+        padding-bottom: vw(41);
             &__container {
                 max-width: 100%;
                 width: 100%;
@@ -100,7 +100,7 @@
             
             &__slider-card {
                 padding: vw(9);
-                width: vw(291);
+                width: vw(266);
             }
             
             &__card-img-wrapper {
@@ -110,7 +110,7 @@
                 &::after {
                     content: '';
                     display: block;
-                    padding-top: 100%;
+                    padding-top: 165/266 * 100%;
                 }
             }
         

@@ -200,7 +200,9 @@ $(document).ready(function () {
 	$('.js-maslider').slick({
 		centred: true,
 		infinite: true,
-		slidesToShow: 3,
+		slidesToShow: 1,
+		centerMode: true,
+		variableWidth: true,
 		slidesToScroll: 1,
 		arrows: true,
 		dots: true,

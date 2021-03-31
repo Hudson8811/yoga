@@ -103,6 +103,9 @@
 
     .category {
         order: 1;
+        &_video {
+            order: 0;
+        }
     }
     .master_article {
         order: 1;

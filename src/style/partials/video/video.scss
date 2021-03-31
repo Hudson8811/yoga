@@ -24,17 +24,83 @@
     .csubscr-and-slider-widget_video .csubscr-widget_video {
         width: 100%;
         margin-right: 29px;
-        padding: 34px 30.4% 57px;
+        padding: 34px 0 57px;
         margin-right: 0;
+        .csubscr-widget__inner {
+            margin: 0 auto;
+            width: 206px;
+        }
     }
     .csubscr-widget__form-logo_video {
         display: block;
         margin-bottom: 16px;
     }
     .slider-news-widget-wrap_video {
-        
+        padding-top: 92px;
+    }
+    .wnevents-newpost-widget-wrap {
+        display: flex;
+        padding: 0 65px;
+        margin-bottom: 44px;
+        .wnevents-widget {
+            width: 50%;
+            padding: 0 20px 0 16px;
+        }
+    }
+    .music-player_video {
+        margin-bottom: 55px;
     }
 }
 @media screen and (max-width: 767px) {
-   
+    .insta-widget_video {
+        order: 1;
+        padding-bottom: 92px;
+    }
+    .wnevents-newpost-widget-wrap {
+        order: 2;
+    }
+    .csubscr-and-slider-widget_video {
+        order: 2;
+    }
+    .csubscr-and-slider-widget_video .csubscr-widget_video {
+        width: 100%;
+        margin-right: 29px;
+        padding: 34px 0 37px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .csubscr-and-slider-widget_video {
+        padding: 0 35px;
+        margin-bottom: 0px;
+    }
+    .csubscr-widget__form-logo_video {
+        display: none;
+    }
+    .slider-news-widget-wrap_video {
+        order: 2;
+        padding-top: 71px;
+        .slider-news-widget:last-child {
+            display: none;
+        }
+    }
+    .wnevents-newpost-widget-wrap {
+        flex-direction: column-reverse;
+        padding: 0 13px;
+        .newposts-widget {
+            width: 100%;
+            margin-bottom: 86px;
+        }
+        .wnevents-widget_video {
+            width: 100%;
+            .wnevents-widget__item {
+                &:not(:last-child) {
+                    margin-bottom: 45px;
+                }
+            }
+        }
+    }
+    .music-player_video {
+        width: 100%;
+        margin-bottom: 82px;
+    }
 }
