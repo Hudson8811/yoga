@@ -262,7 +262,7 @@
 	.sfoo-bottom-menu {
 		width: vw(348);
 		margin-left: vw(-28);
-		max-width: auto;
+		max-width: unset;
 		margin-top: vw(31);
 		flex-wrap: wrap;
 		justify-content: flex-start;

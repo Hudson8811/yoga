@@ -322,7 +322,7 @@ $('.video-slider').slick({
 			}
 		}
 		]
-		
+
 });
 my_songs = [{
 		"name": "Казачья",

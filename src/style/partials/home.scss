@@ -51,15 +51,18 @@
 	display: none;
 }
 
-.section-home-slider {}
-
+.section-home-slider{
+    overflow: hidden;
+}
 .home-slider {
 	position: relative;
 	z-index: 1;
 	margin: 0 auto;
 	max-width: 100%;
 
-
+	&>.home-slider-slide:not(:first-child){
+		max-height: 0;
+	}
 
 	.slick-dots {
 		position: absolute;
@@ -788,6 +791,7 @@ body {
 	.scikria-item-pic {
 		border-radius: 5px;
 		overflow: hidden;
+		cursor: pointer;
 	}
 
 	&:last-child {
@@ -883,6 +887,8 @@ body {
 .banner {
 	position: relative;
 
+	overflow: hidden;
+	border-radius: 5px;
 	&__picture {
 		border-radius: 5px;
 		overflow: hidden;
@@ -893,6 +899,7 @@ body {
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+		transition: .4s ease-in-out;
 
 		source {
 			width: 100%;
@@ -903,8 +910,11 @@ body {
 			width: 100%;
 			height: 100%;
 		}
-
-		@include scalepic();
+		&:hover{
+			-webkit-transform: scale(1.07);
+			transform: scale(1.07);
+		}
+		//@include scalepic();
 	}
 
 
@@ -1824,6 +1834,7 @@ input.email-cinp {
 		text-align: center;
 		color: #AFB4BF;
 		margin-top: 7px;
+		text-transform: capitalize;
 	}
 
 	&:hover {}

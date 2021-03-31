@@ -100,271 +100,253 @@ block main
 		.hr
 
 	section.section-part-wsidebar
-		.container.container--extra-long
+		.container.container--extra-long.container--disable-on-tablet.container--disable-on-mob
 			.part-wsidebar
 				.part-wsidebar__main
-					section.master-links
-						a.master-link(href="")
-							.master-link__pic
-								img(src="img/mlinks/1.jpg", alt="")
-							.master-link__text
-								.master-link__title События недели
-								.master-link__more.read-more Подробнее
-						a.master-link(href="")
-							.master-link__pic
-								img(src="img/mlinks/2.jpg", alt="")
-							.master-link__text
-								.master-link__title Статьи Мастера
-								.master-link__more.read-more Подробнее
+					.container.container--extra-long.container--disable-on-desktop
+						section.master-links
+							a.master-link(href="")
+								.master-link__pic
+									img(src="img/mlinks/1.jpg", alt="")
+								.master-link__text
+									.master-link__title События недели
+									.master-link__more.read-more Подробнее
+							a.master-link(href="")
+								.master-link__pic
+									img(src="img/mlinks/2.jpg", alt="")
+								.master-link__text
+									.master-link__title Статьи Мастера
+									.master-link__more.read-more Подробнее
 
-					.hr.hidemob
+						.hr.hidemob
 
-					section.section-science-kria
-						.scikria-item
-							a.scikria-item-pic(href="/")
-								img(src="img/scicria/1.jpg", alt="")
-							.scikria-item-text
-								h2.scikria-item-text__title Наука Крийя
-								.scikria-item-text__title2  Метод быстрой трансформации
-								.scikria-item-text__main Крийя является физическим, духовным и научным методом, посредством которого ускоряется развитие и достигается самореализация.
-								.scikria-item-text__more.read-more Подробнее
-						.scikria-item
-							a.scikria-item-pic(href="/")
-								img(src="img/scicria/2.jpg", alt="")
-							.scikria-item-text
-								h2.scikria-item-text__title О Мастере
-								.scikria-item-text__title2 Инициирует трансцендентность Крийя
-								.scikria-item-text__main Благодаря многолетней практике - садхане, Имрам достиг Реализации, т.е. Единства с Высшим Я, что в йоге рассматривается как Нирвикальпа Самадхи.
-								.scikria-item-text__more.read-more Подробнее
+						section.section-science-kria
+							.scikria-item
+								a.scikria-item-pic(href="/")
+									img(src="img/scicria/1.jpg", alt="")
+								.scikria-item-text
+									h2.scikria-item-text__title Наука Крийя
+									.scikria-item-text__title2  Метод быстрой трансформации
+									.scikria-item-text__main Крийя является физическим, духовным и научным методом, посредством которого ускоряется развитие и достигается самореализация.
+									.scikria-item-text__more.read-more Подробнее
+							.scikria-item
+								a.scikria-item-pic(href="/")
+									img(src="img/scicria/2.jpg", alt="")
+								.scikria-item-text
+									h2.scikria-item-text__title О Мастере
+									.scikria-item-text__title2 Инициирует трансцендентность Крийя
+									.scikria-item-text__main Благодаря многолетней практике - садхане, Имрам достиг Реализации, т.е. Единства с Высшим Я, что в йоге рассматривается как Нирвикальпа Самадхи.
+									.scikria-item-text__more.read-more Подробнее
 
-					section.banner.section-hmlearn
-						picture.banner__picture
-							source.banner__source(srcset="img/hmlearn.jpg" media="(max-width: 767px)")
-							img(src="img/hmlearn.jpg")
-						.banner__content
-							.banner__title Обучение
-							.banner__title2 Курсы. Медитация. Практика
-							.banner__more.read-more Подробнее
-					//- section.hm-quote-practice.hm-quote-practice-desc
-					//- 	.quote-bg(style="background-image:url(img/quote-bg.jpg);")
-					//- 		.container.container--extra-long
-					//- 			.hm-quote-practice__content.quotes-slide
-					//- 				.quote-slide
-					//- 					.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-					//- 					.hm-quote-practice__name Мастер Имрам
-					//- 				.quote-slide
-					//- 					.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-					//- 					.hm-quote-practice__name Мастер Имрам
-					//- 				.quote-slide
-					//- 					.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-					//- 					.hm-quote-practice__name Мастер Имрам
-					//- section.hm-quote-practice.hm-quote-practice-mob
-					//- 	.quote-bg(style="background-image:url(img/quote-bg.jpg);")
-					//- 		img.hm-quote-practice__img(src="img/icons/quotes.svg")
-					//- 		.container.container--extra-long
-					//- 			.hm-quote-practice__content.quotes-slide
-					//- 				.quote-slide
-					//- 					.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-					//- 					.hm-quote-practice__name Мастер Имрам
-					//- 				.quote-slide
-					//- 					.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-					//- 					.hm-quote-practice__name Мастер Имрам
-					//- 				.quote-slide
-					//- 					.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-					//- 					.hm-quote-practice__name Мастер Имрам
-					section.section-science-kria.section-science-kria--2
-						.scikria-item
-							a.scikria-item-pic(href="/")
-								img(src="img/scicria/3.jpg", alt="")
-							.scikria-item-text
-								h2.scikria-item-text__title Медитируйте с нами
-								.scikria-item-text__title2  Для любого уровня подготовки
-								.scikria-item-text__main Методика Крийя доступна с первых дней практикования как для начинающих, так и продвинутых практиков.
-								.scikria-item-text__more.read-more Подробнее
-						.scikria-item
-							a.scikria-item-pic(href="/")
-								img(src="img/scicria/4.jpg", alt="")
-							.scikria-item-text
-								h2.scikria-item-text__title Imram Music
-								.scikria-item-text__title2 Музыка, меняющая пространство
-								.scikria-item-text__main
-									span Imram - композитор, певец мультиинструменталист.
-									span Его музыка рождается из тонкого мира идей,
-									span несущих дух высокого творчества.
-								.scikria-item-text__more.read-more Подробнее
+						section.banner.section-hmlearn
+							picture.banner__picture
+								source.banner__source(srcset="img/hmlearn.jpg" media="(max-width: 767px)")
+								img(src="img/hmlearn.jpg")
+							.banner__content
+								.banner__title Обучение
+								.banner__title2 Курсы. Медитация. Практика
+								.banner__more.read-more Подробнее
 
-					section.banner.section-hmlearn2
-						picture.banner__picture
-							source.banner__source(srcset="img/hmlearn2-mob.jpg" media="(max-width: 767px)")
-							img(src="img/hmlearn2.jpg")
-						.banner__content
-							.banner__title Записи мероприятий
-							.banner__title2 Вебинары. Лекции. Сатсанги.
-							.banner__more.read-more Подробнее
+						section.section-science-kria.section-science-kria--2
+							.scikria-item
+								a.scikria-item-pic(href="/")
+									img(src="img/scicria/3.jpg", alt="")
+								.scikria-item-text
+									h2.scikria-item-text__title Медитируйте с нами
+									.scikria-item-text__title2  Для любого уровня подготовки
+									.scikria-item-text__main Методика Крийя доступна с первых дней практикования как для начинающих, так и продвинутых практиков.
+									.scikria-item-text__more.read-more Подробнее
+							.scikria-item
+								a.scikria-item-pic(href="/")
+									img(src="img/scicria/4.jpg", alt="")
+								.scikria-item-text
+									h2.scikria-item-text__title Imram Music
+									.scikria-item-text__title2 Музыка, меняющая пространство
+									.scikria-item-text__main
+										span Imram - композитор, певец мультиинструменталист.
+										span Его музыка рождается из тонкого мира идей,
+										span несущих дух высокого творчества.
+									.scikria-item-text__more.read-more Подробнее
 
-					section.hm-quote-practice.hm-quote-practice-desc.no-desc.hm-quote-practice-mob
-						.quote-bg(style="background-image:url(img/quote-bg.jpg);")
-							img.hm-quote-practice__img(src="img/icons/quotes.svg")
-							.container.container--extra-long
-								.hm-quote-practice__content.quotes-slide
-									.quote-slide
-										.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-										.hm-quote-practice__name Мастер Имрам
-									.quote-slide
-										.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-										.hm-quote-practice__name Мастер Имрам
-									.quote-slide
-										.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
-										.hm-quote-practice__name Мастер Имрам
+						section.banner.section-hmlearn2
+							picture.banner__picture
+								source.banner__source(srcset="img/hmlearn2-mob.jpg" media="(max-width: 767px)")
+								img(src="img/hmlearn2.jpg")
+							.banner__content
+								.banner__title Записи мероприятий
+								.banner__title2 Вебинары. Лекции. Сатсанги.
+								.banner__more.read-more Подробнее
+					.oh-wrap
+						.container.container--extra-long.container--disable-on-desktop
+							section.hm-quote-practice.hm-quote-practice-desc.no-desc.hm-quote-practice-mob
+								.quote-bg(style="background-image:url(img/quote-bg.jpg);")
+									img.hm-quote-practice__img(src="img/icons/quotes.svg")
+									.container.container--extra-long
+										.hm-quote-practice__content.quotes-slide
+											.quote-slide
+												.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
+												.hm-quote-practice__name Мастер Имрам
+											.quote-slide
+												.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
+												.hm-quote-practice__name Мастер Имрам
+											.quote-slide
+												.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
+												.hm-quote-practice__name Мастер Имрам
 
-					section.hm-feedback.no-desc
-						.container
-							.hm-feedback-slide
-								.hm-feedback__content
-									a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
-										img.hm-feedback__img(src="img/retrit-reviews.jpg")
-										img.hm-feedback__img-play(src="img/icons/play-video.svg")
-									.hm-feedback__text
-										.hm-feedback__text-title Отзывы о Ретрите
-										.hm-feedback__text-out Интервью с участниками
-										.hm-feedback__text-info
-											span Мини-фильм о Ретрите в Сочи, личный опыт практикующих,
-											span удивительная атмосфера и незабываемые воспоминания.
-										.hm-feedback__more.read-more Подробнее
-								.hm-feedback__content
-									a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
-										img.hm-feedback__img(src="img/retrit-reviews.jpg")
-										img.hm-feedback__img-play(src="img/icons/play-video.svg")
-									.hm-feedback__text
-										.hm-feedback__text-title Отзывы о Ретрите
-										.hm-feedback__text-out Интервью с участниками
-										.hm-feedback__text-info
-											span Мини-фильм о Ретрите в Сочи, личный опыт практикующих,
-											span удивительная атмосфера и незабываемые воспоминания.
-										.hm-feedback__more.read-more Подробнее
-								.hm-feedback__content
-									a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
-										img.hm-feedback__img(src="img/retrit-reviews.jpg")
-										img.hm-feedback__img-play(src="img/icons/play-video.svg")
-									.hm-feedback__text
-										.hm-feedback__text-title Отзывы о Ретрите
-										.hm-feedback__text-out Интервью с участниками
-										.hm-feedback__text-info
-											span Мини-фильм о Ретрите в Сочи, личный опыт практикующих,
-											span удивительная атмосфера и незабываемые воспоминания.
-										.hm-feedback__more.read-more Подробнее
-							.hm-feedback__btn-wrap
-								a.btn(href="") Страница отзывов
+					.container.container--extra-long.container--disable-on-desktop
+						section.hm-feedback.no-desc
+							.container
+								.hm-feedback-slide
+									.hm-feedback__content
+										a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
+											img.hm-feedback__img(src="img/retrit-reviews.jpg")
+											img.hm-feedback__img-play(src="img/icons/play-video.svg")
+										.hm-feedback__text
+											.hm-feedback__text-title Отзывы о Ретрите
+											.hm-feedback__text-out Интервью с участниками
+											.hm-feedback__text-info
+												span Мини-фильм о Ретрите в Сочи, личный опыт практикующих,
+												span удивительная атмосфера и незабываемые воспоминания.
+											.hm-feedback__more.read-more Подробнее
+									.hm-feedback__content
+										a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
+											img.hm-feedback__img(src="img/retrit-reviews.jpg")
+											img.hm-feedback__img-play(src="img/icons/play-video.svg")
+										.hm-feedback__text
+											.hm-feedback__text-title Отзывы о Ретрите
+											.hm-feedback__text-out Интервью с участниками
+											.hm-feedback__text-info
+												span Мини-фильм о Ретрите в Сочи, личный опыт практикующих,
+												span удивительная атмосфера и незабываемые воспоминания.
+											.hm-feedback__more.read-more Подробнее
+									.hm-feedback__content
+										a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
+											img.hm-feedback__img(src="img/retrit-reviews.jpg")
+											img.hm-feedback__img-play(src="img/icons/play-video.svg")
+										.hm-feedback__text
+											.hm-feedback__text-title Отзывы о Ретрите
+											.hm-feedback__text-out Интервью с участниками
+											.hm-feedback__text-info
+												span Мини-фильм о Ретрите в Сочи, личный опыт практикующих,
+												span удивительная атмосфера и незабываемые воспоминания.
+											.hm-feedback__more.read-more Подробнее
+								.hm-feedback__btn-wrap
+									a.btn(href="") Страница отзывов
 
 
 
-					.hr.no-desc
+						.hr.no-desc
 
 
 				.part-wsidebar__sidebar
-					.master
-						.master__content
-							.master__title О мастере
-							.master__img-wrapper
-								img.master__img(src="img/master.jpg")
-							.master__info
-								span Сознание Мастера вездесуще
-								span и этот Мастер – Высшее Я
-							.social.master__social
-								a.social__link.master__social-link(href="#")
-									include ../img/icons/social-insta.svg
-								a.social__link.master__social-link(href="#")
-									include ../img/icons/social-yt.svg
-								a.social__link.master__social-link(href="#")
-									include ../img/icons/social-fb.svg
-								a.social__link.master__social-link(href="#")
-									include ../img/icons/social-vk.svg
+					.container.container--extra-long.container--disable-on-desktop
+						.master
+							.master__content
+								.master__title О мастере
+								.master__img-wrapper
+									img.master__img(src="img/master.jpg")
+								.master__info
+									span Сознание Мастера вездесуще
+									span и этот Мастер – Высшее Я
+								.social.master__social
+									a.social__link.master__social-link(href="#")
+										include ../img/icons/social-insta.svg
+									a.social__link.master__social-link(href="#")
+										include ../img/icons/social-yt.svg
+									a.social__link.master__social-link(href="#")
+										include ../img/icons/social-fb.svg
+									a.social__link.master__social-link(href="#")
+										include ../img/icons/social-vk.svg
 
-					.insta-widget
-						.insta-widget__title.custom-widget-title INSTAGRAM
-						.insta-widget__content
-							a.insta-widget__item(href="")
-								img(src="img/insta-widget/insta-1.jpg", alt="")
-							a.insta-widget__item(href="")
-								img(src="img/insta-widget/insta-2.jpg", alt="")
-							a.insta-widget__item(href="")
-								img(src="img/insta-widget/insta-3.jpg", alt="")
-							a.insta-widget__item(href="")
-								img(src="img/insta-widget/insta-4.jpg", alt="")
+					.container.container--extra-long.container--disable-on-desktop
+						.insta-widget
+							.insta-widget__title.custom-widget-title INSTAGRAM
+							.insta-widget__content
+								a.insta-widget__item(href="")
+									img(src="img/insta-widget/insta-1.jpg", alt="")
+								a.insta-widget__item(href="")
+									img(src="img/insta-widget/insta-2.jpg", alt="")
+								a.insta-widget__item(href="")
+									img(src="img/insta-widget/insta-3.jpg", alt="")
+								a.insta-widget__item(href="")
+									img(src="img/insta-widget/insta-4.jpg", alt="")
 
 
 
-					.csubscr-widget
-						.csubscr-widget__inner
-							.csubscr-widget__logo
-								img(src="img/subscr_logo.svg", alt="icon")
-							.csubscr-widget__title  Присоединяйтесь
-							.csubscr-widget__description Получите доступ к платформе Имрам Крийя
-							.csubscr-widget__inp-wrap
-								input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
-							.btn.btn--square.csubscr-widget__btn отправить
+					.container.container--extra-long.container--disable-on-desktop
+						.csubscr-widget
+							.csubscr-widget__inner
+								.csubscr-widget__logo
+									img(src="img/subscr_logo.svg", alt="icon")
+								.csubscr-widget__title  Присоединяйтесь
+								.csubscr-widget__description Получите доступ к платформе Имрам Крийя
+								.csubscr-widget__inp-wrap
+									input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
+								.btn.btn--square.csubscr-widget__btn отправить
 
-					.slider-news-widget-wrap
-						.slider-news-widget
-							.slider-news-widget__title.custom-widget-title Онлайн курсы
-							.slnewsw-slider.js-slnewsw-slider
-								a.slnewsw-slider-item(href="")
-									.slnewsw-slider-item__pic
-										img(src="img/online-courses.jpg", alt="")
-									.slnewsw-slider-item__name Базовый курс медитации
-								a.slnewsw-slider-item(href="")
-									.slnewsw-slider-item__pic
-										img(src="img/online-courses.jpg", alt="")
-									.slnewsw-slider-item__name Базовый курс медитации2
-								a.slnewsw-slider-item(href="")
-									.slnewsw-slider-item__pic
-										img(src="img/online-courses.jpg", alt="")
-									.slnewsw-slider-item__name Базовый курс медитации3
+					.container.container--extra-long.container--disable-on-desktop
+						.slider-news-widget-wrap
+							.slider-news-widget
+								.slider-news-widget__title.custom-widget-title Онлайн курсы
+								.slnewsw-slider.js-slnewsw-slider
+									a.slnewsw-slider-item(href="")
+										.slnewsw-slider-item__pic
+											img(src="img/online-courses.jpg", alt="")
+										.slnewsw-slider-item__name Базовый курс медитации
+									a.slnewsw-slider-item(href="")
+										.slnewsw-slider-item__pic
+											img(src="img/online-courses.jpg", alt="")
+										.slnewsw-slider-item__name Базовый курс медитации2
+									a.slnewsw-slider-item(href="")
+										.slnewsw-slider-item__pic
+											img(src="img/online-courses.jpg", alt="")
+										.slnewsw-slider-item__name Базовый курс медитации3
 
-						.slider-news-widget
-							.slider-news-widget__title.custom-widget-title Видео недели
-							.slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
-								a.slnewsw-slider-item(href="")
-									.slnewsw-slider-item__pic
-										img(src="img/online-courses.jpg", alt="")
-									.slnewsw-slider-item__name Базовый курс медитации
-								a.slnewsw-slider-item(href="")
-									.slnewsw-slider-item__pic
-										img(src="img/online-courses.jpg", alt="")
-									.slnewsw-slider-item__name Базовый курс медитации2
-								a.slnewsw-slider-item(href="")
-									.slnewsw-slider-item__pic
-										img(src="img/online-courses.jpg", alt="")
-									.slnewsw-slider-item__name Базовый курс медитации3
-					.events-widget-wrap
-						.newposts-widget
-							.newposts-widget__title.custom-widget-title Новые статьи
-							.newposts-widget__items
-								a.newposts-widget-item(href="")
-									.newposts-widget-item__title Что такое осознанность
-									.newposts-widget-item__date 28 Января 2021
-								a.newposts-widget-item(href="")
-									.newposts-widget-item__title Глубина общения
-									.newposts-widget-item__date 28 Января 2021
-								a.newposts-widget-item(href="")
-									.newposts-widget-item__title Как стать счастливым
-									.newposts-widget-item__date 28 Января 2021
+							.slider-news-widget
+								.slider-news-widget__title.custom-widget-title Видео недели
+								.slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
+									a.slnewsw-slider-item(href="")
+										.slnewsw-slider-item__pic
+											img(src="img/online-courses.jpg", alt="")
+										.slnewsw-slider-item__name Базовый курс медитации
+									a.slnewsw-slider-item(href="")
+										.slnewsw-slider-item__pic
+											img(src="img/online-courses.jpg", alt="")
+										.slnewsw-slider-item__name Базовый курс медитации2
+									a.slnewsw-slider-item(href="")
+										.slnewsw-slider-item__pic
+											img(src="img/online-courses.jpg", alt="")
+										.slnewsw-slider-item__name Базовый курс медитации3
+					.container.container--extra-long.container--disable-on-desktop
+						.events-widget-wrap
+							.newposts-widget
+								.newposts-widget__title.custom-widget-title Новые статьи
+								.newposts-widget__items
+									a.newposts-widget-item(href="")
+										.newposts-widget-item__title Что такое осознанность
+										.newposts-widget-item__date 28 Января 2021
+									a.newposts-widget-item(href="")
+										.newposts-widget-item__title Глубина общения
+										.newposts-widget-item__date 28 Января 2021
+									a.newposts-widget-item(href="")
+										.newposts-widget-item__title Как стать счастливым
+										.newposts-widget-item__date 28 Января 2021
 
-						.wnevents-widget
-							a.wnevents-widget__item(href="")
-								.wnevents-widget__pic
-									img(src="img/wnevents-1.jpg", alt="")
-								.wnevents-widget__title События недели
-							a.wnevents-widget__item(href="")
-								.wnevents-widget__pic
-									img(src="img/wnevents-2.jpg", alt="")
-								.wnevents-widget__title Статьи мастера
+							.wnevents-widget
+								a.wnevents-widget__item(href="")
+									.wnevents-widget__pic
+										img(src="img/wnevents-1.jpg", alt="")
+									.wnevents-widget__title События недели
+								a.wnevents-widget__item(href="")
+									.wnevents-widget__pic
+										img(src="img/wnevents-2.jpg", alt="")
+									.wnevents-widget__title Статьи мастера
+					.container.container--extra-long.container--disable-on-desktop
+						#music-player.music-player
+							.music-player-top
+								.amplitude-next.music-player-top__arrow.music-player-top__arrow--next <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.80161 5.90737L0.986316 10.8266C0.892078 10.9234 0.767987 10.9839 0.635075 10.9979C0.502164 11.0118 0.368609 10.9784 0.25705 10.9033L0.171254 10.8266L0.0961832 10.739C0.0334767 10.6434 -1.8411e-06 10.5309 -1.82098e-06 10.4158C-1.80086e-06 10.3007 0.0334767 10.1882 0.0961834 10.0926L0.171254 10.0049C0.194596 9.9738 0.22376 9.94773 0.25705 9.92823L4.18222 5.90737C4.28962 5.79659 4.34988 5.64697 4.34988 5.49104C4.34988 5.33512 4.28962 5.1855 4.18222 5.07471L0.257052 1.03194L0.171256 0.955248C0.0955882 0.856819 0.0544581 0.735287 0.0544582 0.610132C0.0544582 0.484977 0.0955883 0.363447 0.171256 0.265018L0.246327 0.17737L0.332123 0.100677C0.427358 0.0356721 0.539323 0.000976657 0.653859 0.000976677C0.768395 0.000976697 0.880359 0.0356722 0.975593 0.100677L1.06139 0.17737L5.47988 4.6803L5.87668 5.09662C5.96817 5.21588 6.01139 5.36645 5.99742 5.51729C5.98346 5.66814 5.91337 5.80776 5.80161 5.90737Z" fill="#25378D"/></svg>
 
-					#music-player.music-player
-						.music-player-top
-							.amplitude-next.music-player-top__arrow.music-player-top__arrow--next <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.80161 5.90737L0.986316 10.8266C0.892078 10.9234 0.767987 10.9839 0.635075 10.9979C0.502164 11.0118 0.368609 10.9784 0.25705 10.9033L0.171254 10.8266L0.0961832 10.739C0.0334767 10.6434 -1.8411e-06 10.5309 -1.82098e-06 10.4158C-1.80086e-06 10.3007 0.0334767 10.1882 0.0961834 10.0926L0.171254 10.0049C0.194596 9.9738 0.22376 9.94773 0.25705 9.92823L4.18222 5.90737C4.28962 5.79659 4.34988 5.64697 4.34988 5.49104C4.34988 5.33512 4.28962 5.1855 4.18222 5.07471L0.257052 1.03194L0.171256 0.955248C0.0955882 0.856819 0.0544581 0.735287 0.0544582 0.610132C0.0544582 0.484977 0.0955883 0.363447 0.171256 0.265018L0.246327 0.17737L0.332123 0.100677C0.427358 0.0356721 0.539323 0.000976657 0.653859 0.000976677C0.768395 0.000976697 0.880359 0.0356722 0.975593 0.100677L1.06139 0.17737L5.47988 4.6803L5.87668 5.09662C5.96817 5.21588 6.01139 5.36645 5.99742 5.51729C5.98346 5.66814 5.91337 5.80776 5.80161 5.90737Z" fill="#25378D"/></svg>
-
-							.amplitude-prev.music-player-top__arrow.music-player-top__arrow--prev <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.198386 5.09361L5.01368 0.174351C5.10792 0.0775861 5.23201 0.0170888 5.36492 0.00311083C5.49784 -0.0108662 5.63139 0.0225372 5.74295 0.0976591L5.82874 0.174351L5.90382 0.261999C5.96652 0.357615 6 0.470111 6 0.585202C6 0.700294 5.96652 0.812789 5.90382 0.908404L5.82874 0.996053C5.8054 1.02717 5.77624 1.05324 5.74295 1.07274L1.81778 5.09361C1.71038 5.20439 1.65012 5.35401 1.65012 5.50994C1.65012 5.66586 1.71038 5.81548 1.81778 5.92626L5.74295 9.96904L5.82874 10.0457C5.90441 10.1442 5.94554 10.2657 5.94554 10.3908C5.94554 10.516 5.90441 10.6375 5.82874 10.736L5.75367 10.8236L5.66788 10.9003C5.57264 10.9653 5.46068 11 5.34614 11C5.2316 11 5.11964 10.9653 5.02441 10.9003L4.93861 10.8236L0.52012 6.32068L0.123315 5.90435C0.0318246 5.7851 -0.0113926 5.63453 0.00257493 5.48368C0.0165425 5.33284 0.0866294 5.19322 0.198386 5.09361Z" fill="#25378D"/></svg>
+								.amplitude-prev.music-player-top__arrow.music-player-top__arrow--prev <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.198386 5.09361L5.01368 0.174351C5.10792 0.0775861 5.23201 0.0170888 5.36492 0.00311083C5.49784 -0.0108662 5.63139 0.0225372 5.74295 0.0976591L5.82874 0.174351L5.90382 0.261999C5.96652 0.357615 6 0.470111 6 0.585202C6 0.700294 5.96652 0.812789 5.90382 0.908404L5.82874 0.996053C5.8054 1.02717 5.77624 1.05324 5.74295 1.07274L1.81778 5.09361C1.71038 5.20439 1.65012 5.35401 1.65012 5.50994C1.65012 5.66586 1.71038 5.81548 1.81778 5.92626L5.74295 9.96904L5.82874 10.0457C5.90441 10.1442 5.94554 10.2657 5.94554 10.3908C5.94554 10.516 5.90441 10.6375 5.82874 10.736L5.75367 10.8236L5.66788 10.9003C5.57264 10.9653 5.46068 11 5.34614 11C5.2316 11 5.11964 10.9653 5.02441 10.9003L4.93861 10.8236L0.52012 6.32068L0.123315 5.90435C0.0318246 5.7851 -0.0113926 5.63453 0.00257493 5.48368C0.0165425 5.33284 0.0866294 5.19322 0.198386 5.09361Z" fill="#25378D"/></svg>
 
 
 							.music-player-center

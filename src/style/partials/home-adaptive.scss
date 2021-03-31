@@ -25,13 +25,14 @@
 
 	.container--long {
 		//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
-		width: 6976x;
+		width: 697px;
 	}
 
 	.container--wery-long {
 		width: 697px;
 		max-width: calc(100%);
 	}
+
 	.no-tablet {
 		display: none;
 	}
@@ -45,9 +46,11 @@
 		flex-direction: column;
 
 	}
-
+	.main{
+		//overflow: hidden;
+	}
 	.section-part-wsidebar {
-		overflow: hidden;
+		//overflow: hidden;
 		max-width: 100%;
 	}
 
@@ -218,8 +221,8 @@
 		// margin: 0 -57px;
 
 		&--2 {
-				padding-bottom: 93px;
-				padding-top: 93px;
+			padding-bottom: 93px;
+			padding-top: 93px;
 
 			.scikria-item {
 				display: flex;
@@ -532,9 +535,8 @@
 	.master {
 		padding-top: 48px;
 		padding-bottom: 51px;
-		&_video {
 
-		}
+		&_video {}
 
 		&__info {
 			margin-bottom: 18px;
@@ -547,24 +549,28 @@
 		&__img-wrapper {
 			margin-bottom: 30px;
 
+		}
+
 		&_article {
 			padding-top: 46px;
 		}
 	}
 
 	.insta-widget {
+		padding-bottom: 62px;
 		&__content {
 			padding: 0;
 			margin-top: -1px;
+			border-radius: 5px 0 0 5px;
 		}
 
 		&__item {
+			margin-bottom: 0;
 
 			margin-right: 0;
 			width: calc(33.333333% - 4px);
 
-			img {
-			}
+			img {}
 
 			&:nth-child(4) {
 				display: none;
@@ -630,7 +636,7 @@
 					border: 1px solid #AFB4BF;
 					box-sizing: border-box;
 					border-radius: 50%;
-					transition:all .3s;
+					transition: all .3s;
 					position: relative;
 
 					/*&::before {
@@ -651,6 +657,7 @@
 					&.slick-active {
 						background: #25378D;
 						border-color: #25378D;
+
 						&::before {
 							opacity: 1;
 						}
@@ -872,9 +879,11 @@
 
 	.newposts-widget {
 		width: calc(50% - 18px);
+
 		.newposts-widget__items {
 			padding-top: 6px;
 		}
+
 		.newposts-widget-item+.newposts-widget-item {
 			margin-top: 23px;
 		}
@@ -910,7 +919,8 @@
 		.wnevents-widget__item:last-child {
 			margin-top: 0;
 		}
-		&--title{
+
+		&--title {
 
 			min-width: 180px;
 		}
@@ -962,13 +972,17 @@
 
 }
 
+
 @media screen and (max-width: 1150px) and (min-width: 768px) {
 	.part-wsidebar__sidebar {
 		display: block;
 		width: 100%;
-		width: 534px;
 		padding: 0;
 		margin: 0 auto;
+		.container.container--extra-long{
+			width: 534px;
+
+		}
 	}
 }
 
@@ -977,9 +991,6 @@
 		display: none;
 	}
 
-	.section-part-wsidebar {
-		overflow: hidden;
-	}
 }
 
 //планшетный вид нам адаптировать не приходится

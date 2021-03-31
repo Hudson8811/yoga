@@ -228,11 +228,11 @@
 
 		&:active {}
 
-		&:focus {
+		&:active {
 
 			svg path {
 				background: #29356E;
-				fill: red;
+				fill: #29356E;
 			}
 		}
 	}

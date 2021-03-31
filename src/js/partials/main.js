@@ -232,5 +232,5 @@ $('.video-slider').slick({
 			}
 		}
 		]
-		
+
 });

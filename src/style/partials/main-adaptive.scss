@@ -1,0 +1,39 @@
+
+
+
+@media screen and (min-width: 1151px) {//  >tablet
+    .container--disable-on-desktop{
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+}
+
+
+@media screen and (max-width: 1150px) {//  <=tablet
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {//  only tablet
+    .container--disable-on-tablet{
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (min-width: 768px) {//  >mob
+
+}
+
+@media screen and (max-width: 767px) {//  <=mob  only mob
+    .container--disable-on-mob{
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
