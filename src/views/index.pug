@@ -13,7 +13,9 @@ block main
 	section.section-home-slider
 		.home-slider.js-home-slider
 			.home-slider-slide
-				img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				picture
+					source(srcset="img/front-slider-mob.jpg", media="(max-width: 767px)")
+					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
 				.hms-info
 					.hms-info__top
 						.hms-info__title Семинар Крийя
@@ -21,7 +23,9 @@ block main
 						.hms-info__area Москва
 						.hms-info__date 20 февраля 2021
 			.home-slider-slide
-				img.hms-pic(src="img/hmlearn2.jpg", alt="")
+				picture
+					source(srcset="img/hmlearn2.jpg", media="(max-width: 767px)")
+					img.hms-pic(src="img/hmlearn2.jpg", alt="")
 				.hms-info
 					.hms-info__top
 						.hms-info__title Семинар Крийя 2
@@ -29,7 +33,9 @@ block main
 						.hms-info__area Ростов-на-Дону
 						.hms-info__date 35 марта 2022
 			.home-slider-slide
-				img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				picture
+					source(srcset="img/front-slider-mob.jpg", media="(max-width: 767px)")
+					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
 				.hms-info
 					.hms-info__top
 						.hms-info__title Семинар Крийя 3
@@ -103,7 +109,7 @@ block main
 		.container.container--extra-long.container--disable-on-tablet.container--disable-on-mob
 			.part-wsidebar
 				.part-wsidebar__main
-					.container.container--extra-long.container--disable-on-desktop
+					.container.container--extra-long.container--disable-on-desktop.mob-order--1
 						section.master-links
 							a.master-link(href="")
 								.master-link__pic
@@ -147,6 +153,7 @@ block main
 								.banner__title2 Курсы. Медитация. Практика
 								.banner__more.read-more Подробнее
 
+					.container.container--extra-long.container--disable-on-desktop.mob-order--3
 						section.section-science-kria.section-science-kria--2
 							.scikria-item
 								a.scikria-item-pic(href="/")
@@ -176,7 +183,7 @@ block main
 								.banner__title Записи мероприятий
 								.banner__title2 Вебинары. Лекции. Сатсанги.
 								.banner__more.read-more Подробнее
-					.oh-wrap
+					.oh-wrap.mob-order--2
 						.container.container--extra-long.container--disable-on-desktop
 							section.hm-quote-practice.hm-quote-practice-desc.no-desc.hm-quote-practice-mob
 								.quote-bg(style="background-image:url(img/quote-bg.jpg);")
@@ -193,7 +200,7 @@ block main
 												.hm-quote-practice__main Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br/>и имеет прямую связь со своим Высшим Я
 												.hm-quote-practice__name Мастер Имрам
 
-					.container.container--extra-long.container--disable-on-desktop
+					.container.container--extra-long.container--disable-on-desktop.mob-order--4
 						section.hm-feedback.no-desc
 							.container
 								.hm-feedback-slide

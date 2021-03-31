@@ -363,6 +363,7 @@ body {
 	svg {
 		width: 100%;
 		height: auto;
+		display: block;
 	}
 
 	svg path {
@@ -471,6 +472,8 @@ body {
 	width: 12px;
 	height: auto;
 
+		svg {
+			display: block;}
 	&::before {
 		position: absolute;
 		content: '';
@@ -486,7 +489,6 @@ body {
 		transform: rotate(-180deg);
 		transform-origin: center center;
 
-		svg {}
 	}
 
 	&--next {
@@ -1193,6 +1195,11 @@ body {
 		margin-top: -42px;
 		transition-duration: .4s;
 		opacity: 0;
+
+		svg{
+			display: block;
+		}
+
 
 		svg path {
 			transition-duration: .2s;
