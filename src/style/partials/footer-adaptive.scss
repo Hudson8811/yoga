@@ -94,6 +94,9 @@
 			transition-duration: .3s;
 
 			svg {
+				display: block;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
 				width: 100%;
 				transition-duration: .3s;
 

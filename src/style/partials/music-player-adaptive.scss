@@ -64,14 +64,14 @@
 		margin: 0 auto;
 		margin-bottom: vw(94);
 		width: 100%;
-		padding: vw(34) vw(24) vw(10);
+		padding: vw(36) 0 vw(2);
 
 		&__album-art {
 			width: vw(115);
 		}
 
 		&__song-name {
-			margin-top: vw(20);
+			margin-top: vw(21);
 			font-size: vw(13);
 		}
 
@@ -87,7 +87,12 @@
 		&__current-time {}
 
 		&__controls {
-			margin-top: vw(2);
+			margin-top: vw(-2);
+		}
+		&-center{
+
+			margin: 0 auto;
+			width: vw(288);
 		}
 
 		.musicpl-bottom-controls__orig_link {
@@ -101,34 +106,34 @@
 		}
 
 		.musicpl-bottom-controls {
+			margin-top: vw(22);
 			margin-bottom: vw(12);
 		}
 
-		.music-player-top__prev {
-			left: vw(25);
+		.music-player-top__arrow--prev {
+			left: vw(11);
 		}
 
-		.music-player-top__next {
-			right: vw(25);
+		.music-player-top__arrow--next {
+			right: vw(11);
 		}
 
-		.music-player-top__next,
-		.music-player-top__prev {
+		.music-player-top__arrow {
 			position: absolute;
-			top: vw(79);
-			width: vw(28);
+			top: vw(82);
+			width: vw(10);
 			height: vw(28);
 			cursor: pointer;
 		}
 
-		.music-player__next,
-		.music-player__prev {
+		.music-player__arrow,
+		.music-player__arrow {
 			width: vw(36);
 			height: vw(36);
 
-			img {
-				width: vw(12);
-				height: vw(14);
+			svg {
+				width: 100%;
+				height: auto;
 			}
 		}
 
