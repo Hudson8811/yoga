@@ -1,11 +1,19 @@
+.music-player-wrap {
+	position: relative;
+
+}
+
 .music-player {
 	position: relative;
 	box-sizing: border-box;
-	padding: 22px 18px 8px;
+	padding: 22px 18px 3px;
 	color: #000;
 	/* FieldBorder */
 	border: 1px solid #D9DBDE;
-	border-radius: 5px;
+	//border: 1px solid red;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+
 	background: #FFFFFF;
 	margin-bottom: 56px;
 }
@@ -25,10 +33,12 @@
 	svg {
 		width: 100%;
 		height: auto;
+
 		path {
-		transition-duration: .2s;
+			transition-duration: .2s;
+		}
 	}
-	}
+
 	&:hover {
 		svg path {
 			fill: #6974A9;
@@ -189,7 +199,7 @@
 	position: relative;
 	display: inline-block;
 
-	&::before {
+	/*&::before {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -198,11 +208,11 @@
 		height: 100%;
 		content: '';
 		background: #ffffff;
-	}
+	}*/
 }
 
 .music-player__current-time {
-	margin-left: -9px;
+	/*margin-left: -9px;*/
 }
 
 .music-player__duration {}
@@ -362,7 +372,7 @@
 	/*&:hover {
 
 		opacity: 1;
-		pointer-events: all;
+		pointer-events: auto;
 
 		&+img {
 			opacity: .7;
@@ -474,7 +484,7 @@
 	align-items: flex-end;
 	justify-content: space-between;
 	width: 100%;
-	margin-top: 19px;
+	margin-top: 17px;
 
 	&__playlist,
 	&__orig_link,
@@ -518,7 +528,7 @@
 		&--active {
 			.volumeRS-wrap {
 				opacity: 1;
-				pointer-events: all;
+				pointer-events: auto;
 			}
 
 			img {
@@ -533,17 +543,86 @@
 }
 
 .music-player--playlist-on {
-	border-radius: 5px 5px 0 0;
 
-	.music-player__playlist {
-		pointer-events: all;
-		//opacity: 1;
+	//border-radius: 5px 5px 0 0;
+	&+.music-player__playlist-container {
+		pointer-events: auto;
+
+		.music-player__playlist {
+			pointer-events: auto;
+			//opacity: 1;
+		}
+
 	}
 
 }
 
 .music-player__playlist-container {
+	&::before {
+		content: '';
+		display: block;
+		width: calc(100% + 2px);
+		height: 7px;
+		bottom: 0;
+
+		background: #fff;
+		//border: 1px solid red;
+		border: 1px solid #D9DBDE;
+		border-top: none;
+		border-radius: 0 0 5px 5px;
+		//border-bottom: none;
+		position: absolute;
+		left: -1px;
+		z-index: 21;
+		box-sizing: border-box;
+		pointer-events: none;
+	}
+
+
+	pointer-events: none;
+	transition-duration: .2s;
+	padding-top: 6px;
 	display: block;
+	position: absolute;
+	z-index: 20;
+	top: 100%;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid #D9DBDE;
+	border-top: none;
+	border-bottom: none;
+	border-radius: 0 0 5px 5px;
+	background: #ffffff;
+	color: #747679;
+}
+
+.music-player__playlist-container-2 {
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		width: calc(100% + 2px);
+		height: 1px;
+		top: 5px;
+		background: #D9DBDE;
+		position: absolute;
+		left: -1px;
+		z-index: 21;
+		box-sizing: border-box;
+		opacity: 0;
+		transition-duration: .8s;
+
+	}
+
+	&--show-line {
+		&::before {
+			opacity: 1;
+		}
+	}
+	/*	display: block;
 	position: absolute;
 	z-index: 5;
 	top: 100%;
@@ -553,24 +632,11 @@
 	max-width: calc(100% + 2px);
 	//transition-duration: .2s;
 	border: 1px solid #D9DBDE;
+	border-top: none;
 	border-radius: 0 0 5px 5px;
 	background: #ffffff;
 	color: #747679;
-	// max-height: 318px;
-	// overflow: auto;
-	/*&::before{
-		position: absolute;
-		left: -2px;
-		top: -5px;
-		//content: '';
-		display: block;
-		width: 100%;
-		height: 10px;
-		background: #ffffff;
-		border: 1px solid #D9DBDE;
-		border-top: none;
-		border-bottom: none;
-	}*/
+	overflow: hidden;*/
 }
 
 .music-player__playlist {
@@ -613,38 +679,47 @@
 	.music-player-mainctrl--playlist {}
 
 
-	&--visible{
+	&--visible {
 		opacity: 1;
 	}
 
-	&:nth-child(1){
+	&:nth-child(1) {
 		transition-duration: .1s;
 	}
-	&:nth-child(2){
+
+	&:nth-child(2) {
 		transition-duration: .2s;
 	}
-	&:nth-child(3){
+
+	&:nth-child(3) {
 		transition-duration: .3s;
 	}
-	&:nth-child(4){
+
+	&:nth-child(4) {
 		transition-duration: .4s;
 	}
-	&:nth-child(5){
+
+	&:nth-child(5) {
 		transition-duration: .5s;
 	}
-	&:nth-child(6){
+
+	&:nth-child(6) {
 		transition-duration: .6s;
 	}
-	&:nth-child(7){
+
+	&:nth-child(7) {
 		transition-duration: .7s;
 	}
-	&:nth-child(8){
+
+	&:nth-child(8) {
 		transition-duration: .8s;
 	}
-	&:nth-child(9){
+
+	&:nth-child(9) {
 		transition-duration: .9s;
 	}
-	&:nth-child(10){
+
+	&:nth-child(10) {
 		transition-duration: 1s;
 	}
 

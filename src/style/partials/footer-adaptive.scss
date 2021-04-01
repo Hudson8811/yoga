@@ -93,15 +93,19 @@
 			width: 39px;
 			transition-duration: .3s;
 
+
 			svg {
 				display: block;
 				-webkit-backface-visibility: hidden;
 				backface-visibility: hidden;
 				width: 100%;
-				transition-duration: .3s;
+				transition: all .3s ease .2s;
 
 				rect {
-					transition-duration: .3s;
+					transition-duration: .2s;
+				}
+				@supports (-webkit-touch-callout: none) {
+					will-change:transform;
 				}
 			}
 		}
@@ -323,6 +327,5 @@
 			}
 		}
 	}
-
 
 }

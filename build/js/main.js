@@ -442,6 +442,14 @@ $(document).ready(function () {
 		$('.musicpl-playlist-item.amplitude-playing').addClass('amplitude-paused').removeClass('amplitude-playing');
 	}
 
+
+	function updateCustomDuration(i){
+		var dur=my_songs[i]['meta_duration'].split(':');
+
+		$('#amplitude-custom-duration-minutes').html(dur[0]);
+		$('#amplitude-custom-duration-seconds').html(dur[1]);
+	}
+	updateCustomDuration(0);
 	Amplitude.init({
 		"songs": my_songs,
 		"volume": 100,
@@ -452,11 +460,13 @@ $(document).ready(function () {
 				var percentage = Amplitude.getSongPlayedPercentage();
 				soundRS__fill.css('width', w / 100 * percentage + 'px');
 				soundRS__handle.css('left', 'calc(' + percentage + '% - 0px)');
-				//console.log(Amplitude.getSongPlayedPercentage());
+
+				$('#amplitude-custom-current-minutes').html(Math.floor(Amplitude.getSongPlayedSeconds()/60).toString());
 			},
 			initialized: function () {
 				changeOrigLink();
 				pausePlaylist();
+				//updateCustomDurationMinutes();
 			},
 			song_change: function () {
 				$('#music-player').addClass('music-player--lock');
@@ -482,6 +492,7 @@ $(document).ready(function () {
 				}
 				changeOrigLink();
 				actualizePlaylist();
+				updateCustomDuration(idx);
 				setTimeout(function () {
 					$('#music-player').removeClass('music-player--lock');
 				}, 350);
@@ -489,12 +500,15 @@ $(document).ready(function () {
 			},
 			stop: function () {
 				pausePlaylist();
+				//updateCustomDurationMinutes();
 			},
 			pause: function () {
 				pausePlaylist();
+				//updateCustomDurationMinutes();
 			},
 			play: function () {
 				actualizePlaylist();
+				//updateCustomDurationMinutes();
 			}
 		}
 	});
@@ -541,12 +555,14 @@ $(document).ready(function () {
 			$('.musicpl-bottom-controls__volume').removeClass('musicpl-bottom-controls__volume--active');
 		}
 
-		if ($(e.target).closest('#music-player__playlist, .musicpl-bottom-controls__playlist').length > 0) {
+		if ($(e.target).closest('#music-player__playlist,#music-player__playlist-container-2, .musicpl-bottom-controls__playlist').length > 0) {
 			// клик внутри элемента
 			//return;
 		}
 		else{
-			$("#music-player__playlist-container").slideUp(500);
+			//console.log('close2');
+			$("#music-player__playlist-container-2").slideUp(500);
+			$("#music-player__playlist-container-2").removeClass('music-player__playlist-container-2--show-line');
 			setTimeout(function () {
 				$("#music-player").removeClass('music-player--playlist-on');
 				$("#music-player__playlist .musicpl-playlist-item--visible").removeClass('musicpl-playlist-item--visible');
@@ -568,14 +584,19 @@ $(document).ready(function () {
 
 	$('.musicpl-bottom-controls__playlist').click(function () {
 		if (!$("#music-player").hasClass('music-player--playlist-on')) {
+			//console.log('open1');
 			$("#music-player").addClass('music-player--playlist-on');
-			$("#music-player__playlist-container").slideDown(500);
+			$("#music-player__playlist-container-2").slideDown(500);
+			//console.log('open1end');
 			setTimeout(function () {
+				$("#music-player__playlist-container-2").addClass('music-player__playlist-container-2--show-line');
 				$("#music-player__playlist .musicpl-playlist-item").addClass('musicpl-playlist-item--visible');
 			}, 500);
 
 		} else {
-			$("#music-player__playlist-container").slideUp(500);
+			//console.log('close1');
+			$("#music-player__playlist-container-2").slideUp(500);
+			$("#music-player__playlist-container-2").removeClass('music-player__playlist-container-2--show-line');
 			setTimeout(function () {
 				$("#music-player").removeClass('music-player--playlist-on');
 				$("#music-player__playlist .musicpl-playlist-item--visible").removeClass('musicpl-playlist-item--visible');
