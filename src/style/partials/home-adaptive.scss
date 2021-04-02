@@ -448,6 +448,15 @@
 
 		&__white-box {
 			top: 49%;
+
+				p {
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 21px;
+					margin-top: -15px;
+
+				}
+
 		}
 
 		&::before {
@@ -783,6 +792,9 @@
 	.hms-info {
 		left: 36px;
 		bottom: 52px;
+		&__area,&__date{
+			font-weight: 400;
+		}
 	}
 
 	.hms-info__top {}
@@ -1256,7 +1268,7 @@
 		&__text {}
 
 		&__name {
-			font-size: vw(31);
+			font-size: vw(32);
 			line-height: 1.2;
 			margin-top: vw(29);
 		}
@@ -1404,6 +1416,7 @@
 			font-size: vw(24);
 			line-height: vw(32);
 			margin-bottom: vw(9);
+			font-weight: 400;
 		}
 
 		&__pic {
@@ -1419,7 +1432,9 @@
 		padding-top: vw(54);
 		padding-bottom: vw(92);
 	}
-
+	.scikria-item .scikria-item-text__title2{
+		font-weight: 300 !important;
+	}
 	.section-science-kria--2 {
 		order: 2;
 		padding-top: vw(57);
@@ -1626,7 +1641,7 @@
 
 			&-title {
 				letter-spacing: vw(-0.2);
-				font-size: vw(31);
+				font-size: vw(32);
 				line-height: vw(32);
 				margin-bottom: vw(10);
 			}
@@ -1676,6 +1691,7 @@
 
 		&__title {
 			font-size: vw(15);
+			font-weight: 400;
 			line-height: vw(30);
 			padding-bottom: vw(13);
 			margin-bottom: vw(22);
@@ -1786,6 +1802,7 @@
 
 		&__title {
 			font-size: vw(17);
+			font-weight: 400;
 		}
 
 		&__logo {
@@ -1797,12 +1814,15 @@
 
 	}
 
+	.custom-widget-title {
+		font-weight: 400;
+	}
 	.slider-news-widget-wrap {
 		padding-top: vw(91);
 		padding-left: 0;
 		padding-right: 0;
 		flex-direction: column;
-		overflow: hidden;
+		//overflow: hidden;
 
 		.slider-news-widget {
 			width: 100%;
@@ -1983,9 +2003,11 @@
 
 
 			p {
-				font-size: vw(13);
+				font-weight: 400;
+				font-size: vw(15);
 				line-height: vw(21);
-				margin-top: vw(-11);
+				margin-top: vw(-15);
+
 			}
 
 		}

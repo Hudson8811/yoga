@@ -9,6 +9,9 @@
 	.oh-wrap--on-desktop {
 		overflow: hidden;
 	}
+	.hide--desktop{
+		display: none !important;
+	}
 }
 
 @media screen and (max-width: 1150px) {//  <=tablet
@@ -25,13 +28,18 @@
 	.oh-wrap--on-tablet {
 		overflow: hidden;
 	}
+	.hide--tablet{
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 768px) {//  >mob
 }
 
 @media screen and (max-width: 767px) {
-
+	.hide--mob{
+		display: none !important;
+	}
 	//  <=mob  only mob
 	.container--disable-on-mob {
 		width: 100% !important;
