@@ -3,13 +3,15 @@ extends layouts/default
 block vars
 	-
 		const page = {
-			title: 'index.html'
+			title: 'article-master'
 		};
 
-
+	-
+		var header_class_name="site-header--static";
 
 
 block main
+
 	include components/article-master/maslider
 	include components/article-master/subscribe
 	include components/article-master/quote-true

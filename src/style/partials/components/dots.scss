@@ -1,0 +1,35 @@
+.custom-dots .slick-dots {
+	z-index: 4;
+	width: 100%;
+	justify-content: center;
+	margin-top: 36px;
+	display: flex;
+	align-items: center;
+	list-style: none;
+
+	li {
+		margin: 0 7px;
+		list-style: none;
+		cursor: pointer;
+		width: 9px;
+		height: 9px;
+		border: 1px solid #AFB4BF;
+		box-sizing: border-box;
+		border-radius: 50%;
+		transition: all .3s ease;
+		position: relative;
+
+		&.slick-active {
+			border-color: #25378D;
+			background: #25378D;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+
+		button {
+			display: none;
+		}
+	}
+}

@@ -70,6 +70,7 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 600,
+		touchMove: false,
 		arrows: false,
 		accessibility: false
 	});

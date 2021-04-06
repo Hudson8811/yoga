@@ -1,59 +1,95 @@
 .maslider-section {
-	.maslider-slide {
-		max-width: 845px;
+	border-top: 1px solid #C4C4C4;
+}
+
+.maslider-slide {
+	max-width: 848px;
+	width: 100%;
+	padding: 5px 3px 5px;
+	height: 400/842 * 100%;
+
+	&__inner {}
+}
+
+.maslider-slide__title {
+	position: absolute;
+	top: 47%;
+	left: 55px;
+	font-size: 35px;
+	line-height: 26px;
+	display: flex;
+	align-items: center;
+	color: #363B42;
+	z-index: 100;
+}
+
+.maslider-slide__inner {
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+
+	&::after {
+		content: '';
+		padding-top: 398/842 * 100%;
+		display: block;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		padding: 3px;
-		height: 400/842 * 100%;
-		&__inner {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.maslider-arrow {
+	position: absolute;
+	bottom: 26px;
+	width: 37px;
+	height: 37px;
+	box-sizing: border-box;
+	background: #FFFFFF;
+	border: 1px solid #AFB4BF;
+	box-sizing: border-box;
+	border-radius: 500px;
+	transform: rotate(-180deg);
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	z-index: 100;
+	cursor: pointer;
+
+	&--prev {
+		left: 22px;
+	}
+
+	&--next {
+		right: 22px;
+
+		svg {
+			transform: rotate(180deg);
 		}
 	}
-	.maslider-slide__title {
-		position: absolute;
-		top: 47%;
-		left: 55px;
-		font-size: 35px;
-		line-height: 26px;
-		display: flex;
-		align-items: center;
-		color: #363B42;
-		z-index: 100;
+	&,svg path{
+		transition: all .4s ease;
 	}
-	.maslider-slide__inner {
-		position: relative;
-		&::after {
-			content: '';
-			padding-top: 398/842 * 100%;
-			display: block;
-		}
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
+	svg {
+		display: block;
+		height: auto;
+		width: 7px;
+		path{
+
 		}
 	}
-	.slick-dots {
-		display: none!important;
-	}
-	.article-arrow {
-		position: absolute;
-		bottom: 26px;
-		width: 37px;
-		height: 37px;
-		background: #fff;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		z-index: 100;
-		&--prev {
-			left: 15px;
-		}
-		&--next {
-			right: 12px;
+	&:hover{
+		border-color:  #6974A9;
+		svg path{
+			fill: #6974A9;
 		}
 	}
 }

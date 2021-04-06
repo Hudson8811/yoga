@@ -13,13 +13,13 @@ $(document).ready(function () {
 		//console.log(window.scrollY);
 		if(window.scrollY>30){
 			if(!shScrolled){
-				$('.site-header').addClass('sh-fixed sh-scrolled');
+				$('.site-header:not(.site-header--static)').addClass('sh-fixed sh-scrolled');
 				shScrolled=true;
 			}
 		}
 		else{
 			if(shScrolled){
-				$('.site-header').removeClass('sh-fixed sh-scrolled');
+				$('.site-header:not(.site-header--static)').removeClass('sh-fixed sh-scrolled');
 				shScrolled=false;
 			}
 		}
