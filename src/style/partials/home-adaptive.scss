@@ -6,9 +6,30 @@
 	.csubscr-widget__logo {
 		display: none;
 	}
-	.section-home-events{
+
+	.section-home-events {
 		overflow: hidden;
 	}
+
+
+	.insta-widget__item {
+		&:nth-child(1) {
+			border-radius: 5px 0 0 0;
+		}
+
+		&:nth-child(2) {
+			border-radius: 0 5px 0 0;
+		}
+
+		&:nth-child(3) {
+			border-radius: 0 0 0 5px;
+		}
+
+		&:nth-child(4) {
+			border-radius: 0 0 5px 0;
+		}
+	}
+
 }
 
 
@@ -449,13 +470,13 @@
 		&__white-box {
 			top: 49%;
 
-				p {
-					font-weight: 400;
-					font-size: 15px;
-					line-height: 21px;
-					margin-top: -15px;
+			p {
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 21px;
+				margin-top: -15px;
 
-				}
+			}
 
 		}
 
@@ -587,7 +608,7 @@
 		&__content {
 			padding: 0;
 			margin-top: -1px;
-			border-radius: 5px 0 0 5px;
+			border-radius: 5px;
 		}
 
 		&__item {
@@ -600,6 +621,20 @@
 
 			&:nth-child(4) {
 				display: none;
+			}
+
+			&:nth-child(1) {
+				border-radius: 5px 0 0 5px;
+			}
+
+			&:nth-child(2) {
+			}
+
+			&:nth-child(3) {
+				border-radius: 0 5px 5px 0 ;
+			}
+
+			&:nth-child(4) {
 			}
 		}
 	}
@@ -749,6 +784,9 @@
 		padding-top: 93px;
 
 		&__content {
+
+		}
+		.quote-slide{
 			padding-top: 89px;
 			padding-bottom: 98px;
 
@@ -792,7 +830,9 @@
 	.hms-info {
 		left: 36px;
 		bottom: 52px;
-		&__area,&__date{
+
+		&__area,
+		&__date {
 			font-weight: 400;
 		}
 	}
@@ -843,6 +883,7 @@
 
 	.hm-quote__main {
 		color: #525865;
+
 		br {
 			display: none;
 		}
@@ -1060,6 +1101,7 @@
 		margin-top: vw(2);
 		right: vw(-3);
 	}
+
 	.read-more:hover::after {
 		right: vw(-6);
 	}
@@ -1164,10 +1206,13 @@
 		}
 
 		&__content {
-			padding-top: vw(47);
-			padding-bottom: vw(98);
 		}
 
+		.quote-slide{
+			padding-top: vw(47);
+			padding-bottom: vw(98);
+
+		}
 		br {
 			display: none;
 		}
@@ -1308,6 +1353,7 @@
 		opacity: 1;
 		top: vw(123);
 		width: vw(10);
+
 		&--prev {
 			left: 0;
 		}
@@ -1432,9 +1478,11 @@
 		padding-top: vw(54);
 		padding-bottom: vw(92);
 	}
-	.scikria-item .scikria-item-text__title2{
+
+	.scikria-item .scikria-item-text__title2 {
 		font-weight: 300 !important;
 	}
+
 	.section-science-kria--2 {
 		order: 2;
 		padding-top: vw(57);
@@ -1750,6 +1798,7 @@
 		&__content {
 			margin: 0 auto;
 			width: vw(266);
+			border-radius: 5px;
 		}
 
 		&__item {
@@ -1762,6 +1811,21 @@
 
 			&:nth-child(4) {
 				display: block;
+			}
+			&:nth-child(1) {
+				border-radius: 5px 0 0 0;
+			}
+
+			&:nth-child(2) {
+				border-radius: 0 5px 0 0;
+			}
+
+			&:nth-child(3) {
+				border-radius: 0 0 0 5px;
+			}
+
+			&:nth-child(4) {
+				border-radius: 0 0 5px 0;
 			}
 		}
 
@@ -1808,6 +1872,7 @@
 		&__logo {
 			display: none;
 		}
+
 		&__inner {
 			width: vw(206);
 		}
@@ -1817,6 +1882,7 @@
 	.custom-widget-title {
 		font-weight: 400;
 	}
+
 	.slider-news-widget-wrap {
 		padding-top: vw(91);
 		padding-left: 0;
@@ -1922,6 +1988,7 @@
 		flex-direction: column;
 
 		padding-bottom: vw(35);
+
 		.newposts-widget {
 			width: 100%;
 			margin-bottom: vw(93);
@@ -1968,7 +2035,8 @@
 				padding: vw(6) vw(10) vw(7);
 				width: vw(182);
 			}
-			&__pic{
+
+			&__pic {
 				margin-bottom: vw(-15);
 			}
 		}

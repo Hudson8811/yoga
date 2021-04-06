@@ -1,49 +1,58 @@
 @mixin flex-row($gutter-left, $gutter-top) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -$gutter-left;
-  margin-top: -$gutter-top;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter-left;
+	margin-top: -$gutter-top;
 }
 
 @mixin flex-block($min-width, $gutter-left, $gutter-top, $last-equal: false, $max-cols: 3) {
-  flex: 1 0 $min-width;
-  margin-left: $gutter-left;
-  margin-top: $gutter-top;
+	flex: 1 0 $min-width;
+	margin-left: $gutter-left;
+	margin-top: $gutter-top;
 
-  @if $last-equal {
-    @for $i from 2 through $max-cols {
-      $screen-width: ($min-width*$i)+($gutter-left*$i);
-      $column-width: (100%/$i);
-      @media (min-width: $screen-width) {
-        max-width: calc(#{$column-width} - #{$gutter-left});
-      }
-    }
+	@if $last-equal {
+		@for $i from 2 through $max-cols {
+			$screen-width: ($min-width*$i)+($gutter-left*$i);
+			$column-width: (100%/$i);
 
-    $column-width: (100%/$max-cols);
-    @media (min-width: $min-width*$max-cols) {
-      min-width: calc(#{$column-width} - #{$gutter-left});
-    }
-  }
+			@media (min-width: $screen-width) {
+				max-width: calc(#{$column-width} - #{$gutter-left});
+			}
+		}
+
+		$column-width: (100%/$max-cols);
+
+		@media (min-width: $min-width*$max-cols) {
+			min-width: calc(#{$column-width} - #{$gutter-left});
+		}
+	}
 }
 
-@mixin hov(){
-  transition: all .3s;
-  cursor: pointer;
-  &:hover{
-    opacity: .6;
-  }
+@mixin hov() {
+	transition: all .3s;
+	cursor: pointer;
+
+	@media screen and (min-width:$minDesktop) {
+		&:hover {
+			opacity: .6;
+		}
+	}
 }
 
-@mixin scalepic(){
-  overflow: hidden;
-  img{
-    transition: 0.4s ease-in-out;
-  }
-  &:hover{
-    img{
-      transform: scale(1.07);
-    }
-  }
+@mixin scalepic() {
+	overflow: hidden;
+
+	@media screen and (min-width:$minDesktop) {
+		img {
+			transition: 0.4s ease-in-out;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.07);
+			}
+		}
+	}
 }
 
 $resolution: 360;
@@ -51,6 +60,3 @@ $resolution: 360;
 @function vw($px) {
 	@return (($px/$resolution) * 100)+vw;
 }
-
-
-

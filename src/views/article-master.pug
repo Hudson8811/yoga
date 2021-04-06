@@ -1,196 +1,196 @@
 extends layouts/default
 
 block vars
-    -
-        const page = {
-            title: 'index.html'
-        };
+	-
+		const page = {
+			title: 'index.html'
+		};
 
 
 
 
 block main
-    include components/article-master/maslider
-    include components/article-master/subscribe
-    include components/article-master/quote-true
-    .container.container--extra-long
-        .hr
-    section.section-part-wsidebar
-        .container.container--extra-long
-            .part-wsidebar
-                .part-wsidebar__main
-                    include components/article-master/new-article
-                    .container.container--extra-long
-                        .hr
-                    include components/article-master/category-slider
-                    .container.container--wery-long
-                        .hr
-                    include components/article-master/band
-                .part-wsidebar__sidebar
-                    .category
-                        .category__title.custom-widget-title Категории
-                        ul.category__list
-                            li.category__list-item
-                                a.category__link(href="#") Новые статьи
-                            li.category__list-item
-                                a.category__link(href="#") Наука Крийя
-                            li.category__list-item
-                                a.category__link(href="#") Саморазвитие
-                            li.category__list-item
-                                a.category__link(href="#") Творчество
-                            li.category__list-item
-                                a.category__link(href="#") Здоровье
-                            li.category__list-item
-                                a.category__link(href="#") Семья и дети
-                    .hr
-                    .master.master_article
-                        .master__content
-                            .master__title О мастере
-                            .master__img-wrapper
-                                img.master__img(src="img/master.jpg")
-                            .master__info
-                                span Сознание Мастера вездесуще
-                                span и этот Мастер – Высшее Я
-                            .social.master__social
-                                a.social__link.master__social-link(href="#")
-                                    include ../img/icons/social-insta.svg
-                                a.social__link.master__social-link(href="#")
-                                    include ../img/icons/social-yt.svg
-                                a.social__link.master__social-link(href="#")
-                                    include ../img/icons/social-fb.svg
-                                a.social__link.master__social-link(href="#")
-                                    include ../img/icons/social-vk.svg
-                    .insta-widget.insta-widget_article
-                        .insta-widget__title.custom-widget-title INSTAGRAM
-                        .insta-widget__content
-                            a.insta-widget__item(href="")
-                                img(src="img/insta-widget/insta-1.jpg", alt="")
-                            a.insta-widget__item(href="")
-                                img(src="img/insta-widget/insta-2.jpg", alt="")
-                            a.insta-widget__item(href="")
-                                img(src="img/insta-widget/insta-3.jpg", alt="")
-                            a.insta-widget__item(href="")
-                                img(src="img/insta-widget/insta-4.jpg", alt="")
+	include components/article-master/maslider
+	include components/article-master/subscribe
+	include components/article-master/quote-true
+	.container.container--extra-long
+		.hr
+	section.section-part-wsidebar
+		.container.container--extra-long
+			.part-wsidebar
+				.part-wsidebar__main
+					include components/article-master/new-article
+					.container.container--extra-long
+						.hr
+					include components/article-master/category-slider
+					.container.container--wery-long
+						.hr
+					include components/article-master/band
+				.part-wsidebar__sidebar
+					.category
+						.category__title.custom-widget-title Категории
+						ul.category__list
+							li.category__list-item
+								a.category__link(href="#") Новые статьи
+							li.category__list-item
+								a.category__link(href="#") Наука Крийя
+							li.category__list-item
+								a.category__link(href="#") Саморазвитие
+							li.category__list-item
+								a.category__link(href="#") Творчество
+							li.category__list-item
+								a.category__link(href="#") Здоровье
+							li.category__list-item
+								a.category__link(href="#") Семья и дети
+					.hr
+					.master.master_article
+						.master__content
+							.master__title О мастере
+							.master__img-wrapper
+								img.master__img(src="img/master.jpg")
+							.master__info
+								span Сознание Мастера вездесуще
+								span и этот Мастер – Высшее Я
+							.social.master__social
+								a.social__link.master__social-link(href="#")
+									include ../img/icons/social-insta.svg
+								a.social__link.master__social-link(href="#")
+									include ../img/icons/social-yt.svg
+								a.social__link.master__social-link(href="#")
+									include ../img/icons/social-fb.svg
+								a.social__link.master__social-link(href="#")
+									include ../img/icons/social-vk.svg
+					.insta-widget.insta-widget_article
+						.insta-widget__title.custom-widget-title INSTAGRAM
+						.insta-widget__content
+							a.insta-widget__item(href="")
+								img(src="img/insta-widget/insta-1.jpg", alt="")
+							a.insta-widget__item(href="")
+								img(src="img/insta-widget/insta-2.jpg", alt="")
+							a.insta-widget__item(href="")
+								img(src="img/insta-widget/insta-3.jpg", alt="")
+							a.insta-widget__item(href="")
+								img(src="img/insta-widget/insta-4.jpg", alt="")
 
-                    .csubscr-and-slider-widget
-                        .csubscr-widget
-                            .csubscr-widget__inner
-                                .csubscr-widget__title  Присоединяйтесь
-                                .csubscr-widget__description Получите доступ к платформе Имрам Крийя
-                                .csubscr-widget__inp-wrap
-                                    input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
-                                .btn.btn--square.csubscr-widget__btn отправить
-                        a.wnevents-widget__item(href="")
-                            .wnevents-widget__pic
-                                img(src="img/wnevents-1.jpg", alt="")
-                            .wnevents-widget__title События недели
+					.csubscr-and-slider-widget
+						.csubscr-widget
+							.csubscr-widget__inner
+								.csubscr-widget__title  Присоединяйтесь
+								.csubscr-widget__description Получите доступ к платформе Имрам Крийя
+								.csubscr-widget__inp-wrap
+									input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
+								.btn.btn--square.csubscr-widget__btn отправить
+						a.wnevents-widget__item(href="")
+							.wnevents-widget__pic
+								img(src="img/wnevents-1.jpg", alt="")
+							.wnevents-widget__title События недели
 
-                    .slider-news-widget-wrap_article
-                        .slider-news-widget
-                            .slider-news-widget__title.custom-widget-title Онлайн курсы
-                            .slnewsw-slider.js-slnewsw-slider
-                                a.slnewsw-slider-item(href="")
-                                    .slnewsw-slider-item__pic
-                                        img(src="img/online-courses.jpg", alt="")
-                                    .slnewsw-slider-item__name Базовый курс медитации
-                                a.slnewsw-slider-item(href="")
-                                    .slnewsw-slider-item__pic
-                                        img(src="img/online-courses.jpg", alt="")
-                                    .slnewsw-slider-item__name Базовый курс медитации2
-                                a.slnewsw-slider-item(href="")
-                                    .slnewsw-slider-item__pic
-                                        img(src="img/online-courses.jpg", alt="")
-                                    .slnewsw-slider-item__name Базовый курс медитации3
+					.slider-news-widget-wrap_article
+						.slider-news-widget
+							.slider-news-widget__title.custom-widget-title Онлайн курсы
+							.slnewsw-slider.js-slnewsw-slider
+								a.slnewsw-slider-item(href="")
+									.slnewsw-slider-item__pic
+										img(src="img/online-courses.jpg", alt="")
+									.slnewsw-slider-item__name Базовый курс медитации
+								a.slnewsw-slider-item(href="")
+									.slnewsw-slider-item__pic
+										img(src="img/online-courses.jpg", alt="")
+									.slnewsw-slider-item__name Базовый курс медитации2
+								a.slnewsw-slider-item(href="")
+									.slnewsw-slider-item__pic
+										img(src="img/online-courses.jpg", alt="")
+									.slnewsw-slider-item__name Базовый курс медитации3
 
-                        .slider-news-widget
-                            .slider-news-widget__title.custom-widget-title Видео недели
-                            .slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
-                                a.slnewsw-slider-item(href="")
-                                    .slnewsw-slider-item__pic
-                                        img(src="img/online-courses.jpg", alt="")
-                                    .slnewsw-slider-item__name Базовый курс медитации
-                                a.slnewsw-slider-item(href="")
-                                    .slnewsw-slider-item__pic
-                                        img(src="img/online-courses.jpg", alt="")
-                                    .slnewsw-slider-item__name Базовый курс медитации2
-                                a.slnewsw-slider-item(href="")
-                                    .slnewsw-slider-item__pic
-                                        img(src="img/online-courses.jpg", alt="")
-                                    .slnewsw-slider-item__name Базовый курс медитации3
+						.slider-news-widget
+							.slider-news-widget__title.custom-widget-title Видео недели
+							.slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
+								a.slnewsw-slider-item(href="")
+									.slnewsw-slider-item__pic
+										img(src="img/online-courses.jpg", alt="")
+									.slnewsw-slider-item__name Базовый курс медитации
+								a.slnewsw-slider-item(href="")
+									.slnewsw-slider-item__pic
+										img(src="img/online-courses.jpg", alt="")
+									.slnewsw-slider-item__name Базовый курс медитации2
+								a.slnewsw-slider-item(href="")
+									.slnewsw-slider-item__pic
+										img(src="img/online-courses.jpg", alt="")
+									.slnewsw-slider-item__name Базовый курс медитации3
 
-                    .wnevents-widget.wnevents-widget_article
-                        a.wnevents-widget__item(href="")
-                            .wnevents-widget__pic
-                                img(src="img/wnevents-1.jpg", alt="")
-                            .wnevents-widget__title События недели
-                        a.wnevents-widget__item(href="")
-                            .wnevents-widget__pic
-                                img(src="img/wnevents-2.jpg", alt="")
-                            .wnevents-widget__title Статьи мастера
+					.wnevents-widget.wnevents-widget_article
+						a.wnevents-widget__item(href="")
+							.wnevents-widget__pic
+								img(src="img/wnevents-1.jpg", alt="")
+							.wnevents-widget__title События недели
+						a.wnevents-widget__item(href="")
+							.wnevents-widget__pic
+								img(src="img/wnevents-2.jpg", alt="")
+							.wnevents-widget__title Статьи мастера
 
-                    #music-player.music-player
-                        .music-player-top
-                            .amplitude-next.music-player-top__arrow.music-player-top__arrow--next <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.80161 5.90737L0.986316 10.8266C0.892078 10.9234 0.767987 10.9839 0.635075 10.9979C0.502164 11.0118 0.368609 10.9784 0.25705 10.9033L0.171254 10.8266L0.0961832 10.739C0.0334767 10.6434 -1.8411e-06 10.5309 -1.82098e-06 10.4158C-1.80086e-06 10.3007 0.0334767 10.1882 0.0961834 10.0926L0.171254 10.0049C0.194596 9.9738 0.22376 9.94773 0.25705 9.92823L4.18222 5.90737C4.28962 5.79659 4.34988 5.64697 4.34988 5.49104C4.34988 5.33512 4.28962 5.1855 4.18222 5.07471L0.257052 1.03194L0.171256 0.955248C0.0955882 0.856819 0.0544581 0.735287 0.0544582 0.610132C0.0544582 0.484977 0.0955883 0.363447 0.171256 0.265018L0.246327 0.17737L0.332123 0.100677C0.427358 0.0356721 0.539323 0.000976657 0.653859 0.000976677C0.768395 0.000976697 0.880359 0.0356722 0.975593 0.100677L1.06139 0.17737L5.47988 4.6803L5.87668 5.09662C5.96817 5.21588 6.01139 5.36645 5.99742 5.51729C5.98346 5.66814 5.91337 5.80776 5.80161 5.90737Z" fill="#25378D"/></svg>
+					#music-player.music-player
+						.music-player-top
+							.amplitude-next.music-player-top__arrow.music-player-top__arrow--next <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.80161 5.90737L0.986316 10.8266C0.892078 10.9234 0.767987 10.9839 0.635075 10.9979C0.502164 11.0118 0.368609 10.9784 0.25705 10.9033L0.171254 10.8266L0.0961832 10.739C0.0334767 10.6434 -1.8411e-06 10.5309 -1.82098e-06 10.4158C-1.80086e-06 10.3007 0.0334767 10.1882 0.0961834 10.0926L0.171254 10.0049C0.194596 9.9738 0.22376 9.94773 0.25705 9.92823L4.18222 5.90737C4.28962 5.79659 4.34988 5.64697 4.34988 5.49104C4.34988 5.33512 4.28962 5.1855 4.18222 5.07471L0.257052 1.03194L0.171256 0.955248C0.0955882 0.856819 0.0544581 0.735287 0.0544582 0.610132C0.0544582 0.484977 0.0955883 0.363447 0.171256 0.265018L0.246327 0.17737L0.332123 0.100677C0.427358 0.0356721 0.539323 0.000976657 0.653859 0.000976677C0.768395 0.000976697 0.880359 0.0356722 0.975593 0.100677L1.06139 0.17737L5.47988 4.6803L5.87668 5.09662C5.96817 5.21588 6.01139 5.36645 5.99742 5.51729C5.98346 5.66814 5.91337 5.80776 5.80161 5.90737Z" fill="#25378D"/></svg>
 
-                            .amplitude-prev.music-player-top__arrow.music-player-top__arrow--prev <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.198386 5.09361L5.01368 0.174351C5.10792 0.0775861 5.23201 0.0170888 5.36492 0.00311083C5.49784 -0.0108662 5.63139 0.0225372 5.74295 0.0976591L5.82874 0.174351L5.90382 0.261999C5.96652 0.357615 6 0.470111 6 0.585202C6 0.700294 5.96652 0.812789 5.90382 0.908404L5.82874 0.996053C5.8054 1.02717 5.77624 1.05324 5.74295 1.07274L1.81778 5.09361C1.71038 5.20439 1.65012 5.35401 1.65012 5.50994C1.65012 5.66586 1.71038 5.81548 1.81778 5.92626L5.74295 9.96904L5.82874 10.0457C5.90441 10.1442 5.94554 10.2657 5.94554 10.3908C5.94554 10.516 5.90441 10.6375 5.82874 10.736L5.75367 10.8236L5.66788 10.9003C5.57264 10.9653 5.46068 11 5.34614 11C5.2316 11 5.11964 10.9653 5.02441 10.9003L4.93861 10.8236L0.52012 6.32068L0.123315 5.90435C0.0318246 5.7851 -0.0113926 5.63453 0.00257493 5.48368C0.0165425 5.33284 0.0866294 5.19322 0.198386 5.09361Z" fill="#25378D"/></svg>
-
-
-                            .music-player-center
-                                .music-player__album-art
-                                    #mpl-icon-slider.mpl-icon-slider
-                                    //img(data-amplitude-song-info='cover_art_url')
-                                .song-meta-data
-                                span.music-player__song-name(data-amplitude-song-info='name')
-                                span.music-player__song-artist(data-amplitude-song-info='artist')
-                                .music-player__time-progress
-                                    .soundRS__progress-container
-                                        input.amplitude-song-slider.js-song-progress-slider(type='range' min="0" max="100" value='0')
-                                        progress#song-played-progress.amplitude-song-played-progress
-                                        //progress#song-buffered-progress.amplitude-buffered-progress(value='0')
-                                    .music-player__time-container
-                                        span.music-player__current-time
-                                            span.amplitude-current-minutes
-                                            | :
-                                            span.amplitude-current-seconds
-                                        span.music-player__duration
-                                            span.amplitude-duration-minutes
-                                            | :
-                                            span.amplitude-duration-seconds
+							.amplitude-prev.music-player-top__arrow.music-player-top__arrow--prev <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.198386 5.09361L5.01368 0.174351C5.10792 0.0775861 5.23201 0.0170888 5.36492 0.00311083C5.49784 -0.0108662 5.63139 0.0225372 5.74295 0.0976591L5.82874 0.174351L5.90382 0.261999C5.96652 0.357615 6 0.470111 6 0.585202C6 0.700294 5.96652 0.812789 5.90382 0.908404L5.82874 0.996053C5.8054 1.02717 5.77624 1.05324 5.74295 1.07274L1.81778 5.09361C1.71038 5.20439 1.65012 5.35401 1.65012 5.50994C1.65012 5.66586 1.71038 5.81548 1.81778 5.92626L5.74295 9.96904L5.82874 10.0457C5.90441 10.1442 5.94554 10.2657 5.94554 10.3908C5.94554 10.516 5.90441 10.6375 5.82874 10.736L5.75367 10.8236L5.66788 10.9003C5.57264 10.9653 5.46068 11 5.34614 11C5.2316 11 5.11964 10.9653 5.02441 10.9003L4.93861 10.8236L0.52012 6.32068L0.123315 5.90435C0.0318246 5.7851 -0.0113926 5.63453 0.00257493 5.48368C0.0165425 5.33284 0.0866294 5.19322 0.198386 5.09361Z" fill="#25378D"/></svg>
 
 
-                                .music-player__controls
-                                    .amplitude-prev.music-player__prev
-                                        img(src="img/player-controls/prev.svg", alt="")
-                                    .amplitude-play-pause.music-player-mainctrl
-                                        .music-player-mainctrl__pause
-                                            img(src="img/player-controls/pause.svg", alt="")
-                                        .music-player-mainctrl__play
-                                            img(src="img/player-controls/play.svg", alt="")
+							.music-player-center
+								.music-player__album-art
+									#mpl-icon-slider.mpl-icon-slider
+									//img(data-amplitude-song-info='cover_art_url')
+								.song-meta-data
+								span.music-player__song-name(data-amplitude-song-info='name')
+								span.music-player__song-artist(data-amplitude-song-info='artist')
+								.music-player__time-progress
+									.soundRS__progress-container
+										input.amplitude-song-slider.js-song-progress-slider(type='range' min="0" max="100" value='0')
+										progress#song-played-progress.amplitude-song-played-progress
+										//progress#song-buffered-progress.amplitude-buffered-progress(value='0')
+									.music-player__time-container
+										span.music-player__current-time
+											span.amplitude-current-minutes
+											| :
+											span.amplitude-current-seconds
+										span.music-player__duration
+											span.amplitude-duration-minutes
+											| :
+											span.amplitude-duration-seconds
 
-                                    .amplitude-next.music-player__next
-                                        img(src="img/player-controls/next.svg", alt="")
 
-                                .musicpl-bottom-controls
-                                    .musicpl-bottom-controls__playlist
-                                        img(src="img/player-controls/playlist.svg", alt="")
-                                    a#song-orig-link.musicpl-bottom-controls__orig.musicpl-bottom-controls__orig_link(href="#")
-                                        img(src="img/player-controls/star.svg", alt="")
-                                    .musicpl-bottom-controls__volume
-                                        .volumeRS-wrap
-                                            input.amplitude-volume-slide.js-volume-slider(type='range' min="0" max="100" value='100')
-                                        img(src="img/player-controls/volume.svg", alt="")
-                        #music-player__playlist-container.music-player__playlist-container(style="display:none;")
-                            #music-player__playlist.music-player__playlist
-    section.hm-galery
-        .container.container--extra-long
-            .hm-galery__row
-                .hm-galery__img-wrapper
-                    img.hm-galery__img(src="img/gallery/photo1.jpg")
-                .hm-galery__img-wrapper
-                    img.hm-galery__img(src="img/gallery/photo2.jpg")
-                .hm-galery__img-wrapper
-                    img.hm-galery__img(src="img/gallery/photo3.jpg")
-                .hm-galery__img-wrapper
-                    img.hm-galery__img(src="img/gallery/photo4.jpg")
-                a.hm-galery__white-box(href="#")
-                    p Все<br/>фотографии
+								.music-player__controls
+									.amplitude-prev.music-player__prev
+										img(src="img/player-controls/prev.svg", alt="")
+									.amplitude-play-pause.music-player-mainctrl
+										.music-player-mainctrl__pause
+											img(src="img/player-controls/pause.svg", alt="")
+										.music-player-mainctrl__play
+											img(src="img/player-controls/play.svg", alt="")
+
+									.amplitude-next.music-player__next
+										img(src="img/player-controls/next.svg", alt="")
+
+								.musicpl-bottom-controls
+									.musicpl-bottom-controls__playlist
+										img(src="img/player-controls/playlist.svg", alt="")
+									a#song-orig-link.musicpl-bottom-controls__orig.musicpl-bottom-controls__orig_link(href="#")
+										img(src="img/player-controls/star.svg", alt="")
+									.musicpl-bottom-controls__volume
+										.volumeRS-wrap
+											input.amplitude-volume-slide.js-volume-slider(type='range' min="0" max="100" value='100')
+										img(src="img/player-controls/volume.svg", alt="")
+						#music-player__playlist-container.music-player__playlist-container(style="display:none;")
+							#music-player__playlist.music-player__playlist
+	section.hm-galery
+		.container.container--extra-long
+			.hm-galery__row
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo1.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo2.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo3.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo4.jpg")
+				a.hm-galery__white-box(href="#")
+					p Все<br/>фотографии

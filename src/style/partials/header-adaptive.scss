@@ -64,6 +64,7 @@
 	}
 }
 
+
 //последний десктоп
 @media screen and (min-width:1151px) {
 	.sh-authorize__link {
@@ -74,6 +75,10 @@
 
 	.sh-burger-wrap-right {
 		display: none;
+	}
+
+	.sh-menu-item__link {
+		white-space: nowrap;
 	}
 }
 

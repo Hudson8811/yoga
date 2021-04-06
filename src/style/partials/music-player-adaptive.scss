@@ -1,9 +1,21 @@
+@media screen and (min-width: 1151px) {
+	.mpl-icon-slider {
+		pointer-events: none !important;
+	}
+}
+
 @media screen and (max-width: 1150px) {
+
+	.music-player-wrap{
+		margin-bottom: 57px;
+
+	}
+
 	.music-player {
 		margin: 0 auto;
-		margin-bottom: 59px;
+		margin-bottom: 0;
 		width: 100%;
-		padding: 36px 35px 22px;
+		padding: 36px 35px 18px;
 
 		&__album-art {
 			width: 100px;
@@ -56,13 +68,25 @@
 			}
 		}
 	}
+	.music-player__playlist-container{
+		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		padding-top: 6px;
+	}
 }
 
 
 @media screen and (max-width: 767px) {
+	.music-player-wrap{
+		margin-bottom: vw(94);
+
+	}
 	.music-player {
 		margin: 0 auto;
-		margin-bottom: vw(94);
+		margin-bottom: 0;
 		width: 100%;
 		padding: vw(36) 0 vw(2);
 
@@ -105,33 +129,37 @@
 
 		.musicpl-bottom-controls {
 			margin-top: vw(22);
-			margin-bottom: vw(12);
+			margin-bottom: vw(6);
+
 			&__orig_link {
 
 				// display: none;
 				img {
 
-					width: vw(10);
-					height: auto;
+					width: vw(11);
+					height: vw(14);
 				}
 			}
+
 			&__volume {
 				width: vw(20);
+
 				// display: none;
 				img {
 
-					width: vw(17);
-					height: auto;
+					width: vw(18);
+					height: vw(14);
 				}
 			}
+
 			&__playlist {
 				width: vw(20);
 
 				// display: none;
 				img {
 
-					width: vw(17);
-					height: auto;
+					width: vw(18);
+					height: vw(14);
 				}
 			}
 		}
@@ -182,6 +210,16 @@
 		}
 	}
 
+	.music-player__playlist-container{
+		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		padding-top: 6px; ;
+		background: #ffffff;
+	}
+
 	.musicpl-playlist-item .custom-audio-playlist__song {
 
 		padding: vw(9) vw(10);
@@ -193,20 +231,27 @@
 		font-size: vw(13);
 		line-height: vw(21);
 	}
+
 	.music-player__playlist {
 		padding: vw(23) vw(18) vw(10);
 	}
-	.music-player-mainctrl--playlist{
+
+	.music-player-mainctrl--playlist {
 		margin: 0 !important;
 	}
-	.music-player__next, .music-player__prev {
+
+	.music-player__next,
+	.music-player__prev {
 
 		width: vw(36);
 		height: vw(36);
 		border-radius: vw(50);
-		img{
+
+		img {
 			width: vw(12);
 		}
 
 	}
+
+
 }

@@ -69,11 +69,14 @@ $(document).ready(function () {
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		speed: 300,
-		arrows: false
+		speed: 600,
+		arrows: false,
+		accessibility: false
 	});
 
-
+	$('#mpl-icon-slider').on('afterChange', function(event, slick, currentSlide){
+		Amplitude.playSongAtIndex(currentSlide);
+	});
 
 	var soundRS = $('.js-song-progress-slider').rangeslider({
 		rangeClass: 'rangeslider soundRS',
