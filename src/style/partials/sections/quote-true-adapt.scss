@@ -5,7 +5,7 @@
             &__container {
                 width: 700px;
             }
-            
+
             &__title {
                 margin-bottom: 16px;
                 font-family: "Savoye LET";
@@ -17,7 +17,7 @@
                 letter-spacing: -0.03em;
                 color: #3E434D;
             }
-            
+
             &__desc {
                 max-width: 490px;
                 margin: 0 auto;
@@ -30,7 +30,7 @@
         }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {//767 было
     .quote-true {
         padding-top: vw(50);
         padding-bottom: vw(51);
@@ -38,7 +38,7 @@
             &__container {
                 width: vw(700);
             }
-            
+
             &__title {
                 margin-bottom: vw(19);
                 font-family: "Savoye LET";
@@ -50,7 +50,7 @@
                 letter-spacing: -0.03em;
                 color: #3E434D;
             }
-            
+
             &__desc {
                 max-width: vw(490);
                 margin: 0 auto;

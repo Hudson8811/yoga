@@ -27,21 +27,21 @@
             color: #53565A;
             list-style: none;
         }
-    
+
         &__list-item {
             margin-bottom: 16px;
             &:hover {
                 text-decoration: underline;
             }
         }
-    
+
         &__link {
-            
+
         }
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {//767 было
     .category_video {
         order: 0;
     }
@@ -69,17 +69,17 @@
             color: #53565A;
             list-style: none;
         }
-    
+
         &__list-item {
             margin-bottom: vw(16);
             &:hover {
                 text-decoration: underline;
             }
         }
-    
+
         &__link {
-            
+
         }
     }
-   
+
 }

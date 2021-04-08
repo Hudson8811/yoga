@@ -1,6 +1,7 @@
 /* libs */
 
 //= libs/jquery-3.3.1.min.js
+//= libs/jquery.mobile.custom.min.js
 //= libs/jquery.fancybox.min.js
 //= libs/slick.min.js
 //= libs/amplitude.min.js

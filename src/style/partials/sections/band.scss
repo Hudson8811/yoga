@@ -1,80 +1,81 @@
 .band {
-padding-top: 41px;
-padding-bottom: 96px;
-    &__container {
-        max-width: 100%;
-    }
-    
-    &__title {
-        margin-bottom: 18px;
-    }
-    
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -18px;
-        &_video {
-            margin-bottom: 17px;
-        }
-    }
-    
-    &__card {
-        width: 50%;
-        padding: 18px;
-        &_video {
-        }
-    }
-    
-    &__img-wrapper {
-        margin-bottom: 17px;
-        max-width: 403px;
-        &_video {
-            margin-bottom: 20px;
-        }
-        &:after {
-            padding-top: 100%;
-        }
-        &_video {
-            &:after {
-                padding-top: 250/403 * 100%;
-            }
-        }
-    }
-    
-    &__img {
-    }
-    
-    &__card-title {
-        margin-bottom: 6px;
-    }
-    
-    &__theme-wrapper {
-        margin-bottom: 6px;
-        &_video {
-            margin-bottom: 14px;
-        }
-    }
-    
-    &__theme-link {
-    }
-    
-    &__theme-date {
-    }
-    
-    &__theme-icon {
-    }
-    
-    &__theme-desc {
-        max-width: 403px;
-        margin-bottom: 47px;
-    }
+	padding-top: 41px;
+	padding-bottom: 96px;
 
-    &__patination {
+	&__container {
+		max-width: 100%;
+	}
 
-    }
+	&__title {
+		margin-bottom: 18px;
+		margin-left: -3px;
+	}
 
-    &__paginate {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -18px;
 
-    }
+		&_video {
+			margin-bottom: 17px;
+		}
+	}
+
+	&__card {
+		width: 50%;
+		padding: 18px;
+
+		&_video {}
+	}
+
+	&__img-wrapper {
+		margin-bottom: 17px;
+		max-width: 403px;
+		overflow: hidden;
+		border-radius: 5px;
+
+		&_video {
+			margin-bottom: 20px;
+		}
+
+		&:after {
+			padding-top: 100%;
+		}
+
+		&_video {
+			&:after {
+				padding-top: 250/403 * 100%;
+			}
+		}
+		@include scalepic();
+	}
+
+	&__img {}
+
+	&__card-title {
+		margin-bottom: 6px;
+	}
+
+	&__theme-wrapper {
+		margin-bottom: 6px;
+
+		&_video {
+			margin-bottom: 14px;
+		}
+	}
+
+	&__theme-link {}
+
+	&__theme-date {}
+
+	&__theme-icon {}
+
+	&__theme-desc {
+		max-width: 403px;
+		margin-bottom: 47px;
+	}
+
+	&__patination {}
+
+	&__paginate {}
 }
-

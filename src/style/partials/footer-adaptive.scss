@@ -190,7 +190,7 @@
 //начало мобилки
 
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:749px) {//767 было
 
 	.top-btn-wrap__inner{
 		width: 92.5vw;
@@ -252,6 +252,7 @@
 		margin: 0 0 vw(15);
 
 		&__item {
+			font-size: vw(13);
 			line-height: vw(32);
 
 		}

@@ -7,7 +7,7 @@
 	position: relative;
 	box-sizing: border-box;
 	padding: 22px 18px 3px;
-	color: #000;
+	color: $dark;
 	/* FieldBorder */
 	border: 1px solid #D9DBDE;
 	//border: 1px solid red;
@@ -97,7 +97,7 @@
 	/* Font_Title_dark */
 	margin-top: 19px;
 	text-align: center;
-	color: #3E434D;
+	color: $dark;
 	font-size: 13px;
 	font-weight: normal;
 	font-style: normal;
@@ -319,7 +319,7 @@
 	position: absolute;
 	z-index: 5;
 	top: -51px;
-    left: 50%;
+	left: 50%;
 	width: 149px;
 	height: 36px;
 	padding-top: 17px;
@@ -500,7 +500,7 @@
 			width: 17px;
 			height: 13px;
 			object-fit: contain;
-			object-position: left center ;
+			object-position: left center;
 		}
 	}
 
@@ -602,10 +602,11 @@
 	border-radius: 0 0 5px 5px;
 	background: #ffffff;
 	color: #747679;
+
 }
 
 .music-player__playlist-container-2 {
-	overflow: hidden;
+
 
 	&::before {
 		content: '';
@@ -628,6 +629,7 @@
 			opacity: 1;
 		}
 	}
+
 	/*	display: block;
 	position: absolute;
 	z-index: 5;
@@ -652,6 +654,42 @@
 	pointer-events: none;
 	//opacity: 0;
 	transition: all 0.4s ease-in-out;
+	/*overflow: scroll;
+	overflow-x: auto;*/
+
+	&::-webkit-scrollbar {
+		/* 1 - скроллбар */
+		width: 4px;
+		height: 4px;
+		background-color: red;
+	}
+
+	&::-webkit-scrollbar-button {
+		/* 2 - кнопка */
+
+	}
+
+	&::-webkit-scrollbar-track {
+		/* 3 - трек */
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		/* 4 - видимая часть трека */
+	}
+
+	&::-webkit-scrollbar-thumb {
+		/* 5 - ползунок */
+		border-radius: 2px;
+		background-color: #d1d1d1;
+	}
+
+	&::-webkit-scrollbar-corner {
+		/* 6 - уголок */
+	}
+
+	&::-webkit-resizer {
+		/* 7 - изменение размеров */
+	}
 }
 
 
@@ -782,10 +820,23 @@
 	}
 }
 
+.music-player__swipe-area {
+	//background: rgba(255, 0, 0, 0.467);
+	position: absolute;
+	left: 42px;
+	right: 42px;
+	top: 22px;
+	height: 77px;
+	left: 60px;
+	right: 60px;
+	z-index: 5;
+}
+
 .mpl-icon-slider {
 	width: 100%;
 	height: 100%;
 	z-index: 2;
+	pointer-events: none;
 
 	.slick {
 		&-slide {
@@ -797,6 +848,7 @@
 			margin-right: -2px;
 		}
 	}
+
 	&__slide {
 		border-radius: 10px;
 		overflow: hidden;

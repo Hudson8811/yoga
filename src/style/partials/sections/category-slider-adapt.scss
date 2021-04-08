@@ -7,7 +7,7 @@
             width: 100%;
         }
         &__title {
-           
+
             margin-bottom: 17px;
         }
     }
@@ -37,7 +37,7 @@
         }
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {//767 было
     .section-category-slider {
         padding-top: vw(18);
         padding-bottom: vw(55);
@@ -46,7 +46,7 @@
             width: 100%;
         }
         &__title {
-           
+
             margin-bottom: vw(10);
         }
     }

@@ -14,7 +14,7 @@ block main
 		.home-slider.js-home-slider
 			.home-slider-slide
 				picture
-					source(srcset="img/front-slider-mob.jpg", media="(max-width: 767px)")
+					source(srcset="img/front-slider-mob.jpg", media="(max-width: 749px)")
 					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
 				.hms-info
 					.hms-info__top
@@ -22,9 +22,12 @@ block main
 					.hms-info__bottom
 						.hms-info__area Москва
 						.hms-info__date 20 февраля 2021
+					a.hms-info-btn(href="")
+						span.hms-info-btn__desk Зарегистрироваться
+						span.hms-info-btn__mob Регистрация
 			.home-slider-slide
 				picture
-					source(srcset="img/hmlearn2.jpg", media="(max-width: 767px)")
+					source(srcset="img/hmlearn2.jpg", media="(max-width: 749px)")
 					img.hms-pic(src="img/hmlearn2.jpg", alt="")
 				.hms-info
 					.hms-info__top
@@ -32,9 +35,12 @@ block main
 					.hms-info__bottom
 						.hms-info__area Ростов-на-Дону
 						.hms-info__date 35 марта 2022
+					a.hms-info-btn(href="")
+						span.hms-info-btn__desk Зарегистрироваться
+						span.hms-info-btn__mob Регистрация
 			.home-slider-slide
 				picture
-					source(srcset="img/front-slider-mob.jpg", media="(max-width: 767px)")
+					source(srcset="img/front-slider-mob.jpg", media="(max-width: 749px)")
 					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
 				.hms-info
 					.hms-info__top
@@ -42,6 +48,9 @@ block main
 					.hms-info__bottom
 						.hms-info__area Новосибирск
 						.hms-info__date 40 апреля 2023
+					a.hms-info-btn(href="")
+						span.hms-info-btn__desk Зарегистрироваться
+						span.hms-info-btn__mob Регистрация
 	section.section-home-quote
 		.container
 			.hm-quote
@@ -70,7 +79,7 @@ block main
 								.hm-events-slide__pic
 									img(src="img/events/3.jpg", alt="")
 								.hm-events-slide__text
-									.hm-events-slide__name Семинар Имрам Крийя
+									.hm-events-slide__name Всемирная медитация
 									.hm-events-slide__meta
 										.hm-events-slide__area Москва
 										.hm-events-slide__date 20 февраля 2021
@@ -148,7 +157,7 @@ block main
 
 						section.banner.section-hmlearn
 							picture.banner__picture
-								source.banner__source(srcset="img/hmlearn.jpg" media="(max-width: 767px)")
+								source.banner__source(srcset="img/hmlearn.jpg" media="(max-width: 749px)")
 								img(src="img/hmlearn.jpg")
 							.banner__content
 								.banner__title Обучение
@@ -179,7 +188,7 @@ block main
 
 						section.banner.section-hmlearn2
 							picture.banner__picture
-								source.banner__source(srcset="img/hmlearn2-mob.jpg" media="(max-width: 767px)")
+								source.banner__source(srcset="img/hmlearn2-mob.jpg" media="(max-width: 749px)")
 								img(src="img/hmlearn2.jpg")
 							.banner__content
 								.banner__title Записи мероприятий
@@ -358,8 +367,9 @@ block main
 
 									.amplitude-prev.music-player-top__arrow.music-player-top__arrow--prev <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.198386 5.09361L5.01368 0.174351C5.10792 0.0775861 5.23201 0.0170888 5.36492 0.00311083C5.49784 -0.0108662 5.63139 0.0225372 5.74295 0.0976591L5.82874 0.174351L5.90382 0.261999C5.96652 0.357615 6 0.470111 6 0.585202C6 0.700294 5.96652 0.812789 5.90382 0.908404L5.82874 0.996053C5.8054 1.02717 5.77624 1.05324 5.74295 1.07274L1.81778 5.09361C1.71038 5.20439 1.65012 5.35401 1.65012 5.50994C1.65012 5.66586 1.71038 5.81548 1.81778 5.92626L5.74295 9.96904L5.82874 10.0457C5.90441 10.1442 5.94554 10.2657 5.94554 10.3908C5.94554 10.516 5.90441 10.6375 5.82874 10.736L5.75367 10.8236L5.66788 10.9003C5.57264 10.9653 5.46068 11 5.34614 11C5.2316 11 5.11964 10.9653 5.02441 10.9003L4.93861 10.8236L0.52012 6.32068L0.123315 5.90435C0.0318246 5.7851 -0.0113926 5.63453 0.00257493 5.48368C0.0165425 5.33284 0.0866294 5.19322 0.198386 5.09361Z" fill="#25378D"/></svg>
 
-
+								#music-player__swipe-area.music-player__swipe-area
 								.music-player-center
+
 									.music-player__album-art
 										#mpl-icon-slider.mpl-icon-slider
 										//img(data-amplitude-song-info='cover_art_url')

@@ -1,4 +1,9 @@
-@media screen and (max-width:1650px) and (min-width:1151px) {
+@media screen and (max-width:1620px) and (min-width:1551px) {
+	.sh-center{
+		padding-left: 0;
+	}
+}
+@media screen and (max-width:1550px) and (min-width:1151px) {
 	.sh-burger-wrap::after {
 		margin-left: 11px;
 	}
@@ -183,10 +188,13 @@
 		}
 	}
 
+
+
+	.sfoo-list__item, .sfoo-bottom, .sfoo-bottom-menu__item {color: $darktm;}
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {//767 было
 
 	.sh-burger {
 		width: 16px;

@@ -6,11 +6,17 @@
 
 @media screen and (max-width: 1150px) {
 
-	.music-player-wrap{
+	.music-player-wrap {
 		margin-bottom: 57px;
 
 	}
 
+	.music-player__swipe-area{
+		top: 36px;
+		height: 100px;
+		left: 47px;
+		right: 47px;
+	}
 	.music-player {
 		margin: 0 auto;
 		margin-bottom: 0;
@@ -23,6 +29,7 @@
 
 		&__song-name {
 			margin-top: 20px;
+			color: $darktm;
 		}
 
 		&__song-artist {
@@ -68,7 +75,8 @@
 			}
 		}
 	}
-	.music-player__playlist-container{
+
+	.music-player__playlist-container {
 		position: relative;
 		top: auto;
 		left: auto;
@@ -79,10 +87,19 @@
 }
 
 
-@media screen and (max-width: 767px) {
-	.music-player-wrap{
+@media screen and (max-width: 749px) {
+
+	//767 было
+	.music-player-wrap {
 		margin-bottom: vw(94);
 
+	}
+
+	.music-player__swipe-area{
+		top: vw(36);
+		height: vw(114);
+		left: vw(34);
+		right: vw(34);
 	}
 	.music-player {
 		margin: 0 auto;
@@ -210,13 +227,14 @@
 		}
 	}
 
-	.music-player__playlist-container{
+	.music-player__playlist-container {
 		position: relative;
 		top: auto;
 		left: auto;
 		right: auto;
 		bottom: auto;
-		padding-top: 6px; ;
+		padding-top: 6px;
+		;
 		background: #ffffff;
 	}
 

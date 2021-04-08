@@ -75,8 +75,8 @@ $(document).ready(function () {
 		accessibility: false
 	});
 
-	$('#mpl-icon-slider').on('afterChange', function(event, slick, currentSlide){
-		Amplitude.playSongAtIndex(currentSlide);
+	$('#mpl-icon-slider').on('afterChange', function (event, slick, currentSlide) {
+		//Amplitude.playSongAtIndex(currentSlide);
 	});
 
 	var soundRS = $('.js-song-progress-slider').rangeslider({
@@ -119,8 +119,8 @@ $(document).ready(function () {
 	}
 
 
-	function updateCustomDuration(i){
-		var dur=my_songs[i]['meta_duration'].split(':');
+	function updateCustomDuration(i) {
+		var dur = my_songs[i]['meta_duration'].split(':');
 
 		$('#amplitude-custom-duration-minutes').html(dur[0]);
 		$('#amplitude-custom-duration-seconds').html(dur[1]);
@@ -137,7 +137,7 @@ $(document).ready(function () {
 				soundRS__fill.css('width', w / 100 * percentage + 'px');
 				soundRS__handle.css('left', 'calc(' + percentage + '% - 0px)');
 
-				$('#amplitude-custom-current-minutes').html(Math.floor(Amplitude.getSongPlayedSeconds()/60).toString());
+				$('#amplitude-custom-current-minutes').html(Math.floor(Amplitude.getSongPlayedSeconds() / 60).toString());
 			},
 			initialized: function () {
 				changeOrigLink();
@@ -226,16 +226,14 @@ $(document).ready(function () {
 		if ($(e.target).closest('.musicpl-bottom-controls__volume').length > 0) {
 			// клик внутри элемента
 			//return;
-		}
-		else{
+		} else {
 			$('.musicpl-bottom-controls__volume').removeClass('musicpl-bottom-controls__volume--active');
 		}
 
 		if ($(e.target).closest('#music-player__playlist,#music-player__playlist-container-2, .musicpl-bottom-controls__playlist').length > 0) {
 			// клик внутри элемента
 			//return;
-		}
-		else{
+		} else {
 			//console.log('close2');
 			$("#music-player__playlist-container-2").slideUp(500);
 			$("#music-player__playlist-container-2").removeClass('music-player__playlist-container-2--show-line');
@@ -257,6 +255,12 @@ $(document).ready(function () {
 		mpVolumeRS_inp.rangeslider('update', true);
 	}, 2000);
 
+	$('#music-player__swipe-area').on("swipeleft", function (event) {
+		Amplitude.next();
+	});
+	$('#music-player__swipe-area').on("swiperight", function (event) {
+		Amplitude.prev();
+	});
 
 	$('.musicpl-bottom-controls__playlist').click(function () {
 		if (!$("#music-player").hasClass('music-player--playlist-on')) {

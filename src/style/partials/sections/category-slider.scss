@@ -1,6 +1,6 @@
 .section-category-slider {
-	padding-top: 42px;
-	padding-bottom: 103px;
+    padding-top: 42px;
+    padding-bottom: 58px;
 
 	&__container {
 		max-width: 100%;
@@ -8,20 +8,20 @@
 
 	&__title {
 		margin-left: -3px;
-
-		margin-bottom: 35px;
+		margin-bottom: 17px;
 	}
 }
 
 .category-slider {
 	margin-left: -1px;
+	padding-right: 4px;
 
 	.slick-list {
-		margin: 0 -18px ;
+	//	margin: 0 -18px ;
 	}
 
 	.slick-dots {
-		margin-top: 30px;
+		margin-top: 36px;
 	}
 }
 

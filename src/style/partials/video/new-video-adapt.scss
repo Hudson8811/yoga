@@ -9,25 +9,25 @@
             &__header {
                 margin-bottom: 14px;
             }
-            
+
             &__title {
                 letter-spacing: -.03em;
                 margin-bottom: 17px;
             }
-            
+
             &__link-more {
                 margin-top: -8px;
             }
-            
+
             &__slider {
                 margin: -18px;
             }
-            
+
             &__slider-card {
                 padding: 18px;
                 width: calc(403px + 18px * 2);
             }
-            
+
             &__card-img-wrapper {
                 max-width: 403px;
                 position: relative;
@@ -38,32 +38,32 @@
                     padding-top: 61.5%;
                 }
             }
-        
+
             &__card-img {
             }
-            
+
             &__card-title {
                 margin-bottom: 11px;
             }
-            
+
             &__theme-wrapper {
                 margin-bottom: 12px;
             }
-            
+
             &__theme-link {
-                
+
             }
-            
+
             &__theme-date {
             }
-            
+
             &__theme-icon {
                 width: 12px;
                 height: 12px;
             }
-            
+
             &__desc {
-              
+
             }
             .slick-dots {
                 display: none!important;
@@ -71,7 +71,7 @@
         }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 749px) {//767 было
     .new-video {
         padding-top: vw(43);
         padding-bottom: vw(41);
@@ -82,27 +82,27 @@
             &__header {
                 margin-bottom: vw(7);
             }
-            
+
             &__title {
                 letter-spacing: normal;
                 margin-bottom: 0px;
             }
-            
+
             &__link-more {
                 margin-top: vw(5);
                 font-size: vw(13);
                 line-height: vw(16);
             }
-            
+
             &__slider {
                 margin: vw(-9);
             }
-            
+
             &__slider-card {
                 padding: vw(9);
                 width: vw(266);
             }
-            
+
             &__card-img-wrapper {
                 max-width: vw(266);
                 position: relative;
@@ -113,32 +113,32 @@
                     padding-top: 165/266 * 100%;
                 }
             }
-        
+
             &__card-img {
             }
-            
+
             &__card-title {
                 margin-bottom: vw(11);
             }
-            
+
             &__theme-wrapper {
                 margin-bottom: vw(12);
             }
-            
+
             &__theme-link {
-                
+
             }
-            
+
             &__theme-date {
             }
-            
+
             &__theme-icon {
                 width: vw(12);
                 height: vw(12);
             }
-            
+
             &__desc {
-              
+
             }
             .slick-dots {
                 display: none!important;

@@ -172,9 +172,10 @@
 	position: absolute;
 	left: 103px;
 	//bottom: 81px;
-	bottom: 88px;
+	bottom: 93px;
+
 	z-index: 4;
-	transition: opacity .5s ease-out 0.3s, transform .6s ease-out 0.3s;
+	transition: opacity 0.8s ease-out 0.6s, transform 1s ease-out 0.6s;
 	opacity: 0;
 	transform: translate(50%, 0);
 
@@ -212,6 +213,30 @@
 	}
 }
 
+.hms-info-btn {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 200px;
+	width: 282px;
+	max-width: 100%;
+	padding: 15px 20px;
+	margin-top: 31px;
+
+}
 
 .section-home-quote {
 	padding-top: 139px;
@@ -233,7 +258,7 @@ body {
 		line-height: 59px;
 		text-align: center;
 		letter-spacing: -1.73px;
-		color: #3E434D;
+		color: $dark;
 
 		&::after {
 			content: '';
@@ -248,7 +273,7 @@ body {
 		font-size: 17px;
 		line-height: 33px;
 		text-align: center;
-		color: #53565A;
+		color: $dark;
 		margin-left: 30px;
 		letter-spacing: -0.04px;
 		margin-top: 35px;
@@ -259,7 +284,7 @@ body {
 		font-size: 17px;
 		line-height: 21px;
 		text-align: center;
-		color: #53565A;
+		color: #AFB4BF;
 		margin-top: 43px;
 		padding-left: 28px;
 	}
@@ -436,7 +461,7 @@ body {
 		font-weight: normal;
 		font-size: 28px;
 		line-height: 1.25;
-		color: #3E434D;
+		color: $dark;
 		margin-top: 15px;
 	}
 
@@ -474,7 +499,7 @@ body {
 		font-size: 17px;
 		line-height: 29px;
 		margin-top: 8px;
-		color: #53565A;
+		color: $dark;
 	}
 
 }
@@ -650,7 +675,7 @@ body {
 
 	&__text {
 		font-family: "Proxima Nova";
-		color: #53565A;
+		color: $dark;
 		padding-top: 20px;
 		max-width: 470px;
 	}
@@ -660,7 +685,7 @@ body {
 		line-height: 59px;
 		letter-spacing: -0.03em;
 		margin-bottom: 12px;
-		color: #3E434D;
+		color: $dark;
 
 	}
 
@@ -668,14 +693,14 @@ body {
 		font-size: 22px;
 		line-height: 30px;
 		margin-bottom: 3px;
-		color: #53565A;
+		color: $dark;
 	}
 
 	&__main {
 		font-size: 17px;
 		line-height: 30px;
 		margin-bottom: 13px;
-		color: #5A5E64;
+		color: $dark;
 	}
 
 	&__read-more {
@@ -758,7 +783,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		color: #3E434D;
+		color: $dark;
 	}
 
 
@@ -871,28 +896,28 @@ body {
 	padding-top: 15px;
 	max-width: 403px;
 	font-family: "Proxima Nova";
-	color: #3E434D;
+	color: $dark;
 
 	&__title {
 		font-size: 35px;
 		line-height: 35px;
 		letter-spacing: -0.03em;
 		margin-bottom: 20px;
-		color: #3E434D;
+		color: $dark;
 	}
 
 	&__title2 {
 		font-size: 22px;
 		line-height: 36px;
 		margin-bottom: 1px;
-		color: #53565A;
+		color: $dark;
 	}
 
 	&__main {
 		font-size: 17px;
 		line-height: 29px;
 		margin-bottom: 13px;
-		color: #53565A;
+		color: $dark;
 
 		& span {
 			display: block;
@@ -905,7 +930,7 @@ body {
 .section-hmlearn {
 	padding-top: 400/842 * 100%;
 	position: relative;
-	color: #3E434D;
+	color: $dark;
 
 }
 
@@ -937,16 +962,16 @@ body {
 			height: 100%;
 		}
 
-		@media screen and (min-width:$minDesktop) {
-			&:hover {
-				-webkit-transform: scale(1.07);
-				transform: scale(1.07);
-			}
-		}
 
 		//@include scalepic();
 	}
 
+	@media screen and (min-width:$minDesktop) {
+		&:hover .banner__picture {
+			-webkit-transform: scale(1.07);
+			transform: scale(1.07);
+		}
+	}
 
 	&__content {
 		position: absolute;
@@ -961,14 +986,14 @@ body {
 		font-size: 35px;
 		line-height: 35px;
 		letter-spacing: -0.03em;
-		color: #3E434D;
+		color: $dark;
 	}
 
 	&__title2 {
 		margin-bottom: 27px;
 		font-size: 22px;
 		line-height: 36px;
-		color: #53565A;
+		color: $dark;
 	}
 
 	&__more {
@@ -1023,20 +1048,20 @@ body {
 		background-position: 50% 48.3%;
 	}
 
-	&__content {
+	&__content {}
 
-	}
-	.quote-slide{
+	.quote-slide {
 		padding-top: 80px;
 		padding-bottom: 149px;
 
 	}
+
 	&__main {
 		font-family: "Savoye LET";
 		font-size: 45px;
 		line-height: 59px;
 		text-align: center;
-		color: #3E434D;
+		color: $dark;
 		margin-right: 7px;
 		margin-bottom: 32px;
 	}
@@ -1048,7 +1073,7 @@ body {
 		font-size: 17px;
 		line-height: 21px;
 		text-align: center;
-		color: #53565A;
+		color: #AFB4BF;
 	}
 }
 
@@ -1197,7 +1222,7 @@ body {
 	&__text {
 		padding-top: 19px;
 
-		color: #53565A;
+		color: $dark;
 
 		&-title {
 			font-family: "Proxima Nova";
@@ -1205,7 +1230,7 @@ body {
 			line-height: 59px;
 			letter-spacing: -0.037em;
 			margin-bottom: 10px;
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&-out {
@@ -1442,7 +1467,7 @@ body {
 			font-size: 13px;
 			line-height: 21px;
 			margin-top: -11px;
-			color: #000000;
+			color: $dark;
 			z-index: 10;
 			transition: all ease .3s;
 		}
@@ -1508,7 +1533,7 @@ body {
 		font-size: 13px;
 		line-height: 30px;
 		text-transform: uppercase;
-		color: #3E434D;
+		color: $dark;
 		position: relative;
 		padding-bottom: 6px;
 		margin-bottom: 22px;
@@ -1600,7 +1625,7 @@ body {
 	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
-	color: #3E434D;
+	color: $dark;
 	padding-bottom: 34px;
 	display: block;
 	position: relative;
@@ -1707,7 +1732,7 @@ body {
 		line-height: 1;
 		text-align: center;
 		text-transform: uppercase;
-		color: #3E434D;
+		color: $dark;
 	}
 
 	&__description {
@@ -1717,7 +1742,7 @@ body {
 		line-height: 21px;
 		margin-top: 15px;
 		text-align: center;
-		color: #3E434D;
+		color: $dark;
 		margin-top: 15px;
 	}
 
@@ -1799,7 +1824,7 @@ input.email-cinp {
 
 .slnewsw-slider-item {
 
-	color: #53565A;
+	color: $dark;
 
 	&__pic {
 		padding-bottom: 61.6541%;
@@ -1826,7 +1851,7 @@ input.email-cinp {
 		line-height: 29px;
 		text-align: center;
 		margin-top: 13px;
-		color: #53565A;
+		color: $dark;
 	}
 
 	@include hov();
@@ -1923,7 +1948,7 @@ input.email-cinp {
 		font-size: 17px;
 		line-height: 29px;
 		text-align: center;
-		color: #53565A;
+		color: $dark;
 		position: relative;
 
 	}
@@ -2019,7 +2044,7 @@ input.email-cinp {
 	line-height: 1;
 	text-align: center;
 	text-transform: uppercase;
-	color: #53565A;
+	color: $dark;
 	padding: 9px 22px 9px;
 
 }

@@ -61,7 +61,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	color: #53565A;
+	color: $dark;
 	background: #ffffff;
 	font-family: $mainFont;
 	font-size: 16px;
@@ -103,7 +103,7 @@ body {
 //планшетный вид нам адаптировать не приходится
 
 
-@media screen and (max-width: 767px ){//на 767 начинается мобилка. её делаем как на смм. Только в данном случае под 360
+@media screen and (max-width: 749px ){//на 767 начинается мобилка. её делаем как на смм. Только в данном случае под 360
 	.container{//если где-то нужен другой контейнер - там прописывай его ширну доп классом
 		width: vw(333);
 		max-width: calc(100% - #{vw(14)} * 2);
@@ -173,4 +173,8 @@ ul li, ol li {
 
 .oh-wrap{
 	overflow: hidden;
+}
+
+.ui-loader.ui-corner-all.ui-loader-default.ui-body-a{
+	display: none !important;
 }
