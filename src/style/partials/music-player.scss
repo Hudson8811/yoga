@@ -290,6 +290,9 @@
 
 	&--playlist {
 		margin: 0;
+		width: 28px;
+		min-width: 28px;
+		height: 28px;
 	}
 }
 
@@ -647,49 +650,82 @@
 	overflow: hidden;*/
 }
 
-.music-player__playlist {
-	padding: 23px 18px 10px;
+.music-player__playlist-inner {
+	overflow: scroll;
+	overflow-x: auto;
 	position: relative;
-	background: #ffffff;
-	pointer-events: none;
-	//opacity: 0;
-	transition: all 0.4s ease-in-out;
-	/*overflow: scroll;
-	overflow-x: auto;*/
+	max-height: 242px;
+	padding-right: 12px;
 
 	&::-webkit-scrollbar {
 		/* 1 - скроллбар */
-		width: 4px;
-		height: 4px;
-		background-color: red;
+		background: #ffffff;
+		background: transparent;
+		background: rgba(255, 255, 255, 0);
+		width: 3px;
 	}
 
 	&::-webkit-scrollbar-button {
 		/* 2 - кнопка */
+		display: none;
+		background: #ffffff;
+		background: transparent;
+		background: rgba(255, 255, 255, 0);
 
 	}
 
 	&::-webkit-scrollbar-track {
 		/* 3 - трек */
+		display: none;
+		background: #ffffff;
+		background: transparent;
+		background: rgba(255, 255, 255, 0);
 	}
 
 	&::-webkit-scrollbar-track-piece {
 		/* 4 - видимая часть трека */
+		display: none;
+		background: #ffffff;
+		background: transparent;
+		background: rgba(255, 255, 255, 0);
 	}
 
 	&::-webkit-scrollbar-thumb {
 		/* 5 - ползунок */
-		border-radius: 2px;
-		background-color: #d1d1d1;
+
+		background: #D9DBDE;
+		border-radius: 5px;
+		width: 3px;
 	}
 
 	&::-webkit-scrollbar-corner {
 		/* 6 - уголок */
+		display: none;
+		background: #ffffff;
+		background: transparent;
+		background: rgba(255, 255, 255, 0);
 	}
 
 	&::-webkit-resizer {
 		/* 7 - изменение размеров */
+		display: none;
+		background: #ffffff;
+		background: transparent;
+		background: rgba(255, 255, 255, 0);
 	}
+}
+
+.music-player__playlist {
+    padding: 26px 5px 50px 18px;
+
+	position: relative;
+	background: #ffffff;
+	pointer-events: none;
+	//opacity: 0;
+	transition: all 0.4s ease-in-out;
+
+
+
 }
 
 
@@ -720,11 +756,37 @@
 		}
 	}
 
-	.music-player-mainctrl--playlist {}
+	&:not(.amplitude-playing) {
+		.music-player-mainctrl--playlist {
+			border-color: #AFB4BF;
+
+			svg path {
+				fill: #AFB4BF;
+			}
+		}
+	}
+
 
 
 	&--visible {
 		opacity: 1;
+	}
+
+	&--pseudo {
+		.music-player-mainctrl--playlist {
+			border-color: #D9DBDE !important;
+
+			svg path {
+				fill: #D9DBDE !important;
+			}
+		}
+
+		color: #D9DBDE !important;
+
+		.custom-audio-playlist__duration,
+		.custom-audio-playlist__duration {
+			color: #D9DBDE !important;
+		}
 	}
 
 	&:nth-child(1) {
@@ -771,7 +833,7 @@
 	.custom-audio-playlist__song {
 		flex-grow: 1;
 		text-align: left;
-		padding: 9px 10px;
+		padding: 9px 10px 9px 15px;
 		display: block;
 		font-style: normal;
 		font-weight: normal;
@@ -800,7 +862,7 @@
 	}
 
 	&+.musicpl-playlist-item {
-		margin-top: 12px;
+		margin-top: 9px;
 	}
 
 }

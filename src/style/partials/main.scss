@@ -93,7 +93,7 @@ body {
 @media screen and (max-width: 1150px){//тут начинается планшетный вид
 	.container{
 		width: 582px;
-		max-width: calc(100% - 36px * 2);
+		max-width: calc(100% - 25px * 2);
 	}
 	.container--long{//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
 		width: 697px;

@@ -164,7 +164,7 @@
 .home-slider-slide.slick-active {
 	.hms-info {
 		opacity: 1;
-		transform: translate(0, 0);
+		//transform: translate(0, 0);
 	}
 }
 
@@ -177,7 +177,7 @@
 	z-index: 4;
 	transition: opacity 0.8s ease-out 0.6s, transform 1s ease-out 0.6s;
 	opacity: 0;
-	transform: translate(50%, 0);
+	//transform: translate(50%, 0);
 
 	&__top {}
 

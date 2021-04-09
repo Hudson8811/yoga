@@ -53,7 +53,7 @@
 	//тут начинается планшетный вид
 	.container {
 		width: 582px;
-		max-width: calc(100% - 36px * 2);
+		max-width: calc(100% - 25px * 2);
 	}
 
 	.container--long {
@@ -72,7 +72,7 @@
 
 	.container--extra-long {
 		width: 696px;
-		max-width: calc(100% - 35px * 2);
+		max-width: calc(100% - 25px * 2);
 	}
 
 	.part-wsidebar {
@@ -1093,7 +1093,7 @@
 }
 
 
-@media screen and (max-width: 1150px) and (min-width: 768px) {
+@media screen and (max-width: 1150px) and (min-width: 750px) {
 	.part-wsidebar__sidebar {
 		display: block;
 		width: 100%;
@@ -1107,7 +1107,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 750px) {
 	.hm-quote-practice__img {
 		display: none;
 	}
