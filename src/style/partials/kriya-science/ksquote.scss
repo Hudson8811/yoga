@@ -1,0 +1,30 @@
+.ksquote {
+	padding: 85px 0 83px;
+}
+
+.ksquote-content {
+	&__title {
+		font-family: 'Savoye LET';
+		font-size: 58px;
+		line-height: 59px;
+		text-align: center;
+		letter-spacing: -0.03em;
+
+
+		color: #53565A;
+	}
+
+	&__description {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		/* or 176% */
+
+		text-align: center;
+
+		color: #5A5E64;
+
+		margin: 37px auto 0;
+	}
+}

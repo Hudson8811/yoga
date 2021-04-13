@@ -1,8 +1,9 @@
 @media screen and (max-width:1620px) and (min-width:1551px) {
-	.sh-center{
+	.sh-center {
 		padding-left: 0;
 	}
 }
+
 @media screen and (max-width:1550px) and (min-width:1151px) {
 	.sh-burger-wrap::after {
 		margin-left: 11px;
@@ -63,9 +64,33 @@
 }
 
 */
-@media screen and (max-width:1305px) {
-	.sh-menu {
-		display: none;
+@media screen and (max-width:1305px) and (min-width:1151px) {
+	.sh-right .sh-socials {
+		&::before {
+			display: none;
+		}
+
+		&::after {
+			margin-left: 22px;
+			margin-right: 11px;
+		}
+
+		.ssocials {
+			display: none;
+
+		}
+	}
+
+	.sh-right {
+		margin-left: 3%;
+	}
+
+	.sh-authorize__link {
+		padding-right: 13px;
+	}
+
+	.sh-logo {
+		margin-right: 10px;
 	}
 }
 
@@ -89,12 +114,19 @@
 
 //начало планшета
 @media screen and (max-width:1150px) {
+
+	.sh-menu {
+		display: none;
+	}
+
 	.site-header {
 		&+* {
 			margin-top: 61px;
 		}
 	}
-
+	.sh-right{
+		margin-top: -2px;
+	}
 	.site-header__inner {
 		min-height: 61px;
 		width: 100%;
@@ -103,12 +135,17 @@
 	}
 
 	.sh-authorize__link {
-		padding: 10px 14px;
-		padding: 10px 12px;
-		@include hov();
+		padding: 11px 12px 10px;
+		cursor: pointer;
+		//@include hov();
 
 		span {
 			display: none;
+		}
+
+		svg {
+			width: 11px;
+			height: 13px;
 		}
 	}
 
@@ -190,11 +227,16 @@
 
 
 
-	.sfoo-list__item, .sfoo-bottom, .sfoo-bottom-menu__item {color: $darktm;}
+	.sfoo-list__item,
+	.sfoo-bottom,
+	.sfoo-bottom-menu__item {
+		color: $darktm;
+	}
 }
 
 
-@media screen and (max-width: 749px) {//767 было
+@media screen and (max-width: 749px) {
+	//767 было
 
 	.sh-burger {
 		width: 16px;
@@ -255,10 +297,10 @@
 	}
 
 	.sh-authorize__link {
-		padding: 13px 12px 10px;
+		padding: 14px 12px 9px;
 
 		svg {
-			width: 10px;
+			width: 11px;
 			display: block;
 		}
 	}

@@ -51,15 +51,15 @@
 
 		.music-player-top__arrow {
 			top: 75px;
-			width: 10px;
+			width: 11px;
 		}
 
 		.music-player-top__arrow--prev {
-			left: 25px;
+			left: 24px;
 		}
 
 		.music-player-top__arrow--next {
-			right: 25px;
+			right: 24px;
 		}
 
 		.music-player-top__next,
@@ -99,8 +99,8 @@
 	.music-player__swipe-area {
 		top: vw(36);
 		height: vw(114);
-		left: vw(72);
-		right: vw(72);
+		left: vw(52);
+		right: vw(52);
 	}
 
 	.music-player {
@@ -184,17 +184,17 @@
 		}
 
 		.music-player-top__arrow--prev {
-			left: vw(50);
+			left: vw(27);
 		}
 
 		.music-player-top__arrow--next {
-			right: vw(50);
+			right: vw(27);
 		}
 
 		.music-player-top__arrow {
 			position: absolute;
-			top: vw(82);
-			width: vw(10);
+			top: vw(74);
+			width: vw(11);
 			height: vw(28);
 			cursor: pointer;
 		}

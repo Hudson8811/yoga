@@ -1,0 +1,310 @@
+.ks-post-constructor {
+    padding: 45px 0 58px;
+}
+
+.kspc-h1-block {}
+
+.kspc-h1 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 45px;
+	line-height: 1.31;
+
+	letter-spacing: -0.03em;
+
+	color: #53565A;
+	margin-left: -3px;
+}
+
+
+
+.kspc-slider-block {
+	margin-top: 21px;
+	position: relative;
+
+	&:hover {
+		.kspc-slider-arrow {
+			opacity: 1;
+		}
+	}
+
+	&+.kspc-simple-text--with-hide {
+		margin-top: 47px;
+	}
+}
+
+.kspc-slider {
+	width: 100%;
+
+	.slick-list {
+		margin: 0 -7px;
+	}
+}
+
+.kspc-slider-arrow {
+	top: 50%;
+	margin-top: -11px;
+}
+
+.kspc-slider-item {
+	margin: 0 7px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+
+	&__img {
+		@include relative_img();
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		padding-top: 61.758%;
+	}
+
+	@include scalepic();
+}
+
+
+
+
+.kspc-simple-text {
+	margin-top: 42px;
+
+	&__h2 {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		line-height: 1.69;
+		letter-spacing: -.034em;
+		color: #53565A;
+		//margin-left: -3px;
+	}
+
+	&__p {
+		margin-top: 9px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		color: #5A5E64;
+		//letter-spacing: -.05px;
+
+		p {
+			&+p {
+				margin-top: 30px;
+			}
+		}
+
+		b {
+			letter-spacing: -.13px;
+		}
+	}
+
+	&+.kspc-simple-text {
+		margin-top: 67px;
+	}
+
+	&+.kspc-slider-block {
+		margin-top: 27px;
+	}
+
+	&--with-hide {
+		.kspc-simple-text__p {
+			max-height: 150px;
+			height: auto;
+			overflow: hidden;
+			transition: max-height 20s linear, height 20s linear;
+			position: relative;
+
+		}
+
+		.kspc-twpah-unwrap {
+			top: 120px;
+			right: 0;
+			padding-right: 43px;
+		}
+
+		&+.kspc-simple-text {
+			margin-top: 61px !important;
+		}
+
+	}
+
+	&--open {
+
+		.kspc-simple-text__p {
+			max-height: 10000px;
+		}
+	}
+}
+
+
+
+.kspc-text-with-pic-and-hide {
+	margin-top: 41px;
+
+	&+.kspc-simple-text {
+		margin-top: 54px;
+	}
+}
+
+.kspc-twpah {
+	max-height: 420px; //(14 строк по 30px)
+	height: auto;
+	overflow: hidden;
+	transition: max-height 20s linear, height 20s linear;
+	position: relative;
+
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 30px;
+	color: #5A5E64;
+
+	&--open {
+		max-height: 10000px;
+	}
+	&--non-hide{
+		max-height: unset;
+		.kspc-twpah-unwrap{
+			display: none;
+		}
+	}
+
+	&__text {
+
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&+p {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	&__pic {
+		display: block;
+		position: relative;
+		width: calc(50% - 20px);
+		border-radius: 5px;
+		overflow: hidden;
+
+		margin-top: 0;
+		margin-bottom: 58px;
+
+		img {
+			@include relative_img();
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+		@include scalepic();
+	}
+
+	&--pic-left {
+		.kspc-twpah__pic {
+			float: left;
+			margin-right: 38px;
+		}
+
+		.kspc-twpah-unwrap {
+			right: 0;
+			padding-right: 22px;
+		}
+	}
+
+	&--pic-right {
+		.kspc-twpah__pic {
+			float: right;
+			margin-left: 60px;
+		}
+	}
+
+	/*&__delimiter {
+		width: 100%;
+		float: right;
+		height: 45px;
+		background: red;
+	}
+*/
+
+
+}
+
+.kspc-twpah-unwrap {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	right: calc(50% + 20px);
+	top: 390px; //420-30
+	background: #ffffff;
+	padding-right: 39px;
+	transition: all .4s ease;
+	opacity: 1;
+
+	&__dots {}
+
+	&__text {
+		color: #AFB4BF;
+	}
+
+	&--hide {
+		opacity: 0;
+		cursor: unset;
+		pointer-events: none;
+	}
+}
+
+
+
+.quote-with-parallax {
+	margin-top: 83px;
+
+	&+.kspc-simple-text {
+		margin-top: 76px;
+	}
+}
+
+.quote-with-parallax-quote {
+	padding: 111px 0 112px;
+	font-family: 'Savoye LET';
+	font-size: 45px;
+	line-height: 59px;
+	text-align: center;
+	color: #53565A;
+	margin-left: -24px;
+}
+
+
+.kspc-quote-right {
+	margin-top: 74px;
+}
+
+.kspc-quote-right {
+
+	&__text {
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 58px;
+		font-style: italic;
+		font-weight: normal;
+		font-size: 22px;
+		line-height: 36px;
+		/* or 164% */
+
+
+		color: #5A5E64;
+	}
+
+	&+* {
+		margin-top: 69px;
+	}
+}

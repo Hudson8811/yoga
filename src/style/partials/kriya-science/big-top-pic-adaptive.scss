@@ -1,0 +1,22 @@
+//начало планшета
+@media screen and (max-width:1150px) {
+	.big-top-pic {
+		&__container {}
+
+		&__relative {}
+
+		&__img {}
+	}
+}
+
+
+//начало мобилки 767 было
+@media screen and (max-width: 749px) {
+	.big-top-pic {
+		&__container {}
+
+		&__relative {}
+
+		&__img {}
+	}
+}

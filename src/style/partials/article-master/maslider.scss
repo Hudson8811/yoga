@@ -1,14 +1,22 @@
 .maslider-section {
-	border-top: 1px solid #C4C4C4;
+	//border-top: 1px solid #C4C4C4;
+	&:hover{
+		.maslider-arrow{
+			opacity: 1;
+		}
+	}
 }
 
 .maslider-slide {
 	max-width: 848px;
 	width: 100%;
-	padding: 5px 3px 5px;
+	padding: 0 3px 5px;
 	height: 400/842 * 100%;
 
-	&__inner {}
+	&__inner {
+		display: block;
+		width: 100%;
+	}
 }
 
 .maslider-slide__title {
@@ -71,6 +79,8 @@
 	border-radius: 50%;
 	z-index: 100;
 	cursor: pointer;
+	transition: all .4s ease;
+	opacity: 0;
 
 	&--prev {
 		left: 22px;

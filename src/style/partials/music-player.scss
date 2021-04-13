@@ -24,11 +24,12 @@
 .music-player-top__arrow {
 	position: absolute;
 	top: 42px;
-	width: 6px;
+	width: 11px;
 	box-sizing: content-box;
 	padding: 10px;
 	cursor: pointer;
 	cursor: pointer;
+	z-index: 6;
 
 	svg {
 		width: 100%;

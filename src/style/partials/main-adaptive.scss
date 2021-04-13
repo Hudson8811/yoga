@@ -1,3 +1,6 @@
+.hidden{
+	display: none;
+}
 @media screen and (min-width: 1151px) {//  >tablet
 	.container--disable-on-desktop {
 		width: 100% !important;
@@ -11,6 +14,9 @@
 	}
 	.hide--desktop{
 		display: none !important;
+	}
+	.display-d{
+		display: block;
 	}
 }
 
@@ -30,6 +36,9 @@
 	}
 	.hide--tablet{
 		display: none !important;
+	}
+	.display-t{
+		display: block;
 	}
 }
 
@@ -62,4 +71,8 @@
 	.mob-order--8{order:8;}
 	.mob-order--9{order:9;}
 	.mob-order--10{order:10;}
+
+	.display-m{
+		display: block;
+	}
 }

@@ -1,82 +1,82 @@
 my_songs = [{
-	"name": "Казачья",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAYA",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога.",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}
+		"name": "Казачья",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAYA",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога.",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}
 ];
 
 my_songs_pseudo = [{
-	"name": "Казачья",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	/*"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",*/
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAYA",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	/*"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",*/
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	/*"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",*/
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}, {
-	"name": "Казачья2",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	/*"url": "img/song/track2.mp3",
-	"cover_art_url": "img/mlinks/1.jpg",*/
-	"orig_link": "https://itunes.com/1.mp3",
-	"meta_duration": "2:55"
-}, {
-	"name": "ASATO MA SAT GAMAY2",
-	"artist": "Ever New Joy",
-	"album": "Album Name",
-	/*"url": "img/song/track1.mp3",
-	"cover_art_url": "img/track1-cover.jpg",*/
-	"orig_link": "https://itunes.com/2.mp3",
-	"meta_duration": "3:17"
-},
-{
-	"name": "Русская дорога2",
-	"artist": "Игорь растеряев",
-	"album": "Звонарь",
-	/*"url": "img/song/track3.mp3",
-	"cover_art_url": "img/mlinks/2.jpg",*/
-	"orig_link": "https://itunes.com/3.mp3",
-	"meta_duration": "3:00"
-}
+		"name": "Казачья",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		/*"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",*/
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAYA",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		/*"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",*/
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		/*"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",*/
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}, {
+		"name": "Казачья2",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		/*"url": "img/song/track2.mp3",
+		"cover_art_url": "img/mlinks/1.jpg",*/
+		"orig_link": "https://itunes.com/1.mp3",
+		"meta_duration": "2:55"
+	}, {
+		"name": "ASATO MA SAT GAMAY2",
+		"artist": "Ever New Joy",
+		"album": "Album Name",
+		/*"url": "img/song/track1.mp3",
+		"cover_art_url": "img/track1-cover.jpg",*/
+		"orig_link": "https://itunes.com/2.mp3",
+		"meta_duration": "3:17"
+	},
+	{
+		"name": "Русская дорога2",
+		"artist": "Игорь растеряев",
+		"album": "Звонарь",
+		/*"url": "img/song/track3.mp3",
+		"cover_art_url": "img/mlinks/2.jpg",*/
+		"orig_link": "https://itunes.com/3.mp3",
+		"meta_duration": "3:00"
+	}
 ];
 
 
@@ -245,6 +245,39 @@ $(document).ready(function () {
 		.on('input', function () {
 			Amplitude.setVolume(this.value);
 		});
+
+	var prevState = (window.matchMedia("(min-width: 1351px)").matches) ? 'hor' : 'vert';
+
+	$(window).on('resize', function (e) {
+		if (prevState !== ((window.matchMedia("(min-width: 1351px)").matches) ? 'hor' : 'vert')) {
+			prevState = ((window.matchMedia("(min-width: 1351px)").matches) ? 'hor' : 'vert');
+			mpVolumeRS_inp.rangeslider('destroy');
+			volume_orientation = (window.matchMedia("(min-width: 1351px)").matches) ? 'horizontal' : 'vertical';
+			$('.volumeRS-wrap').removeClass('volumeRS-wrap--horizontal').removeClass('volumeRS-wrap--vertical').addClass((window.matchMedia("(min-width: 1351px)").matches) ? 'volumeRS-wrap--horizontal' : 'volumeRS-wrap--vertical');
+			setTimeout(function () {
+				mpVolumeRS = mpVolumeRS_inp.rangeslider({
+						rangeClass: 'rangeslider volumeRS',
+						disabledClass: 'rangeslider--disabled volumeRS--disabled',
+						horizontalClass: 'rangeslider--horizontal volumeRS--horizontal',
+						verticalClass: 'rangeslider--vertical volumeRS--vertical',
+						fillClass: 'rangeslider__fill volumeRS__fill',
+						handleClass: 'rangeslider__handle volumeRS__handle',
+						orientation: volume_orientation,
+						polyfill: false,
+						onInit: function () {
+							//$(this).rangeslider('update', true);
+						}
+					})
+					.on('input', function () {
+						Amplitude.setVolume(this.value);
+					});
+			}, 250);
+		}
+
+
+
+	});
+
 
 
 	$('.musicpl-bottom-controls__volume').click(function () {

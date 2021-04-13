@@ -1,0 +1,24 @@
+//начало планшета
+@media screen and (max-width:1150px) {
+	.ksquote {}
+
+	.ksquote-content {
+		&__title {}
+
+		&__description {}
+	}
+
+}
+
+
+//начало мобилки 767 было
+@media screen and (max-width: 749px) {
+	.ksquote {}
+
+	.ksquote-content {
+		&__title {}
+
+		&__description {}
+	}
+
+}

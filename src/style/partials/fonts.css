@@ -139,9 +139,6 @@
 
 
 
-
-/*
-
 @font-face {
 	font-family: 'Proxima Nova';
 	src: url('../fonts/ProximaNova-RegularIt.woff2') format('woff2'),
@@ -150,6 +147,9 @@
 	font-style: italic;
 	font-display: swap;
 }
+
+
+/*
 
 @font-face {
 	font-family: 'Proxima Nova';
