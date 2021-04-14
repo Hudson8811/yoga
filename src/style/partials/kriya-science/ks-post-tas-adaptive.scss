@@ -1,8 +1,123 @@
 //начало планшета
 @media screen and (max-width:1150px) {
+	.kspc-tags-and-share {
+		margin-top: 52px;
+	}
+
+	.kspc-tas-flex {
+		display: block;
+	}
+
+	.kspc-tas-tags {
+		&__item {
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+		}
+	}
+
+	.kspc-tas-share {
+		margin-top: 36px;
+		padding-left: 0;
+
+		.share-tip__links {
+			.share-tip__link {
+				&--fb {}
+
+				&:hover {}
+
+				&:active {}
+
+				&:focus {}
+			}
+		}
+	}
 }
 
 
 //начало мобилки 767 было
 @media screen and (max-width: 749px) {
+	.kspc-tags-and-share {
+		margin-top: vw(50);
+	}
+
+	.kspc-tas-flex {}
+
+	.kspc-tas-tags {
+		margin-left: vw(-14);
+
+		&__item {
+			margin-bottom: vw(14);
+			margin-left: vw(14);
+
+			padding: vw(10) vw(21) vw(10) vw(22);
+			color: #53565a;
+			border-radius: vw(5);
+			font-size: vw(13);
+			font-weight: 400;
+			font-style: normal;
+			line-height: vw(16);
+			margin-bottom: vw(14);
+
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+		}
+	}
+
+	.kspc-tas-share {
+		margin-top: vw(57);
+
+		.share-tip__links {
+			margin-left: vw(-9);
+
+			.share-tip__link {
+
+				width: vw(36);
+				height: vw(36);
+				margin-left: vw(9);
+				svg{
+					height: auto;
+				}
+				&--vk {
+
+					svg {
+						width: vw(19);
+					}
+				}
+
+				&--tg {
+
+					svg {
+						width: vw(16);
+					}
+				}
+
+				&--wp {
+
+					svg {
+						margin-left: vw(2px);
+						width: vw(21);
+					}
+				}
+
+				&--fb {
+
+					svg {
+						width: vw(10);
+					}
+				}
+
+				&:hover {}
+
+				&:active {}
+
+				&:focus {}
+			}
+		}
+	}
 }

@@ -1,8 +1,111 @@
 //начало планшета
 @media screen and (max-width:1150px) {
+	.ks-videos {
+		margin-top: 50px;
+	}
+
+	.ks-videos-title {
+
+		font-style: normal;
+		font-weight: normal;
+		font-size: 32px;
+		line-height: 39px;
+		/* identical to box height, or 122% */
+
+		letter-spacing: -0.03em;
+
+		/* Font_Title_dark */
+
+		color: #3E434D;
+	}
+
+	.ks-videos-row {
+		margin-top: 26px;
+	}
+
+	.ks-videos-item {
+
+		&__video {
+
+			&::before {}
+
+			&::after {}
+		}
+
+		&__name {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 19px;
+			line-height: 26px;
+			/* identical to box height, or 137% */
+
+
+			color: #3E434D;
+		}
+
+		&__preview {}
+
+	}
 }
 
 
 //начало мобилки 767 было
 @media screen and (max-width: 749px) {
+	.ks-videos {
+		margin-top: vw(50);
+	}
+
+	.ks-videos-title {
+		font-size: vw(32);
+		line-height: vw(39);
+		/* or 122% */
+
+		letter-spacing: -0.03em;
+
+		/* Font_text_dark */
+
+		color: #53565A;
+	}
+
+	.ks-videos-row {
+		margin-top: vw(26);
+	}
+
+	.ks-videos-item {
+		width: 100%;
+
+		&__video {
+
+			&::before {}
+
+			&::after {
+				width: vw(59);
+				height: vw(59);
+				content: '';
+				background-size: vw(59) auto;
+
+			}
+		}
+
+		&__name {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(19);
+			//line-height: vw(2);
+			line-height: 7.3vw;
+			/* identical to box height, or 137% */
+
+			margin-top: vw(18);
+
+			color: #3E434D;
+		}
+
+		&__preview {}
+
+		&+.ks-videos-item {
+			margin-top: vw(10);
+			margin-top: vw(50);
+		}
+
+	}
 }

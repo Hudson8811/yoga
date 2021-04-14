@@ -1,20 +1,34 @@
-.kriya-science-main{
-    padding-bottom: 143px;
+.kriya-science-main {
+	padding-bottom: 143px;
 }
 
 
 //десктоп
 @media screen and (min-width:1151px) {
-	.container--ks{
+	.container--ks {
 		width: 842px;
 	}
+
+
 }
 
 //начало планшета
 @media screen and (max-width:1150px) {
+
+	.container--ks,
+	.container--ks-only-tab {
+		width: 696px;
+	}
+	.kriya-science-main {
+		padding-bottom: 85px;
+	}
 }
 
 
 //начало мобилки 767 было
 @media screen and (max-width: 749px) {
+
+	.kriya-science-main {
+		padding-bottom: vw(85);
+	}
 }

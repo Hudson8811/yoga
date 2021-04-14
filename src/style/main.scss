@@ -29,8 +29,6 @@
 @import "partials/header-adaptive";
 @import "partials/footer-adaptive";
 
-@import "partials/sections/subscribe.scss";
-@import "partials/sections/subscribe-adapt.scss";
 
 @import "partials/sections/quote-true.scss";
 @import "partials/sections/quote-true-adapt.scss";
@@ -67,6 +65,8 @@
 
 
 
+@import "partials/kriya-science/subscribe.scss";
+@import "partials/kriya-science/subscribe-adapt.scss";
 
 //kriya-science
 @import "partials/kriya-science/kriya-science.scss";

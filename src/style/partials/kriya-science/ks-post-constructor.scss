@@ -1,5 +1,8 @@
 .ks-post-constructor {
     padding: 45px 0 58px;
+	b{
+		font-weight: 600;
+	}
 }
 
 .kspc-h1-block {}
@@ -82,7 +85,9 @@
 	}
 
 	&__p {
-		margin-top: 9px;
+		&:not(:first-child){
+			margin-top: 9px;
+		}
 		font-style: normal;
 		font-weight: normal;
 		font-size: 17px;
@@ -131,7 +136,7 @@
 
 	}
 
-	&--open {
+	&.kspc-simple-text--open {
 
 		.kspc-simple-text__p {
 			max-height: 10000px;
@@ -163,7 +168,7 @@
 	line-height: 30px;
 	color: #5A5E64;
 
-	&--open {
+	&.kspc-twpah--open {
 		max-height: 10000px;
 	}
 	&--non-hide{

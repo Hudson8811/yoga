@@ -33,3 +33,17 @@
 		}
 	}
 }
+
+
+
+
+//начало мобилки 767 было
+@media screen and (max-width: 749px) {
+	.custom-dots .slick-dots {
+		li {
+			margin: 0 vw(7);
+			width: vw(9);
+			height: vw(9);
+		}
+	}
+}

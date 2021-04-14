@@ -1,11 +1,21 @@
 //начало планшета
 @media screen and (max-width:1150px) {
-	.ksquote {}
+	.ksquote {padding: 82px 0 110px;}
 
 	.ksquote-content {
 		&__title {}
 
-		&__description {}
+		&-description {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 24px;
+			text-align: center;
+			color: #53565A;
+			margin: 36px auto 0;
+			width: 575px;
+			max-width: 100%;
+		}
 	}
 
 }
@@ -13,12 +23,53 @@
 
 //начало мобилки 767 было
 @media screen and (max-width: 749px) {
-	.ksquote {}
+	.ksquote {
+		padding: vw(86) 0 vw(86);
+	}
 
 	.ksquote-content {
-		&__title {}
+		&__title {
+			margin: 0 auto;
+			width: vw(295);
+			max-width: 100%;
+			font-weight: 300;
+			font-size: vw(39);
+			line-height: 10.9vw;
+			/* or 100% */
 
-		&__description {}
+			text-align: center;
+			letter-spacing: -0.03em;
+
+			/* Font_Title_dark */
+
+			color: #3E434D;
+
+			br {
+				display: none;
+			}
+		}
+
+		&-description {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(24);
+			/* or 160% */
+
+			margin: vw(19) auto 0;
+			width: vw(323);
+			text-align: center;
+
+			/* Font_text_dark */
+
+			color: #53565A;
+			&__desk{
+				display: none;
+			}
+			&__mob{
+				display: block;
+			}
+		}
 	}
 
 }

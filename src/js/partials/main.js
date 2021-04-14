@@ -1,6 +1,7 @@
 var slickSpeedMain = 700;
 $(document).ready(function () {
 
+	$('[data-fancybox]').fancybox({ backFocus : false });
 	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
 	if ($('.js-home-slider').length > 0) {
 		$('.js-home-slider').slick({
