@@ -237,12 +237,16 @@
 		}
 
 		&__plus {
-			padding: vw(5) vw(15);
-			margin: vw(-5) 0;
+			/*padding: vw(5) vw(15);
+			margin: vw(-5) 0;*/
+			padding: vw(3) 4.16667vw 0;
+			margin: 0;
+
 			min-width: vw(39);
 			width: vw(39);
 
 			svg {
+				display: block;
 				height: auto;
 			}
 		}

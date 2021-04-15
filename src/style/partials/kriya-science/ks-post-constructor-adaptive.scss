@@ -101,7 +101,9 @@
 			b {}
 		}
 
-		&+.kspc-simple-text {}
+		&+.kspc-simple-text {
+			margin-top: 79px;
+		}
 
 		&+.kspc-slider-block {}
 
@@ -202,6 +204,7 @@
 	}
 
 	.quote-with-parallax {
+		margin-top: 86px;
 		&+.kspc-simple-text {
 			margin-top: 85px;
 		}
@@ -218,9 +221,9 @@
 		padding: 117px 20px;
 	}
 
-	.kspc-quote-right {}
 
 	.kspc-quote-right {
+		margin-top: 75px;
 		&__text {
 			padding-left: 60px;
 			font-size: 19px;
@@ -229,7 +232,9 @@
 		}
 
 		&+* {
-			margin-top: 70px;}
+
+			margin-top: 69px;
+		}
 	}
 }
 
@@ -279,7 +284,7 @@
 	}
 
 	.kspc-simple-text {
-		margin-top: vw(50);
+		margin-top: vw(51);
 
 		&__h2 {
 			font-size: vw(32);
@@ -426,7 +431,7 @@
 		color: #3E434D;
 
 		&+.kspc-simple-text {
-			margin-top: vw(50);
+			margin-top: vw(51);
 		}
 	}
 
