@@ -52,7 +52,7 @@
 .kspc-slider-item {
 	margin: 0 7px;
 	position: relative;
-	border-radius: 5px;
+	border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 	overflow: hidden;
 
 	&__img {
@@ -119,7 +119,7 @@
 			max-height: 150px;
 			height: auto;
 			overflow: hidden;
-			transition: max-height 20s linear, height 20s linear;
+			transition: max-height 13s linear, height 13s linear;
 			position: relative;
 
 		}
@@ -158,7 +158,7 @@
 	max-height: 420px; //(14 строк по 30px)
 	height: auto;
 	overflow: hidden;
-	transition: max-height 20s linear, height 20s linear;
+	transition: max-height 13s linear, height 13s linear;
 	position: relative;
 
 
@@ -195,7 +195,7 @@
 		display: block;
 		position: relative;
 		width: calc(50% - 20px);
-		border-radius: 5px;
+		border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 		overflow: hidden;
 
 		margin-top: 0;

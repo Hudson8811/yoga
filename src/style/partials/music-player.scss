@@ -330,7 +330,8 @@
 	padding-right: 14px;
 	padding-left: 14px;
 	transform: translateX(-50%);
-	border-radius: 5px;
+	border-radius: 6px;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
 	background: #FFFFFF;
 	box-shadow: 0px 2px 6px rgba(43, 47, 78, 0.25);
 	transition: all 0.4s ease-in-out;
@@ -615,12 +616,15 @@
 	&::before {
 		content: '';
 		display: block;
-		width: calc(100% + 2px);
+		/*left: -1px;
+		width: calc(100% + 2px);*/
+		left: 18px;
+		width: calc(100% - 36px);
 		height: 1px;
-		top: 5px;
+		top: 10px;
 		background: #D9DBDE;
 		position: absolute;
-		left: -1px;
+
 		z-index: 21;
 		box-sizing: border-box;
 		opacity: 0;
@@ -653,71 +657,34 @@
 
 .music-player__playlist-inner {
 	overflow: scroll;
-	overflow-x: auto;
+	overflow-x: hidden;
 	position: relative;
 	max-height: 242px;
+	height: 242px;
 	padding-right: 12px;
+	transition: color .3s linear !important;
+	color: rgba(0, 0, 0, 0);
 
-	&::-webkit-scrollbar {
-		/* 1 - скроллбар */
-		background: #ffffff;
-		background: transparent;
-		background: rgba(255, 255, 255, 0);
-		width: 3px;
-	}
+	.simplebar-track.simplebar-vertical {
+		cursor: pointer;}
 
-	&::-webkit-scrollbar-button {
-		/* 2 - кнопка */
-		display: none;
-		background: #ffffff;
-		background: transparent;
-		background: rgba(255, 255, 255, 0);
-
-	}
-
-	&::-webkit-scrollbar-track {
-		/* 3 - трек */
-		display: none;
-		background: #ffffff;
-		background: transparent;
-		background: rgba(255, 255, 255, 0);
-	}
-
-	&::-webkit-scrollbar-track-piece {
-		/* 4 - видимая часть трека */
-		display: none;
-		background: #ffffff;
-		background: transparent;
-		background: rgba(255, 255, 255, 0);
-	}
-
-	&::-webkit-scrollbar-thumb {
-		/* 5 - ползунок */
-
+	.simplebar-scrollbar.simplebar-visible {
+		cursor: pointer;
 		background: #D9DBDE;
-		border-radius: 5px;
+		transition: opacity .4s linear;
+		border-radius: 6px;
 		width: 3px;
-	}
+		left: 8px;
+		right: 0px;
 
-	&::-webkit-scrollbar-corner {
-		/* 6 - уголок */
-		display: none;
-		background: #ffffff;
-		background: transparent;
-		background: rgba(255, 255, 255, 0);
-	}
-
-	&::-webkit-resizer {
-		/* 7 - изменение размеров */
-		display: none;
-		background: #ffffff;
-		background: transparent;
-		background: rgba(255, 255, 255, 0);
+		@media screen and (min-width: 1151px) {
+			opacity: 0;
+		}
 	}
 }
 
 .music-player__playlist {
-    padding: 26px 5px 50px 18px;
+	padding: 32px 5px 50px 18px;
 
 	position: relative;
 	background: #ffffff;
@@ -726,6 +693,9 @@
 	transition: all 0.4s ease-in-out;
 
 
+	&:hover .music-player__playlist-inner .simplebar-scrollbar.simplebar-visible {
+		opacity: 1;
+	}
 
 }
 

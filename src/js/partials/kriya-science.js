@@ -18,14 +18,15 @@ $(document).ready(function () {
 						arrows: false,
 						dots: true,
 					}
+				},
+				{
+					breakpoint: 749,
+					settings: {
+						arrows: false,
+						dots: true,
+						speed: slickSpeedMain
+					}
 				}
-				/*, {
-								breakpoint: 749,
-								settings: {
-									arrows: false,
-									dots: true,
-								}
-							}*/
 			]
 		});
 	}

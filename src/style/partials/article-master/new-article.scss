@@ -39,7 +39,7 @@
 		position: relative;
 		margin-bottom: 17px;
 		overflow: hidden;
-		border-radius: 5px;
+		border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 
 		&::after {
 			content: '';

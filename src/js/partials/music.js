@@ -80,7 +80,7 @@ my_songs_pseudo = [{
 ];
 
 
-
+var plListScrollbar;
 $(document).ready(function () {
 	var playlist = '';
 	my_songs.forEach(function (currentValue, index) {
@@ -93,7 +93,6 @@ $(document).ready(function () {
 		playlist += '<div class="musicpl-playlist-item musicpl-playlist-item--pseudo amplitude-paused"><div class="music-player-mainctrl music-player-mainctrl--playlist"><div class="music-player-mainctrl__pause"><svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1V11.3C1.9796 11.5451 1.86293 11.7722 1.67552 11.9315C1.4881 12.0908 1.24521 12.1694 1 12.15C0.755385 12.1667 0.513917 12.0872 0.3271 11.9284C0.140283 11.7696 0.0229043 11.5441 0 11.3V1C0.0229043 0.755886 0.140283 0.530383 0.3271 0.371588C0.513917 0.212794 0.755385 0.133278 1 0.15C1.24521 0.130639 1.4881 0.209208 1.67552 0.368511C1.86293 0.527814 1.9796 0.754876 2 1Z" fill="#25378D"/><path d="M8.02 1V11.3C8.02 11.5652 7.91464 11.8196 7.72711 12.0071C7.53957 12.1946 7.28522 12.3 7.02 12.3C6.75478 12.3 6.50043 12.1946 6.31289 12.0071C6.12536 11.8196 6.02 11.5652 6.02 11.3V1C6.02 0.734784 6.12536 0.48043 6.31289 0.292893C6.50043 0.105357 6.75478 0 7.02 0C7.28522 0 7.53957 0.105357 7.72711 0.292893C7.91464 0.48043 8.02 0.734784 8.02 1Z" fill="#25378D"/></svg></div><div class="music-player-mainctrl__play"><svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.99944 5.70019L0.799439 0.700188C0.723555 0.651369 0.636271 0.623135 0.54617 0.618264C0.45607 0.613392 0.366252 0.632051 0.285546 0.672404C0.20484 0.712757 0.136022 0.773416 0.0858583 0.848419C0.0356951 0.923423 0.00591196 1.01019 -0.000563662 1.10019L-0.000565481 11.0002C0.00292167 11.0932 0.0291258 11.1839 0.0757551 11.2644C0.122385 11.345 0.188023 11.4129 0.266936 11.4622C0.34585 11.5115 0.435638 11.5408 0.528461 11.5474C0.621283 11.554 0.71432 11.5378 0.799438 11.5002L7.99944 6.50019C8.06767 6.45809 8.124 6.39924 8.16307 6.32922C8.20215 6.25921 8.22266 6.18037 8.22266 6.10019C8.22266 6.02001 8.20215 5.94117 8.16307 5.87116C8.124 5.80114 8.06767 5.74229 7.99944 5.70019Z" fill="#25378D"/></svg></div></div><div class="custom-audio-playlist__song">' + currentValue['name'] + '</div><div class="custom-audio-playlist__duration">' + currentValue['meta_duration'] + '</div></div>';
 	});
 	$('#music-player__playlist-inner').append(playlist);
-
 
 	var logos = '';
 	my_songs.forEach(function (currentValue, index) {
@@ -341,6 +340,7 @@ $(document).ready(function () {
 			setTimeout(function () {
 				$("#music-player__playlist-container-2").addClass('music-player__playlist-container-2--show-line');
 				$("#music-player__playlist .musicpl-playlist-item").addClass('musicpl-playlist-item--visible');
+				simpleBar.recalculate();
 			}, 500);
 
 		} else {
@@ -391,5 +391,19 @@ $(document).ready(function () {
 	});
 
 	*/
+	plListScrollbar = new SimpleBar($('#music-player__playlist-inner')[0], {
+		autoHide: false,
+		classNames: {
+			content: 'simplebar-content',
+			scrollContent: 'simplebar-scroll-content',
+			scrollbar: 'simplebar-scrollbar',
+			track: 'simplebar-track'
+			// defaults
+			/*content: 'simplebar-content simplebar-playlist-content',
+			scrollContent: 'simplebar-scroll-content simplebar-playlist-scroll-content',
+			scrollbar: 'simplebar-scrollbar simplebar-playlist-scrollbar',
+			track: 'simplebar-track simplebar-playlist-track'*/
+		}
+	});
 
 });

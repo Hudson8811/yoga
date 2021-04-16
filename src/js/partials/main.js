@@ -167,7 +167,7 @@ $(document).ready(function () {
 		interactive: true,
 		//delay: [100, 9999999],
 		placement: 'bottom',
-		delay: [0, 500],
+		delay: [0, 0],
 		boundary: 'viewport',
 		trigger: 'click',
 		//sticky: true,

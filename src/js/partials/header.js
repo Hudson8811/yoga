@@ -69,7 +69,7 @@ $(document).ready(function () {
 				if (window.scrollY>= header2TopInStatic-mainHeaderH) {
 					if (headerStatus !== 'absolute_before_header2') {
 						//$('#site-header').removeClass('sh-scrolled');
-						$('#site-header').attr('style', 'position: absolute !important; top: ' + Math.ceil(header2TopInStatic-mainHeaderH) + 'px !important');
+						$('#site-header').attr('style', 'position: absolute !important; top: ' + Math.ceil(header2TopInStatic-mainHeaderH+1) + 'px !important');
 						headerStatus = 'absolute_before_header2';
 					}
 

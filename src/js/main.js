@@ -15,7 +15,7 @@ $(document).on('mobileinit', function () {
 //= libs/picturefill.min.js
 //= libs/jarallax.min.js
 //= libs/aos.js
-//      libs/wow.min.js
+//= libs/simplebar.min.js
 
 /* my scripts */
 

@@ -6,6 +6,18 @@
 
 @media screen and (max-width: 1150px) {
 
+	.music-player__playlist {
+		padding: 32px 20px 50px 35px;
+
+
+		& .music-player__playlist-inner {}
+	}
+
+	.music-player__playlist-container-2::before {
+		left: 33px;
+		width: calc(100% - 66px);
+	}
+
 	.music-player-wrap {
 		margin-bottom: 57px;
 
@@ -284,6 +296,12 @@
 		}
 
 
+	}
+
+	.music-player__playlist-container-2::before {
+		left: vw(21);
+		width: calc(100% - #{vw(42)});
+		top: vw(10);
 	}
 
 	.music-player-mainctrl--playlist {

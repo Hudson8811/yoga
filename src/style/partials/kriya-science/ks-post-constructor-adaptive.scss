@@ -371,7 +371,7 @@
 			margin-top: vw(29);
 			overflow: hidden;
 
-			transition: max-height 20s linear, height 20s linear;
+			transition: max-height 13s linear, height 13s linear;
 			max-height: vw(14*24);
 
 			p {
@@ -459,5 +459,27 @@
 		&+* {
 			margin-top: vw(71);
 		}
+	}
+}
+
+
+
+@media screen and (min-width: 319px) and (max-width: 321px) {
+	.kspc-twpah-unwrap {
+		top: 85.5vw;
+	}
+	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
+		top: 32.7vw;
+	}
+}
+
+
+
+@media screen and (min-width: 413px) and (max-width: 415px) {
+	.kspc-twpah-unwrap {
+		top: 84.9vw;
+	}
+	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
+		top: 32.7vw;
 	}
 }

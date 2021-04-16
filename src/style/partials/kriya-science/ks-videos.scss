@@ -31,7 +31,7 @@
 		width: 100%;
 		display: block;
 		overflow: hidden;
-		border-radius: 5px;
+		border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 		z-index: 1;
 
 		&::before {
@@ -71,7 +71,7 @@
 
 		&:focus {}
 
-		@include scalepic();
+		//@include scalepic();
 	}
 
 	&__name {

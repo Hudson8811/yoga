@@ -32,7 +32,7 @@
 		margin-bottom: 17px;
 		max-width: 403px;
 		overflow: hidden;
-		border-radius: 5px;
+		border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 
 		&_video {
 			margin-bottom: 20px;

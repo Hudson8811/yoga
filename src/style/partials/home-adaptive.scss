@@ -23,20 +23,21 @@
 
 
 	.insta-widget__item {
+		-webkit-mask-image: -webkit-radial-gradient(white, black);
 		&:nth-child(1) {
-			border-radius: 5px 0 0 0;
+			border-radius: 6px 0 0 0;
 		}
 
 		&:nth-child(2) {
-			border-radius: 0 5px 0 0;
+			border-radius: 0 6px 0 0;
 		}
 
 		&:nth-child(3) {
-			border-radius: 0 0 0 5px;
+			border-radius: 0 0 0 6px;
 		}
 
 		&:nth-child(4) {
-			border-radius: 0 0 5px 0;
+			border-radius: 0 0 6px 0;
 		}
 	}
 
@@ -620,7 +621,7 @@
 		&__content {
 			padding: 0;
 			margin-top: -1px;
-			border-radius: 5px;
+			border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 		}
 
 		&__item {
@@ -1856,7 +1857,7 @@
 		&__content {
 			margin: 0 auto;
 			width: vw(266);
-			border-radius: 5px;
+			border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
 		}
 
 		&__item {
@@ -1946,7 +1947,9 @@
 	.custom-widget-title {
 		font-weight: 400;
 	}
-
+	.slnewsw-slider--video .slick-arrow{
+		display: none !important;
+	}
 	.slider-news-widget-wrap {
 		padding-top: vw(91);
 		padding-left: 0;
