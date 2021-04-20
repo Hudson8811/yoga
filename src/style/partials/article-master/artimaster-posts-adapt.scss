@@ -1,0 +1,151 @@
+@media screen and (max-width: 1150px) {
+	.artimaster-posts-section {
+		margin-top: 55px;
+		margin-bottom: 107px;
+	}
+
+	.artimaster-posts__container {}
+
+	.artimaster-section-title {}
+
+	.artimaster-posts {
+		margin-top: 29px;
+	}
+
+	.artimaster-post {
+		&__img-wrapper {
+			&::after {}
+		}
+
+		&__img {}
+
+		&__title {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 26px;
+			color: #3E434D;
+		}
+
+		&__meta {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 26px;
+			text-transform: uppercase;
+			margin-top: 9px;
+		}
+
+		&__img {}
+
+		&__meta-theme {}
+
+		&__meta-date {}
+
+		&__meta-share-icon {}
+
+		&__desc {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 30px;
+			color: #53565A;
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	.artimaster-posts__pagination {}
+
+}
+
+
+
+
+@media screen and (max-width: 749px) {
+	.artimaster-posts-section {
+		margin-top: vw(22);
+		margin-bottom: vw(93);
+	}
+
+	.artimaster-posts__container {}
+
+	.artimaster-section-title {}
+
+	.artimaster-posts {
+		margin-top: vw(7);
+		margin-bottom: vw(-51);
+	}
+
+	.artimaster-post {
+		width: 100%;
+		margin-bottom: vw(51);
+
+		&__img-wrapper {
+			&::after {}
+		}
+
+		&__img {}
+
+		&__title {
+			margin-top: vw(18);
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(19);
+			line-height: vw(26);
+			/* identical to box height, or 137% */
+
+
+			color: #3E434D;
+		}
+
+		&__meta {
+			font-style: normal;
+			font-weight: 300;
+			font-size: vw(13);
+			line-height: vw(26);
+			margin-top: vw(8);
+		}
+
+		&__img {}
+
+		&__meta-theme {
+			color: #25378D;
+			margin-right: vw(12);
+		}
+
+		&__meta-date {
+			margin-right: 14vw();
+			color: #AFB4BF;
+		}
+
+		&__meta-share-icon {
+			width: vw(13);
+			height: vw(13);
+		}
+
+		&__desc {
+			margin-top: vw(5);
+			font-style: normal;
+			font-weight: 300;
+			font-size: vw(15);
+			line-height: vw(24);
+			color: #53565A;
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	.artimaster-posts__pagination {
+		margin-top: vw(51);
+	}
+
+}

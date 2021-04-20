@@ -290,7 +290,7 @@
 			&::before {
 				position: absolute;
 				height: vw(15);
-				width: vw(1);
+				width: 1px;
 				top: 50%;
 				-webkit-transform: translate(0, -50%);
 				transform: translate(0, -50%);
@@ -322,7 +322,7 @@
 
 		.ssocials-item {
 			padding: vw(9) vw(10) vw(5);
-			margin: 0 vw(1);
+			margin: 0 1px;
 
 			svg {
 				width: vw(17);

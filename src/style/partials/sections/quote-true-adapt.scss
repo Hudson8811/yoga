@@ -1,64 +1,69 @@
 @media screen and (max-width: 1150px) {
-    .quote-true {
-        padding-top: 48px;
-        padding-bottom: 55px;
-            &__container {
-                width: 700px;
-            }
+	.quote-true {
 
-            &__title {
-                margin-bottom: 16px;
-                font-family: "Savoye LET";
-                font-style: normal;
-                font-weight: normal;
-                font-size: 58px;
-                line-height: 1.02;
-                text-align: center;
-                letter-spacing: -0.03em;
-                color: #3E434D;
-            }
+		padding-top: 47px;
+		padding-bottom: 55px;
 
-            &__desc {
-                max-width: 490px;
-                margin: 0 auto;
-                font-weight: 300;
-                padding-left: 30px;
-                font-size: 15px;
-                line-height: 24px;
-                color: #53565A;
-            }
-        }
+		&__container {
+			width: 700px;
+		}
+
+		&__title {
+			margin-bottom: 16px;
+			font-family: "Savoye LET";
+			font-style: normal;
+			font-weight: normal;
+			font-size: 58px;
+			line-height: 1.02;
+			text-align: center;
+			letter-spacing: -0.03em;
+			color: #3E434D;
+		}
+
+		&__desc {
+			max-width: 490px;
+			margin: 0 auto;
+			font-weight: 300;
+			padding-left: 30px;
+			font-size: 15px;
+			line-height: 24px;
+			color: #53565A;
+		}
+	}
 }
 
-@media screen and (max-width: 749px) {//767 было
-    .quote-true {
-        padding-top: vw(50);
-        padding-bottom: vw(51);
-        border-bottom: 1px solid #DEE6E9;
-            &__container {
-                width: vw(700);
-            }
+@media screen and (max-width: 749px) {
 
-            &__title {
-                margin-bottom: vw(19);
-                font-family: "Savoye LET";
-                font-style: normal;
-                font-weight: normal;
-                font-size: vw(39);
-                line-height: vw(39);
-                text-align: center;
-                letter-spacing: -0.03em;
-                color: #3E434D;
-            }
+	//767 было
+	.quote-true {
+		padding-top: vw(52);
+		padding-bottom: vw(51);
+		border-bottom: 1px solid #DEE6E9;
 
-            &__desc {
-                max-width: vw(490);
-                margin: 0 auto;
-                font-weight: 300;
-                padding-left: 0px;
-                font-size: vw(15);
-                line-height: vw(24);
-                color: #53565A;
-            }
-        }
+		&__container {
+			width: vw(700);
+		}
+
+		&__title {
+			margin-bottom: vw(19);
+			font-family: "Savoye LET";
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(39);
+			line-height: vw(39);
+			text-align: center;
+			letter-spacing: -0.03em;
+			color: #3E434D;
+		}
+
+		&__desc {
+			max-width: vw(490);
+			margin: 0 auto;
+			font-weight: 300;
+			padding-left: 0px;
+			font-size: vw(15);
+			line-height: vw(24);
+			color: #53565A;
+		}
+	}
 }

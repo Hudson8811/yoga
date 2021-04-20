@@ -10,7 +10,7 @@
 .maslider-slide {
 	max-width: 848px;
 	width: 100%;
-	padding: 0 3px 5px;
+	padding: 0 3px 0;
 	height: 400/842 * 100%;
 
 	&__inner {
@@ -67,12 +67,17 @@
 	width: 37px;
 	height: 37px;
 	box-sizing: border-box;
-	background: #FFFFFF;
+
+
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);
+
+
+
 	border: 1px solid #AFB4BF;
 	box-sizing: border-box;
 	border-radius: 500px;
 	transform: rotate(-180deg);
-	background: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;

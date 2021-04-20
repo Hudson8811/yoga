@@ -1,0 +1,113 @@
+
+.artimaster-posts-section {
+	margin-top: 41px;
+    margin-bottom: 95px;
+}
+
+.artimaster-posts__container {}
+
+.artimaster-section-title {}
+
+.artimaster-posts {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 19px;
+    margin-bottom: -83px;
+}
+
+.artimaster-post {
+	width: calc(50% - 18px);
+    margin-bottom: 83px;
+	&__img-wrapper {
+		position: relative;
+		width: 100%;
+		border-radius: 6px;
+		overflow: hidden;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+
+		&::after {
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+		@include scalepic();
+	}
+
+	&__img {
+		position: absolute;
+		-o-object-fit: cover;
+		object-fit: cover;
+		-o-object-position: center;
+		object-position: center;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		color: #53565A;
+		margin-top: 18px;
+	}
+
+	&__meta {
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 26px;
+		text-transform: uppercase;
+		margin-top: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+	}
+
+	&__img {}
+
+	&__meta-theme {
+		color: #25378D;
+		margin-right: 12px;
+	}
+
+	&__meta-date {
+		color: #AFB4BF;
+		margin-right: 14px;
+	}
+
+	&__meta-share-icon {
+		width: 14px;
+		height: 14px;
+		background: url(../img/icons/subscribe.svg);
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__desc {
+		font-size: 17px;
+		line-height: 30px;
+		color: #53565A;
+		margin-top: 6px;
+		letter-spacing: -0.06px;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	&:hover {}
+
+	&:active {}
+
+	&:focus {}
+}
+
+.artimaster-posts__pagination{
+	margin-top: 48px;
+}

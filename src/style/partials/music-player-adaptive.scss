@@ -103,6 +103,13 @@
 @media screen and (max-width: 749px) {
 
 	//767 было
+
+
+	.soundRS--horizontal{
+		height: 3px;
+	}
+
+
 	.music-player-wrap {
 		margin-bottom: vw(94);
 
@@ -273,17 +280,18 @@
 	}
 
 	.musicpl-playlist-item+.musicpl-playlist-item {
-		margin-top: vw(8);
+		margin-top: vw(9);
 	}
 
 	.music-player__playlist {
 		//padding: vw(26) vw(20) vw(50) vw(22);
-		padding: vw(26) vw(5) vw(50) vw(22);
+		padding: vw(26) vw(5) vw(43) vw(22);
 	}
 
 	.music-player__playlist-inner {
 		position: relative;
-		max-height: vw(242);
+		max-height: vw(120);
+		height: vw(120);
 		padding-right: vw(12);
 
 		&::-webkit-scrollbar {
@@ -301,7 +309,7 @@
 	.music-player__playlist-container-2::before {
 		left: vw(21);
 		width: calc(100% - #{vw(42)});
-		top: vw(10);
+		top: vw(4);
 	}
 
 	.music-player-mainctrl--playlist {

@@ -19,8 +19,13 @@ $(document).on('mobileinit', function () {
 
 /* my scripts */
 
-//= partials/components.js
+//         partials/components.js
 //= partials/header.js
 //= partials/main.js
 //= partials/music.js
 //= partials/kriya-science.js
+
+
+
+
+//= partials/tips-init.js

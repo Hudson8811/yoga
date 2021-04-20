@@ -16,6 +16,7 @@
 @import "partials/components.scss";
 @import "partials/components/dots";
 @import "partials/components/pagination";
+@import "partials/components/pagination-adapt";
 @import "partials/main";
 @import "partials/main-adaptive";
 @import "partials/header";
@@ -61,10 +62,13 @@
 
 
 
+@import "partials/article-master/article-master";
+
 @import "partials/article-master/maslider";
 @import "partials/article-master/maslider-adaptive";
 
-
+@import "partials/article-master/artimaster-posts";
+@import "partials/article-master/artimaster-posts-adapt";
 
 
 @import "partials/kriya-science/subscribe.scss";

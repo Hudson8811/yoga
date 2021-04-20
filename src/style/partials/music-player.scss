@@ -23,8 +23,8 @@
 .music-player-top__arrow,
 .music-player-top__arrow {
 	position: absolute;
-	top: 42px;
-	width: 11px;
+    top: 43px;
+    width: 7px;
 	box-sizing: content-box;
 	padding: 10px;
 	cursor: pointer;
@@ -55,11 +55,11 @@
 }
 
 .music-player-top__arrow--next {
-	right: 42px;
+	right: 41px;
 }
 
 .music-player-top__arrow--prev {
-	left: 42px;
+	left: 41px;
 }
 
 .music-player-center {
@@ -489,7 +489,7 @@
 	align-items: flex-end;
 	justify-content: space-between;
 	width: 100%;
-	margin-top: 17px;
+    margin-top: 19px;
 
 	&__playlist,
 	&__orig_link,
@@ -659,8 +659,8 @@
 	overflow: scroll;
 	overflow-x: hidden;
 	position: relative;
-	max-height: 242px;
-	height: 242px;
+	max-height: 120px;
+	height: 120px;
 	padding-right: 12px;
 	transition: color .3s linear !important;
 	color: rgba(0, 0, 0, 0);
@@ -684,7 +684,7 @@
 }
 
 .music-player__playlist {
-	padding: 32px 5px 50px 18px;
+    padding: 21px 5px 24px 18px;
 
 	position: relative;
 	background: #ffffff;
