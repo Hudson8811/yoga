@@ -42,7 +42,7 @@
 .maslider-slide__inner {
 	position: relative;
 	overflow: hidden;
-	border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
 
 	&::after {
 		content: '';
@@ -59,6 +59,8 @@
 		object-fit: cover;
 		object-position: center;
 	}
+
+	@include scalepic();
 }
 
 .maslider-arrow {

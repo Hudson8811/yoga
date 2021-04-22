@@ -30,6 +30,10 @@
 			//margin: -18px;
 			.slick-list {
 				margin: 0;
+
+				&::before, &::after{
+					display: none;
+				}
 			}
 		}
 

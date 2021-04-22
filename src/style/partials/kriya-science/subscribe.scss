@@ -83,7 +83,7 @@
 		//-webkit-mask-image: -webkit-radial-gradient(white, black);
 
 		background: #FFFFFF;
-		box-shadow: 0px 0px 1px rgba(43, 47, 78, 0.15);
+		border: 1px solid #d9dbde;
 	}
 
 	.tippy-arrow {
@@ -106,14 +106,14 @@
 		border-bottom-color: initial;
 		background: #FFFFFF;
 		//background: red;
-		box-shadow: 0px 0px 1px rgba(43, 47, 78, 0.15);
+	border: 1px solid #d9dbde;
 
 	}
 	&>.tippy-arrow:after {
 		z-index: 5;
 		content: '';
 		display: block;
-		top: 0;
+		top: 1px;
 		position: absolute;
 		left: 50%;
 		width: 50px;

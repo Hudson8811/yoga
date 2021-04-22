@@ -24,15 +24,34 @@
 
 	&__slider {
 		margin-top: 18px;
-		margin-left: -2px;
-
 		.slick-list {
 			margin: 0 -18px;
+			z-index: 1;
+			&::before,&::after{
+				content: '';
+				display: block;
+				background: #fff;
+				position: absolute;
+				height: 100%;
+				width: 19px;
+				z-index: 2;
+				top: 0;
+			}
+			&::before{
+				left: -1px;
+			}
+			&::after{
+				right: -1px;
+			}
+		}
+		.slick-track{
+			z-index: 1;
 		}
 	}
 
 	&__slider-card {
-		padding: 0 18px;
+		padding: 0 0;
+		margin: 0 18px;
 	}
 
 	&__card-img-wrapper {
