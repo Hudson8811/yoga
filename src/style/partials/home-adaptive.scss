@@ -895,9 +895,12 @@
 			line-height: 24px;
 			text-align: center;
 			margin: 35px auto 0;
-			width: 470px;
+			width: 515px;
 			max-width: 100%;
 			/*color: $darktm;*/
+			&__razdel2{
+				display: block;
+			}
 		}
 
 		&__name {
@@ -1316,6 +1319,9 @@
 			&__razdel{
 				display: block;
 				height: vw(25);
+			}
+			&__razdel2{
+				display: none;
 			}
 		}
 
