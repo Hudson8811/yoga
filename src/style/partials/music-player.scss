@@ -662,8 +662,14 @@
 	overflow: hidden;*/
 }
 
+.simplebar-content-wrapper{
+	&::-webkit-scrollbar { display: none; }
+}
+
 .music-player__playlist-inner {
-	overflow: scroll;
+	&::-webkit-scrollbar { display: none; }
+	*::-webkit-scrollbar { display: none; }
+	overflow: auto;
 	overflow-x: hidden;
 	position: relative;
 	max-height: 120px;
