@@ -1,7 +1,7 @@
 
 .artimaster-posts-section {
 	margin-top: 41px;
-    margin-bottom: 95px;
+    margin-bottom:150px;
 }
 
 .artimaster-posts__container {}
@@ -22,7 +22,7 @@
 	&__img-wrapper {
 		position: relative;
 		width: 100%;
-		border-radius: 6px;
+		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
 		overflow: hidden;
 		-webkit-mask-image: -webkit-radial-gradient(white, #000);
 

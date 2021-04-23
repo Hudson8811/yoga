@@ -16,7 +16,7 @@
 			color: #AFB4BF;
 			font-weight: 300;
 			font-size: vw(17);
-			border-radius: 50%;
+			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
 			margin: 0 vw(4.5);
 			transition: .3s;
 

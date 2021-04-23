@@ -40,4 +40,40 @@ $(document).ready(function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.kspc-simple-text').addClass('kspc-simple-text--open');
 	});
 
+
+
+
+	function openFancyFromSlider(e) {
+		var $this = $(e.target);
+		if ($this.is('.slick-slide') || $this.closest('.slick-slide').length > 0) {
+
+			var slider = $(e.target).closest('.js-kspc-slider');
+			console.log('>0');
+
+			var slides = slider.find('.js-open-fancy-slide:not(.slick-cloned)');
+
+
+			var slidesHrefs = [];
+			slides.each(function () {
+
+				slidesHrefs.push({
+					src: $(this).attr('data-href')
+				});
+			})
+
+
+			//вызывается элемент галереи, соответствующий индексу слайда
+			$.fancybox.open(slidesHrefs, {
+				backFocus: false,
+				loop: true
+			}, slider.slick("slickCurrentSlide"));
+
+		}
+	}
+
+
+
+
+	myCustomClickWorker1 = new ClickOrSwipeListener('.js-kspc-slider', openFancyFromSlider, openFancyFromSlider, function () {});
+
 });

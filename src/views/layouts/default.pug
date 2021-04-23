@@ -13,7 +13,7 @@ html(lang="ru")
 		meta(property="og:image" content="images/logo.svg")
 		meta(name="format-detection" content="telephone=no")
 
-		include ../partials/css.html
+		//include ../partials/css.html
 
 		link(href="css/main.css" rel="stylesheet")
 		script.
@@ -28,6 +28,87 @@ html(lang="ru")
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 			});*/
 		//title= `${page.title}`
+		script.
+			my_songs = [{
+					"name": "Казачья",
+					"artist": "Игорь растеряев",
+					"album": "Звонарь",
+					"url": "img/song/track2.mp3",
+					"cover_art_url": "img/mlinks/1.jpg",
+					"orig_link": "https://itunes.com/1.mp3",
+					"meta_duration": "2:55"
+				}, {
+					"name": "ASATO MA SAT GAMAYA",
+					"artist": "Ever New Joy",
+					"album": "Album Name",
+					"url": "img/song/track1.mp3",
+					"cover_art_url": "img/track1-cover.jpg",
+					"orig_link": "https://itunes.com/2.mp3",
+					"meta_duration": "3:17"
+				},
+				{
+					"name": "Русская дорога.",
+					"artist": "Игорь растеряев",
+					"album": "Звонарь",
+					"url": "img/song/track3.mp3",
+					"cover_art_url": "img/mlinks/2.jpg",
+					"orig_link": "https://itunes.com/3.mp3",
+					"meta_duration": "3:00"
+				}
+			];
+
+			my_songs_pseudo = [{
+					"name": "Казачья",
+					"artist": "Игорь растеряев",
+					"album": "Звонарь",
+					/*"url": "img/song/track2.mp3",
+					"cover_art_url": "img/mlinks/1.jpg",*/
+					"orig_link": "https://itunes.com/1.mp3",
+					"meta_duration": "2:55"
+				}, {
+					"name": "ASATO MA SAT GAMAYA",
+					"artist": "Ever New Joy",
+					"album": "Album Name",
+					/*"url": "img/song/track1.mp3",
+					"cover_art_url": "img/track1-cover.jpg",*/
+					"orig_link": "https://itunes.com/2.mp3",
+					"meta_duration": "3:17"
+				},
+				{
+					"name": "Русская дорога",
+					"artist": "Игорь растеряев",
+					"album": "Звонарь",
+					/*"url": "img/song/track3.mp3",
+					"cover_art_url": "img/mlinks/2.jpg",*/
+					"orig_link": "https://itunes.com/3.mp3",
+					"meta_duration": "3:00"
+				}, {
+					"name": "Казачья2",
+					"artist": "Игорь растеряев",
+					"album": "Звонарь",
+					/*"url": "img/song/track2.mp3",
+					"cover_art_url": "img/mlinks/1.jpg",*/
+					"orig_link": "https://itunes.com/1.mp3",
+					"meta_duration": "2:55"
+				}, {
+					"name": "ASATO MA SAT GAMAY2",
+					"artist": "Ever New Joy",
+					"album": "Album Name",
+					/*"url": "img/song/track1.mp3",
+					"cover_art_url": "img/track1-cover.jpg",*/
+					"orig_link": "https://itunes.com/2.mp3",
+					"meta_duration": "3:17"
+				},
+				{
+					"name": "Русская дорога2",
+					"artist": "Игорь растеряев",
+					"album": "Звонарь",
+					/*"url": "img/song/track3.mp3",
+					"cover_art_url": "img/mlinks/2.jpg",*/
+					"orig_link": "https://itunes.com/3.mp3",
+					"meta_duration": "3:00"
+				}
+			];
 
 	body
 		block header

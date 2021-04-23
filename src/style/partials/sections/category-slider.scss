@@ -57,13 +57,7 @@
 	//opacity: 1;
 	top: 54px;
 
-	&.customized-arrow--prev {
-		left: -26px;
-	}
 
-	&.customized-arrow--next {
-		right: -26px;
-	}
 }
 
 .category-slide {
@@ -78,8 +72,8 @@
 		position: relative;
 		display: block;
 		overflow: hidden;
-		border-radius: 6px;
-		-webkit-mask-image: -webkit-radial-gradient(white, black);
+		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+
 
 		&::after {
 			content: '';

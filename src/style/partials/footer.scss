@@ -162,7 +162,7 @@
 	box-sizing: border-box;
 	backdrop-filter: blur(10px);
 
-	border-radius: 10px;
+	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

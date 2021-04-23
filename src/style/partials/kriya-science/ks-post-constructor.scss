@@ -38,13 +38,35 @@
 
 .kspc-slider {
 	width: 100%;
-
+	position: relative;
+	z-index: 1;
 	.slick-list {
 		margin: 0 -7px;
+		z-index: 1;
+		&::before,&::after{
+			content: '';
+			display: block;
+			background: #fff;
+			position: absolute;
+			height: 100%;
+			width: 7px;
+			z-index: 2;
+			top: 0;
+		}
+		&::before{
+			left: -1px;
+		}
+		&::after{
+			right: -1px;
+		}
+	}
+	.slick-track{
+		z-index: 1;
 	}
 }
 
 .kspc-slider-arrow {
+	z-index: 3;
 	top: 50%;
 	margin-top: -11px;
 }
@@ -52,7 +74,8 @@
 .kspc-slider-item {
 	margin: 0 7px;
 	position: relative;
-	border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
+	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+
 	overflow: hidden;
 
 	&__img {
@@ -195,7 +218,7 @@
 		display: block;
 		position: relative;
 		width: calc(50% - 20px);
-		border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
+		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
 		overflow: hidden;
 
 		margin-top: 0;

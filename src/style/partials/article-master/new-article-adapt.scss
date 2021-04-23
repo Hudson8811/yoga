@@ -48,7 +48,7 @@
 			width: 100%;
 			max-width: 100%;
 			position: relative;
-			margin-bottom: 7px;
+			margin-bottom: 14px;
 
 			&::after {
 				content: '';
@@ -61,8 +61,8 @@
 
 		&__card-title {
 			font-size: 24px;
-			line-height: 45px;
-			margin-bottom: 3px;
+			line-height: 32px;
+			margin-bottom: 9px;
 			/* identical to box height, or 187% */
 
 
@@ -169,7 +169,7 @@
 			font-style: normal;
 			font-weight: normal;
 			font-size: vw(19);
-			line-height: vw(26);
+			line-height: vw(27);
 
 			color: #53565A;
 

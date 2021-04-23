@@ -205,7 +205,7 @@
 
 		border: 1px solid #DEE6E9;
 		box-sizing: border-box;
-		border-radius: 10px;
+		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 10px;
 
 		svg {
 			width: vw(10);

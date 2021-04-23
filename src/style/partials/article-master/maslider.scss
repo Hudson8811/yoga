@@ -42,7 +42,7 @@
 .maslider-slide__inner {
 	position: relative;
 	overflow: hidden;
-	-webkit-mask-image: -webkit-radial-gradient(white, black);
+
 
 	&::after {
 		content: '';
@@ -78,12 +78,12 @@
 
 	border: 1px solid #AFB4BF;
 	box-sizing: border-box;
-	border-radius: 500px;
+	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 500px;
 	transform: rotate(-180deg);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 50%;
+	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
 	z-index: 100;
 	cursor: pointer;
 	transition: all .4s ease;

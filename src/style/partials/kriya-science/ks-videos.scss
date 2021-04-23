@@ -31,7 +31,7 @@
 		width: 100%;
 		display: block;
 		overflow: hidden;
-		border-radius: 6px; -webkit-mask-image: -webkit-radial-gradient(white, black);
+		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
 		z-index: 1;
 
 		&::before {
