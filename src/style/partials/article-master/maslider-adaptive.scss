@@ -1,13 +1,10 @@
 @media screen and (max-width: 1150px) {
 
 	//  <=tablet
-	.maslider-section {
-		border-top: 1px solid #DEE6E9;
-	}
 
 	.maslider-slide {
 		max-width: 588px;
-		padding: 5px 3px 5px;
+		padding: 0 3px 0;
 
 		&__inner {}
 	}
@@ -67,7 +64,7 @@
 
 	.maslider-slide {
 		width: vw(292);
-		padding: vw(6) vw(3) vw(5);
+		padding: 0 vw(3) 2px;
 
 		&__inner {}
 	}

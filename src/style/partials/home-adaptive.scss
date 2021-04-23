@@ -144,14 +144,12 @@
 		&__title {
 			font-size: 32px;
 			line-height: 32px;
-			font-weight: 300;
 			letter-spacing: -0.03em;
 			margin-bottom: 10px;
 			color: $darktm;
 		}
 
 		&__out {
-			font-weight: 300;
 			font-size: 19px;
 			line-height: 30px;
 			margin-bottom: 7px;
@@ -161,7 +159,6 @@
 
 		&__main {
 			padding-left: 10px;
-			font-weight: 300;
 			font-size: 15px;
 			line-height: 24px;
 			margin-bottom: 14px;
@@ -172,7 +169,7 @@
 
 		&__read-more {
 			&::after {
-				margin-top: 4px;
+				margin-top: 1px;
 			}
 
 			&:hover {}
@@ -236,7 +233,6 @@
 
 
 		&__title {
-			font-weight: 300;
 			font-size: 24px;
 			line-height: 32px;
 			text-align: center;
@@ -319,7 +315,7 @@
 
 				&__title2 {
 					font-weight: 500;
-					font-size: 15px;
+					font-size: 19px;
 					line-height: 30px;
 					margin-bottom: 6px;
 				}
@@ -365,7 +361,6 @@
 		padding-left: 21px;
 
 		&__title {
-			font-weight: 300;
 			font-size: 32px;
 			line-height: 32px;
 			letter-spacing: -0.03em;
@@ -376,14 +371,13 @@
 
 		&__title2 {
 			font-weight: 500;
-			font-size: 15px;
+			font-size: 19px;
 			line-height: 30px;
 			margin-bottom: 5px;
 			color: $darktm;
 		}
 
 		&__main {
-			font-weight: 300;
 			font-size: 15px;
 			line-height: 24px;
 			margin-bottom: 13px;
@@ -407,13 +401,12 @@
 			position: absolute;
 			top: 26.9%;
 			left: 52.3%;
-			max-width: 254px;
+			max-width: 260px;
 			font-family: "Proxima Nova";
 		}
 
 		&__title {
 			margin-bottom: 10px;
-			font-weight: 300;
 			font-size: 32px;
 			line-height: 35px;
 			letter-spacing: -0.03em;
@@ -422,7 +415,6 @@
 
 		&__title2 {
 			margin-bottom: 14px;
-			font-weight: 300;
 			font-size: 19px;
 			line-height: 26px;
 			color: $darktm;
@@ -520,14 +512,12 @@
 			padding-top: 32px;
 
 			&-title {
-				font-weight: 300;
 				font-size: 32px;
 				line-height: 32px;
 				color: $darktm;
 			}
 
 			&-out {
-				font-weight: 300;
 				font-size: 19px;
 				line-height: 30px;
 				margin-bottom: 8px;
@@ -535,7 +525,6 @@
 			}
 
 			&-info {
-				font-weight: 300;
 				font-size: 15px;
 				line-height: 24px;
 				max-width: 99%;
@@ -908,7 +897,7 @@
 			margin: 35px auto 0;
 			width: 470px;
 			max-width: 100%;
-			color: $darktm;
+			/*color: $darktm;*/
 		}
 
 		&__name {
@@ -928,9 +917,9 @@
 		}
 	}
 
-	.hm-quote__info {
+	/*.hm-quote__info {
 		font-weight: 300;
-	}
+	}*/
 
 	.hm-quote__main::after {
 		display: none;
@@ -958,13 +947,14 @@
 			font-size: 31px;
 			line-height: 1.2;
 			margin-top: 29px;
-			font-weight: 300;
+
 			color: $darktm;
 		}
 
 		&__meta {
 			font-size: 15px;
 			line-height: 18px;
+			font-weight: 400;
 		}
 
 		&__area {
@@ -975,7 +965,6 @@
 
 		&__info {
 			font-style: normal;
-			font-weight: 300;
 			font-size: 15px;
 			line-height: 24px;
 			margin-top: 12px;
@@ -1201,13 +1190,13 @@
 		&__top {}
 
 		&__title {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(32);
 			line-height: vw(59);
 		}
 
 		&__bottom {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(22);
 			justify-content: center;
@@ -1323,7 +1312,11 @@
 			font-size: vw(15);
 			line-height: vw(24);
 			margin: vw(21) auto 0;
-			width: vw(312);
+			width: vw(318);
+			&__razdel{
+				display: block;
+				height: vw(25);
+			}
 		}
 
 		&__name {
@@ -1390,7 +1383,7 @@
 
 		&__info {
 			font-style: normal;
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
 			margin-top: vw(12);
@@ -1468,7 +1461,7 @@
 		&__out {
 			text-align: center;
 			max-width: vw(210);
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(19);
 			line-height: vw(30);
 			margin-bottom: vw(10);
@@ -1491,7 +1484,7 @@
 
 		&__main {
 			max-width: vw(310);
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
 			margin-bottom: vw(14);
@@ -1520,7 +1513,7 @@
 			font-size: vw(32);
 			line-height: 1;
 			margin-bottom: vw(10);
-			font-weight: 300;
+			font-weight: 400;
 		}
 
 		&__pic {
@@ -1538,7 +1531,6 @@
 	}
 
 	.scikria-item .scikria-item-text__title2 {
-		font-weight: 300 !important;
 		padding: 0 2px;
 	}
 
@@ -1618,7 +1610,6 @@
 			}
 
 			&__title2 {
-				font-weight: 300;
 				font-size: vw(19);
 				line-height: vw(26);
 				margin-bottom: vw(8);
@@ -1665,7 +1656,7 @@
 		background-position: center;
 
 		&__content {
-			max-width: vw(254);
+			max-width: vw(260);
 		}
 
 		&__picture {
