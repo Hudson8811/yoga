@@ -573,6 +573,7 @@
 
 	.custom-widget-title {
 		color: $darktm;
+		font-size: 15px;
 	}
 
 	.master {
@@ -583,11 +584,13 @@
 
 		&__title {
 			color: $darktm;
+			font-size: 15px;
 		}
 
 		&__info {
 			margin-bottom: 18px;
 			color: $darktm;
+			font-size: 15px;
 
 			span {
 				display: inline;
@@ -996,7 +999,7 @@
 		&__title {
 			font-size: 15px;
 			padding-bottom: 33px;
-			font-weight: 400;
+			font-weight: 600;
 		}
 
 		.newposts-widget-item__title {
@@ -1031,6 +1034,7 @@
 
 		&__title {
 			color: $darktm;
+			font-weight: 600;
 		}
 	}
 
