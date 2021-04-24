@@ -19,6 +19,9 @@
 	.category-slider {
 		padding: 0;
 		margin: 0;
+		&-arrow{
+			display: none;
+		}
 
 		.slick-track {
 			//margin: 0 -10px;
