@@ -1,0 +1,48 @@
+.container--breadcrumbs {
+	&+.ksquote{
+		padding-top: 46px;
+	}
+}
+
+
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	list-style: none;
+    padding-top: 33px;
+	flex-wrap: wrap;
+}
+.breadcrumbs-delimiter{
+	display: inline-block;
+	background: url(../img/breadcrumbs-delimiter.svg) no-repeat center center;
+	background-size: contain;
+	min-width: 6px;
+	margin: 0 8px;
+	&::before{
+		content: '';
+		display: block;
+		padding-top: 150%;
+	}
+}
+.breadcrumbs-item {
+	list-style: none;
+	display: inline-flex;
+	align-items: center;
+
+
+	&_link {
+		display: block;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 17px;
+
+		letter-spacing: -0.03em;
+
+		color: #AFB4BF;
+
+		&--current {
+			color: #53565A;
+		}
+	}
+}

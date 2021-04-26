@@ -24,6 +24,10 @@
 		letter-spacing: -0.03em;
 		color: #3E434D;
 
+		&--small {
+			font-size: 32px;
+			line-height: 39px;
+		}
 	}
 
 	.kspc-slider-block {
@@ -205,6 +209,7 @@
 
 	.quote-with-parallax {
 		margin-top: 86px;
+
 		&+.kspc-simple-text {
 			margin-top: 85px;
 		}
@@ -224,6 +229,7 @@
 
 	.kspc-quote-right {
 		margin-top: 75px;
+
 		&__text {
 			padding-left: 60px;
 			font-size: 19px;
@@ -255,10 +261,16 @@
 		letter-spacing: -0.03em;
 		color: #3E434D;
 		padding-left: vw(9);
+
+		&--small {
+			font-size: vw(32);
+			line-height: vw(39);
+		}
 	}
 
 	.kspc-slider-block {
 		margin-top: vw(23);
+
 		&:hover {
 			.kspc-slider-arrow {}
 		}
@@ -314,7 +326,8 @@
 		}
 
 		&+.kspc-simple-text {
-			margin-top: vw(78);}
+			margin-top: vw(78);
+		}
 
 		&+.kspc-slider-block {
 
@@ -468,6 +481,7 @@
 	.kspc-twpah-unwrap {
 		top: 85.5vw;
 	}
+
 	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
 		top: 32.7vw;
 	}
@@ -479,6 +493,7 @@
 	.kspc-twpah-unwrap {
 		top: 84.9vw;
 	}
+
 	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
 		top: 32.7vw;
 	}

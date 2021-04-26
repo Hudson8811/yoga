@@ -1,6 +1,8 @@
 //начало планшета
 @media screen and (max-width:1150px) {
-	.ksquote {padding: 82px 0 110px;}
+	.ksquote {
+		padding: 82px 0 110px;
+	}
 
 	.ksquote-content {
 		&__title {}
@@ -15,6 +17,11 @@
 			margin: 36px auto 0;
 			width: 575px;
 			max-width: 100%;
+		}
+
+		&__author {
+			font-size: 15px;
+			line-height: 18px;
 		}
 	}
 
@@ -63,12 +70,19 @@
 			/* Font_text_dark */
 
 			color: #53565A;
-			&__desk{
+
+			&__desk {
 				display: none;
 			}
-			&__mob{
+
+			&__mob {
 				display: block;
 			}
+		}
+
+		&__author {
+			font-size: vw(15);
+			line-height: vw(18);
 		}
 	}
 
