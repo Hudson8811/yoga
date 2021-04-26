@@ -239,9 +239,9 @@
 	//767 было
 
 	.sh-burger {
-		width: 16px;
-		height: 12px;
-		padding: 18px;
+		width: vw(16);
+		height: vw(12);
+		padding: vw(18);
 	}
 
 
@@ -249,9 +249,9 @@
 	.sh-burger span::after,
 	.sh-burger span::before {
 		position: absolute;
-		width: 16px;
+		width: vw(16);
 		height: 1px;
-		margin-left: -8px;
+		margin-left: vw(-8);
 		margin-top: -1px;
 	}
 
@@ -267,13 +267,13 @@
 
 
 	.sh-lang-switcher {
-		padding: 8px;
-		margin-right: 2px;
+		padding: vw(8);
+		margin-right: vw(2);
 	}
 
 	.lang-switcher {
-		font-size: 17px;
-		line-height: 21px;
+		font-size: vw(17);
+		line-height: vw(21);
 	}
 
 	.container {
@@ -282,25 +282,26 @@
 
 	.site-header {
 		&+* {
-			margin-top: 53px;
+			margin-top: vw(53);
 		}
 	}
 
 	.site-header__inner {
-		min-height: 53px;
-		padding-left: 14px;
-		padding-right: 2px;
+		min-height: vw(53);
+		padding-left: vw(14);
+		padding-right: vw(2);
 	}
 
 	.sh-logo {
-		width: 75px;
+		width: vw(75);
 	}
 
 	.sh-authorize__link {
-		padding: 14px 12px 9px;
+		padding: vw(14) vw(12) vw(9);
 
 		svg {
-			width: 11px;
+			width: vw(11);
+			height: vw(13);
 			display: block;
 		}
 	}

@@ -270,6 +270,9 @@ body {
 		font-weight: normal;
 		font-style: normal;
 		line-height: 33px;
+		&__razdel{
+			display: block;
+		}
 	}
 
 	&__name {

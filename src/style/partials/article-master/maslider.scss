@@ -60,7 +60,7 @@
 		object-position: center;
 	}
 
-	@include scalepic();
+	/*@include scalepic();*/
 }
 
 .maslider-arrow {
@@ -111,10 +111,10 @@
 
 		}
 	}
-	&:hover{
+	/*&:hover{
 		border-color:  #6974A9;
 		svg path{
 			fill: #6974A9;
 		}
-	}
+	}*/
 }

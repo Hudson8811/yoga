@@ -75,7 +75,7 @@
 		}
 
 		&__theme-link {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: 15px;
 			line-height: 18px;
 			text-transform: uppercase;
@@ -84,7 +84,7 @@
 		}
 
 		&__theme-date {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: 15px;
 			line-height: 18px;
 			text-transform: uppercase;
@@ -98,7 +98,7 @@
 
 		&__desc {
 			font-style: normal;
-			font-weight: 300;
+			font-weight: 400;
 			font-size: 15px;
 			line-height: 24px;
 			max-width: 100%;
@@ -180,7 +180,7 @@
 		}
 
 		&__theme-link {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(13);
 			line-height: vw(16);
 			text-transform: uppercase;
@@ -189,7 +189,7 @@
 		}
 
 		&__theme-date {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(13);
 			line-height: vw(16);
 			text-transform: uppercase;
@@ -204,9 +204,10 @@
 
 		&__desc {
 			font-style: normal;
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
+			max-height: vw(48);
 			/* or 160% */
 
 

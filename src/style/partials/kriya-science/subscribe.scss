@@ -86,6 +86,7 @@
 
 		background: #FFFFFF;
 		border: 1px solid #d9dbde;
+		-webkit-mask-image: -webkit-radial-gradient(white,#000);
 	}
 
 	.tippy-arrow {
@@ -110,6 +111,7 @@
 		border-radius: 3px;
 		//background: red;
 	border: 1px solid #d9dbde;
+		-webkit-mask-image: -webkit-radial-gradient(white,#000);
 
 	}
 	&>.tippy-arrow:after {
@@ -121,7 +123,7 @@
 		left: 50%;
 		width: 50px;
 		margin-left: -25px;
-		height: 34px;
+		height: 16px;
 		border: none;
 		border-width: 0 8px 8px;
 		border-bottom-color: initial;

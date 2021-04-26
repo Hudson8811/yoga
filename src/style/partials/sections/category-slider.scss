@@ -1,6 +1,8 @@
 .section-category-slider {
 	padding-top: 42px;
 	padding-bottom: 58px;
+	border-bottom: 1px solid #dee6e9;
+	border-top: 1px solid #dee6e9;
 
 	&__container {
 		max-width: 100%;
@@ -13,13 +15,49 @@
 }
 
 .category-slider {
+	//overflow: hidden; //после залива на прод это надо убрать
 	margin-left: -1px;
 	padding-right: 4px;
 
 	z-index: 1;
 
+	&__arrows{
+		position: relative;
+		@media screen and (min-width: 1151px) {
+			&::before {
+				z-index: 1;
+				content: '';
+				display: block;
+				z-index: 1;
+				position: absolute;
+				left: -40px;
+				top: 0;
+				height: 100%;
+				width: calc(100% + 80px);
+				//background: red;
+			}
+		}
+		&:hover {
+
+			.category-slider-arrow {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__overflow{
+		overflow: hidden;
+		@media screen and (min-width: 1151px) {
+			margin-right: 2px;
+		}
+	}
+
 	.slick-list {
 		z-index: 2;
+		overflow: visible;
+		@media screen and (min-width: 1151px) {
+			width: 788px;
+		}
 		//	margin: 0 -18px ;
 	}
 
@@ -29,40 +67,23 @@
 		margin-top: 36px;
 	}
 
-	@media screen and (min-width: 1151px) {
-		&::before {
-			z-index: 1;
-			content: '';
-			display: block;
-			z-index: 1;
-			position: absolute;
-			left: -40px;
-			top: 0;
-			height: 100%;
-			width: calc(100% + 80px);
-			//background: red;
-		}
-	}
 
-	&:hover {
 
-		.category-slider-arrow {
-			opacity: 1;
-		}
-	}
+
 }
 
 .category-slider-arrow {
 	z-index: 3;
 	//opacity: 1;
 	top: 54px;
-
+	cursor: pointer;
 
 }
 
 .category-slide {
 	width: 227px;
-	margin: 0 18px;
+	/*margin: 0 18px;old*/
+	margin: 0 36px 0 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
