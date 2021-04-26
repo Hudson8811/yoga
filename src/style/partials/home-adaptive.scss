@@ -102,6 +102,7 @@
 		&::after {
 			width: 5px;
 			height: 9px;
+			margin-top: 1px;
 		}
 	}
 
@@ -1144,7 +1145,7 @@
 	.read-more::after {
 		width: vw(5);
 		height: vw(9);
-		margin-top: vw(2);
+		margin-top: 0.25vw;
 		right: vw(-3);
 	}
 
