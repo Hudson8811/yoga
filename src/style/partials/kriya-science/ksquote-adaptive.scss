@@ -2,6 +2,27 @@
 @media screen and (max-width:1150px) {
 	.ksquote {
 		padding: 82px 0 110px;
+		&.ksquote--seminar-page{
+			padding-bottom: 84px;
+			.container{
+				width:650px;
+			}
+			.ksquote-content__title{
+				padding-top: 37px;
+				font-size: 39px;
+				line-height: 39px;
+			}
+			.ksquote-content-description{
+				margin-top: 21px;
+			}
+			.ksquote-content-description__desk br{
+				display: none;
+			}
+			.ksquote-content__author{
+				margin-top: 26px;
+			}
+		}
+
 	}
 
 	.ksquote-content {
