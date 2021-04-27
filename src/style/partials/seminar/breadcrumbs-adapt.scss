@@ -1,15 +1,22 @@
-.container--breadcrumbs {}
+@media screen and (max-width: 1150px) {
+	.container--breadcrumbs {
+		width: 100%;
+		max-width: calc(100% - 34px * 2);
+	}
 
+	.breadcrumbs {
+		padding-top: 18px;
+	}
 
-.breadcrumbs {
-}
+	.breadcrumbs-item {
 
-.breadcrumbs-item {
+		&_link {
 
-
-	&_link {
-
-		&--current {
+			&--current {
+			}
 		}
 	}
+}
+@media screen and (max-width: 749px) {
+
 }
