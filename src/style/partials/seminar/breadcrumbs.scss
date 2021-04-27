@@ -17,7 +17,7 @@
 	background: url(../img/breadcrumbs-delimiter.svg) no-repeat center center;
 	background-size: contain;
 	min-width: 6px;
-	margin: 0 8px;
+    margin: 0 8px 0 10px;
 	&::before{
 		content: '';
 		display: block;

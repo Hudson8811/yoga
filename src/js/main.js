@@ -16,6 +16,7 @@ $(document).on('mobileinit', function () {
 //= libs/jarallax.min.js
 //= libs/aos.js
 //= libs/simplebar.min.js
+//= libs/autosize.min.js
 
 /* my scripts */
 
@@ -24,6 +25,7 @@ $(document).on('mobileinit', function () {
 //= partials/main.js
 //= partials/music.js
 //= partials/kriya-science.js
+//= partials/seminar.js
 
 
 

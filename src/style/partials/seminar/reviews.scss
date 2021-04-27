@@ -1,0 +1,162 @@
+.reviews {
+	margin-top: 42px;
+
+	&:last-child {
+
+		margin-bottom: -61px;
+	}
+}
+
+.reviews-title {}
+
+.reviews-form {
+	margin-top: 18px;
+}
+
+.reviews-textarea {
+	/* or 162% */
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 22px;
+	resize: none;
+	/* FieldHint */
+	color: #53565A;
+	/* FieldBorder */
+	border: 1px solid #D9DBDE;
+	border-radius: 21px;
+	background: #FFFFFF;
+	font-size: 13px;
+	line-height: 21px;
+
+	&::placeholder {
+		color: #AFB4BF;
+		font-size: inherit;
+		line-height: inherit;
+	}
+}
+
+.reviews-send-btn {
+	width: 206px;
+	height: 43px;
+	margin-top: 14px;
+
+	&:hover {}
+
+	&:active {}
+
+	&:focus {}
+}
+
+.reviews-container {
+	margin-top: 57px;
+}
+
+.reviews-item {
+	&__top {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__name {
+		letter-spacing: -0.03em;
+		color: #3E434D;
+		font-size: 22px;
+		font-weight: normal;
+		line-height: 22px;
+	}
+
+	&__days {
+		margin-bottom: 2px;
+		margin-left: 12px;
+		letter-spacing: -0.03em;
+		color: #AFB4BF;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 13px;
+	}
+
+	&__text {
+		position: relative;
+		margin-top: 23px;
+		letter-spacing: -0.55px;
+		color: #53565A;
+		font-size: 17px;
+		line-height: 30px;
+		height: auto;
+		transition: max-height 13s linear, height 13s linear;
+
+		&--with-hide {
+			overflow: hidden;
+			max-height: 30*4px;
+		}
+
+		&--open {
+			max-height: 10000px;
+		}
+
+		p {}
+	}
+
+	&+.reviews-item {
+		margin-top: 47px;
+	}
+}
+
+.reviews-unwrap {
+	top: 30*3px;
+	right: 0;
+	padding-right: 115px;
+}
+
+.reviews-more-options {
+	margin-top: 6px;
+	padding-bottom: 2px;
+
+	&__item {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 22px;
+		letter-spacing: -0.3px;
+
+		color: #AFB4BF;
+	}
+}
+
+.reviews-loadmore-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.reviews-loadmore {
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
+
+	&__text {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		text-align: center;
+		color: #25378D;
+	}
+
+	&__icon {
+		position: absolute;
+		right: -16px;
+		top: 0;
+		width: 11px;
+		height: auto;
+		display: block;
+		top: 50%;
+		transform: translate(0, -50);
+		right: -19px;
+		margin-top: -2px;
+	}
+}

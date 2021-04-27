@@ -1,4 +1,12 @@
-.kspc-tags-and-share {}
+.kspc-tags-and-share {
+	margin-top: 93px;
+}
+
+.kspc-text-with-pic-and-hide {
+	&+.kspc-tags-and-share {
+		margin-top: 0;
+	}
+}
 
 .kspc-tas-flex {
 	display: flex;
@@ -17,7 +25,8 @@
 		align-items: center;
 		padding: 10px 21px 10px 22px;
 		color: #53565A;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 		background: #F0F5F9;
 		font-size: 13px;
 		font-weight: normal;
@@ -35,6 +44,7 @@
 
 .kspc-tas-share {
 	padding-left: 27px;
+
 	.share-tip__links {
 		.share-tip__link {
 			&--fb {}

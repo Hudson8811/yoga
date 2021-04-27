@@ -4,6 +4,7 @@ $(document).ready(function () {
 	$('[data-fancybox]').fancybox({
 		backFocus: false
 	});
+	autosize($('.js-textarea-autosize'));
 	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
 	if ($('.js-home-slider').length > 0) {
 		$('.js-home-slider').slick({
