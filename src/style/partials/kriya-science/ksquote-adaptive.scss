@@ -2,31 +2,33 @@
 @media screen and (max-width:1150px) {
 	.ksquote {
 		padding: 82px 0 110px;
-		&.ksquote--seminar-page{
-			padding-bottom: 84px;
-			.container{
-				width:650px;
-			}
-			.ksquote-content__title{
-				padding-top: 37px;
-				font-size: 39px;
-				line-height: 39px;
-			}
-			.ksquote-content-description{
-				margin-top: 21px;
-			}
-			.ksquote-content-description__desk br{
-				display: none;
-			}
-			.ksquote-content__author{
-				margin-top: 26px;
-			}
-		}
 
 	}
 
+	.container--ksquote-wide {
+		width: 100%;
+	}
+
+	.ksquote-content__author {
+		margin-top: 26px;
+		padding-bottom: 0;
+		margin-bottom: -21px;
+	}
+
 	.ksquote-content {
-		&__title {}
+		&__title {
+
+			&--small-on-tablet {
+				font-size: 39px;
+				line-height: 39px;
+				text-align: center;
+				letter-spacing: -0.03em;
+				color: #3E434D;
+				&+.ksquote-content-description{
+					margin-top: 21px;
+				}
+			}
+		}
 
 		&-description {
 			font-style: normal;

@@ -41,6 +41,10 @@
 		&+.kspc-simple-text--with-hide {
 			margin-top: 51px;
 		}
+
+		&+.kspc-simple-text--has-title {
+			margin-top: 86px;
+		}
 	}
 
 	.kspc-slider {
@@ -105,8 +109,11 @@
 
 			b {}
 
-			ul:first-child{
-				margin-top: 20px;
+
+			ul {
+				&:first-child {
+					margin-top: 19px;
+				}
 			}
 		}
 
@@ -115,6 +122,10 @@
 		}
 
 		&+.kspc-slider-block {}
+
+		&+.kspc-text-with-pic-and-hide--has-title-top {
+			margin-top: 79px;
+		}
 
 		&--with-hide {
 			.kspc-simple-text__p {
@@ -132,6 +143,19 @@
 			&+.kspc-simple-text {
 				margin-top: 79px !important;
 			}
+
+			&--show-9 {
+				.kspc-simple-text__p {
+					max-height: 24*9px;
+				}
+
+				.kspc-twpah-unwrap {
+					left: auto;
+					top: 24*8px;
+					right: 0;
+					width: calc(100% - 169px);
+				}
+			}
 		}
 
 		&--open {
@@ -140,12 +164,62 @@
 
 	}
 
+	.custom-ul {
+		b {
+			letter-spacing: -.04px;
+		}
+
+		li {
+			padding-left: 38px;
+
+			&::before {
+				left: 18px;
+				top: 12px;
+
+			}
+
+			&+li {
+				margin-top: 22px;
+			}
+		}
+	}
+
 	.kspc-text-with-pic-and-hide {
 		margin-top: 32px;
 
 		&+.kspc-simple-text {
 			margin-top: 80px;
 		}
+
+		&+.kspc-simple-text--has-title {
+			margin-top: 76px;
+		}
+
+		&--master {
+
+
+			.kspc-twpah__pic {
+				margin-top: 8px;
+			}
+
+			.kspc-twpah__text {
+				h2+* {
+					margin-top: 19px;
+				}
+
+				ul+* {
+					margin-top: 23px;
+				}
+			}
+
+			&+.kspc-qa {
+				margin-top: 45px;
+			}
+		}
+	}
+
+	.kspc-twpah-title-top+.kspc-twpah {
+		margin-top: 25px;
 	}
 
 	.kspc-twpah {
@@ -159,6 +233,9 @@
 		&--open {}
 
 		&--non-hide {
+			max-height: auto;
+			max-height: unset;
+
 			.kspc-twpah-unwrap {}
 		}
 
@@ -248,9 +325,255 @@
 			margin-top: 69px;
 		}
 	}
-	.custom-ul li+li{
-		margin-top: 21px;
+
+
+	//новые блоки с seminar
+
+	.kspc-h2-style,
+	.kspc-h2-style-in-this h2 {
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 39px;
+		letter-spacing: -.03em;
+		color: #3e434d;
 	}
+
+	.kspc-media-wrap {
+
+		//когда встречу такую ситуацию - прописать margin-top для !has-title
+		&--has-title {
+			margin-top: 78px;
+		}
+
+		&+.kspc-simple-text--has-title {
+			margin-top: 84px;
+		}
+	}
+
+	.kspc-media {
+		margin-top: 26px;
+	}
+
+
+	.kspc-3-in-row {
+		margin-top: 79px;
+	}
+
+	.kspc-3-in-row__title {}
+
+	.kspc-3-in-row__flex {
+		margin-left: 0;
+		justify-content: space-between;
+		margin-top: 26px;
+		margin-bottom: -51px;
+	}
+
+	.kspc-3ir-item {
+		width: calc(50% - 18px);
+		margin-left: 0;
+		margin-bottom: 51px;
+
+		&__pic {
+			img {}
+
+			&::before {}
+		}
+
+		&__desc {}
+
+		&__title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 24px;
+			text-align: center;
+			color: #5A5E64;
+			margin-top: 15px;
+		}
+
+		&__name {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 24px;
+			text-align: center;
+			color: #5A5E64;
+			margin-top: 8px;
+		}
+	}
+
+	.hm-quote-practice--ks-constuctor {
+		padding-top: 86px;
+
+		&+.kspc-simple-text--has-title {
+			margin-top: 85px;
+		}
+	}
+
+
+	.kspc-event {
+		margin-top: 86px;
+
+		&+* {
+			margin-top: 25px;
+		}
+	}
+
+	.kspc-event__container-hr-1 {}
+
+	.kspc-event__container-main {
+		margin-top: 50px;
+	}
+
+	.kspc-event__container-hr-2 {
+		margin-top: 94px;
+	}
+
+	.kspc-event-title {}
+
+	.kspc-event-row {
+		margin-top: 49px;
+	}
+
+	.kspc-event-map {
+		&__img {}
+
+		&::before {}
+	}
+
+	.kspc-event-info-wrap {
+		padding-top: 0px;
+		margin-top: -3px;
+	}
+
+	.kspc-event-calendar {
+		margin-top: 26px;
+		margin-left: -20px;
+
+		&__item {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 18px;
+			text-align: center;
+			margin-left: 20px;
+
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+		}
+
+		&__item-pic {
+			margin-right: 5px;
+			width: 11px;
+
+			rect {}
+		}
+
+		&__item-name {}
+	}
+
+	.kspc-event-info {
+		&__name {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 19px;
+			line-height: 22px;
+			letter-spacing: -0.03em;
+			color: #53565A;
+		}
+
+		&__val {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 24px;
+			color: #53565A;
+			margin-top: 1px;
+		}
+
+		&__date {}
+
+		&__time {}
+
+		&+.kspc-event-info {
+			margin-top: 26px;
+		}
+	}
+
+	.kspc-event-btn {
+		width: 100%;
+		margin-top: 33px;
+		width: 202px;
+
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 21px;
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	.kspc-qa {
+		//скорректировать при встрече
+
+		&+.kspc-tags-and-share {
+			margin-top: 94px;
+		}
+	}
+
+	.kspc-qa-title {}
+
+	.kspc-qa-main {
+		margin-top: 26px;
+	}
+
+	.kspc-qa-item {
+		&__top {
+			padding: 15px 3px 15px 0;}
+
+		&__title {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 24px;
+			color: #53565A;
+		}
+
+		&__plus {
+			&::before {
+				width: 9px;
+				height: 9px;
+				background-size: contain;
+				@supports (-webkit-touch-callout: none) {}
+			}
+		}
+
+		&__content {
+			letter-spacing: -.03px;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 24px;
+			color: #5a5e64;
+			p {
+				&+p {}
+			}
+		}
+
+		&--open {
+			.kspc-qa-item__plus {
+				&::before {}
+			}
+		}
+	}
+
+
 }
 
 
@@ -482,6 +805,8 @@
 			margin-top: vw(71);
 		}
 	}
+
+
 }
 
 

@@ -1,8 +1,4 @@
 @media screen and (max-width: 1150px) {
-	.container--breadcrumbs {
-		width: 100%;
-		max-width: calc(100% - 34px * 2);
-	}
 
 	.breadcrumbs {
 		padding-top: 18px;
@@ -12,11 +8,26 @@
 
 		&_link {
 
-			&--current {
-			}
+			&--current {}
 		}
 	}
+
+	.breadcrumbs-delimiter {
+		margin: 0 8px 0 13px;
+	}
 }
+
 @media screen and (max-width: 749px) {
 
+	.breadcrumbs {
+		padding-top: 18px;
+	}
+
+	.breadcrumbs-item {
+
+		&_link {
+
+			&--current {}
+		}
+	}
 }

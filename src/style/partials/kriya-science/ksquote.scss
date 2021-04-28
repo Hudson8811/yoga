@@ -1,6 +1,16 @@
 .ksquote {
 	//padding: 82px 0 110px;
 	padding: 85px 0 83px;
+
+	&--small-on-tablet {
+
+		.ksquote-content {
+			&__title {
+				font-size: 39px;
+				line-height: 39px;
+			}
+		}
+	}
 }
 
 .ksquote-content {

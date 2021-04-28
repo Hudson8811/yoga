@@ -451,10 +451,6 @@
 
 	&+.kspc-simple-text {
 		margin-top: 73px;
-
-		.kspc-simple-text__h2 {
-			margin-top: -8px;
-		}
 	}
 }
 
@@ -561,6 +557,7 @@
 
 .kspc-event-row {
 	display: flex;
+	align-items: flex-start;
 	margin-top: 38px;
 }
 
@@ -571,7 +568,7 @@
 	-webkit-mask-image: -webkit-radial-gradient(white, #000);
 	position: relative;
 	overflow: hidden;
-	width: calc(50% - 20px);
+    width: calc(50% - 20px);
 
 	&__img {
 		@include relative_img();
@@ -585,7 +582,9 @@
 }
 
 .kspc-event-info-wrap {
-	margin-left: 37px;
+	box-sizing: border-box;
+    width: calc(50% + 20px);
+	padding-left: 37px;
 	padding-top: 16px;
 }
 
@@ -776,13 +775,17 @@
 }
 
 .kspc-media-wrap {
+	//когда встречу такую ситуацию - прописать margin-top для !has-title
+	&--has-title{
+		margin-top: 66px;
+	}
+
 	&+* {
 		margin-top: 76px;
 	}
 }
 
 .kspc-media-title {
-	margin-top: 66px;
 }
 
 .kspc-media {
