@@ -535,7 +535,8 @@
 
 	.kspc-qa-item {
 		&__top {
-			padding: 15px 3px 15px 0;}
+			padding: 15px 3px 15px 0;
+		}
 
 		&__title {
 			font-style: normal;
@@ -550,6 +551,7 @@
 				width: 9px;
 				height: 9px;
 				background-size: contain;
+
 				@supports (-webkit-touch-callout: none) {}
 			}
 		}
@@ -561,6 +563,7 @@
 			font-size: 15px;
 			line-height: 24px;
 			color: #5a5e64;
+
 			p {
 				&+p {}
 			}
@@ -592,7 +595,7 @@
 		line-height: vw(49);
 		letter-spacing: -0.03em;
 		color: #3E434D;
-		padding-left: vw(9);
+		padding-left: 0;
 
 		&--small {
 			font-size: vw(32);
@@ -602,6 +605,10 @@
 
 	.kspc-slider-block {
 		margin-top: vw(23);
+
+		&+.kspc-simple-text--has-title {
+			margin-top: vw(86);
+		}
 
 		&:hover {
 			.kspc-slider-arrow {}
@@ -655,6 +662,12 @@
 			}
 
 			b {}
+
+			ul {
+				&:first-child {
+					margin-top: vw(19);
+				}
+			}
 		}
 
 		&+.kspc-simple-text {
@@ -679,10 +692,49 @@
 			}
 
 			&+.kspc-simple-text {}
+
+
+			&--show-9 {
+				.kspc-simple-text__p {
+					max-height: vw(24*17);
+				}
+
+				.kspc-twpah-unwrap {
+					left: auto;
+					top: vw(24*16);
+					right: 0;
+					width: calc(100% - #{vw(169)});
+				}
+			}
+
 		}
 
 		&--open {
 			.kspc-simple-text__p {}
+		}
+
+		&+.kspc-text-with-pic-and-hide--has-title-top {
+			margin-top: vw(79);
+		}
+	}
+
+	.custom-ul {
+		b {
+			letter-spacing: -.04px;
+		}
+
+		li {
+			padding-left: vw(42);
+
+			&::before {
+				left: vw(22);
+				top: vw(10);
+
+			}
+
+			&+li {
+				margin-top: vw(26);
+			}
 		}
 	}
 
@@ -692,6 +744,36 @@
 		&+.kspc-simple-text {
 			margin-top: vw(78);
 		}
+
+		&+.kspc-simple-text--has-title {
+			margin-top: vw(80);
+		}
+
+		&--master {
+
+
+			.kspc-twpah__pic {
+				margin-top: vw(8);
+			}
+
+			.kspc-twpah__text {
+				h2+* {
+					margin-top: vw(19);
+				}
+
+				ul+* {
+					margin-top: vw(23);
+				}
+			}
+
+			&+.kspc-qa {
+				margin-top: vw(78);
+			}
+		}
+	}
+
+	.kspc-twpah-title-top+.kspc-twpah {
+		margin-top: vw(25);
 	}
 
 	.kspc-twpah {
@@ -707,7 +789,11 @@
 
 		}
 
-		&--non-hide {
+		&--non-hide .kspc-twpah__text {
+			overflow: visible;
+			max-height: auto;
+			max-height: unset;
+
 			.kspc-twpah-unwrap {}
 		}
 
@@ -806,7 +892,279 @@
 		}
 	}
 
+	// новые блоки seminar
 
+	.kspc-h2-style,
+	.kspc-h2-style-in-this h2 {
+		font-weight: 400;
+		font-size: vw(32);
+		line-height: vw(39);
+		letter-spacing: -.03em;
+		color: #3e434d;
+	}
+
+	.kspc-media {
+		margin-top: vw(26);
+	}
+
+	.kspc-media-wrap--has-title {
+		margin-top: vw(78);
+	}
+
+	.kspc-media-wrap+.kspc-simple-text--has-title {
+		margin-top: vw(88);
+	}
+
+	.kspc-3-i.kspc-media {
+		margin-top: vw(27);
+	}
+
+	.kspc-media--video::after {
+		width: vw(59);
+		height: vw(59);
+	}
+
+	.kspc-3-in-row {
+		margin-top: vw(79);
+	}
+
+	.kspc-3-in-row__title {}
+
+	.kspc-3-in-row__flex {
+		margin-bottom: vw(-51);
+		margin-top: vw(26);
+	}
+
+	.kspc-3ir-item {
+		width: 100%;
+		margin-bottom: vw(51);
+
+
+		&__pic {
+			img {}
+
+			&::before {
+				padding-top: 61.758%;
+			}
+		}
+
+		&__desc {
+			margin-top: vw(29);
+		}
+
+		&__title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: vw(15);
+			line-height: vw(24);
+			text-align: center;
+			color: #5A5E64;
+			margin-top: vw(29);
+		}
+
+		&__name {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(24);
+			text-align: center;
+			color: #5A5E64;
+		}
+	}
+
+
+	.hm-quote-practice--ks-constuctor {
+		padding-top: vw(86);
+	}
+
+	.kspc-event {
+		margin-top: vw(86);
+
+		&+* {}
+	}
+
+	.kspc-event__container-hr-1 {}
+
+	.kspc-event__container-main {
+		margin-top: vw(50);}
+
+	.kspc-event__container-hr-2 {
+
+		.hr {
+			display: none;
+		}
+
+		margin-top: vw(68);
+	}
+
+	.kspc-event-title {
+		text-align: left;
+	}
+
+	.kspc-event-row {
+		display: block;
+		margin-top: vw(28);
+	}
+
+	.kspc-event-map {
+		width: 100%;
+
+		&__img {}
+
+		&::before {}
+	}
+
+	.kspc-event-info-wrap {
+		width: 100%;
+		padding-left: 0;
+		margin-top: vw(32);
+	}
+
+	.kspc-event-calendar {
+		margin-top: vw(26);
+		margin-left: vw(-15);
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		&__item {
+
+			margin-left: vw(15);
+
+			font-size: vw(15);
+			line-height: vw(18);
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+		}
+
+		&__item-pic {
+			margin-right: vw(5);
+			width: vw(11);
+			rect {}
+		}
+
+		&__item-name {}
+	}
+
+	.kspc-event-info {
+		text-align: center;
+
+		&__name {
+			font-weight: 600;
+			font-size: vw(19);
+			line-height: vw(22);
+			text-align: center;
+			letter-spacing: -0.03em;
+			color: #53565A;
+		}
+
+		&__val {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(24);
+			text-align: center;
+			color: #53565A;
+		}
+
+		&__date {}
+
+		&__time {
+			margin-left: vw(13);
+		}
+
+		&+.kspc-event-info {
+			margin-top: vw(26);
+		}
+	}
+
+	.kspc-event-btn {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+		margin-top: vw(33);
+		width: vw(202);
+		font-weight: 600;
+		font-size: vw(12);
+		line-height: vw(21);
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+
+	.kspc-qa {
+		//скорректировать при встрече
+
+		&+.kspc-tags-and-share {
+			margin-top: vw(59);
+		}
+	}
+
+	.kspc-qa-title {}
+
+	.kspc-qa-main {
+		margin-top: vw(28);
+	}
+
+	.kspc-qa-item {
+		&__top {
+			padding: vw(15) vw(10) vw(15) 0;
+		}
+
+		&__title {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(24);
+			color: #53565A;
+		}
+
+		&__plus {
+
+			&::before {
+				width: vw(9);
+				height: vw(9);
+				background-size: contain;
+
+				@supports (-webkit-touch-callout: none) {}
+			}
+		}
+
+		&__content {
+			letter-spacing: vw(-.03);
+			font-style: normal;
+			font-weight: 400;
+			font-size: vw(15);
+			line-height: vw(24);
+			color: #5a5e64;
+
+			p {
+				&+p {
+					margin-top: vw(24);
+				}
+			}
+		}
+
+		&--open {
+			.kspc-qa-item__plus {
+				&::before {}
+			}
+		}
+	}
+
+	.kspc-quote-right+.kspc-simple-text {
+		margin-top: vw(73);
+	}
+	.hm-quote-practice--ks-constuctor+.kspc-simple-text--has-title {
+		margin-top: vw(85);
+	}
 }
 
 
@@ -819,6 +1177,15 @@
 	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
 		top: 32.7vw;
 	}
+
+	.kspc-simple-text--with-hide--9 .kspc-twpah-unwrap {
+		//пофиксить
+	}
+
+	.reviews-unwrap {
+		//пофиксить
+
+	}
 }
 
 
@@ -830,5 +1197,14 @@
 
 	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
 		top: 32.7vw;
+	}
+
+	.kspc-simple-text--with-hide--9 .kspc-twpah-unwrap {
+		//пофиксить
+	}
+
+	.reviews-unwrap {
+		//пофиксить
+
 	}
 }

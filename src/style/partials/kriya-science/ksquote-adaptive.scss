@@ -57,6 +57,16 @@
 		padding: vw(86) 0 vw(86);
 	}
 
+	.ksquote-content__title--small-on-tablet+.ksquote-content-description{
+		margin-top: vw(21);
+	}
+
+	.container--ksquote-wide {
+		width: 100%;
+		.ksquote-content__title {
+			width: 100%;
+		}
+	}
 	.ksquote-content {
 		&__title {
 			margin: 0 auto;
@@ -106,6 +116,9 @@
 		&__author {
 			font-size: vw(15);
 			line-height: vw(18);
+			margin-top: vw(26);
+			padding-bottom: 0;
+			margin-bottom: vw(3);
 		}
 	}
 

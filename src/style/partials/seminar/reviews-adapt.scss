@@ -92,21 +92,31 @@
 }
 
 @media screen and (max-width: 749px) {
-
 	.reviews {
-		&:last-child {}
+		margin-top: vw(88);
+
+		&:last-child {
+			margin-bottom: vw(-61);
+		}
 	}
 
 	.reviews-title {}
 
-	.reviews-form {}
+	.reviews-form {
+		margin-top: vw(26);
+	}
 
 	.reviews-textarea {
+		padding: vw(10) vw(22);
+		border-radius: vw(21);
+		font-size: vw(13);
+		line-height: vw(21);
+	}
 
-		/* or 162% */
-		/* FieldHint */
-		/* FieldBorder */
-		&::placeholder {}
+	.reviews-send-btn {
+		width: vw(206);
+		height: vw(43);
+		margin-top: vw(14);
 	}
 
 	.reviews-send-btn {
@@ -117,16 +127,41 @@
 		&:focus {}
 	}
 
-	.reviews-container {}
+	.reviews-container {
+		margin-top: vw(55);
+	}
 
 	.reviews-item {
 		&__top {}
 
-		&__name {}
+		&__name {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(19);
+			line-height: vw(22);
+			letter-spacing: -0.03em;
+			color: #3E434D;
+		}
 
-		&__days {}
+		&__days {
+			font-size: vw(13);
+			line-height: vw(13);
+			letter-spacing: -0.03em;
+			color: #AFB4BF;
+			margin-bottom: vw(3);
+			margin-left: vw(15);
+		}
 
 		&__text {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(24);
+			letter-spacing: -0.03em;
+			color: #53565A;
+			max-height: vw(24*4);
+			margin-top: vw(23);
+
 			&--with-hide {}
 
 			&--open {}
@@ -134,20 +169,63 @@
 			p {}
 		}
 
-		&+.reviews-item {}
+		&+.reviews-item {
+			margin-top: vw(49);
+		}
 	}
 
-	.reviews-unwrap {}
+	.reviews-unwrap {
+		top: vw(24*3);
+		padding-right: vw(25);
+	}
 
 	.reviews-more-options {
-		&__item {}
+		margin-top: vw(9);
+		padding-bottom: vw(0);
+
+		&__item {
+			font-size: vw(13);
+			line-height: vw(22);
+		}
 	}
 
-	.reviews-loadmore-wrap {}
+	.reviews-loadmore-wrap {
+		margin-top: vw(40);
+	}
 
 	.reviews-loadmore {
-		&__text {}
+		&__text {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(30);
+			text-align: center;
+		}
 
-		&__icon {}
+		&__icon {
+			right: vw(-16);
+			width: vw(11);
+			right: vw(-19);
+			margin-top: vw(-2);
+		}
 	}
+}
+
+
+
+
+@media screen and (min-width: 319px) and (max-width: 321px) {
+	.reviews-unwrap {
+		//top: 24*3px; //пофиксить топ
+	}
+
+}
+
+
+
+@media screen and (min-width: 413px) and (max-width: 415px) {
+	.reviews-unwrap {
+		//top: 24*3px; //пофиксить топ
+	}
+
 }

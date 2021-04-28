@@ -19,15 +19,35 @@
 
 @media screen and (max-width: 749px) {
 
+	.breadcrumbs-wrap {
+		&+.ksquote {
+
+			padding-top: vw(52);
+		}
+	}
+
 	.breadcrumbs {
-		padding-top: 18px;
+		padding-top: vw(18);
 	}
 
 	.breadcrumbs-item {
 
 		&_link {
 
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(13);
+			line-height: vw(17);
+			letter-spacing: -0.03em;
+
 			&--current {}
 		}
 	}
+
+
+	.breadcrumbs-delimiter {
+		margin: 0 vw(8) 0 vw(13);
+		min-width: vw(6);
+	}
+
 }
