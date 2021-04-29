@@ -33,6 +33,14 @@ span {
 	background: transparent;
 }
 
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -180,3 +188,4 @@ ul li, ol li {
 .ui-loader.ui-corner-all.ui-loader-default.ui-body-a{
 	display: none !important;
 }
+

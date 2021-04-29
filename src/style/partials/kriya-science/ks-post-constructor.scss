@@ -247,7 +247,7 @@
 	}
 
 	&--has-title-top {
-		margin-top: 20px;
+		margin-top: 48px;
 	}
 
 	&--master {
@@ -851,7 +851,7 @@
 .hm-quote-practice--ks-constuctor {
 	padding-top: 84px;
 
-	&+.kspc-simple-text--has-title {
-		margin-top: 76px;
-	}
+}
+.hm-quote-practice-wrap+.kspc-simple-text--has-title {
+	margin-top: 76px;
 }

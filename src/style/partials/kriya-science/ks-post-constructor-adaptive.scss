@@ -405,11 +405,11 @@
 	.hm-quote-practice--ks-constuctor {
 		padding-top: 86px;
 
-		&+.kspc-simple-text--has-title {
-			margin-top: 85px;
-		}
 	}
 
+	.hm-quote-practice-wrap+.kspc-simple-text--has-title {
+		margin-top: 85px;
+	}
 
 	.kspc-event {
 		margin-top: 86px;
@@ -976,6 +976,9 @@
 	.hm-quote-practice--ks-constuctor {
 		padding-top: vw(86);
 	}
+	.hm-quote-practice-wrap+.kspc-simple-text--has-title {
+		margin-top: vw(85);
+	}
 
 	.kspc-event {
 		margin-top: vw(86);
@@ -1161,9 +1164,6 @@
 
 	.kspc-quote-right+.kspc-simple-text {
 		margin-top: vw(73);
-	}
-	.hm-quote-practice--ks-constuctor+.kspc-simple-text--has-title {
-		margin-top: vw(85);
 	}
 }
 
