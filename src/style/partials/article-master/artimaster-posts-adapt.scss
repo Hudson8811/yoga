@@ -24,7 +24,7 @@
 			font-weight: normal;
 			font-size: 24px;
 			line-height: 32px;
-			color: #3E434D;
+			color: $dark;
 			margin-top: 14px;
 		}
 
@@ -50,7 +50,7 @@
 			font-weight: 400;
 			font-size: 15px;
 			line-height: 30px;
-			color: #53565A;
+			color: $dark;
 		}
 
 		&:hover {}
@@ -101,7 +101,7 @@
 			/* identical to box height, or 137% */
 
 
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__meta {
@@ -135,7 +135,7 @@
 			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
-			color: #53565A;
+			color: $dark;
 		}
 
 		&:hover {}

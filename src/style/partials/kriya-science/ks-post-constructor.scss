@@ -16,7 +16,7 @@
 
 	letter-spacing: -0.03em;
 
-	color: #53565A;
+	color: $dark;
 	margin-left: -3px;
 
 	&--small {
@@ -122,7 +122,7 @@
 		font-size: 35px;
 		line-height: 1.69;
 		letter-spacing: -.034em;
-		color: #53565A;
+		color: $dark;
 		//margin-left: -3px;
 	}
 
@@ -135,7 +135,7 @@
 		font-weight: normal;
 		font-size: 17px;
 		line-height: 30px;
-		color: #5A5E64;
+		color: $dark;
 		//letter-spacing: -.05px;
 
 		p {
@@ -275,7 +275,7 @@
 	font-weight: normal;
 	font-size: 17px;
 	line-height: 30px;
-	color: #5A5E64;
+	color: $dark;
 
 	&.kspc-twpah--open {
 		max-height: 10000px;
@@ -420,7 +420,7 @@
 	font-size: 45px;
 	line-height: 59px;
 	text-align: center;
-	color: #53565A;
+	color: $dark;
 	margin-left: -24px;
 }
 
@@ -442,7 +442,7 @@
 
 		letter-spacing: -0.06px;
 
-		color: #5A5E64;
+		color: $dark;
 	}
 
 	&+* {
@@ -462,7 +462,7 @@
 	font-size: 35px;
 	line-height: 59px;
 	letter-spacing: -0.03em;
-	color: #53565A;
+	color: $dark;
 
 }
 
@@ -514,7 +514,7 @@
 		font-weight: 600;
 		font-size: 17px;
 		line-height: 30px;
-		color: #5A5E64;
+		color: $dark;
 		margin-top: 14px;
 	}
 
@@ -523,7 +523,7 @@
 		font-weight: normal;
 		font-size: 17px;
 		line-height: 30px;
-		color: #5A5E64;
+		color: $dark;
 		margin-top: 4px;
 		letter-spacing: -.2px;
 	}
@@ -638,7 +638,7 @@
 		font-size: 22px;
 		line-height: 22px;
 		letter-spacing: -0.03em;
-		color: #53565A;
+		color: $dark;
 	}
 
 	&__val {
@@ -647,7 +647,7 @@
 		font-weight: normal;
 		font-size: 17px;
 		line-height: 30px;
-		color: #53565A;
+		color: $dark;
 	}
 
 	&__date {
@@ -711,7 +711,7 @@
 		font-weight: normal;
 		font-size: 22px;
 		line-height: 58px;
-		color: #3E434D;
+		color: $dark;
 
 	}
 
@@ -755,7 +755,7 @@
 		font-weight: normal;
 		font-size: 17px;
 		line-height: 30px;
-		color: #5A5E64;
+		color: $dark;
 
 		p {
 			&+p {

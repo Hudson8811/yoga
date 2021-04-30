@@ -33,7 +33,7 @@
 			font-size: 19px;
 			line-height: 22px;
 			letter-spacing: -0.03em;
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__days {
@@ -49,7 +49,7 @@
 			font-size: 15px;
 			line-height: 24px;
 			letter-spacing: -0.03em;
-			color: #53565A;
+			color: $dark;
 			max-height: 24*4px;
 
 			&--with-hide {}
@@ -140,7 +140,7 @@
 			font-size: vw(19);
 			line-height: vw(22);
 			letter-spacing: -0.03em;
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__days {
@@ -158,7 +158,7 @@
 			font-size: vw(15);
 			line-height: vw(24);
 			letter-spacing: -0.03em;
-			color: #53565A;
+			color: $dark;
 			max-height: vw(24*4);
 			margin-top: vw(23);
 

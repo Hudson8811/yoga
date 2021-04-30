@@ -22,7 +22,7 @@
 	padding: 10px 22px;
 	resize: none;
 	/* FieldHint */
-	color: #53565A;
+	color: $dark;
 	/* FieldBorder */
 	border: 1px solid #D9DBDE;
 	border-radius: 21px;
@@ -61,7 +61,7 @@
 
 	&__name {
 		letter-spacing: -0.03em;
-		color: #3E434D;
+		color: $dark;
 		font-size: 22px;
 		font-weight: normal;
 		line-height: 22px;
@@ -82,7 +82,7 @@
 		position: relative;
 		margin-top: 23px;
 		letter-spacing: -0.55px;
-		color: #53565A;
+		color: $dark;
 		font-size: 17px;
 		line-height: 30px;
 		height: auto;

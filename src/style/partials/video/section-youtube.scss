@@ -14,23 +14,23 @@ padding-bottom: 140px;
         display: flex;
         padding-left: 10px;
     }
-    
+
     &__link {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-right: 54px;
     }
-    
+
     &__icon {
         margin-bottom: 8px;
     }
-    
+
     &__name {
         font-weight: 500;
         font-size: 17px;
         line-height: 26px;
         text-align: center;
-        color: #3E434D;
+        color: $dark;
     }
 }

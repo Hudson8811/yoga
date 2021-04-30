@@ -66,7 +66,7 @@
 			/* identical to box height, or 187% */
 
 
-			color: #525865;
+			color: $dark;
 
 		}
 
@@ -105,7 +105,7 @@
 			width: 100%;
 			margin-right: 0;
 
-			color: #3E434D;
+			color: $dark;
 		}
 
 		.slick-dots {
@@ -171,7 +171,7 @@
 			font-size: vw(19);
 			line-height: vw(27);
 
-			color: #53565A;
+			color: $dark;
 
 		}
 
@@ -213,7 +213,7 @@
 
 			/* Font_text_dark */
 
-			color: #53565A;
+			color: $dark;
 		}
 
 		.slick-dots {

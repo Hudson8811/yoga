@@ -36,14 +36,14 @@
 	font-size: 35px;
 	line-height: 58px;
 	letter-spacing: -0.03em;
-	color: #53565A;
+	color: $dark;
 
 	@media screen and (max-width: 1150px) {
 		font-style: normal;
 		font-size: 32px;
 		line-height: 32px;
 		letter-spacing: 0;
-		color: #525865;
+		color: $dark;
 
 	}
 
@@ -52,7 +52,7 @@
 		font-style: normal;
 		font-size: vw(24);
 		line-height: vw(45);
-		color: #525865;
+		color: $dark;
 
 
 	}

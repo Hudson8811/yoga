@@ -155,7 +155,7 @@
 		@media screen and (min-width:$minDesktop) {
 			&:hover {
 				//text-decoration-line: underline;
-				color: #53565A;
+				color: $dark;
 			}
 
 		}
@@ -186,7 +186,7 @@
 
 	@media screen and (min-width:$minDesktop) {
 		&:hover {
-			color: #53565A;
+			color: $dark;
 			//text-decoration-line: underline;
 		}
 	}
@@ -272,7 +272,7 @@
 
 		@media screen and (min-width:$minDesktop) {
 			&:hover {
-				color: #53565A;
+				color: $dark;
 				//text-decoration-line: underline;
 			}
 		}

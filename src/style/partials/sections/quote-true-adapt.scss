@@ -17,7 +17,7 @@
 			line-height: 1.02;
 			text-align: center;
 			letter-spacing: -0.03em;
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__desc {
@@ -26,7 +26,7 @@
 			padding-left: 30px;
 			font-size: 15px;
 			line-height: 24px;
-			color: #53565A;
+			color: $dark;
 		}
 	}
 }
@@ -52,7 +52,7 @@
 			line-height: vw(39);
 			text-align: center;
 			letter-spacing: -0.03em;
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__desc {
@@ -62,7 +62,7 @@
 			padding-left: 0px;
 			font-size: vw(15);
 			line-height: vw(24);
-			color: #53565A;
+			color: $dark;
 		}
 	}
 }

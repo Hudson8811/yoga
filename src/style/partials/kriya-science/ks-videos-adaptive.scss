@@ -16,7 +16,7 @@
 
 		/* Font_Title_dark */
 
-		color: #3E434D;
+		color: $dark;
 	}
 
 	.ks-videos-row {
@@ -40,7 +40,7 @@
 			/* identical to box height, or 137% */
 
 
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__preview {}
@@ -64,7 +64,7 @@
 
 		/* Font_text_dark */
 
-		color: #53565A;
+		color: $dark;
 	}
 
 	.ks-videos-row {
@@ -97,7 +97,7 @@
 
 			margin-top: vw(18);
 
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__preview {}

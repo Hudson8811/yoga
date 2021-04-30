@@ -23,7 +23,7 @@
 		font-size: 39px;
 		line-height: 49px;
 		letter-spacing: -0.03em;
-		color: #3E434D;
+		color: $dark;
 
 		&--small {
 			font-size: 32px;
@@ -82,7 +82,7 @@
 
 			/* Font_Title_dark */
 
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__p {
@@ -99,7 +99,7 @@
 			/* or 160% */
 
 
-			color: #5A5E64;
+			color: $dark;
 
 			p {
 				&+p {
@@ -227,7 +227,7 @@
 		font-weight: normal;
 		font-size: 15px;
 		line-height: 24px;
-		color: #5A5E64;
+		color: $dark;
 		max-height: 24*14px;
 
 		&--open {}
@@ -304,7 +304,7 @@
 		font-size: 32px;
 		line-height: 32px;
 		text-align: center;
-		color: #3E434D;
+		color: $dark;
 		margin-left: 0;
 		padding: 117px 20px;
 	}
@@ -317,7 +317,7 @@
 			padding-left: 60px;
 			font-size: 19px;
 			line-height: 36px;
-			color: #5A5E64;
+			color: $dark;
 		}
 
 		&+* {
@@ -335,7 +335,7 @@
 		font-size: 32px;
 		line-height: 39px;
 		letter-spacing: -.03em;
-		color: #3e434d;
+		color: $dark;
 	}
 
 	.kspc-media-wrap {
@@ -387,7 +387,7 @@
 			font-size: 15px;
 			line-height: 24px;
 			text-align: center;
-			color: #5A5E64;
+			color: $dark;
 			margin-top: 15px;
 		}
 
@@ -397,7 +397,7 @@
 			font-size: 15px;
 			line-height: 24px;
 			text-align: center;
-			color: #5A5E64;
+			color: $dark;
 			margin-top: 8px;
 		}
 	}
@@ -482,7 +482,7 @@
 			font-size: 19px;
 			line-height: 22px;
 			letter-spacing: -0.03em;
-			color: #53565A;
+			color: $dark;
 		}
 
 		&__val {
@@ -490,7 +490,7 @@
 			font-weight: normal;
 			font-size: 15px;
 			line-height: 24px;
-			color: #53565A;
+			color: $dark;
 			margin-top: 1px;
 		}
 
@@ -543,7 +543,7 @@
 			font-weight: normal;
 			font-size: 15px;
 			line-height: 24px;
-			color: #53565A;
+			color: $dark;
 		}
 
 		&__plus {
@@ -562,7 +562,7 @@
 			font-weight: 400;
 			font-size: 15px;
 			line-height: 24px;
-			color: #5a5e64;
+			color: $dark;
 
 			p {
 				&+p {}
@@ -594,7 +594,7 @@
 		font-size: vw(39);
 		line-height: vw(49);
 		letter-spacing: -0.03em;
-		color: #3E434D;
+		color: $dark;
 		padding-left: 0;
 
 		&--small {
@@ -641,7 +641,7 @@
 			font-size: vw(32);
 			line-height: vw(39);
 			letter-spacing: -0.03em;
-			color: #3E434D;
+			color: $dark;
 		}
 
 		&__p {
@@ -649,7 +649,7 @@
 			font-weight: normal;
 			font-size: vw(15);
 			line-height: vw(24);
-			color: #53565A;
+			color: $dark;
 
 			&:not(:first-child) {
 				margin-top: vw(20);
@@ -779,7 +779,7 @@
 	.kspc-twpah {
 		font-size: vw(15);
 		line-height: vw(24);
-		color: #53565A;
+		color: $dark;
 		max-height: unset;
 
 		&--open {
@@ -859,7 +859,7 @@
 		font-size: vw(32);
 		line-height: vw(32);
 		text-align: center;
-		color: #3E434D;
+		color: $dark;
 
 		&+.kspc-simple-text {
 			margin-top: vw(51);
@@ -870,7 +870,7 @@
 		font-size: vw(32);
 		line-height: vw(32);
 		text-align: center;
-		color: #3e434d;
+		color: $dark;
 		margin-left: 0;
 		padding: vw(88) vw(10) vw(86);
 	}
@@ -884,7 +884,7 @@
 			padding-left: vw(13);
 			font-size: vw(19);
 			line-height: vw(36);
-			color: #5A5E64;
+			color: $dark;
 		}
 
 		&+* {
@@ -900,7 +900,7 @@
 		font-size: vw(32);
 		line-height: vw(39);
 		letter-spacing: -.03em;
-		color: #3e434d;
+		color: $dark;
 	}
 
 	.kspc-media {
@@ -958,7 +958,7 @@
 			font-size: vw(15);
 			line-height: vw(24);
 			text-align: center;
-			color: #5A5E64;
+			color: $dark;
 			margin-top: vw(29);
 		}
 
@@ -968,7 +968,7 @@
 			font-size: vw(15);
 			line-height: vw(24);
 			text-align: center;
-			color: #5A5E64;
+			color: $dark;
 		}
 	}
 
@@ -1061,7 +1061,7 @@
 			line-height: vw(22);
 			text-align: center;
 			letter-spacing: -0.03em;
-			color: #53565A;
+			color: $dark;
 		}
 
 		&__val {
@@ -1070,7 +1070,7 @@
 			font-size: vw(15);
 			line-height: vw(24);
 			text-align: center;
-			color: #53565A;
+			color: $dark;
 		}
 
 		&__date {}
@@ -1126,7 +1126,7 @@
 			font-weight: normal;
 			font-size: vw(15);
 			line-height: vw(24);
-			color: #53565A;
+			color: $dark;
 		}
 
 		&__plus {
@@ -1146,7 +1146,7 @@
 			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
-			color: #5a5e64;
+			color: $dark;
 
 			p {
 				&+p {

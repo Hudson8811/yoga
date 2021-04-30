@@ -16,7 +16,7 @@
 			line-height: 30px;
 			text-align: center;
 			text-transform: uppercase;
-			color: #3E434D;
+			color: $dark;
 
 			padding-bottom: 9px;
 			margin-bottom: 13px;
@@ -31,7 +31,7 @@
 			font-size: 15px;
 			line-height: 17px;
 			text-align: center;
-			color: #53565A;
+			color: $dark;
 			list-style: none;
 		}
 
@@ -64,7 +64,7 @@
 			line-height: vw(30);
 			text-align: center;
 			text-transform: uppercase;
-			color: #3E434D;
+			color: $dark;
 			padding-bottom: vw(10);
 			margin-bottom: vw(13);
 
@@ -78,7 +78,7 @@
 			font-size: vw(15);
 			line-height: vw(17);
 			text-align: center;
-			color: #53565A;
+			color: $dark;
 			list-style: none;
 		}
 

@@ -147,14 +147,14 @@
 			line-height: 32px;
 			letter-spacing: -0.03em;
 			margin-bottom: 10px;
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__out {
 			font-size: 19px;
 			line-height: 30px;
 			margin-bottom: 7px;
-			color: $darktm;
+			color: $dark;
 
 		}
 
@@ -165,7 +165,7 @@
 			margin-bottom: 14px;
 			text-align: center;
 			padding-left: 2px;
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__read-more {
@@ -229,7 +229,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			color: $darktm;
+			color: $dark;
 		}
 
 
@@ -358,7 +358,7 @@
 		padding-top: 0px;
 		max-width: 354px;
 		font-family: "Proxima Nova";
-		color: $darktm;
+		color: $dark;
 		padding-left: 21px;
 
 		&__title {
@@ -366,7 +366,7 @@
 			line-height: 32px;
 			letter-spacing: -0.03em;
 			margin-bottom: 6px;
-			color: $darktm;
+			color: $dark;
 
 		}
 
@@ -375,14 +375,14 @@
 			font-size: 19px;
 			line-height: 30px;
 			margin-bottom: 5px;
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__main {
 			font-size: 15px;
 			line-height: 24px;
 			margin-bottom: 13px;
-			color: $darktm;
+			color: $dark;
 
 
 			& span {
@@ -411,14 +411,14 @@
 			font-size: 32px;
 			line-height: 35px;
 			letter-spacing: -0.03em;
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__title2 {
 			margin-bottom: 14px;
 			font-size: 19px;
 			line-height: 26px;
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__more {
@@ -475,7 +475,7 @@
 			top: 49%;
 
 			p {
-				color: $darktm;
+				color: $dark;
 				font-weight: 400;
 				font-size: 15px;
 				line-height: 21px;
@@ -515,21 +515,21 @@
 			&-title {
 				font-size: 32px;
 				line-height: 32px;
-				color: $darktm;
+				color: $dark;
 			}
 
 			&-out {
 				font-size: 19px;
 				line-height: 30px;
 				margin-bottom: 8px;
-				color: $darktm;
+				color: $dark;
 			}
 
 			&-info {
 				font-size: 15px;
 				line-height: 24px;
 				max-width: 99%;
-				color: $darktm;
+				color: $dark;
 
 				span {
 					display: inline;
@@ -573,7 +573,7 @@
 	}
 
 	.custom-widget-title {
-		color: $darktm;
+		color: $dark;
 		font-size: 15px;
 	}
 
@@ -584,13 +584,13 @@
 		&_video {}
 
 		&__title {
-			color: $darktm;
+			color: $dark;
 			font-size: 15px;
 		}
 
 		&__info {
 			margin-bottom: 18px;
-			color: $darktm;
+			color: $dark;
 			font-size: 15px;
 
 			span {
@@ -645,7 +645,7 @@
 
 	.slnewsw-slider-item__name {
 		width: 100%;
-		color: $darktm;
+		color: $dark;
 	}
 
 	.slider-news-widget-wrap {
@@ -782,7 +782,7 @@
 
 		&__title,
 		&__description {
-			color: $darktm;
+			color: $dark;
 		}
 
 	}
@@ -809,7 +809,7 @@
 			font-size: 32px;
 			line-height: 32px;
 			margin-bottom: 59px;
-			color: $darktm;
+			color: $dark;
 		}
 	}
 
@@ -894,7 +894,7 @@
 		margin-left: 0;
 
 		&__main {
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__info {
@@ -904,7 +904,7 @@
 			margin: 35px auto 0;
 			width: 515px;
 			max-width: 100%;
-			/*color: $darktm;*/
+			/*color: $dark;*/
 			&__razdel2{
 				display: block;
 			}
@@ -958,7 +958,7 @@
 			line-height: 1.2;
 			margin-top: 29px;
 
-			color: $darktm;
+			color: $dark;
 		}
 
 		&__meta {
@@ -978,7 +978,7 @@
 			font-size: 15px;
 			line-height: 24px;
 			margin-top: 12px;
-			color: $darktm;
+			color: $dark;
 		}
 
 		&:hover {}
@@ -1021,7 +1021,7 @@
 	}
 
 	.newposts-widget-item__title {
-		color: $darktm;
+		color: $dark;
 	}
 
 	.wnevents-widget {
@@ -1037,7 +1037,7 @@
 		}
 
 		&__title {
-			color: $darktm;
+			color: $dark;
 			font-weight: 600;
 		}
 	}

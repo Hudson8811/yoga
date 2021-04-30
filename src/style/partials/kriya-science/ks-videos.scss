@@ -13,7 +13,7 @@
 
 	/* Font_text_dark */
 
-	color: #53565A;
+	color: $dark;
 }
 
 .ks-videos-row {
@@ -80,7 +80,7 @@
 		font-weight: 500;
 		font-size: 22px;
 		line-height: 26px;
-		color: #53565A;
+		color: $dark;
 	}
 
 	&__preview {
