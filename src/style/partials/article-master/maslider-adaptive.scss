@@ -7,6 +7,18 @@
 		padding: 0 3px 0;
 
 		&__inner {}
+		&--video {
+			.maslider-slide__inner {
+
+				&::before {
+					width: 59px;
+					height: 59px;
+					background: url(../img/play-vid.svg) no-repeat center center;
+					background-size: contain;
+				}
+
+			}
+		}
 	}
 
 	.maslider-slide__title {
@@ -33,6 +45,7 @@
 
 		img {}
 	}
+
 
 	.maslider-arrow {
 		display: none !important;
@@ -67,6 +80,16 @@
 		padding: 0 vw(3) 2px;
 
 		&__inner {}
+		&--video {
+			.maslider-slide__inner {
+
+				&::before {
+					width: vw(59);
+					height: vw(59);
+				}
+
+			}
+		}
 	}
 
 	.maslider-slide__title {
@@ -75,7 +98,7 @@
 		font-weight: normal;
 		font-size: vw(19);
 		line-height: vw(26);
-		color: $dark;
+		color: #363B42;
 
 		span {
 			width: 60%;

@@ -478,7 +478,7 @@
 	.kspc-event-info {
 		&__name {
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 19px;
 			line-height: 22px;
 			letter-spacing: -0.03em;
@@ -729,6 +729,8 @@
 			&::before {
 				left: vw(22);
 				top: vw(10);
+				width: vw(6);
+				height: vw(6);
 
 			}
 
@@ -1056,7 +1058,7 @@
 		text-align: center;
 
 		&__name {
-			font-weight: 600;
+			font-weight: 500;
 			font-size: vw(19);
 			line-height: vw(22);
 			text-align: center;

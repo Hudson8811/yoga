@@ -464,13 +464,13 @@ $(document).ready(function () {
 
 
 
-	$('.article-slider').slick({
+	$('.js-article-slider').slick({
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		arrows: true,
 		dots: true,
-		speed: slickSpeedMain*3,
+		speed: slickSpeedMain * 3,
 		touchMove: false,
 		prevArrow: '<div class="customized-arrow article-arrow customized-arrow--prev"><svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8233 12.3152L2.36163 22.207C2.17645 22.4015 1.93262 22.5232 1.67146 22.5513C1.4103 22.5794 1.14788 22.5122 0.928673 22.3612L0.76009 22.207L0.612583 22.0307C0.48937 21.8385 0.423584 21.6122 0.423584 21.3808C0.423584 21.1494 0.48937 20.9232 0.612583 20.7309L0.76009 20.5547C0.805954 20.4921 0.863259 20.4397 0.928673 20.4004L8.64132 12.3152C8.84273 12.0873 8.95459 11.7884 8.95459 11.478C8.95459 11.1677 8.84273 10.8688 8.64132 10.6409L0.928673 2.59969L0.76009 2.35735C0.60781 2.1611 0.524704 1.91608 0.524704 1.66338C0.524704 1.41068 0.60781 1.16566 0.76009 0.969418L0.9076 0.793172L1.07618 0.638958C1.26331 0.508244 1.48331 0.438477 1.70837 0.438477C1.93342 0.438477 2.15342 0.508244 2.34055 0.638958L2.50914 0.793172L11.1911 9.84777L11.9708 10.6849C12.1458 10.9267 12.2277 11.2283 12.2004 11.5301C12.173 11.8319 12.0385 12.112 11.8233 12.3152Z" fill="#AFB4BF"/></svg></div>',
 		nextArrow: '<div class="customized-arrow article-arrow customized-arrow--next"><svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8233 12.3152L2.36163 22.207C2.17645 22.4015 1.93262 22.5232 1.67146 22.5513C1.4103 22.5794 1.14788 22.5122 0.928673 22.3612L0.76009 22.207L0.612583 22.0307C0.48937 21.8385 0.423584 21.6122 0.423584 21.3808C0.423584 21.1494 0.48937 20.9232 0.612583 20.7309L0.76009 20.5547C0.805954 20.4921 0.863259 20.4397 0.928673 20.4004L8.64132 12.3152C8.84273 12.0873 8.95459 11.7884 8.95459 11.478C8.95459 11.1677 8.84273 10.8688 8.64132 10.6409L0.928673 2.59969L0.76009 2.35735C0.60781 2.1611 0.524704 1.91608 0.524704 1.66338C0.524704 1.41068 0.60781 1.16566 0.76009 0.969418L0.9076 0.793172L1.07618 0.638958C1.26331 0.508244 1.48331 0.438477 1.70837 0.438477C1.93342 0.438477 2.15342 0.508244 2.34055 0.638958L2.50914 0.793172L11.1911 9.84777L11.9708 10.6849C12.1458 10.9267 12.2277 11.2283 12.2004 11.5301C12.173 11.8319 12.0385 12.112 11.8233 12.3152Z" fill="#AFB4BF"/></svg></div>',
@@ -481,8 +481,9 @@ $(document).ready(function () {
 					slidesToScroll: 1,
 					variableWidth: true,
 					arrows: false,
-					speed: slickSpeedMain,/*,
-					dots: false,*/
+					speed: slickSpeedMain,
+					/*,
+										dots: false,*/
 				}
 			}
 			/*,
@@ -504,6 +505,47 @@ $(document).ready(function () {
 
 	});
 
+
+	$('.js-article-slider--videos').slick({
+		infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		arrows: true,
+		dots: true,
+		speed: slickSpeedMain * 3,
+		touchMove: false,
+		prevArrow: '<div class="customized-arrow new-videos-arrow customized-arrow--prev"><svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8233 12.3152L2.36163 22.207C2.17645 22.4015 1.93262 22.5232 1.67146 22.5513C1.4103 22.5794 1.14788 22.5122 0.928673 22.3612L0.76009 22.207L0.612583 22.0307C0.48937 21.8385 0.423584 21.6122 0.423584 21.3808C0.423584 21.1494 0.48937 20.9232 0.612583 20.7309L0.76009 20.5547C0.805954 20.4921 0.863259 20.4397 0.928673 20.4004L8.64132 12.3152C8.84273 12.0873 8.95459 11.7884 8.95459 11.478C8.95459 11.1677 8.84273 10.8688 8.64132 10.6409L0.928673 2.59969L0.76009 2.35735C0.60781 2.1611 0.524704 1.91608 0.524704 1.66338C0.524704 1.41068 0.60781 1.16566 0.76009 0.969418L0.9076 0.793172L1.07618 0.638958C1.26331 0.508244 1.48331 0.438477 1.70837 0.438477C1.93342 0.438477 2.15342 0.508244 2.34055 0.638958L2.50914 0.793172L11.1911 9.84777L11.9708 10.6849C12.1458 10.9267 12.2277 11.2283 12.2004 11.5301C12.173 11.8319 12.0385 12.112 11.8233 12.3152Z" fill="#AFB4BF"/></svg></div>',
+		nextArrow: '<div class="customized-arrow new-videos-arrow customized-arrow--next"><svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8233 12.3152L2.36163 22.207C2.17645 22.4015 1.93262 22.5232 1.67146 22.5513C1.4103 22.5794 1.14788 22.5122 0.928673 22.3612L0.76009 22.207L0.612583 22.0307C0.48937 21.8385 0.423584 21.6122 0.423584 21.3808C0.423584 21.1494 0.48937 20.9232 0.612583 20.7309L0.76009 20.5547C0.805954 20.4921 0.863259 20.4397 0.928673 20.4004L8.64132 12.3152C8.84273 12.0873 8.95459 11.7884 8.95459 11.478C8.95459 11.1677 8.84273 10.8688 8.64132 10.6409L0.928673 2.59969L0.76009 2.35735C0.60781 2.1611 0.524704 1.91608 0.524704 1.66338C0.524704 1.41068 0.60781 1.16566 0.76009 0.969418L0.9076 0.793172L1.07618 0.638958C1.26331 0.508244 1.48331 0.438477 1.70837 0.438477C1.93342 0.438477 2.15342 0.508244 2.34055 0.638958L2.50914 0.793172L11.1911 9.84777L11.9708 10.6849C12.1458 10.9267 12.2277 11.2283 12.2004 11.5301C12.173 11.8319 12.0385 12.112 11.8233 12.3152Z" fill="#AFB4BF"/></svg></div>',
+		responsive: [{
+				breakpoint: 1150,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					variableWidth: true,
+					arrows: false,
+					speed: slickSpeedMain,
+					/*,
+										dots: false,*/
+				}
+			}
+			/*,
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}*/
+		]
+
+	});
 	$('.category-slider').slick({
 		infinite: true,
 		slidesToShow: 3,
@@ -511,7 +553,7 @@ $(document).ready(function () {
 		arrows: false,
 		dots: true,
 		variableWidth: false,
-		speed: slickSpeedMain*3,
+		speed: slickSpeedMain * 3,
 		touchMove: false,
 		prevArrow: '',
 		nextArrow: '',
@@ -520,10 +562,11 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-                    variableWidth: true,
+					variableWidth: true,
 					speed: slickSpeedMain,
-					arrows: false/*,
-					dots: false,*/
+					arrows: false
+					/*,
+										dots: false,*/
 				}
 			}
 			/*,
@@ -543,12 +586,12 @@ $(document).ready(function () {
 			}*/
 		]
 	});
-    $('.category-slider-arrow.customized-arrow--prev').on('click', function() {
-        $('.category-slider').slick('slickPrev');
-    });
-    $('.category-slider-arrow.customized-arrow--next').on('click', function() {
-        $('.category-slider').slick('slickNext');
-    });
+	$('.category-slider-arrow.customized-arrow--prev').on('click', function () {
+		$('.category-slider').slick('slickPrev');
+	});
+	$('.category-slider-arrow.customized-arrow--next').on('click', function () {
+		$('.category-slider').slick('slickNext');
+	});
 
 
 	$('.video-slider').slick({
@@ -588,6 +631,40 @@ $(document).ready(function () {
 
 	});
 
+
+	function ytSlider() {
+		$('.js-yt-slider:not(.slick-slider').slick({
+			autoplay: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			variableWidth: true,
+			speed: slickSpeedMain,
+			touchMove: false,
+			arrows: false
+		});
+	}
+
+	if (window.matchMedia("(max-width: 749px)").matches) {
+		ytSlider();
+	}
+
+	$(window).resize(function (e) {
+		if (window.matchMedia("(max-width: 749px)").matches) {
+			if (!$('.js-yt-slider').hasClass('slick-initialized')) {
+				ytSlider();
+			}
+
+		} else {
+			if ($('.js-yt-slider').hasClass('slick-initialized')) {
+				$('.js-yt-slider').slick('unslick');
+			}
+		}
+	});
+
+
+
+
 	AOS.init({
 		// Global settings:
 		//disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -616,13 +693,13 @@ $(document).ready(function () {
 	});
 	setTimeout(function () {
 		AOS.refresh();
-	}, 2000)
+	}, 2000);
 	setTimeout(function () {
 		AOS.refresh();
-	}, 5000)
+	}, 5000);
 	setTimeout(function () {
 		AOS.refresh();
-	}, 10000)
+	}, 10000);
 });
 
 

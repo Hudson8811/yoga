@@ -2,6 +2,9 @@
 	.artimaster-posts-section {
 		margin-top: 55px;
 		margin-bottom: 107px;
+		&--videos {
+			margin-bottom: 58px;
+		}
 	}
 
 	.artimaster-posts__container {}
@@ -71,6 +74,9 @@
 	.artimaster-posts-section {
 		margin-top: vw(22);
 		margin-bottom: vw(93);
+		&--videos{
+			margin-bottom: 16vw;
+		}
 	}
 
 	.artimaster-posts__container {}
@@ -85,12 +91,22 @@
 	.artimaster-post {
 		width: 100%;
 		margin-bottom: vw(51);
+		&--videos{
+			margin-bottom: 13.4vw;
+		}
 
 		&__img-wrapper {
 			&::after {}
+			&--videos{
+				&+.artimaster-post__title {
+					margin-top: vw(14);
+				}
+			}
 		}
 
-		&__img {}
+		&__img {
+
+		}
 
 		&__title {
 			margin-top: vw(18);

@@ -2,6 +2,9 @@
 .artimaster-posts-section {
 	margin-top: 41px;
     margin-bottom:150px;
+	&--videos{
+		margin-bottom: 93px;
+	}
 }
 
 .artimaster-posts__container {}
@@ -14,11 +17,21 @@
 	flex-wrap: wrap;
 	margin-top: 19px;
     margin-bottom: -83px;
+	&--videos{
+		margin-bottom: -49px;
+	}
+
 }
 
 .artimaster-post {
 	width: calc(50% - 18px);
     margin-bottom: 83px;
+
+	&--videos{
+		margin-bottom: 49px;
+	}
+
+
 	&__img-wrapper {
 		position: relative;
 		width: 100%;
@@ -32,7 +45,44 @@
 			padding-top: 100%;
 		}
 
-		@include scalepic();
+		&:not(.artimaster-post__img-wrapper--videos){
+			@include scalepic();
+		}
+		&--videos{
+			&+.artimaster-post__title {
+				margin-top: 21px;
+			}
+			&::after {
+				padding-top: 62%;
+				opacity: 0;
+				transition: all .4s ease;
+				background: rgba(255, 255, 255, .1);
+				backdrop-filter: blur(5px);
+				z-index: 3;
+			}
+
+			&::before {
+				position: absolute;
+				z-index: 4;
+				top: 50%;
+				left: 50%;
+				display: block;
+				width: 59px;
+				height: 59px;
+				content: '';
+				transition: all .4s ease;
+				transform: translate(-50%, -50%);
+				background: url(../img/play-vid.svg) no-repeat center center;
+				background-size: contain;
+				opacity: 0;
+			}
+			&:hover {
+
+				&::after,&::before,.videos-duration{
+					opacity: 1;
+				}
+			}
+		}
 	}
 
 	&__img {
