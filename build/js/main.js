@@ -1060,7 +1060,7 @@ $(document).ready(function () {
 
 
 
-	$('.js-review-unwrap').click(function () {
+	$('body').on('click', '.js-review-unwrap', function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.reviews-item__text').addClass('reviews-item__text--open');
 	});
 
