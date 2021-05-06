@@ -784,6 +784,10 @@
 	&+* {
 		margin-top: 76px;
 	}
+
+    &-label + *{
+        margin-top: 73px;
+    }
 }
 
 .kspc-media-title {
@@ -845,7 +849,14 @@
 	@include relative_img();
 }
 
-
+.kspc-media-text{
+  margin-top: 19px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+  color: #53565A;
+}
 
 
 .hm-quote-practice--ks-constuctor {

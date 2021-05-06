@@ -1,0 +1,46 @@
+.kspc-numbered-list{
+  margin-top: 54px;
+}
+.kspc-nl{
+  &__list{
+    list-style: none;
+    padding: 0;
+    counter-reset: list-counter;
+    &:not(:first-child) {
+      margin-top: 31px;
+    }
+  }
+  &__item{
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 30px;
+    color: #5A5E64;
+    counter-increment: list-counter;
+    display: flex;
+    align-items: center;
+
+    & + .kspc-nl__item{
+      margin-top: 17px;
+    }
+
+    &::before {
+      content: counter(list-counter);
+      font-size: 17px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: #AFB4BF;
+      width: 36px;
+      height: 36px;
+      box-sizing: border-box;
+      border: 1px solid #AFB4BF;
+      border-radius: 50px;
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+  }
+}
