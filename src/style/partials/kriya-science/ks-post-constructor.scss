@@ -785,7 +785,7 @@
 		margin-top: 76px;
 	}
 
-    &-label + *{
+    &--has-label + *{
         margin-top: 73px;
     }
 }
@@ -854,7 +854,7 @@
   font-weight: 500;
   font-size: 22px;
   line-height: 22px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.024em;
   color: #53565A;
 }
 
