@@ -29,10 +29,22 @@
   &__inner{
     display: flex;
     justify-content: center;
+    position: relative;
     @media screen and (max-width:1150px) {
       justify-content: flex-start;
     }
   }
+  &__line{
+    position: absolute;
+    height: 2px;
+    width: 0;
+    border-radius: 5px;
+    background: #6974A9;
+    left: 0;
+    bottom: 0;
+    transition: all .35s linear;
+  }
+
   &__item{
     white-space: nowrap;
     padding: 4px 36px 16px;
@@ -57,7 +69,7 @@
       line-height: vw(26);
     }
 
-    &::after{
+    /*&::after{
       content: "";
       display: block;
       width: 100%;
@@ -69,11 +81,11 @@
       position: absolute;
       left: 0;
       bottom: 0;
-    }
+    }*/
     &:hover{
-      &::after{
+      /*&::after{
         opacity: 0.5;
-      }
+      }*/
     }
     &--active{
       color: #25378D;
@@ -95,8 +107,10 @@
   }
   &__tab{
     display: none;
+    opacity: 0;
     &--active{
       display: block;
+      opacity: 1;
     }
   }
 }
