@@ -6,7 +6,7 @@ $(document).ready(function () {
 	var totalTabs = $('.page-tabs__item').length;
 	var speed = 400;
 	var addLeftPad = 0;
-	var tabsList;
+	var tabsList = $(".page-tabs");;
 	var initSwipe = false;
 
 	var swipeOptions = {
@@ -17,25 +17,20 @@ $(document).ready(function () {
 	};
 
   if ($(window).width() < 750){
-    $(function () {
-      tabsList = $(".page-tabs");
-      tabsList.swipe(swipeOptions);
-    });
+		tabsList.swipe(swipeOptions);
 		initSwipe = true;
   }
 
   $(window).resize(function (){
 		if ($(window).width() < 750){
 			if (!initSwipe){
-				$(function () {
-					tabsList = $(".page-tabs");
-					tabsList.swipe(swipeOptions);
-				});
+				tabsList.swipe(swipeOptions);
 				initSwipe = true;
 			}
 		} else {
 			if (initSwipe) {
-				$(".page-tabs").swipe("destroy").attr("style", "");
+				tabsList.swipe("destroy");
+				tabsList.attr("style", "");
 				initSwipe = false;
 			}
 		}
@@ -50,9 +45,9 @@ $(document).ready(function () {
 				if (currentTab === 0){
 					addLeftPad = 0
 				} else  if (currentTab < totalTabs-1) {
-					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt($('.page-tabs').css('padding-left'))) * -1;
+					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt(tabsList.css('padding-left'))) * -1;
 				} else {
-					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt($('.page-tabs').css('padding-left'))*2) * -1;
+					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt(tabsList.css('padding-left'))*2) * -1;
 				}
 				selectTab(currentTab,speed);
 			} else {
@@ -86,7 +81,7 @@ $(document).ready(function () {
 			if (currentTab === 0){
 				addLeftPad = 0
 			} else {
-				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt($('.page-tabs').css('padding-left'))) * -1;
+				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt(tabsList.css('padding-left'))) * -1;
 			}
 			selectTab(currentTab,speed)
 		}
@@ -96,9 +91,9 @@ $(document).ready(function () {
 		if (!changeTab) {
 			currentTab = Math.min(currentTab + 1, totalTabs - 1);
 			if (currentTab < totalTabs-1){
-				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt($('.page-tabs').css('padding-left'))) * -1;
+				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt(tabsList.css('padding-left'))) * -1;
 			} else {
-				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt($('.page-tabs').css('padding-left'))*2) * -1;
+				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt(tabsList.css('padding-left'))*2) * -1;
 			}
 			selectTab(currentTab,speed)
 		}
@@ -204,7 +199,7 @@ $(document).ready(function () {
       if ($(window).width() > 750) {
         let containerWidth = $('.page-tabs-section__container').width();
         let addLeft = (containerWidth - width)/2;
-        let padLeft = parseInt($('.page-tabs').css('padding-left'));
+        let padLeft = parseInt(tabsList.css('padding-left'));
         $('.page-tabs-section__container').animate({
           scrollLeft: left-(addLeft-padLeft)
         }, 400);
