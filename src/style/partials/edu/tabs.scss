@@ -8,6 +8,10 @@
     overflow: auto;
     width: 100%;
 
+    @media screen and (max-width: 749px) {
+      overflow: hidden;
+    }
+
     &::-webkit-scrollbar {
       width: 0;
       background: transparent;
