@@ -1207,14 +1207,15 @@ $(document).ready(function () {
 		if (!$(this).hasClass('page-tabs__item--active') && !changeTab){
 			var index = $(this).index();
 			if ($(window).width() < 750){
-				if (index === 0){
+				currentTab = index;
+				if (currentTab === 0){
 					addLeftPad = 0
-				} else  if (index < totalTabs-1) {
-					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(index).innerWidth())/2 - parseInt($('.page-tabs').css('padding-left'))) * -1;
+				} else  if (currentTab < totalTabs-1) {
+					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth())/2 - parseInt($('.page-tabs').css('padding-left'))) * -1;
 				} else {
-					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(index).innerWidth()) - parseInt($('.page-tabs').css('padding-left'))*2) * -1;
+					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt($('.page-tabs').css('padding-left'))*2) * -1;
 				}
-				selectTab(index,speed);
+				selectTab(currentTab,speed);
 			} else {
 				selectTab(index,speed);
 			}
