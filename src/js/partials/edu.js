@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 	var currentTab = $('.page-tabs__item--active').index();
 	var totalTabs = $('.page-tabs__item').length;
-	var speed = 400;
+	var speed = 300;
 	var addLeftPad = 0;
 	var tabsList = $(".page-tabs");;
 	var initSwipe = false;
@@ -113,19 +113,20 @@ $(document).ready(function () {
 	}
 
 
-
 	function selectTab(index,speed = 0) {
-    changeTab = true;
+		changeTab = true;
 		tablineFunc(index)
 		if ($(window).width() < 750){
 			scrollTabs(index, speed);
 		}
-    $('.page-tabs__item').eq(index).addClass('page-tabs__item--active').siblings().removeClass('page-tabs__item--active');
-    $('.page--tabs-blocks .page--tabs-blocks__tab').fadeOut(400).promise().done(function(){
-			$('html, body').animate({ scrollTop: $("#tabTop").offset().top }, 0);
-      $('.page--tabs-blocks .page--tabs-blocks__tab').removeClass('page--tabs-blocks__tab--active');
-      if ($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).find('.js-kspc-slider').length > 0) {
-        setTimeout(function () {
+		$('.page-tabs__item').eq(index).addClass('page-tabs__item--active').siblings().removeClass('page-tabs__item--active');
+		$('.page--tabs-blocks .page--tabs-blocks__tab').fadeOut(400).promise().done(function(){
+			if (document.documentElement.scrollTop > $("#tabTop").offset().top +2) {
+				$('html, body').animate({ scrollTop: $("#tabTop").offset().top +2 }, 0);
+			}
+			$('.page--tabs-blocks .page--tabs-blocks__tab').removeClass('page--tabs-blocks__tab--active');
+			if ($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).find('.js-kspc-slider').length > 0) {
+				setTimeout(function () {
           $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).find('.js-kspc-slider').slick('unslick');
           setTimeout(function () {
             $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).find('.js-kspc-slider').slick({
@@ -161,6 +162,7 @@ $(document).ready(function () {
         }, 50);
       }
       $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).css({display: 'block',opacity: 0});
+
       setTimeout(function (){
         $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).animate({opacity: 1}, 300).promise().done(function(){
           $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).addClass('page--tabs-blocks__tab--active');
