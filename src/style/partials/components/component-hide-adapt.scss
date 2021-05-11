@@ -1,0 +1,91 @@
+@media screen and (max-width:1150px) {
+	.component-hide-block-wrap {}
+
+	.component-hide-block {
+
+		p {
+			&+p {}
+		}
+
+		b {}
+
+		.kspc-simple-text__p {}
+
+		.kspc-twpah-unwrap {}
+
+
+		&--show-9 {
+
+			.kspc-twpah-unwrap {}
+		}
+
+	}
+
+
+}
+
+@media screen and (max-width: 749px) {
+	.component-hide-block-wrap {}
+
+	.component-hide-block {
+
+		p {
+			&+p {}
+		}
+
+		b {}
+
+		.kspc-simple-text__p {}
+
+		.kspc-twpah-unwrap {}
+
+
+		&--show-9 {
+
+			.kspc-twpah-unwrap {}
+		}
+
+	}
+
+}
+
+
+@media screen and (min-width: 319px) and (max-width: 321px) {
+	.kspc-twpah-unwrap {
+		top: 85.5vw;
+	}
+
+	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
+		top: 32.7vw;
+	}
+
+	.kspc-simple-text--with-hide--9 .kspc-twpah-unwrap {
+		//пофиксить
+	}
+
+	.kspc-simple-text--with-hide--show-9 .kspc-twpah-unwrap {
+		top: 105vw;
+	}
+}
+
+
+
+@media screen and (min-width: 413px) and (max-width: 415px) {
+	.kspc-twpah-unwrap {
+		top: 84.9vw;
+	}
+
+	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
+		top: 32.7vw;
+	}
+
+
+	.kspc-simple-text--with-hide--show-9 .kspc-simple-text__p {
+		max-height: 106.33333vw;
+	}
+
+	.kspc-simple-text--with-hide--show-9 .kspc-twpah-unwrap {
+		top: 97.6vw;
+	}
+
+}

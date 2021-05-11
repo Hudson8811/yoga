@@ -1,0 +1,53 @@
+.component-hide-block-wrap {}
+
+.component-hide-block {
+
+	max-height: 30*4px;
+	height: auto;
+	overflow: hidden;
+	transition: max-height 13s linear, height 13s linear;
+	position: relative;
+
+	&--open{
+		max-height: 10000px;
+	}
+
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 30px;
+	color: $dark;
+
+
+	p {
+		&+p {
+			margin-top: 30px;
+		}
+	}
+
+	b {
+		letter-spacing: -.13px;
+	}
+
+
+	.kspc-twpah-unwrap {
+		top: 30*3px;
+		right: 0;
+		padding-right: 31px;
+	}
+
+
+	&--show-9 {
+		max-height: 30*9px;
+
+		.kspc-twpah-unwrap {
+			top: 30*8px;
+		}
+	}
+
+}
+
+
+
+

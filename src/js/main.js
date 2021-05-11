@@ -28,7 +28,7 @@ $(document).on('mobileinit', function () {
 //= partials/seminar.js
 //= partials/edu.js
 
-
+//= partials/page-music.js
 
 
 //= partials/tips-init.js

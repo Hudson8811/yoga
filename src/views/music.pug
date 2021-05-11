@@ -1,0 +1,33 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+				title: 'article-master'
+		};
+
+
+block main
+	.kriya-science-main
+		include components/music/home-slider-version-no-slider
+
+
+		section.ks-post-constructor
+			include components/music/tabs
+
+
+		include components/kriya-science/ks-post-tags-and-share
+
+	section.hm-galery
+		.container.container--extra-long
+			.hm-galery__row
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo1.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo2.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo3.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo4.jpg")
+				a.hm-galery__white-box(href="#")
+					p Все<br/>фотографии
