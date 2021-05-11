@@ -121,8 +121,8 @@ $(document).ready(function () {
 			scrollTabs(index, speed);
 		}
     $('.page-tabs__item').eq(index).addClass('page-tabs__item--active').siblings().removeClass('page-tabs__item--active');
-    $('html, body').animate({ scrollTop: $("#tabTop").offset().top }, 400);
     $('.page--tabs-blocks .page--tabs-blocks__tab').fadeOut(400).promise().done(function(){
+			$('html, body').animate({ scrollTop: $("#tabTop").offset().top }, 0);
       $('.page--tabs-blocks .page--tabs-blocks__tab').removeClass('page--tabs-blocks__tab--active');
       if ($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).find('.js-kspc-slider').length > 0) {
         setTimeout(function () {
