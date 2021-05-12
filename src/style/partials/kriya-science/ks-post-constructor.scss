@@ -31,7 +31,9 @@
 .kspc-slider-block {
 	margin-top: 21px;
 	position: relative;
-
+	&--has-title{
+		margin-top: 10px;
+	}
 	&:hover {
 		.kspc-slider-arrow {
 			opacity: 1;
@@ -163,6 +165,9 @@
 		margin-top: 27px;
 	}
 
+	&+.kspc-media-wrap {
+		margin-top: 47px;
+	}
 	&--with-hide {
 		.kspc-simple-text__p {
 			max-height: 150px;
@@ -787,6 +792,10 @@
 
     &--has-label + *{
         margin-top: 73px;
+    }
+
+    &--has-label + .kspc-simple-text{
+		margin-top: 46px;
     }
 }
 

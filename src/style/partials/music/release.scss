@@ -6,6 +6,9 @@
 			opacity: 1;
 		}
 	}
+	&+*{
+		margin-top: 41px;
+	}
 }
 
 .release-slider-arrow {
@@ -26,7 +29,7 @@
 		&::after {
 			content: '';
 			display: block;
-			background: red;
+			background: #ffffff;
 			position: absolute;
 			height: 100%;
 			width: 8px;
@@ -129,4 +132,8 @@
 		color: #25378D;
 		margin-top: 22px;
 	}
+}
+
+.release-hr-wrap{
+	margin-top: 58px;
 }
