@@ -27,6 +27,7 @@
   }
 }
 .page-tabs{
+	margin: 0 auto;
   @media screen and (max-width:1150px) {
     padding-left: calc((100% - 696px)/2);
     padding-right: calc((100% - 696px)/2);
