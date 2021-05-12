@@ -115,7 +115,10 @@ $(document).ready(function () {
 
 	function selectTab(index,speed = 0) {
 		changeTab = true;
-		tablineFunc(index)
+		if ( typeof getScrollContent == 'function' ) {
+			getScrollContent(index);
+		}
+		tablineFunc(index);
 		if ($(window).width() < 750){
 			scrollTabs(index, speed);
 		}
@@ -226,4 +229,74 @@ $(document).ready(function () {
   }
   tabresizeFunc();
   window.addEventListener("resize", tabresizeFunc);
+
+
+
+  if (typeof ajaxTabs !== 'undefined' && ajaxTabs){
+		let tabRequest = false;
+		let currentPage = 1;
+		let currentTabHtml = 0;
+
+		$(window).on('resize scroll', function() {
+			if ($('#music-preloader').length){
+				if ($('#music-preloader').isInViewport()) {
+					getScrollContent();
+				}
+			}
+		});
+
+		function getScrollContent(index){
+			if (!tabRequest && typeof wpPageID !== 'undefined'){
+				if (typeof index === 'number') {
+					currentPage = 1;
+					currentTabHtml = parseInt(index);
+				}
+				let tabContainer = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(currentTabHtml);
+				let data =  {action: 'music', id: wpPageID, tab: currentTabHtml, page : currentPage};
+				$.ajax({
+					url : '/wp-admin/admin-ajax.php',
+					data : data,
+					type : 'POST',
+					dataType : 'html',
+					beforeSend : function (){
+						tabRequest = true;
+						if (typeof index === 'number') {
+							tabContainer.html('<div class="kspc-preloader"><span></span><span></span><span></span></div>');
+						}
+					},
+					success : function( data ){
+						if (data != ''){
+							if (typeof index === 'number') {
+								tabContainer.html(data);
+							} else {
+								if (currentTabHtml === 2){
+									tabContainer.find('.kspc-phg__list').append(data);
+								}
+							}
+							currentPage++;
+						} else {
+							$('.kspc-preloader').remove();
+						}
+
+						tabRequest = false;
+					},
+					error : function (data){
+						tabRequest = false;
+						console.log('ajax error');
+					}
+				});
+			}
+		}
+	}
+
 });
+
+
+
+$.fn.isInViewport = function() {
+	var elementTop = $(this).offset().top;
+	var elementBottom = elementTop + $(this).outerHeight();
+	var viewportTop = $(window).scrollTop();
+	var viewportBottom = viewportTop + $(window).height();
+	return elementBottom > viewportTop && elementTop < viewportBottom;
+};
