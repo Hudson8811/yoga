@@ -18,6 +18,7 @@ $(document).on('mobileinit', function () {
 //= libs/simplebar.min.js
 //= libs/autosize.min.js
 //= libs/jquery.touchSwipe.min.js
+//= libs/jquery.sticky.js
 
 /* my scripts */
 
