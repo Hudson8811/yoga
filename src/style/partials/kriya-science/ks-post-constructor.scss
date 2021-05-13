@@ -31,9 +31,11 @@
 .kspc-slider-block {
 	margin-top: 21px;
 	position: relative;
-	&--has-title{
+
+	&--has-title {
 		margin-top: 10px;
 	}
+
 	&:hover {
 		.kspc-slider-arrow {
 			opacity: 1;
@@ -47,6 +49,12 @@
 
 	&+.kspc-simple-text--has-title {
 		margin-top: 76px;
+	}
+}
+
+.kspc-slider-block-title {
+	&+.kspc-slider {
+		margin-top: 17px;
 	}
 }
 
@@ -91,6 +99,55 @@
 	margin-top: -11px;
 }
 
+
+.video-effect {
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+	&::before {
+		position: relative;
+		width: 100%;
+		z-index: 31;
+		opacity: 0;
+		transition: all .4s ease;
+		background: rgba(255, 255, 255, .1);
+		backdrop-filter: blur(5px);
+	}
+
+	&::after {
+		position: absolute;
+		z-index: 32;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 93px;
+		height: 93px;
+		content: '';
+		transition: all .4s ease;
+		transform: translate(-50%, -50%);
+		background: url(../img/play-vid-big.svg) no-repeat center center;
+		background-size: contain;
+		opacity: 0;
+	}
+
+	&--non-hide-play-btn::after {
+		opacity: 1;
+	}
+
+
+
+	@media screen and (min-width: 1151px) {
+		&:hover {
+
+			&::after,
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
 .kspc-slider-item {
 	margin: 0 7px;
 	position: relative;
@@ -99,7 +156,12 @@
 
 	overflow: hidden;
 
+	&--video {
+		&::after {}
+	}
+
 	&__img {
+		z-index: 2;
 		@include relative_img();
 	}
 
@@ -109,7 +171,9 @@
 		padding-top: 61.758%;
 	}
 
-	@include scalepic();
+	&:not(.kspc-slider-item--video) {
+		@include scalepic();
+	}
 }
 
 
@@ -149,8 +213,9 @@
 		b {
 			letter-spacing: -.13px;
 		}
-		ul{
-			&:first-child{
+
+		ul {
+			&:first-child {
 				margin-top: 30px;
 			}
 		}
@@ -168,6 +233,7 @@
 	&+.kspc-media-wrap {
 		margin-top: 47px;
 	}
+
 	&--with-hide {
 		.kspc-simple-text__p {
 			max-height: 150px;
@@ -457,6 +523,14 @@
 	&+.kspc-simple-text {
 		margin-top: 73px;
 	}
+
+	&+.kspc-simple-text {
+		margin-top: 73px;
+	}
+
+	&+.kspc-slider-block--has-title {
+		margin-top: 65px;
+	}
 }
 
 //////////////Новое со страницы СЕМИНАР  START
@@ -573,7 +647,7 @@
 	-webkit-mask-image: -webkit-radial-gradient(white, #000);
 	position: relative;
 	overflow: hidden;
-    width: calc(50% - 20px);
+	width: calc(50% - 20px);
 
 	&__img {
 		@include relative_img();
@@ -588,7 +662,7 @@
 
 .kspc-event-info-wrap {
 	box-sizing: border-box;
-    width: calc(50% + 20px);
+	width: calc(50% + 20px);
 	padding-left: 37px;
 	padding-top: 16px;
 }
@@ -689,7 +763,7 @@
 
 
 .kspc-qa {
-	margin-top: 50px;//скорректировать при встрече
+	margin-top: 50px; //скорректировать при встрече
 }
 
 .kspc-qa-title {}
@@ -781,8 +855,9 @@
 }
 
 .kspc-media-wrap {
+
 	//когда встречу такую ситуацию - прописать margin-top для !has-title
-	&--has-title{
+	&--has-title {
 		margin-top: 66px;
 	}
 
@@ -790,17 +865,16 @@
 		margin-top: 76px;
 	}
 
-    &--has-label + *{
-        margin-top: 73px;
-    }
+	&--has-label+* {
+		margin-top: 73px;
+	}
 
-    &--has-label + .kspc-simple-text{
+	&--has-label+.kspc-simple-text {
 		margin-top: 46px;
-    }
+	}
 }
 
-.kspc-media-title {
-}
+.kspc-media-title {}
 
 .kspc-media {
 	display: block;
@@ -858,13 +932,13 @@
 	@include relative_img();
 }
 
-.kspc-media-text{
-  margin-top: 19px;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 22px;
-  letter-spacing: -0.024em;
-  color: #53565A;
+.kspc-media-text {
+	margin-top: 19px;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 22px;
+	letter-spacing: -0.024em;
+	color: #53565A;
 }
 
 
@@ -872,6 +946,7 @@
 	padding-top: 84px;
 
 }
+
 .hm-quote-practice--wrap-ks-constuctor+.kspc-simple-text--has-title {
 	margin-top: 76px;
 }

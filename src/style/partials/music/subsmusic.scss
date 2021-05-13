@@ -1,0 +1,46 @@
+.hr-wrap-before-subsmusic{
+    margin-top: 83px;
+}
+.subsmusic-section {
+    margin-top: 59px;
+
+}
+
+.subsmusic-title {
+	text-align: center;
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 22px;
+	text-align: center;
+	letter-spacing: -0.03em;
+	color: $dark;
+
+}
+
+.subsmusic-flex {
+    margin-top: 34px;
+	display: flex;
+	justify-content: center;
+}
+
+.subsmusic-item {
+	width: 58px;
+	height: 58px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #6974A9;
+	border-radius: 50%;
+    margin: 0 11px;
+	&__pic {
+		height: auto;
+	}
+
+	&:hover {}
+
+	&:active {}
+
+	&:focus {}
+}
