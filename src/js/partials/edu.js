@@ -1,4 +1,11 @@
 $(document).ready(function () {
+	if ($('.slicky-top').length){
+		$(".slicky-top").sticky({
+			topSpacing:0,
+			zIndex:998
+		});
+	}
+
   changeTab = false;
   changeLine = false;
 
