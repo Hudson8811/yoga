@@ -66,11 +66,14 @@
 			grid-auto-rows: vw(108);
 		}
 	}
+	&__add{
+		display: none;
+	}
 	&__item{
 		cursor: pointer;
 		display: block;
 		overflow: hidden;
-		background: #f6fafc;
+		//background: #f6fafc;
 		border-radius: 5px;
 		grid-column-end: span 1;
 		grid-row-end: span 1;
