@@ -263,6 +263,7 @@ $(document).ready(function () {
 		function getScrollContent(index){
 			if (!tabRequest && typeof wpPageID !== 'undefined'){
 				if (typeof index === 'number') {
+					dataType = 'json';
 					currentPage = 1;
 					currentTabHtml = parseInt(index);
 					galleryImages = [];
@@ -270,6 +271,7 @@ $(document).ready(function () {
 					loadedCount = [];
 					imagesBlock = 0;
 					mode = 'start';
+					if (index === 0) dataType = 'html';
 				}
 				let tabContainer = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(currentTabHtml);
 				let data =  {action: 'music', id: wpPageID, tab: currentTabHtml, page : currentPage, imagesBlock : imagesBlock, mode: mode};
@@ -278,18 +280,33 @@ $(document).ready(function () {
 					url : '/wp-admin/admin-ajax.php',
 					data : data,
 					type : 'POST',
-					dataType : 'json',
+					dataType : dataType,
 					beforeSend : function (){
 						tabRequest = true;
 						if (typeof index === 'number') {
 							tabContainer.html('<div class="kspc-preloader"><span></span><span></span><span></span></div>');
 							setTimeout(function (){
 								tabContainer.siblings('.page--tabs-blocks__tab').html('');
-							})
+							},400);
 						}
 					},
 					success : function( data ){
 						if (data){
+							if (currentTabHtml === 0){
+								tabContainer.html(data);
+								AOS.init({
+									disable: false,
+									debounceDelay: 50,
+									throttleDelay: 99,
+									offset: 50,
+									delay: 0,
+									duration: 1000,
+									easing: 'ease',
+									once: true,
+									mirror: false,
+									anchorPlacement: 'top-bottom',
+								});
+							}
 							if (currentTabHtml === 1){
 								if (typeof index === 'number') {
 									tabContainer.html(data[0]);
