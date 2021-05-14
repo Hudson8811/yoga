@@ -247,6 +247,9 @@ $(document).ready(function () {
 		let currentTabHtml = 0;
 		let galleryImages = [];
 		let loaderProcess = 0;
+		let loadedCount = [];
+		let imagesBlock = 0;
+		let mode = 'start';
 
 		$(window).on('resize scroll', function() {
 			if ($('#music-preloader').length){
@@ -263,9 +266,13 @@ $(document).ready(function () {
 					currentPage = 1;
 					currentTabHtml = parseInt(index);
 					galleryImages = [];
+					loaderProcess = 0;
+					loadedCount = [];
+					imagesBlock = 0;
+					mode = 'start';
 				}
 				let tabContainer = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(currentTabHtml);
-				let data =  {action: 'music', id: wpPageID, tab: currentTabHtml, page : currentPage};
+				let data =  {action: 'music', id: wpPageID, tab: currentTabHtml, page : currentPage, imagesBlock : imagesBlock, mode: mode};
 				$.ajax({
 					url : '/wp-admin/admin-ajax.php',
 					data : data,
@@ -283,29 +290,20 @@ $(document).ready(function () {
 								if (typeof index === 'number') {
 									tabContainer.html(data[0]);
 								} else {
-									tabContainer.find('.kspc-phg__list').append(data[0]);
+									if (mode !== 'newblock'){
+										tabContainer.find('.kspc-phg__list[data-block="'+imagesBlock+'"]').append(data[0]);
+									} else {
+										tabContainer.find('.kspc-phg__block:last').after(data[0]);
+									}
 								}
-								galleryImages.push.apply(galleryImages, data[1])
-								imageLoader();
+								imagesBlock = parseInt(data[2]);
+								mode = data[3];
+								if (mode === 'newblock') currentPage = 0;
+								if (typeof galleryImages[imagesBlock] ==='undefined') galleryImages[imagesBlock] = [];
+								galleryImages[imagesBlock].push.apply(galleryImages[imagesBlock], data[1])
+								imageLoader(imagesBlock);
 							}
 							currentPage++;
-
-
-
-
-							AOS.init({
-								disable: false,
-								debounceDelay: 50,
-								throttleDelay: 99,
-								offset: 120,
-								delay: 0,
-								duration: 1000,
-								easing: 'ease',
-								once: true,
-								mirror: false,
-								anchorPlacement: 'top-bottom',
-								useClassNames: 'aos-ajax'
-							});
 						} else {
 							$('.kspc-preloader').remove();
 						}
@@ -314,19 +312,19 @@ $(document).ready(function () {
 					},
 					error : function (data){
 						tabRequest = false;
-						console.log('ajax error');
+						console.log('no json');
 						$('.kspc-preloader').remove();
 					}
 				});
 			}
 		}
 
-		function imageLoader(){
-			if (galleryImages.length && loaderProcess < 5){
+		function imageLoader(iblock){
+			if (galleryImages[iblock].length && loaderProcess < 9){
 				loaderProcess++;
-				let imageSrc = galleryImages[0];
-				galleryImages.shift();
-				let imgHtml = '<img src="'+imageSrc+'" alt="">';
+				let imageSrc = galleryImages[iblock][0];
+				galleryImages[iblock].shift();
+				let imgHtml = '<img src="'+imageSrc+'" alt="" data-block="'+iblock+'">';
 				$('.kspc-phg__add').append(imgHtml);
 			}
 		}
@@ -338,10 +336,29 @@ $(document).ready(function () {
 				var elm = event.target;
 				if( elm.nodeName.toLowerCase() === 'img' && $(elm).closest('.kspc-phg__add').length){
 					let conteiner = $('.kspc-phg__item:not(.loaded):first');
-					$(elm).appendTo(conteiner).fadeIn(1000);
-					conteiner.addClass('loaded');
+					$(elm).appendTo(conteiner);
+					let iblock = $(elm).data('block');
+					conteiner.addClass('loaded').attr('data-aos','fade');
 					loaderProcess--;
-					imageLoader();
+					if (typeof loadedCount[iblock] ==='undefined') loadedCount[iblock] = 0;
+					loadedCount[iblock]++;
+					if (loadedCount[iblock] >= 9 || galleryImages[iblock].length === 0){
+						$('.kspc-phg__list[data-block="'+iblock+'"] .kspc-phg__item.loaded:not(.aos-animate)').css({display: 'block'});
+						AOS.init({
+							disable: false,
+							debounceDelay: 50,
+							throttleDelay: 99,
+							offset: 0,
+							delay: 0,
+							duration: 1000,
+							easing: 'ease',
+							once: true,
+							mirror: false,
+							anchorPlacement: 'top-bottom',
+						});
+						loadedCount[iblock] = 0;
+					}
+					imageLoader(iblock);
 				}
 			},
 			true
