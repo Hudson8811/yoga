@@ -1,17 +1,28 @@
 @media screen and (max-width:1150px) {
+
+
 	.component-hide-block-wrap {}
 
 	.component-hide-block {
+		max-height: 24*3px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 24px;
 
 		p {
-			&+p {}
+			&+p {
+				margin-top: 24px;
+			}
 		}
 
 		b {}
 
-		.kspc-simple-text__p {}
 
-		.kspc-twpah-unwrap {}
+		.kspc-twpah-unwrap {
+			top: 24*2px;
+			padding-right: 7px
+		}
 
 
 		&--show-9 {
@@ -29,15 +40,23 @@
 
 	.component-hide-block {
 
+		max-height: vw(24*3);
+		font-style: normal;
+		font-weight: normal;
+		font-size: vw(15);
+		line-height: vw(24);
+
 		p {
-			&+p {}
+			&+p {
+				margin-top: vw(24);
+			}
 		}
 
 		b {}
 
-		.kspc-simple-text__p {}
-
-		.kspc-twpah-unwrap {}
+		.kspc-twpah-unwrap {
+			top: vw(24*2);
+		}
 
 
 		&--show-9 {
@@ -50,27 +69,18 @@
 }
 
 
-@media screen and (min-width: 319px) and (max-width: 321px) {
-	/*.kspc-twpah-unwrap {
-		top: 85.5vw;
+@media screen and (min-width: vw(319)) and (max-width: vw(321)) {
+	.component-hide-block .kspc-twpah-unwrap {
+		top: 13.2vw;
 	}
-
-	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
-		top: 32.7vw;
-	}
-
-	.kspc-simple-text--with-hide--9 .kspc-twpah-unwrap {
-		//пофиксить
-	}
-
-	.kspc-simple-text--with-hide--show-9 .kspc-twpah-unwrap {
-		top: 105vw;
-	}*/
 }
 
 
 
 @media screen and (min-width: 413px) and (max-width: 415px) {
+	.component-hide-block .kspc-twpah-unwrap {
+		top: 13.1vw;
+	}
 	/*	.kspc-twpah-unwrap {
 		top: 84.9vw;
 	}

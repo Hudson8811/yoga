@@ -2,6 +2,9 @@
 @media screen and (max-width:1150px) {
 	.ksquote {
 		padding: 82px 0 110px;
+		&--after-tabs{
+			padding-top: 47px;
+		}
 
 	}
 
@@ -55,6 +58,10 @@
 @media screen and (max-width: 749px) {
 	.ksquote {
 		padding: vw(86) 0 vw(86);
+		&--after-tabs{
+			padding-top: vw(16);
+			padding-bottom: vw(51);
+		}
 	}
 
 	.ksquote-content__title--small-on-tablet+.ksquote-content-description{
@@ -86,6 +93,9 @@
 
 			br {
 				display: none;
+			}
+			&--mobile-wide{
+				width: 100%;
 			}
 		}
 
