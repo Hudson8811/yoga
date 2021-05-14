@@ -21,7 +21,7 @@ $(document).ready(function () {
 	$(window).on('resize', function () {
 		mainHeaderH = $('#site-header').height();
 		if (hasHeader2) {
-			header2pev = $('#js-header-2').prev();
+			//header2pev = $('#js-header-2').prev();
 			header2TopInStatic = header2pev.offset().top + header2pev.height();
 		}
 	});

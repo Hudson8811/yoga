@@ -29,6 +29,8 @@ $(document).ready(function () {
   }
 
   $(window).resize(function (){
+  	console.log(initSwipe);
+  	console.log($(window).width());
 		if ($(window).width() < 750){
 			if (!initSwipe){
 				tabsList.swipe(swipeOptions);
@@ -273,6 +275,7 @@ $(document).ready(function () {
 				}
 				let tabContainer = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(currentTabHtml);
 				let data =  {action: 'music', id: wpPageID, tab: currentTabHtml, page : currentPage, imagesBlock : imagesBlock, mode: mode};
+				if (typeof galleryImages[imagesBlock] ==='undefined' || galleryImages[imagesBlock].length < 1)
 				$.ajax({
 					url : '/wp-admin/admin-ajax.php',
 					data : data,
@@ -282,10 +285,21 @@ $(document).ready(function () {
 						tabRequest = true;
 						if (typeof index === 'number') {
 							tabContainer.html('<div class="kspc-preloader"><span></span><span></span><span></span></div>');
+							setTimeout(function (){
+								tabContainer.siblings('.page--tabs-blocks__tab').html('');
+							})
 						}
 					},
 					success : function( data ){
 						if (data){
+							if (currentTabHtml === 1){
+								if (typeof index === 'number') {
+									tabContainer.html(data[0]);
+								} else {
+
+								}
+								tippy(document.querySelectorAll('.js-share'), tippySettings);
+							}
 							if (currentTabHtml === 2){
 								if (typeof index === 'number') {
 									tabContainer.html(data[0]);
@@ -335,15 +349,15 @@ $(document).ready(function () {
 			function(event){
 				var elm = event.target;
 				if( elm.nodeName.toLowerCase() === 'img' && $(elm).closest('.kspc-phg__add').length){
-					let conteiner = $('.kspc-phg__item:not(.loaded):first');
-					$(elm).appendTo(conteiner);
 					let iblock = $(elm).data('block');
-					conteiner.addClass('loaded').attr('data-aos','fade');
+					let conteiner = $('.kspc-phg__list[data-block="'+iblock+'"] .kspc-phg__item:not(.loaded):first');
+					$(elm).appendTo(conteiner);
+					conteiner.addClass('loaded');
 					loaderProcess--;
 					if (typeof loadedCount[iblock] ==='undefined') loadedCount[iblock] = 0;
 					loadedCount[iblock]++;
 					if (loadedCount[iblock] >= 9 || galleryImages[iblock].length === 0){
-						$('.kspc-phg__list[data-block="'+iblock+'"] .kspc-phg__item.loaded:not(.aos-animate)').css({display: 'block'});
+						$('.kspc-phg__list[data-block="'+iblock+'"] .kspc-phg__item.loaded').css({display: 'block'}).attr('data-aos','fade');
 						AOS.init({
 							disable: false,
 							debounceDelay: 50,
