@@ -29,8 +29,6 @@ $(document).ready(function () {
   }
 
   $(window).resize(function (){
-  	console.log(initSwipe);
-  	console.log($(window).width());
 		if ($(window).width() < 750){
 			if (!initSwipe){
 				tabsList.swipe(swipeOptions);
@@ -296,9 +294,22 @@ $(document).ready(function () {
 								if (typeof index === 'number') {
 									tabContainer.html(data[0]);
 								} else {
-
+									tabContainer.find('.artimaster-posts').append(data[0]);
 								}
+								mode = data[1];
 								tippy(document.querySelectorAll('.js-share'), tippySettings);
+								AOS.init({
+									disable: false,
+									debounceDelay: 50,
+									throttleDelay: 99,
+									offset: 50,
+									delay: 0,
+									duration: 1000,
+									easing: 'ease',
+									once: true,
+									mirror: false,
+									anchorPlacement: 'top-bottom',
+								});
 							}
 							if (currentTabHtml === 2){
 								if (typeof index === 'number') {
