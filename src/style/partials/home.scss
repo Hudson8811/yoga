@@ -556,16 +556,6 @@ body {
 	&--next {
 		right: -48px;
 	}
-	@media screen and (max-width: 1315px) and (min-width: 1151px) {
-
-		&--prev {
-			left: -23px;
-		}
-
-		&--next {
-			right: -23px;
-		}
-	}
 }
 
 .hm-events-arrow {

@@ -1,3 +1,18 @@
+
+@media screen and (max-width: 1315px) and (min-width: 1151px) {
+
+	.container:not(.container--ks){
+		.customized-arrow--prev {
+			left: -23px;
+		}
+
+		.customized-arrow--next {
+			right: -23px;
+		}
+
+	}
+}
+
 @media screen and (min-width: 1151px) and (max-width: 1400px) {
 	.home-slider .slick-dots {
 		left: 36px;
