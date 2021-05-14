@@ -1,0 +1,208 @@
+@media screen and (max-width: 1150px) {
+	.release-section {
+
+		margin-top: 58px;
+
+		&:hover {
+			.release-slider-arrow {}
+		}
+
+		&+* {
+			margin-top: 51px;
+		}
+	}
+
+	.release-slider-arrow {
+		display: none !important;
+	}
+
+	.release-slider {
+
+		.slick-list {
+
+
+			&::before,
+			&::after {}
+
+			&::before {}
+
+			&::after {}
+		}
+
+		.slick-track {}
+
+		&.custom-dots .slick-dots {}
+	}
+
+	.release-slide {
+
+		&__left {}
+
+		&__pic {
+
+
+			&::before {}
+
+			&-img {}
+		}
+
+		&__right {
+			padding-left: 37px;
+			padding-top: 46px;
+		}
+
+		&__type {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 28px;
+			letter-spacing: -0.03em;
+		}
+
+		&__title {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 39px;
+			line-height: 49px;
+			letter-spacing: -0.03em;
+			margin-top: -3px;
+		}
+
+		&__date {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 18px;
+		}
+
+		&__info {
+			margin-top: 23px;
+		}
+
+
+
+		&__link {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 18px;
+			margin-top: 26px;
+		}
+	}
+
+	.release-hr-wrap {}
+}
+
+@media screen and (max-width: 749px) {
+	.release-section {
+
+		margin-top: vw(58);
+
+		&:hover {
+			.release-slider-arrow {}
+		}
+
+		&+* {}
+	}
+
+	.release-slider-arrow {
+		display: block !important;
+		top: vw(124);
+
+		&.customized-arrow--prev {
+			left: vw(0);
+		}
+
+		&.customized-arrow--next {
+			right: vw(0);
+		}
+	}
+
+	.release-slider {
+
+		.slick-list {
+
+
+			&::before,
+			&::after {}
+
+			&::before {}
+
+			&::after {}
+		}
+
+		.slick-track {}
+
+		&.custom-dots .slick-dots {
+			margin-top: vw(22);}
+	}
+
+	.release-slide {
+		display: block !important;
+
+		&__left {
+			width: vw(266);
+
+			margin: 0 auto;
+		}
+
+		&__pic {
+
+
+			&::before {}
+
+			&-img {}
+		}
+
+		&__right {
+			width: 100%;
+			padding-left: 0;
+			padding-top: 0;
+			text-align: center;
+			margin-top: vw(17);
+		}
+
+		&__type {
+			font-style: normal;
+			font-weight: 300;
+			font-size: vw(24);
+			line-height: vw(28);
+			margin-top: 0;
+		}
+
+		&__title {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(39);
+			line-height: vw(49);
+			margin-top: vw(5);
+			margin-top: vw(-3);
+		}
+
+		&__date {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(18);
+			margin-top: vw(-2);
+		}
+
+
+
+
+		&__info {
+			margin-top: vw(11);
+		}
+
+		&__link {
+			font-style: normal;
+			font-weight: normal;
+			font-size: vw(15);
+			line-height: vw(18);
+			text-align: center;
+			margin-top: vw(25);
+		}
+	}
+
+	.release-hr-wrap {}
+}

@@ -2,8 +2,10 @@
 @media screen and (max-width:1150px) {
 	.kspc-tags-and-share {
 		margin-top: 52px;
+		&--after-quote-right {
+			margin-top: 24px;
+		}
 	}
-
 	.kspc-tas-flex {
 		display: block;
 	}
@@ -42,7 +44,9 @@
 	.kspc-tags-and-share {
 		margin-top: vw(50);
 	}
-
+	.kspc-tags-and-share--after-quote-right {
+		margin-top: vw(21);
+	}
 	.kspc-tas-flex {}
 
 	.kspc-tas-tags {

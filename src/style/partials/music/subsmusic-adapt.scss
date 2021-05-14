@@ -1,0 +1,49 @@
+@media screen and (max-width: 1150px) {
+	.hr-wrap-before-subsmusic {}
+
+	.subsmusic-section {
+    margin-top: 56px;}
+
+	.subsmusic-title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 22px;
+	}
+
+	.subsmusic-flex {
+		margin-top: 18px;
+	}
+
+	.subsmusic-item {
+		margin: 0 4.5px;
+		&__pic {}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.hr-wrap-before-subsmusic {}
+
+	.subsmusic-section {}
+
+	.subsmusic-title {}
+
+	.subsmusic-flex {}
+
+	.subsmusic-item {
+		&__pic {}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+}

@@ -2,14 +2,14 @@
 
 .component-hide-block {
 
-	max-height: 30*4px;
+	max-height: 30*3px;
 	height: auto;
 	overflow: hidden;
 	transition: max-height 13s linear, height 13s linear;
 	position: relative;
 
 	&--open{
-		max-height: 10000px;
+		max-height: 10000px !important;
 	}
 
 
@@ -32,9 +32,9 @@
 
 
 	.kspc-twpah-unwrap {
-		top: 30*3px;
+		top: 30*2px;
 		right: 0;
-		padding-right: 31px;
+		padding-right: 11px;
 	}
 
 

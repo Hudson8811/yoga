@@ -4,7 +4,7 @@
 	&__container-1 {}
 
 	&__container-2 {
-		margin-top: 41px;
+		margin-top: 35px;
 	}
 
 	&__container-3 {
@@ -18,7 +18,7 @@
 
 .listen-us {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	margin-top: 17px;
 }
 
@@ -26,11 +26,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 6px;
+    margin: 0 11px;
 	width: 120px;
 
 	&__pic {
-		width: 93px;
+		width: 58px;
 		position: relative;
 		border: 1px solid #DEE6E9;
 		border-radius: 50%;
@@ -56,7 +56,7 @@
 		letter-spacing: -0.03em;
 		color: $dark;
 		width: 100%;
-		margin-top: 12px;
+		margin-top: 18px;
 	}
 
 

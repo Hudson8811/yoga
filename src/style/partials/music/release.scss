@@ -6,7 +6,8 @@
 			opacity: 1;
 		}
 	}
-	&+*{
+
+	&+* {
 		margin-top: 41px;
 	}
 }
@@ -49,7 +50,8 @@
 	.slick-track {
 		z-index: 1;
 	}
-	&.custom-dots .slick-dots{
+
+	&.custom-dots .slick-dots {
 		margin-top: 60px;
 	}
 }
@@ -87,7 +89,7 @@
 	&__right {
 		width: calc(50% + 20px);
 		padding-left: 37px;
-		padding-top: 53px;
+		padding-top: 68px;
 		box-sizing: border-box;
 		padding-bottom: 10px;
 
@@ -117,11 +119,13 @@
 		font-weight: normal;
 		font-size: 17px;
 		line-height: 21px;
-		color: #AFB4BF;    margin-top: 6px;
+		color: #AFB4BF;
+		margin-top: 6px;
 	}
 
 	&__info {
-		margin-top: 22px;}
+		margin-top: 22px;
+	}
 
 	&__link {
 		font-family: 'Montserrat';
@@ -131,9 +135,10 @@
 		line-height: 21px;
 		color: #25378D;
 		margin-top: 22px;
+		text-align: left;
 	}
 }
 
-.release-hr-wrap{
+.release-hr-wrap {
 	margin-top: 58px;
 }
