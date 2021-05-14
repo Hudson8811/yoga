@@ -1580,8 +1580,11 @@ $(document).ready(function () {
 		}
 		$('.page-tabs__item').eq(index).addClass('page-tabs__item--active').siblings().removeClass('page-tabs__item--active');
 		$('.page--tabs-blocks .page--tabs-blocks__tab').fadeOut(400).promise().done(function(){
-			if (document.documentElement.scrollTop > $("#tabTop").offset().top +4) {
-				$('html, body').animate({ scrollTop: $("#tabTop").offset().top +4 }, 0);
+			if (document.documentElement.scrollTop > $("#tabTop").offset().top +10) {
+				setTimeout(function (){
+					window.scrollTo( 0, $("#tabTop").offset().top +10 );
+				},10);
+				//$('html, body').animate({ scrollTop: $("#tabTop").offset().top +10 }, 0);
 			}
 			$('.page--tabs-blocks .page--tabs-blocks__tab').removeClass('page--tabs-blocks__tab--active');
 			if ($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).find('.js-kspc-slider').length > 0) {
@@ -1691,6 +1694,8 @@ $(document).ready(function () {
 		let tabRequest = false;
 		let currentPage = 1;
 		let currentTabHtml = 0;
+		let galleryImages = [];
+		let loaderProcess = 0;
 
 		$(window).on('resize scroll', function() {
 			if ($('#music-preloader').length){
@@ -1700,11 +1705,13 @@ $(document).ready(function () {
 			}
 		});
 
+
 		function getScrollContent(index){
 			if (!tabRequest && typeof wpPageID !== 'undefined'){
 				if (typeof index === 'number') {
 					currentPage = 1;
 					currentTabHtml = parseInt(index);
+					galleryImages = [];
 				}
 				let tabContainer = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(currentTabHtml);
 				let data =  {action: 'music', id: wpPageID, tab: currentTabHtml, page : currentPage};
@@ -1712,7 +1719,7 @@ $(document).ready(function () {
 					url : '/wp-admin/admin-ajax.php',
 					data : data,
 					type : 'POST',
-					dataType : 'html',
+					dataType : 'json',
 					beforeSend : function (){
 						tabRequest = true;
 						if (typeof index === 'number') {
@@ -1720,45 +1727,34 @@ $(document).ready(function () {
 						}
 					},
 					success : function( data ){
-						if (data != ''){
-							if (typeof index === 'number') {
-								tabContainer.html(data);
-							} else {
-								if (currentTabHtml === 2){
-									tabContainer.find('.kspc-phg__list').append(data);
+						if (data){
+							if (currentTabHtml === 2){
+								if (typeof index === 'number') {
+									tabContainer.html(data[0]);
+								} else {
+									tabContainer.find('.kspc-phg__list').append(data[0]);
 								}
+								galleryImages.push.apply(galleryImages, data[1])
+								imageLoader();
 							}
 							currentPage++;
 
+
+
+
 							AOS.init({
 								disable: false,
-								initClassName: 'aos-init',
-								debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-								throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-								offset: 120, // offset (in px) from the original trigger point
-								delay: 0, // values from 0 to 3000, with step 50ms
-								duration: 1000, // values from 0 to 3000, with step 50ms
-								easing: 'ease', // default easing for AOS animations
-								once: true, // whether animation should happen only once - while scrolling down
-								mirror: false, // whether elements should animate out while scrolling past them
-								anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+								debounceDelay: 50,
+								throttleDelay: 99,
+								offset: 120,
+								delay: 0,
+								duration: 1000,
+								easing: 'ease',
+								once: true,
+								mirror: false,
+								anchorPlacement: 'top-bottom',
+								useClassNames: 'aos-ajax'
 							});
-
-							document.addEventListener(
-								'load',
-								function(event){
-									var elm = event.target;
-									if( elm.nodeName.toLowerCase() === 'img' && $(elm).closest('.kspc-phg__item').length && !$(elm).hasClass('loaded')){ // or any other filtering condition
-										$(elm).fadeIn(500);
-										/*if($('.kspc-phg__item img.loaded').length === $('.container img').length) {
-											// do some stuff
-											console.log("All images loaded!")
-										}*/
-									}
-								},
-								true // Capture event
-							);
-
 						} else {
 							$('.kspc-preloader').remove();
 						}
@@ -1768,10 +1764,37 @@ $(document).ready(function () {
 					error : function (data){
 						tabRequest = false;
 						console.log('ajax error');
+						$('.kspc-preloader').remove();
 					}
 				});
 			}
 		}
+
+		function imageLoader(){
+			if (galleryImages.length && loaderProcess < 5){
+				loaderProcess++;
+				let imageSrc = galleryImages[0];
+				galleryImages.shift();
+				let imgHtml = '<img src="'+imageSrc+'" alt="">';
+				$('.kspc-phg__add').append(imgHtml);
+			}
+		}
+
+
+		document.addEventListener(
+			'load',
+			function(event){
+				var elm = event.target;
+				if( elm.nodeName.toLowerCase() === 'img' && $(elm).closest('.kspc-phg__add').length){
+					let conteiner = $('.kspc-phg__item:not(.loaded):first');
+					$(elm).appendTo(conteiner).fadeIn(1000);
+					conteiner.addClass('loaded');
+					loaderProcess--;
+					imageLoader();
+				}
+			},
+			true
+		);
 	}
 
 });
