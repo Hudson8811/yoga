@@ -1,7 +1,7 @@
 .page-tabs-section{
   position: relative;
-  background: rgba(255,255,255,.5);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
 
   &__container{
     overflow: auto;

@@ -894,7 +894,18 @@
 		color: $dark;
 		margin-left: 0;
 		padding: vw(88) vw(10) vw(86);
+
+		&--mob-wide{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&--mob-alternate-pt-pb{
+
+			padding: vw(82) 0 vw(124);
+
+		}
 	}
+
 
 	.kspc-quote-right {}
 
@@ -934,6 +945,12 @@
 
 	.kspc-media-wrap+.kspc-simple-text--has-title {
 		margin-top: vw(88);
+	}
+
+	.kspc-media-wrap--has-label{
+		&+.kspc-simple-text {
+			margin-top: vw(46);
+		}
 	}
 
 	.kspc-3-i.kspc-media {
@@ -1188,6 +1205,10 @@
 	}
 
 	.kspc-quote-right+.kspc-simple-text {
+		margin-top: vw(73);
+	}
+
+	.kspc-quote-right+.kspc-slider-block--has-title {
 		margin-top: vw(73);
 	}
 

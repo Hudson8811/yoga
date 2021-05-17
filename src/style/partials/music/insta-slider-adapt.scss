@@ -17,6 +17,7 @@
 		&.customized-arrow--prev {
 			left: -49px;
 		}
+
 		&.customized-arrow--next {
 			right: -49px;
 		}
@@ -56,17 +57,36 @@
 
 @media screen and (max-width: 749px) {
 	.insta-slider-section {
+		margin-top: vw(51);
+
 		.insta-slider-arrow {}
 
-		&+.reviews {}
+		&+.reviews {
+			margin-top: vw(86);
+		}
 	}
 
 	.insta-slider-title {}
 
-	.insta-slider-arrow {}
+	.insta-slider-arrow {
+		top: vw(56);
+
+		&.customized-arrow--prev {
+			left: vw(-32);
+		}
+
+		&.customized-arrow--next {
+			right: vw(-32);
+		}
+	}
 
 	.insta-slider {
-		&:not(:first-child) {}
+		margin-top: vw(27);
+		width: vw(266);
+
+		&:not(:first-child) {
+			margin-top: vw(27);
+		}
 
 		.slick-list {
 			&::before {}

@@ -2,7 +2,8 @@
 	.hr-wrap-before-subsmusic {}
 
 	.subsmusic-section {
-    margin-top: 56px;}
+		margin-top: 56px;
+	}
 
 	.subsmusic-title {
 		font-style: normal;
@@ -17,6 +18,7 @@
 
 	.subsmusic-item {
 		margin: 0 4.5px;
+
 		&__pic {}
 
 		&:hover {}
@@ -28,15 +30,31 @@
 }
 
 @media screen and (max-width: 749px) {
-	.hr-wrap-before-subsmusic {}
+	.hr-wrap-before-subsmusic {
+		margin-top: vw(83);
+	}
 
-	.subsmusic-section {}
+	.subsmusic-section {
+		margin-top: vw(47);
+	}
 
-	.subsmusic-title {}
+	.subsmusic-title {
+		font-weight: normal;
+		font-size: vw(24);
+		line-height: vw(39);
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
 
-	.subsmusic-flex {}
+	.subsmusic-flex {
+		margin-top: vw(24);
+	}
 
 	.subsmusic-item {
+		margin: 0 vw(4.5);
+		width: vw(36);
+		height: vw(36);
+
 		&__pic {}
 
 		&:hover {}

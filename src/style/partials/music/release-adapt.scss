@@ -94,6 +94,10 @@
 }
 
 @media screen and (max-width: 749px) {
+	.release-hr-wrap {
+		margin-top: vw(58);
+	}
+
 	.release-section {
 
 		margin-top: vw(58);
@@ -102,7 +106,9 @@
 			.release-slider-arrow {}
 		}
 
-		&+* {}
+		&+* {
+			margin-top: vw(51);
+		}
 	}
 
 	.release-slider-arrow {
@@ -134,7 +140,8 @@
 		.slick-track {}
 
 		&.custom-dots .slick-dots {
-			margin-top: vw(22);}
+			margin-top: vw(22);
+		}
 	}
 
 	.release-slide {

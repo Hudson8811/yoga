@@ -8,7 +8,9 @@
 			margin-top: 50px;
 		}
 
-		&__container-3 {    margin-top: 58px;}
+		&__container-3 {
+			margin-top: 58px;
+		}
 	}
 
 	.listen-us-title {}
@@ -20,6 +22,7 @@
 	.listen-us-item {
 		margin: 0 11px;
 		width: 107px;
+
 		&__pic {
 			&::before {}
 
@@ -44,25 +47,66 @@
 
 @media screen and (max-width: 749px) {
 	.listen-us-section {
+		margin-top: vw(59);
+
 		&__container-1 {}
 
-		&__container-2 {}
+		&__container-2 {
+			margin-top: vw(51);
+			overflow: hidden;
+		}
 
-		&__container-3 {}
+		&__container-3 {
+			margin-top: vw(19);}
 	}
 
-	.listen-us-title {}
+	.listen-us-title {
+		font-size: vw(32);
+		line-height: vw(39);
+	}
 
-	.listen-us {}
+	.listen-us {
+		flex-wrap: wrap;
+		//margin: 0 vw(-11);
+		margin: vw(26) 0 0;
+	}
 
 	.listen-us-item {
+		min-width: vw(93);
+		//margin: 0 vw(11);
+		width: auto;
+		width: unset;
+
+		margin: 0 0 vw(36);
+
+		&:nth-child(3n-1):not(:last-child) {
+			flex-grow: 1;
+			min-width: 40%;
+			//background: red;
+		}
+
+		&:last-child:not(:nth-child(3n)) {
+			//background:  #000 !important;
+		}
+
+		&:last-child:not(:nth-child(3n)),
+		&:nth-last-child(2):not(:nth-child(3n-1)):not(:nth-child(3n)) {
+			width: 38.33%;
+			//background: blue;
+		}
+
 		&__pic {
+			width: vw(58);
 			&::before {}
 
 			img {}
 		}
 
-		&__name {}
+		&__name {
+			font-size: vw(15);
+			line-height: vw(15);
+			margin-top: vw(12);
+		}
 
 		&:hover {}
 

@@ -74,7 +74,7 @@
 @media screen and (max-width: 749px) {
 	.albums-section {
 
-		margin-top: 88px;
+		margin-top: vw(88);
 
 		&:hover {
 			.albums-section-arrow {}
@@ -85,16 +85,21 @@
 
 	.albums-section-arrow {
 		display: block !important;
-		.customized-arrow--prev{
+		top: vw(126);
+
+		&.customized-arrow--prev {
 			left: 0;
 		}
-		.customized-arrow--next{
+
+		&.customized-arrow--next {
 			right: 0;
 		}
 	}
 
 	.albums-slider {
-		&:not(:first-child) {}
+		&:not(:first-child) {
+			margin-top: vw(26);
+		}
 
 		.slick-list {
 
@@ -108,14 +113,16 @@
 
 		.slick-track {}
 
-		.slick-dots {}
+		.slick-dots {
+			margin-top: vw(32);
+		}
 	}
 
 	.albums-slide {
 
 
 		&__pic {
-			width: 268px;
+			width: vw(268);
 			margin: 0 auto;
 
 			&::before {}
@@ -123,9 +130,18 @@
 			img {}
 		}
 
-		&__label {}
+		&__label {
+			font-size: vw(19);
+			line-height: vw(26);
+			letter-spacing: 0;
+			margin-top: vw(16);
+		}
 
-		&__listen {}
+		&__listen {
+			font-size: vw(15);
+			line-height: vw(18);
+			margin-top: vw(11);
+		}
 
 		&:hover {}
 
