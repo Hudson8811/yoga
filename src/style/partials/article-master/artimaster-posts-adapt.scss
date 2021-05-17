@@ -2,8 +2,21 @@
 	.artimaster-posts-section {
 		margin-top: 55px;
 		margin-bottom: 107px;
+
 		&--videos {
 			margin-bottom: 58px;
+		}
+
+		&--videos-on-music-page {
+			margin-top: 8px;
+
+			.artimaster-post {
+
+				&__title {
+					font-size: 19px;
+					line-height: 26px;
+				}
+			}
 		}
 	}
 
@@ -74,8 +87,30 @@
 	.artimaster-posts-section {
 		margin-top: vw(22);
 		margin-bottom: vw(93);
-		&--videos{
+
+		&--videos {
 			margin-bottom: 16vw;
+		}
+
+		&--videos-on-music-page {
+			.artimaster-section-title {
+
+				font-style: normal;
+				font-weight: normal;
+				font-size: vw(32);
+				line-height: vw(45);
+			}
+
+			.artimaster-post {
+
+				&__title {
+					margin-top: vw(18);
+					font-style: normal;
+					font-weight: normal;
+					font-size: vw(19);
+					line-height: vw(27);
+				}
+			}
 		}
 	}
 
@@ -91,22 +126,22 @@
 	.artimaster-post {
 		width: 100%;
 		margin-bottom: vw(51);
-		&--videos{
+
+		&--videos {
 			margin-bottom: 13.4vw;
 		}
 
 		&__img-wrapper {
 			&::after {}
-			&--videos{
+
+			&--videos {
 				&+.artimaster-post__title {
 					margin-top: vw(14);
 				}
 			}
 		}
 
-		&__img {
-
-		}
+		&__img {}
 
 		&__title {
 			margin-top: vw(18);

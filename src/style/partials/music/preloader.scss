@@ -1,10 +1,10 @@
-.kspc-preloader{
+.kspc-preloader {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 36px 0;
 
-	span{
+	span {
 		width: 14px;
 		height: 14px;
 		background: #EEEEEE;
@@ -13,17 +13,36 @@
 		margin: 0 11px;
 		animation: preloaderDots 0.6s linear infinite;
 		animation-direction: alternate;
-		&:nth-child(1){
+
+		&:nth-child(1) {
 			animation-delay: -0.4s
 		}
-		&:nth-child(2){
+
+		&:nth-child(2) {
 			animation-delay: -0.2s
+		}
+	}
+
+	&--videos {
+		padding-top: 51px;
+
+		@media screen and (max-width: 749px) {
+			padding-top: vw(51);
+
 		}
 	}
 }
 
 @keyframes preloaderDots {
-	0% { background: #EEEEEE; }
-	50% { background: #D8D8D8; }
-	100% { background: #BBBBBB; }
+	0% {
+		background: #EEEEEE;
+	}
+
+	50% {
+		background: #D8D8D8;
+	}
+
+	100% {
+		background: #BBBBBB;
+	}
 }
