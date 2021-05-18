@@ -15,20 +15,17 @@ block main
 		section.ks-post-constructor
 			include components/music/tabs
 
+			//Доп часть которая идёт после "Окончание вкладок, и отображается в зависимости от выбранной вкладки"
+			.js-common-tab.common-tab.common-tab--1.common-tab--2.common-tab--active
 
-		include components/music/ks-post-tags-and-share
+				include components/music/listen-us
 
-		include components/music/albums
+				include components/music/insta-slider
 
-		include components/music/listen-us
-
-		include components/music/insta-slider
-
-		include components/seminar/reviews
+				include components/seminar/reviews
 
 
-		include components/music/subsmusic
-
+				include components/music/subsmusic
 
 
 
