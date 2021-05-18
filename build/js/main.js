@@ -1733,9 +1733,9 @@ $(document).ready(function () {
 					beforeSend : function (){
 						tabRequest = true;
 						if (typeof index === 'number') {
-							tabContainer.html('<div class="kspc-preloader"><span></span><span></span><span></span></div>');
+							tabContainer.html('<div style="height: 100vh"></div>');
 							setTimeout(function (){
-								tabContainer.siblings('.page--tabs-blocks__tab').html('');
+								tabContainer.siblings('.page--tabs-blocks__tab').html('<div style="height: 100vh"></div>');
 							},400);
 						}
 					},
