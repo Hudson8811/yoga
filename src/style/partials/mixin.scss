@@ -71,3 +71,7 @@ $resolution: 360;
 @function vw($px) {
 	@return (($px/$resolution) * 100)+vw;
 }
+
+@function vw393($px) {
+	@return (($px/393) * 100)+vw;
+}

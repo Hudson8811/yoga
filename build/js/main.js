@@ -367,6 +367,7 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
     setTimeout(scroller, 0);
   });
 }));
+(function(global){var startY=0;var enabled=false;var supportsPassiveOption=false;try{var opts=Object.defineProperty({},"passive",{get:function(){supportsPassiveOption=true}});window.addEventListener("test",null,opts)}catch(e){}var handleTouchmove=function(evt){var el=evt.target;var zoom=window.innerWidth/window.document.documentElement.clientWidth;if(evt.touches.length>1||zoom!==1){return}while(el!==document.body&&el!==document){var style=window.getComputedStyle(el);if(!style){break}if(el.nodeName==="INPUT"&&el.getAttribute("type")==="range"){return}var scrolling=style.getPropertyValue("-webkit-overflow-scrolling");var overflowY=style.getPropertyValue("overflow-y");var height=parseInt(style.getPropertyValue("height"),10);var isScrollable=scrolling==="touch"&&(overflowY==="auto"||overflowY==="scroll");var canScroll=el.scrollHeight>el.offsetHeight;if(isScrollable&&canScroll){var curY=evt.touches?evt.touches[0].screenY:evt.screenY;var isAtTop=startY<=curY&&el.scrollTop===0;var isAtBottom=startY>=curY&&el.scrollHeight-el.scrollTop===height;if(isAtTop||isAtBottom){evt.preventDefault()}return}el=el.parentNode}evt.preventDefault()};var handleTouchstart=function(evt){startY=evt.touches?evt.touches[0].screenY:evt.screenY};var enable=function(){window.addEventListener("touchstart",handleTouchstart,supportsPassiveOption?{passive:false}:false);window.addEventListener("touchmove",handleTouchmove,supportsPassiveOption?{passive:false}:false);enabled=true};var disable=function(){window.removeEventListener("touchstart",handleTouchstart,false);window.removeEventListener("touchmove",handleTouchmove,false);enabled=false};var isEnabled=function(){return enabled};var testDiv=document.createElement("div");document.documentElement.appendChild(testDiv);testDiv.style.WebkitOverflowScrolling="touch";var scrollSupport="getComputedStyle"in window&&window.getComputedStyle(testDiv)["-webkit-overflow-scrolling"]==="touch";document.documentElement.removeChild(testDiv);if(scrollSupport){enable()}var iNoBounce={enable:enable,disable:disable,isEnabled:isEnabled};if(typeof module!=="undefined"&&module.exports){module.exports=iNoBounce}if(typeof global.define==="function"){(function(define){define("iNoBounce",[],function(){return iNoBounce})})(global.define)}else{global.iNoBounce=iNoBounce}})(this);
 
 /* my scripts */
 
@@ -1588,6 +1589,57 @@ function musicPageSlidersDisable(tabJq) {
 	sliders.slick('unslick');
 }
 
+var $docEl = $('html, body'),
+	$wrap = $('.main'),
+	scrollTop;
+
+$.lockBody = function () {
+	if (window.pageYOffset) {
+		scrollTop = window.pageYOffset;
+
+		$wrap.css({
+			top: -(scrollTop)
+		});
+	}
+
+	$docEl.css({
+		height: "100%",
+		overflow: "hidden"
+	});
+}
+
+$.unlockBody = function () {
+	$docEl.css({
+		height: "",
+		overflow: ""
+	});
+
+	$wrap.css({
+		top: ''
+	});
+
+	window.scrollTo(0, scrollTop);
+	window.setTimeout(function () {
+		scrollTop = null;
+	}, 10);
+}
+
+function closeAlbumModal() {
+	$.unlockBody();
+	setTimeout(function () {
+		$('body').removeClass('body-open-album-modal');
+	}, 300);
+
+
+}
+
+function openAlbumModal() {
+	$('body').addClass('body-open-album-modal');
+	setTimeout(function () {
+		$.lockBody();
+	}, 400);
+
+}
 
 $(document).ready(function () {
 
@@ -1596,6 +1648,30 @@ $(document).ready(function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.component-hide-block-wrap').addClass('component-hide-block-wrap--open');
 	});
 	musicPageSlidersInit(false);
+
+
+	$('.js-open-album-modal').click(function (e) {
+		e.preventDefault();
+		openAlbumModal();
+	});
+
+	$('#music-modal-bg').click(function (e) {
+		console.log(e.target.parentElement);
+		if (e.target.id === 'music-modal-bg' || e.target.parentElement.id === 'music-modal-bg'){
+			e.preventDefault();
+			closeAlbumModal();
+
+		}
+	});
+	/*$('#music-modal-bg').click(function (e) {
+			e.preventDefault();
+			closeAlbumModal();
+		}).children()
+		.click(function (e) { // вешаем на потомков
+			e.stopPropagation(); // предотвращаем всплытие
+		});*/
+
+
 });
 $(document).ready(function () {
 	if ($('.slicky-top').length) {

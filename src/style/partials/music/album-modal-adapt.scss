@@ -1,0 +1,104 @@
+@media screen and (max-width: 1150px) {
+	.music-modal-bg {}
+
+	.music-modal {
+		&--music-modal {}
+
+		&__inner {}
+	}
+
+
+	.music-modal__pic {
+		img {}
+	}
+
+	.music-modal__text {}
+
+
+	.music-modal__text-top {}
+
+	.music-modal__title {}
+
+	.music-modal__description {}
+
+
+	.music-modal-services {}
+
+	.music-modal-service {
+		&__logo {
+			img {}
+		}
+
+		&__btn {
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+		}
+
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+
+
+
+	.container--music-modal {
+		width: vw393(393);
+	}
+
+
+
+
+
+
+	.music-modal__text-top {
+		padding: vw393(28) vw393(22) vw393(26);
+	}
+
+	.music-modal__title {
+		font-size: vw393(22);
+		line-height: vw393(33);
+	}
+
+	.music-modal__description {
+		margin-top: vw393(3);
+	}
+
+
+	.music-modal-services {}
+
+	.music-modal-service {
+		padding: vw393(22) vw393(22);
+
+		&:first-child {
+			padding-top: vw393(20);
+		}
+
+		&__logo {
+			max-height: vw393(38);
+			max-width: calc(100% - #{vw393(150)});
+
+			img{
+
+			max-height: vw393(38);
+			}
+		}
+
+		&__btn.btn {
+			min-width: vw393(101);
+			min-height: vw393(27);
+
+			padding: vw393(5) vw393(15);
+
+			font-size: vw393(13);
+			line-height: vw393(21);
+			padding: vw393(2) vw393(15);
+
+
+		}
+
+	}
+}

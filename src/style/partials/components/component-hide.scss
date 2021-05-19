@@ -38,12 +38,25 @@
 		padding-right: 11px;
 	}
 
+	&--unwrap-pr-music-modal{
+		.kspc-twpah-unwrap{
+			letter-spacing: -0.4px;
+			padding-right: 31px !important;
+		}
+	}
 
 	&--show-9 {
 		max-height: 30*9px;
 
 		.kspc-twpah-unwrap {
 			top: 30*8px;
+		}
+	}
+	&--show-2 {
+		max-height: 30*2px;
+
+		.kspc-twpah-unwrap {
+			top: 30*1px;
 		}
 	}
 
