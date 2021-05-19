@@ -167,7 +167,6 @@ $(document).ready(function () {
 
 
 
-
 	$('.js-jarallax-1').jarallax({
 		speed: 0.6,
 		imgWidth: 1920,

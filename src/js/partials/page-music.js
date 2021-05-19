@@ -5,10 +5,9 @@
  */
 function musicPageSlidersInit(tabJq) {
 
-	console.log('SLICK');
 	var releaseSlider;
 	if (tabJq !== false) {
-		releaseSlider = $(tabJq).find('.js-release-slider:not(.slick-slider)');
+		releaseSlider = tabJq.find('.js-release-slider:not(.slick-slider)');
 	} else {
 		releaseSlider = $('.js-release-slider');
 	}
@@ -45,7 +44,7 @@ function musicPageSlidersInit(tabJq) {
 
 	var albumsSlider;
 	if (tabJq !== false) {
-		albumsSlider = $(tabJq).find('.js-albums-slider:not(.slick-slider)');
+		albumsSlider = tabJq.find('.js-albums-slider:not(.slick-slider)');
 	} else {
 		albumsSlider = $('.js-albums-slider');
 	}
@@ -79,7 +78,7 @@ function musicPageSlidersInit(tabJq) {
 
 	var instaSlider;
 	if (tabJq !== false) {
-		instaSlider = $(tabJq).find('.js-insta-slider:not(.slick-slider)');
+		instaSlider = tabJq.find('.js-insta-slider:not(.slick-slider)');
 	} else {
 		instaSlider = $('.js-insta-slider');
 	}
@@ -115,11 +114,9 @@ function musicPageSlidersInit(tabJq) {
  * @param  {} tabJq jquery элемент открываемого таба. Если отключаем безотносительно таба, то можно передать false
  */
 function musicPageSlidersDisable(tabJq) {
-	console.log('UNSLICK');
-	console.log(tabJq);
 	var sliders;
 	if (tabJq !== false) {
-		sliders = $(tabJq).find('.js-release-slider, .js-albums-slider, .js-insta-slider');
+		sliders = tabJq.find('.js-release-slider, .js-albums-slider, .js-insta-slider');
 	} else {
 		sliders = $('.js-release-slider, .js-albums-slider, .js-insta-slider');
 	}
