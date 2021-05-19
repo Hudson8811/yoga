@@ -175,7 +175,7 @@ $(document).ready(function () {
 
 
 			if (newTab.find('.js-kspc-slider').length > 0) {
-				newTab.find('.js-kspc-slider:not.slick-slider').slick('unslick');
+				newTab.find('.js-kspc-slider:not(.slick-slider)').slick('unslick');
 			}
 			setTimeout(function () {
 				kspcSlidersInit(newTab);
@@ -335,16 +335,16 @@ $(document).ready(function () {
 						beforeSend: function () {
 							tabRequest = true;
 							if (typeof index === 'number') {
-								if (index !== 3)
+								if (index !== 3 && index !== 0)
 									tabContainer.html('<div style="height: 100vh; max-height: 100vh;"></div>');
 								setTimeout(function () {
-									tabContainer.siblings('.page--tabs-blocks__tab:not(.page--tabs-4)').html('<div style="height: 100vh; max-height: 100vh;"></div>');
+									tabContainer.siblings('.page--tabs-blocks__tab:not(.page--tabs-4):not(.page--tabs-1)').html('<div style="height: 100vh; max-height: 100vh;"></div>');
 								}, 400);
 							}
 						},
 						success: function (data) {
 							if (data) {
-								if (currentTabHtml === 0) {
+								/*if (currentTabHtml === 0) {
 									tabContainer.html(data);
 									setTimeout(function () {
 										AOS.init({
@@ -360,7 +360,7 @@ $(document).ready(function () {
 											anchorPlacement: 'top-bottom',
 										});
 									}, 50);
-								}
+								}*/
 								if (currentTabHtml === 1) {
 									if (typeof index === 'number') {
 										tabContainer.html(data[0]);
