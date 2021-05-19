@@ -254,14 +254,14 @@
 			//2
 			&:nth-child(18n + 1):nth-last-child(2),
 			&:nth-child(18n + 2):nth-last-child(1){
-				grid-column-end: span 3;
-				grid-row-end: span 3;
+				grid-column-end: span 1;
+				grid-row-end: span 1;
 			}
 
 			//1
 			&:nth-child(18n + 1):nth-last-child(1){
-				grid-column-end: span 6;
-				grid-row-end: span 3;
+				grid-column-end: span 1;
+				grid-row-end: span 1;
 			}
 		}
 
