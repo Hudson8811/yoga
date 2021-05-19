@@ -335,9 +335,10 @@ $(document).ready(function () {
 						beforeSend: function () {
 							tabRequest = true;
 							if (typeof index === 'number') {
-								tabContainer.html('<div style="height: 100vh"></div>');
+								if (index !== 3)
+									tabContainer.html('<div style="height: 500px; max-height: 100vh;"></div>');
 								setTimeout(function () {
-									tabContainer.siblings('.page--tabs-blocks__tab').html('<div style="height: 100vh"></div>');
+									tabContainer.siblings('.page--tabs-blocks__tab:not(.page--tabs-4)').html('<div style="height: 500px; max-height: 100vh;"></div>');
 								}, 400);
 							}
 						},
