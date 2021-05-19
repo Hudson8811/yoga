@@ -19,6 +19,7 @@ $(document).on('mobileinit', function () {
 //= libs/autosize.min.js
 //= libs/jquery.touchSwipe.min.js
 //= libs/jquery.sticky.js
+//= libs/inobounce.min.js
 
 /* my scripts */
 

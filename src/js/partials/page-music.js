@@ -123,6 +123,57 @@ function musicPageSlidersDisable(tabJq) {
 	sliders.slick('unslick');
 }
 
+var $docEl = $('html, body'),
+	$wrap = $('.main'),
+	scrollTop;
+
+$.lockBody = function () {
+	if (window.pageYOffset) {
+		scrollTop = window.pageYOffset;
+
+		$wrap.css({
+			top: -(scrollTop)
+		});
+	}
+
+	$docEl.css({
+		height: "100%",
+		overflow: "hidden"
+	});
+}
+
+$.unlockBody = function () {
+	$docEl.css({
+		height: "",
+		overflow: ""
+	});
+
+	$wrap.css({
+		top: ''
+	});
+
+	window.scrollTo(0, scrollTop);
+	window.setTimeout(function () {
+		scrollTop = null;
+	}, 10);
+}
+
+function closeAlbumModal() {
+	$.unlockBody();
+	setTimeout(function () {
+		$('body').removeClass('body-open-album-modal');
+	}, 300);
+
+
+}
+
+function openAlbumModal() {
+	$('body').addClass('body-open-album-modal');
+	setTimeout(function () {
+		$.lockBody();
+	}, 400);
+
+}
 
 $(document).ready(function () {
 
@@ -131,4 +182,28 @@ $(document).ready(function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.component-hide-block-wrap').addClass('component-hide-block-wrap--open');
 	});
 	musicPageSlidersInit(false);
+
+
+	$('.js-open-album-modal').click(function (e) {
+		e.preventDefault();
+		openAlbumModal();
+	});
+
+	$('#music-modal-bg').click(function (e) {
+		console.log(e.target.parentElement);
+		if (e.target.id === 'music-modal-bg' || e.target.parentElement.id === 'music-modal-bg'){
+			e.preventDefault();
+			closeAlbumModal();
+
+		}
+	});
+	/*$('#music-modal-bg').click(function (e) {
+			e.preventDefault();
+			closeAlbumModal();
+		}).children()
+		.click(function (e) { // вешаем на потомков
+			e.stopPropagation(); // предотвращаем всплытие
+		});*/
+
+
 });
