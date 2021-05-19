@@ -1,4 +1,8 @@
-.component-hide-block-wrap {}
+.component-hide-block-wrap {
+	&--open .component-hide-block{
+		max-height: 10000px !important;
+	}
+}
 
 .component-hide-block {
 
@@ -8,9 +12,6 @@
 	transition: max-height 13s linear, height 13s linear;
 	position: relative;
 
-	&--open{
-		max-height: 10000px !important;
-	}
 
 
 	font-style: normal;

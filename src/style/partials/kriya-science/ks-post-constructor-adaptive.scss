@@ -336,6 +336,10 @@
 		&+.kspc-slider-block--has-title {
 			margin-top: 73px;
 		}
+		&+.kspc-tags-and-share {
+			margin-top: 80px;
+		}
+
 	}
 
 
@@ -921,6 +925,9 @@
 
 		&+* {
 			margin-top: vw(71);
+		}
+		&+.kspc-tags-and-share {
+			margin-top: vw(80);
 		}
 	}
 
