@@ -34,14 +34,12 @@
 			background: #fff;
 			position: absolute;
 			height: 100%;
-			width: 7px;
+			width: 4px;
 			z-index: 2;
 			top: 0;
-		}
-
-		&::before {
 			left: -1px;
 		}
+
 
 	}
 
@@ -52,7 +50,8 @@
 
 .insta-slide {
 	position: relative;
-	margin-left: 6px;
+	margin-left: 3px;
+	margin-right: 3px;
 	overflow: hidden;
 	border-radius: 6px;
 	-webkit-mask-image: -webkit-radial-gradient(white, #000);
