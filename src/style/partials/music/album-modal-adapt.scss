@@ -101,14 +101,13 @@
 		}
 
 	}
-}
+	.music-modal-close{
+		top: vw393(35);
+		right: vw393(35);
+		svg{
+			width: vw393(27);
 
-
-.music-modal-close{
-	top: vw393(35);
-	right: vw393(35);
-	svg{
-		width: vw393(27);
-
+		}
 	}
 }
+
