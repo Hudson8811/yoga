@@ -1,7 +1,7 @@
 
 	function kspcSlidersInit(tabJq) {
 
-		console.log('kspcSLICK');
+		//console.log('kspcSLICK');
 		var kaspcSlider;
 		if (tabJq !== false) {
 			kaspcSlider = tabJq.find('.js-kspc-slider:not(.slick-slider)');
@@ -39,7 +39,7 @@
 				]
 			});
 		}
-		console.log('kspcSLICKEnd');
+		//console.log('kspcSLICKEnd');
 	}
 
 
