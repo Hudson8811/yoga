@@ -186,6 +186,7 @@ $(document).ready(function () {
 			musicPageSlidersDisable($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
 			setTimeout(function () {
 				musicPageSlidersInit($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
+				instaSlidersInit($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
 			}, 150)
 			setTimeout(function () {
 				if (newTab.find('.js-jarallax-1').length > 0) {
