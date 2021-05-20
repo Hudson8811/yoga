@@ -190,12 +190,15 @@ $(document).ready(function () {
 	});
 
 	$('#music-modal-bg').click(function (e) {
-		console.log(e.target.parentElement);
 		if (e.target.id === 'music-modal-bg' || e.target.parentElement.id === 'music-modal-bg'){
 			e.preventDefault();
 			closeAlbumModal();
 
 		}
+	});
+	$('.music-modal-close').click(function (e) {
+			e.preventDefault();
+			closeAlbumModal();
 	});
 	/*$('#music-modal-bg').click(function (e) {
 			e.preventDefault();
