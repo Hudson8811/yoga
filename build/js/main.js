@@ -1896,21 +1896,26 @@ $(document).ready(function () {
 			var newTab = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index); //открываемая вкладка
 
 
-
-			if (newTab.find('.js-kspc-slider').length > 0) {
-				newTab.find('.js-kspc-slider:not(.slick-slider)').slick('unslick');
-			}
 			setTimeout(function () {
-				kspcSlidersInit(newTab);
-			}, 150);
+
+				if (newTab.find('.js-kspc-slider').length > 0) {
+					newTab.find('.js-kspc-slider.slick-slider').slick('unslick');
+				}
+				setTimeout(function () {
+					kspcSlidersInit(newTab);
+				}, 150);
+			}, 50);
 
 
 
-			musicPageSlidersDisable($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
 			setTimeout(function () {
-				musicPageSlidersInit($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
-				instaSlidersInit($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
-			}, 150)
+				musicPageSlidersDisable($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
+
+				setTimeout(function () {
+					musicPageSlidersInit($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
+					instaSlidersInit($('.page--tabs-blocks .page--tabs-blocks__tab').eq(index));
+				}, 150)
+			}, 50);
 			setTimeout(function () {
 				if (newTab.find('.js-jarallax-1').length > 0) {
 					newTab.find('.js-jarallax-1').jarallax('destroy');
