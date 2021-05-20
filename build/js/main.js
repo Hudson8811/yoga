@@ -1624,9 +1624,9 @@ function musicPageSlidersInit(tabJq) {
 function musicPageSlidersDisable(tabJq) {
 	var sliders;
 	if (tabJq !== false) {
-		sliders = tabJq.find('.js-release-slider, .js-albums-slider, .js-insta-slider');
+		sliders = tabJq.find('.js-release-slider.slick-slider, .js-albums-slider.slick-slider, .js-insta-slider.slick-slider');
 	} else {
-		sliders = $('.js-release-slider, .js-albums-slider, .js-insta-slider');
+		sliders = $('.js-release-slider.slick-slider, .js-albums-slider.slick-slider, .js-insta-slider.slick-slider');
 	}
 	sliders.slick('unslick');
 }
