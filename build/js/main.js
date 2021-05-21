@@ -1722,6 +1722,10 @@ $(document).ready(function () {
 
 
 		$('#music-modal__pic img').attr('src',$(this).attr('data-image-src'));
+		$('#music-modal-bg').css('background-image','url('+$(this).attr('data-image-src')+')');
+
+
+
 		$('#music-modal__title').html($(this).attr('data-title'));
 
 
