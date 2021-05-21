@@ -213,20 +213,11 @@ $(document).ready(function () {
 
 	$('body').on('click', '.js-open-album-modal,[href="js-open-album-modal"]', function (e) {
 		e.preventDefault();
-		$('#music-modal-bg .component-hide-block-wrap--open').removeClass('component-hide-block-wrap--open')
-			.find('.component-hide-block').css({
-				WebkitTransition: 'max-height 0s linear, height 0s linear',
-				MozTransition: 'max-height 0s linear, height 0s linear',
-				MsTransition: 'max-height 0s linear, height 0s linear',
-				OTransition: 'max-height 0s linear, height 0s linear',
-				transition: 'max-height 0s linear, height 0s linear'
-			}).css({
-				WebkitTransition: '',
-				MozTransition: '',
-				MsTransition: '',
-				OTransition: '',
-				transition: ''
-			});
+
+
+		$('#music-modal__pic img').attr('src',$(this).attr('data-image-src'));
+		$('#music-modal__title').html($(this).attr('data-title'));
+
 
 		$('#music-modal__description-container').html($(this).siblings('.js-open-album-modal-hidden').find('.open-album-modal-hidden__description').html());
 		$('#music-modal-services').html($(this).siblings('.js-open-album-modal-hidden').find('.open-album-modal-hidden__socials').html());
