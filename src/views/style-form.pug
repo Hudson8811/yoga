@@ -1,0 +1,16 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'article-master'
+		};
+
+	-
+		var header_class_name="site-header--partial-static";
+
+
+block main
+	.kriya-science-main
+		.container.container--ks
+			include components/music/form.html

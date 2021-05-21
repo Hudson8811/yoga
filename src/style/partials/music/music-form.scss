@@ -1,0 +1,136 @@
+.music-form-wrap {}
+
+.music-form-title {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	line-height: 59px;
+	color: $dark;
+	letter-spacing: -0.03em;
+}
+
+.music-form-description {
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 30px;
+	color: $dark;
+	margin-top: 9px;
+}
+
+.music-form {
+	margin-top: 25px;
+}
+
+.music-form-row {
+	display: flex;
+	justify-content: space-between;
+
+	&+.music-form-row {
+		margin-top: 22px;
+	}
+}
+
+.music-form-item {
+	width: 100%;
+
+	&--2 {
+		width: calc(50% - 11px);
+	}
+
+	&--btn {
+		width: 202px;
+	}
+
+	&--submit-text {
+		width: calc(100% - 224px);
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 21px;
+		/* or 162% */
+
+		display: flex;
+		align-items: center;
+
+		color: #AFB4BF;
+	}
+}
+
+.music-form-input {
+	display: block;
+	width: 100%;
+	background: #FFFFFF;
+	border: 1px solid #D9DBDE;
+	box-sizing: border-box;
+	border-radius: 3px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	padding: 11px 22px 9px;
+	font-size: 13px;
+	line-height: 21px;
+	color: $dark;
+
+	&::placeholder {
+		color: #AFB4BF;
+	}
+
+	&--textarea {
+		resize: none;
+		min-height: 128px;
+	}
+
+	&--email {
+		padding-left: 49px;
+		-webkit-transition: all .3s ease-out;
+		transition: all .3s ease-out;
+		background-image: url(../img/mail.svg);
+		background-repeat: no-repeat;
+		background-position: 20px center;
+		background-size: 21px auto;
+
+		&:focus {
+			padding-left: 20px;
+			background-position: -25px center;
+		}
+	}
+}
+
+.btn--music-form {
+	border-radius: 5px;
+	padding: 13px 15px;
+}
+
+.hr--after-music-form {
+	margin-top: 93px;
+}
+
+
+.music-form-contacts {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 27px;
+
+	&__item {
+		width: calc(50% - 19px);
+	}
+
+	&__item-text {
+		display: block;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		color: $dark;
+	}
+
+	&__item-link {
+		display: block;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		color: #25378D;
+		margin-top: 4px;
+	}
+}
