@@ -211,7 +211,7 @@ $(document).ready(function () {
 	}, 2500);
 
 
-	$('body').on('click', '.js-open-album-modal,[href="js-open-album-modal"]', function (e) {
+	$('body').on('click', '.js-open-album-modal,[href="#js-open-album-modal"]', function (e) {
 		e.preventDefault();
 
 
