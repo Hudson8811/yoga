@@ -26,8 +26,8 @@ var tippySettings = {
 	//sticky: true,
 	//hideOnClick: false,
 	offset: [0, 15],
-	appendTo: $('body')[0],
-	moveTransition: 'transform 0.2s ease-out',
+	appendTo: () => document.body,
+	//moveTransition: 'transform 0.2s linear',
 	popperOptions: {
 		placement: 'bottom',
 		modifiers: [{
