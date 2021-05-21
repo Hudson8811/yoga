@@ -1518,7 +1518,7 @@ function instaSlidersInit(tabJq) {
 	}
 	if (instaSlider.length > 0) {
 		instaSlider.slick({
-			infinite: true,
+			infinite: false,
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			speed: slickSpeedMain,
