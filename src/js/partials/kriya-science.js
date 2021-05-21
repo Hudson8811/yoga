@@ -40,6 +40,7 @@
 			});
 		}
 		//console.log('kspcSLICKEnd');
+		AOS.refresh();
 	}
 
 
