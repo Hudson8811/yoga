@@ -1614,7 +1614,7 @@ function musicPageSlidersInit(tabJq) {
 			}]
 		});
 	}
-/* Инициализация инста слайдера перенесена в функцию instaSlidersInit ибо его в первый раз надо инициализировать с задержкой*/
+	/* Инициализация инста слайдера перенесена в функцию instaSlidersInit ибо его в первый раз надо инициализировать с задержкой*/
 }
 /**
  * ОТключаем слайдеры со страницы музыка
@@ -1670,7 +1670,28 @@ function closeAlbumModal() {
 	$.unlockBody();
 	setTimeout(function () {
 		$('body').removeClass('body-open-album-modal');
-	}, 300);
+		setTimeout(function () {
+			$('#music-modal-bg .component-hide-block-wrap--open').removeClass('component-hide-block-wrap--open')
+			.find('.component-hide-block').css({
+				WebkitTransition: 'max-height 0s linear, height 0s linear',
+				MozTransition: 'max-height 0s linear, height 0s linear',
+				MsTransition: 'max-height 0s linear, height 0s linear',
+				OTransition: 'max-height 0s linear, height 0s linear',
+				transition: 'max-height 0s linear, height 0s linear'
+			});
+			$('#music-modal-bg .js-component-hide-unwrap').removeClass('kspc-twpah-unwrap--hide');
+
+			setTimeout(function () {
+				$('#music-modal-bg .component-hide-block').css({
+					WebkitTransition: '',
+					MozTransition: '',
+					MsTransition: '',
+					OTransition: '',
+					transition: ''
+				});
+			}, 300);
+		}, 300);
+	}, 50);
 
 
 }
@@ -1690,26 +1711,44 @@ $(document).ready(function () {
 
 	musicPageSlidersInit(false);
 
-	setTimeout(function(){
+	setTimeout(function () {
 		instaSlidersInit(false);
 	}, 2500);
 
 
-	$('.js-open-album-modal').click(function (e) {
+	$('body').on('click', '.js-open-album-modal,[href="js-open-album-modal"]', function (e) {
 		e.preventDefault();
+		$('#music-modal-bg .component-hide-block-wrap--open').removeClass('component-hide-block-wrap--open')
+			.find('.component-hide-block').css({
+				WebkitTransition: 'max-height 0s linear, height 0s linear',
+				MozTransition: 'max-height 0s linear, height 0s linear',
+				MsTransition: 'max-height 0s linear, height 0s linear',
+				OTransition: 'max-height 0s linear, height 0s linear',
+				transition: 'max-height 0s linear, height 0s linear'
+			}).css({
+				WebkitTransition: '',
+				MozTransition: '',
+				MsTransition: '',
+				OTransition: '',
+				transition: ''
+			});
+
+		$('#music-modal__description-container').html($(this).siblings('.js-open-album-modal-hidden').find('.open-album-modal-hidden__description').html());
+		$('#music-modal-services').html($(this).siblings('.js-open-album-modal-hidden').find('.open-album-modal-hidden__socials').html());
+
 		openAlbumModal();
 	});
 
 	$('#music-modal-bg').click(function (e) {
-		if (e.target.id === 'music-modal-bg' || e.target.parentElement.id === 'music-modal-bg'){
+		if (e.target.id === 'music-modal-bg' || e.target.parentElement.id === 'music-modal-bg') {
 			e.preventDefault();
 			closeAlbumModal();
 
 		}
 	});
 	$('.music-modal-close').click(function (e) {
-			e.preventDefault();
-			closeAlbumModal();
+		e.preventDefault();
+		closeAlbumModal();
 	});
 	/*$('#music-modal-bg').click(function (e) {
 			e.preventDefault();
