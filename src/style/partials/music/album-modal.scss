@@ -1,4 +1,9 @@
 .body-open-album-modal {
+	.site-header__inner{
+		transition: none;
+		opacity: 0;
+	}
+
 	.music-modal-bg {
 		opacity: 1;
 		pointer-events: all;
@@ -55,7 +60,7 @@
 	background: rgba(255, 255, 255, 0.1);
 	//backdrop-filter: blur(55px);
     backdrop-filter: blur(18px);//на глаз
-	overflow: auto;
+	overflow: scroll;
 	overflow-x: hidden;
 	//-webkit-overflow-scrolling: touch;
 

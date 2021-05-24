@@ -65,7 +65,10 @@
 	//display: none;
 	background: #ffffff;
 	z-index: 990;
-	transition: all .4s ease;
+	transition: all .4s linear, opacity 0s linear ;
+
+
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;

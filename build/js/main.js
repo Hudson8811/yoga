@@ -1641,6 +1641,7 @@ $.lockBody = function () {
 		scrollTop = window.pageYOffset;
 
 		$wrap.css({
+			position: 'relative',
 			top: -(scrollTop)
 		});
 	}
@@ -1658,6 +1659,7 @@ $.unlockBody = function () {
 	});
 
 	$wrap.css({
+		position: '',
 		top: ''
 	});
 
@@ -1668,18 +1670,21 @@ $.unlockBody = function () {
 }
 
 function closeAlbumModal() {
-	$.unlockBody();
 	setTimeout(function () {
 		$('body').removeClass('body-open-album-modal');
 		setTimeout(function () {
+			$.unlockBody();
+			$('body').css('margin-right', '');
+		}, 400);
+		setTimeout(function () {
 			$('#music-modal-bg .component-hide-block-wrap--open').removeClass('component-hide-block-wrap--open')
-			.find('.component-hide-block').css({
-				WebkitTransition: 'max-height 0s linear, height 0s linear',
-				MozTransition: 'max-height 0s linear, height 0s linear',
-				MsTransition: 'max-height 0s linear, height 0s linear',
-				OTransition: 'max-height 0s linear, height 0s linear',
-				transition: 'max-height 0s linear, height 0s linear'
-			});
+				.find('.component-hide-block').css({
+					WebkitTransition: 'max-height 0s linear, height 0s linear',
+					MozTransition: 'max-height 0s linear, height 0s linear',
+					MsTransition: 'max-height 0s linear, height 0s linear',
+					OTransition: 'max-height 0s linear, height 0s linear',
+					transition: 'max-height 0s linear, height 0s linear'
+				});
 			$('#music-modal-bg .js-component-hide-unwrap').removeClass('kspc-twpah-unwrap--hide');
 
 			setTimeout(function () {
@@ -1693,17 +1698,39 @@ function closeAlbumModal() {
 			}, 300);
 		}, 300);
 	}, 50);
+	$('#site-header').css({
+		opacity: '1'});
 
 
 }
 
 function openAlbumModal() {
-	$('body').addClass('body-open-album-modal');
+	$('#site-header').css('opacity', '0');
+	$.lockBody();
+	$('body').css('margin-right', scrollBarWidth + 'px');
 	setTimeout(function () {
-		$.lockBody();
-	}, 400);
+		$('body').addClass('body-open-album-modal');
+	}, 200);
 
 }
+var scrollBarWidth;
+function calcScrollBarWidth() {
+	// создадим элемент с прокруткой
+	let div = document.createElement('div');
+
+	div.style.overflowY = 'scroll';
+	div.style.width = '50px';
+	div.style.height = '50px';
+
+	// мы должны вставить элемент в документ, иначе размеры будут равны 0
+	document.body.append(div);
+	let scrollWidth = div.offsetWidth - div.clientWidth;
+
+	div.remove();
+
+	scrollBarWidth = scrollWidth;
+}
+calcScrollBarWidth();
 
 $(document).ready(function () {
 	$('body').on('click', '.js-component-hide-unwrap', function () {
@@ -1721,8 +1748,8 @@ $(document).ready(function () {
 		e.preventDefault();
 
 
-		$('#music-modal__pic img').attr('src',$(this).attr('data-image-src'));
-		$('#music-modal-bg').css('background-image','url('+$(this).attr('data-image-src')+')');
+		$('#music-modal__pic img').attr('src', $(this).attr('data-image-src'));
+		$('#music-modal-bg').css('background-image', 'url(' + $(this).attr('data-image-src') + ')');
 
 
 
