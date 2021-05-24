@@ -31,6 +31,7 @@ $(document).on('mobileinit', function () {
 //= partials/seminar.js
 //= partials/page-music.js
 //= partials/edu.js
+//= partials/validate.js
 
 
 

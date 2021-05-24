@@ -224,9 +224,9 @@ function calcScrollBarWidth() {
 
 	scrollBarWidth = scrollWidth;
 }
-calcScrollBarWidth();
 
 $(document).ready(function () {
+	calcScrollBarWidth();
 	$('body').on('click', '.js-component-hide-unwrap', function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.component-hide-block-wrap').addClass('component-hide-block-wrap--open');
 	});

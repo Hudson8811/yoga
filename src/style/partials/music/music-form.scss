@@ -58,6 +58,11 @@
 
 		color: #AFB4BF;
 	}
+	&--invalid{
+		.music-form-input{
+			border-color: red !important;
+		}
+	}
 }
 
 .music-form-input {
@@ -72,6 +77,7 @@
 	font-size: 13px;
 	line-height: 21px;
 	color: $dark;
+	transition: all .4s linear;
 
 	&::placeholder {
 		color: #AFB4BF;
