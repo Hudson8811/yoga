@@ -1675,7 +1675,10 @@ function closeAlbumModal() {
 		setTimeout(function () {
 			$.unlockBody();
 			$('body').css('margin-right', '');
-		}, 400);
+			$('#music-modal-bg').removeClass('music-modal-bg--z1000');
+			$('#site-header').css({
+				opacity: '1'});
+		}, 650);
 		setTimeout(function () {
 			$('#music-modal-bg .component-hide-block-wrap--open').removeClass('component-hide-block-wrap--open')
 				.find('.component-hide-block').css({
@@ -1698,13 +1701,12 @@ function closeAlbumModal() {
 			}, 300);
 		}, 300);
 	}, 50);
-	$('#site-header').css({
-		opacity: '1'});
 
 
 }
 
 function openAlbumModal() {
+	$('#music-modal-bg').addClass('music-modal-bg--z1000');
 	$('#site-header').css('opacity', '0');
 	$.lockBody();
 	$('body').css('margin-right', scrollBarWidth + 'px');

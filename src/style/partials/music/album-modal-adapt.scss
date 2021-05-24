@@ -42,72 +42,101 @@
 
 @media screen and (max-width: 500px) {
 
+	.music-modal-bg {}
 
+	.music-modal {
+		margin: vw(14) auto;
+		width: calc(100% - #{vw(14)});
+		height: auto;
 
+		&__inner {
+			border-radius: vw(6);
+			overflow: hidden;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		}
 
-	.container--music-modal {
-		width: vw393(393);
+		&-close {
+			top: vw(28);
+			right: vw(28);
+
+			svg {
+				width: vw(27);
+			}
+
+			svg path,
+			svg rect {
+				stroke: #6974A9;
+			}
+		}
 	}
 
 
+	.music-modal__pic {
+		width: calc(100% - #{vw(115)});
+		margin: vw(44) auto 0;
+		border-radius: vw(6);
+		overflow: hidden;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
 
+		img {}
+	}
 
+	.music-modal__text {}
 
 
 	.music-modal__text-top {
-		padding: vw393(28) vw393(22) vw393(26);
+		padding: vw(23) vw(34) 0;
 	}
 
 	.music-modal__title {
-		font-size: vw393(22);
-		line-height: vw393(33);
+		font-weight: 600;
+		font-size: vw(19);
+		line-height: vw(33);
 	}
 
 	.music-modal__description {
-		margin-top: vw393(3);
+		display: none;
 	}
 
-
-	.music-modal-services {}
+	.music-modal-services {
+		width: calc(100% - #{vw(76)});
+		margin: 0 auto 0;
+		padding-bottom: vw(19);
+	}
 
 	.music-modal-service {
-		padding: vw393(22) vw393(22);
+		padding: vw(14) 0 vw(14);
 
 		&:first-child {
-			padding-top: vw393(20);
+			border-top: 0;
+			border-top: none;
+			padding-top: vw(11);
+			padding-bottom: vw(14);
 		}
 
 		&__logo {
-			max-height: vw393(38);
-			max-width: calc(100% - #{vw393(150)});
+			max-height: vw(27);
+			max-width: calc(100% - #{vw(50)});
 
-			img{
-
-			max-height: vw393(38);
+			img {
+				max-height: vw(27);
 			}
 		}
 
 		&__btn.btn {
-			min-width: vw393(101);
-			min-height: vw393(27);
+			min-width: vw(101);
+			min-height: vw(27);
 
-			padding: vw393(5) vw393(15);
+			padding: vw(5) vw(15);
 
-			font-size: vw393(13);
-			line-height: vw393(21);
-			padding: vw393(2) vw393(15);
+			font-size: vw(13);
+			line-height: vw(21);
+			padding: vw(2) vw(15);
 
 
 		}
 
 	}
-	.music-modal-close{
-		top: vw393(35);
-		right: vw393(35);
-		svg{
-			width: vw393(27);
 
-		}
-	}
+
 }
-

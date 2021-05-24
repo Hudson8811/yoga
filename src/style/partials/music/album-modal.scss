@@ -1,5 +1,5 @@
 .body-open-album-modal {
-	.site-header__inner{
+	.site-header__inner {
 		transition: none;
 		opacity: 0;
 	}
@@ -8,7 +8,6 @@
 		opacity: 1;
 		pointer-events: all;
 		transition: opacity .5s linear;
-		z-index: 1000;
 	}
 }
 
@@ -30,9 +29,13 @@
 	&::before {
 		content: '';
 	}
+
+	&.music-modal-bg--z1000 {
+		z-index: 1000;
+	}
 }
 
-.music-modal-close{
+.music-modal-close {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -40,10 +43,13 @@
 	cursor: pointer;
 	top: 35px;
 	right: 35px;
-	&:hover{
+	transition: all .3s linear;
+
+	&:hover {
 		opacity: .7;
 	}
-	svg{
+
+	svg {
 		width: 27px;
 		height: auto;
 
@@ -59,7 +65,7 @@
 	height: 100%;
 	background: rgba(255, 255, 255, 0.1);
 	//backdrop-filter: blur(55px);
-    backdrop-filter: blur(18px);//на глаз
+	backdrop-filter: blur(18px); //на глаз
 	overflow: scroll;
 	overflow-x: hidden;
 	//-webkit-overflow-scrolling: touch;
@@ -179,6 +185,6 @@
 }
 
 
-.open-album-modal-hidden{
+.open-album-modal-hidden {
 	display: none;
 }
