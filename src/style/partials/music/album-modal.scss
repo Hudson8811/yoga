@@ -52,6 +52,9 @@
 	svg {
 		width: 27px;
 		height: auto;
+		path, rect{
+			stroke: #ffffff;
+		}
 
 	}
 }

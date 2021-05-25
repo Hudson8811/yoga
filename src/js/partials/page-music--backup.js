@@ -126,22 +126,22 @@ function musicPageSlidersDisable(tabJq) {
 	sliders.slick('unslick');
 }
 
-var $docEl = $('body'),
+var $docEl = $('html, body'),
 	$wrap = $('.main'),
 	scrollTop;
 
 $.lockBody = function () {
-	/*if (window.pageYOffset) {
+	if (window.pageYOffset) {
 		scrollTop = window.pageYOffset;
 
 		$wrap.css({
 			position: 'relative',
 			top: -(scrollTop)
 		});
-	}*/
+	}
 
 	$docEl.css({
-		//height: "100%",
+		height: "100%",
 		overflow: "hidden"
 	});
 }
@@ -152,7 +152,7 @@ $.unlockBody = function () {
 		overflow: ""
 	});
 
-	/*$wrap.css({
+	$wrap.css({
 		position: '',
 		top: ''
 	});
@@ -160,7 +160,7 @@ $.unlockBody = function () {
 	window.scrollTo(0, scrollTop);
 	window.setTimeout(function () {
 		scrollTop = null;
-	}, 10);*/
+	}, 10);
 }
 
 function closeAlbumModal() {

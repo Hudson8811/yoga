@@ -152,6 +152,7 @@ $(document).ready(function () {
 						opacity: 1
 					}, 300).promise().done(function () {
 						commonTabsNeedActive.addClass('common-tab--active');
+						dataFancyInit();
 					});
 				}, 100)
 			});

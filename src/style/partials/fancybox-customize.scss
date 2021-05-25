@@ -1,0 +1,185 @@
+.fancybox-container, .fancybox-bg{
+//	transition: all .5s linear;
+}
+.fancybox-infobar {
+	display: none !important;
+}
+
+.fancybox-bg {
+	background: #ffffff;
+}
+
+.fancybox-is-open .fancybox-bg {
+	opacity: 1 !important;
+}
+
+.fancybox-stage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fancybox-content {}
+
+.fancybox-slide {
+	padding: 93px calc((100% - 1296px) / 2);
+	margin: 0 auto;
+}
+
+//перманентно проявляем тулзы
+.fancybox-navigation .fancybox-button,
+.fancybox-toolbar {
+	opacity: 1 !important;
+	visibility: visible;
+}
+
+.fancybox-caption {
+	display: none !important;
+}
+
+.custom-fancybox-close {
+	position: absolute;
+	right: 35px;
+	top: 36px;
+	padding: 10px;
+	margin-top: -10px;
+	margin-right: -10px;
+	cursor: pointer;
+
+	svg {
+		width: 27px;
+		height: auto;
+	}
+}
+
+.fancybox-navigation {
+	top: 50%;
+	width: calc(1296px + 76px*2 + 18px*2);
+	max-width: calc(100% - 22px);
+	margin: 0 auto;
+	height: 1px;
+	//background: red;
+	position: relative;
+
+
+}
+
+.fancybox-custom-arrow {
+	position: absolute;
+	top: 0;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 99995;
+	//transition-duration: .3s;
+
+	svg {
+		width: 18px;
+		height: auto;
+		display: block;
+	}
+
+	padding: 5px;
+
+	&--prev {
+		left: -5px;
+
+		svg {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&--next {
+		right: -5px;
+	}
+	&[disabled]{
+		opacity: 0;
+	}
+}
+
+
+
+
+@media screen and (max-width: 1550px) {
+
+	.fancybox-slide {
+		padding: 58px 90px;
+	}
+
+	.fancybox-navigation {
+		max-width: calc(100% - 36*2px);
+	}
+}
+
+@media screen and (max-width: 1150px) {
+
+	.fancybox-slide {
+		padding: 58px 38px;
+		margin: 0 auto;
+	}
+
+	.fancybox-navigation {
+		max-width: calc(100% - 22px);
+	}
+
+	.custom-fancybox-close {
+		position: absolute;
+		right: 22px;
+		top: 22px;
+
+		svg {
+			width: 17px;
+			height: auto;
+		}
+	}
+
+
+	.fancybox-custom-arrow {
+		svg {
+			width: 13px;
+		}
+
+
+		&--prev {}
+
+		&--next {}
+	}
+
+}
+
+@media screen and (max-width: 749px) {
+	.fancybox-slide {
+		padding: vw(36);
+	}
+
+	.custom-fancybox-close {
+		right: vw(14);
+		top: vw(14);
+		padding: vw(10);
+		margin-top: vw(-10);
+		margin-right: vw(-10);
+
+		svg {
+			width: vw(17);
+		}
+	}
+
+	.fancybox-navigation {
+		max-width: calc(100% - #{vw(20)});
+	}
+
+	.fancybox-custom-arrow {
+		svg {
+			width: vw(13);
+		}
+
+		padding: vw(5);
+
+		&--prev {
+			left: vw(-5);
+		}
+
+		&--next {
+			right: vw(-5);
+		}
+	}
+}
