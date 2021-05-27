@@ -3,7 +3,7 @@
 	//	transition: all .5s linear;
 }
 
-.fancybox-infobar {
+.fancybox-infobar,.fancybox-progress {
 	display: none !important;
 }
 
@@ -71,7 +71,7 @@
 
 .fancybox-custom-play-btn {
 	position: absolute;
-	right: 84px;
+    right: 114px;
 	top: 36px;
 	margin-top: -10px;
 	margin-right: -10px;
@@ -135,7 +135,7 @@
 	//transition-duration: .3s;
 
 	svg {
-		width: 18px;
+		width: 20px;
 		height: auto;
 		display: block;
 	}
@@ -143,7 +143,7 @@
 	padding: 5px;
 
 	&--prev {
-		left: -5px;
+		left: -15px;
 
 		svg {
 			transform: rotate(-180deg);
@@ -151,7 +151,7 @@
 	}
 
 	&--next {
-		right: -5px;
+		right: -15px;
 	}
 
 	&[disabled] {
@@ -186,12 +186,13 @@
 @media screen and (max-width: 1150px) {
 
 	.fancybox-slide {
-		padding: 58px 38px;
+		padding: 53px 0;
 		margin: 0 auto;
 	}
 
 	.fancybox-navigation {
 		max-width: calc(100% - 22px);
+		display: none;
 	}
 
 	.custom-fancybox-close {
@@ -221,7 +222,7 @@
 			}
 
 			&:nth-child(2) {
-				width: 11px;
+				width: 10px;
 			}
 		}
 	}
@@ -241,7 +242,7 @@
 
 @media screen and (max-width: 749px) {
 	.fancybox-slide {
-		padding: vw(36);
+		padding: vw(53) 0;
 	}
 
 	.custom-fancybox-close {
@@ -272,7 +273,7 @@
 			}
 
 			&:nth-child(2) {
-				width: vw(11);
+				width: vw(10);
 			}
 		}
 	}

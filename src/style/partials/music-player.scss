@@ -678,6 +678,10 @@
 	transition: color .3s linear !important;
 	color: rgba(0, 0, 0, 0);
 
+}
+
+.music-player__playlist-inner, .sbi_lb-dataContainer{
+
 	.simplebar-track.simplebar-vertical {
 		cursor: pointer;
 	}
@@ -697,6 +701,7 @@
 	}
 }
 
+
 .music-player__playlist {
 	padding: 21px 5px 24px 18px;
 
@@ -712,7 +717,11 @@
 	}
 
 }
-
+.sbi_lb-dataContainer:hover{
+	.simplebar-scrollbar.simplebar-visible {
+		opacity: 1;
+	}
+}
 
 .musicpl-playlist-item {
 	display: flex;

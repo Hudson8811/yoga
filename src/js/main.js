@@ -36,3 +36,5 @@ $(document).on('mobileinit', function () {
 
 
 //= partials/tips-init.js
+
+

@@ -1,5 +1,5 @@
 var tippyIsShow = false;
-tippyTitle = "Поделиться"; //Не забыть сделать мультиязычным
+//tippyTitle = "Поделиться"; //Не забыть сделать мультиязычным
 var tippySettings = {
 	theme: 'custom-share',
 	content(reference) {
