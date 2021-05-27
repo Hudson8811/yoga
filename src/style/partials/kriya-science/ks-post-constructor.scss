@@ -104,6 +104,7 @@
 	position: relative;
 	z-index: 1;
 	cursor: pointer;
+
 	&::before {
 		position: relative;
 		width: 100%;
@@ -273,6 +274,10 @@
 			max-height: 10000px;
 		}
 	}
+
+	&--no-mt {
+		margin-top: 0 !important;
+	}
 }
 
 .custom-ul {
@@ -304,6 +309,16 @@
 			margin-top: 18px;
 		}
 	}
+
+	&--grey-dots {
+
+		li {
+
+			&::before {
+				background: #AFB4BF;
+			}
+		}
+	}
 }
 
 .kspc-text-with-pic-and-hide {
@@ -333,6 +348,12 @@
 		margin-top: 20px;
 	}
 }
+
+.hr-kspc-twpah-master-before {
+    margin-top: 83px;
+    margin-bottom: -24px;}
+
+.hr-kspc-twpah-master-after {}
 
 .kspc-twpah {
 	max-height: 420px; //(14 строк по 30px)
@@ -527,6 +548,7 @@
 	&+.kspc-simple-text {
 		margin-top: 73px;
 	}
+
 	&+.kspc-tags-and-share {
 		margin-top: 82px;
 	}
@@ -619,6 +641,19 @@
 
 	&+* {
 		margin-top: 50px;
+	}
+
+	&+.kspc-simple-text--has-title {
+		margin-top: 42px;
+	}
+
+
+	&--no-border-top {
+		margin-top: 41px;
+
+		.kspc-event__container-main {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -749,6 +784,10 @@
 	&+.kspc-event-info {
 		margin-top: 24px;
 	}
+
+	&+.kspc-event-btn {
+		margin-top: 26px;
+	}
 }
 
 .kspc-event-btn {
@@ -866,6 +905,10 @@
 
 	&+* {
 		margin-top: 76px;
+	}
+
+	&+.kspc-simple-text:not(.kspc-simple-text--has-title) {
+		margin-top: 50px;
 	}
 
 	&--has-label+* {

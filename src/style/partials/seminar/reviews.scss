@@ -1,5 +1,5 @@
 .reviews {
-	margin-top: 42px;
+	margin-top: 81px;
 
 	&:last-child {
 
@@ -7,7 +7,23 @@
 	}
 }
 
-.reviews-title {}
+.reviews-title {
+	margin-top: -4px;
+
+}
+
+.reviews__info-after-title {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 30px;
+	color: $dark;
+	margin-top: -4px;
+
+	+.reviews-form {
+		margin-top: 48px;
+	}
+}
 
 .reviews-form {
 	margin-top: 18px;

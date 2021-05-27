@@ -1,0 +1,57 @@
+.participate-ocourse-hr-wrap {
+	&--before {
+		margin-top: 67px;
+	}
+
+	&--after {
+		margin-top: 93px;
+
+		&+.kspc-tags-and-share {
+			margin-top: 68px;
+		}
+	}
+}
+
+
+
+.participate-ocourse {
+	margin-top: 41px;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__description {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		text-align: center;
+		color: $dark;
+		margin-top: 9px;
+	}
+
+	&__bottom-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 28px;
+	}
+
+	&__course-name-in-form {
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 30px;
+		color: $dark;
+		text-align: center;
+	}
+}
+
+.music-form.music-form--participate-ocourse {
+	margin-top: 47px;
+}
+
+.btn--participate-ocourse {
+	margin-top: 12px;
+	width: 250px;
+}

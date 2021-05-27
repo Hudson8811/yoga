@@ -16,7 +16,8 @@
 	text-transform: uppercase;
 	color: #25378d;
 	border: 1px solid #25378d;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 200px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 200px;
 	font-family: 'Montserrat';
 	font-size: 13px;
 	font-weight: 500;
@@ -36,7 +37,8 @@
 	}
 
 	&--square {
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 	}
 }
@@ -84,7 +86,8 @@
 			list-style: none;
 			transition: .3s;
 			border: 1px solid #FFFFFF;
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 50%;
 
 			/*&::before {
 				content: '';
@@ -114,13 +117,13 @@
 	}
 
 
-  &--video{
-    .home-slider-slide{
-      &::before{
-        display: none;
-      }
-    }
-  }
+	&--video {
+		.home-slider-slide {
+			&::before {
+				display: none;
+			}
+		}
+	}
 }
 
 .home-slider-slide {
@@ -186,6 +189,10 @@
 		font-weight: normal;
 		font-style: normal;
 		line-height: 59px;
+		&--smallest-lh {
+			line-height: 49px;
+			padding-bottom: 7px;
+		}
 	}
 
 	&__bottom {
@@ -208,8 +215,33 @@
 	&__date {
 		font-weight: 300;
 	}
-	&--no-btn{
+
+	&--no-btn {
 		bottom: 88px;
+	}
+
+	&--has-course-title {
+		height: calc(100% - 176px);
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__course-top {
+		display: block;
+		flex-grow: 1;
+	}
+
+	&__course-title {
+		font-weight: 600;
+		font-size: 73px;
+		line-height: 79px;
+		/* or 109% */
+
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+
+		color: #FFFFFF;
+
 	}
 }
 
@@ -227,7 +259,8 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	border: 1px solid #FFFFFF;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 200px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 200px;
 	font-family: 'Montserrat';
 	font-size: 13px;
 	font-weight: 500;
@@ -240,6 +273,12 @@
 		@media screen and (min-width:$minDesktop) {
 			opacity: .7;
 		}
+	}
+	&--type-nidra-course{
+		display: inline-flex;
+		width: auto;
+		align-self: flex-start;
+		padding: 15px 56px;
 	}
 }
 
@@ -282,7 +321,8 @@ body {
 		font-weight: normal;
 		font-style: normal;
 		line-height: 33px;
-		&__razdel{
+
+		&__razdel {
 			display: block;
 		}
 	}
@@ -326,7 +366,9 @@ body {
 		margin-left: -19px;
 		margin-right: -19px;
 		z-index: 1;
-		&::before,&::after{
+
+		&::before,
+		&::after {
 			content: '';
 			display: block;
 			background: #fff;
@@ -336,14 +378,17 @@ body {
 			z-index: 2;
 			top: 0;
 		}
-		&::before{
+
+		&::before {
 			left: -1px;
 		}
-		&::after{
+
+		&::after {
 			right: -1px;
 		}
 	}
-	.slick-track{
+
+	.slick-track {
 		z-index: 1;
 	}
 
@@ -384,7 +429,8 @@ body {
 			list-style: none;
 			transition: .3s;
 			border: 1px solid #AFB4BF;
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 50%;
 
 			/*&::before {
 				content: '';
@@ -413,9 +459,10 @@ body {
 			}
 		}
 	}
-	.slick-arrow{
 
-	z-index: 3;
+	.slick-arrow {
+
+		z-index: 3;
 	}
 }
 
@@ -433,7 +480,8 @@ body {
 		display: block;
 		overflow: hidden;
 		width: 100%;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 		@include scalepic();
 
@@ -626,7 +674,8 @@ body {
 		max-width: 580px;
 		margin-right: 36px;
 		transition: opacity .3s ease;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 
 		&::before {
@@ -765,7 +814,8 @@ body {
 		width: 100%;
 		max-width: 402px;
 		margin-bottom: 9px;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 		@include scalepic();
 
@@ -847,7 +897,8 @@ body {
 	.scikria-item-pic {
 		overflow: hidden;
 		cursor: pointer;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 	}
 
@@ -858,7 +909,8 @@ body {
 			overflow: hidden;
 			margin-right: 0;
 			margin-left: 5px;
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 6px;
 
 		}
 
@@ -943,7 +995,8 @@ body {
 .banner {
 	position: relative;
 	overflow: hidden;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 6px;
 
 
 	&__picture {
@@ -954,7 +1007,8 @@ body {
 		width: 100%;
 		height: 100%;
 		transition: .4s ease-in-out;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 		object-fit: cover;
 		object-position: center;
@@ -1103,7 +1157,8 @@ body {
 			cursor: pointer;
 			transition: .3s;
 			border: 1px solid #AFB4BF;
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 50%;
 
 			/*&::before {
 				content: '';
@@ -1159,7 +1214,8 @@ body {
 		width: 100%;
 		max-width: 579px;
 		margin-right: 34px;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 
 		&::before {
@@ -1264,7 +1320,8 @@ body {
 		transition-duration: .4s;
 		opacity: 0;
 
-	z-index: 3;
+		z-index: 3;
+
 		svg {
 			display: block;
 		}
@@ -1285,8 +1342,7 @@ body {
 			}
 		}
 
-		&--next {
-		}
+		&--next {}
 
 		&--prev {
 			transform: rotate(-180deg);
@@ -1305,11 +1361,13 @@ body {
 			margin: 0 7px;
 		}
 
-		&-list  {
+		&-list {
 			margin-left: -7px;
 			margin-right: -7px;
 			z-index: 1;
-			&::before,&::after{
+
+			&::before,
+			&::after {
 				content: '';
 				display: block;
 				background: #fff;
@@ -1319,14 +1377,17 @@ body {
 				z-index: 2;
 				top: 0;
 			}
-			&::before{
+
+			&::before {
 				left: -1px;
 			}
-			&::after{
+
+			&::after {
 				right: -1px;
 			}
 		}
-		&-track{
+
+		&-track {
 			z-index: 1;
 		}
 
@@ -1360,7 +1421,8 @@ body {
 			cursor: pointer;
 			transition: .3s;
 			border: 1px solid #AFB4BF;
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 50%;
 
 			/*&::before {
 				content: '';
@@ -1437,7 +1499,8 @@ body {
 		position: relative;
 		width: calc(25% - 6px);
 		cursor: pointer;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 		@include scalepic();
 
@@ -1445,7 +1508,8 @@ body {
 			display: block;
 			padding-top: 100%;
 			content: '';
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 6px;
 
 		}
 	}
@@ -1471,7 +1535,8 @@ body {
 		height: 113px;
 		transition: all ease .3s;
 		transform: translate(-50%, -50%);
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 50%;
 		background-color: #fff;
 
 		p {
@@ -1494,7 +1559,8 @@ body {
 			content: '';
 			transition: all ease .3s;
 			transform: translate(-50%, -50%);
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: 50%;
 			background-color: #fff;
 		}
 
@@ -1724,7 +1790,8 @@ body {
 	margin-bottom: 57px;
 	padding: 34px 30px 32px;
 	border: 1px solid #DEE6E9;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 6px;
 
 	background: #FFFFFF;
 
@@ -1767,7 +1834,8 @@ input.email-cinp {
 	//align-items: center;
 	color: #AFB4BF;
 	border: 1px solid #D9DBDE;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 3px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 3px;
 	background: #FFFFFF;
 	background-image: url(../img/mail.svg);
 	background-repeat: no-repeat;
@@ -1827,7 +1895,8 @@ input.email-cinp {
 		position: relative;
 		overflow: hidden;
 		padding-bottom: 61.6541%;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 
 		img {
@@ -2017,7 +2086,8 @@ input.email-cinp {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 
 		object-fit: cover;
 		object-position: center center;
@@ -2036,7 +2106,8 @@ input.email-cinp {
 	text-align: center;
 	text-transform: uppercase;
 	color: $dark;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 6px;
 
 	background: #fff;
 	//margin-top: -15px;

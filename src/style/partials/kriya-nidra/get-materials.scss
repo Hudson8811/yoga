@@ -1,0 +1,32 @@
+.get-materials {
+    margin-top: 46px;}
+
+.get-materials-title {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+	color: $dark;
+	text-align: center;
+}
+
+.get-materials-row {
+	display: flex;
+	justify-content: center;
+    margin-top: 30px;
+
+	&__left {
+		width: 393px;
+		margin-right: 22px;
+	}
+
+	&__right {}
+
+	.music-form-input.js-need-validate {
+		&--email {}
+	}
+
+	.btn--get-materials{
+		width: 202px;
+	}
+}
