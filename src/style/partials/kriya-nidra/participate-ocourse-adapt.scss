@@ -1,3 +1,95 @@
-@media screen and (max-width: 1150px) {}
+@media screen and (max-width: 1150px) {
+	.participate-ocourse-hr-wrap {
+		&--before {
+			margin-top: 58px;
+		}
 
-@media screen and (max-width: 749px) {}
+		&--after {
+			margin-top: 94px;
+
+			&+.kspc-tags-and-share {
+				margin-top: 58px;
+			}
+		}
+	}
+
+	.participate-ocourse {
+		margin-top: 85px;
+
+		&__title {}
+
+		&__description {
+			font-size: 15px;
+			line-height: 24px;
+			margin-top: 20px;
+		}
+
+		&__bottom-form {
+			margin-top: 31px;
+		}
+
+		&__course-name-in-form {
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 24px;
+		}
+	}
+
+	.music-form.music-form--participate-ocourse {
+		margin-top: 51px;
+	}
+
+	.btn--participate-ocourse {
+		margin-top: 15px;
+		width: auto;
+		min-width: unset;
+		padding: 14px 35px;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.participate-ocourse-hr-wrap {
+		&--before {
+			margin-top: vw(58);
+		}
+
+		&--after {
+			margin-top: vw(94);
+			&+.kspc-tags-and-share {
+				margin-top: vw(58);}
+		}
+	}
+
+	.participate-ocourse {
+		margin-top: vw(86);
+
+		&__title {}
+
+		&__description {
+			margin-top: vw(20);
+			font-size: vw(15);
+			line-height: vw(24);
+		}
+
+		&__bottom-form {
+			margin-top: vw(30);
+		}
+
+		&__course-name-in-form {
+			font-weight: 600;
+			font-size: vw(15);
+			line-height: vw(24);
+		}
+	}
+
+	.music-form.music-form--participate-ocourse {
+		margin-top: vw(30);
+	}
+
+	.btn--participate-ocourse {
+		margin-top: vw(16);
+		width: auto;
+		min-width: unset;
+		padding: vw(14) vw(35);
+	}
+}

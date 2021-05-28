@@ -230,6 +230,16 @@
 		margin-top: 25px;
 	}
 
+	.hr-kspc-twpah-master-before {
+		margin-top: 86px;
+		margin-bottom: -7px;
+	}
+
+	.hr-kspc-twpah-master-after {
+		margin-top: 53px;
+	}
+
+
 	.kspc-twpah {
 		font-style: normal;
 		font-weight: normal;
@@ -336,6 +346,7 @@
 		&+.kspc-slider-block--has-title {
 			margin-top: 73px;
 		}
+
 		&+.kspc-tags-and-share {
 			margin-top: 80px;
 		}
@@ -439,6 +450,10 @@
 
 		&+* {
 			margin-top: 25px;
+		}
+
+		&+.kspc-simple-text--has-title {
+			margin-top: 52px;
 		}
 	}
 
@@ -801,6 +816,20 @@
 		margin-top: vw(25);
 	}
 
+	.hr-kspc-twpah-master-before {
+		margin-top: vw(86);
+		margin-bottom: 0;
+
+		&+.kspc-twpah {
+			margin-top: vw(33);
+
+		}
+	}
+
+	.hr-kspc-twpah-master-after {
+		margin-top: vw(81);
+	}
+
 	.kspc-twpah {
 		font-size: vw(15);
 		line-height: vw(24);
@@ -859,6 +888,10 @@
 			.kspc-twpah__pic {}
 		}
 
+		&--master {
+			padding-top: vw(25);
+		}
+
 		/*&__delimiter
 {
 	}
@@ -899,11 +932,12 @@
 		margin-left: 0;
 		padding: vw(88) vw(10) vw(86);
 
-		&--mob-wide{
+		&--mob-wide {
 			padding-left: 0;
 			padding-right: 0;
 		}
-		&--mob-alternate-pt-pb{
+
+		&--mob-alternate-pt-pb {
 
 			padding: vw(82) 0 vw(124);
 
@@ -926,6 +960,7 @@
 		&+* {
 			margin-top: vw(71);
 		}
+
 		&+.kspc-tags-and-share {
 			margin-top: vw(80);
 		}
@@ -954,7 +989,7 @@
 		margin-top: vw(88);
 	}
 
-	.kspc-media-wrap--has-label{
+	.kspc-media-wrap--has-label {
 		&+.kspc-simple-text {
 			margin-top: vw(46);
 		}
@@ -963,6 +998,7 @@
 	.kspc-3-i.kspc-media {
 		margin-top: vw(27);
 	}
+
 	.video-effect::after,
 	.kspc-media--video::after {
 		width: vw(59);
@@ -1030,6 +1066,11 @@
 		margin-top: vw(86);
 
 		&+* {}
+
+		&+.kspc-simple-text--has-title {
+			margin-top: vw(52);
+
+		}
 	}
 
 	.kspc-event__container-hr-1 {}
@@ -1042,6 +1083,14 @@
 
 		.hr {
 			display: none;
+		}
+
+		&--non-hide-on-mobile {
+			margin-top: vw(58);
+
+			.hr {
+				display: block;
+			}
 		}
 
 		margin-top: vw(68);
@@ -1130,6 +1179,10 @@
 
 		&+.kspc-event-info {
 			margin-top: vw(26);
+		}
+
+		&+.kspc-event-btn {
+			margin-top: vw(30);
 		}
 	}
 

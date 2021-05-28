@@ -1,3 +1,92 @@
-@media screen and (max-width: 1150px) {}
+@media screen and (max-width: 1150px) {
+	.twoinrow-hr-wrap {
+		&--before {}
 
-@media screen and (max-width: 749px) {}
+		&--after {
+			margin-top: 86px;
+
+			&+.kspc-event {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	.twoinrow-section {
+		margin-top: 51px;
+	}
+
+	.twoinrow-title {}
+
+	.twoinrow {
+		margin-top: 36px;
+		margin-bottom: -29px;
+	}
+
+	.twoinrow-item {
+		margin-bottom: 29px;
+
+		&__pic {
+			&::before {}
+
+			img {}
+		}
+
+		&__text {
+			margin-top: 15px;
+			font-size: 15px;
+			line-height: 24px;
+		}
+
+		img {}
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.twoinrow-hr-wrap {
+		&--before {
+			margin-top: vw(85);
+		}
+
+		&--after {
+			margin-top: vw(86);
+
+			&+.kspc-event {
+				margin-top: vw(50);
+			}
+		}
+	}
+
+	.twoinrow-section {
+		margin-top: vw(51);
+	}
+
+	.twoinrow-title {}
+
+	.twoinrow {
+		margin-top: vw(28);
+		margin-bottom: 0;
+	}
+
+	.twoinrow-item {
+		width: 100%;
+		margin-bottom: vw(49);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__pic {
+			&::before {}
+
+			img {}
+		}
+
+		&__text {
+			font-size: vw(15);
+			line-height: vw(24);
+			margin-top: vw(10);
+		}
+
+		img {}
+	}
+}

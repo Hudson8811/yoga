@@ -6,6 +6,18 @@
 		&:last-child {}
 	}
 
+	.reviews__info-after-title {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 24px;
+		margin-top: 6px;
+
+		+.reviews-form {
+			margin-top: 29px;
+		}
+	}
+
 	.reviews-title {}
 
 	.reviews-form {}
@@ -101,6 +113,16 @@
 	}
 
 	.reviews-title {}
+
+	.reviews__info-after-title {
+		font-size: vw(15);
+		line-height: vw(24);
+		margin-top: vw(7);
+
+		+.reviews-form {
+			margin-top: vw(29);
+		}
+	}
 
 	.reviews-form {
 		margin-top: vw(26);
