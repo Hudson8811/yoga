@@ -350,8 +350,9 @@
 }
 
 .hr-kspc-twpah-master-before {
-    margin-top: 83px;
-    margin-bottom: -24px;}
+	margin-top: 83px;
+	margin-bottom: -24px;
+}
 
 .hr-kspc-twpah-master-after {}
 
@@ -504,6 +505,18 @@
 	&+.kspc-simple-text {
 		margin-top: 76px;
 	}
+}
+
+@media screen and (min-width: 1151px) {
+	.quote-with-parallax--type-music {
+		.container--qwp {
+			width: 1020px;
+		}
+		.quote-with-parallax-quote {
+			padding: 135px 0 147px;
+		}
+	}
+
 }
 
 .quote-with-parallax-quote {
