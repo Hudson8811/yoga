@@ -6,7 +6,8 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
-		&::before{
+
+		&::before {
 			content: '';
 			display: block;
 			width: 100%;
@@ -23,5 +24,13 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center center;
+	}
+
+	&--type-comments {
+		.big-top-pic__relative {
+			&::before {
+				padding-top: 20.9%;
+			}
+		}
 	}
 }

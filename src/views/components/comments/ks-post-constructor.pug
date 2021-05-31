@@ -1,0 +1,48 @@
+section.ks-post-constructor
+
+	include ../../components/comments/ks-videos
+
+	include ../../components/comments/reviews-slider
+
+
+
+	include ../../components/comments/category-slider
+
+
+
+	.kspc-slider-block.kspc-slider-block--has-title
+		.container.container--ks
+			h2.kspc-slider-block-title.kspc-h2-style Экскурсии
+			.kspc-slider.js-kspc-slider.custom-dots
+				.kspc-slider-item.kspc-slider-item--video.video-effect.video-effect--non-hide-play-btn.js-open-fancy-slide(data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=1")
+					img.kspc-slider-item__img(src="https://via.placeholder.com/150/000000/FFFFFF/?text=1", alt="")
+				.kspc-slider-item.js-open-fancy-slide(data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=2")
+					img.kspc-slider-item__img(src="https://via.placeholder.com/150/000000/FFFFFF/?text=2", alt="")
+				.kspc-slider-item.js-open-fancy-slide(data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=3")
+					img.kspc-slider-item__img(src="https://via.placeholder.com/150/000000/FFFFFF/?text=3", alt="")
+				.kspc-slider-item.js-open-fancy-slide(data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=4")
+					img.kspc-slider-item__img(src="https://via.placeholder.com/150/000000/FFFFFF/?text=4", alt="")
+				.kspc-slider-item.js-open-fancy-slide(data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=5")
+					img.kspc-slider-item__img(src="https://via.placeholder.com/150/000000/FFFFFF/?text=5", alt="")
+
+
+	section.page-tabs-section.page-tabs-section--comments
+		.page-tabs-section__container
+			.page-tabs
+				.page-tabs__inner
+					.page-tabs__item.page-tabs__item--active.active Всемирная медитация
+					.page-tabs__item Базовый курс медитации
+					.page-tabs__item Крийя-Нидра курс
+					.page-tabs__item Семинары
+					.page-tabs__item Ретриты
+					.page-tabs__item Imram Music
+
+					.page-tabs__line
+
+
+	include ../comments/reviews
+
+
+
+
+	include ../../components/comments/course-cards

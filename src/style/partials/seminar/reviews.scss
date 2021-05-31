@@ -12,6 +12,38 @@
 
 }
 
+.reviews-top {
+	margin-left: -14px;
+
+	.reviews-title {
+		display: inline-block;
+		margin-left: 14px;
+	}
+}
+
+.reviews-top__count {
+	display: inline-block;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 59px;
+	letter-spacing: -0.03em;
+	color: #AFB4BF;
+	margin-left: 14px;
+}
+
+.reviews-form__top {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -14px;
+}
+
+.reviews-form__top-inp-wrap {
+	width: 243px;
+	display: block;
+	padding-bottom: 14px;
+	margin-left: 14px;
+}
+
 .reviews__info-after-title {
 	font-style: normal;
 	font-weight: normal;

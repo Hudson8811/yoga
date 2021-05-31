@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <!--include ../partials/css.html-->
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/iqz2zoz.css">
+    <script>
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      // We listen to the resize event
+      /*window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });*/
+    </script>
+    <!--title= `${page.title}`-->
+    <script>
+      my_songs = [{
+      		"name": "Казачья",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		"url": "img/song/track2.mp3",
+      		"cover_art_url": "img/mlinks/1.jpg",
+      		"orig_link": "https://itunes.com/1.mp3",
+      		"meta_duration": "2:55"
+      	}, {
+      		"name": "ASATO MA SAT GAMAYA",
+      		"artist": "Ever New Joy",
+      		"album": "Album Name",
+      		"url": "img/song/track1.mp3",
+      		"cover_art_url": "img/track1-cover.jpg",
+      		"orig_link": "https://itunes.com/2.mp3",
+      		"meta_duration": "3:17"
+      	},
+      	{
+      		"name": "Русская дорога.",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		"url": "img/song/track3.mp3",
+      		"cover_art_url": "img/mlinks/2.jpg",
+      		"orig_link": "https://itunes.com/3.mp3",
+      		"meta_duration": "3:00"
+      	}
+      ];
+      
+      my_songs_pseudo = [{
+      		"name": "Казачья",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track2.mp3",
+      		"cover_art_url": "img/mlinks/1.jpg",*/
+      		"orig_link": "https://itunes.com/1.mp3",
+      		"meta_duration": "2:55"
+      	}, {
+      		"name": "ASATO MA SAT GAMAYA",
+      		"artist": "Ever New Joy",
+      		"album": "Album Name",
+      		/*"url": "img/song/track1.mp3",
+      		"cover_art_url": "img/track1-cover.jpg",*/
+      		"orig_link": "https://itunes.com/2.mp3",
+      		"meta_duration": "3:17"
+      	},
+      	{
+      		"name": "Русская дорога",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track3.mp3",
+      		"cover_art_url": "img/mlinks/2.jpg",*/
+      		"orig_link": "https://itunes.com/3.mp3",
+      		"meta_duration": "3:00"
+      	}, {
+      		"name": "Казачья2",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track2.mp3",
+      		"cover_art_url": "img/mlinks/1.jpg",*/
+      		"orig_link": "https://itunes.com/1.mp3",
+      		"meta_duration": "2:55"
+      	}, {
+      		"name": "ASATO MA SAT GAMAY2",
+      		"artist": "Ever New Joy",
+      		"album": "Album Name",
+      		/*"url": "img/song/track1.mp3",
+      		"cover_art_url": "img/track1-cover.jpg",*/
+      		"orig_link": "https://itunes.com/2.mp3",
+      		"meta_duration": "3:17"
+      	},
+      	{
+      		"name": "Русская дорога2",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track3.mp3",
+      		"cover_art_url": "img/mlinks/2.jpg",*/
+      		"orig_link": "https://itunes.com/3.mp3",
+      		"meta_duration": "3:00"
+      	}
+      ];
+      
+    </script>
+  </head>
+  <body>
+    <header class="site-header site-header--partial-static" id="site-header">
+      <div class="site-header__inner">
+        <div class="sh-left">
+          <div class="sh-burger-wrap sh-burger-wrap--main">
+            <div class="sh-burger"><span></span></div>
+          </div><a class="sh-logo" href=""><img src="img/sh-logo.svg" alt=""></a>
+        </div>
+        <div class="sh-center">
+          <ul class="sh-menu">
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Мероприятия</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">О Мастере</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Наука крийя</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Обучение</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Статьи</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Видео</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Музыка</a></li>
+          </ul>
+        </div>
+        <div class="sh-right">
+          <div class="sh-lang-switcher"><a class="lang-switcher" href="">En</a></div>
+          <div class="sh-socials">
+            <div class="ssocials"><a class="ssocials-item" href=""><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 3.807a3.819 3.819 0 00-3.819 3.818 3.798 3.798 0 003.819 3.818 3.819 3.819 0 003.818-3.818c0-2.092-1.727-3.818-3.819-3.818zm0 6.308a2.487 2.487 0 01-2.49-2.49c0-1.361 1.095-2.457 2.49-2.457a2.451 2.451 0 012.457 2.457c0 1.395-1.096 2.49-2.457 2.49zm4.847-6.441a.893.893 0 00-.896-.897.893.893 0 00-.897.897c0 .498.399.896.897.896a.893.893 0 00.896-.896zm2.524.896c-.067-1.195-.332-2.258-1.196-3.12C13.75.585 12.688.32 11.493.253c-1.23-.067-4.915-.067-6.143 0C4.154.32 3.125.586 2.229 1.449c-.864.863-1.13 1.926-1.196 3.121-.066 1.229-.066 4.914 0 6.143.067 1.195.332 2.225 1.196 3.121.896.863 1.925 1.129 3.12 1.195 1.23.067 4.915.067 6.143 0 1.195-.066 2.258-.332 3.121-1.195.864-.896 1.13-1.926 1.196-3.121.066-1.229.066-4.914 0-6.143zm-1.594 7.438c-.233.664-.764 1.162-1.395 1.428-.996.398-3.32.298-4.383.298-1.095 0-3.42.1-4.382-.299a2.517 2.517 0 01-1.428-1.427c-.398-.963-.299-3.287-.299-4.383 0-1.063-.1-3.387.299-4.383a2.561 2.561 0 011.428-1.394c.963-.399 3.287-.3 4.383-.3 1.062 0 3.386-.099 4.382.3.631.232 1.13.763 1.395 1.394.398.996.299 3.32.299 4.383 0 1.096.1 3.42-.3 4.383z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="12" viewbox="0 0 17 12"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.084 2.537a1.993 1.993 0 00-1.406-1.435C13.418.75 8.438.75 8.438.75s-5.01 0-6.27.352A1.993 1.993 0 00.762 2.537C.41 3.767.41 6.404.41 6.404s0 2.608.352 3.867c.175.704.732 1.231 1.406 1.407 1.26.322 6.27.322 6.27.322s4.98 0 6.24-.322a1.954 1.954 0 001.406-1.407c.352-1.26.352-3.867.352-3.867s0-2.636-.352-3.867zm-9.287 6.24V4.031l4.16 2.373-4.16 2.373z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="11" viewbox="0 0 17 11"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.967 1.332c.088-.352 0-.645-.527-.645h-1.73c-.439 0-.644.235-.76.499 0 0-.88 2.138-2.11 3.544-.41.381-.586.528-.82.528-.088 0-.264-.147-.264-.498V1.332c0-.44-.117-.645-.498-.645H6.563c-.293 0-.44.206-.44.41 0 .41.615.499.674 1.67v2.55c0 .556-.088.673-.322.673-.586 0-1.993-2.168-2.842-4.629C3.457.893 3.28.688 2.842.688H1.113c-.468 0-.586.234-.586.498 0 .468.586 2.724 2.725 5.742 1.436 2.05 3.457 3.135 5.273 3.135 1.084 0 1.23-.235 1.23-.645 0-1.963-.087-2.168.44-2.168.264 0 .703.146 1.729 1.143 1.172 1.171 1.377 1.67 2.021 1.67h1.729c.498 0 .732-.235.586-.733-.323-.996-2.52-3.105-2.637-3.252-.264-.322-.176-.469 0-.762 0 0 2.11-2.988 2.344-3.984z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1953 1.45703C13.3594 0.691406 12.9219 0.390625 12.4297 0.582031L1.54688 4.76562C0.808594 5.06641 0.835938 5.47656 1.4375 5.66797L4.19922 6.51562L10.6523 2.46875C10.9531 2.25 11.2539 2.38672 11.0078 2.57812L5.78516 7.28125L5.59375 10.1523C5.89453 10.1523 6.00391 10.043 6.16797 9.87891L7.50781 8.56641L10.3242 10.6445C10.8438 10.9453 11.2266 10.7812 11.3633 10.1797L13.1953 1.45703Z" fill="#6974A9"/></svg>
+</a></div>
+          </div>
+          <div class="sh-burger-wrap-right">
+            <div class="sh-burger"><span></span></div>
+          </div>
+          <div class="sh-authorize"><a class="sh-authorize__link" href=""><span>Вход</span>
+              <!--|  <svg width="10" height="12" viewbox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.096 3.968A4.013 4.013 0 002.242 6.77 3.883 3.883 0 005 7.935 3.883 3.883 0 007.756 6.77a4.013 4.013 0 001.147-2.802 4.013 4.013 0 00-1.147-2.802A3.883 3.883 0 005 0a3.883 3.883 0 00-2.757 1.166 4.013 4.013 0 00-1.146 2.802zm6.888 0a3.069 3.069 0 01-.877 2.142A2.97 2.97 0 015 7.002a2.97 2.97 0 01-2.108-.892 3.069 3.069 0 01-.877-2.142 3.069 3.069 0 01.877-2.143A2.97 2.97 0 015 .934a2.97 2.97 0 012.108.891c.56.568.875 1.339.877 2.143zM.13 11.86a.456.456 0 00.63.026A6.305 6.305 0 015 10.269a6.305 6.305 0 014.233 1.617.454.454 0 00.63-.026.468.468 0 00.093-.525.467.467 0 00-.11-.152 7.28 7.28 0 00-9.694 0 .467.467 0 00-.12.52.468.468 0 00.103.157H.13z" fill="#25378D"/></svg>--> <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M5.49822 8.49905C6.35813 8.49905 7.19874 8.24982 7.91374 7.78288C8.62874 7.31593 9.18601 6.65225 9.51508 5.87575C9.84416 5.09925 9.93026 4.24481 9.7625 3.42049C9.59474 2.59616 9.18065 1.83897 8.57259 1.24466C7.96454 0.650352 7.18983 0.245624 6.34644 0.0816553C5.50304 -0.0823135 4.62884 0.00184123 3.83438 0.323478C3.03991 0.645114 2.36088 1.18979 1.88313 1.88862C1.40539 2.58745 1.15039 3.40905 1.15039 4.24953C1.15642 5.37516 1.61677 6.45298 2.43136 7.24871C3.24595 8.04444 4.34896 8.49378 5.50063 8.49905H5.49822ZM5.49822 7.08254C4.92494 7.08254 4.36453 6.91639 3.88787 6.60509C3.4112 6.2938 3.03969 5.85134 2.8203 5.33367C2.60092 4.81601 2.54352 4.24638 2.65536 3.69683C2.7672 3.14728 3.04326 2.64249 3.44863 2.24628C3.854 1.85008 4.37047 1.58026 4.93274 1.47095C5.495 1.36163 6.0778 1.41774 6.60744 1.63216C7.13708 1.84658 7.58978 2.2097 7.90827 2.67559C8.22677 3.14147 8.39677 3.68921 8.39677 4.24953C8.39234 4.99914 8.08586 5.71686 7.54376 6.24715C7.00165 6.77744 6.26759 7.07759 5.50063 7.08254H5.49822Z" fill="#25378D"/><path d="M10.7583 11.7594C9.30512 10.5172 7.44006 9.83263 5.50951 9.83292H5.49018C3.55848 9.83271 1.69243 10.5181 0.23897 11.7617C0.151029 11.8394 0.0839046 11.9369 0.0434778 12.0457C0.00305111 12.1546 -0.00944433 12.2715 0.00708616 12.3862C0.0618064 12.5246 0.128051 12.6585 0.205154 12.7863C0.267834 12.8597 0.347564 12.9174 0.437692 12.9546C0.527821 12.9918 0.625736 13.0073 0.72327 13C0.900757 13.0016 1.07266 12.9394 1.20636 12.8253C2.38521 11.8094 3.90289 11.2491 5.47448 11.2494H5.53245C7.10462 11.2491 8.6228 11.8099 9.80178 12.8265C9.93378 12.9385 10.1028 13.0002 10.2776 13C10.4212 13.0001 10.5617 12.9585 10.681 12.8805C10.8004 12.8024 10.8934 12.6915 10.9481 12.5617C11.0029 12.4319 11.0169 12.2892 10.9885 12.1516C10.9601 12.014 10.8905 11.8877 10.7885 11.7889L10.7583 11.7594Z" fill="#25378D"/></g><defs><clipPath id="clip0"><rect width="11" height="13" fill="white"/></clipPath></defs></svg></a></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="kriya-science-main">
+        <section class="big-top-pic big-top-pic--type-comments">
+          <div class="big-top-pic__container">
+            <div class="big-top-pic__relative">
+              <picture>
+                <source srcset="img/DEE6E9.png" media="(max-width: 1150px)">
+                <source srcset="img/DEE6E9.png" media="(max-width: 749px)"><img class="big-top-pic__img" src="img/DEE6E9.png">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="subscribe" id="js-header-2">
+          <div class="container subscribe__container">
+            <div class="subscribe__content">
+              <div class="subscribe__name">Страница отзывов</div>
+              <div class="subscribe__inner"><img class="subscribe__icon js-share" src="img/icons/subscribe.svg" data-title="Имрам Видео" data-url="http://imram.q7.by/videos" data-picture="http://htmlbook.ru/files/images/samcss/fig15-3.png" data-description="В этом разделе мы представляем уникальные материалы. Каждая статья несет в себе личный Опыт Мастера Имрама. Здесь вы найдете множество ключей, подсказок и ответов на самые животрепещущие вопросы."><a class="subscribe__link" href="#">Подписаться</a></div>
+            </div>
+          </div>
+        </section>
+        <section class="ks-post-constructor">
+          <section class="ks-videos ks-videos--type-comments">
+            <div class="container container--ks">
+              <h2 class="ks-videos-title">Отзывы о мероприятиях</h2>
+              <div class="ks-videos-row">
+                <div class="ks-videos-item"><a class="ks-videos-item__video" href="img/DEE6E9.png" data-fancybox="videos"><img class="ks-videos-item__preview" src="img/DEE6E9.png" alt=""></a>
+                  <div class="ks-videos-item__name">Мини-фильм о Ретрите</div>
+                </div>
+                <div class="ks-videos-item"><a class="ks-videos-item__video" href="img/DEE6E9.png" data-fancybox="videos"><img class="ks-videos-item__preview" src="img/DEE6E9.png" alt=""></a>
+                  <div class="ks-videos-item__name">Отзывы о Семинаре Крийя</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="container container--ks hr-before-reviews-slider">
+            <div class="hr"></div>
+          </div>
+          <section class="reviews-slider-section">
+            <div class="container container--ks">
+              <div class="reviews-slider-title">Ваши теплые слова</div>
+              <div class="reviews-slider js-reviews-slider custom-dots">
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">1Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro obcaecati debitis nobis a officia provident quas voluptatum! Commodi, error?</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+                <div class="reviews-slider-slide">
+                  <div class="reviews-slider-slide__author">Марина Подорожная</div>
+                  <div class="reviews-slider-slide__content">
+                    <p>Всем всем искренняя благодарность! Мастер Играл, огромная признательность и благодарность. Если в паре предложений- состояние омовения в волнах света, ощущение присутствия всех 5 энергий- омовение, свет, на несколько секунд ощущение монументальной неподвижности, как будто то на секунды превращаешься в камень, жар, омовение. Разные ощущения чакр. При наклоне вниз - в Аджне калейдоскоп из фотонов световых, красиво, очень. Много разных нюансов, но в целом потоки и волны света, умиротворение и покой. Несколько раз состояние на грани сна, в один из таких моментов появление руки, держащий подобие плоского колокольчика, как будто им звонят.</p>
+                  </div>
+                  <div class="reviews-slider-slide__date">27 Марта 11:43</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="container container--ks hr-after-reviews-slider">
+            <div class="hr"></div>
+          </div>
+          <section class="section-category-slider section-category-slider--comments">
+            <div class="container container--ks">
+              <div class="artimaster-section-title section-category-slider__title">Отзывы участников</div>
+            </div>
+            <div class="container container--ks article-master-container--tab-no-r article-master-container--mob-no-rp category-slider__arrows"><div class="customized-arrow category-slider-arrow customized-arrow--prev"><svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8233 12.3152L2.36163 22.207C2.17645 22.4015 1.93262 22.5232 1.67146 22.5513C1.4103 22.5794 1.14788 22.5122 0.928673 22.3612L0.76009 22.207L0.612583 22.0307C0.48937 21.8385 0.423584 21.6122 0.423584 21.3808C0.423584 21.1494 0.48937 20.9232 0.612583 20.7309L0.76009 20.5547C0.805954 20.4921 0.863259 20.4397 0.928673 20.4004L8.64132 12.3152C8.84273 12.0873 8.95459 11.7884 8.95459 11.478C8.95459 11.1677 8.84273 10.8688 8.64132 10.6409L0.928673 2.59969L0.76009 2.35735C0.60781 2.1611 0.524704 1.91608 0.524704 1.66338C0.524704 1.41068 0.60781 1.16566 0.76009 0.969418L0.9076 0.793172L1.07618 0.638958C1.26331 0.508244 1.48331 0.438477 1.70837 0.438477C1.93342 0.438477 2.15342 0.508244 2.34055 0.638958L2.50914 0.793172L11.1911 9.84777L11.9708 10.6849C12.1458 10.9267 12.2277 11.2283 12.2004 11.5301C12.173 11.8319 12.0385 12.112 11.8233 12.3152Z" fill="#AFB4BF"/></svg></div>
+<div class="customized-arrow category-slider-arrow customized-arrow--next"><svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8233 12.3152L2.36163 22.207C2.17645 22.4015 1.93262 22.5232 1.67146 22.5513C1.4103 22.5794 1.14788 22.5122 0.928673 22.3612L0.76009 22.207L0.612583 22.0307C0.48937 21.8385 0.423584 21.6122 0.423584 21.3808C0.423584 21.1494 0.48937 20.9232 0.612583 20.7309L0.76009 20.5547C0.805954 20.4921 0.863259 20.4397 0.928673 20.4004L8.64132 12.3152C8.84273 12.0873 8.95459 11.7884 8.95459 11.478C8.95459 11.1677 8.84273 10.8688 8.64132 10.6409L0.928673 2.59969L0.76009 2.35735C0.60781 2.1611 0.524704 1.91608 0.524704 1.66338C0.524704 1.41068 0.60781 1.16566 0.76009 0.969418L0.9076 0.793172L1.07618 0.638958C1.26331 0.508244 1.48331 0.438477 1.70837 0.438477C1.93342 0.438477 2.15342 0.508244 2.34055 0.638958L2.50914 0.793172L11.1911 9.84777L11.9708 10.6849C12.1458 10.9267 12.2277 11.2283 12.2004 11.5301C12.173 11.8319 12.0385 12.112 11.8233 12.3152Z" fill="#AFB4BF"/></svg></div>
+              <div class="category-slider__overflow">
+                <div class="category-slider custom-dots"><a class="category-slide category-slide--video" href="https://www.youtube.com/embed/tf3wfU6QeG8">
+                    <div class="category-slide__img-wrapper"><img class="category-slide__img" src="img/DEE6E9.png"></div></a><a class="category-slide category-slide--video" href="https://www.youtube.com/embed/tf3wfU6QeG8">
+                    <div class="category-slide__img-wrapper"><img class="category-slide__img" src="img/scicria/3.jpg"></div></a><a class="category-slide category-slide--video" href="https://www.youtube.com/embed/tf3wfU6QeG8">
+                    <div class="category-slide__img-wrapper"><img class="category-slide__img" src="img/DEE6E9.png"></div></a><a class="category-slide category-slide--video" href="https://www.youtube.com/embed/tf3wfU6QeG8">
+                    <div class="category-slide__img-wrapper"><img class="category-slide__img" src="img/DEE6E9.png"></div></a><a class="category-slide category-slide--video" href="https://www.youtube.com/embed/tf3wfU6QeG8">
+                    <div class="category-slide__img-wrapper"><img class="category-slide__img" src="img/DEE6E9.png"></div></a></div>
+              </div>
+            </div>
+          </section>
+          <div class="kspc-slider-block kspc-slider-block--has-title">
+            <div class="container container--ks">
+              <h2 class="kspc-slider-block-title kspc-h2-style">Экскурсии</h2>
+              <div class="kspc-slider js-kspc-slider custom-dots">
+                <div class="kspc-slider-item kspc-slider-item--video video-effect video-effect--non-hide-play-btn js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=1"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=1" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=2"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=2" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=3"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=3" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=4"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=4" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=5"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=5" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <section class="page-tabs-section page-tabs-section--comments">
+            <div class="page-tabs-section__container">
+              <div class="page-tabs">
+                <div class="page-tabs__inner">
+                  <div class="page-tabs__item page-tabs__item--active active">Всемирная медитация</div>
+                  <div class="page-tabs__item">Базовый курс медитации</div>
+                  <div class="page-tabs__item">Крийя-Нидра курс</div>
+                  <div class="page-tabs__item">Семинары</div>
+                  <div class="page-tabs__item">Ретриты</div>
+                  <div class="page-tabs__item">Imram Music</div>
+                  <div class="page-tabs__line"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="reviews">
+            <div class="container container--ks">
+              <div class="reviews-top">
+                <h2 class="kspc-h2-style reviews-title">Отзывы о Всемирной медитации</h2>
+                <div class="reviews-top__count">868 отзывов</div>
+              </div>
+              <form class="reviews-form">
+                <div class="reviews-form__top">
+                  <div class="reviews-form__top-inp-wrap">
+                    <input class="reviews-textarea" type="text" placeholder="Имя">
+                  </div>
+                  <div class="reviews-form__top-inp-wrap">
+                    <input class="reviews-textarea" type="text" placeholder="Email">
+                  </div>
+                </div>
+                <input class="hide" type="text" value="Иванов Иван">
+                <textarea class="reviews-textarea js-textarea-autosize" name="make-review" placeholder="Новый отзыв" rows="1"></textarea>
+                <button class="btn reviews-send-btn" type="submit">Отправить</button>
+              </form>
+              <div class="reviews-container">
+                <!--сделать проверку на минимальное количество символов и в таком случае проставлять хайд-->
+                <div class="reviews-item">
+                  <div class="reviews-item__top">
+                    <div class="reviews-item__name">Павел Владимиров</div>
+                    <div class="reviews-item__days">3 дня назад</div>
+                  </div>
+                  <div class="reviews-item__text reviews-item__text--with-hide">
+                    <p>Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam itaque enim sequi deserunt blanditiis, veniam reiciendis. Aut odio, labore dolor, magni quae voluptate quos omnis recusandae unde ex dolore iure minus error ab minima esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae possimus nam quis est distinctio, deleniti culpa tempora suscipit laudantium voluptate voluptatem aspernatur in? Delectus aliquam blanditiis optio eum eius aspernatur ea nihil praesentium. Perferendis nisi ex magni. Necessitatibus ipsa quibusdam error voluptas soluta aliquam eos alias voluptate, eius excepturi.</p>
+                    <div class="kspc-twpah-unwrap reviews-unwrap js-review-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+                  </div>
+                </div>
+                <div class="reviews-item">
+                  <div class="reviews-item__top">
+                    <div class="reviews-item__name">Сергей Реутов</div>
+                    <div class="reviews-item__days">4 дня назад</div>
+                  </div>
+                  <div class="reviews-item__text">
+                    <p>Благодарю, Мастер!</p>
+                  </div>
+                  <div class="reviews-more-options">
+                    <div class="reviews-more-options__item"> Редактировать</div>
+                  </div>
+                </div>
+                <div class="reviews-item">
+                  <div class="reviews-item__top">
+                    <div class="reviews-item__name">Сергей Лятычевский</div>
+                    <div class="reviews-item__days">5 дней назад</div>
+                  </div>
+                  <div class="reviews-item__text reviews-item__text--with-hide">
+                    <p>Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, natus dignissimos. Necessitatibus voluptatem cum fugit vitae obcaecati quis reiciendis adipisci aut consequuntur facere. Odio perspiciatis, rerum inventore esse at amet deserunt molestias illo dolorem facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quos quo ut animi odio ad vel nostrum quas, minus maxime quasi nulla, vero harum. Quas iste pariatur, explicabo consectetur dolor porro modi harum laborum illum eaque, a animi labore quae impedit in sequi, ut officia expedita necessitatibus numquam minima cum ipsam atque ex. Fugit assumenda consequatur esse, ab qui voluptatum consequuntur, totam, exercitationem omnis mollitia repellat quisquam adipisci a. Nulla magnam sint quisquam? Unde ducimus porro quidem fugiat eos? Et omnis repudiandae atque veritatis nisi natus nemo! Consectetur incidunt nihil voluptatibus. Ad voluptatum laudantium officiis impedit voluptas! Obcaecati, consequuntur exercitationem!</p>
+                    <div class="kspc-twpah-unwrap reviews-unwrap js-review-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-loadmore-wrap">
+                <div class="reviews-loadmore"><span class="reviews-loadmore__text">Загрузить еще</span><svg class="reviews-loadmore__icon" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90556e-05 0.411044C3.62252e-05 0.329919 0.0241108 0.250621 0.0691976 0.183179C0.114285 0.115737 0.178359 0.0631808 0.253317 0.0321557C0.328275 0.00113055 0.410749 -0.00696922 0.490311 0.00888081C0.569873 0.0247309 0.642947 0.0638185 0.700293 0.121201L5.46604 4.88693L10.2318 0.121201C10.3091 0.0464881 10.4127 0.0051467 10.5203 0.00608121C10.6278 0.00701572 10.7307 0.0501515 10.8067 0.126198C10.8828 0.202244 10.9259 0.305116 10.9269 0.412657C10.9278 0.520199 10.8865 0.623805 10.8117 0.701161L5.75588 5.75701C5.67897 5.8339 5.57466 5.8771 5.4659 5.8771C5.35714 5.8771 5.25284 5.8339 5.17592 5.75701L0.120059 0.701161C0.0819778 0.663056 0.0517759 0.617822 0.0311794 0.568043C0.0105829 0.518264 -4.78865e-06 0.464916 1.90556e-05 0.411044Z" fill="#25378D"/></svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="container container--ks course-cards-hr-before">
+            <div class="hr"></div>
+          </div>
+          <section class="course-cards-section">
+            <div class="container container--ks">
+              <h2 class="kspc-h2-style course-cards-title">Онлайн-курсы</h2>
+              <div class="course-cards"><a class="course-cards-item" href="">
+                  <div class="course-cards-item__pic"><img src="https://via.placeholder.com/150/000000/FFFFFF/?text=2" alt=""></div>
+                  <div class="course-cards-item__name">Базовый курс медитации Крийя</div></a><a class="course-cards-item" href="">
+                  <div class="course-cards-item__pic"><img src="https://via.placeholder.com/150/000000/FFFFFF/?text=2" alt=""></div>
+                  <div class="course-cards-item__name">Крийя-Нидра курс</div></a></div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <section class="hm-galery">
+        <div class="container container--extra-long">
+          <div class="hm-galery__row">
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo1.jpg"></div>
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo2.jpg"></div>
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo3.jpg"></div>
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo4.jpg"></div><a class="hm-galery__white-box" href="#">
+              <p>Все<br/>фотографии</p></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="top-btn-wrap">
+      <div class="top-btn-wrap__inner container">
+        <div class="top-btn js-top-btn" id="top-btn"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8867 0.462901L23.6196 11.6986C23.8307 11.9185 23.9627 12.208 23.9932 12.5182C24.0237 12.8283 23.9508 13.1399 23.7869 13.4002L23.6196 13.6004L23.4284 13.7756C23.2198 13.9219 22.9743 14 22.7232 14C22.4721 14 22.2266 13.9219 22.018 13.7756L21.8268 13.6004C21.7589 13.5459 21.702 13.4779 21.6595 13.4002L12.8867 4.2415C12.645 3.99088 12.3185 3.85029 11.9783 3.85029C11.6381 3.85029 11.3117 3.99088 11.07 4.2415L2.24937 13.4002L2.08205 13.6004C1.86729 13.777 1.60213 13.8729 1.32907 13.8729C1.056 13.8729 0.790844 13.777 0.57609 13.6004L0.384858 13.4252L0.217528 13.225C0.0756992 13.0028 -5.50073e-08 12.7416 -6.66892e-08 12.4743C-7.83711e-08 12.2071 0.0756992 11.9458 0.217528 11.7236L0.384858 11.5234L10.2094 1.21361L11.1178 0.287735C11.378 0.0742574 11.7065 -0.0265813 12.0356 0.00600953C12.3647 0.0385994 12.6693 0.202135 12.8867 0.462901Z" fill="#AFB4BF"/></svg></div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="container container--sfoo">
+        <div class="sfoo-top">
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>Мероприятия</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Семинары</a><a class="sfoo-list__item" href="">Лекции</a><a class="sfoo-list__item" href="">Вебинары</a><a class="sfoo-list__item" href="">Ретриты</a><a class="sfoo-list__item" href="">Календарь мероприятий</a></div>
+            <div class="sfoo-col__title"><span>Статьи</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Новые статьи</a><a class="sfoo-list__item" href="">Наука Крийя</a><a class="sfoo-list__item" href="">Саморазвитие</a><a class="sfoo-list__item" href="">Творчество</a><a class="sfoo-list__item" href="">Здоровье</a><a class="sfoo-list__item" href="">Семейные отношения</a></div>
+          </div>
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>О Мастере</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Биография</a><a class="sfoo-list__item" href="">Встреча с Бабаджи</a><a class="sfoo-list__item" href="">Философия</a></div>
+            <div class="sfoo-col__title"><span>Обучение</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Все курсы</a><a class="sfoo-list__item" href="">Медитация для начинающих</a><a class="sfoo-list__item" href="">Гид по медитации</a><a class="sfoo-list__item" href="">Уроки для дома</a><a class="sfoo-list__item" href="">Углубленная медитация Крия</a><a class="sfoo-list__item" href="">Расписание онлайн прктики</a><a class="sfoo-list__item" href="">Отзывы</a></div>
+          </div>
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>Наука Крийя</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Что такое Крийя</a><a class="sfoo-list__item" href="">Энергизация тела</a><a class="sfoo-list__item" href="">42 Крийя</a><a class="sfoo-list__item" href="">Прогрессивные техники</a><a class="sfoo-list__item" href="">Супертехника Крийя</a><a class="sfoo-list__item" href="">Сосуд Трансцендентной силы</a><a class="sfoo-list__item" href="">Учителя</a><a class="sfoo-list__item" href="">Книги</a><a class="sfoo-list__item" href="">Отзывы</a></div>
+            <div class="sfoo-col__title"><span>Видео</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Новые видео</a><a class="sfoo-list__item" href="">Новые видео</a></div>
+          </div>
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>Музыка</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Творчество Имрама</a><a class="sfoo-list__item" href="">Преобразующая музыка</a><a class="sfoo-list__item" href="">Альбомы</a><a class="sfoo-list__item" href="">Отзывы</a><a class="sfoo-list__item" href="">Фото</a><a class="sfoo-list__item" href="">Расписание концертов</a></div>
+            <div class="sfoo-col__title"><span>О нас</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Контакты</a><a class="sfoo-list__item" href="">Сотрудничество</a><a class="sfoo-list__item" href="">Поддержите развитие</a></div>
+          </div>
+        </div>
+        <div class="sfoo-bottom">
+          <div class="sfoo-copywryting">© 2021 Все права защищены.</div>
+          <div class="sfoo-bottom-menu"><a class="sfoo-bottom-menu__item" href="">Политика конфиденциальности</a><a class="sfoo-bottom-menu__item" href="">Договор оферты</a><a class="sfoo-bottom-menu__item" href="">Карта сайта</a><a class="sfoo-bottom-menu__item" href="">Россия</a></div>
+          <div class="sfoo-bottom-right">
+            <div class="ssocials ssocials--sfoo"><a class="ssocials-item" href=""><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 3.807a3.819 3.819 0 00-3.819 3.818 3.798 3.798 0 003.819 3.818 3.819 3.819 0 003.818-3.818c0-2.092-1.727-3.818-3.819-3.818zm0 6.308a2.487 2.487 0 01-2.49-2.49c0-1.361 1.095-2.457 2.49-2.457a2.451 2.451 0 012.457 2.457c0 1.395-1.096 2.49-2.457 2.49zm4.847-6.441a.893.893 0 00-.896-.897.893.893 0 00-.897.897c0 .498.399.896.897.896a.893.893 0 00.896-.896zm2.524.896c-.067-1.195-.332-2.258-1.196-3.12C13.75.585 12.688.32 11.493.253c-1.23-.067-4.915-.067-6.143 0C4.154.32 3.125.586 2.229 1.449c-.864.863-1.13 1.926-1.196 3.121-.066 1.229-.066 4.914 0 6.143.067 1.195.332 2.225 1.196 3.121.896.863 1.925 1.129 3.12 1.195 1.23.067 4.915.067 6.143 0 1.195-.066 2.258-.332 3.121-1.195.864-.896 1.13-1.926 1.196-3.121.066-1.229.066-4.914 0-6.143zm-1.594 7.438c-.233.664-.764 1.162-1.395 1.428-.996.398-3.32.298-4.383.298-1.095 0-3.42.1-4.382-.299a2.517 2.517 0 01-1.428-1.427c-.398-.963-.299-3.287-.299-4.383 0-1.063-.1-3.387.299-4.383a2.561 2.561 0 011.428-1.394c.963-.399 3.287-.3 4.383-.3 1.062 0 3.386-.099 4.382.3.631.232 1.13.763 1.395 1.394.398.996.299 3.32.299 4.383 0 1.096.1 3.42-.3 4.383z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="12" viewbox="0 0 17 12"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.084 2.537a1.993 1.993 0 00-1.406-1.435C13.418.75 8.438.75 8.438.75s-5.01 0-6.27.352A1.993 1.993 0 00.762 2.537C.41 3.767.41 6.404.41 6.404s0 2.608.352 3.867c.175.704.732 1.231 1.406 1.407 1.26.322 6.27.322 6.27.322s4.98 0 6.24-.322a1.954 1.954 0 001.406-1.407c.352-1.26.352-3.867.352-3.867s0-2.636-.352-3.867zm-9.287 6.24V4.031l4.16 2.373-4.16 2.373z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="9" height="15" viewbox="0 0 9 15"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.629 8.625l.383-2.516H5.578V4.47c0-.711.328-1.367 1.422-1.367h1.121V.942S7.11.75 6.152.75c-1.996 0-3.308 1.23-3.308 3.418v1.941H.602v2.516h2.242v6.125h2.734V8.625h2.05z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="11" viewbox="0 0 17 11"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.967 1.332c.088-.352 0-.645-.527-.645h-1.73c-.439 0-.644.235-.76.499 0 0-.88 2.138-2.11 3.544-.41.381-.586.528-.82.528-.088 0-.264-.147-.264-.498V1.332c0-.44-.117-.645-.498-.645H6.563c-.293 0-.44.206-.44.41 0 .41.615.499.674 1.67v2.55c0 .556-.088.673-.322.673-.586 0-1.993-2.168-2.842-4.629C3.457.893 3.28.688 2.842.688H1.113c-.468 0-.586.234-.586.498 0 .468.586 2.724 2.725 5.742 1.436 2.05 3.457 3.135 5.273 3.135 1.084 0 1.23-.235 1.23-.645 0-1.963-.087-2.168.44-2.168.264 0 .703.146 1.729 1.143 1.172 1.171 1.377 1.67 2.021 1.67h1.729c.498 0 .732-.235.586-.733-.323-.996-2.52-3.105-2.637-3.252-.264-.322-.176-.469 0-.762 0 0 2.11-2.988 2.344-3.984z" fill="#6974A9"/></svg></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script> <link rel='stylesheet' id='magnific-popup-css'  href='http://imram.q7.by/wp-content/plugins/malina-elements/css/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+  </body>
+</html>

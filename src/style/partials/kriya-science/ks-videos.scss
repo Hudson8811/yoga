@@ -1,5 +1,12 @@
 .ks-videos {
 	margin-top: 49px;
+
+	&--type-comments {
+		&:first-child {
+			margin-top: 6px;
+		}
+
+	}
 }
 
 .ks-videos-title {
@@ -31,7 +38,8 @@
 		width: 100%;
 		display: block;
 		overflow: hidden;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
 		z-index: 1;
 
 		&::before {
