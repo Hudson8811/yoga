@@ -924,6 +924,14 @@
 		}
 	}
 
+	.quote-with-parallax--type-music {
+		.quote-with-parallax-quote {
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: vw(82);
+			padding-bottom: vw(124);
+		}
+	}
 	.quote-with-parallax-quote {
 		font-size: vw(32);
 		line-height: vw(32);
