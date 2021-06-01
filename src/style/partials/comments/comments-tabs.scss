@@ -5,3 +5,24 @@
 		margin-top: 45px;
 	}
 }
+
+//начало планшета
+@media screen and (max-width:1150px) {
+	.page-tabs-section--comments+.reviews {
+		margin-top: 55px;
+	}
+
+}
+
+
+//начало мобилки 767 было
+@media screen and (max-width: 749px) {
+	.page-tabs-section--comments {
+		margin-top: vw(74);
+
+		&+.reviews {
+			margin-top: vw(48);
+		}
+	}
+
+}

@@ -1,0 +1,96 @@
+//начало планшета
+@media screen and (max-width:1150px) {
+	.course-cards-hr-before {}
+
+	.course-cards-section {
+		margin-top: 48px;
+
+		.container {
+			&--ks {}
+		}
+	}
+
+	.course-cards-title {
+		font-size: 39px;
+		line-height: 49px;
+	}
+
+	.course-cards {
+		margin-top: 24px;
+	}
+
+	.course-cards-item {
+		&__pic {
+			&::before {}
+
+			img {}
+		}
+
+		&__name {
+			font-weight: 500;
+			font-size: 19px;
+			line-height: 26px;
+			margin-top: 15px;
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+}
+
+
+//начало мобилки 767 было
+@media screen and (max-width: 749px) {
+
+	.course-cards-hr-before {}
+
+	.course-cards-section {
+		.container {
+			&--ks {}
+		}
+		margin-top: vw(51);
+	}
+
+	.course-cards-title {
+		font-size: vw(32);
+		line-height: vw(39);
+		/* identical to box height, or 122% */
+
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
+
+	.course-cards {
+		margin-top: vw(26);
+	margin-bottom: 0;}
+
+	.course-cards-item {
+		width: 100%;
+		margin-bottom: 0;
+		&__pic {
+			&::before {}
+
+			img {}
+		}
+
+		&__name {
+			font-weight: 500;
+			font-size: vw(19);
+			line-height: vw(26);
+			margin-top: vw(17);
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+		&+.course-cards-item{
+			margin-top: vw(51);
+		}
+	}
+}

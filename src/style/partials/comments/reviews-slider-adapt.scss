@@ -1,0 +1,144 @@
+//начало планшета
+@media screen and (max-width:1150px) {
+	.hr-before-reviews-slider {
+		margin-top: 86px;
+
+		&+.reviews-slider-section {
+			margin-top: 77px;
+		}
+	}
+
+	.hr-after-reviews-slider {
+		margin-top: 93px;
+	}
+
+	.reviews-slider-section {
+		&:hover {
+			.reviews-slider-arrow {}
+		}
+
+		.container {
+			&--ks {}
+		}
+	}
+
+	.reviews-slider-title {
+		font-size: 39px;
+		line-height: 59px;
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
+
+	.reviews-slider-arrow {
+		transform: translateY(-30px);
+
+		&.customized-arrow--prev {
+			left: -57px;
+		}
+
+		&.customized-arrow--next {
+			right: -57px;
+		}
+	}
+
+	.reviews-slider {
+		margin: 0 auto;
+		margin-top: 32px;
+		width: 582px;
+		max-width: 100%;
+
+		.slick-dots {
+			margin-top: 26px;
+		}
+
+		.slick-list {}
+	}
+
+	.reviews-slider-slide {
+		&__author {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 19px;
+			line-height: 30px;
+		}
+
+		&__content {
+			font-size: 15px;
+			line-height: 24px;
+
+			p {}
+		}
+
+		&__date {
+			font-size: 15px;
+			line-height: 30px;
+			margin-top: 19px;
+		}
+	}
+}
+
+//начало мобилки 767 было
+@media screen and (max-width: 749px) {
+	.hr-before-reviews-slider {
+		margin-top: vw(86);
+
+		&+.reviews-slider-section {
+			margin-top: vw(83);
+		}
+	}
+
+	.hr-after-reviews-slider {
+		margin-top: vw(93);
+	}
+
+	.reviews-slider-section {
+		&:hover {
+			.reviews-slider-arrow {}
+		}
+
+		.container {
+			&--ks {}
+		}
+	}
+
+	.reviews-slider-title {
+		font-size: vw(39);
+		line-height: vw(48);
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
+
+	.reviews-slider-arrow {}
+
+	.reviews-slider {
+		width: 100%;
+		margin-top: vw(18);
+
+		.slick-dots {
+			margin-top: vw(26);}
+
+		.slick-list {}
+	}
+
+	.reviews-slider-slide {
+		&__author {
+			/* or 136% */
+			font-size: vw(19);
+			line-height: vw(30);
+		}
+
+		&__content {
+			margin-top: vw(19);
+			font-size: vw(15);
+			line-height: vw(24);
+
+			p {}
+		}
+
+		&__date {
+			font-size: vw(15);
+			line-height: vw(30);
+			margin-top: vw(19);
+		}
+	}
+}

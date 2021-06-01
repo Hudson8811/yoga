@@ -11,6 +11,10 @@
 
 		&__img {}
 	}
+
+	.big-top-pic--type-comments .big-top-pic__relative::before {
+		padding-top: 43.1%;
+	}
 }
 
 
@@ -23,10 +27,14 @@
 			&::before {
 				padding-top: 0;
 				height: calc(100vh - 53px);
-				height: calc(var(--vh,1vh) * 100 - 53px);
+				height: calc(var(--vh, 1vh) * 100 - 53px);
 			}
 		}
 
 		&__img {}
+	}
+	.big-top-pic--type-comments .big-top-pic__relative::before {
+		padding-top: 101.7%;
+		height: auto;
 	}
 }

@@ -12,14 +12,68 @@
 			margin-bottom: 16px;
 			margin-left: 0;
 		}
+
 		border-top: 0;
 		border-bottom: 0;
+
+		&--comments {
+			padding-top: 0;
+			margin-top: 41px;
+
+			.artimaster-section-title {
+				font-size: 35px;
+				line-height: 59px;
+				letter-spacing: -0.03em;
+			}
+
+			.article-master-container--tab-no-r {
+				width: calc(348px + 50%);
+			}
+
+			.category-slider .category-slide {
+				width: 228px;
+				margin-right: 35px;
+			}
+
+			.category-slider .category-slide__img-wrapper::after {
+				content: '';
+				padding-top: 57.5%;
+			}
+
+			.category-slider .slick-dots {
+				display: flex !important;
+			}
+
+			.category-slide--video .category-slide__img-wrapper::before {
+				right: 9px;
+				bottom: 9px;
+				top: auto;
+				left: auto;
+				width: 22px;
+				height: 22px;
+				transform: none;
+			}
+
+			&+.kspc-slider-block--has-title {
+				margin-top: 42px;
+
+				.kspc-slider-block-title {
+					font-size: 35px;
+					line-height: 59px;
+
+					&+.kspc-slider {
+						margin-top: 17px;
+					}
+				}
+			}
+		}
 	}
 
 	.category-slider {
 		padding: 0;
 		margin: 0;
-		&-arrow{
+
+		&-arrow {
 			display: none;
 		}
 
@@ -77,6 +131,62 @@
 		&__title {
 
 			margin-bottom: 0;
+		}
+
+		&--comments {
+			margin-top: vw(31);
+
+			.artimaster-section-title {
+				font-size: vw(32);
+				line-height: vw(39);
+
+			}
+
+			.article-master-container--tab-no-r {
+				width: calc(vw(348) + 50%);
+			}
+
+
+			.category-slider{
+				margin-top: vw(27);
+			}
+
+			.category-slider .category-slide {
+				width: vw(170);
+				margin-right: vw(22);
+			}
+
+			.category-slider .category-slide__img-wrapper::after {
+				padding-top: 62%;
+			}
+
+			.category-slider .slick-dots {
+				display: flex !important;
+				margin-top: vw(36);
+			}
+
+			.category-slide--video .category-slide__img-wrapper::before {
+				right: vw(9);
+				bottom: vw(9);
+				top: auto;
+				left: auto;
+				width: vw(22);
+				height: vw(22);
+				transform: none;
+			}
+
+			&+.kspc-slider-block--has-title {
+				margin-top: vw(29);
+
+				.kspc-slider-block-title {
+					font-size: vw(32);
+					line-height: vw(39);
+
+					&+.kspc-slider {
+						margin-top: vw(25);
+					}
+				}
+			}
 		}
 	}
 

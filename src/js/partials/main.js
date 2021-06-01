@@ -301,7 +301,7 @@ $(document).ready(function () {
 		]
 
 	});
-	$('.category-slider').slick({
+	$('.js-category-slider').slick({
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 3,
@@ -341,12 +341,59 @@ $(document).ready(function () {
 			}*/
 		]
 	});
+
+	//страница отзывы, слайдер базирующийся на слайдере категорий
+	$('.js-category-slider--comments').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		dots: true,
+		variableWidth: false,
+		speed: slickSpeedMain * 3,
+		touchMove: false,
+		prevArrow: '',
+		nextArrow: '',
+		responsive: [{
+			breakpoint: 1150,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				variableWidth: true,
+				speed: slickSpeedMain,
+				arrows: false
+				/*,
+									dots: false,*/
+			}
+		}
+			/*,
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}*/
+		]
+	});
+
+
 	$('.category-slider-arrow.customized-arrow--prev').on('click', function () {
-		$('.category-slider').slick('slickPrev');
+		$('.js-category-slider, .js-category-slider--comments').slick('slickPrev');
 	});
 	$('.category-slider-arrow.customized-arrow--next').on('click', function () {
-		$('.category-slider').slick('slickNext');
+		$('.js-category-slider, .js-category-slider--comments').slick('slickNext');
 	});
+
+
+
 
 
 	$('.video-slider').slick({

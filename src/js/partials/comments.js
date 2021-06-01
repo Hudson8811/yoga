@@ -25,6 +25,7 @@ $(document).ready(function () {
 			}, {
 				breakpoint: 749,
 				settings: {
+					arrows: false,
 					speed: slickSpeedMain
 				}
 			}]

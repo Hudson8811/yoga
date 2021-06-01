@@ -46,6 +46,30 @@
 		&__preview {}
 
 	}
+
+	.ks-videos--type-comments {
+		.ks-videos-title {
+			text-align: center;
+			font-size: 39px;
+			line-height: 49px;
+			text-align: center;
+			letter-spacing: -0.03em;
+
+		}
+
+		&:first-child {
+			margin-top: 0px;
+		}
+
+		.ks-videos-row {
+			margin-top: 24px;
+		}
+
+		.ks-videos-item__name {
+			text-align: center;
+			margin-top: 16px;
+		}
+	}
 }
 
 
@@ -107,5 +131,26 @@
 			margin-top: vw(50);
 		}
 
+	}
+
+	.ks-videos--type-comments {
+		.ks-videos-title {
+			font-size: vw(32);
+			line-height: vw(39);
+
+		}
+
+		&:first-child {
+			margin-top: vw(3);
+		}
+
+		.ks-videos-row {
+			margin-top: vw(26);
+		}
+
+		.ks-videos-item__name {
+			text-align: center;
+			margin-top: vw(17);
+		}
 	}
 }
