@@ -498,6 +498,172 @@ $(document).ready(function () {
 		);
 	}
 
+
+
+
+
+
+	if (typeof commentsAjaxTabs !== 'undefined' && commentsAjaxTabs) {
+		let tabRequest = false;
+		let currentPage = 1;
+		let currentTabHtml = 0;
+		let galleryImages = [];
+		let loaderProcess = 0;
+		let loadedCount = [];
+		let imagesBlock = 0;
+		let mode = 'start';
+
+		$(window).on('resize scroll', function () {
+			if ($('#music-preloader').length) {
+				if ($('#music-preloader').isInViewport()) {
+					getScrollContent();
+				}
+			}
+		});
+
+
+		function getScrollContent(index) {
+			//console.log('getScrollContent');
+			//console.log($(tabLinks).eq(index));
+			//console.log($(tabLinks).eq(index).attr('data-com-title'));
+			//console.log($(tabLinks).eq(index).attr('data-page-id'));
+
+
+			if (!tabRequest) {
+				if (typeof index === 'number') {
+					dataType = 'html';
+					currentPage = 1;
+					currentTabHtml = parseInt(index);
+					galleryImages = [];
+					loaderProcess = 0;
+					loadedCount = [];
+					imagesBlock = 0;
+					mode = 'start';
+				}
+				let tabContainer = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(currentTabHtml);
+
+				let data = {
+					'action': 'loadtab_comments',
+					'post_id': $(tabLinks).eq(index).attr('data-page-id')
+				};
+				if (typeof (customCommentsPerPage) != "undefined" && customCommentsPerPage !== null) {
+					data['per_page'] = customCommentsPerPage;
+				}
+
+				//console.log(data);
+
+
+				$.ajax({
+					url: '/wp-admin/admin-ajax.php',
+					data: data,
+					type: 'POST',
+					dataType: dataType,
+					beforeSend: function () {
+						console.log('send');
+						tabRequest = true;
+						if (typeof index === 'number') {
+							//if (index !== 3 && index !== 0)
+							tabContainer.html('<div style="height: 100vh; max-height: 100vh;"></div>');
+							setTimeout(function () {
+								tabContainer.siblings('.page--tabs-blocks__tab:not(.page--tabs-'+index+')').html('<div style="height: 100vh; max-height: 100vh;"></div>');
+							}, 400);
+						}
+					},
+					success: function (data) {
+						console.log('success');
+						//console.log(data);
+						if (data) {
+								if (typeof index === 'number') {
+									console.log('paste');
+									tabContainer.html(data);
+									tabContainer.find('.js-replace-title').html(
+										$.parseHTML($(tabLinks).eq(index).attr('data-com-title'))[0]['wholeText']
+										);
+									initCommentsLoadMore();
+								}
+								//mode = data[1];
+								//tippy(document.querySelectorAll('.js-share'), tippySettings);
+								setTimeout(function () {
+									AOS.init({
+										disable: false,
+										debounceDelay: 50,
+										throttleDelay: 99,
+										offset: 50,
+										delay: 0,
+										duration: 1000,
+										easing: 'ease',
+										once: true,
+										mirror: false,
+										anchorPlacement: 'top-bottom',
+									});
+								}, 50);
+							//currentPage++;
+						} else {
+							$('.kspc-preloader').remove();
+						}
+
+						tabRequest = false;
+					},
+					error: function (data) {
+						tabRequest = false;
+						console.log('no json');
+						$('.kspc-preloader').remove();
+					}
+				});
+			}
+		}
+
+		function imageLoader(iblock) {
+			if (galleryImages[iblock].length && loaderProcess < 9) {
+				loaderProcess++;
+				let imageSrc = galleryImages[iblock][0];
+				galleryImages[iblock].shift();
+				let imgHtml = '<img src="' + imageSrc + '" alt="" data-block="' + iblock + '">';
+				$('.kspc-phg__add').append(imgHtml);
+			}
+		}
+
+
+		document.addEventListener(
+			'load',
+			function (event) {
+				var elm = event.target;
+				if (elm.nodeName.toLowerCase() === 'img' && $(elm).closest('.kspc-phg__add').length) {
+					let iblock = $(elm).data('block');
+					let conteiner = $('.kspc-phg__list[data-block="' + iblock + '"] .kspc-phg__item:not(.loaded):first');
+					$(elm).appendTo(conteiner);
+					conteiner.addClass('loaded');
+					loaderProcess--;
+					if (typeof loadedCount[iblock] === 'undefined') loadedCount[iblock] = 0;
+					loadedCount[iblock]++;
+					if (loadedCount[iblock] >= 9 || galleryImages[iblock].length === 0) {
+						$('.kspc-phg__list[data-block="' + iblock + '"] .kspc-phg__item.loaded').css({
+							display: 'block'
+						}).attr('data-aos', 'fade');
+						setTimeout(function () {
+							AOS.init({
+								disable: false,
+								debounceDelay: 50,
+								throttleDelay: 99,
+								offset: 0,
+								delay: 0,
+								duration: 1000,
+								easing: 'ease',
+								once: true,
+								mirror: false,
+								anchorPlacement: 'top-bottom',
+							});
+						}, 50);
+						loadedCount[iblock] = 0;
+					}
+					imageLoader(iblock);
+				}
+			},
+			true
+		);
+	}
+
+
 });
 
 
