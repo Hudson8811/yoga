@@ -3,7 +3,13 @@
 		padding-top: 46px;
 	}
 }
-
+.maslider-section{
+	&+.breadcrumbs-wrap{
+		.breadcrumbs{
+			padding-top: 55px;
+		}
+	}
+}
 .breadcrumbs-container--ks{}
 .breadcrumbs {
 	display: flex;

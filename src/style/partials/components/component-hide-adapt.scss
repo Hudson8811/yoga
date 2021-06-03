@@ -24,6 +24,13 @@
 			padding-right: 7px
 		}
 
+		&--type-kspc-nl {
+			.kspc-twpah-unwrap {
+				left: 345px;
+				width: calc(100% - 345px);
+			}
+		}
+
 
 		&--show-2 {
 			max-height: 24*2px;
@@ -68,6 +75,11 @@
 			top: vw(24*2);
 		}
 
+
+		&--type-kspc-nl {
+			.kspc-twpah-unwrap {
+			}
+		}
 
 		&--show-2 {
 			max-height: vw(24*2);

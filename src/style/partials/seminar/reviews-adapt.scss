@@ -3,6 +3,9 @@
 	.reviews {
 		margin-top: 88px;
 
+		&--after-tabs-and-socials{
+				margin-top: 35px;
+		}
 		&:last-child {}
 	}
 
@@ -146,6 +149,9 @@
 	.reviews {
 		margin-top: vw(88);
 
+		&--after-tabs-and-socials{
+
+		}
 		&:last-child {
 			margin-bottom: vw(-61);
 		}

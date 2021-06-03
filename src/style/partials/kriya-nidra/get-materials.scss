@@ -1,5 +1,31 @@
+
+.get-materials-hr-before {
+	margin-top: 84px;
+
+	&+.get-materials {
+		&--has-title-small {
+			margin-top: 50px;
+		}
+
+		&--has-title-big {}
+
+	}
+}
+
+.get-materials-hr-after {
+	margin-top: 58px;
+	&+.kspc-simple-text--has-title{
+		margin-top: 77px;
+
+	}
+	&+.kspc-tags-and-share--after-quote-right {
+		margin-top: 57px;
+	}
+}
+
 .get-materials {
-    margin-top: 46px;}
+	margin-top: 46px;
+}
 
 .get-materials-title {
 	font-style: normal;
@@ -10,10 +36,42 @@
 	text-align: center;
 }
 
+.get-materials-title-small {
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 30px;
+	text-align: center;
+
+	&+.get-materials-row {
+		margin-top: 27px;
+	}
+}
+
+.get-materials-title-big {
+
+	font-size: 28px;
+	line-height: 1.76;
+	text-align: center;
+	letter-spacing: -0.03em;
+
+}
+
+.get-materials-subtitle {
+
+	font-size: 17px;
+	line-height: 30px;
+	text-align: center;
+	color: #25378D;
+    margin-top: -4px;
+	&+.get-materials-row {
+		margin-top: 26px;
+	}
+}
+
 .get-materials-row {
 	display: flex;
 	justify-content: center;
-    margin-top: 30px;
+	margin-top: 30px;
 
 	&__left {
 		width: 393px;
@@ -26,7 +84,7 @@
 		&--email {}
 	}
 
-	.btn--get-materials{
+	.btn--get-materials {
 		width: 202px;
 	}
 }

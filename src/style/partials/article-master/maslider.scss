@@ -1,8 +1,19 @@
 .maslider-section {
+
 	//border-top: 1px solid #C4C4C4;
-	&:hover{
-		.maslider-arrow{
+	&:hover {
+		.maslider-arrow {
 			opacity: 1;
+		}
+	}
+}
+
+.maslider {
+	&--type-home-lessons {
+		.maslider-arrow {
+			background: #FFFFFF;
+			backdrop-filter: none;
+			border: 1px solid #AFB4BF;
 		}
 	}
 }
@@ -17,8 +28,9 @@
 		display: block;
 		width: 100%;
 	}
-	&--video{
-		.maslider-slide__inner{
+
+	&--video {
+		.maslider-slide__inner {
 			&::after {
 				position: relative;
 				width: 100%;
@@ -47,7 +59,8 @@
 
 			&:hover {
 
-				&::after,&::before {
+				&::after,
+				&::before {
 					opacity: 1;
 				}
 			}
@@ -59,18 +72,19 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-    padding: 21px 56px 20px;
+	padding: 21px 56px 20px;
 
 	top: 0;
 	left: 0;
 	font-size: 35px;
 	line-height: 26px;
-    letter-spacing: -0.2px;
+	letter-spacing: -0.2px;
 	display: flex;
 	align-items: center;
 	color: #363B42;
 	z-index: 30;
-	span{
+
+	span {
 		display: block;
 	}
 }
@@ -101,7 +115,7 @@
 
 .maslider-arrow {
 	position: absolute;
-    bottom: 20px;
+	bottom: 20px;
 	width: 37px;
 	height: 37px;
 	box-sizing: border-box;
@@ -114,12 +128,14 @@
 
 	border: 1px solid #AFB4BF;
 	box-sizing: border-box;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 500px;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 500px;
 	transform: rotate(-180deg);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	border-radius: 50%;
 	z-index: 100;
 	cursor: pointer;
 	transition: all .4s ease;
@@ -136,17 +152,20 @@
 			transform: rotate(180deg);
 		}
 	}
-	&,svg path{
+
+	&,
+	svg path {
 		transition: all .4s ease;
 	}
+
 	svg {
 		display: block;
 		height: auto;
 		width: 7px;
-		path{
 
-		}
+		path {}
 	}
+
 	/*&:hover{
 		border-color:  #6974A9;
 		svg path{

@@ -4,6 +4,10 @@
 	b {
 		font-weight: 600;
 	}
+
+	&--type-home-lessons {
+		padding-top: 31px;
+	}
 }
 
 .kspc-h1-block {}
@@ -183,6 +187,13 @@
 .kspc-simple-text {
 	margin-top: 50px;
 
+	&__small-title {
+		font-size: 17px;
+		line-height: 21px;
+		text-transform: uppercase;
+		color: #25378D;
+	}
+
 	&__h2 {
 		font-style: normal;
 		font-weight: normal;
@@ -209,6 +220,10 @@
 			&+p {
 				margin-top: 30px;
 			}
+
+			&+ul {
+				margin-top: 40px;
+			}
 		}
 
 		b {
@@ -219,12 +234,21 @@
 			&:first-child {
 				margin-top: 30px;
 			}
+
+			&+p {
+				margin-top: 39px;
+			}
 		}
 
 	}
 
 	&+.kspc-simple-text {
 		margin-top: 67px;
+
+		&.kspc-simple-text--has-small-title {
+			margin-top: 137px;
+
+		}
 	}
 
 	&+.kspc-slider-block {
@@ -319,6 +343,17 @@
 			}
 		}
 	}
+
+	&--no-p-l {
+		li {
+
+			padding-left: 20px;
+
+			&::before {
+				left: 0;
+			}
+		}
+	}
 }
 
 .kspc-text-with-pic-and-hide {
@@ -332,6 +367,10 @@
 		margin-top: 18px;
 	}
 
+	&+.kspc-media-wrap--has-title {
+		margin-top: 18px;
+	}
+
 	&--has-title-top {
 		margin-top: 48px;
 	}
@@ -340,6 +379,10 @@
 		&+.kspc-qa {
 			margin-top: 21px;
 		}
+	}
+	&+.get-materials-hr-before{
+
+		margin-top: 35px;
 	}
 }
 
@@ -405,7 +448,12 @@
 			margin-left: 37px;
 		}
 	}
+	&--small-dist{
 
+		&.kspc-twpah--pic-right .kspc-twpah__pic {
+			margin-left: 35px;
+		}
+	}
 	&__text {
 
 		p {
@@ -415,6 +463,9 @@
 
 			&+p {
 				margin-top: 30px;
+			}
+			&+ul{
+				margin-top: 42px;
 			}
 		}
 	}
@@ -512,6 +563,7 @@
 		.container--qwp {
 			width: 1020px;
 		}
+
 		.quote-with-parallax-quote {
 			padding: 135px 0 147px;
 		}
@@ -1010,4 +1062,15 @@
 
 .hm-quote-practice--wrap-ks-constuctor+.kspc-simple-text--has-title {
 	margin-top: 76px;
+}
+
+
+
+
+.simple-hr {
+	margin-top: 82px;
+
+	&+.kspc-simple-text {
+		margin-top: 43px;
+	}
 }

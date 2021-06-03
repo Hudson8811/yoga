@@ -11,6 +11,10 @@
 		padding: 48px 0 58px;
 
 		b {}
+
+		&--type-home-lessons {
+			padding-top: 31px;
+		}
 	}
 
 
@@ -75,6 +79,15 @@
 	.kspc-simple-text {
 		margin-top: 50px;
 
+		&__small-title {
+			font-size: 15px;
+			line-height: 24px;
+
+			&+.kspc-simple-text__h2 {
+				margin-top: 7px;
+			}
+		}
+
 		&__h2 {
 			font-style: normal;
 			font-weight: normal;
@@ -109,6 +122,9 @@
 				&+p {
 					margin-top: 24px;
 				}
+				&+ul{
+					margin-top: 44px;
+				}
 			}
 
 			b {}
@@ -121,8 +137,11 @@
 			}
 		}
 
-		&+.kspc-simple-text {
+		&+.kspc-simple-text,&+.simple-hr--only-desktop+.kspc-simple-text {
 			margin-top: 79px;
+			&.kspc-simple-text--has-small-title {
+				margin-top: 79px;
+			}
 		}
 
 		&+.kspc-media-wrap {
@@ -190,6 +209,13 @@
 				margin-top: 22px;
 			}
 		}
+
+		&--no-p-l {
+			li {
+
+				&::before {}
+			}
+		}
 	}
 
 	.kspc-text-with-pic-and-hide {
@@ -201,8 +227,14 @@
 
 		&+.kspc-simple-text--has-title {
 			margin-top: 76px;
+			//margin-top: 28px;
 		}
-
+		&+.kspc-media-wrap--has-title {
+			margin-top: 28px;
+		}
+		&+.get-materials-hr-before {
+			margin-top: 86px;
+		}
 		&--master {
 
 
@@ -614,6 +646,11 @@
 		}
 	}
 
+	.simple-hr{
+		&--only-desktop{
+			display: none;
+		}
+	}
 
 }
 
@@ -624,6 +661,10 @@
 		b {}
 
 		padding: vw(48) 0 vw(58);
+
+		&--type-home-lessons {
+			padding-top: 31px;
+		}
 	}
 
 	.kspc-h1-block {}
@@ -675,6 +716,11 @@
 	.kspc-simple-text {
 		margin-top: vw(51);
 
+		&__small-title {
+			font-size: vw(15);
+			line-height: vw(24);
+		}
+
 		&__h2 {
 			font-size: vw(32);
 			line-height: vw(39);
@@ -708,7 +754,7 @@
 			}
 		}
 
-		&+.kspc-simple-text {
+		&+.kspc-simple-text,&+.simple-hr--only-desktop+.kspc-simple-text  {
 			margin-top: vw(78);
 		}
 
@@ -776,6 +822,13 @@
 				margin-top: vw(26);
 			}
 		}
+
+		&--no-p-l {
+			li {
+
+				&::before {}
+			}
+		}
 	}
 
 	.kspc-text-with-pic-and-hide {
@@ -789,6 +842,9 @@
 			margin-top: vw(80);
 		}
 
+		&+.kspc-media-wrap--has-title {
+			//margin-top: 28px;
+		}
 		&--master {
 
 
@@ -932,6 +988,7 @@
 			padding-bottom: vw(124);
 		}
 	}
+
 	.quote-with-parallax-quote {
 		font-size: vw(32);
 		line-height: vw(32);

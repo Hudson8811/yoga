@@ -1,6 +1,12 @@
+.kriya-science-main>.reviews:last-child{
+	margin-bottom: 0;
+}
+
 .reviews {
 	margin-top: 81px;
-
+	&--after-tabs-and-socials{
+		margin-top: 26px;
+	}
 	&:last-child {
 
 		margin-bottom: -61px;

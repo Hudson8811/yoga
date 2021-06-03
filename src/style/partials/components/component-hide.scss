@@ -1,5 +1,5 @@
 .component-hide-block-wrap {
-	&--open .component-hide-block{
+	&--open .component-hide-block {
 		max-height: 10000px !important;
 	}
 }
@@ -38,10 +38,18 @@
 		padding-right: 11px;
 	}
 
-	&--unwrap-pr-music-modal{
-		.kspc-twpah-unwrap{
+	&--unwrap-pr-music-modal {
+		.kspc-twpah-unwrap {
 			letter-spacing: -0.4px;
 			padding-right: 31px !important;
+		}
+	}
+
+	&--type-kspc-nl {
+		.kspc-twpah-unwrap {
+			right: auto;
+			left: 218px;
+			width: calc(100% - 218px);
 		}
 	}
 
@@ -52,6 +60,7 @@
 			top: 30*8px;
 		}
 	}
+
 	&--show-2 {
 		max-height: 30*2px;
 
@@ -61,7 +70,3 @@
 	}
 
 }
-
-
-
-
