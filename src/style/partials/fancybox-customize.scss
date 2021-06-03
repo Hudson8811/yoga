@@ -175,6 +175,13 @@ opacity: 0 !important;
 display: none;
 }
 
+.fancybox-slide--video .fancybox-content{
+	opacity: 0;
+	transition: opacity 0.7s ease;
+	&.video-init{
+		opacity: 1;
+	}
+}
 
 @media screen and (max-width: 1550px) {
 

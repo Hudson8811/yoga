@@ -209,7 +209,9 @@ $(document).ready(function () {
 			}, 150);
 
 
-			$('.aos-init').removeClass('aos-init aos-animate');
+			$('.page--tabs-blocks .aos-init').removeClass('aos-init aos-animate');
+			$('.page--tabs-blocks ~ .aos-init, .kriya-science-main ~ .aos-init').removeClass('aos-init aos-animate');
+			$('.page--tabs-blocks + *, .kriya-science-main + *').find('.aos-init').removeClass('aos-init aos-animate');
 			setTimeout(function (){
 				AOS.init({
 					disable: function () {
