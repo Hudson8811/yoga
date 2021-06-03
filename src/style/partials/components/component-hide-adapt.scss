@@ -78,6 +78,10 @@
 
 		&--type-kspc-nl {
 			.kspc-twpah-unwrap {
+				left: auto;
+				right: 0;
+				width: auto;
+				padding-right: vw(58);
 			}
 		}
 
@@ -90,6 +94,16 @@
 		}
 
 		&--show-9 {
+
+			.kspc-twpah-unwrap {}
+		}
+
+		&--show-6-mob {
+			max-height: vw(24*6);
+
+			.kspc-twpah-unwrap {
+				top: vw(24*5);
+			}
 
 			.kspc-twpah-unwrap {}
 		}
@@ -121,6 +135,13 @@
 		&--show-2 {}
 
 		&--show-9 {}
+
+
+		&--show-6-mob {
+			.kspc-twpah-unwrap {
+				top: 33vw;
+			}
+		}
 	}
 
 
@@ -137,8 +158,17 @@
 		&--show-2 {}
 
 		&--show-9 {}
-	}
 
+
+		&--show-6-mob {
+
+			.kspc-twpah-unwrap {
+				top: 33vw;
+			}
+
+			.kspc-twpah-unwrap {}
+		}
+	}
 	/*	.kspc-twpah-unwrap {
 		top: 84.9vw;
 	}

@@ -122,7 +122,8 @@
 				&+p {
 					margin-top: 24px;
 				}
-				&+ul{
+
+				&+ul {
 					margin-top: 44px;
 				}
 			}
@@ -137,8 +138,10 @@
 			}
 		}
 
-		&+.kspc-simple-text,&+.simple-hr--only-desktop+.kspc-simple-text {
+		&+.kspc-simple-text,
+		&+.simple-hr--only-desktop+.kspc-simple-text {
 			margin-top: 79px;
+
 			&.kspc-simple-text--has-small-title {
 				margin-top: 79px;
 			}
@@ -229,14 +232,16 @@
 			margin-top: 76px;
 			//margin-top: 28px;
 		}
+
 		&+.kspc-media-wrap--has-title {
 			margin-top: 28px;
 		}
+
 		&+.get-materials-hr-before {
 			margin-top: 86px;
 		}
-		&--master {
 
+		&--master {
 
 			.kspc-twpah__pic {
 				margin-top: 8px;
@@ -646,8 +651,8 @@
 		}
 	}
 
-	.simple-hr{
-		&--only-desktop{
+	.simple-hr {
+		&--only-desktop {
 			display: none;
 		}
 	}
@@ -663,7 +668,7 @@
 		padding: vw(48) 0 vw(58);
 
 		&--type-home-lessons {
-			padding-top: 31px;
+			padding-top: vw(32);
 		}
 	}
 
@@ -719,6 +724,10 @@
 		&__small-title {
 			font-size: vw(15);
 			line-height: vw(24);
+
+			&+.kspc-simple-text__h2 {
+				margin-top: 0px;
+			}
 		}
 
 		&__h2 {
@@ -743,6 +752,10 @@
 				&+p {
 					margin-top: vw(24);
 				}
+
+				&+ul {
+					margin-top: vw(42);
+				}
 			}
 
 			b {}
@@ -751,16 +764,29 @@
 				&:first-child {
 					margin-top: vw(19);
 				}
+
+				&+p {
+					margin-top: vw(44);
+				}
 			}
 		}
 
-		&+.kspc-simple-text,&+.simple-hr--only-desktop+.kspc-simple-text  {
+		&+.kspc-simple-text,
+		&+.simple-hr--only-desktop+.kspc-simple-text {
 			margin-top: vw(78);
+
+			&.kspc-simple-text--has-small-title {
+				margin-top: vw(125);
+			}
 		}
 
 		&+.kspc-slider-block {
 
 			margin-top: vw(29);
+		}
+
+		&+.kspc-media-wrap {
+			margin-top: vw(51);
 		}
 
 		&--with-hide {
@@ -825,8 +851,11 @@
 
 		&--no-p-l {
 			li {
+				padding-left: vw(33);
 
-				&::before {}
+				&::before {
+					left: vw(14);
+				}
 			}
 		}
 	}
@@ -845,6 +874,11 @@
 		&+.kspc-media-wrap--has-title {
 			//margin-top: 28px;
 		}
+
+		&+.kspc-media-wrap--has-title {
+			margin-top: vw(110);
+		}
+
 		&--master {
 
 
@@ -920,6 +954,10 @@
 
 				&+p {
 					margin-top: vw(24);
+				}
+
+				&+ul {
+					margin-top: vw(21);
 				}
 			}
 		}
@@ -1043,7 +1081,7 @@
 	}
 
 	.kspc-media {
-		margin-top: vw(26);
+
 	}
 
 	.kspc-media-wrap--has-title {
@@ -1052,6 +1090,10 @@
 
 	.kspc-media-wrap+.kspc-simple-text--has-title {
 		margin-top: vw(88);
+	}
+
+	.kspc-media-wrap+.kspc-simple-text:not(.kspc-simple-text--has-title) {
+		margin-top: vw(24);
 	}
 
 	.kspc-media-wrap--has-label {

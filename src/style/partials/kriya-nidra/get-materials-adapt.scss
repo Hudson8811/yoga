@@ -42,14 +42,17 @@
 
 	.get-materials-title-big {
 		font-size: 24px;
-		line-height: 39px;}
+		line-height: 39px;
+	}
 
 	.get-materials-subtitle {
 		font-size: 15px;
 		line-height: 24px;
 		margin-top: 3px;
+
 		&+.get-materials-row {
-			margin-top: 30px;}
+			margin-top: 30px;
+		}
 	}
 
 
@@ -78,18 +81,30 @@
 
 @media screen and (max-width: 749px) {
 	.get-materials-hr-before {
-		&+.get-materials {
-			&--has-title-small {}
+		margin-top: vw(86);
 
-			&--has-title-big {}
+		&+.get-materials {
+			&--has-title-small {
+				margin-top: vw(51);
+			}
+
+			&--has-title-big {
+				margin-top: vw(51);
+			}
 
 		}
 	}
 
 	.get-materials-hr-after {
-		&+.kspc-simple-text--has-title {}
+		margin-top: vw(58);
 
-		&+.kspc-tags-and-share--after-quote-right {}
+		&+.kspc-simple-text--has-title {
+			margin-top: vw(85);
+		}
+
+		&+.kspc-tags-and-share--after-quote-right {
+			margin-top: vw(58);
+		}
 	}
 
 	.get-materials {
@@ -104,13 +119,29 @@
 
 	.get-materials-title-small {
 
-		&+.get-materials-row {}
+		font-weight: 600;
+		font-size: vw(15);
+		line-height: vw(24);
+
+		&+.get-materials-row {
+			margin-top: vw(29);
+		}
 	}
 
-	.get-materials-title-big {}
+	.get-materials-title-big {
+		font-weight: 600;
+		font-size: vw(15);
+		line-height: vw(24);
+	}
 
 	.get-materials-subtitle {
-		&+.get-materials-row {}
+		font-size: vw(15);
+		line-height: vw(24);
+		margin-top: vw(3);
+
+		&+.get-materials-row {
+			margin-top: vw(29);
+		}
 	}
 
 	.get-materials-row {

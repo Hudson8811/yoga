@@ -16,7 +16,9 @@
   @media screen and (max-width: 749px) {
     margin-top: vw(79);
 
-    &--type-home-lessons {}
+    &--type-home-lessons {
+      margin-top: vw(53);
+    }
   }
 }
 
@@ -101,6 +103,7 @@
         line-height: 30px;
         margin-top: vw(6);
         margin-bottom: vw(6);
+        align-self: flex-start;
       }
     }
   }
@@ -130,5 +133,8 @@
 
   }
 
-  @media screen and (max-width: 749px) {}
+  @media screen and (max-width: 749px) {
+
+  margin-top: vw(78);
+  }
 }

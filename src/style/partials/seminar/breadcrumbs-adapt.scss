@@ -21,6 +21,9 @@
 }
 
 @media screen and (max-width: 749px) {
+	.maslider-section+.breadcrumbs-wrap .breadcrumbs {
+		padding-top: vw(24);
+	}
 
 	.breadcrumbs-wrap {
 		&+.ksquote {
