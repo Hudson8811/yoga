@@ -617,6 +617,41 @@ function dataFancyInit() {
 		speed: 600,
 		transitionDuration: 700,
 		backFocus: false,
+		buttons: ['close'],
+		slideShow: {
+			autoStart: false,
+			speed: 3000
+		},
+		btnTpl: {
+			slideShow: '<button data-fancybox-play class="fancybox-custom-play-btn" title="Start slideshow"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="17.97" height="25.14" viewBox="0 0 17.97 25.14"><defs><style>.cls-1{fill:#afb4c0;}</style></defs><path class="cls-1" d="M432.53,438.85v23a1.08,1.08,0,0,0,1.71.87l15.82-11.5a1.08,1.08,0,0,0,0-1.74L434.24,438A1.07,1.07,0,0,0,432.53,438.85Z" transform="translate(-432.53 -437.77)"/></svg><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="16.04" height="26" viewBox="0 0 16.04 26"><defs><style>.cls-1{fill:#afb4c0;}</style></defs><path class="cls-1" d="M399.63,437.5a1,1,0,0,0-1,1v24a1,1,0,0,0,2,0v-24A1,1,0,0,0,399.63,437.5Z" transform="translate(-398.63 -437.5)"/><path class="cls-1" d="M413.67,437.5a1,1,0,0,0-1,1v24a1,1,0,0,0,2,0v-24A1,1,0,0,0,413.67,437.5Z" transform="translate(-398.63 -437.5)"/></svg></button>',
+			close: '<button data-fancybox-close class="custom-fancybox-close" title="{{CLOSE}}">' +
+				'<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.0205078" y="1.43506" width="2" height="36" rx="1" transform="rotate(-45 0.0205078 1.43506)" fill="#AFB4BF"/><rect x="1.43555" y="26.8909" width="2" height="36" rx="1" transform="rotate(-135 1.43555 26.8909)" fill="#AFB4BF"/></svg>' +
+				"</button>",
+			arrowLeft:
+				'<button data-fancybox-prev class="fancybox-custom-arrow fancybox-custom-arrow--prev" title="{{PREV}}">' +
+				'<div><svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5032 19.2759L3.69361 34.7587C3.40378 35.0633 3.02213 35.2537 2.61335 35.2977C2.20458 35.3416 1.79383 35.2365 1.45073 35.0001L1.18686 34.7587L0.955981 34.4828C0.763125 34.1819 0.660156 33.8278 0.660156 33.4656C0.660156 33.1034 0.763125 32.7493 0.955981 32.4484L1.18686 32.1725C1.25865 32.0745 1.34834 31.9925 1.45073 31.9311L13.5227 19.2759C13.838 18.9192 14.013 18.4513 14.013 17.9656C14.013 17.4799 13.838 17.012 13.5227 16.6552L1.45073 4.06904L1.18686 3.68973C0.94851 3.38256 0.818431 2.99906 0.818431 2.60352C0.818431 2.20799 0.94851 1.82449 1.18686 1.51732L1.41775 1.24146L1.68162 1.00008C1.97451 0.795481 2.31886 0.686279 2.67112 0.686279C3.02338 0.686279 3.36773 0.795481 3.66063 1.00008L3.9245 1.24146L17.5137 15.4139L18.7341 16.7242C19.0079 17.1026 19.1361 17.5746 19.0934 18.047C19.0506 18.5194 18.84 18.9579 18.5032 19.2759Z" fill="#AFB4BF"/></svg></div>' +
+				"</button>",
+
+
+			arrowRight:
+				'<button data-fancybox-next class="fancybox-custom-arrow fancybox-custom-arrow--next" title="{{NEXT}}">' +
+				'<div><svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5032 19.2759L3.69361 34.7587C3.40378 35.0633 3.02213 35.2537 2.61335 35.2977C2.20458 35.3416 1.79383 35.2365 1.45073 35.0001L1.18686 34.7587L0.955981 34.4828C0.763125 34.1819 0.660156 33.8278 0.660156 33.4656C0.660156 33.1034 0.763125 32.7493 0.955981 32.4484L1.18686 32.1725C1.25865 32.0745 1.34834 31.9925 1.45073 31.9311L13.5227 19.2759C13.838 18.9192 14.013 18.4513 14.013 17.9656C14.013 17.4799 13.838 17.012 13.5227 16.6552L1.45073 4.06904L1.18686 3.68973C0.94851 3.38256 0.818431 2.99906 0.818431 2.60352C0.818431 2.20799 0.94851 1.82449 1.18686 1.51732L1.41775 1.24146L1.68162 1.00008C1.97451 0.795481 2.31886 0.686279 2.67112 0.686279C3.02338 0.686279 3.36773 0.795481 3.66063 1.00008L3.9245 1.24146L17.5137 15.4139L18.7341 16.7242C19.0079 17.1026 19.1361 17.5746 19.0934 18.047C19.0506 18.5194 18.84 18.9579 18.5032 19.2759Z" fill="#AFB4BF"/></svg></div>' +
+				"</button>"
+		},
+		/*afterLoad: function (instance) {
+			if (instance.$trigger.attr('ho-sideshow') !== undefined) {
+				$('.fancybox-container').addClass('fancy-hide-sideshow');
+			}
+		},
+
+		afterClose: function (instance) {
+			$('.fancybox-container').removeClass('fancy-hide-sideshow');
+		}*/
+	});
+	$('[data-fancybox-with-slidehow]').fancybox({
+		speed: 600,
+		transitionDuration: 700,
+		backFocus: false,
 		buttons: ['slideShow', 'close'],
 		slideShow: {
 			autoStart: false,
@@ -637,6 +672,15 @@ function dataFancyInit() {
 				'<button data-fancybox-next class="fancybox-custom-arrow fancybox-custom-arrow--next" title="{{NEXT}}">' +
 				'<div><svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5032 19.2759L3.69361 34.7587C3.40378 35.0633 3.02213 35.2537 2.61335 35.2977C2.20458 35.3416 1.79383 35.2365 1.45073 35.0001L1.18686 34.7587L0.955981 34.4828C0.763125 34.1819 0.660156 33.8278 0.660156 33.4656C0.660156 33.1034 0.763125 32.7493 0.955981 32.4484L1.18686 32.1725C1.25865 32.0745 1.34834 31.9925 1.45073 31.9311L13.5227 19.2759C13.838 18.9192 14.013 18.4513 14.013 17.9656C14.013 17.4799 13.838 17.012 13.5227 16.6552L1.45073 4.06904L1.18686 3.68973C0.94851 3.38256 0.818431 2.99906 0.818431 2.60352C0.818431 2.20799 0.94851 1.82449 1.18686 1.51732L1.41775 1.24146L1.68162 1.00008C1.97451 0.795481 2.31886 0.686279 2.67112 0.686279C3.02338 0.686279 3.36773 0.795481 3.66063 1.00008L3.9245 1.24146L17.5137 15.4139L18.7341 16.7242C19.0079 17.1026 19.1361 17.5746 19.0934 18.047C19.0506 18.5194 18.84 18.9579 18.5032 19.2759Z" fill="#AFB4BF"/></svg></div>' +
 				"</button>"
+		},
+		afterLoad: function (instance) {
+			if (instance.$trigger.attr('ho-sideshow') !== undefined) {
+				$('.fancybox-container').addClass('fancy-hide-sideshow');
+			}
+		},
+
+		afterClose: function (instance) {
+			$('.fancybox-container').removeClass('fancy-hide-sideshow');
 		}
 	});
 }
@@ -1535,7 +1579,7 @@ $(document).ready(function () {
 				transitionDuration: 700,
 				backFocus: false,
 				loop: true,
-				buttons: ['slideShow', 'close'],
+				buttons: ['close'],
 				slideShow: {
 					autoStart: false,
 					speed: 3000

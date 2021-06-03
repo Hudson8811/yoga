@@ -86,7 +86,7 @@ $(document).ready(function () {
 				transitionDuration: 700,
 				backFocus: false,
 				loop: true,
-				buttons: ['slideShow', 'close'],
+				buttons: ['close'],
 				slideShow: {
 					autoStart: false,
 					speed: 3000
