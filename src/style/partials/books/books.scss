@@ -147,11 +147,12 @@
 		-webkit-mask-image: -webkit-radial-gradient(white, #000);
 
 
-		@include scalepic();
+		//@include scalepic();
 
 		img {
 			@include relative_img();
-			//background-size: contain;
+			object-fit: contain;
+			object-position: center center;
 		}
 
 		&::before {
