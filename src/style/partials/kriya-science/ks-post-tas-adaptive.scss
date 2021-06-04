@@ -2,10 +2,16 @@
 @media screen and (max-width:1150px) {
 	.kspc-tags-and-share {
 		margin-top: 52px;
+
 		&--after-quote-right {
 			margin-top: 24px;
 		}
+
+		&--last-in-container-and-before-photos {
+			margin-bottom: -85px;
+		}
 	}
+
 	.kspc-tas-flex {
 		display: block;
 	}
@@ -43,10 +49,16 @@
 @media screen and (max-width: 749px) {
 	.kspc-tags-and-share {
 		margin-top: vw(50);
+
+		&--last-in-container-and-before-photos {
+			margin-bottom: vw(-50);
+		}
 	}
+
 	.kspc-tags-and-share--after-quote-right {
 		margin-top: vw(21);
 	}
+
 	.kspc-tas-flex {}
 
 	.kspc-tas-tags {
@@ -58,7 +70,8 @@
 
 			padding: vw(10) vw(21) vw(10) vw(22);
 			color: $dark;
-			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: vw(5);
+			-webkit-mask-image: -webkit-radial-gradient(white, #000);
+			border-radius: vw(5);
 			font-size: vw(13);
 			font-weight: 400;
 			font-style: normal;
@@ -84,9 +97,11 @@
 				width: vw(36);
 				height: vw(36);
 				margin-left: vw(9);
-				svg{
+
+				svg {
 					height: auto;
 				}
+
 				&--vk {
 
 					svg {

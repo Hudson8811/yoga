@@ -9,6 +9,8 @@
 		&--after-tabs--hl {
 			padding-top: 14px;
 		}
+		&--first-books{
+		}
 
 
 	}
@@ -67,6 +69,10 @@
 			padding-top: vw(16);
 			padding-bottom: vw(51);
 		}
+		&--first-books{
+			padding-top: vw(49);
+			padding-bottom: vw(53);
+		}
 	}
 
 	.ksquote--after-tabs--hl{
@@ -116,7 +122,7 @@
 			/* or 160% */
 
 			margin: vw(19) auto 0;
-			width: vw(323);
+			width: 100%;
 			text-align: center;
 
 			/* Font_text_dark */

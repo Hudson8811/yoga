@@ -33,6 +33,7 @@ $(document).on('mobileinit', function () {
 //= partials/edu.js
 //= partials/validate.js
 //= partials/comments.js
+//= partials/books.js
 
 
 
