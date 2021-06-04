@@ -5,10 +5,14 @@
 		font-weight: 600;
 	}
 
-	&--type-home-lessons {
-		padding-top: 31px;
-	}
 }
+.kriya-science-main--training .ks-post-constructor.ks-post-constructor--type-home-lessons, .ks-post-constructor--type-home-lessons{
+	padding-top: 31px;
+
+}
+
+
+
 
 .kspc-h1-block {}
 
