@@ -64,6 +64,8 @@
 		line-height: 1.76;
 		color: #53565A;
 		margin-top: 9px;
+		overflow: hidden;
+		position: relative;
 		@media screen and (max-width:1150px) {
 			font-size: 15px;
 			line-height: 1.6;
