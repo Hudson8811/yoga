@@ -1,0 +1,63 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'catalog-events'
+		};
+
+
+block main
+	section.big-top-pic.big-top-pic--type-comments
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/catalog/big-bg.jpg" media="(max-width: 1150px)")
+					source(srcset="img/catalog/big-bg.jpg" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/catalog/big-bg.jpg")
+
+	section.subscribe#js-header-2
+		.container.subscribe__container
+			.subscribe__content
+				.subscribe__name Обучение
+				.subscribe__inner
+					img.subscribe__icon.js-share(src="img/icons/subscribe.svg" data-title="Имрам Видео" data-url="http://imram.q7.by/videos" data-picture="http://htmlbook.ru/files/images/samcss/fig15-3.png" data-description="В этом разделе мы представляем уникальные материалы. Каждая статья несет в себе личный Опыт Мастера Имрама. Здесь вы найдете множество ключей, подсказок и ответов на самые животрепещущие вопросы.")
+					a.subscribe__link(href="#") Подписаться
+
+
+	section.catalog-events
+		.container.container--ks-only-tab.catalog-events__container
+			.catalog-events__content
+				.catalog-events__item.ce-i.ce-i--big
+					.ce-i__left
+						.ce-i__title
+							a(href="") Лекция-практика «Пробуждение Кундалини»
+						.ce-i__info
+							span Запись
+							span 8 ноября 2020
+						.ce-i__text
+							p На лекции Мастер Имрам рассказывает о научном методе концентрации в Крийя йоге. Вы узнаете о мистическом канале Сушумна и о том, как направить энергию Ида и Пингала в этот трансцендентальный канал. А также о том, как закрепить своё сознание на уровне Аджна-чакры.
+							p Мы поговорим о науке Крийя и космическом Сознании. Вы узнаете, почему требуется именно научный подход для пробуждения Кундалини. Помимо этого, лекция включает в себя групповую медитацию с Мастером.
+						.ce-i__bottom
+							.ce-i__price Стоимость 1 000 рублей
+							.ce-i__link
+								a(href="") Смотреть
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-1.jpg" alt="")
+
+
+
+	section.hm-galery
+		.container.container--extra-long
+			.hm-galery__row
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo1.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo2.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo3.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo4.jpg")
+				a.hm-galery__white-box(href="#")
+					p Все<br/>фотографии
