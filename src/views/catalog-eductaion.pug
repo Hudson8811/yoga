@@ -1,0 +1,122 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'catalog-eductaion'
+		};
+
+
+block main
+	section.big-top-pic.big-top-pic--type-comments
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/catalog/big-bg.jpg" media="(max-width: 1150px)")
+					source(srcset="img/catalog/big-bg.jpg" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/catalog/big-bg.jpg")
+
+	section.subscribe#js-header-2
+		.container.subscribe__container
+			.subscribe__content
+				.subscribe__name Обучение
+				.subscribe__inner
+					img.subscribe__icon.js-share(src="img/icons/subscribe.svg" data-title="Имрам Видео" data-url="http://imram.q7.by/videos" data-picture="http://htmlbook.ru/files/images/samcss/fig15-3.png" data-description="В этом разделе мы представляем уникальные материалы. Каждая статья несет в себе личный Опыт Мастера Имрама. Здесь вы найдете множество ключей, подсказок и ответов на самые животрепещущие вопросы.")
+					a.subscribe__link(href="#") Подписаться
+
+
+	section.catalog-events
+		.container.container--ks-only-tab.catalog-events__container
+			.catalog-events__content
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="") Все курсы
+						.ce-i__text
+							p В разделе представлены два онлайн-курса: Крийя-нидра курс (техника глубокого расслабления) и Базовый курс медитации Крийя с Мастером Имрамом. Курсы доступны в записи.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-1.jpg" alt="")
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="")  Медитация для начинающих
+						.ce-i__text
+							p Вы узнаете, что такое медитация, правильное положение тела для медитации, как выбрать одежду для практики и как организовать личное пространство для медитации.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-2.jpg" alt="")
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="")  Медитация Крийя
+						.ce-i__text
+							p Мы узнаем для чего нужна медитация, что такое научная концентрация в Крийя йоге, как войти в медитацию и что означает имитация медитации.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-3.jpg" alt="")
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="")  Углубленная медитация
+						.ce-i__text
+							p В разделе затрагиваются глубокие философские аспекты медитации, мы узнаем о нашей Истинной природе и почему важен именно личный опыт практикующего.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-4.jpg" alt="")
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="")  Уроки для дома
+						.ce-i__text
+							p Данный раздел предназначен как для начинающих, так и очень продвинутых практиков.  Для тех, кто только соприкоснулся с Наукой Крийя и намерен регулярно медитировать. В течение 21 дня вы сможете медитировать под голос Мастера Имрама.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-5.jpg" alt="")
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="")  Еженедельная онлайн медитация
+						.ce-i__text
+							p Каждую субботу в 10 часов по московскому времени проводится групповая онлайн-медитация Крийя. Участники со всех уголков Земли объединяются в единое поле во имя гармонии, мира и покоя на нашей планете.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-6.jpg" alt="")
+				.catalog-events__item.ce-i
+					.ce-i__left
+						.ce-i__title
+							a(href="")  Страница отзывов
+						.ce-i__text
+							p Уникальная страница, в которой собраны тысячи отзывов участников Семинаров, Ретритов, Вебинаров, Всемирной медитации, Базового курса медитации, видео с экскурсий и многое другое.
+						.ce-i__link
+							a(href="") Подробнее
+					.ce-i__right
+						a.ce-i__img(href="")
+							img(src="img/catalog/e-item-7.jpg" alt="")
+
+
+	section.hm-galery
+		.container.container--extra-long
+			.hm-galery__row
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo1.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo2.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo3.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo4.jpg")
+				a.hm-galery__white-box(href="#")
+					p Все<br/>фотографии

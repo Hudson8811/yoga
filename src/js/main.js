@@ -34,6 +34,7 @@ $(document).on('mobileinit', function () {
 //= partials/validate.js
 //= partials/comments.js
 //= partials/books.js
+//= partials/catalog.js
 
 
 
