@@ -66,6 +66,9 @@
 		margin-top: 9px;
 		overflow: hidden;
 		position: relative;
+		&.maxed{
+			transition: max-height 10s ease;
+		}
 		@media screen and (max-width:1150px) {
 			font-size: 15px;
 			line-height: 1.6;
@@ -115,6 +118,30 @@
 					margin-top: 2px;
 				}
 			}
+		}
+	}
+	&__more{
+		display: block;
+		background: #ffffff;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		padding-right: 100px;
+		margin-top: 0;
+
+		@media screen and (max-width:1150px) {
+			padding-right: 100px;
+		}
+		@media screen and (max-width: 749px) {
+			width: 100%;
+			padding: 0;
+			span{
+				display: none;
+			}
+		}
+		a{
+			color: #afb4bf;
+			text-decoration: none;
 		}
 	}
 	&__link{
