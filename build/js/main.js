@@ -3017,7 +3017,7 @@ var tippySettings = {
 	//hideOnClick: false,
 	offset: [0, 15],
 	appendTo: () => document.body,
-	//moveTransition: 'transform 0.2s linear',
+	moveTransition: 'transform 0.2s linear 5s',
 	popperOptions: {
 		placement: 'bottom',
 		modifiers: [{
