@@ -167,7 +167,7 @@ $(document).ready(function () {
 			transitionDuration: 700,
 			backFocus: false,
 			loop: (group!==''?true:false),
-			buttons: ['close'],
+			buttons: group===''?['close']:["slideShow",'close'],
             index: group===''?false:$this.index('[data-fancybox-with-slideshow' + group + ']'),
 			slideShow: {
 				autoStart: false,
