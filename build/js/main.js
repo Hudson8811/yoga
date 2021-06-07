@@ -751,10 +751,8 @@ $(document).ready(function () {
 		e.preventDefault();
 		e.stopPropagation();
 
-		console.log('click');
 		var $this = $(this);
 		var group = $(this).attr('data-fancybox-with-slideshow');
-		console.log(group);
 
 		if (group !== undefined && group !== '') {
 			group = '="' + group + '"';
@@ -771,11 +769,7 @@ $(document).ready(function () {
 			itemsHrefs.push({
 				src: $(this).attr('href')
 			});
-		})
-		console.log($this.index(items));
-		console.log(group==='');
-		console.log(group!==''?itemsHrefs:[{'src' : $(this).attr('href')}]);
-		console.log('index='+$this.index('[data-fancybox-with-slideshow' + group + ']'));
+		});
 
 
 
@@ -786,7 +780,7 @@ $(document).ready(function () {
 			backFocus: false,
 			loop: (group!==''?true:false),
 			buttons: ['close'],
-            index: $this.index('[data-fancybox-with-slideshow' + group + ']'),
+            index: group===''?false:$this.index('[data-fancybox-with-slideshow' + group + ']'),
 			slideShow: {
 				autoStart: false,
 				speed: 3000
