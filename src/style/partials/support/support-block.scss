@@ -1,0 +1,105 @@
+.support-block {}
+
+.support-block__title {
+	text-align: center;
+}
+
+.support-block-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.support-block-card {
+	width: calc(50% - 19px);
+	margin-bottom: 88px;
+	text-align: center;
+
+	&__title {
+		font-size: 28px;
+		line-height: 28px;
+		color: $dark;
+		letter-spacing: -0.03em;
+	}
+
+	&__pic {}
+
+	&__desc-title {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 22px;
+		color: $dark;
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
+
+	&__desc {
+		font-size: 17px;
+		line-height: 30px;
+		color: $dark;
+		text-align: center;
+
+		p {
+			&+p {}
+		}
+	}
+
+	&__price-title {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 22px;
+		color: $dark;
+		text-align: center;
+		letter-spacing: -0.03em;
+	}
+
+	&__price-and-count {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+
+	&__count {}
+
+	&__price {
+		font-size: 17px;
+		line-height: 30px;
+		margin-left: 22px;
+		color: $dark;
+	}
+
+	&__btn {
+		margin-left: 22px;
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	img {}
+
+}
+
+.cnumber-input {
+	&__plus {}
+
+	&__minus {}
+
+	&__inp {}
+
+	.cnumber-input__inp {
+
+		/* Chrome, Safari, Edge, Opera */
+		&input::-webkit-outer-spin-button,
+		&input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Firefox */
+		&input[type=number] {
+			-moz-appearance: textfield;
+		}
+	}
+}
