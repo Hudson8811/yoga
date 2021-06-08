@@ -1282,16 +1282,19 @@ $(document).ready(function () {
 	if ($('.js-cnumber-input').length > 0) {
 		$('.js-cnumber-input__minus').click(function (e) {
 			e.preventDefault();
+			var singlePrice = parseInt($(this).closest('.support-block-card').attr('data-single-price'));
 			var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
 			var val = parseInt(inp.val());
 			inp.val(val > 1 ? val - 1 : 1);
-
+			$(this).closest('.support-block-card').find('.support-block-card__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
 		})
 		$('.js-cnumber-input__plus').click(function (e) {
 			e.preventDefault();
+			var singlePrice = parseInt($(this).closest('.support-block-card').attr('data-single-price'));
 			var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
 			var val = parseInt(inp.val());
 			inp.val(val + 1);
+			$(this).closest('.support-block-card').find('.support-block-card__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
 
 		})
 	}

@@ -45,7 +45,7 @@ section.ks-post-constructor.ks-post-constructor--support-page
 		.container.container--ks
 			h2.kspc-h2-style.support-block__title Выберите подходящий вариант
 			.support-block-row
-				.support-block-card
+				.support-block-card(data-single-price="800")
 					.support-block-card__title Комплект 1
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -60,10 +60,12 @@ section.ks-post-constructor.ks-post-constructor--support-page
 								.cnumber-input__center
 									input.cnumber-input__inp(type="number", name="" value="1")
 								.cnumber-input__plus.js-cnumber-input__plus
-						.support-block-card__price 800 рублей
+						.support-block-card__price
+							span 800
+							|  рублей
 					a.btn.support-block-card__btn(href="") Поддержать
 
-				.support-block-card
+				.support-block-card(data-single-price="1500")
 					.support-block-card__title Комплект 2
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -80,11 +82,13 @@ section.ks-post-constructor.ks-post-constructor--support-page
 								.cnumber-input__center
 									input.cnumber-input__inp(type="number", name="" value="1")
 								.cnumber-input__plus.js-cnumber-input__plus
-						.support-block-card__price 1 500 рублей
+						.support-block-card__price
+							span 1 500
+							|  рублей
 					a.btn.support-block-card__btn(href="") Поддержать
 
 
-				.support-block-card
+				.support-block-card(data-single-price="3000")
 					.support-block-card__title Комплект 3
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -102,10 +106,12 @@ section.ks-post-constructor.ks-post-constructor--support-page
 								.cnumber-input__center
 									input.cnumber-input__inp(type="number", name="" value="1")
 								.cnumber-input__plus.js-cnumber-input__plus
-						.support-block-card__price 3 000 рублей
+						.support-block-card__price
+							span 3 000
+							|  рублей
 					a.btn.support-block-card__btn(href="") Поддержать
 
-				.support-block-card
+				.support-block-card(data-single-price="9000")
 					.support-block-card__title Комплект 4
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -121,6 +127,8 @@ section.ks-post-constructor.ks-post-constructor--support-page
 								.cnumber-input__center
 									input.cnumber-input__inp(type="number", name="" value="1")
 								.cnumber-input__plus.js-cnumber-input__plus
-						.support-block-card__price 9 000 рублей
+						.support-block-card__price
+							span 9 000
+							|  рублей
 					a.btn.support-block-card__btn(href="") Поддержать
 
