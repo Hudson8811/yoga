@@ -94,9 +94,13 @@ $(document).ready(function () {
 
 		initCalcCE();
 
+		var windowWidthSave = $(window).width();
+
 		$(window).resize(function (){
-			removeCalcCE();
-			initCalcCE();
+			if ($(window).width() != windowWidthSave) {
+				removeCalcCE();
+				initCalcCE();
+			}
 		});
 
 		$(document).on('click','.ce-i__more',function (){
