@@ -757,8 +757,8 @@ $(document).ready(function () {
 		if (group !== undefined && group !== '') {
 			group = '="' + group + '"';
 		}
-		else{
-			group='';
+		else {
+			group = '';
 		}
 		var items = $('[data-fancybox-with-slideshow' + group + ']');
 
@@ -774,13 +774,13 @@ $(document).ready(function () {
 
 
 		//вызывается элемент галереи, соответствующий индексу слайда
-		$.fancybox.open(group!==''?itemsHrefs:([{'src' : $(this).attr('href')}]), {
+		$.fancybox.open(group !== '' ? itemsHrefs : ([{ 'src': $(this).attr('href') }]), {
 			speed: 600,
 			transitionDuration: 700,
 			backFocus: false,
-			loop: (group!==''?true:false),
-			buttons: group===''?['close']:["slideShow",'close'],
-            index: group===''?false:$this.index('[data-fancybox-with-slideshow' + group + ']'),
+			loop: (group !== '' ? true : false),
+			buttons: group === '' ? ['close'] : ["slideShow", 'close'],
+			index: group === '' ? false : $this.index('[data-fancybox-with-slideshow' + group + ']'),
 			slideShow: {
 				autoStart: false,
 				speed: 3000
@@ -803,7 +803,7 @@ $(document).ready(function () {
 					"</button>"
 			},
 			afterShow: function (instance, slide) {
-			//	instance.jumpTo($this.index('[data-fancybox-with-slideshow' + group + ']'), 0);
+				//	instance.jumpTo($this.index('[data-fancybox-with-slideshow' + group + ']'), 0);
 			},
 
 			afterShow: function (instance, slide) {
@@ -1276,6 +1276,41 @@ $(document).ready(function () {
 		anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 	});
+
+
+
+	if ($('.js-cnumber-input').length > 0) {
+		$('.js-cnumber-input__minus').click(function (e) {
+			e.preventDefault();
+			var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
+			var val = parseInt(inp.val());
+			inp.val(val > 1 ? val - 1 : 1);
+
+		})
+		$('.js-cnumber-input__plus').click(function (e) {
+			e.preventDefault();
+			var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
+			var val = parseInt(inp.val());
+			inp.val(val + 1);
+
+		})
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	setTimeout(function () {
 		AOS.refresh();
 	}, 2000);

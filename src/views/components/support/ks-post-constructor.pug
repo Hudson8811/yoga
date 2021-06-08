@@ -1,4 +1,4 @@
-section.ks-post-constructor
+section.ks-post-constructor.ks-post-constructor--support-page
 	.kspc-simple-text.kspc-simple-text--has-title
 		.container.container--ks
 			.kspc-simple-text__h2 Поддержите распространение знаний о Науке Крийя
@@ -39,8 +39,8 @@ section.ks-post-constructor
 				p Вы также можете сделать подарок для ваших друзей, родных, близких или просто подарите возможность просмотра другим.
 				p Чтобы это сделать, выберите комплект, которым вы хотели бы поделиться и введите колличество (например вы хотите подарить его 7-ми друзьям).<br> Благодарим за ваше участие и поддержку!
 
-
-
+	.container.container--ks.support-block-hr-before
+		.hr
 	.support-block
 		.container.container--ks
 			h2.kspc-h2-style.support-block__title Выберите подходящий вариант
@@ -55,11 +55,11 @@ section.ks-post-constructor
 					.support-block-card__price-title Стоимость и количество
 					.support-block-card__price-and-count
 						.support-block-card__count
-							.cnumber-input
-								.cnumber-input__plus
-								.cnumber-input__minus
+							.cnumber-input.js-cnumber-input
+								.cnumber-input__minus.js-cnumber-input__minus
+								.cnumber-input__center
 									input.cnumber-input__inp(type="number", name="" value="1")
-								.cnumber-input__inp
+								.cnumber-input__plus.js-cnumber-input__plus
 						.support-block-card__price 800 рублей
 					a.btn.support-block-card__btn(href="") Поддержать
 
@@ -70,15 +70,57 @@ section.ks-post-constructor
 					.support-block-card__desc-title Состав комплекта
 					.support-block-card__desc
 						p Лекция "Медитация это просто"
-						p Вебинар "Важность духовной практики в эту эпоху"
+						p Вебинар "Важность духовной практики<br class="dt dm"> в эту эпоху"
 
 					.support-block-card__price-title Стоимость и количество
 					.support-block-card__price-and-count
 						.support-block-card__count
-							.cnumber-input
-								.cnumber-input__plus
-								.cnumber-input__minus
+							.cnumber-input.js-cnumber-input
+								.cnumber-input__minus.js-cnumber-input__minus
+								.cnumber-input__center
 									input.cnumber-input__inp(type="number", name="" value="1")
-								.cnumber-input__inp
+								.cnumber-input__plus.js-cnumber-input__plus
 						.support-block-card__price 1 500 рублей
 					a.btn.support-block-card__btn(href="") Поддержать
+
+
+				.support-block-card
+					.support-block-card__title Комплект 3
+					.support-block-card__pic
+						img(src="img/gallery/photo1.jpg", alt="")
+					.support-block-card__desc-title Состав комплекта
+					.support-block-card__desc
+						p Лекция "Сила мысли и намерения"
+						p Вебинар "Как найти свой духовный путь и обрести спокойствие ума"
+						p Лекция "Алхимия тела"
+						p Лекция "Крийя - совершенный метод, ключи к&nbsp;самореализации"
+					.support-block-card__price-title Стоимость и количество
+					.support-block-card__price-and-count
+						.support-block-card__count
+							.cnumber-input.js-cnumber-input
+								.cnumber-input__minus.js-cnumber-input__minus
+								.cnumber-input__center
+									input.cnumber-input__inp(type="number", name="" value="1")
+								.cnumber-input__plus.js-cnumber-input__plus
+						.support-block-card__price 3 000 рублей
+					a.btn.support-block-card__btn(href="") Поддержать
+
+				.support-block-card
+					.support-block-card__title Комплект 4
+					.support-block-card__pic
+						img(src="img/gallery/photo1.jpg", alt="")
+					.support-block-card__desc-title Состав комплекта
+					.support-block-card__desc
+						p Погружение в Крийя - комплект<br class="dd dm"> из 12 вебинаров и лекций
+
+					.support-block-card__price-title Стоимость и количество
+					.support-block-card__price-and-count
+						.support-block-card__count
+							.cnumber-input.js-cnumber-input
+								.cnumber-input__minus.js-cnumber-input__minus
+								.cnumber-input__center
+									input.cnumber-input__inp(type="number", name="" value="1")
+								.cnumber-input__plus.js-cnumber-input__plus
+						.support-block-card__price 9 000 рублей
+					a.btn.support-block-card__btn(href="") Поддержать
+
