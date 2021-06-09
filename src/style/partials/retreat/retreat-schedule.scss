@@ -1,0 +1,204 @@
+.kspc-event+.retreat-schedule-section {
+	margin-top: 41px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 50px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(50);
+	}
+}
+
+.retreat-schedule-section {
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+
+	&+.hr-kspc-twpah-master-before {
+		margin-top: 87px;
+
+		@media screen and (max-width: 1150px) {
+			margin-top: 92px;
+		}
+
+
+		@media screen and (max-width: 749px) {
+			margin-top: vw(92);
+
+		}
+	}
+}
+
+.kspc-h2-style.retreat-schedule-title {
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.retreat-schedule {
+	position: relative;
+	z-index: 1;
+	margin-top: 17px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 100%;
+		position: absolute;
+		left: 128px;
+		top: 0;
+		z-index: 1;
+
+		background: #6974A9;
+		border-radius: 5px;
+
+		@media screen and (max-width: 1150px) {
+			left: 116px;
+		}
+
+		@media screen and (max-width: 749px) {
+			left: vw(88);
+		}
+	}
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 26px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(27);
+		padding-top: vw(3);
+		padding-bottom: vw(3);
+	}
+}
+
+.retreat-schedule-item {
+	position: relative;
+	z-index: 3;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 30px;
+	color: $dark;
+	display: flex;
+
+	@media screen and (max-width: 1150px) {
+		font-size: 15px;
+		line-height: 30px;
+	}
+
+	@media screen and (max-width: 749px) {
+		font-size: vw(15);
+		line-height: 8.4vw;
+	}
+
+	&+.retreat-schedule-item {
+		margin-top: 18px;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			margin-top: vw(18);
+		}
+	}
+
+	&:not(:first-child).retreat-schedule-item--has-date {
+		padding-top: 22px;
+		padding-bottom: 0;
+		margin-bottom: -2px;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			padding-top: vw(22);
+			padding-bottom: 0;
+			margin-bottom: vw(-2);
+		}
+	}
+
+	&__time {
+		text-align: right;
+		width: 102px;
+		max-width: 102px;
+
+		@media screen and (max-width: 1150px) {
+			max-width: 90px;
+			width: 100px;
+		}
+
+		@media screen and (max-width: 749px) {
+			max-width: vw(62);
+			width: vw(62);
+			min-width: vw(62);
+		}
+	}
+
+	&__dot {
+		align-self: flex-start;
+		display: block;
+		background: #25378D;
+		border-radius: 50px;
+		width: 9px;
+		min-width: 9px;
+		height: 9px;
+		margin: 0 22px 0;
+		margin-top: 11px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			width: vw(9);
+			min-width: vw(9);
+			height: vw(9);
+			margin: 0 vw(22) 0;
+			margin-top: vw(11);
+		}
+	}
+
+	&__info {
+		max-width: calc(100% - 155px);
+
+		@media screen and (max-width: 1150px) {
+			max-width: calc(100% - 145px);
+		}
+
+		@media screen and (max-width: 749px) {
+
+			max-width: 100%;
+		}
+	}
+
+	&__date {
+		text-transform: uppercase;
+		color: #25378D;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {}
+	}
+
+	&__title {
+		font-weight: 600;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {}
+	}
+
+	&__description {
+		@media screen and (max-width: 1150px) {
+			//letter-spacing: -0.01em;
+
+
+		}
+
+		@media screen and (max-width: 749px) {}
+	}
+
+
+}

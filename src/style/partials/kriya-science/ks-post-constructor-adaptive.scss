@@ -14,7 +14,8 @@
 
 	}
 
-	.kriya-science-main--training .ks-post-constructor.ks-post-constructor--type-home-lessons, .ks-post-constructor--type-home-lessons{
+	.kriya-science-main--training .ks-post-constructor.ks-post-constructor--type-home-lessons,
+	.ks-post-constructor--type-home-lessons {
 		padding-top: 31px;
 
 	}
@@ -243,9 +244,16 @@
 		}
 
 		&--master {
+			@media screen and (min-width: 750px) {
+				margin-bottom: 20px;
+			}
 
 			.kspc-twpah__pic {
 				margin-top: 8px;
+
+				@media screen and (min-width: 750px) {
+					margin-bottom: 20px;
+				}
 			}
 
 			.kspc-twpah__text {
@@ -670,7 +678,8 @@
 
 	}
 
-	.kriya-science-main--training .ks-post-constructor.ks-post-constructor--type-home-lessons, .ks-post-constructor--type-home-lessons{
+	.kriya-science-main--training .ks-post-constructor.ks-post-constructor--type-home-lessons,
+	.ks-post-constructor--type-home-lessons {
 		padding-top: vw(32);
 
 	}
@@ -1083,9 +1092,7 @@
 		color: $dark;
 	}
 
-	.kspc-media {
-
-	}
+	.kspc-media {}
 
 	.kspc-media-wrap--has-title {
 		margin-top: vw(78);
