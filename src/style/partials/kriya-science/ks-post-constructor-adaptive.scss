@@ -649,7 +649,9 @@
 			color: $dark;
 
 			p {
-				&+p {}
+				&+p {
+					margin-top: 24px;
+				}
 			}
 		}
 
