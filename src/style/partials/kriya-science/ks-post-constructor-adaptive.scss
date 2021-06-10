@@ -188,6 +188,54 @@
 					width: calc(100% - 169px);
 				}
 			}
+			&--show-6{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 24*11px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 24*10px;
+					right: 0;
+					padding-right: 50px;
+				}
+			}
+			&--show-7{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 24*11px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 24*10px;
+					right: 0;
+					width:calc(100% - 200px);
+				}
+			}
+			&--show-11{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 24*11px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 24*10px;
+					right: 0;
+					padding-right: 50px;
+				}
+			}
+			&--show-13{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 24*13px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 24*12px;
+					right: 0;
+					width:calc(100% - 400px);
+				}
+			}
 		}
 
 		&--open {
@@ -828,6 +876,54 @@
 					top: vw(24*16);
 					right: 0;
 					width: calc(100% - #{vw(169)});
+				}
+			}
+			&--show-6{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 30*11px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 30*10px;
+					right: 0;
+					padding-right: 50px;
+				}
+			}
+			&--show-7{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 30*11px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 30*10px;
+					right: 0;
+					width:calc(100% - 200px);
+				}
+			}
+			&--show-11{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 30*11px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 30*10px;
+					right: 0;
+					padding-right: 50px;
+				}
+			}
+			&--show-13{
+				//допилить адапт
+				.kspc-simple-text__p {
+					max-height: 30*13px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 30*12px;
+					right: 0;
+					width:calc(100% - 400px);
 				}
 			}
 

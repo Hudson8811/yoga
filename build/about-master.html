@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <!--include ../partials/css.html-->
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/iqz2zoz.css">
+    <script>
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      // We listen to the resize event
+      /*window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });*/
+    </script>
+    <!--title= `${page.title}`-->
+    <script>
+      my_songs = [{
+      		"name": "Казачья",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		"url": "img/song/track2.mp3",
+      		"cover_art_url": "img/mlinks/1.jpg",
+      		"orig_link": "https://itunes.com/1.mp3",
+      		"meta_duration": "2:55"
+      	}, {
+      		"name": "ASATO MA SAT GAMAYA",
+      		"artist": "Ever New Joy",
+      		"album": "Album Name",
+      		"url": "img/song/track1.mp3",
+      		"cover_art_url": "img/track1-cover.jpg",
+      		"orig_link": "https://itunes.com/2.mp3",
+      		"meta_duration": "3:17"
+      	},
+      	{
+      		"name": "Русская дорога.",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		"url": "img/song/track3.mp3",
+      		"cover_art_url": "img/mlinks/2.jpg",
+      		"orig_link": "https://itunes.com/3.mp3",
+      		"meta_duration": "3:00"
+      	}
+      ];
+      
+      my_songs_pseudo = [{
+      		"name": "Казачья",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track2.mp3",
+      		"cover_art_url": "img/mlinks/1.jpg",*/
+      		"orig_link": "https://itunes.com/1.mp3",
+      		"meta_duration": "2:55"
+      	}, {
+      		"name": "ASATO MA SAT GAMAYA",
+      		"artist": "Ever New Joy",
+      		"album": "Album Name",
+      		/*"url": "img/song/track1.mp3",
+      		"cover_art_url": "img/track1-cover.jpg",*/
+      		"orig_link": "https://itunes.com/2.mp3",
+      		"meta_duration": "3:17"
+      	},
+      	{
+      		"name": "Русская дорога",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track3.mp3",
+      		"cover_art_url": "img/mlinks/2.jpg",*/
+      		"orig_link": "https://itunes.com/3.mp3",
+      		"meta_duration": "3:00"
+      	}, {
+      		"name": "Казачья2",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track2.mp3",
+      		"cover_art_url": "img/mlinks/1.jpg",*/
+      		"orig_link": "https://itunes.com/1.mp3",
+      		"meta_duration": "2:55"
+      	}, {
+      		"name": "ASATO MA SAT GAMAY2",
+      		"artist": "Ever New Joy",
+      		"album": "Album Name",
+      		/*"url": "img/song/track1.mp3",
+      		"cover_art_url": "img/track1-cover.jpg",*/
+      		"orig_link": "https://itunes.com/2.mp3",
+      		"meta_duration": "3:17"
+      	},
+      	{
+      		"name": "Русская дорога2",
+      		"artist": "Игорь растеряев",
+      		"album": "Звонарь",
+      		/*"url": "img/song/track3.mp3",
+      		"cover_art_url": "img/mlinks/2.jpg",*/
+      		"orig_link": "https://itunes.com/3.mp3",
+      		"meta_duration": "3:00"
+      	}
+      ];
+      
+    </script>
+  </head>
+  <body>
+    <header class="site-header site-header--partial-static" id="site-header">
+      <div class="site-header__inner">
+        <div class="sh-left">
+          <div class="sh-burger-wrap sh-burger-wrap--main">
+            <div class="sh-burger"><span></span></div>
+          </div><a class="sh-logo" href=""><img src="img/sh-logo.svg" alt=""></a>
+        </div>
+        <div class="sh-center">
+          <ul class="sh-menu">
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Мероприятия</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">О Мастере</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Наука крийя</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Обучение</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Статьи</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Видео</a></li>
+            <li class="sh-menu-item"><a class="sh-menu-item__link" href="">Музыка</a></li>
+          </ul>
+        </div>
+        <div class="sh-right">
+          <div class="sh-lang-switcher"><a class="lang-switcher" href="">En</a></div>
+          <div class="sh-socials">
+            <div class="ssocials"><a class="ssocials-item" href=""><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 3.807a3.819 3.819 0 00-3.819 3.818 3.798 3.798 0 003.819 3.818 3.819 3.819 0 003.818-3.818c0-2.092-1.727-3.818-3.819-3.818zm0 6.308a2.487 2.487 0 01-2.49-2.49c0-1.361 1.095-2.457 2.49-2.457a2.451 2.451 0 012.457 2.457c0 1.395-1.096 2.49-2.457 2.49zm4.847-6.441a.893.893 0 00-.896-.897.893.893 0 00-.897.897c0 .498.399.896.897.896a.893.893 0 00.896-.896zm2.524.896c-.067-1.195-.332-2.258-1.196-3.12C13.75.585 12.688.32 11.493.253c-1.23-.067-4.915-.067-6.143 0C4.154.32 3.125.586 2.229 1.449c-.864.863-1.13 1.926-1.196 3.121-.066 1.229-.066 4.914 0 6.143.067 1.195.332 2.225 1.196 3.121.896.863 1.925 1.129 3.12 1.195 1.23.067 4.915.067 6.143 0 1.195-.066 2.258-.332 3.121-1.195.864-.896 1.13-1.926 1.196-3.121.066-1.229.066-4.914 0-6.143zm-1.594 7.438c-.233.664-.764 1.162-1.395 1.428-.996.398-3.32.298-4.383.298-1.095 0-3.42.1-4.382-.299a2.517 2.517 0 01-1.428-1.427c-.398-.963-.299-3.287-.299-4.383 0-1.063-.1-3.387.299-4.383a2.561 2.561 0 011.428-1.394c.963-.399 3.287-.3 4.383-.3 1.062 0 3.386-.099 4.382.3.631.232 1.13.763 1.395 1.394.398.996.299 3.32.299 4.383 0 1.096.1 3.42-.3 4.383z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="12" viewbox="0 0 17 12"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.084 2.537a1.993 1.993 0 00-1.406-1.435C13.418.75 8.438.75 8.438.75s-5.01 0-6.27.352A1.993 1.993 0 00.762 2.537C.41 3.767.41 6.404.41 6.404s0 2.608.352 3.867c.175.704.732 1.231 1.406 1.407 1.26.322 6.27.322 6.27.322s4.98 0 6.24-.322a1.954 1.954 0 001.406-1.407c.352-1.26.352-3.867.352-3.867s0-2.636-.352-3.867zm-9.287 6.24V4.031l4.16 2.373-4.16 2.373z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="11" viewbox="0 0 17 11"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.967 1.332c.088-.352 0-.645-.527-.645h-1.73c-.439 0-.644.235-.76.499 0 0-.88 2.138-2.11 3.544-.41.381-.586.528-.82.528-.088 0-.264-.147-.264-.498V1.332c0-.44-.117-.645-.498-.645H6.563c-.293 0-.44.206-.44.41 0 .41.615.499.674 1.67v2.55c0 .556-.088.673-.322.673-.586 0-1.993-2.168-2.842-4.629C3.457.893 3.28.688 2.842.688H1.113c-.468 0-.586.234-.586.498 0 .468.586 2.724 2.725 5.742 1.436 2.05 3.457 3.135 5.273 3.135 1.084 0 1.23-.235 1.23-.645 0-1.963-.087-2.168.44-2.168.264 0 .703.146 1.729 1.143 1.172 1.171 1.377 1.67 2.021 1.67h1.729c.498 0 .732-.235.586-.733-.323-.996-2.52-3.105-2.637-3.252-.264-.322-.176-.469 0-.762 0 0 2.11-2.988 2.344-3.984z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1953 1.45703C13.3594 0.691406 12.9219 0.390625 12.4297 0.582031L1.54688 4.76562C0.808594 5.06641 0.835938 5.47656 1.4375 5.66797L4.19922 6.51562L10.6523 2.46875C10.9531 2.25 11.2539 2.38672 11.0078 2.57812L5.78516 7.28125L5.59375 10.1523C5.89453 10.1523 6.00391 10.043 6.16797 9.87891L7.50781 8.56641L10.3242 10.6445C10.8438 10.9453 11.2266 10.7812 11.3633 10.1797L13.1953 1.45703Z" fill="#6974A9"/></svg>
+</a></div>
+          </div>
+          <div class="sh-burger-wrap-right">
+            <div class="sh-burger"><span></span></div>
+          </div>
+          <div class="sh-authorize"><a class="sh-authorize__link" href=""><span>Вход</span>
+              <!--|  <svg width="10" height="12" viewbox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.096 3.968A4.013 4.013 0 002.242 6.77 3.883 3.883 0 005 7.935 3.883 3.883 0 007.756 6.77a4.013 4.013 0 001.147-2.802 4.013 4.013 0 00-1.147-2.802A3.883 3.883 0 005 0a3.883 3.883 0 00-2.757 1.166 4.013 4.013 0 00-1.146 2.802zm6.888 0a3.069 3.069 0 01-.877 2.142A2.97 2.97 0 015 7.002a2.97 2.97 0 01-2.108-.892 3.069 3.069 0 01-.877-2.142 3.069 3.069 0 01.877-2.143A2.97 2.97 0 015 .934a2.97 2.97 0 012.108.891c.56.568.875 1.339.877 2.143zM.13 11.86a.456.456 0 00.63.026A6.305 6.305 0 015 10.269a6.305 6.305 0 014.233 1.617.454.454 0 00.63-.026.468.468 0 00.093-.525.467.467 0 00-.11-.152 7.28 7.28 0 00-9.694 0 .467.467 0 00-.12.52.468.468 0 00.103.157H.13z" fill="#25378D"/></svg>--> <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M5.49822 8.49905C6.35813 8.49905 7.19874 8.24982 7.91374 7.78288C8.62874 7.31593 9.18601 6.65225 9.51508 5.87575C9.84416 5.09925 9.93026 4.24481 9.7625 3.42049C9.59474 2.59616 9.18065 1.83897 8.57259 1.24466C7.96454 0.650352 7.18983 0.245624 6.34644 0.0816553C5.50304 -0.0823135 4.62884 0.00184123 3.83438 0.323478C3.03991 0.645114 2.36088 1.18979 1.88313 1.88862C1.40539 2.58745 1.15039 3.40905 1.15039 4.24953C1.15642 5.37516 1.61677 6.45298 2.43136 7.24871C3.24595 8.04444 4.34896 8.49378 5.50063 8.49905H5.49822ZM5.49822 7.08254C4.92494 7.08254 4.36453 6.91639 3.88787 6.60509C3.4112 6.2938 3.03969 5.85134 2.8203 5.33367C2.60092 4.81601 2.54352 4.24638 2.65536 3.69683C2.7672 3.14728 3.04326 2.64249 3.44863 2.24628C3.854 1.85008 4.37047 1.58026 4.93274 1.47095C5.495 1.36163 6.0778 1.41774 6.60744 1.63216C7.13708 1.84658 7.58978 2.2097 7.90827 2.67559C8.22677 3.14147 8.39677 3.68921 8.39677 4.24953C8.39234 4.99914 8.08586 5.71686 7.54376 6.24715C7.00165 6.77744 6.26759 7.07759 5.50063 7.08254H5.49822Z" fill="#25378D"/><path d="M10.7583 11.7594C9.30512 10.5172 7.44006 9.83263 5.50951 9.83292H5.49018C3.55848 9.83271 1.69243 10.5181 0.23897 11.7617C0.151029 11.8394 0.0839046 11.9369 0.0434778 12.0457C0.00305111 12.1546 -0.00944433 12.2715 0.00708616 12.3862C0.0618064 12.5246 0.128051 12.6585 0.205154 12.7863C0.267834 12.8597 0.347564 12.9174 0.437692 12.9546C0.527821 12.9918 0.625736 13.0073 0.72327 13C0.900757 13.0016 1.07266 12.9394 1.20636 12.8253C2.38521 11.8094 3.90289 11.2491 5.47448 11.2494H5.53245C7.10462 11.2491 8.6228 11.8099 9.80178 12.8265C9.93378 12.9385 10.1028 13.0002 10.2776 13C10.4212 13.0001 10.5617 12.9585 10.681 12.8805C10.8004 12.8024 10.8934 12.6915 10.9481 12.5617C11.0029 12.4319 11.0169 12.2892 10.9885 12.1516C10.9601 12.014 10.8905 11.8877 10.7885 11.7889L10.7583 11.7594Z" fill="#25378D"/></g><defs><clipPath id="clip0"><rect width="11" height="13" fill="white"/></clipPath></defs></svg></a></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="kriya-science-main">
+        <section class="big-top-pic">
+          <div class="big-top-pic__container">
+            <div class="big-top-pic__relative">
+              <picture>
+                <source srcset="img/DEE6E9.png" media="(max-width: 1150px)">
+                <source srcset="img/DEE6E9.png" media="(max-width: 749px)"><img class="big-top-pic__img" src="img/DEE6E9.png">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="ksquote ksquote--first-books">
+          <!--маленький шрифт на планшете-->
+          <div class="container container--ksquote-wide">
+            <!--широкий контейнер-->
+            <div class="ksquote-content">
+              <h2 class="ksquote-content__title">По истине Крийя есть величайший способ<br class="dd dt"> приближения к Бесконечному...</h2>
+              <div class="ksquote-content-description">
+                <div class="ksquote-content-description__desk">Имрам - Мастер Крийя, передает знания Крийя йоги, даруя личный <br class="dt"> Опыт «прозрения», йог-сиддх (санскр. सिद्धिः, <br class="dd"> siddhi: «полностью <br class="dt">  завершенные, освобожденные при жизни»), Мистик, <br class="dt">  меняющий реальность, а также<br class="dd">  композитор,  <br class="dt"> музыкант, мультиинструменталист.</div>
+                <div class="ksquote-content-description__mob">Имрам - Мастер Крийя, передает знания Крийя йоги, даруя личный Опыт «прозрения», йог-сиддх (санскр. सिद्धिः, siddhi: «полностью завершенные, освобожденные при жизни»), Мистик, меняющий реальность, а также  композитор, музыкант, мультиинструменталист.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container container--ks-only-tab">
+          <div class="hr"></div>
+        </div>
+        <section class="ks-post-constructor">
+          <div class="kspc-h1-block">
+            <div class="container container--ks">
+              <h1 class="kspc-h1">О Мастере</h1>
+            </div>
+          </div>
+          <div class="kspc-media-wrap">
+            <div class="container container--ks"><a class="kspc-media kspc-media--video" href="https://www.youtube.com/embed/tf3wfU6QeG8" data-fancybox><img class="kspc-media-preview" src="img/0000FF.png" alt=""></a></div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--has-title">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__h2">Начало Пути. Детство. Юношество.</div>
+              <div class="kspc-simple-text__p custom-ul">
+                <!--.custom-ul--grey-dots.custom-ul--no-p-l-->
+                <p>Имрам родился на Кавказе в семье учителей. В возрасте двух лет Имрам начал самостоятельно проявлять активный интерес к музыке. Он интуитивно учился играть на разных музыкальных инструментах.</p>
+                <p>Помимо творчества, интересовался и точными науками. В детстве часами проводил алхимические эксперименты с пробирками и реактивами, проявлял  некоторые не ординарные способности….</p>
+                <p>Одной из важнейших вех в жизни Имрама можно считать изучение философии Дао, индуизма , западной концепции магизма ( Теургии) , увлечение боевыми искусствами ( мистической практикой  алхимии тела).</p>
+                <p>Вскоре, осознав единство всех религий и направлений - Имрам, сохраняя уважение ко всем конфессиям встал на Путь святой Науки … на единственно верный , универсальный Путь  - Путь Трансформации Со-Знания через Йогу Высокого Пути!</p>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-media-wrap">
+            <div class="container container--ks"><a class="kspc-media kspc-media--video" href="https://www.youtube.com/embed/tf3wfU6QeG8" data-fancybox><img class="kspc-media-preview" src="img/0000FF.png" alt=""></a></div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--with-hide kspc-simple-text--with-hide--show-11">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__p custom-ul">
+                <p>Еще  в юные годы Имрам посещал разные сакральные места. В последствии Он много времени провел в Индии, гималайских горах, выполняя садхану (санскр.: Sādhanā, साधना «духовная йогическая практика»), достаточно долгое время находился в аскезах, изучал санскрит, Веды с их законами.</p>
+                <p>На своем пути он встречался с представителями разных конфессий. Имрам напрямую общался с гималайскими мудрецами, просветленными Мастерами, с аватаром Шри Сатья Саи Бабой, Махаватаром Бабаджи (учителем Лахири Махасайя), от которого получил посвящение в Святую Науку Крийя, а также, с без-смертным учеником Бабаджи в лесах Джайпура (на момент встречи ему было 1900 лет), с Кармапа Буддой XVII, Его Святейшеством Далай Ламой XIV, который дал ему несколько инициаций.</p>
+                <p>В 2008 году Имрам образовал Гуру Санкальпа (Договор о духовном сотрудничестве Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam culpa voluptatibus rem rerum perferendis et vel repellat cum enim dolorem adipisci, facilis quia, placeat voluptate similique consequuntur beatae. Nobis repellendus iusto incidunt pariatur totam quam ut eveniet nisi dolorum id?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos nihil doloremque dicta amet quod consectetur aliquid provident totam ex nesciunt facere officiis animi assumenda nulla atque, dolorem dolores tenetur molestiae recusandae inventore quisquam. Quos officiis animi veritatis iste ipsum quo velit vel aspernatur quidem sit. Voluptatibus nihil tempora repellat possimus veritatis perspiciatis quaerat ratione mollitia, veniam ducimus iusto voluptatem quae eos nesciunt amet harum ex odio error alias eum nostrum? Omnis placeat, iusto nemo eius obcaecati dolorum earum nisi repellendus expedita necessitatibus inventore? Voluptatibus sint quod facilis sapiente dolorum blanditiis fuga eligendi distinctio. Sunt beatae numquam laborum sapiente minima.</p>
+                <div class="kspc-twpah-unwrap js-simple-text-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="dedication-hr-before container container--ks">
+            <div class="hr"></div>
+          </div>
+          <div class="dedication">
+            <div class="container container--ks">
+              <h2 class="kspc-h2-style dedication-h2">Посвящение в Святую Науку Крийя</h2>
+              <div class="dedication-flex">
+                <div class="dedication-flex__text">
+                  <p><b>Махаватар Бабаджи материализовал Своё безсмертное тело</b> и дал святое благословение (инициация, посвящение) Имраму в Крийя в 2002 году, когда Имрам находился в аскезе, в горах Кавказа.</p>
+                  <p>В 2003 году Бхагаван Шри Сатья Саи Баба <br>  передал Имраму Щактипат, и в последствии благословил его на работу в миру ….</p>
+                  <p>С 2004 года  по сей день - Имрам сам инициировал несколько десятков тысяч человек в святую науку Крийя.</p>
+                  <div class="dedication__more read-more">Подробнее</div>
+                </div>
+                <div class="dedication-flex__pic"><img src="img/Babaji-transparent-1.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="dedication-hr-after container container--ks">
+            <div class="hr"></div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--has-title">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__h2">Встреча с Бабаджи</div>
+              <div class="kspc-simple-text__p custom-ul">
+                <!--.custom-ul--grey-dots.custom-ul--no-p-l-->
+                <p>«Многие годы я практиковал садхану, духовную практику, это была очень суровая аскеза, это были очень тяжелые практики, пранаямы, сложные техники йоги . Я всё время ощущал, что мне не достает чего то очень Важного, то есть многое умеешь, но нет успокоенности Души.</p>
+                <p>Я молился день и ночь, чтобы у меня появилась возможность, всё-таки в этой жизни, получить инициацию в супертехнику Крийя Бабаджи. Потому что я знал, что это именно та система, которую я помню из прошлых инкарнаций, и в которой мне нужно пройти весь путь до конца, достигнув полного освобождения при жизни с целью помощи миру ...</p>
+                <p>«Быть в миру, но быть не от мира сего»... (Вознесенный Мастер Иисус)</p>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-slider-block">
+            <div class="container container--ks">
+              <div class="kspc-slider js-kspc-slider custom-dots">
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=1"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=1" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=2"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=2" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=3"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=3" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=4"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=4" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=5"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=5" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--with-hide kspc-simple-text--with-hide--show-6">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__p custom-ul">
+                <p>В 2002 году я , со своим соратником  уехал в горы Кавказа. Это была зима, февраль, и там, в ущелье  мы находились в практике -аскезе , в достаточно суровых условиях. Еда уже заканчивалась, оставалось небольшое её количество. Мы выполняли особые пранаямы и у нас была маленькая книжка, которая называется «Традиции 18 Сиддхов», её написал Маршалл Говиндан.</p>
+                <p>Мы благодарны ему, и всем, кто пишет духовные книги и тем самым вдохновляют людей Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam minus expedita fugit voluptate! Deleniti placeat quasi sequi ex ullam quidem doloribus nobis nulla magnam ea unde voluptas reiciendis adipisci, voluptate totam consequatur reprehenderit illo. Sunt repellat vero, totam odio quibusdam tenetur perspiciatis maxime deleniti in quas possimus harum quasi officiis ut. Eum omnis itaque, mollitia quasi, neque debitis provident accusantium expedita accusamus sequi sunt, fugiat esse voluptas dicta nobis. Neque autem nisi eius harum dolorem, accusantium illum obcaecati voluptates repellendus impedit dolor non minima modi, sapiente animi. Expedita possimus sint voluptatibus nulla, veritatis optio aspernatur.</p>
+                <p>Dignissimos incidunt, eaque vero deleniti fuga recusandae, ab explicabo quidem pariatur perspiciatis iusto. Repudiandae possimus reiciendis molestias beatae reprehenderit! Accusamus quo delectus facilis nisi aliquam aut temporibus exercitationem repellat nostrum libero tempore cupiditate aliquid eveniet ipsum porro, repellendus explicabo esse rerum numquam debitis in necessitatibus dolore! Dolor consectetur quam magnam perferendis voluptate voluptates perspiciatis ipsam neque, molestiae vero ea nam mollitia nihil aspernatur aperiam iste officiis consequuntur ab eligendi. Sit similique tempora vel voluptas totam labore obcaecati pariatur veritatis quis at. Fugiat voluptate eaque cum dolor voluptates sunt ipsum fuga, qui ullam ducimus dolorum consequatur odit voluptas laboriosam aut commodi sed. Minima, placeat incidunt?</p>
+                <div class="kspc-twpah-unwrap js-simple-text-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--has-title">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__h2">Основа Духовной практики</div>
+              <div class="kspc-simple-text__p custom-ul">
+                <!--.custom-ul--grey-dots.custom-ul--no-p-l-->
+                <p>В основе философии и духовных практик Имрама лежит личный опыт и глубокое осознание принципа единства всего сущего. Все в мире взаимосвязано и есть Тот, Кто является Объединяющим началом  всего проявленного мироздания….</p>
+                <p>В этом мире мы можем понять это через проникающую силу сознания и открытость Духовного Сердца. Говоря привычным языком, эта Вселенная неразрывно связана с человеческим существом, его психологией и «телесным храмом» , считает Имрам. Изначально вся наша действительность — это психофизическая трансформация Света и Звука, творящих мир…. Так зарождался  мир…</p>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-text-with-pic-and-hide">
+            <div class="container container--ks">
+              <div class="kspc-twpah kspc-twpah--pic-left">
+                <div class="kspc-twpah__pic"><img src="img/DEE6E9.png" alt=""></div>
+                <!--.kspc-twpah__delimiter-->
+                <div class="kspc-twpah__text">
+                  <p>Имрам нередко подчеркивает, что не является религиозным, но всецело духовным человеком. Имрам не относит себя к какой-то религиозной конфессии, культу.</p>
+                  <p>Он говорит о космическом законе Вселенной, принципе «недвойственности» и формулу своей жизни определяет словами величайшего проявления мудрости в нашей жизни, Сатья Саи Бабы: «Есть только одна религия — это любовь.</p>
+                  <p>Существует только один язык, и это язык сердца. Существует только одна раса — это человечество. И существует только один Бог, и он Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugiat quia, aperiam, autem ducimus ratione tempore dicta sequi perspiciatis excepturi laborum quod ut odio harum consectetur deserunt omnis nobis magnam hic laboriosam nisi maiores illo inventore assumenda? Commodi quis id, ullam dignissimos quae earum vitae animi saepe soluta magni libero quia iusto modi eius delectus, exercitationem quas?</p>
+                  <p>Et aperiam voluptates eveniet porro totam doloremque laudantium repudiandae, explicabo, ipsam qui tempore impedit. Esse enim porro doloremque eum necessitatibus vitae est error sequi vel suscipit soluta eligendi neque, voluptas blanditiis molestiae cupiditate voluptates. Provident accusantium dolores nostrum at aut ullam recusandae voluptas? Sequi ipsam molestias totam et nam ratione! Delectus porro facilis, explicabo doloribus dolores ducimus possimus dignissimos eum! Quasi consectetur quam id libero atque dolor nisi expedita, praesentium, illum officia tenetur inventore earum non dignissimos cum? Pariatur doloremque modi sed non, officiis, vero perspiciatis et alias dolorem iusto molestiae nulla ipsum?</p>
+                  <div class="kspc-twpah-unwrap js-kspc-twpah-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-with-parallax quote-with-parallax--type-music js-jarallax-1" style="background-image:url(img/quotes-bg-new.jpg);">
+            <div class="container container--ks container--qwp">
+              <div class="quote-with-parallax-quote">
+                <!--.quote-with-parallax-quote--mob-wide.quote-with-parallax-quote--mob-alternate-pt-pb--><span>Счастливый человек - тот, кто находится в состоянии "Здесь и Сейчас"<br class="dd"> и имеет прямую связь со своим Высшим Я</span>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--has-title">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__h2">Метод прямой передачи</div>
+              <div class="kspc-simple-text__p custom-ul">
+                <!--.custom-ul--grey-dots.custom-ul--no-p-l-->
+                <p>Имрам представляет традицию Крийя йоги, которая впервые была дана безсмертным гималайским святым Махааватаром Бабаджи (учителем Лахири Махасайи) и передана через несколько линий учителей.Бабаджи инициировал (посвятил) Имрама в Крийя в 2002 году, а с 2003 года, с благословения Шри Сатья Саи Бабы, Имрам сам инициировал несколько десятков тысяч человек.</p>
+                <p>Осознавая особенности нашего времени и необходимость социализации науки Крийя, Мастер Имрам, путём прямой передачи инициирует в Крийя, передавая уникальный метод, доступный для всех возрастных групп и не требующий специальной физической или психологической подготовки. Его формула йоги такова:<b> Знание + духовное практикование = Мудрость космического сознания.</b></p>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-text-with-pic-and-hide">
+            <div class="container container--ks">
+              <div class="kspc-twpah kspc-twpah--small-dist kspc-twpah--pic-right">
+                <div class="kspc-twpah__pic"><img src="img/DEE6E9.png" alt=""></div>
+                <!--.kspc-twpah__delimiter-->
+                <div class="kspc-twpah__text">
+                  <p>В настоящее время Мастер Имрам проводит посвящение и инициацию в Крийя по всему миру. Он проводит открытые двухдневные Семинары.</p>
+                  <p>На семинарах Имрама в удобной и понятной форме люди обучаются особым секретным техникам , куда входят дыхательным и медитативным практики  с обязательным разъяснением «Сути» всех техник Крийя с точки зрения науки, психологии и духовности.</p>
+                  <p>В дальнейшем, получив все необходимые знания и понимая суть показанных техник, участники Семинара могут самостоятельно. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam corrupti adipisci illum architecto, quidem vel qui deserunt eius vitae perspiciatis odio fuga ullam aliquid impedit dicta. Inventore impedit illo rerum quae nesciunt quisquam ipsum cupiditate sunt fugiat reiciendis sint in, sit repellat esse enim illum laborum officiis ex voluptates corporis mollitia perspiciatis blanditiis? Eligendi ab nostrum aspernatur, nesciunt blanditiis expedita!</p>
+                  <p>Consectetur vitae tempora, dolores nostrum quae earum, architecto expedita necessitatibus doloribus, fuga nisi? Numquam quisquam modi consequuntur aut rem accusantium inventore velit quasi dolore debitis laborum explicabo atque deserunt, porro eos totam excepturi ut illum ipsa voluptate, nisi omnis molestiae vero impedit. Eveniet pariatur ab corporis autem explicabo laudantium recusandae impedit ipsum eius tempore, omnis rerum aspernatur voluptatem, quidem beatae! Nemo rerum quia animi maiores tenetur, quod corrupti incidunt dicta.</p>
+                  <p>Sit fugit ea dolores reiciendis ut explicabo saepe. Facere rem in a maxime eius suscipit, exercitationem porro ipsa nemo sed nihil excepturi odio quas dolore.</p>
+                  <div class="kspc-twpah-unwrap js-kspc-twpah-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--has-title kspc-simple-text--with-hide kspc-simple-text--with-hide--show-13">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__h2">Ответственность</div>
+              <div class="kspc-simple-text__p custom-ul">
+                <!--.custom-ul--grey-dots.custom-ul--no-p-l-->
+                <p><b>Если б молодость знала, а старость могла…</b><br> Этой всем известной фразой Я начинаю наше путешествие в мир, который остается невидимым на протяжении многих жизней.</p>
+                <p>Само понятие ответственности, присутствующее в нашей жизни, рассматривается только социально. Однако мир, который Вы видите и ощущаете, не ограничивается только материально-социальным планом. Есть то, что всегда творит эту жизнь, всецело пронизывая собой все пространство бытия. Из этого первоисточника исходит постоянный безвременный безграничный поток света, мудрости и любви ко всему творению.</p>
+                <p>Пребывая в великом служении, проявляя высшую заботу обо всем, этот первоисточник в абсолютной осознанности Себя, несет ответственность за все творение создателя, в котором Сам и пребывает… Он есть один, проявленный во многом! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quae maxime earum, dolorum, laborum blanditiis tempora esse deleniti magni non corporis hic et neque aspernatur aperiam odio nemo eos illo debitis perferendis? Reiciendis quo dignissimos recusandae fugiat dicta eos velit, necessitatibus esse atque odio natus, saepe, iure sit assumenda perspiciatis porro eligendi eaque aliquid tempora. Eveniet, sapiente id. Aliquam eius at minima magnam dicta tenetur veritatis eos quis. Itaque ab voluptate iure tempora numquam eum reprehenderit ducimus provident, ut, amet optio fugit odio commodi debitis, necessitatibus vitae enim recusandae inventore nisi ipsa ipsum modi soluta corporis in? Illo, necessitatibus ab, nihil facilis laudantium consectetur itaque rerum amet aut porro labore, impedit asperiores voluptas accusamus facere reiciendis? Architecto fugit perferendis voluptatum optio dolorem consectetur eligendi odit eum aliquid qui. Voluptates quod aspernatur recusandae officia tenetur, deserunt, rerum laboriosam ea eum ullam praesentium beatae consequuntur et ducimus illum fuga, sit vitae aliquid.</p>
+                <div class="kspc-twpah-unwrap js-simple-text-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-slider-block">
+            <div class="container container--ks">
+              <div class="kspc-slider js-kspc-slider custom-dots">
+                <div class="kspc-slider-item kspc-slider-item--video video-effect video-effect--non-hide-play-btn js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=1"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=1" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=2"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=2" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=3"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=3" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=4"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=4" alt=""></div>
+                <div class="kspc-slider-item js-open-fancy-slide" data-href="https://via.placeholder.com/150/000000/FFFFFF/?text=5"><img class="kspc-slider-item__img" src="https://via.placeholder.com/150/000000/FFFFFF/?text=5" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--has-title">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__h2">Послание Мастера</div>
+              <div class="kspc-simple-text__p custom-ul">
+                <p>Дорогие мои Воплощения Божественной Любви!<br class="dd"> В это удивительное время, когда так ярко Сияет Свет Истины в каждом, через каждого.... всюду - мы творцы  творения имеем величайшую возможность быть Сотрудниками Бога , Его чистыми инструментами для Его пребывания Здесь.</p>
+                <p>Ибо Он внутрь вас есть! И через Него мы живём.... но Сознательное восприятие Этого есть Всегда Новая Радость! Этого не изменить.... всё происходит по Воле Свыше и никто не в силах остановить процесс трансформации.... Но помните ,что Великая Сила Бога явлена из Любви Его - а значит это Он Сам!</p>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-text-with-pic-and-hide">
+            <div class="container container--ks">
+              <div class="kspc-twpah kspc-twpah--pic-left kspc-twpah--non-hide">
+                <div class="kspc-twpah__pic"><img src="img/DEE6E9.png" alt=""></div>
+                <!--.kspc-twpah__delimiter-->
+                <div class="kspc-twpah__text">
+                  <p>Не омрачайте пребывание Его в нас и высочайшую работу Его через нас - блужданием ума, с его сомнениями и страхами о будущем... Будущее Прекрасно... Оно прекрасно в настоящем!</p>
+                  <p>Бог Творит каждое мгновение и будьте уверены, что Он творит из Себя и Он творит из Любви ко всему-к Себе... Разве это страшно?! Это прекрасно и удивительно.... поймите - это Величие вашей Души. Не секрет, что мы немного застряли в своих привязанностях в этом иллюзорном миру, пытаемся удержать то, что нас ограничивает... пыль которая кажется золотом... Мы не это всё!</p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="kspc-simple-text kspc-simple-text--with-hide kspc-simple-text--with-hide--show-7 kspc-simple-text--custom-mt-after-twpah">
+            <div class="container container--ks">
+              <div class="kspc-simple-text__p custom-ul">
+                <!--.custom-ul--grey-dots.custom-ul--no-p-l-->
+                <p>Душа ставшая человеком - свободна изначально и это Величайший подарок нам от Бхагавана -Божественного! Так давайте же примем Данность -примем Его! Впустите же Того, Кто каждую долю секунды , мгновение проявляет заботу о нас всех... И вы увидите Дар который Он уготовил каждому без исключений....</p>
+                <p>Человек Свят, ибо он есть Бог и Бог в нем Свет и Свет есть каждый..... Как внутри так и всюду... Это<br class="dd"> Чистота это Святилище... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam ratione tempora quo dolores, voluptatem, suscipit consequatur sint recusandae mollitia sed deleniti aperiam placeat minus totam omnis accusamus dolore quae voluptates porro accusantium. Perspiciatis est repellat nesciunt fuga omnis rerum, mollitia ex animi exercitationem dolorem sequi ullam eos repellendus optio ipsam laborum!</p>
+                <p>Hic impedit exercitationem modi consequatur ratione iste quibusdam qui ea, animi dolores quasi eligendi suscipit odit blanditiis quia quaerat adipisci repudiandae vel fuga laborum vero debitis! Totam officiis vitae delectus, veritatis suscipit optio earum quisquam praesentium deserunt saepe commodi corrupti, quia cupiditate itaque quo explicabo dolorem, ipsa maxime aperiam laborum! Reprehenderit vitae dolore at in blanditiis inventore laudantium, sapiente ducimus placeat alias. Nemo voluptate et praesentium illum tempora deleniti fugiat, quas ut in doloremque obcaecati quia impedit delectus neque quisquam animi dicta, iste libero natus quae saepe temporibus aliquid facere culpa. Tempore sit illo quam, temporibus perspiciatis assumenda ipsa!</p>
+                <div class="kspc-twpah-unwrap js-simple-text-unwrap"><span class="kspc-twpah-unwrap__dots">...</span><span class="kspc-twpah-unwrap__text"> Развернуть</span></div>
+              </div>
+            </div>
+          </div>
+          <section class="ks-videos ks-videos--has-not-title">
+            <div class="container container--ks">
+              <div class="ks-videos-row">
+                <div class="ks-videos-item"><a class="ks-videos-item__video" href="img/DEE6E9.png" data-fancybox="videos"><img class="ks-videos-item__preview" src="img/DEE6E9.png" alt=""></a>
+                  <div class="ks-videos-item__name">Мастер Имрам в жизни, духовной практике и музыке</div>
+                </div>
+                <div class="ks-videos-item"><a class="ks-videos-item__video" href="img/DEE6E9.png" data-fancybox="videos"><img class="ks-videos-item__preview" src="img/DEE6E9.png" alt=""></a>
+                  <div class="ks-videos-item__name">Самадхи – Абсолютное Самоосознание</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <section class="hm-galery">
+        <div class="container container--extra-long">
+          <div class="hm-galery__row">
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo1.jpg"></div>
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo2.jpg"></div>
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo3.jpg"></div>
+            <div class="hm-galery__img-wrapper"><img class="hm-galery__img" src="img/gallery/photo4.jpg"></div><a class="hm-galery__white-box" href="#">
+              <p>Все<br/>фотографии</p></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="top-btn-wrap">
+      <div class="top-btn-wrap__inner container">
+        <div class="top-btn js-top-btn" id="top-btn"><svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8867 0.462901L23.6196 11.6986C23.8307 11.9185 23.9627 12.208 23.9932 12.5182C24.0237 12.8283 23.9508 13.1399 23.7869 13.4002L23.6196 13.6004L23.4284 13.7756C23.2198 13.9219 22.9743 14 22.7232 14C22.4721 14 22.2266 13.9219 22.018 13.7756L21.8268 13.6004C21.7589 13.5459 21.702 13.4779 21.6595 13.4002L12.8867 4.2415C12.645 3.99088 12.3185 3.85029 11.9783 3.85029C11.6381 3.85029 11.3117 3.99088 11.07 4.2415L2.24937 13.4002L2.08205 13.6004C1.86729 13.777 1.60213 13.8729 1.32907 13.8729C1.056 13.8729 0.790844 13.777 0.57609 13.6004L0.384858 13.4252L0.217528 13.225C0.0756992 13.0028 -5.50073e-08 12.7416 -6.66892e-08 12.4743C-7.83711e-08 12.2071 0.0756992 11.9458 0.217528 11.7236L0.384858 11.5234L10.2094 1.21361L11.1178 0.287735C11.378 0.0742574 11.7065 -0.0265813 12.0356 0.00600953C12.3647 0.0385994 12.6693 0.202135 12.8867 0.462901Z" fill="#AFB4BF"/></svg></div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="container container--sfoo">
+        <div class="sfoo-top">
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>Мероприятия</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Семинары</a><a class="sfoo-list__item" href="">Лекции</a><a class="sfoo-list__item" href="">Вебинары</a><a class="sfoo-list__item" href="">Ретриты</a><a class="sfoo-list__item" href="">Календарь мероприятий</a></div>
+            <div class="sfoo-col__title"><span>Статьи</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Новые статьи</a><a class="sfoo-list__item" href="">Наука Крийя</a><a class="sfoo-list__item" href="">Саморазвитие</a><a class="sfoo-list__item" href="">Творчество</a><a class="sfoo-list__item" href="">Здоровье</a><a class="sfoo-list__item" href="">Семейные отношения</a></div>
+          </div>
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>О Мастере</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Биография</a><a class="sfoo-list__item" href="">Встреча с Бабаджи</a><a class="sfoo-list__item" href="">Философия</a></div>
+            <div class="sfoo-col__title"><span>Обучение</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Все курсы</a><a class="sfoo-list__item" href="">Медитация для начинающих</a><a class="sfoo-list__item" href="">Гид по медитации</a><a class="sfoo-list__item" href="">Уроки для дома</a><a class="sfoo-list__item" href="">Углубленная медитация Крия</a><a class="sfoo-list__item" href="">Расписание онлайн прктики</a><a class="sfoo-list__item" href="">Отзывы</a></div>
+          </div>
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>Наука Крийя</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Что такое Крийя</a><a class="sfoo-list__item" href="">Энергизация тела</a><a class="sfoo-list__item" href="">42 Крийя</a><a class="sfoo-list__item" href="">Прогрессивные техники</a><a class="sfoo-list__item" href="">Супертехника Крийя</a><a class="sfoo-list__item" href="">Сосуд Трансцендентной силы</a><a class="sfoo-list__item" href="">Учителя</a><a class="sfoo-list__item" href="">Книги</a><a class="sfoo-list__item" href="">Отзывы</a></div>
+            <div class="sfoo-col__title"><span>Видео</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Новые видео</a><a class="sfoo-list__item" href="">Новые видео</a></div>
+          </div>
+          <div class="sfoo-col">
+            <div class="sfoo-col__title"><span>Музыка</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Творчество Имрама</a><a class="sfoo-list__item" href="">Преобразующая музыка</a><a class="sfoo-list__item" href="">Альбомы</a><a class="sfoo-list__item" href="">Отзывы</a><a class="sfoo-list__item" href="">Фото</a><a class="sfoo-list__item" href="">Расписание концертов</a></div>
+            <div class="sfoo-col__title"><span>О нас</span>
+              <div class="sfoo-col__plus"><svg width="9" height="9" viewbox=" 0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" width="1" height="9" rx=".5" fill="#AFB4BF"/><rect y="5" width="1" height="9" rx=".5" transform="rotate(-90 0 5)" fill="#AFB4BF"/></svg></div>
+            </div>
+            <div class="sfoo-list"><a class="sfoo-list__item" href="">Контакты</a><a class="sfoo-list__item" href="">Сотрудничество</a><a class="sfoo-list__item" href="">Поддержите развитие</a></div>
+          </div>
+        </div>
+        <div class="sfoo-bottom">
+          <div class="sfoo-copywryting">© 2021 Все права защищены.</div>
+          <div class="sfoo-bottom-menu"><a class="sfoo-bottom-menu__item" href="">Политика конфиденциальности</a><a class="sfoo-bottom-menu__item" href="">Договор оферты</a><a class="sfoo-bottom-menu__item" href="">Карта сайта</a><a class="sfoo-bottom-menu__item" href="">Россия</a></div>
+          <div class="sfoo-bottom-right">
+            <div class="ssocials ssocials--sfoo"><a class="ssocials-item" href=""><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 3.807a3.819 3.819 0 00-3.819 3.818 3.798 3.798 0 003.819 3.818 3.819 3.819 0 003.818-3.818c0-2.092-1.727-3.818-3.819-3.818zm0 6.308a2.487 2.487 0 01-2.49-2.49c0-1.361 1.095-2.457 2.49-2.457a2.451 2.451 0 012.457 2.457c0 1.395-1.096 2.49-2.457 2.49zm4.847-6.441a.893.893 0 00-.896-.897.893.893 0 00-.897.897c0 .498.399.896.897.896a.893.893 0 00.896-.896zm2.524.896c-.067-1.195-.332-2.258-1.196-3.12C13.75.585 12.688.32 11.493.253c-1.23-.067-4.915-.067-6.143 0C4.154.32 3.125.586 2.229 1.449c-.864.863-1.13 1.926-1.196 3.121-.066 1.229-.066 4.914 0 6.143.067 1.195.332 2.225 1.196 3.121.896.863 1.925 1.129 3.12 1.195 1.23.067 4.915.067 6.143 0 1.195-.066 2.258-.332 3.121-1.195.864-.896 1.13-1.926 1.196-3.121.066-1.229.066-4.914 0-6.143zm-1.594 7.438c-.233.664-.764 1.162-1.395 1.428-.996.398-3.32.298-4.383.298-1.095 0-3.42.1-4.382-.299a2.517 2.517 0 01-1.428-1.427c-.398-.963-.299-3.287-.299-4.383 0-1.063-.1-3.387.299-4.383a2.561 2.561 0 011.428-1.394c.963-.399 3.287-.3 4.383-.3 1.062 0 3.386-.099 4.382.3.631.232 1.13.763 1.395 1.394.398.996.299 3.32.299 4.383 0 1.096.1 3.42-.3 4.383z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="12" viewbox="0 0 17 12"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.084 2.537a1.993 1.993 0 00-1.406-1.435C13.418.75 8.438.75 8.438.75s-5.01 0-6.27.352A1.993 1.993 0 00.762 2.537C.41 3.767.41 6.404.41 6.404s0 2.608.352 3.867c.175.704.732 1.231 1.406 1.407 1.26.322 6.27.322 6.27.322s4.98 0 6.24-.322a1.954 1.954 0 001.406-1.407c.352-1.26.352-3.867.352-3.867s0-2.636-.352-3.867zm-9.287 6.24V4.031l4.16 2.373-4.16 2.373z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="9" height="15" viewbox="0 0 9 15"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.629 8.625l.383-2.516H5.578V4.47c0-.711.328-1.367 1.422-1.367h1.121V.942S7.11.75 6.152.75c-1.996 0-3.308 1.23-3.308 3.418v1.941H.602v2.516h2.242v6.125h2.734V8.625h2.05z" fill="#6974A9"/></svg></a><a class="ssocials-item" href=""><svg width="17" height="11" viewbox="0 0 17 11"  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.967 1.332c.088-.352 0-.645-.527-.645h-1.73c-.439 0-.644.235-.76.499 0 0-.88 2.138-2.11 3.544-.41.381-.586.528-.82.528-.088 0-.264-.147-.264-.498V1.332c0-.44-.117-.645-.498-.645H6.563c-.293 0-.44.206-.44.41 0 .41.615.499.674 1.67v2.55c0 .556-.088.673-.322.673-.586 0-1.993-2.168-2.842-4.629C3.457.893 3.28.688 2.842.688H1.113c-.468 0-.586.234-.586.498 0 .468.586 2.724 2.725 5.742 1.436 2.05 3.457 3.135 5.273 3.135 1.084 0 1.23-.235 1.23-.645 0-1.963-.087-2.168.44-2.168.264 0 .703.146 1.729 1.143 1.172 1.171 1.377 1.67 2.021 1.67h1.729c.498 0 .732-.235.586-.733-.323-.996-2.52-3.105-2.637-3.252-.264-.322-.176-.469 0-.762 0 0 2.11-2.988 2.344-3.984z" fill="#6974A9"/></svg></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script> <link rel='stylesheet' id='magnific-popup-css'  href='http://imram.q7.by/wp-content/plugins/malina-elements/css/magnific-popup.css?ver=1.1.0' type='text/css' media='all' />
+  </body>
+</html>
