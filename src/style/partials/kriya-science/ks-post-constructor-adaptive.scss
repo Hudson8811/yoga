@@ -188,52 +188,63 @@
 					width: calc(100% - 169px);
 				}
 			}
-			&--show-6{
-				//допилить адапт
+
+			&--show-6 {
+
+
+				.kspc-simple-text__p {
+					max-height: 24*6px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 24*5px;
+				}
+			}
+
+			&--show-7 {
+
+
+				.kspc-simple-text__p {
+					max-height: 24*7px;
+				}
+
+				.kspc-twpah-unwrap {
+					top: 24*6px;
+				}
+			}
+
+			&--show-11 {
+
+
 				.kspc-simple-text__p {
 					max-height: 24*11px;
 				}
 
 				.kspc-twpah-unwrap {
 					top: 24*10px;
-					right: 0;
-					padding-right: 50px;
 				}
 			}
-			&--show-7{
-				//допилить адапт
-				.kspc-simple-text__p {
-					max-height: 24*11px;
-				}
 
-				.kspc-twpah-unwrap {
-					top: 24*10px;
-					right: 0;
-					width:calc(100% - 200px);
-				}
-			}
-			&--show-11{
-				//допилить адапт
-				.kspc-simple-text__p {
-					max-height: 24*11px;
-				}
+			&--show-13 {
 
-				.kspc-twpah-unwrap {
-					top: 24*10px;
-					right: 0;
-					padding-right: 50px;
-				}
-			}
-			&--show-13{
-				//допилить адапт
+
 				.kspc-simple-text__p {
 					max-height: 24*13px;
 				}
 
 				.kspc-twpah-unwrap {
 					top: 24*12px;
+				}
+			}
+
+			&--show-6,
+			&--show-7,
+			&--show-11,
+			&--show-13 {
+				.kspc-twpah-unwrap {
+					left: auto;
 					right: 0;
-					width:calc(100% - 400px);
+					width: calc(100% - 169px);
 				}
 			}
 		}
@@ -878,52 +889,63 @@
 					width: calc(100% - #{vw(169)});
 				}
 			}
-			&--show-6{
-				//допилить адапт
+
+			&--show-6 {
+
+
 				.kspc-simple-text__p {
-					max-height: 30*11px;
+					max-height: vw(24*6);
 				}
 
 				.kspc-twpah-unwrap {
-					top: 30*10px;
-					right: 0;
-					padding-right: 50px;
+					top: vw(24*5);
 				}
 			}
-			&--show-7{
-				//допилить адапт
+
+			&--show-7 {
+
+
 				.kspc-simple-text__p {
-					max-height: 30*11px;
+					max-height: vw(24*7);
 				}
 
 				.kspc-twpah-unwrap {
-					top: 30*10px;
-					right: 0;
-					width:calc(100% - 200px);
+					top: vw(24*6);
 				}
 			}
-			&--show-11{
-				//допилить адапт
+
+			&--show-11 {
+
+
 				.kspc-simple-text__p {
-					max-height: 30*11px;
+					max-height: vw(24*11);
 				}
 
 				.kspc-twpah-unwrap {
-					top: 30*10px;
-					right: 0;
-					padding-right: 50px;
+					top: vw(24*10);
 				}
 			}
-			&--show-13{
-				//допилить адапт
+
+			&--show-13 {
+
+
 				.kspc-simple-text__p {
-					max-height: 30*13px;
+					max-height: vw(24*13);
 				}
 
 				.kspc-twpah-unwrap {
-					top: 30*12px;
+					top: vw(24*12);
+				}
+			}
+
+			&--show-6,
+			&--show-7,
+			&--show-11,
+			&--show-13 {
+				.kspc-twpah-unwrap {
+					left: auto;
 					right: 0;
-					width:calc(100% - 400px);
+					width: calc(100% - #{vw(169)});
 				}
 			}
 
@@ -1512,13 +1534,67 @@
 	.kspc-simple-text--with-hide--show-9 .kspc-twpah-unwrap {
 		top: 105vw;
 	}
+
+	.kspc-simple-text--with-hide {
+		&--show-6 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*6);
+			}
+
+			.kspc-twpah-unwrap {
+				top: vw(24*5);
+			}
+		}
+
+		&--show-7 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*7);
+			}
+
+			.kspc-twpah-unwrap {
+				top: vw(24*6);
+			}
+		}
+
+		&--show-11 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*11);
+			}
+
+			.kspc-twpah-unwrap {
+				top: vw(24*10);
+			}
+		}
+
+		&--show-13 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*13);
+			}
+
+			.kspc-twpah-unwrap {
+				top: vw(24*12);
+			}
+		}
+	}
 }
 
 
 
 @media screen and (min-width: 413px) and (max-width: 415px) {
-	.kspc-twpah-unwrap {
+
+	/*.kspc-twpah-unwrap {
 		top: 84.9vw;
+	}*/
+	.kspc-twpah-unwrap {
+		top: 85.1vw;
 	}
 
 	.kspc-simple-text--with-hide .kspc-twpah-unwrap {
@@ -1534,4 +1610,55 @@
 		top: 97.6vw;
 	}
 
+	.kspc-simple-text--with-hide {
+		&--show-6 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*6);
+			}
+
+			.kspc-twpah-unwrap {
+				top: 32.5vw;
+			}
+		}
+
+		&--show-7 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*7);
+			}
+
+			.kspc-twpah-unwrap {
+				top: 39.3vw;
+			}
+		}
+
+		&--show-11 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*11);
+			}
+
+			.kspc-twpah-unwrap {
+
+				top: 65.5vw;
+
+			}
+		}
+
+		&--show-13 {
+
+
+			.kspc-simple-text__p {
+				max-height: vw(24*13);
+			}
+
+			.kspc-twpah-unwrap {
+				top: 78.3vw;
+			}
+		}
+	}
 }

@@ -3,31 +3,47 @@
 
 	@media screen and (max-width: 1150px) {}
 
-	@media screen and (max-width: 749px) {}
+	@media screen and (max-width: 749px) {
+		margin-top: vw(92);
+	}
 }
 
 .dedication-hr-after {
 	margin-top: 48px;
 
-	@media screen and (max-width: 1150px) {}
+	@media screen and (max-width: 1150px) {
+		margin-top: 51px;
+	}
 
-	@media screen and (max-width: 749px) {}
+	@media screen and (max-width: 749px) {
+		margin-top: vw(52);
+	}
 
 	&+* {
 		margin-top: 76px;
 
-		@media screen and (max-width: 1150px) {}
+		@media screen and (max-width: 1150px) {
+			margin-top: 85px;
+		}
 
-		@media screen and (max-width: 749px) {}
+		@media screen and (max-width: 749px) {
+
+			margin-top: vw(50);
+		}
 	}
 }
 
 .dedication {
 	margin-top: 43px;
 
-	@media screen and (max-width: 1150px) {}
+	@media screen and (max-width: 1150px) {
+		margin-top: 50px;
+	}
 
-	@media screen and (max-width: 749px) {}
+	@media screen and (max-width: 749px) {
+		margin-top: vw(51);
+		text-align: center;
+	}
 
 }
 
@@ -38,9 +54,16 @@
 	display: flex;
 	justify-content: space-between;
 
-	@media screen and (max-width: 1150px) {}
+	@media screen and (max-width: 1150px) {
+		margin-top: 22px;
+	}
 
-	@media screen and (max-width: 749px) {}
+	@media screen and (max-width: 749px) {
+		flex-direction: column-reverse;
+		justify-content: flex-start;
+		align-items: center;
+		margin-top: vw(28);
+	}
 
 	&__text {
 		display: block;
@@ -51,9 +74,15 @@
 		@media screen and (max-width: 1150px) {
 			font-size: 15px;
 			line-height: 24px;
+			width: calc(100% - 363px);
 		}
 
-		@media screen and (max-width: 749px) {}
+		@media screen and (max-width: 749px) {
+			width: 100%;
+			margin-top: vw(50);
+			font-size: vw(15);
+			line-height: vw(24);
+		}
 
 		b {
 			font-weight: 600;
@@ -66,7 +95,9 @@
 				margin-top: 24px;
 			}
 
-			@media screen and (max-width: 749px) {}
+			@media screen and (max-width: 749px) {
+				margin-top: vw(24);
+			}
 		}
 
 
@@ -79,9 +110,19 @@
 		padding-right: 42px;
 		padding-top: 8px;
 
-		@media screen and (max-width: 1150px) {}
+		@media screen and (max-width: 1150px) {
+			min-width: 236px;
+			width: 293px;
+			padding-right: 35px;
+			padding-top: 5px;
+		}
 
-		@media screen and (max-width: 749px) {}
+		@media screen and (max-width: 749px) {
+			padding-top: 0;
+			padding-right: 0;
+			min-width: auto;
+			width: vw(261);
+		}
 
 		img {
 			width: 100%;
@@ -89,21 +130,16 @@
 		}
 	}
 
-	p {
-		a {
-			&:hover {}
-
-			&:active {}
-
-			&:focus {}
-		}
-	}
 }
 
 .dedication__more {
 	margin-top: 15px;
 
-	@media screen and (max-width: 1150px) {}
+	@media screen and (max-width: 1150px) {
+		margin-top: 22px;
+	}
 
-	@media screen and (max-width: 749px) {}
+	@media screen and (max-width: 749px) {
+		margin-top: vw(23);
+	}
 }
