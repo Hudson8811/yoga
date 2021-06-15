@@ -584,7 +584,7 @@ $(document).ready(function () {
 
 
 	if ($('.js-cnumber-input').length > 0) {
-		$('.js-cnumber-input__minus').click(function (e) {
+		$('body').on('click','.js-cnumber-input__minus', function (e) {
 			e.preventDefault();
 			if($(this).closest('.support-block-card').length>0){
 
@@ -617,7 +617,7 @@ $(document).ready(function () {
 				inp.val(val > 1 ? val - 1 : 1);
 			}
 		})
-		$('.js-cnumber-input__plus').click(function (e) {
+		$('body').on('click','.js-cnumber-input__plus', function (e) {
 			e.preventDefault();
 			if($(this).closest('.support-block-card').length>0){
 				var singlePrice = parseInt($(this).closest('.support-block-card').attr('data-single-price'));
