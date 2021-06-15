@@ -45,7 +45,7 @@ section.ks-post-constructor.ks-post-constructor--support-page
 		.container.container--ks
 			h2.kspc-h2-style.support-block__title Выберите подходящий вариант
 			.support-block-row
-				.support-block-card(data-single-price="800")
+				#support-block-card-1.support-block-card(data-single-price="800")
 					.support-block-card__title Комплект 1
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -63,9 +63,9 @@ section.ks-post-constructor.ks-post-constructor--support-page
 						.support-block-card__price
 							span 800
 							|  рублей
-					a.btn.support-block-card__btn(href="") Поддержать
+					a.btn.support-block-card__btn.js-open-support-modal(href="") Поддержать
 
-				.support-block-card(data-single-price="1500")
+				#support-block-card-2.support-block-card(data-single-price="1500")
 					.support-block-card__title Комплект 2
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -85,10 +85,10 @@ section.ks-post-constructor.ks-post-constructor--support-page
 						.support-block-card__price
 							span 1 500
 							|  рублей
-					a.btn.support-block-card__btn(href="") Поддержать
+					a.btn.support-block-card__btn.js-open-support-modal(href="") Поддержать
 
 
-				.support-block-card(data-single-price="3000")
+				#support-block-card-3.support-block-card(data-single-price="3000")
 					.support-block-card__title Комплект 3
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -109,9 +109,9 @@ section.ks-post-constructor.ks-post-constructor--support-page
 						.support-block-card__price
 							span 3 000
 							|  рублей
-					a.btn.support-block-card__btn(href="") Поддержать
+					a.btn.support-block-card__btn.js-open-support-modal(href="") Поддержать
 
-				.support-block-card(data-single-price="9000")
+				#support-block-card-4.support-block-card(data-single-price="9000")
 					.support-block-card__title Комплект 4
 					.support-block-card__pic
 						img(src="img/gallery/photo1.jpg", alt="")
@@ -130,5 +130,42 @@ section.ks-post-constructor.ks-post-constructor--support-page
 						.support-block-card__price
 							span 9 000
 							|  рублей
-					a.btn.support-block-card__btn(href="") Поддержать
+					a.btn.support-block-card__btn.js-open-support-modal(href="") Поддержать
+
+#support-modal.support-modal(style="display:none")
+	button.custom-fancybox-close(data-fancybox-close='' title='Close')
+		svg(width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg')
+			rect(x='0.0205078' y='1.43506' width='2' height='36' rx='1' transform='rotate(-45 0.0205078 1.43506)' fill='#AFB4BF')
+			rect(x='1.43555' y='26.8909' width='2' height='36' rx='1' transform='rotate(-135 1.43555 26.8909)' fill='#AFB4BF')
+
+	.support-modal__inner
+		.support-modal__title Поддержите развитие
+		.support-modal-top
+			.support-modal-top__name Комплект 2
+			.support-modal-top__count
+				.cnumber-input.cnumber-input--small.js-cnumber-input
+					.cnumber-input__minus.js-cnumber-input__minus
+					.cnumber-input__center
+						input.cnumber-input__inp(type="number", name="" value="1")
+					.cnumber-input__plus.js-cnumber-input__plus
+			.support-modal-top__price 4 000 рублей
+		.support-modal__form
+			.music-form-row.music-form-row--support
+				.music-form-item
+					input.music-form-input.js-need-validate(type='text' maxlength='60' placeholder='Ваше имя*' name='formParams[full_name]' value='' data-validate-type='non-empty')
+			.music-form-row.music-form-row--support
+				.music-form-item
+					input.music-form-input.music-form-input--email.js-need-validate(type='text' maxlength='60' placeholder='Ваш Email*' name='formParams[email]' value='' data-validate-type='email')
+			.music-form-row.music-form-row--support
+				.music-form-item
+					input.music-form-input.js-need-validate(type='text' maxlength='60' placeholder='Ваш номер телефона*' name='formParams[email]' value='' data-validate-type='phone')
+			.music-form-row.music-form-row--support-btn
+				.music-form-item
+					button#button627644.btn.btn--support-modal(type='submit' onclick="if(window['btnprs60a786f6b4d96']){return false;}window['btnprs60a786f6b4d96']=true;setTimeout(function(){window['btnprs60a786f6b4d96']=false},3000);return true;")
+						| Поддержать
+			.support-modal__info
+				| Нажимая на кнопку «Поддержать», вы соглашаетесь на обработку персональных данных в соответствии с
+				a(href="")  Условиями
+				|  и принимаете условия
+				a(href="")  Договора оферты
 

@@ -380,3 +380,75 @@
 		}
 	}
 }
+
+.cnumber-input__inp, .cnumber-input__center{
+	pointer-events: none;
+}
+
+
+
+
+.cnumber-input--small .cnumber-input{
+	&__plus,
+	&__minus {
+		width: 22px;
+		height: 22px;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			width: vw(22);
+			height: vw(22);
+		}
+	}
+
+	&__plus {
+		background-size: 9px auto;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			background-size: vw(9) auto;
+		}
+	}
+
+	&__minus {
+		background-size: 9px auto;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			background-size: vw(9) auto;
+		}
+	}
+
+	&__center {
+		padding: 0 15px;
+		width: 58px;
+		margin-left: -11px;
+		margin-right: -11px;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			padding: 0 vw(15);
+			width: vw(58);
+			margin-left: vw(-11);
+
+			margin-right: vw(-11);
+		}
+	}
+
+	&__inp {
+		font-size: 13px;
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			font-size: vw(13);
+		}
+	}
+}
+
+.cnumber-input__inp, .cnumber-input__center{
+	pointer-events: none;
+}

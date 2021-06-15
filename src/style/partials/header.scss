@@ -61,13 +61,13 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 100%;
+	//width: 100%;
+	width: auto;
+	right: 0;
 	//display: none;
 	background: #ffffff;
 	z-index: 990;
 	transition: all .4s linear, opacity 0s linear ;
-
-
 
 	&__inner {
 		display: flex;
@@ -292,7 +292,8 @@
 	top: 0 !important;
 	left: 0 !important;
 	border-bottom: 1px solid #e5e5e5;
-	width: 100%;
+	width: auto;
+	right: 0;
 	transition: height 0.4s ease-out;
 }
 

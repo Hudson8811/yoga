@@ -19,6 +19,7 @@ $(document).on('mobileinit', function () {
 //= libs/autosize.min.js
 //= libs/jquery.touchSwipe.min.js
 //= libs/jquery.sticky.js
+//= libs/jquery.inputmask.min.js
 
 
 /* my scripts */
@@ -35,6 +36,7 @@ $(document).on('mobileinit', function () {
 //= partials/comments.js
 //= partials/books.js
 //= partials/catalog.js
+//= partials/support.js
 
 
 

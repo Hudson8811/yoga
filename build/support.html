@@ -108,7 +108,7 @@
     </script>
   </head>
   <body>
-    <header class="site-header site-header--partial-static" id="site-header">
+    <header class="site-header compensate-for-scrollbar site-header--partial-static" id="site-header">
       <div class="site-header__inner">
         <div class="sh-left">
           <div class="sh-burger-wrap sh-burger-wrap--main">
@@ -203,7 +203,7 @@
             <div class="container container--ks">
               <h2 class="kspc-h2-style support-block__title">Выберите подходящий вариант</h2>
               <div class="support-block-row">
-                <div class="support-block-card" data-single-price="800">
+                <div class="support-block-card" id="support-block-card-1" data-single-price="800">
                   <div class="support-block-card__title">Комплект 1</div>
                   <div class="support-block-card__pic"><img src="img/gallery/photo1.jpg" alt=""></div>
                   <div class="support-block-card__desc-title">Состав комплекта</div>
@@ -222,9 +222,9 @@
                       </div>
                     </div>
                     <div class="support-block-card__price"><span>800</span> рублей</div>
-                  </div><a class="btn support-block-card__btn" href="">Поддержать</a>
+                  </div><a class="btn support-block-card__btn js-open-support-modal" href="">Поддержать</a>
                 </div>
-                <div class="support-block-card" data-single-price="1500">
+                <div class="support-block-card" id="support-block-card-2" data-single-price="1500">
                   <div class="support-block-card__title">Комплект 2</div>
                   <div class="support-block-card__pic"><img src="img/gallery/photo1.jpg" alt=""></div>
                   <div class="support-block-card__desc-title">Состав комплекта</div>
@@ -244,9 +244,9 @@
                       </div>
                     </div>
                     <div class="support-block-card__price"><span>1 500</span> рублей</div>
-                  </div><a class="btn support-block-card__btn" href="">Поддержать</a>
+                  </div><a class="btn support-block-card__btn js-open-support-modal" href="">Поддержать</a>
                 </div>
-                <div class="support-block-card" data-single-price="3000">
+                <div class="support-block-card" id="support-block-card-3" data-single-price="3000">
                   <div class="support-block-card__title">Комплект 3</div>
                   <div class="support-block-card__pic"><img src="img/gallery/photo1.jpg" alt=""></div>
                   <div class="support-block-card__desc-title">Состав комплекта</div>
@@ -268,9 +268,9 @@
                       </div>
                     </div>
                     <div class="support-block-card__price"><span>3 000</span> рублей</div>
-                  </div><a class="btn support-block-card__btn" href="">Поддержать</a>
+                  </div><a class="btn support-block-card__btn js-open-support-modal" href="">Поддержать</a>
                 </div>
-                <div class="support-block-card" data-single-price="9000">
+                <div class="support-block-card" id="support-block-card-4" data-single-price="9000">
                   <div class="support-block-card__title">Комплект 4</div>
                   <div class="support-block-card__pic"><img src="img/gallery/photo1.jpg" alt=""></div>
                   <div class="support-block-card__desc-title">Состав комплекта</div>
@@ -289,12 +289,59 @@
                       </div>
                     </div>
                     <div class="support-block-card__price"><span>9 000</span> рублей</div>
-                  </div><a class="btn support-block-card__btn" href="">Поддержать</a>
+                  </div><a class="btn support-block-card__btn js-open-support-modal" href="">Поддержать</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <div class="support-modal" id="support-modal" style="display:none">
+          <button class="custom-fancybox-close" data-fancybox-close="" title="Close">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.0205078" y="1.43506" width="2" height="36" rx="1" transform="rotate(-45 0.0205078 1.43506)" fill="#AFB4BF"></rect>
+              <rect x="1.43555" y="26.8909" width="2" height="36" rx="1" transform="rotate(-135 1.43555 26.8909)" fill="#AFB4BF"></rect>
+            </svg>
+          </button>
+          <div class="support-modal__inner">
+            <div class="support-modal__title">Поддержите развитие</div>
+            <div class="support-modal-top">
+              <div class="support-modal-top__name">Комплект 2</div>
+              <div class="support-modal-top__count">
+                <div class="cnumber-input cnumber-input--small js-cnumber-input">
+                  <div class="cnumber-input__minus js-cnumber-input__minus"></div>
+                  <div class="cnumber-input__center">
+                    <input class="cnumber-input__inp" type="number" name="" value="1">
+                  </div>
+                  <div class="cnumber-input__plus js-cnumber-input__plus"></div>
+                </div>
+              </div>
+              <div class="support-modal-top__price">4 000 рублей</div>
+            </div>
+            <div class="support-modal__form">
+              <div class="music-form-row music-form-row--support">
+                <div class="music-form-item">
+                  <input class="music-form-input js-need-validate" type="text" maxlength="60" placeholder="Ваше имя*" name="formParams[full_name]" value="" data-validate-type="non-empty">
+                </div>
+              </div>
+              <div class="music-form-row music-form-row--support">
+                <div class="music-form-item">
+                  <input class="music-form-input music-form-input--email js-need-validate" type="text" maxlength="60" placeholder="Ваш Email*" name="formParams[email]" value="" data-validate-type="email">
+                </div>
+              </div>
+              <div class="music-form-row music-form-row--support">
+                <div class="music-form-item">
+                  <input class="music-form-input js-need-validate" type="text" maxlength="60" placeholder="Ваш номер телефона*" name="formParams[email]" value="" data-validate-type="phone">
+                </div>
+              </div>
+              <div class="music-form-row music-form-row--support-btn">
+                <div class="music-form-item">
+                  <button class="btn btn--support-modal" id="button627644" type="submit" onclick="if(window['btnprs60a786f6b4d96']){return false;}window['btnprs60a786f6b4d96']=true;setTimeout(function(){window['btnprs60a786f6b4d96']=false},3000);return true;">Поддержать</button>
+                </div>
+              </div>
+              <div class="support-modal__info">Нажимая на кнопку «Поддержать», вы соглашаетесь на обработку персональных данных в соответствии с<a href=""> Условиями</a> и принимаете условия<a href=""> Договора оферты</a></div>
+            </div>
+          </div>
+        </div>
       </div>
       <section class="hm-galery">
         <div class="container container--extra-long">
