@@ -25,6 +25,8 @@ function openSupportModal(e) {
 
 			},
 			baseClass: 'fancybox-support-modal',
+			touch : false,
+
 			afterShow: function (instance, slide) {
 
 			}

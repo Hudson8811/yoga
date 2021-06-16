@@ -1,0 +1,54 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+				title: 'article-master'
+		};
+
+
+block main
+	.kriya-science-main
+		include components/comments/big-top-pic
+
+
+		section.ks-post-constructor.ks-post-constructor--gallery
+			include components/gallery/gal
+
+
+	section.hm-galery
+		.container.container--extra-long
+			.hm-galery__row
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo1.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo2.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo3.jpg")
+				.hm-galery__img-wrapper
+					img.hm-galery__img(src="img/gallery/photo4.jpg")
+				a.hm-galery__white-box(href="#")
+					p Все<br/>фотографии
+
+	#music-modal-bg.music-modal-bg(style="background-image:url(img/music/bg.jpg")
+
+		.music-modal-bg-2
+			.music-modal-close <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.728591" y="1.43506" width="1" height="35" rx="0.5" transform="rotate(-45 0.728591 1.43506)" stroke="white"/><rect x="1.43555" y="26.1838" width="1" height="35" rx="0.5" transform="rotate(-135 1.43555 26.1838)" stroke="white"/></svg>
+
+			.music-modal.container.container--music-modal
+				.music-modal__inner
+					.music-modal__pic#music-modal__pic
+						img(src="img/music/bg.jpg", alt="")
+					.music-modal__text
+						.music-modal__text-top
+							#music-modal__title.music-modal__title Themes from another world, Vol.1
+							.music-modal__description.component-hide-block-wrap
+								.component-hide-block.component-hide-block--unwrap-pr-music-modal.component-hide-block--show-2.component-hide-block--show2-album-modal
+									#music-modal__description-container.music-modal__description-container
+
+
+
+									div.kspc-twpah-unwrap.js-component-hide-unwrap
+										span.kspc-twpah-unwrap__dots ...
+										span.kspc-twpah-unwrap__text  Развернуть
+						.music-modal-services#music-modal-services
