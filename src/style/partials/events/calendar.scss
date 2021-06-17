@@ -1,10 +1,14 @@
 #eventsCalendar{
-	padding: 0 15px;
+	padding: 54px 15px 40px;
 	margin: 0 auto;
 	max-width: 100%;
 	width: 1228px;
 	@media screen and (max-width:1150px) {
 		width: 724px;
+		padding: 52px 15px 40px;
+	}
+	@media screen and (max-width: 749px) {
+		padding: vw(52) vw(15) vw(58);
 	}
 }
 
@@ -43,13 +47,28 @@
 	letter-spacing: -0.03em;
 	color: #AFB4BF;
 	font-weight: 400;
+	@media screen and (max-width:1150px) {
+		text-align: center;
+		font-size: 19px;
+		line-height: 22px;
+	}
+	@media screen and (max-width: 749px) {
+		font-size: vw(15);
+		line-height: vw(22);
+		padding: vw(7);
+	}
 }
 
 .fc td {
 	border-style: solid;
 	border-width: 1px;
 	padding: 0;
-	vertical-align: top; }
+	vertical-align: top;
+	@media screen and (max-width: 749px) {
+		border-left: none;
+		border-right: none;
+	}
+}
 
 
 
@@ -76,6 +95,11 @@
 	position: relative;
 	z-index: 4;
 	padding-bottom: 2px;
+	@media screen and (max-width:1150px) {
+		tbody{
+			display: none;
+		}
+	}
 }
 
 
@@ -202,6 +226,20 @@ tr:first-child > td > .fc-day-grid-event {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@media screen and (max-width:1150px) {
+		margin: 12px auto;
+		font-size: 18px;
+		line-height: 22px;
+		width: 24px;
+		height: 24px;
+	}
+	@media screen and (max-width: 749px) {
+		font-size: vw(15);
+		line-height: vw(22);
+		width: vw(22);
+		height: vw(22);
+		margin: vw(8) auto;
+	}
 }
 
 
@@ -226,13 +264,26 @@ tr:first-child > td > .fc-day-grid-event {
 
 
 .fc-basic-view .fc-body .fc-row {
-	min-height: 172px; }
+	min-height: 172px;
+	@media screen and (max-width:1150px) {
+		min-height: 100px;
+	}
+	@media screen and (max-width: 749px) {
+		min-height: vw(66);
+	}
+}
 
 .fc-day-top.fc-other-month {
 	opacity: 0.3; }
 
 .fc-week{
 	height: 172px;
+	@media screen and (max-width:1150px) {
+		height: 100px;
+	}
+	@media screen and (max-width: 749px) {
+		height: vw(66);
+	}
 }
 
 .fc-day.fc-sat,
@@ -248,6 +299,51 @@ tr:first-child > td > .fc-day-grid-event {
 	border: none !important;
 }
 
+.fc-row .fc-content-skeleton{
+	@media screen and (max-width:1150px) {
+		pointer-events: none;
+	}
+}
+.fc-day.fc-widget-content.has-events{
+	@media screen and (max-width:1150px) {
+		cursor: pointer;
+		position: relative;
+		&::after{
+			content: "";
+			display: block;
+			width: 9px;
+			height: 9px;
+			background: #6974A9;
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			bottom: 23px;
+			transform: translateX(-50%);
+
+			@media screen and (max-width: 749px) {
+				width: vw(6);
+				height: vw(6);
+				bottom: vw(23);
+			}
+		}
+	}
+}
+.fc-widget-content{
+	@media screen and (max-width: 749px) {
+		border-bottom: none !important;
+	}
+}
+.fc-row.fc-week.fc-widget-content{
+	@media screen and (max-width: 749px) {
+		&:last-child{
+			border-bottom: none;
+			td{
+				border-bottom: none;
+			}
+		}
+	}
+}
+
 
 /*modal*/
 #eventsModal{
@@ -255,13 +351,39 @@ tr:first-child > td > .fc-day-grid-event {
 	position: absolute;
 	z-index: 99;
 }
+#eventsModal2{
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
 
 .eventsModal{
 	width: 475px;
 	background: #fff;
-	box-shadow: 0px 2px 7px rgba(43, 47, 78, 0.25);
+	box-shadow: 0 2px 7px rgba(43, 47, 78, 0.25);
 	border-radius: 5px;
 	overflow: hidden;
+	@media screen and (max-width: 1150px) {
+		width: 403px;
+	}
+	@media screen and (max-width: 749px) {
+		width: 100%;
+	}
+	&-bg{
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(55px);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		display: block;
+	}
 	&__img{
 		width: 100%;
 		position: relative;
@@ -278,17 +400,37 @@ tr:first-child > td > .fc-day-grid-event {
 	}
 	&__info{
 		padding: 31px 34px 58px;
+		@media screen and (max-width: 1150px) {
+			padding: 18px 36px 81px;
+		}
+		@media screen and (max-width: 749px) {
+			padding: vw(32) vw(14) vw(81);
+		}
 	}
 	&__title{
 		font-size: 35px;
 		line-height: 35px;
 		letter-spacing: -0.03em;
 		color: #53565A;
+		@media screen and (max-width: 1150px) {
+			font-size: 32px;
+			line-height: 32px;
+		}
+		@media screen and (max-width: 749px) {
+			font-size: vw(32);
+			line-height: vw(32);
+		}
 	}
 	&__datetime{
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -11px;
+		@media screen and (max-width: 1150px) {
+			margin: 0 -10px;
+		}
+		@media screen and (max-width: 749px) {
+			margin: 0 vw(-10);
+		}
 		&-item{
 			font-weight: 300;
 			font-size: 17px;
@@ -296,6 +438,16 @@ tr:first-child > td > .fc-day-grid-event {
 			color: #25378D;
 			margin: 11px 11px 0;
 			text-transform: uppercase;
+			@media screen and (max-width: 1150px) {
+				margin: 0 10px 5px;
+				font-size: 15px;
+				line-height: 18px;
+			}
+			@media screen and (max-width: 749px) {
+				margin: 0 vw(10) vw(5);
+				font-size: vw(15);
+				line-height: vw(18);
+			}
 		}
 	}
 	&__text{
@@ -304,9 +456,23 @@ tr:first-child > td > .fc-day-grid-event {
 		font-size: 17px;
 		line-height: 29px;
 		color: #53565A;
+		@media screen and (max-width: 1150px) {
+			font-size: 15px;
+			line-height: 24px;
+		}
+		@media screen and (max-width: 749px) {
+			font-size: vw(15);
+			line-height: vw(24);
+		}
 		&-inner{
 			max-height: 116px;
 			overflow: hidden;
+			@media screen and (max-width: 1150px) {
+				max-height: 48px;
+			}
+			@media screen and (max-width: 749px) {
+				max-height: vw(48);
+			}
 		}
 		&-link{
 			background: #ffffff;
@@ -314,12 +480,21 @@ tr:first-child > td > .fc-day-grid-event {
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			@media screen and (max-width: 1150px) {
+				padding-right: 20px;
+			}
+			@media screen and (max-width: 749px) {
+				padding-right: vw(10);
+			}
 			a{
 				color: #AFB4BF;
 				text-decoration: none;
 				position: relative;
 				padding-right: 12px;
 				display: inline-flex;
+				@media screen and (max-width: 749px) {
+					padding-right: vw(12);
+				}
 				&::after{
 					position: absolute;
 					top: 50%;
@@ -329,17 +504,26 @@ tr:first-child > td > .fc-day-grid-event {
 					height: 12px;
 					margin-top: 2px;
 					content: '';
-					-webkit-transition-duration: .2s;
 					transition-duration: .2s;
-					-webkit-transform: translate(0,-50%);
 					transform: translate(0,-50%);
 					background: url(../img/arr-next.svg) no-repeat center center;
 					background-size: contain;
+					@media screen and (max-width: 749px) {
+						width: vw(6);
+						height: vw(12);
+						margin-top: vw(2);
+					}
 				}
 			}
 		}
 	}
 	&__kspc{
 		margin-top: 24px;
+		@media screen and (max-width: 1150px) {
+			margin-top: 20px;
+		}
+		@media screen and (max-width: 749px) {
+			margin-top: vw(20);
+		}
 	}
 }
