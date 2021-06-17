@@ -4,12 +4,31 @@
 	@media screen and (max-width: 1150px) {
 		padding-top: 46px;
 	}
+
 	@media screen and (max-width: 749px) {
 		padding-top: vw(25);
 
 	}
 }
 
+.ks-post-constructor--gallery-single {
+	padding-top: 31px;
+
+	@media screen and (max-width: 1150px) {
+		padding-top: 41px;
+	}
+
+	@media screen and (max-width: 749px) {
+		padding-top: 1px;
+
+	}
+}
+
+.breadcrumbs-wrap--gal-single {
+	@media screen and (max-width: 1150px) and (min-width: 750px)  {
+		padding-top: 0;
+	}
+}
 
 .kspc-phg-archive {
 	//height: 418px;
@@ -122,6 +141,7 @@
 			grid-area: 4/2/span 1/span 1;
 
 		}
+
 		&--4 {
 			grid-area: 4/3/span 1/span 1;
 
