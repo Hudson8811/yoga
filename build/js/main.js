@@ -1302,7 +1302,7 @@ $(document).ready(function () {
 						"</button>"
 
 				},
-				baseClass: 'fancybox-support-modal',
+				baseClass: 'fancybox-support-modal fancybox-support-modal--course',
 				touch : false,
 
 				afterShow: function (instance, slide) {
