@@ -1,0 +1,57 @@
+.course-modal {
+
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.course-modal__inner {
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.course-modal__title {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	line-height: 59px;
+	letter-spacing: -0.03em;
+	color: $dark;
+
+	@media screen and (max-width: 1150px) {
+		font-size: 32px;
+		line-height: 39px;
+	}
+
+	@media screen and (max-width: 749px) {
+		font-size: 32px;
+		line-height: 39px;
+	}
+}
+
+.course-modal__info {
+	font-size: 17px;
+	line-height: 30px;
+    margin-top: 6px;
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.support-modal-top--course-modal {
+	margin-top: 18px;
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.support-modal__form--course-modal {
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}

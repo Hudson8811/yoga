@@ -139,3 +139,59 @@
 		&:focus {}
 	}
 }
+
+
+
+.fancybox-support-modal .fancybox-toolbar,
+.fancybox-support-modal .custom-fancybox-close.custom-fancybox-close--thanks {
+	display: block;
+}
+
+.thanks-modal {
+	width: 521px;
+	max-width: 100%;
+	background: #FFFFFF;
+	border: 1px solid #D9DBDE;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 100px 58px 102px;
+
+	@media screen and (max-width: 749px) {
+		width: 100%;
+		padding: 8.05556vw 5.27778vw 13.88889vw;
+	}
+
+	&__inner {}
+
+	&__title {
+		font-size: 28px;
+		line-height: 42px;
+		color: $dark;
+		text-align: center;
+		letter-spacing: -0.03em;
+		@media screen and (max-width: 749px) {
+			font-size: vw(28);
+			line-height: vw(42);
+		}
+	}
+
+	&__description {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 30px;
+		color: $dark;
+		text-align: center;
+		margin-top: 17px;
+
+		@media screen and (max-width: 749px) {
+			font-size: 4.16667vw;
+			line-height: 8.33333vw;
+			margin-top: vw(17);
+		}
+	}
+
+	.fancybox-button.fancybox-close-small {
+		display: none;
+	}
+}

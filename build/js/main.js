@@ -1277,15 +1277,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
-
 	setTimeout(function () {
 		AOS.refresh();
 	}, 2000);
@@ -1295,7 +1286,63 @@ $(document).ready(function () {
 	setTimeout(function () {
 		AOS.refresh();
 	}, 10000);
+
+	$('.js-course-modal').click(function(){
+		$.fancybox.open({
+			src: '#course-modal',
+			type: 'inline',
+			opts: {
+				//speed: 600,
+				//transitionDuration: 700,
+				backFocus: false,
+				buttons: ['close'],
+				btnTpl: {
+					close: '<button data-fancybox-close class="custom-fancybox-close custom-fancybox-close--course-modal" title="{{CLOSE}}">' +
+						'<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.0205078" y="1.43506" width="2" height="36" rx="1" transform="rotate(-45 0.0205078 1.43506)" fill="#AFB4BF"/><rect x="1.43555" y="26.8909" width="2" height="36" rx="1" transform="rotate(-135 1.43555 26.8909)" fill="#AFB4BF"/></svg>' +
+						"</button>"
+
+				},
+				baseClass: 'fancybox-support-modal',
+				touch : false,
+
+				afterShow: function (instance, slide) {
+
+				}
+			}
+
+
+		});
+	});
 });
+
+
+function openThanksModal() {
+
+	$.fancybox.open({
+		src: '#thanks-modal',
+		type: 'inline',
+		opts: {
+			//speed: 600,
+			//transitionDuration: 700,
+			backFocus: false,
+			buttons: ['close'],
+			btnTpl: {
+				close: '<button data-fancybox-close class="custom-fancybox-close custom-fancybox-close--thanks" title="{{CLOSE}}">' +
+					'<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.0205078" y="1.43506" width="2" height="36" rx="1" transform="rotate(-45 0.0205078 1.43506)" fill="#AFB4BF"/><rect x="1.43555" y="26.8909" width="2" height="36" rx="1" transform="rotate(-135 1.43555 26.8909)" fill="#AFB4BF"/></svg>' +
+					"</button>"
+
+			},
+			baseClass: 'fancybox-support-modal',
+			touch : false,
+
+			afterShow: function (instance, slide) {
+
+			}
+		}
+
+
+	});
+}
 
 
 
