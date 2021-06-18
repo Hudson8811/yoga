@@ -32,7 +32,7 @@
 		padding: 36px 15px 40px;
 	}
 	@media screen and (max-width: 749px) {
-		padding: vw(16) vw(15) vw(58);
+		padding: vw(34) vw(15) vw(58);
 	}
 }
 
@@ -43,16 +43,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
-		@media screen and (max-width: 749px) {
-			display: block;
-		}
 	}
 	&__navigate{
 		display: flex;
 		align-items: center;
-		@media screen and (max-width: 749px) {
-			justify-content: center;
-		}
 	}
 	&__nav{
 		width: 12px;
@@ -61,15 +55,21 @@
 		cursor: pointer;
 		transition: 0.3s;
 		@media screen and (max-width: 1150px) {
-			width: 11px;
-			height: 18px;
+			width: 12px;
+			height: 21px;
 		}
-		svg{
-			width: 100%;
-			display: block;
+		@media screen and (max-width: 768px) {
+			width: vw(9);
+			height: vw(16);
 		}
 		&:hover{
 			color: #25378D;
+		}
+		svg{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
 		}
 	}
 	&__monthName{
@@ -81,12 +81,13 @@
 		@media screen and (max-width: 1150px) {
 			font-size: 32px;
 			line-height: 35px;
-			margin: 0 15px;
+			margin: 0 19px;
 		}
 		@media screen and (max-width: 749px) {
-			font-size: vw(32);
+			font-size: vw(24);
 			line-height: vw(35);
-			margin: 0 vw(15);
+			margin: 0 vw(19);
+			font-weight: 500;
 		}
 	}
 	&__home{
@@ -467,15 +468,13 @@ tr:first-child > td > .fc-day-grid-event {
 .eventsModal{
 	width: 475px;
 	background: #fff;
-	box-shadow: 0 2px 7px rgba(43, 47, 78, 0.25);
 	border-radius: 5px;
 	overflow: hidden;
 	@media screen and (max-width: 1150px) {
 		width: 403px;
 	}
 	@media screen and (max-width: 749px) {
-		width: 100%;
-		border-radius: 0;
+		width: 100vw;
 	}
 	&-bg{
 		background: rgba(255, 255, 255, 0.1);
@@ -530,6 +529,9 @@ tr:first-child > td > .fc-day-grid-event {
 	}
 	&__info{
 		padding: 31px 34px 58px;
+		border-radius: 0 0 5px 5px;
+		border: 1px solid #DEE6E9;
+		border-top: 0;
 		@media screen and (max-width: 1150px) {
 			padding: 18px 36px 81px;
 		}
