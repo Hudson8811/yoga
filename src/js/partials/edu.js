@@ -107,16 +107,18 @@ $(document).ready(function () {
 	}
 
 	function scrollTabs(tabIndex, duration, addDistance = 0) {
-		let distance = 0;
-		for (var i = 0; i < tabIndex; i++) {
-			distance += $('.page-tabs__item').eq(i).innerWidth();
-		}
-		distance += addDistance;
-		distance += addLeftPad;
+		if ($('.page-tabs').outerWidth() > $(window).width()){
+			let distance = 0;
+			for (var i = 0; i < tabIndex; i++) {
+				distance += $('.page-tabs__item').eq(i).innerWidth();
+			}
+			distance += addDistance;
+			distance += addLeftPad;
 
-		tabsList.css("transition-duration", (duration / 1000).toFixed(1) + "s");
-		var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
-		tabsList.css("transform", "translate(" + value + "px,0)");
+			tabsList.css("transition-duration", (duration / 1000).toFixed(1) + "s");
+			var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+			tabsList.css("transform", "translate(" + value + "px,0)");
+		}
 	}
 
 
