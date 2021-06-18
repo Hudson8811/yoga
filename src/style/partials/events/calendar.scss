@@ -470,6 +470,7 @@ tr:first-child > td > .fc-day-grid-event {
 	background: #fff;
 	border-radius: 5px;
 	overflow: hidden;
+	border: 1px solid #DEE6E9;
 	@media screen and (max-width: 1150px) {
 		width: 403px;
 	}
@@ -530,8 +531,6 @@ tr:first-child > td > .fc-day-grid-event {
 	&__info{
 		padding: 31px 34px 58px;
 		border-radius: 0 0 5px 5px;
-		border: 1px solid #DEE6E9;
-		border-top: 0;
 		@media screen and (max-width: 1150px) {
 			padding: 18px 36px 81px;
 		}
