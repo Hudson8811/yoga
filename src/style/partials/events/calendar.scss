@@ -6,6 +6,15 @@
 	@media screen and (max-width: 749px) {
 		padding: vw(48) 0 vw(58);
 	}
+	.page--tabs-blocks__tab{
+		min-height: 900px;
+		@media screen and (max-width:1150px) {
+			min-height: 750px;
+		}
+		@media screen and (max-width: 749px) {
+			min-height: vw(550);
+		}
+	}
 }
 
 #eventsCalendarTop{
