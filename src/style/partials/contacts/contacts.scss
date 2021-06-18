@@ -1,0 +1,141 @@
+.ks-post-constructor--contacts {
+	padding-bottom: 7px;
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+
+
+
+}
+
+.hr--before-contacts-form-info {
+	margin-top: 58px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 86px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(51);
+	}
+}
+
+.hr--after-contacts-form-info {
+	margin-top: 26px;
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(50);
+	}
+}
+
+.music-form-wrap--contacts {
+	margin-top: 32px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 0;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(0);
+	}
+}
+
+.music-form-wrap+.kspc-qa {
+	margin-top: 137px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 143px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(109);
+	}
+}
+
+.music-form--without-subtitle {
+	margin-top: 17px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 30px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(28);
+	}
+}
+
+.contacts-form-info {
+	margin-top: 28px;
+	display: flex;
+	justify-content: space-between;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 27px;
+	}
+
+	@media screen and (max-width: 749px) {
+		flex-direction: column;
+		align-items: center;
+		margin-top: vw(49);
+	}
+
+	&__item {
+		display: block;
+		width: 30.4%;
+		font-size: 17px;
+		line-height: 30px;
+
+		@media screen and (max-width: 1150px) {
+			font-size: 15px;
+			line-height: 30px;
+			width: 30%;
+		}
+
+		@media screen and (max-width: 749px) {
+			text-align: center;
+			font-size: vw(15);
+			line-height: vw(30);
+			width: 100%;
+
+			&+.contacts-form-info__item {
+				margin-top: vw(18);
+			}
+		}
+	}
+
+	&__item-text {
+		font-style: normal;
+		font-weight: 600;
+		color: $dark;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {}
+	}
+
+	&__item-link {
+		font-style: normal;
+		font-weight: normal;
+		color: #25378D;
+
+		margin-top: 4px;
+		display: block;
+
+		@media screen and (max-width: 1150px) {
+			margin-top: 2px;
+		}
+
+		@media screen and (max-width: 749px) {
+			margin-top: vw(2);
+		}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+}

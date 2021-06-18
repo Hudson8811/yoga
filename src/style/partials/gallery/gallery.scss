@@ -11,6 +11,19 @@
 	}
 }
 
+.kriya-science-main--gallery {
+    padding-bottom: 92px;
+	@media screen and (max-width: 1150px) {
+		padding-bottom: 35px;
+	}
+
+
+	@media screen and (max-width: 749px) {
+		padding-top: 10.61111vw;
+
+	}
+}
+
 .ks-post-constructor--gallery-single {
 	padding-top: 31px;
 
