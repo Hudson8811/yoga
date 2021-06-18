@@ -43,7 +43,36 @@ section.ks-post-constructor
 						.kspc-event-info__name Стоимость участия
 						.kspc-event-info__val 6 800 рублей
 
-					a.btn.kspc-event-btn(href="")  Принять участие
+					a.btn.kspc-event-btn.js-course-modal(href="")  Принять участие
+					#course-modal.course-modal.support-modal(style="display:none;")
+						.course-modal__inner
+							.course-modal__title Чтобы принять участие
+							.course-modal__info.custom-ul.custom-ul--grey-dots.custom-ul--no-p-l
+								ul
+									li Заполните форму ниже и нажмите кнопку, затем следуйте инструкции на следующей странице
+									li После оплаты Вам придет письмо подтверждение со всеми необходимыми инструкциями
+							.support-modal-top.support-modal-top--course-modal
+								.support-modal-top__name Базовый курс медитации Крийя
+								.support-modal-top__price 11 000 рублей
+							.support-modal__form.support-modal__form--course-modal
+								.music-form-row.music-form-row--support
+									.music-form-item
+										input.music-form-input.js-need-validate(type='text' maxlength='60' placeholder='Ваше имя*' name='formParams[full_name]' value='' data-validate-type='non-empty')
+								.music-form-row.music-form-row--support
+									.music-form-item
+										input.music-form-input.music-form-input--email.js-need-validate(type='text' maxlength='60' placeholder='Ваш Email*' name='formParams[email]' value='' data-validate-type='email')
+								.music-form-row.music-form-row--support
+									.music-form-item
+										input.music-form-input.js-need-validate(type='text' maxlength='60' placeholder='Ваш номер телефона*' name='formParams[email]' value='' data-validate-type='phone')
+								.music-form-row.music-form-row--support-btn
+									.music-form-item
+										button#button627644.btn.btn--support-modal(type='submit' onclick="if(window['btnprs60a786f6b4d96']){return false;}window['btnprs60a786f6b4d96']=true;setTimeout(function(){window['btnprs60a786f6b4d96']=false},3000);return true;")
+											| Поддержать
+								.support-modal__info
+									| Нажимая на кнопку «Поддержать», вы соглашаетесь на обработку персональных данных в соответствии с
+									a(href="")  Условиями
+									|  и принимаете условия
+									a(href="")  Договора оферты
 
 		.container.container--ks.kspc-event__container-hr-2.kspc-event__container-hr-2--non-hide-on-mobile
 			.hr
