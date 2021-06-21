@@ -1204,19 +1204,19 @@ $(document).ready(function () {
 
 
 	if ($('.js-cnumber-input').length > 0) {
-		$('body').on('click','.js-cnumber-input__minus', function (e) {
+		$('body').on('click', '.js-cnumber-input__minus', function (e) {
 			e.preventDefault();
-			if($(this).closest('.support-block-card').length>0){
+			if ($(this).closest('.support-block-card').length > 0) {
 
 				var singlePrice = parseInt($(this).closest('.support-block-card').attr('data-single-price'));
 				var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
 				var val = parseInt(inp.val());
 				inp.val(val > 1 ? val - 1 : 1);
-				$(this).closest('.support-block-card').find('.support-block-card__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
+				$(this).closest('.support-block-card').find('.support-block-card__price span').html((singlePrice * parseInt(inp.val())).toLocaleString('ru'));
 			}
-			else if($(this).closest('.support-modal').length>0){
+			else if ($(this).closest('.support-modal').length > 0) {
 				var modal = $(this).closest('.support-modal');
-				var card =  $('#'+modal.attr('data-card-id'));
+				var card = $('#' + modal.attr('data-card-id'));
 
 				var singlePrice = parseInt(card.attr('data-single-price'));
 
@@ -1224,31 +1224,31 @@ $(document).ready(function () {
 				var val = parseInt(inp.val());
 				inp.val(val > 1 ? val - 1 : 1);
 
-				modal.find('.support-modal-top__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
+				modal.find('.support-modal-top__price span').html((singlePrice * parseInt(inp.val())).toLocaleString('ru'));
 
 				card.find('.cnumber-input__inp').val(inp.val());
-				card.find('.support-block-card__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
+				card.find('.support-block-card__price span').html((singlePrice * parseInt(inp.val())).toLocaleString('ru'));
 
 
 			}
-			else{
+			else {
 				var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
 				var val = parseInt(inp.val());
 				inp.val(val > 1 ? val - 1 : 1);
 			}
 		})
-		$('body').on('click','.js-cnumber-input__plus', function (e) {
+		$('body').on('click', '.js-cnumber-input__plus', function (e) {
 			e.preventDefault();
-			if($(this).closest('.support-block-card').length>0){
+			if ($(this).closest('.support-block-card').length > 0) {
 				var singlePrice = parseInt($(this).closest('.support-block-card').attr('data-single-price'));
 				var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
 				var val = parseInt(inp.val());
 				inp.val(val + 1);
-				$(this).closest('.support-block-card').find('.support-block-card__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
+				$(this).closest('.support-block-card').find('.support-block-card__price span').html((singlePrice * parseInt(inp.val())).toLocaleString('ru'));
 			}
-			else if($(this).closest('.support-modal').length>0){
+			else if ($(this).closest('.support-modal').length > 0) {
 				var modal = $(this).closest('.support-modal');
-				var card =  $('#'+modal.attr('data-card-id'));
+				var card = $('#' + modal.attr('data-card-id'));
 
 				var singlePrice = parseInt(card.attr('data-single-price'));
 
@@ -1256,13 +1256,13 @@ $(document).ready(function () {
 				var val = parseInt(inp.val());
 				inp.val(val + 1);
 
-				modal.find('.support-modal-top__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
+				modal.find('.support-modal-top__price span').html((singlePrice * parseInt(inp.val())).toLocaleString('ru'));
 
 				card.find('.cnumber-input__inp').val(inp.val());
-				card.find('.support-block-card__price span').html((singlePrice*parseInt(inp.val())).toLocaleString('ru'));
+				card.find('.support-block-card__price span').html((singlePrice * parseInt(inp.val())).toLocaleString('ru'));
 
 			}
-			else{
+			else {
 				var inp = $(this).closest('.js-cnumber-input').find('.cnumber-input__inp');
 				var val = parseInt(inp.val());
 				inp.val(val + 1);
@@ -1287,7 +1287,7 @@ $(document).ready(function () {
 		AOS.refresh();
 	}, 10000);
 
-	$('.js-course-modal').click(function(){
+	$('.js-course-modal, a[href="#js-course-modal"]').click(function () {
 		$.fancybox.open({
 			src: '#course-modal',
 			type: 'inline',
@@ -1303,7 +1303,7 @@ $(document).ready(function () {
 
 				},
 				baseClass: 'fancybox-support-modal fancybox-support-modal--course',
-				touch : false,
+				touch: false,
 
 				afterShow: function (instance, slide) {
 
@@ -1333,7 +1333,7 @@ function openThanksModal() {
 
 			},
 			baseClass: 'fancybox-support-modal',
-			touch : false,
+			touch: false,
 
 			afterShow: function (instance, slide) {
 
