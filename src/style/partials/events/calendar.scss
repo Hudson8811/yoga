@@ -18,16 +18,16 @@
 }
 
 #eventsCalendarTop{
-	padding: 54px 15px 0;
+	padding: 22px 15px 0;
 	margin: 0 auto;
 	max-width: 100%;
 	width: 1228px;
 	@media screen and (max-width:1150px) {
 		width: 724px;
-		padding: 52px 15px 0;
+		padding: 0px 15px 0;
 	}
 	@media screen and (max-width: 749px) {
-		padding: vw(52) vw(15) vw(0);
+		padding: vw(0) vw(15) vw(0);
 	}
 }
 
