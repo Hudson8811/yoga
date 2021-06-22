@@ -674,7 +674,36 @@ $(document).ready(function () {
 
 
 
+	$('.js-sh-mmenu-mobile__open-sub').click(function (e) {
+		e.preventDefault();
 
+
+		var thisLvl = $(this).closest('.sh-mmenu-mobile__level');
+		$('.sh-mmenu-mobile__level').removeClass('sh-mmenu-mobile__level--active');
+		console.log(thisLvl.hasClass('sh-mmenu-mobile__level--1'));
+		if (thisLvl.hasClass('sh-mmenu-mobile__level--1')) {
+			$('#sh-mmenu-mobile-l2-'+$(this).attr('data-id')).addClass('sh-mmenu-mobile__level--active');
+		}
+		else if (thisLvl.hasClass('sh-mmenu-mobile__level--2')) {
+			$('#sh-mmenu-mobile-l3-'+$(this).attr('data-id')).addClass('sh-mmenu-mobile__level--active');
+
+		}
+	})
+	$('.js-sh-mmenu-mobile__open-prev-lvl').click(function (e) {
+		e.preventDefault();
+
+
+		var thisLvl = $(this).closest('.sh-mmenu-mobile__level');
+		$('.sh-mmenu-mobile__level').removeClass('sh-mmenu-mobile__level--active');
+		console.log(thisLvl.hasClass('sh-mmenu-mobile__level--1'));
+		if (thisLvl.hasClass('sh-mmenu-mobile__level--2')) {
+			$('#sh-mmenu-mobile-l1').addClass('sh-mmenu-mobile__level--active');
+		}
+		else if (thisLvl.hasClass('sh-mmenu-mobile__level--3')) {
+			$('#sh-mmenu-mobile-l2-'+$(this).attr('data-id')).addClass('sh-mmenu-mobile__level--active');
+
+		}
+	})
 
 
 
