@@ -105,7 +105,49 @@ block main
 					.ce-i__right
 						a.ce-i__img(href="")
 							img(src="img/catalog/e-item-7.jpg" alt="")
+	.container.container--long.hidemob
+		.hr
 
+	section.section-home-events.home-events-events
+		.hm-events-slider-cont-wrap
+			.container
+				div.kspc-h2-style.home-events-events__title Ближайшие мероприятия
+				.hm-events-slider.js-hm-events-slider
+					each val in [1, 2,/* 3, 4, 5*/]
+						.hm-events-slide__wrap
+							a.hm-events-slide(href="")
+								.hm-events-slide__pic
+									img(src="img/events/1.jpg", alt="")
+								.hm-events-slide__text
+									.hm-events-slide__name Мини-Ретрит
+									.hm-events-slide__meta
+										.hm-events-slide__area Москва
+										.hm-events-slide__date 20 февраля 2021
+									.hm-events-slide__info  Интенсивная групповая практика Крийя с Мастером. Сатсанги и ответы на вопросы.
+						.hm-events-slide__wrap
+							a.hm-events-slide(href="")
+								.hm-events-slide__pic
+									img(src="img/events/3.jpg", alt="")
+								.hm-events-slide__text
+									.hm-events-slide__name Всемирная медитация
+									.hm-events-slide__meta
+										.hm-events-slide__area Москва
+										.hm-events-slide__date 20 февраля 2021
+									.hm-events-slide__info Интенсивный 2-дневный курс обучения Крийя, на котором даются  6 из 7 ступеней Крийя.
+						.hm-events-slide__wrap
+							a.hm-events-slide(href="")
+								.hm-events-slide__pic
+									img(src="img/events/1.jpg", alt="")
+								.hm-events-slide__text
+									.hm-events-slide__name Мини-Ретрит
+									.hm-events-slide__meta
+										.hm-events-slide__area Москва
+										.hm-events-slide__date 20 февраля 2021
+									.hm-events-slide__info Интенсивная групповая практика Крийя с Мастером. Сатсанги и ответы на вопросы.
+
+		.container
+			.hm-events-btn-wrap.btn.home-events-events__wrap
+				a.btn.home-events-events__btn(href="") Календарь мероприятий
 
 	section.hm-galery
 		.container.container--extra-long
