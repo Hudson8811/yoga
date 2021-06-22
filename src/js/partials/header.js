@@ -2,6 +2,7 @@ $(document).ready(function () {
 	$('.sh-burger').click(function () {
 		$(this).toggleClass('sh-burger--active');
 		$('.sh-menu-wrap').toggleClass('sh-menu-wrap--open');
+		$('.sh-mmenu-mobile').toggleClass('sh-mmenu-mobile--open');
 	});
 
 	//console.log(1);
@@ -106,6 +107,7 @@ $(document).ready(function () {
 
 	$(window).scroll(function () {
 		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
+		$('.sh-mmenu-mobile').removeClass('sh-mmenu-mobile--open');
 	});
 	//menu-worker
 
@@ -116,7 +118,7 @@ $(document).ready(function () {
 
 
 	$('.js-sh-menu-link').on('mouseover', function () {
-		if (window.matchMedia("screen and (min-width:1551px)").matches) {
+		if (window.matchMedia("screen and (min-width:1151px)").matches) {
 			var $this = $(this);
 			var menu = $('#sh-mmenu-item-' + $this.attr('data-id'));
 			if (menu.hasClass('sh-mmenu-item--simple')) {
@@ -141,7 +143,7 @@ $(document).ready(function () {
 
 
 	$('.js-sh-mmenu-tab-control').hover(function (e) {
-		if (window.matchMedia("screen and (min-width:1551px)").matches) {
+		if (window.matchMedia("screen and (min-width:1151px)").matches) {
 			$(this).addClass('sh-mmenu-links__link--active').siblings('.sh-mmenu-links__link--active').removeClass('sh-mmenu-links__link--active');
 
 			var parent = $(this).closest('.sh-mmenu-item');

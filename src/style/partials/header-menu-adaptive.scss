@@ -1,10 +1,10 @@
-@media screen and (min-width:1551px) {
+@media screen and (min-width:1151px) {
 	.sh-mmenu-mobile {
 		display: none;
 	}
 }
 
-@media screen and (max-width:1550px) {
+@media screen and (max-width: 1150px) {
 	.sh-mmenu {
 		display: none;
 	}
@@ -21,6 +21,14 @@
 		background: #fff;
 		padding: 27px 14px 31px;
 		overflow: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition-duration: .5s;
+
+		&--open{
+			opacity: 1;
+			pointer-events: all;
+		}
 
 		@media screen and (max-width: 749px) {
 			padding: vw(27) vw(14) vw(31);
