@@ -1,0 +1,149 @@
+@media screen and (min-width:1550px) {
+	.sh-mmenu {}
+
+	.sh-mmenu-item {
+
+		&--active {}
+
+		&--simple {}
+
+		&--tabs {}
+
+		&--centred {}
+
+		&--centred-by-link {}
+
+		&__inner {}
+	}
+
+	.sh-mmenu-links {
+
+		&__link {
+
+			&::before,
+			&::after {}
+
+			&::before {}
+
+			&::after {}
+
+			&:hover,
+			&--active {
+
+				&::before,
+				&::after {}
+
+				svg {}
+			}
+
+			&+.sh-mmenu-links__link {}
+
+			&--arrow svg {}
+		}
+	}
+
+	.sh-mmenu-grid {
+
+		&--w3 {
+
+			.sh-mmenu-grid__item {}
+
+			.sh-mmenu-grid__item:nth-child(5n-4) {}
+		}
+
+		&--w4 {
+
+			.sh-mmenu-grid__item {}
+
+			.sh-mmenu-grid__item:nth-child(5n-4) {}
+		}
+
+		&--w5 {
+
+			.sh-mmenu-grid__item {}
+
+			.sh-mmenu-grid__item:nth-child(5n-4) {}
+		}
+
+		&__item {
+
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+
+			&--events {}
+		}
+
+		&__pic {
+
+			img {}
+
+			&::before {}
+		}
+
+		&__name {}
+
+		&__place-and-date {}
+
+		&__place {}
+
+		&__date {}
+
+	}
+
+
+	.sh-mmenu-item__inner--with-tabs {}
+
+	.sh-mmenu-links--controls {}
+
+	.sh-mmenu-tabs {
+
+		&--type-events {}
+
+		&--w3 {}
+
+		&--w4 {}
+	}
+
+	.sh-mmenu-tabs__tab {
+
+		&--active {}
+	}
+
+
+	.sh-mmenu-grid {
+		&--w3 {}
+
+		&__item {
+			&--fw {
+
+				.sh-mmenu-grid__pic {}
+			}
+
+
+			&:hover {}
+
+			&:active {}
+
+			&:focus {}
+		}
+
+		&__text {}
+
+		&__title {}
+
+		&__subtitle {}
+
+		&__infos {}
+
+		&__info {
+			&+.sh-mmenu-grid__info {}
+		}
+
+		&__info-title {}
+
+		&__info-text {}
+	}
+}

@@ -1,0 +1,331 @@
+@media screen and (min-width:1551px) {
+.sh-mmenu {
+	position: relative;
+	width: 100%;
+	z-index: 80;
+}
+
+.sh-mmenu-item {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	box-sizing: border-box;
+	width: auto;
+	max-width: 100%;
+	max-width: 100%;
+	padding: 36px 32px 28px;
+	transition: opacity .6s linear;
+	pointer-events: none;
+	opacity: 0;
+	border: 1px solid #DEE6E9;
+	border-radius: 5px;
+	background: #FFFFFF;
+	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+
+	&--active {
+		pointer-events: all;
+		opacity: 1;
+	}
+
+	&--simple {
+		margin-left: -22px;
+		padding: 18px 22px;
+	}
+
+	&--tabs {
+		padding: 35px 32px 18px 35px;
+
+	}
+
+	&--centred {
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	&--centred-by-link {}
+
+	&__inner {}
+}
+
+.sh-mmenu-links {
+	font-size: 13px;
+	line-height: 30px;
+
+	&__link {
+		position: relative;
+		display: block;
+		cursor: pointer;
+		transition-duration: .3s;
+
+		&::before,
+		&::after {
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 1px;
+			content: '';
+			transition-duration: .5s;
+			opacity: 0;
+			background: #DEE6E9;
+		}
+
+		&::before {
+			top: -6px;
+		}
+
+		&::after {
+			bottom: -3px;
+		}
+
+		&:hover,
+		&--active {
+			color: #25378D;
+
+			&::before,
+			&::after {
+				opacity: 1;
+			}
+
+			svg {
+				fill: #25378D;
+			}
+		}
+
+		&+.sh-mmenu-links__link {
+			margin-top: 9px;
+		}
+
+		&--arrow svg {
+			margin-left: 4px;
+			display: inline-block;
+			margin-bottom: -1px;
+
+		}
+	}
+}
+
+.sh-mmenu-grid {
+	display: flex;
+	flex-wrap: wrap;
+	//margin-left: -22px;
+	width: auto;
+	max-width: 100%;
+	margin-bottom: -29px;
+
+	&--w3 {
+		width: 643px;
+
+		.sh-mmenu-grid__item {
+			width: calc(33.3333% - 22px * 2 / 3 - 0.5px);
+		}
+
+		.sh-mmenu-grid__item:nth-child(5n-4) {
+			margin-left: 0;
+		}
+	}
+
+	&--w4 {
+		width: 864px;
+
+		.sh-mmenu-grid__item {
+			width: calc(25% - 22px * 3 / 4 - 0.5px);
+		}
+
+		.sh-mmenu-grid__item:nth-child(5n-4) {
+			margin-left: 0;
+		}
+	}
+
+	&--w5 {
+		width: 1086px;
+
+		.sh-mmenu-grid__item {
+			width: calc(20% - 22px * 4 / 5 - 0.5px);
+		}
+
+		.sh-mmenu-grid__item:nth-child(5n-4) {
+			margin-left: 0;
+		}
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 29px;
+		margin-left: 22px;
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+
+		&--events {
+		}
+	}
+
+	&__pic {
+		position: relative;
+		display: block;
+		width: 100%;
+		border-radius: 5px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		@include scalepic();
+
+		img {
+			@include relative_img();
+		}
+
+		&::before {
+			display: block;
+			padding-top: 100%;
+			content: '';
+		}
+	}
+
+	&__name {
+		margin-top: 8px;
+		text-align: center;
+		color: $dark;
+		font-size: 17px;
+		font-weight: 600;
+		font-style: normal;
+		line-height: 24px;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	&__place-and-date {
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: #AFB4BF;
+		text-align: center;
+		margin-top: 4px;
+	}
+
+	&__place {
+		display: inline-block;
+		margin-right: 13px;
+	}
+
+	&__date {
+		display: inline-block;
+	}
+
+}
+
+
+.sh-mmenu-item__inner--with-tabs {
+	display: flex;
+}
+
+.sh-mmenu-links--controls {
+	width: 192px;
+	margin-right: 59px;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+
+.sh-mmenu-tabs {
+	min-height: 265px;
+	max-width: calc(100% - 251px);
+	position: relative;
+	display: block;
+
+	&--type-events {
+		min-height: 268px;
+	}
+
+	&--w3 {
+		width: 643px;
+	}
+
+	&--w4 {
+		width: 864px;
+	}
+}
+
+.sh-mmenu-tabs__tab {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 5;
+	transition-duration: .6s;
+
+	&--active {
+		opacity: 1;
+		z-index: 10;
+		position: relative;
+	}
+}
+
+
+.sh-mmenu-grid {
+	&--w3 {}
+
+	&__item {
+		&--fw {
+			width: 100% !important;
+			display: flex;
+
+			.sh-mmenu-grid__pic {
+				width: 199px;
+				align-self: flex-start;
+			}
+		}
+
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
+	}
+
+	&__text {
+		color: $dark;
+		padding: 10px 23px;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 22px;
+	}
+
+	&__subtitle {
+		font-size: 17px;
+		line-height: 30px;
+		margin-top: 2px;
+	}
+
+	&__infos {
+		margin-top: 21px;
+	}
+
+	&__info {
+		&+.sh-mmenu-grid__info {
+
+			margin-top: 7px;
+		}
+	}
+
+	&__info-title {
+		font-size: 17px;
+		line-height: 22px;
+		letter-spacing: -0.03em;
+		color: #AFB4BF;
+	}
+
+	&__info-text {
+		font-size: 17px;
+		line-height: 30px;
+	}
+}
+}

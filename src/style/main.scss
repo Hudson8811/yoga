@@ -21,6 +21,7 @@
 @import "partials/main";
 @import "partials/main-adaptive";
 @import "partials/header";
+
 @import "partials/footer";
 @import "partials/fancybox-customize.scss";
 
@@ -34,6 +35,8 @@
 @import "partials/header-adaptive";
 @import "partials/footer-adaptive";
 
+@import "partials/header-menu.scss";
+@import "partials/header-menu-adaptive.scss";
 
 @import "partials/sections/quote-true.scss";
 @import "partials/sections/quote-true-adapt.scss";

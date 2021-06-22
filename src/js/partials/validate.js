@@ -17,6 +17,13 @@ function validateField($this) {
 				currentValid = false;
 			}
 			break;
+		case 'phone':
+			if ($this.val().length > 0) {
+			}
+			else {
+				currentValid = false;
+			}
+			break;
 		default:
 			break;
 	}

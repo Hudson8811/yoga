@@ -582,10 +582,10 @@ $(document).ready(function () {
 			}*/
 
 			if (window.scrollY > 30) {
-				if (window.scrollY>= header2TopInStatic-mainHeaderH) {
+				if (window.scrollY >= header2TopInStatic - mainHeaderH) {
 					if (headerStatus !== 'absolute_before_header2') {
 						//$('#site-header').removeClass('sh-scrolled');
-						$('#site-header').attr('style', 'position: absolute !important; top: ' + Math.ceil(header2TopInStatic-mainHeaderH+1) + 'px !important');
+						$('#site-header').attr('style', 'position: absolute !important; top: ' + Math.ceil(header2TopInStatic - mainHeaderH + 1) + 'px !important');
 						headerStatus = 'absolute_before_header2';
 					}
 
@@ -617,6 +617,68 @@ $(document).ready(function () {
 		}
 
 	});
+
+
+
+	$(window).scroll(function () {
+		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
+	});
+	//menu-worker
+
+	$('#site-header').on('mouseleave', function () {
+		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
+	})
+
+
+
+	$('.js-sh-menu-link').on('mouseover', function () {
+		if (window.matchMedia("screen and (min-width:1551px)").matches) {
+			var $this = $(this);
+			var menu = $('#sh-mmenu-item-' + $this.attr('data-id'));
+			if (menu.hasClass('sh-mmenu-item--simple')) {
+				menu.css('left', ($this.offset().left + 'px'));
+			}
+
+			else if (menu.hasClass('.sh-mmenu-item--centred')) {
+				//menu.css('left', ($this.offset().left + 'px'));
+
+			}
+
+			else if (menu.hasClass('.sh-mmenu-item--centred')) {
+
+			}
+
+			else if (menu.hasClass('.sh-mmenu-item--centred')) {
+
+			}
+			menu.addClass('sh-mmenu-item--active').siblings().removeClass('sh-mmenu-item--active');
+		}
+	});
+
+
+	$('.js-sh-mmenu-tab-control').hover(function (e) {
+		if (window.matchMedia("screen and (min-width:1551px)").matches) {
+			$(this).addClass('sh-mmenu-links__link--active').siblings('.sh-mmenu-links__link--active').removeClass('sh-mmenu-links__link--active');
+
+			var parent = $(this).closest('.sh-mmenu-item');
+			var tabsContainer = parent.find('.sh-mmenu-tabs');
+			var tabs = tabsContainer.find('.sh-mmenu-tabs__tab');
+
+			tabs.eq(parseInt($(this).attr('data-tab-id')) - 1).addClass('sh-mmenu-tabs__tab--active').siblings().removeClass('sh-mmenu-tabs__tab--active');
+		}
+	});
+
+
+
+
+
+
+
+
+
+
+
+
 });
 var slickSpeedMain = 700;
 
@@ -2812,6 +2874,13 @@ function validateField($this) {
 			break;
 		case 'email':
 			if ($this.val().length > 0 && $this.val().match(reg_email)) {
+			}
+			else {
+				currentValid = false;
+			}
+			break;
+		case 'phone':
+			if ($this.val().length > 0) {
 			}
 			else {
 				currentValid = false;

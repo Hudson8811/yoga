@@ -9,19 +9,19 @@ header.site-header#site-header.compensate-for-scrollbar(class=header_class_name 
 		.sh-center
 			ul.sh-menu
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") Мероприятия
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="1") Мероприятия
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") О Мастере
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="2") О Мастере
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") Наука крийя
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="3") Наука крийя
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") Обучение
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="4") Обучение
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") Статьи
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="5") Статьи
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") Видео
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="6") Видео
 				li.sh-menu-item
-					a.sh-menu-item__link(href="") Музыка
+					a.sh-menu-item__link.js-sh-menu-link(href="" data-id="7") Музыка
 		.sh-right
 			.sh-lang-switcher
 				a.lang-switcher(href="") En
@@ -46,3 +46,429 @@ header.site-header#site-header.compensate-for-scrollbar(class=header_class_name 
 					|  <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M5.49822 8.49905C6.35813 8.49905 7.19874 8.24982 7.91374 7.78288C8.62874 7.31593 9.18601 6.65225 9.51508 5.87575C9.84416 5.09925 9.93026 4.24481 9.7625 3.42049C9.59474 2.59616 9.18065 1.83897 8.57259 1.24466C7.96454 0.650352 7.18983 0.245624 6.34644 0.0816553C5.50304 -0.0823135 4.62884 0.00184123 3.83438 0.323478C3.03991 0.645114 2.36088 1.18979 1.88313 1.88862C1.40539 2.58745 1.15039 3.40905 1.15039 4.24953C1.15642 5.37516 1.61677 6.45298 2.43136 7.24871C3.24595 8.04444 4.34896 8.49378 5.50063 8.49905H5.49822ZM5.49822 7.08254C4.92494 7.08254 4.36453 6.91639 3.88787 6.60509C3.4112 6.2938 3.03969 5.85134 2.8203 5.33367C2.60092 4.81601 2.54352 4.24638 2.65536 3.69683C2.7672 3.14728 3.04326 2.64249 3.44863 2.24628C3.854 1.85008 4.37047 1.58026 4.93274 1.47095C5.495 1.36163 6.0778 1.41774 6.60744 1.63216C7.13708 1.84658 7.58978 2.2097 7.90827 2.67559C8.22677 3.14147 8.39677 3.68921 8.39677 4.24953C8.39234 4.99914 8.08586 5.71686 7.54376 6.24715C7.00165 6.77744 6.26759 7.07759 5.50063 7.08254H5.49822Z" fill="#25378D"/><path d="M10.7583 11.7594C9.30512 10.5172 7.44006 9.83263 5.50951 9.83292H5.49018C3.55848 9.83271 1.69243 10.5181 0.23897 11.7617C0.151029 11.8394 0.0839046 11.9369 0.0434778 12.0457C0.00305111 12.1546 -0.00944433 12.2715 0.00708616 12.3862C0.0618064 12.5246 0.128051 12.6585 0.205154 12.7863C0.267834 12.8597 0.347564 12.9174 0.437692 12.9546C0.527821 12.9918 0.625736 13.0073 0.72327 13C0.900757 13.0016 1.07266 12.9394 1.20636 12.8253C2.38521 11.8094 3.90289 11.2491 5.47448 11.2494H5.53245C7.10462 11.2491 8.6228 11.8099 9.80178 12.8265C9.93378 12.9385 10.1028 13.0002 10.2776 13C10.4212 13.0001 10.5617 12.9585 10.681 12.8805C10.8004 12.8024 10.8934 12.6915 10.9481 12.5617C11.0029 12.4319 11.0169 12.2892 10.9885 12.1516C10.9601 12.014 10.8905 11.8877 10.7885 11.7889L10.7583 11.7594Z" fill="#25378D"/></g><defs><clipPath id="clip0"><rect width="11" height="13" fill="white"/></clipPath></defs></svg>
 
 
+	//Обязательно использовать picture чтобы грузило микрокартинку 1*1px на мобилке и таблетке
+	.sh-mmenu
+
+		#sh-mmenu-item-1.sh-mmenu-item.sh-mmenu-item--centred.sh-mmenu-item--tabs()
+			.sh-mmenu-item__inner.sh-mmenu-item__inner--with-tabs
+				.sh-mmenu-links.sh-mmenu-links--controls
+					a.sh-mmenu-links__link.sh-mmenu-links__link--active.js-sh-mmenu-tab-control(href="" data-tab-id="1")  Ближайшие
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="2")  Семинары
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="3")  Ретриты
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="4")  Вебинары
+					a.sh-mmenu-links__link.sh-mmenu-links__link--arrow(href="")
+						span Календарь мероприятий
+						|  <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.399123 10.9269C0.320164 10.9268 0.242982 10.9028 0.17734 10.8577C0.111698 10.8126 0.0605444 10.7485 0.0303474 10.6736C0.000150325 10.5986 -0.00773326 10.5161 0.00769373 10.4366C0.0231207 10.357 0.0611651 10.2839 0.117016 10.2266L4.75555 5.46084L0.117016 0.695097C0.0442969 0.617741 0.00405886 0.514134 0.00496842 0.406592C0.00587798 0.299051 0.0478624 0.196178 0.121879 0.120132C0.195895 0.0440858 0.296022 0.000950013 0.400693 1.5505e-05C0.505364 -0.000919003 0.606205 0.0404224 0.681496 0.115136L5.6024 5.171C5.67724 5.24791 5.71929 5.35222 5.71929 5.46098C5.71929 5.56974 5.67724 5.67404 5.6024 5.75096L0.681496 10.8068C0.644408 10.8449 0.600382 10.8751 0.551932 10.8957C0.503481 10.9163 0.451557 10.9269 0.399123 10.9269Z" fill="#53565A"/></svg>
+
+
+				.sh-mmenu-tabs.sh-mmenu-tabs--type-events.sh-mmenu-tabs--w4
+					.sh-mmenu-tabs__tab.sh-mmenu-tabs__tab--active
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Всемирная медитация
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__place Москва
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Мини-Ретрит
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__place Москва
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Всемирная медитация
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__place Москва
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Мини-Ретрит
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__place Москва
+									.sh-mmenu-grid__date 20 февраля 2021
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Семинар Крийя
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__place Москва
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Семинар Крийя
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__place Москва
+									.sh-mmenu-grid__date 20 февраля 2021
+					// Если элемент один, то такой вид!!!
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							// !!!!!!!!!!!!! не ссылка
+							.sh-mmenu-grid__item.sh-mmenu-grid__item--fw
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__text
+									a.sh-mmenu-grid__title(href="")  Семинар Крийя
+									.sh-mmenu-grid__infos
+										.sh-mmenu-grid__info
+											.sh-mmenu-grid__info-title Дата
+											.sh-mmenu-grid__info-text 3-4 июля, 2021 с 13:00 до 19:00
+
+										.sh-mmenu-grid__info
+											.sh-mmenu-grid__info-title Место проведения
+											.sh-mmenu-grid__info-text Москва, ул. Никулинскя, 2К1  Метро Юго-Западная
+
+					// Если элемент один, то такой вид!!!
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							// !!!!!!!!!!!!! не ссылка
+							.sh-mmenu-grid__item.sh-mmenu-grid__item--fw
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__text
+									a.sh-mmenu-grid__title(href="")  Онлайн-медитация
+									.sh-mmenu-grid__infos
+										.sh-mmenu-grid__info
+											.sh-mmenu-grid__info-title Дата
+											.sh-mmenu-grid__info-text 3-4 июля, 2021 с 13:00 до 19:00
+
+										.sh-mmenu-grid__info
+											.sh-mmenu-grid__info-title Место проведения
+											.sh-mmenu-grid__info-text Москва, ул. Никулинскя, 2К1  Метро Юго-Западная
+
+
+
+		#sh-mmenu-item-2.sh-mmenu-item.sh-mmenu-item--simple()
+			.sh-mmenu-item__inner
+				.sh-mmenu-links
+					a.sh-mmenu-links__link(href="")  Биография
+					a.sh-mmenu-links__link(href="")  Встреча с Бабаджи
+					a.sh-mmenu-links__link(href="")  Основа духовной практики
+					a.sh-mmenu-links__link(href="")  Ответственность
+					a.sh-mmenu-links__link(href="")  Послание Мастера
+
+		#sh-mmenu-item-3.sh-mmenu-item.sh-mmenu-item--centred()
+			.sh-mmenu-item__inner
+				.sh-mmenu-grid.sh-mmenu-grid--w5
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Что такое Крийя йога
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Энергизация тела
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name 42 энергизирующих упражнения
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Прогрессивные техники
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Супертехника Крийя
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Сосуд Трансцендентной силы
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Учителя
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Книги
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Отзывы
+
+
+		#sh-mmenu-item-4.sh-mmenu-item.sh-mmenu-item--centred.sh-mmenu-item--tabs()
+			.sh-mmenu-item__inner.sh-mmenu-item__inner--with-tabs
+				.sh-mmenu-links.sh-mmenu-links--controls
+					a.sh-mmenu-links__link.sh-mmenu-links__link--active.js-sh-mmenu-tab-control(href="" data-tab-id="1")  Все курсы
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="2")  Медитация
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="3")  Уроки для дома
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="4")  Еженедельная медитация
+					a.sh-mmenu-links__link.sh-mmenu-links__link--arrow(href="")
+						span Страница отзывов
+						|  <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.399123 10.9269C0.320164 10.9268 0.242982 10.9028 0.17734 10.8577C0.111698 10.8126 0.0605444 10.7485 0.0303474 10.6736C0.000150325 10.5986 -0.00773326 10.5161 0.00769373 10.4366C0.0231207 10.357 0.0611651 10.2839 0.117016 10.2266L4.75555 5.46084L0.117016 0.695097C0.0442969 0.617741 0.00405886 0.514134 0.00496842 0.406592C0.00587798 0.299051 0.0478624 0.196178 0.121879 0.120132C0.195895 0.0440858 0.296022 0.000950013 0.400693 1.5505e-05C0.505364 -0.000919003 0.606205 0.0404224 0.681496 0.115136L5.6024 5.171C5.67724 5.24791 5.71929 5.35222 5.71929 5.46098C5.71929 5.56974 5.67724 5.67404 5.6024 5.75096L0.681496 10.8068C0.644408 10.8449 0.600382 10.8751 0.551932 10.8957C0.503481 10.9163 0.451557 10.9269 0.399123 10.9269Z" fill="#53565A"/></svg>
+
+
+				.sh-mmenu-tabs.sh-mmenu-tabs--w3
+					.sh-mmenu-tabs__tab.sh-mmenu-tabs__tab--active
+						.sh-mmenu-grid.sh-mmenu-grid--w3
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Базовый курс медитации Крийя
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Крийя-Нидра курс
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w3
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Медитация для начинающих
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Медитация Крийя
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Углубленная медитация
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w3
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name 15 минутная медитация
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name 40 минутная медитация
+							a.sh-mmenu-grid__item(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name 80 минутная медитация
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w3
+							// !!!!!!!!!!!!! не ссылка
+							.sh-mmenu-grid__item.sh-mmenu-grid__item--fw
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__text
+									a.sh-mmenu-grid__title(href="")  Онлайн-медитация
+									.sh-mmenu-grid__subtitle Совместная еженедельная практика
+									.sh-mmenu-grid__infos
+										.sh-mmenu-grid__info
+											.sh-mmenu-grid__info-title Дата
+											.sh-mmenu-grid__info-text Каждую субботу 10:00 МСК
+										.sh-mmenu-grid__info
+											.sh-mmenu-grid__info-title Формат
+											.sh-mmenu-grid__info-text Онлайн
+
+
+		#sh-mmenu-item-5.sh-mmenu-item.sh-mmenu-item--centred.sh-mmenu-item--tabs()
+			.sh-mmenu-item__inner.sh-mmenu-item__inner--with-tabs
+				.sh-mmenu-links.sh-mmenu-links--controls
+					a.sh-mmenu-links__link.sh-mmenu-links__link--active.js-sh-mmenu-tab-control(href="" data-tab-id="1")  Новые статьи
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="2")  Наука Крийя
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="3")  Саморазвитие
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="4")  Творчество
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="5")  Здоровье
+					a.sh-mmenu-links__link.js-sh-mmenu-tab-control(href="" data-tab-id="6")  Семья и дети
+
+
+				.sh-mmenu-tabs.sh-mmenu-tabs--type-events.sh-mmenu-tabs--w4
+					.sh-mmenu-tabs__tab.sh-mmenu-tabs__tab--active
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое энергетика человека, аура, биопо...
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Как избавиться от негатива и гнева
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Наука Крийя в нашей жизни
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое страх?
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name 2Что такое энергетика человека, аура, биопо...
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 22 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Как избавиться от негатива и гнева
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Наука Крийя в нашей жизни
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое страх?
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name 3то такое энергетика человека, аура, биопо...
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 30 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Как избавиться от негатива и гнева
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Наука Крийя в нашей жизни
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое страх?
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое энергетика человека, аура, биопо...
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Как избавиться от негатива и гнева
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Наука Крийя в нашей жизни
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое страх?
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое энергетика человека, аура, биопо...
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Как избавиться от негатива и гнева
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Наука Крийя в нашей жизни
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое страх?
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+					.sh-mmenu-tabs__tab
+						.sh-mmenu-grid.sh-mmenu-grid--w4
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое энергетика человека, аура, биопо...
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Как избавиться от негатива и гнева
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Наука Крийя в нашей жизни
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+							a.sh-mmenu-grid__item.sh-mmenu-grid__item--events(href="")
+								.sh-mmenu-grid__pic
+									img(src="img/hmlearn.jpg", alt="")
+								.sh-mmenu-grid__name Что такое страх?
+								.sh-mmenu-grid__place-and-date
+									.sh-mmenu-grid__date 20 февраля 2021
+
+
+
+		#sh-mmenu-item-6.sh-mmenu-item.sh-mmenu-item--centred()
+			.sh-mmenu-item__inner
+				.sh-mmenu-grid.sh-mmenu-grid--w3
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name  Новые видео
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name  Категории
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name  Все видео
+
+		#sh-mmenu-item-7.sh-mmenu-item.sh-mmenu-item--centred()
+			.sh-mmenu-item__inner
+				.sh-mmenu-grid.sh-mmenu-grid--w4
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Творчество Имрама
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name  Альбомы
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Фотогалерея
+					a.sh-mmenu-grid__item(href="")
+						.sh-mmenu-grid__pic
+							img(src="img/hmlearn.jpg", alt="")
+						.sh-mmenu-grid__name Сотрудничество

@@ -5,7 +5,10 @@
 }
 
 .fancybox-support-modal.fancybox-support-modal--course .fancybox-slide .fancybox-button.fancybox-close-small {
-	display: block !important;
+	@media screen and (max-width: 1150px) {
+		display: block !important;
+	}
+
 	position: absolute;
 	right: 0;
 	top: 0;
