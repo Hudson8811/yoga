@@ -21,10 +21,12 @@
 	border-radius: 5px;
 	background: #FFFFFF;
 	-webkit-mask-image: -webkit-radial-gradient(white, #000);
+	z-index: 80;
 
 	&--active {
 		pointer-events: all;
 		opacity: 1;
+		z-index: 85;
 	}
 
 	&--simple {
