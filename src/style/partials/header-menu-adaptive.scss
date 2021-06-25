@@ -23,7 +23,7 @@
 		width: 100%;
 		background: #fff;
 		padding: 25px 14px 31px;
-		overflow: hidden;
+		overflow: auto;
 		opacity: 0;
 		pointer-events: none;
 		transition-duration: .5s;
@@ -46,13 +46,13 @@
 
 	.sh-mmenu-mobile__levels {
 		position: relative;
-		min-height: 318px;
+		//min-height: 318px;
 		display: block;
-		opacity: auto;
-		overflow-x: hidden;
+		overflow: hidden;
+		transition: height 0.4s;
 
 		@media screen and (max-width: 749px) {
-			min-height: vw(318);
+			//min-height: vw(318);
 		}
 	}
 
@@ -61,20 +61,30 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		height: 100%;
 		opacity: 0;
 		pointer-events: none;
-		max-height: 100%;
-		opacity: auto;
-		overflow-x: hidden;
 		transition-duration: .5s;
+		visibility: hidden;
+
+		&--1{
+			position: static;
+			visibility: visible;
+		}
 
 		@media screen and (max-width: 749px) {}
 
 		&--active {
+			position: static;
 			opacity: 1;
 			pointer-events: all;
+		}
 
+		&.hide{
+			position: absolute;
+			visibility: hidden;
+		}
+		&.show{
+			visibility: visible;
 		}
 	}
 
@@ -133,13 +143,14 @@
 		z-index: 1;
 		cursor: pointer;
 		flex-grow: 1;
+		font-weight: 500;
 	}
 
 	.sh-mmenu-mobile__open-sub {
 		cursor: pointer;
 		z-index: 2;
 		display: block;
-		background: url('../img/menu-open-sub.svg') no-repeat center center;
+		background: url('../img/menu-open-sub2.svg') no-repeat center center;
 		background-size: 5px auto;
 		width: 33px;
 		height: 19px;
