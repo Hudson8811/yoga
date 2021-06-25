@@ -16,7 +16,10 @@
 	.sh-mmenu-mobile {
 		position: absolute;
 		left: 0;
-		top: 1px;
+		top: 0px;
+		border-top: 1px solid #DEE6E9;
+		border-bottom: 1px solid #DEE6E9;
+		background: #DEE6E9;
 		width: 100%;
 		background: #fff;
 		padding: 25px 14px 31px;

@@ -1,3 +1,7 @@
+.sh-burger-svg {
+	display: block;
+}
+
 .sh-burger {
 	position: relative;
 	//display: none;
@@ -7,12 +11,21 @@
 	cursor: pointer;
 	transition-duration: .2s;
 
-	span,
-	span::before,
-	span::after {
+	svg {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		transform: translate(-50%, -50%);
+
+		path {
+			transition-duration: .3s;
+		}
+
+	}
+
+	span,
+	span::before,
+	span::after {
 		width: 18px;
 		height: 1px;
 		margin-left: -9px;
@@ -35,6 +48,19 @@
 		transform: translateY(7px);
 	}
 
+	.sh-burger-svg__path-1 {}
+
+	.sh-burger-svg__path-2,
+	.sh-burger-svg__path-4 {
+		transform-origin: center;
+	}
+
+	.sh-burger-svg__path-3 {}
+
+	.sh-burger-svg__path-4 {
+		opacity: 0;
+	}
+
 	&--active {
 
 		span {
@@ -46,6 +72,24 @@
 
 			&::after {
 				transform: rotate(-45deg);
+			}
+		}
+
+		svg {
+			.sh-burger-svg__path-2 {
+				transform: rotate(45deg);
+				;
+			}
+
+			.sh-burger-svg__path-1,
+			.sh-burger-svg__path-3 {
+				fill: rgba(255, 255, 255, 0);
+			}
+
+			.sh-burger-svg__path-4 {
+				opacity: 1;
+				transform: rotate(-45deg);
+				;
 			}
 		}
 	}
@@ -67,7 +111,7 @@
 	//display: none;
 	background: #ffffff;
 	z-index: 990;
-	transition: all .4s linear, opacity 0s linear ;
+	transition: all .4s linear, opacity 0s linear;
 
 	&__inner {
 		display: flex;
@@ -97,7 +141,8 @@
 		width: 1px;
 		height: 15px;
 		background: #E1E1E1;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 20px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 20px;
 		margin-left: 11px;
 	}
 }
@@ -158,7 +203,7 @@
 		@media screen and (min-width:$minDesktop) {
 			&:hover {
 				//text-decoration-line: underline;
-			//	color: $dark;
+				//	color: $dark;
 				color: #AFB4BF;
 			}
 
@@ -208,7 +253,8 @@
 		width: 1px;
 		height: 15px;
 		background: #E1E1E1;
-		 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 20px;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 20px;
 	}
 
 	&::before {

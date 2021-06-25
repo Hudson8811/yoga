@@ -124,9 +124,11 @@
 			margin-top: 61px;
 		}
 	}
-	.sh-right{
+
+	.sh-right {
 		margin-top: -2px;
 	}
+
 	.site-header__inner {
 		min-height: 61px;
 		width: 100%;
@@ -232,11 +234,30 @@
 	.sfoo-bottom-menu__item {
 		color: $dark;
 	}
+
+	.sh-burger-svg {
+		width: 15px;
+	}
+
+	.sh-burger-svg--mob {
+		display: none;
+	}
 }
 
 
 @media screen and (max-width: 749px) {
+
 	//767 было
+	.sh-burger-svg {
+		width: vw(15);
+	}
+
+	.sh-burger-svg--tablet {
+		display: none;
+	}
+	.sh-burger-svg--mob {
+		display: block;
+	}
 
 	.sh-burger {
 		width: vw(16);

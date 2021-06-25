@@ -114,7 +114,7 @@ $(document).ready(function () {
 
 	}
 
-	$('.sh-mmenu-mobile__link').click(closeMobMenu);
+	$('.sh-mmenu-mobile__link:not(.sh-mmenu-mobile__link--no-link)').click(closeMobMenu);
 
 	$(window).scroll(function () {
 		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
@@ -152,7 +152,7 @@ $(document).ready(function () {
 				setTimeout(function () {
 					menu.addClass('sh-mmenu-item--active');
 					otherLinks.removeClass('sh-menu-item__link--temp-lock');
-				}, 700);
+				}, 450);
 			}
 
 		}
@@ -160,7 +160,7 @@ $(document).ready(function () {
 
 
 	$('.js-sh-mmenu-tab-control').on('mouseover', function (e) {
-		if (window.matchMedia("screen and (min-width:1151px)").matches) {
+		if (window.matchMedia("screen and (min-width:1151px)").matches && !($(this).hasClass('sh-mmenu-links__link--active'))) {
 			$(this).addClass('sh-mmenu-links__link--active').siblings('.sh-mmenu-links__link--active').removeClass('sh-mmenu-links__link--active');
 			var otherControls = $(this).siblings('.js-sh-mmenu-tab-control');
 			var parent = $(this).closest('.sh-mmenu-item');
