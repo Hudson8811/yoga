@@ -152,13 +152,14 @@
 
 	&__link {
 		color: #25378D;
-		transition-duration: .2s;
+		transition-duration: .3s;
 		display: block;
 
 		@media screen and (min-width:$minDesktop) {
 			&:hover {
 				//text-decoration-line: underline;
-				color: $dark;
+			//	color: $dark;
+				color: #AFB4BF;
 			}
 
 		}

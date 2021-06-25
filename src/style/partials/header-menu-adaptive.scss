@@ -19,19 +19,25 @@
 		top: 1px;
 		width: 100%;
 		background: #fff;
-		padding: 27px 14px 31px;
+		padding: 25px 14px 31px;
 		overflow: hidden;
 		opacity: 0;
 		pointer-events: none;
 		transition-duration: .5s;
 
+		.sh-mmenu-mobile__level--active{
+			pointer-events: none;
+		}
 		&--open{
 			opacity: 1;
 			pointer-events: all;
+			.sh-mmenu-mobile__level--active{
+				pointer-events: all;
+			}
 		}
 
 		@media screen and (max-width: 749px) {
-			padding: vw(27) vw(14) vw(31);
+			padding: vw(25) vw(14) vw(31);
 		}
 	}
 
@@ -58,7 +64,7 @@
 		max-height: 100%;
 		opacity: auto;
 		overflow-x: hidden;
-		transition-duration: .4s;
+		transition-duration: .5s;
 
 		@media screen and (max-width: 749px) {}
 
@@ -70,7 +76,7 @@
 	}
 
 	.sh-mmenu-mobile__item {
-		font-size: 13px;
+		font-size: 15px;
 		line-height: 30px;
 
 		position: relative;
@@ -81,7 +87,7 @@
 		align-items: center;
 
 		@media screen and (max-width: 749px) {
-			font-size: vw(13);
+			font-size: vw(15);
 			line-height: vw(30);
 		}
 
@@ -112,10 +118,10 @@
 		}
 
 		&+.sh-mmenu-mobile__item {
-			margin-top: 8.2px;
+			margin-top: 10px;
 
 			@media screen and (max-width: 749px) {
-				margin-top: vw(8.2);
+				margin-top: vw(10);
 			}
 		}
 	}
@@ -131,14 +137,13 @@
 		z-index: 2;
 		display: block;
 		background: url('../img/menu-open-sub.svg') no-repeat center center;
-		background-size: 9px auto;
+		background-size: 5px auto;
 		width: 33px;
 		height: 19px;
 		margin-top: -3px;
-		background: red;
 
 		@media screen and (max-width: 749px) {
-			background-size: vw(9) auto;
+			background-size: vw(5) auto;
 			width: vw(33);
 			height: vw(19);
 			margin-top: vw(-3);
@@ -151,23 +156,24 @@
 
 	.sh-mmenu-mobile__open-prev-lvl {
 		background: url('../img/menu-close-sub.svg') no-repeat center center;
-		background-size: contain;
+		background-size: 5px auto;
 		width: 5px;
 		height: 9px;
-		background: red;
 		margin-left: -6px;
 		margin-right: 0;
 		width: 19px;
 		height: 19px;
-		margin-top: -3px;
+		margin-top: -2px;
+		transform: rotate(-180deg);
 
 		@media screen and (max-width: 749px) {
+			background-size: vw(5) auto;
 			width: vw(5);
 			height: vw(9);
 			margin-left: vw(-6);
 			width: vw(19);
 			height: vw(19);
-			margin-top: vw(-3);
+			margin-top: vw(-2);
 		}
 	}
 
@@ -176,10 +182,10 @@
 	.ssocials--mmenu-mobile {
 		display: flex;
 		justify-content: center;
-		margin-top: 14px;
+		margin-top: 18px;
 
 		@media screen and (max-width: 749px) {
-			margin-top: vw(14);
+			margin-top: vw(18);
 		}
 
 	}
