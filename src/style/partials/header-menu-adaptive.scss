@@ -22,11 +22,14 @@
 		background: #DEE6E9;
 		width: 100%;
 		background: #fff;
-		padding: 25px 14px 31px;
+		padding: 25px 14px 30px;
 		overflow: auto;
 		opacity: 0;
 		pointer-events: none;
-		transition-duration: .5s;
+		transition-duration: .3s;
+		//max-height: calc(--vh - 15vw);//компенсируем высоту шапки d
+		overflow: auto;
+		overflow-x: hidden;
 
 		.sh-mmenu-mobile__level--active{
 			pointer-events: none;
@@ -40,7 +43,7 @@
 		}
 
 		@media screen and (max-width: 749px) {
-			padding: vw(25) vw(14) vw(31);
+			padding: vw(25) vw(14) vw(30);
 		}
 	}
 
@@ -51,8 +54,11 @@
 		overflow: hidden;
 		transition: height 0.4s;
 
+		min-height: 388px;
+
 		@media screen and (max-width: 749px) {
 			//min-height: vw(318);
+			min-height: vw(388);
 		}
 	}
 
@@ -63,13 +69,13 @@
 		width: 100%;
 		opacity: 0;
 		pointer-events: none;
-		transition-duration: .5s;
-		visibility: hidden;
+		transition-duration: .3s;
+		//visibility: hidden;
 
-		&--1{
+		/*&--1{
 			position: static;
 			visibility: visible;
-		}
+		}*/
 
 		@media screen and (max-width: 749px) {}
 
@@ -131,10 +137,10 @@
 		}
 
 		&+.sh-mmenu-mobile__item {
-			margin-top: 10px;
+			margin-top: 8.5px;
 
 			@media screen and (max-width: 749px) {
-				margin-top: vw(10);
+				margin-top: 2.7vw;
 			}
 		}
 	}
@@ -165,7 +171,8 @@
 	}
 
 	.sh-mmenu-mobile__item--back {
-		color: #25378D;
+		//color: #25378D;
+		color: #AFB4BF;
 	}
 
 	.sh-mmenu-mobile__open-prev-lvl {
@@ -196,10 +203,10 @@
 	.ssocials--mmenu-mobile {
 		display: flex;
 		justify-content: center;
-		margin-top: 18px;
+		margin-top: 27px;
 
 		@media screen and (max-width: 749px) {
-			margin-top: vw(18);
+			margin-top: vw(27);
 		}
 
 	}
