@@ -156,6 +156,12 @@ $(document).ready(function () {
 
 			}
 
+			var activetab=menu.find('.sh-mmenu-tabs__tab--active');
+
+			if(activetab.length>0){
+				menu.find('.sh-mmenu-tabs').height(activetab.height());
+			}
+
 			if (menu.siblings('.sh-mmenu-item--active').length === 0) {
 				menu.addClass('sh-mmenu-item--active');
 
@@ -170,7 +176,6 @@ $(document).ready(function () {
 					otherLinks.removeClass('sh-menu-item__link--temp-lock');
 				}, 270);
 			}
-
 		}
 	});
 
@@ -186,18 +191,20 @@ $(document).ready(function () {
 			otherControls.addClass('sh-mmenu-links__link--temp-lock');
 			var newTab = tabs.eq(parseInt($(this).attr('data-tab-id')) - 1);
 			newTab.siblings('.sh-mmenu-tabs__tab--active').removeClass('sh-mmenu-tabs__tab--active');
-			tabsContainer.animate({
-				height: newTab.height() + "px",
-			}, {
-				duration: 250,
-				easing: "linear",
-				complete: function () {
-				},
-				queue: false
-			});
+
 			setTimeout(function () {
 				newTab.addClass('sh-mmenu-tabs__tab--active');
 				otherControls.removeClass('sh-mmenu-links__link--temp-lock');
+
+				tabsContainer.animate({
+					height: newTab.height() + "px",
+				}, {
+					duration: 250,
+					easing: "linear",
+					complete: function () {
+					},
+					queue: false
+				});
 			}, 270);
 		}
 	});
