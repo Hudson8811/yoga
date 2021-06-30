@@ -148,10 +148,13 @@
 			}
 
 			&--arrow svg {
-				margin-left: 3px;
+
+				position: absolute;
+				right: 3px;
+				top: 11px;
 				display: inline-block;
 				margin-bottom: -1px;
-				margin-right: -4px;
+				margin-right: 0;
 
 			}
 			&--temp-lock{
