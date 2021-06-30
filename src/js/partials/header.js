@@ -1,18 +1,38 @@
 $(document).ready(function () {
 	$('.sh-burger').click(function () {
-		if($(this).closest('.sh-burger-wrap-right').length>0){//мобилка
+		if ($(this).closest('.sh-burger-wrap-right').length > 0) {//мобилка
 
-			if($(this).hasClass('sh-burger--active')){
+			if ($(this).hasClass('sh-burger--active')) {
 				closeMobMenu();
 				$('.sh-menu-wrap').removeClass('sh-menu-wrap--open');//на всякий случай если открыто - закроем десктопное меню
+
+				/*$('html, body').css({
+					'height': '',
+					'width': '',
+					'overflow': 'auto'
+				});*/
+
 			}
-			else{
+			else {
+
 				$(this).addClass('sh-burger--active');
-				$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--open');
+				$('.sh-mmenu-mobile').scrollTop(0);
+				setTimeout(function(){
+					$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--open');
+
+				}, 70);
+
+				/*$('html, body').css({
+					'height': '100%',
+					'width': '100%',
+					'overflow': 'hidden'
+				});*/
 			}
 			$('.sh-mmenu-mobile').css('max-height', ($(window).height() - $('#site-header').height()));
+
+
 		}
-		else{//десктоп
+		else {//десктоп
 			$(this).toggleClass('sh-burger--active');
 			$('.sh-menu-wrap').toggleClass('sh-menu-wrap--open');
 		}
@@ -134,7 +154,11 @@ $(document).ready(function () {
 
 	$(window).scroll(function () {
 		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
+		$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--hide-fast');
 		closeMobMenu();
+		setTimeout(function () {
+			$('.sh-mmenu-mobile').removeClass('sh-mmenu-mobile--hide-fast');
+		}, 250);
 	});
 	//menu-worker
 
@@ -156,9 +180,9 @@ $(document).ready(function () {
 
 			}
 
-			var activetab=menu.find('.sh-mmenu-tabs__tab--active');
+			var activetab = menu.find('.sh-mmenu-tabs__tab--active');
 
-			if(activetab.length>0){
+			if (activetab.length > 0) {
 				menu.find('.sh-mmenu-tabs').height(activetab.height());
 			}
 
@@ -221,7 +245,6 @@ $(document).ready(function () {
 			$('.sh-mmenu-mobile__level--active').removeClass('sh-mmenu-mobile__level--active hide show');
 			$('#sh-mmenu-mobile-l1').addClass('sh-mmenu-mobile__level--active');
 		}, 400);
-
 	}
 
 	$('.js-sh-mmenu-mobile__open-sub').click(function (e) {
@@ -305,8 +328,8 @@ $(document).ready(function () {
 
 
 
-	$(window).on('resize',function (){
-		$('.sh-mmenu-mobile__levels').css('height','auto');
+	$(window).on('resize', function () {
+		$('.sh-mmenu-mobile__levels').css('height', 'auto');
 		$('.sh-mmenu-mobile').css('max-height', ($(window).height() - $('#site-header').height()));
 	})
 

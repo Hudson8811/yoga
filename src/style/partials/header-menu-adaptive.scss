@@ -30,7 +30,10 @@
 		//max-height: calc(--vh - 15vw);//компенсируем высоту шапки d
 		overflow: auto;
 		overflow-x: hidden;
+		&--hide-fast{
+			transition-duration: .15s;
 
+		}
 		.sh-mmenu-mobile__level--active{
 			pointer-events: none;
 		}
