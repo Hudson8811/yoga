@@ -51,6 +51,10 @@
 
 		}
 
+		&--hide-fast{
+		transition: opacity .12s linear;
+		}
+
 		&--simple {
 			margin-left: -34px;
 			padding: 26px 34px;

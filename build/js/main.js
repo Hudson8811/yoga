@@ -669,7 +669,11 @@ $(document).ready(function () {
 	$('.sh-mmenu-mobile__link:not(.sh-mmenu-mobile__link--no-link)').click(closeMobMenu);
 
 	$(window).scroll(function () {
-		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
+		$('.sh-mmenu-item').addClass('sh-mmenu-item--hide-fast').removeClass('sh-mmenu-item--active');
+		setTimeout(function () {
+			$('.sh-mmenu-item').removeClass('sh-mmenu-item--hide-fast');
+		}, 250);
+
 		$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--hide-fast');
 		closeMobMenu();
 		setTimeout(function () {
