@@ -167,7 +167,7 @@ $(document).ready(function () {
 	//menu-worker
 
 	$('#site-header').on('mouseleave', function () {
-		//$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
+		$('.sh-mmenu-item').removeClass('sh-mmenu-item--active');
 	})
 
 
