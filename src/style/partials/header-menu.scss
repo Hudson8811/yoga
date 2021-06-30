@@ -127,7 +127,7 @@
 
 			&:hover,
 			&--active {
-				color: #25378D;
+			//	color: #25378D;
 
 				&::before,
 				&::after {
@@ -135,7 +135,7 @@
 				}
 
 				svg {
-					fill: #25378D;
+					//fill: #25378D;
 				}
 			}
 

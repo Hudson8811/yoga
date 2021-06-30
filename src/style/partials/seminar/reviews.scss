@@ -44,7 +44,7 @@
 }
 
 .reviews-form__top-inp-wrap {
-	width: 243px;
+	width: calc(50% - 14px);
 	display: block;
 	padding-bottom: 14px;
 	margin-left: 14px;
@@ -79,7 +79,7 @@
 	color: $dark;
 	/* FieldBorder */
 	border: 1px solid #D9DBDE;
-	border-radius: 21px;
+	border-radius: 5px;
 	background: #FFFFFF;
 	font-size: 13px;
 	line-height: 21px;
@@ -95,6 +95,7 @@
 	width: 206px;
 	height: 43px;
 	margin-top: 14px;
+	border-radius: 5px;
 
 	&:hover {}
 
