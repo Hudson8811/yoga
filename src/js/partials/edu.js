@@ -318,7 +318,6 @@ $(document).ready(function () {
 	window.addEventListener("resize", tabresizeFunc);
 
 
-
 	if (typeof ajaxTabs !== 'undefined' && ajaxTabs) {
 		let tabRequest = false;
 		let currentPage = 1;
@@ -328,20 +327,6 @@ $(document).ready(function () {
 		let loadedCount = [];
 		let imagesBlock = 0;
 		let mode = 'start';
-
-		if (typeof tabIndex !== 'undefined'){
-			getScrollContent(tabIndex);
-			if ($(window).width() < 750) {
-				if (currentTab === 0) {
-					addLeftPad = 0
-				} else if (currentTab < totalTabs - 1) {
-					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) / 2 - parseInt(tabsList.css('padding-left'))) * -1;
-				} else {
-					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt(tabsList.css('padding-left')) * 2) * -1;
-				}
-				scrollTabs(currentTab, 0);
-			}
-		}
 
 		$(window).on('resize scroll', function () {
 			if ($('#music-preloader').length) {
@@ -517,7 +502,19 @@ $(document).ready(function () {
 	}
 
 
-
+	if (typeof tabIndex !== 'undefined' && $('.page-tabs').length){
+		getScrollContent(tabIndex);
+		if ($(window).width() < 750) {
+			if (currentTab === 0) {
+				addLeftPad = 0
+			} else if (currentTab < totalTabs - 1) {
+				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) / 2 - parseInt(tabsList.css('padding-left'))) * -1;
+			} else {
+				addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt(tabsList.css('padding-left')) * 2) * -1;
+			}
+			scrollTabs(currentTab, 0);
+		}
+	}
 
 
 
