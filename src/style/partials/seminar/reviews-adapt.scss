@@ -104,11 +104,14 @@
 			line-height: 24px;
 			letter-spacing: -0.03em;
 			color: $dark;
-			max-height: 24*4px;
 
+			&--with-hide {
+				max-height: 24*4px;
+			}
 			&--with-hide {}
 
-			&--open {}
+			&--open {
+				max-height: 10000px;}
 
 			p {}
 		}
@@ -226,12 +229,13 @@
 			line-height: vw(24);
 			letter-spacing: -0.03em;
 			color: $dark;
-			max-height: vw(24*4);
 			margin-top: vw(23);
 
-			&--with-hide {}
+			&--with-hide {
+				max-height: vw(24*4);}
 
-			&--open {}
+			&--open {
+				max-height: 10000px;}
 
 			p {}
 		}
