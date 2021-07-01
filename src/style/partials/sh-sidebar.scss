@@ -1,0 +1,96 @@
+.sh-sidebar {
+    height: 100vh;
+    width: 338px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #D9DBDE;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translate(-105%, 0);
+    transition: all .5s ease-out;
+
+    &--show {
+        opacity: 1;
+        transform: translate(0, 0);
+        .sh-sidebar__close{
+            opacity: 1;
+        }
+    }
+
+    .simplebar-track.simplebar-vertical {
+
+        top: 53px;
+        height: calc(100% - 53px * 2);
+        right: -3px;
+
+        .simplebar-scrollbar.simplebar-visible {
+
+            width: 3px;
+            background: #D9DBDE;
+            border-radius: 5px;
+        }
+    }
+
+}
+
+.sh-sidebar-inner {
+    height: 100%;
+    padding-top: 53px;
+}
+
+.sh-sidebar-inner2 {
+    padding: 0 36px 52px;
+}
+
+.sh-sidebar-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+
+}
+
+.sh-sidebar-hr-after-top {
+    margin-top: 36px;
+
+}
+
+.sh-sidebar__close {
+    transition: all .4s linear .5s;
+    opacity: 0;
+    svg {
+        position: absolute;
+        left: -22px;
+        top: -25px;
+
+        rect {}
+        cursor: pointer;
+    }
+}
+
+.sh-sidebar-logo {
+    width: 107px;
+    height: auto;
+    display: block;
+
+    &:hover {}
+
+    &:active {}
+
+    &:focus {}
+}
+
+.sh-sidebar-content {
+    padding-top: 36px;
+}
+
+.sh-sidebar-socials {
+
+    padding-top: 3px;
+    margin-bottom: 53px;
+    display: flex;
+    justify-content: center;
+}

@@ -33,12 +33,16 @@ $(document).ready(function () {
 
 		}
 		else {//десктоп
-			$(this).toggleClass('sh-burger--active');
-			$('.sh-menu-wrap').toggleClass('sh-menu-wrap--open');
+			$(this).addClass('sh-burger--active');
+			$('.sh-sidebar').addClass('sh-sidebar--show');
 		}
 
 	});
 
+	$('.js-sh-sidebar__close').click(function () {
+		$('#site-header>.site-header__inner>.sh-left>.sh-burger-wrap>.sh-burger').removeClass('sh-burger--active');
+		$('.sh-sidebar').removeClass('sh-sidebar--show');
+	});
 
 	$(document).on('click', function (e) {
 		if ($(e.target).closest(".sh-mmenu-mobile").length === 0 && $(e.target).closest(".sh-burger").length === 0) {
@@ -337,4 +341,22 @@ $(document).ready(function () {
 		$('.sh-mmenu-mobile').css('max-height', (Math.max($(window).height(), window.innerHeight) - $('#site-header').height()));
 	})
 
+
+
+
+
+	var header_sidebar_scrolbar = new SimpleBar($('#sh-sidebar .sh-sidebar-inner')[0], {
+		autoHide: false,
+		classNames: {
+			content: 'simplebar-content',
+			scrollContent: 'simplebar-scroll-content',
+			scrollbar: 'simplebar-scrollbar',
+			track: 'simplebar-track'
+			// defaults
+			/*content: 'simplebar-content simplebar-playlist-content',
+			scrollContent: 'simplebar-scroll-content simplebar-playlist-scroll-content',
+			scrollbar: 'simplebar-scrollbar simplebar-playlist-scrollbar',
+			track: 'simplebar-track simplebar-playlist-track'*/
+		}
+	});
 });
