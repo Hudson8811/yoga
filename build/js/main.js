@@ -668,7 +668,7 @@ $(document).ready(function () {
 
 	$('.sh-mmenu-mobile__link:not(.sh-mmenu-mobile__link--no-link)').click(closeMobMenu);
 
-	$(window).scroll(function () {
+	/*$(window).scroll(function () {
 		$('.sh-mmenu-item').addClass('sh-mmenu-item--hide-fast').removeClass('sh-mmenu-item--active');
 		setTimeout(function () {
 			$('.sh-mmenu-item').removeClass('sh-mmenu-item--hide-fast');
@@ -679,7 +679,7 @@ $(document).ready(function () {
 		setTimeout(function () {
 			$('.sh-mmenu-mobile').removeClass('sh-mmenu-mobile--hide-fast');
 		}, 250);
-	});
+	});*/
 	//menu-worker
 
 	$('#site-header').on('mouseleave', function () {

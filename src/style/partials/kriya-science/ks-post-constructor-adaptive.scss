@@ -1073,6 +1073,16 @@
 			.kspc-twpah-unwrap {}
 		}
 
+		&--mob-show-13 .kspc-twpah__text {
+			max-height: vw(13*24);
+
+			.kspc-twpah-unwrap {
+				top: vw(12*24);
+				right: 0;
+				padding-right: 26.8%;
+			}
+		}
+
 		&__text {
 			position: relative;
 			margin-top: vw(29);
@@ -1584,11 +1594,29 @@
 			}
 		}
 	}
+
+
+
+
+	.kspc-twpah--mob-show-13 .kspc-twpah__text {
+
+		.kspc-twpah-unwrap {
+			top: 79vw;
+		}
+	}
 }
 
 
 
 @media screen and (min-width: 413px) and (max-width: 415px) {
+
+	.kspc-twpah--mob-show-13 .kspc-twpah__text {
+		max-height: 84.2vw;
+
+		.kspc-twpah-unwrap {
+			top: 78vw;
+		}
+	}
 
 	/*.kspc-twpah-unwrap {
 		top: 84.9vw;

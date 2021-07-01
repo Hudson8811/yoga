@@ -44,6 +44,11 @@
 
 		&--show-9 {
 
+			max-height: 24*9px;
+
+			.kspc-twpah-unwrap {
+				top: 24*8px;
+			}
 			.kspc-twpah-unwrap {}
 		}
 
@@ -95,6 +100,11 @@
 
 		&--show-9 {
 
+			max-height: vw(24*9);
+
+			.kspc-twpah-unwrap {
+				top: vw(24*8);
+			}
 			.kspc-twpah-unwrap {}
 		}
 
