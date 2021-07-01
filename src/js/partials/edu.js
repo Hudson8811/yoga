@@ -329,6 +329,20 @@ $(document).ready(function () {
 		let imagesBlock = 0;
 		let mode = 'start';
 
+		if (typeof tabIndex !== 'undefined'){
+			getScrollContent(tabIndex);
+			if ($(window).width() < 750) {
+				if (currentTab === 0) {
+					addLeftPad = 0
+				} else if (currentTab < totalTabs - 1) {
+					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) / 2 - parseInt(tabsList.css('padding-left'))) * -1;
+				} else {
+					addLeftPad = (($('.page-tabs-section__container').width() - $('.page-tabs__item').eq(currentTab).innerWidth()) - parseInt(tabsList.css('padding-left')) * 2) * -1;
+				}
+				scrollTabs(currentTab, 0);
+			}
+		}
+
 		$(window).on('resize scroll', function () {
 			if ($('#music-preloader').length) {
 				if ($('#music-preloader').isInViewport()) {
