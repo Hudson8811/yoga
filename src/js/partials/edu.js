@@ -543,7 +543,7 @@ $(document).ready(function () {
 			//console.log($(tabLinks).eq(index).attr('data-com-title'));
 			//console.log($(tabLinks).eq(index).attr('data-page-id'));
 
-
+			console.log('tabRequest'+tabRequest);
 			if (!tabRequest) {
 				if (typeof index === 'number') {
 					dataType = 'html';
@@ -561,6 +561,19 @@ $(document).ready(function () {
 					'action': 'loadtab_comments',
 					'post_id': $(tabLinks).eq(index).attr('data-page-id')
 				};
+
+				if ($(tabLinks).eq(index).attr('data-type')==="one") {
+					data.customCommentsType='one';
+					data.post_id=$(tabLinks).eq(index).attr('data-page-id');
+				}
+				else{
+					data.customCommentsType='multi';
+					data.customCommentsPageIdform=$(tabLinks).eq(index).attr('data-form-id');
+					data.post__in=$(tabLinks).eq(index).attr('data-comments_ids');
+				}
+
+				console.log(data);
+
 				if (typeof (customCommentsPerPage) != "undefined" && customCommentsPerPage !== null) {
 					data['per_page'] = customCommentsPerPage;
 				}
@@ -578,7 +591,7 @@ $(document).ready(function () {
 						tabRequest = true;
 						if (typeof index === 'number') {
 							//if (index !== 3 && index !== 0)
-							tabContainer.html('<div style="height: 100vh; max-height: 100vh;"></div>');
+							tabContainer.html('<div style="height: 100vh; max-height: 100vh;"></div>').siblings().html('');
 							setTimeout(function () {
 								tabContainer.siblings('.page--tabs-blocks__tab:not(.page--tabs-'+index+')').html('<div style="height: 100vh; max-height: 100vh;"></div>');
 							}, 400);
