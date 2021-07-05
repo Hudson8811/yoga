@@ -74,6 +74,13 @@
 		&:active {}
 
 		&:focus {}
+
+		&--videos{
+			.artimaster-post__title{
+				font-size: 19px;
+				line-height: 26px;
+			}
+		}
 	}
 
 	.artimaster-posts__pagination {}
@@ -194,6 +201,13 @@
 		&:active {}
 
 		&:focus {}
+
+		&--videos{
+			.artimaster-post__title{
+				font-size: vw(19);
+				line-height: vw(26);
+			}
+		}
 	}
 
 	.artimaster-posts__pagination {

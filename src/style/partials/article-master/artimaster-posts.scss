@@ -31,9 +31,6 @@
 	width: calc(50% - 18px);
     margin-bottom: 83px;
 
-	&--videos{
-		margin-bottom: 49px;
-	}
 
 
 	&__img-wrapper {
@@ -161,6 +158,15 @@
 	&:active {}
 
 	&:focus {}
+
+
+	&--videos{
+		margin-bottom: 49px;
+		.artimaster-post__title{
+			font-size: 17px;
+			line-height: 26px;
+		}
+	}
 }
 
 .artimaster-posts__pagination{
