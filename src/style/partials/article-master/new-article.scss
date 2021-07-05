@@ -83,6 +83,7 @@
 			@include scalepic();
 		}
 
+
 		&--videos {
 			margin-bottom: 21px;
 			&::after {
@@ -148,6 +149,17 @@
 	}
 
 	&__desc {}
+
+
+	&--videos + .hr-video + &--videos{
+		padding-top: 41px;
+	}
+	&--videos{
+		.card__title{
+			font-size: 17px;
+			line-height: 26px;
+		}
+	}
 }
 
 .article-arrow {

@@ -133,6 +133,14 @@
 		.slick-dots {
 			display: none !important;
 		}
+
+
+		&--videos{
+			.card__title{
+				font-size: 19px;
+				line-height: 26px;
+			}
+		}
 	}
 
 
@@ -149,6 +157,8 @@
 		line-height: 17px;
 
 	}
+
+
 }
 
 @media screen and (max-width: 749px) {
@@ -272,6 +282,16 @@
 		.slick-dots {
 			display: none !important;
 		}
+
+		&--videos + .hr-video + &--videos{
+			padding-top: vw(41);
+		}
+		&--videos{
+			.card__title{
+				font-size: vw(19);
+				line-height: vw(26);
+			}
+		}
 	}
 
 
@@ -291,4 +311,6 @@
 		line-height: vw(17);
 
 	}
+
+
 }
