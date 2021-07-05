@@ -1,0 +1,208 @@
+.course-archive {}
+
+.course-archive-item-hr-before {
+	margin-top: 93px;
+
+	@media screen and (max-width:1150px) {}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(94);
+	}
+
+	&+.course-archive-item {
+		margin-top: 50px;
+
+		@media screen and (max-width:1150px) {}
+
+		@media screen and (max-width: 749px) {
+			margin-top: vw(50);
+		}
+	}
+
+
+}
+
+@media screen and (min-width: 750px) {
+	.course-archive-item {
+		@media screen and (max-width:1150px) {}
+
+		@media screen and (max-width: 749px) {}
+
+		.kspc-text-with-pic-and-hide:first-child {
+			margin-top: 0;
+
+			@media screen and (max-width: 1150px) {}
+
+			@media screen and (max-width: 749px) {}
+
+			.kspc-twpah__text p:first-child {
+				margin-top: -9px;
+
+				@media screen and (max-width:1150px) {
+					margin-top: -5px;
+				}
+
+				@media screen and (max-width: 749px) {
+					margin-top: 6px;
+				}
+			}
+
+			.kspc-twpah__pic {
+				margin-top: 6px;
+				margin-bottom: 30px;
+
+				@media screen and (max-width:1150px) {
+					margin-bottom: 50px;
+				}
+
+				@media screen and (max-width: 749px) {}
+			}
+
+			.kspc-twpah__text {
+				margin-bottom: 49px;
+
+				@media screen and (max-width:1150px) {
+					margin-bottom: 39px;
+
+				}
+
+				@media screen and (max-width: 749px) {}
+			}
+
+			.kspc-twpah {
+				margin-bottom: -30px;
+
+				@media screen and (max-width:1150px) {}
+
+				@media screen and (max-width: 749px) {}
+			}
+		}
+
+		.kspc-simple-text__h2--small {
+			font-size: 28px;
+			line-height: 28px;
+
+			@media screen and (max-width:1150px) {
+				font-size: 24px;
+				line-height: 39px;
+			}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+		.kspc-simple-text__p ul:first-child {
+			margin-top: 46px;
+
+			@media screen and (max-width:1150px) {
+				margin-top: 39px;
+			}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+
+		.kspc-text-with-pic-and-hide+.kspc-simple-text {
+			margin-top: 52px;
+
+			@media screen and (max-width:1150px) {
+				margin-top: 31px;
+			}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+
+		.kspc-simple-text__p ul+p {
+			@media screen and (max-width:1150px) {
+				margin-top: 43px;
+			}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+	}
+}
+
+
+@media screen and (max-width: 749px) {
+	.course-archive-item {
+
+
+		.kspc-text-with-pic-and-hide:first-child {
+			margin-top: 0;
+
+			.kspc-twpah__text p:first-child {}
+
+			.kspc-twpah__pic {}
+
+			.kspc-twpah__text {}
+
+			.kspc-twpah {}
+		}
+
+		.kspc-simple-text__h2--small {
+			font-size: vw(24);
+			line-height: vw(32);
+		}
+
+		.kspc-simple-text__p ul:first-child {}
+
+
+		.kspc-text-with-pic-and-hide+.kspc-simple-text {
+			margin-top: vw(42);
+		}
+
+
+		.kspc-simple-text__p ul+p {}
+
+	}
+}
+
+.btn-more-about-course-wrap {
+
+	@media screen and (max-width: 749px) {
+		display: flex;
+		justify-content: center;
+
+	}
+}
+
+.btn--more-about-course {
+	margin-top: 47px;
+	width: 267px;
+
+	@media screen and (max-width:1150px) {
+		margin-top: 52px;
+		display: inline-flex;
+		width: auto;
+		min-width: 212px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(51);
+		min-width: vw(212);
+	}
+}
+
+.section-hmlearn2-after-course-archive {
+	margin-top: 93px;
+
+	@media screen and (max-width:1150px) {}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(94);
+	}
+}
+
+.ks-post-constructor--course-archive {
+	padding-bottom: 0;
+
+
+	@media screen and (max-width:1150px) {
+		padding-top: 51px;
+	}
+
+	@media screen and (max-width: 749px) {
+		padding-top: vw(51);
+	}
+}

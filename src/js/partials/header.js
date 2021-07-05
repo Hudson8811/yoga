@@ -122,6 +122,18 @@ $(document).ready(function () {
 						//$('#site-header').removeClass('sh-scrolled');
 						$('#site-header').attr('style', 'position: absolute !important; top: ' + Math.ceil(header2TopInStatic - mainHeaderH + 1) + 'px !important');
 						headerStatus = 'absolute_before_header2';
+
+						//В этот момент закрываем меню
+						$('.sh-mmenu-item').addClass('sh-mmenu-item--hide-fast').removeClass('sh-mmenu-item--active');
+						setTimeout(function () {
+							$('.sh-mmenu-item').removeClass('sh-mmenu-item--hide-fast');
+						}, 250);
+
+						$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--hide-fast');
+						closeMobMenu();
+						setTimeout(function () {
+							$('.sh-mmenu-mobile').removeClass('sh-mmenu-mobile--hide-fast');
+						}, 250);
 					}
 
 
