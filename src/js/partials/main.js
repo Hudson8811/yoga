@@ -419,7 +419,7 @@ $(document).ready(function () {
 		}]
 
 	});
-
+/*
 	if ($('.js-hm-events-slider').length > 0) {
 		$('.js-hm-events-slider').slick({
 			slidesToShow: 3,
@@ -453,7 +453,7 @@ $(document).ready(function () {
 		});
 	}
 
-
+*/
 
 	$('.js-category-slider').slick({
 		infinite: true,
