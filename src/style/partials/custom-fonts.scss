@@ -1,0 +1,89 @@
+.fs {
+	&d{
+
+		@media screen and (min-width: 1150px) {
+			&--13{
+				font-size: 13px;
+				line-height: 21px;
+			}
+			&--17{
+				font-size: 17px;
+				line-height: 30px;
+			}
+			&--22{
+				font-size: 22px;
+				line-height: 36px;
+			}
+			&--28{
+				font-size: 28px;
+				line-height: 42px;
+			}
+			&--35{
+				font-size: 35px;
+				line-height: 45px;
+			}
+			&--45{
+				font-size: 45px;
+				line-height: 49px;
+			}
+		}
+	}
+
+	&t{
+		@media screen and (max-width: 1150px) and  (min-width: 750px)  {
+			&--13{
+				font-size: 13px;
+				line-height: 21px;
+			}
+			&--15{
+				font-size: 15px;
+				line-height: 24px;
+			}
+			&--19{
+				font-size: 19px;
+				line-height: 26px;
+			}
+			&--24{
+				font-size: 24px;
+				line-height: 30px;
+			}
+			&--32{
+				font-size: 32px;
+				line-height: 39px;
+			}
+			&--39{
+				font-size: 39px;
+				line-height: 45px;
+			}
+		}
+	}
+
+	&m{
+		@media screen and (max-width: 749px) {
+			&--13{
+				font-size: vw(13);
+				line-height: vw(21);
+			}
+			&--15{
+				font-size: vw(15);
+				line-height: vw(24);
+			}
+			&--19{
+				font-size: vw(19);
+				line-height: vw(26);
+			}
+			&--24{
+				font-size: vw(24);
+				line-height: vw(30);
+			}
+			&--32{
+				font-size: vw(32);
+				line-height: vw(39);
+			}
+			&--39{
+				font-size: vw(39);
+				line-height: vw(45);
+			}
+		}
+	}
+}
