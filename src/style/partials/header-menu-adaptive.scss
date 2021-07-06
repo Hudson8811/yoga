@@ -27,9 +27,12 @@
 		opacity: 0;
 		pointer-events: none;
 		transition-duration: .3s;
+		height: 100vh;
 		//max-height: calc(--vh - 15vw);//компенсируем высоту шапки d
 		overflow: auto;
 		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
 		&--hide-fast{
 			transition-duration: .15s;
 
@@ -56,7 +59,7 @@
 		display: block;
 		overflow: hidden;
 		transition: height 0.4s;
-
+		flex-grow: 1;
 		min-height: 388px;
 
 		@media screen and (max-width: 749px) {
