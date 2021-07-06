@@ -1232,6 +1232,15 @@
 			height: vw(289);
 			background: linear-gradient(0deg, rgba(3, 17, 83, 0.84) 0%, rgba(28, 40, 94, 0) 100%);
 		}
+		&--gold-prop-mob{
+			&::after {
+				//padding-top: calc(100vh - 53px);
+				padding-top: 61.804697157%;
+				height: auto;
+				height: unset;
+			}
+
+		}
 	}
 
 	.hm-quote-practice-desc {

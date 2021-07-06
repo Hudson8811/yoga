@@ -30,7 +30,15 @@
 				height: calc(var(--vh, 1vh) * 100 - 53px);
 			}
 		}
-
+		&--gold-prop-mob{
+			.big-top-pic__relative {
+				&::before {
+					padding-top: 61.804697157%;
+					height: auto;
+					height: unset;
+				}
+			}
+		}
 		&__img {}
 	}
 	.big-top-pic--type-comments .big-top-pic__relative::before {
