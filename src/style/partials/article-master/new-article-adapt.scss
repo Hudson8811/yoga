@@ -83,7 +83,7 @@
 
 		&__card-title {
 			margin-bottom: 9px;
-			font-weight: 500;
+			font-weight: 600;
 			font-size: 19px;
 			line-height: 26px;
 			/* identical to box height, or 187% */
@@ -227,7 +227,7 @@
 
 				&+.new-article__card-title {
 					margin-bottom: vw(4);
-					font-weight: 500;
+					font-weight: 600;
 					font-size: vw(15);
 					line-height: vw(24);
 				}
@@ -239,8 +239,6 @@
 
 		&__card-title {
 			margin-bottom: vw(3);
-			font-style: normal;
-			font-weight: normal;
 			font-size: vw(15);
 			line-height: vw(24);
 

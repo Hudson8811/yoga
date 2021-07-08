@@ -597,7 +597,7 @@
 
 	.master {
 		padding-top: 48px;
-		padding-bottom: 51px;
+		padding-bottom: 85px;
 
 		&_video {}
 
@@ -609,7 +609,8 @@
 		&__info {
 			margin-bottom: 18px;
 			color: $dark;
-			font-size: 15px;
+			font-size: 13px;
+
 
 			span {
 				display: inline;
@@ -627,7 +628,7 @@
 	}
 
 	.insta-widget {
-		padding-bottom: 62px;
+		padding-bottom: 55px;
 
 		&__content {
 			padding: 0;
@@ -678,7 +679,7 @@
 
 		.slider-news-widget {
 			width: calc(50% - 18px);
-			margin-bottom: 84px;
+			margin-bottom: 97px;
 		}
 
 		.slnewsw-slider-item__pic {
@@ -810,7 +811,7 @@
 	}
 
 	.events-widget-wrap {
-		padding-bottom: 43px;
+		padding-bottom: 49px;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
@@ -1039,7 +1040,7 @@
 		width: calc(50% - 18px);
 
 		.newposts-widget__items {
-			padding-top: 6px;
+			padding-top: 7px;
 		}
 
 		.newposts-widget-item+.newposts-widget-item {
@@ -1048,21 +1049,20 @@
 
 		&__title {
 			font-size: 15px;
-			padding-bottom: 33px;
 			font-weight: 600;
+			padding-bottom: 14px;
 		}
 
 		.newposts-widget-item__title {
-			font-size: 19px;
+			font-size: 15px;
 			line-height: 29px;
-			line-height: 30px;
 			//min-width: 180px;
 		}
 
 		.newposts-widget-item__date {
 			font-size: 15px;
 			line-height: 21px;
-			margin-top: -1px;
+			margin-top: -2px;
 		}
 	}
 
@@ -1071,12 +1071,15 @@
 	}
 
 	.wnevents-widget {
-		margin-bottom: 50px;
+		margin-bottom: 49px;
 		width: calc(50% - 18px);
 		padding: 0;
 		display: flex;
 		flex-direction: column-reverse;
 		justify-content: space-between;
+		&__item{
+			margin-top: 38px;
+		}
 
 		.wnevents-widget__item:last-child {
 			margin-top: 0;
@@ -1084,7 +1087,8 @@
 
 		&__title {
 			color: $dark;
-			font-weight: 600;
+			font-weight: 500;
+			padding: 6px 20px;
 		}
 	}
 
@@ -1898,7 +1902,7 @@
 			font-weight: 400;
 			line-height: vw(30);
 			padding-bottom: vw(13);
-			margin-bottom: vw(22);
+			margin-bottom: vw(0);
 		}
 
 		&__img-wrapper {
@@ -1942,7 +1946,7 @@
 
 		&__title {
 			font-size: vw(15);
-			padding-bottom: vw(34);
+			padding-bottom: vw(19);
 
 			&::after {
 				width: vw(16);
@@ -2047,7 +2051,7 @@
 	}
 
 	.custom-widget-title {
-		font-weight: 400;
+		font-weight: 500;
 	}
 
 	.slnewsw-slider--video .slick-arrow {
@@ -2082,7 +2086,7 @@
 		}
 
 		.slnewsw-slider {
-			padding-bottom: vw(33);
+			padding-bottom: 8.16667vw;
 			width: vw(266);
 			margin: 0 auto vw(84);
 
@@ -2096,8 +2100,7 @@
 		}
 
 		.custom-widget-title {
-			font-size: vw(15);
-			padding-bottom: vw(34);
+			padding-bottom: vw(19);
 
 			&:after {
 				width: vw(16);
@@ -2112,14 +2115,16 @@
 		}
 
 		.slnewsw-slider-item__name {
-			font-size: vw(19);
+			font-size: vw(15);
 			line-height: vw(29);
-			margin-top: vw(15);
+			margin-top: vw(14);
+			font-weight: 500;
 		}
 	}
 
 	.slider-news-widget:first-child .slnewsw-slider .slnewsw-arrow-mob {
-		display: block !important;
+		//display: block !important;
+		display: none !important;
 		position: absolute;
 		top: vw(124);
 
@@ -2142,11 +2147,11 @@
 
 		.newposts-widget {
 			width: 100%;
-			margin-bottom: vw(93);
+			margin-bottom: 14.83333vw;
 
 			&__title {
 				font-size: vw(15);
-				padding-bottom: vw(33);
+				padding-bottom: 5.16667vw;
 
 				&::after {
 					width: vw(16);
@@ -2156,17 +2161,19 @@
 			}
 
 			.newposts-widget-item__title {
-				font-size: vw(19);
-				line-height: vw(30);
+				font-size: vw(15);
+				line-height: vw(29);
+				font-weight: 500;
 			}
 
 			.newposts-widget-item__date {
 				font-size: vw(15);
 				line-height: vw(21);
+				margin-top: 0px;
 			}
 
 			.newposts-widget-item+.newposts-widget-item {
-				margin-top: vw(26);
+				margin-top: 6.22222vw;
 			}
 		}
 
@@ -2174,17 +2181,20 @@
 			margin-top: vw(-5);
 			width: 100%;
 			padding: 0 vw(32) 0 vw(32);
-			margin-bottom: vw(10);
+			margin-bottom: vw(0);
 			flex-direction: column;
 
 			&__item {
-				margin-bottom: vw(50);
+				margin-bottom: 12.88889vw;
 			}
 
 			&__title {
 				font-size: vw(15);
+				line-height: vw(21);
 				padding: vw(6) vw(10) vw(7);
 				width: vw(182);
+				font-weight: 500;
+				letter-spacing: -0.08em;
 			}
 
 			&__pic {

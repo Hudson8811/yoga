@@ -24,7 +24,7 @@
 .music-player-top__arrow,
 .music-player-top__arrow {
 	position: absolute;
-	top: 43px;
+	top: 41px;
 	width: 7px;
 	box-sizing: content-box;
 	padding: 10px;
@@ -56,11 +56,11 @@
 }
 
 .music-player-top__arrow--next {
-	right: 41px;
+	right: 42px;
 }
 
 .music-player-top__arrow--prev {
-	left: 41px;
+	left: 42px;
 }
 
 .music-player-center {
@@ -97,11 +97,11 @@
 .music-player__song-name {
 	display: block;
 	/* Font_Title_dark */
-	margin-top: 19px;
+	margin-top: 18px;
 	text-align: center;
 	color: $dark;
-	font-size: 13px;
-	font-weight: normal;
+	font-size: 15px;
+	font-weight: 500;
 	font-style: normal;
 	line-height: 1.2;
 }
@@ -124,9 +124,6 @@
 	margin-top: 18px;
 }
 
-.music-player__controls {
-	margin-top: -2px;
-}
 
 .soundRS__progress-container {
 	width: 100%;
@@ -233,7 +230,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: -2px;
+	margin-top: 2px;
 }
 
 .music-player-mainctrl {
@@ -495,7 +492,7 @@
 	align-items: flex-end;
 	justify-content: space-between;
 	width: 100%;
-	margin-top: 19px;
+    margin-top: 11px;
 
 	&__playlist,
 	&__orig_link,

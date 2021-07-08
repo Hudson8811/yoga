@@ -1312,18 +1312,13 @@ $(document).ready(function () {
 		responsive: [{
 			breakpoint: 1150,
 			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2,
-				speed: slickSpeedMain * 2,
-			}
-		}, {
-			breakpoint: 749,
-			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				variableWidth: true,
 				arrows: false,
-				speed: slickSpeedMain
+				speed: slickSpeedMain,
+				/*,
+									dots: false,*/
 			}
 		}]
 

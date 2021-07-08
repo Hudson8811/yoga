@@ -1608,15 +1608,15 @@ body {
 
 	&__title {
 		position: relative;
-		margin-bottom: 22px;
+		margin-bottom: 7px;
 		padding-bottom: 6px;
 		text-transform: uppercase;
 		color: $dark;
-		font-size: 13px;
-		font-weight: 600;
+		font-weight: 500;
+		font-size: 17px;
 		line-height: 30px;
 
-		&::after {
+		/*&::after {
 			position: absolute;
 			bottom: 0;
 			left: 50%;
@@ -1626,7 +1626,7 @@ body {
 			margin-left: -6px;
 			content: '';
 			border-top: 1px solid;
-		}
+		}*/
 	}
 
 	&__img-wrapper {
@@ -1696,16 +1696,17 @@ body {
 .custom-widget-title {
 	position: relative;
 	display: block;
-	padding-bottom: 34px;
+    padding-bottom: 19px;
 	text-align: center;
 	text-transform: uppercase;
 	color: $dark;
-	font-size: 13px;
-	font-weight: 600;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 30px;
 	font-style: normal;
 	line-height: 1;
 
-	&::after {
+/*	&::after {
 		position: absolute;
 		top: auto;
 		bottom: 22px;
@@ -1715,7 +1716,7 @@ body {
 		height: 1px;
 		content: '';
 		background: #919AA4;
-	}
+	}*/
 }
 
 .insta-widget {
@@ -1982,12 +1983,12 @@ input.email-cinp {
 //////////////////////////////
 
 .newposts-widget {
-	margin-bottom: 56px;
+    margin-bottom: 52px;
 
 	&__title {}
 
 	&__items {
-		padding-top: 8px;
+		padding-top: 6px;
 	}
 }
 
@@ -2050,7 +2051,7 @@ input.email-cinp {
 
 .wnevents-widget {
 	position: relative;
-	margin-bottom: 56px;
+    margin-bottom: 51px;
 
 	&__item {
 		display: flex;
@@ -2059,7 +2060,7 @@ input.email-cinp {
 		@include hov();
 
 		&+.wnevents-widget__item {
-			margin-top: 29px;
+			margin-top: 33px;
 		}
 
 		&--big {
@@ -2102,7 +2103,7 @@ input.email-cinp {
 	box-sizing: border-box;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 9px 22px 9px;
+    padding: 6px 13px;
 	text-align: center;
 	text-transform: uppercase;
 	color: $dark;
@@ -2112,7 +2113,7 @@ input.email-cinp {
 	background: #fff;
 	//margin-top: -15px;
 	font-family: 'Montserrat';
-	font-size: 13px;
+    font-size: 15px;
 	font-weight: 500;
 	font-style: normal;
 	line-height: 1;

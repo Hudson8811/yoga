@@ -23,6 +23,10 @@
 
 	}
 
+	.part-wsidebar__sidebar--article-master .music-player-wrap {
+		margin-bottom: 20px;
+	}
+
 	.music-player__swipe-area {
 		top: 36px;
 		height: 100px;
@@ -41,8 +45,11 @@
 		}
 
 		&__song-name {
-			margin-top: 20px;
+			margin-top: 16px;
 			color: $dark;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 21px;
 		}
 
 		&__song-artist {
@@ -50,28 +57,34 @@
 		}
 
 		&__time-progress {
-			margin-top: 28px;
+			margin-top: 26px;
 		}
 
 		&__time-container {
 			margin-top: 9px;
 		}
 
+		&__controls {
+			margin-top: 0px;
+		}
+
+
 		.musicpl-bottom-controls {
-			margin-top: 20px;
+			//margin-top: 20px;
+			margin-top: 11px;
 		}
 
 		.music-player-top__arrow {
-			top: 75px;
-			width: 11px;
+			top: 67px;
+			width: 7px;
 		}
 
 		.music-player-top__arrow--prev {
-			left: 102px;
+			left: 105px;
 		}
 
 		.music-player-top__arrow--next {
-			right: 102px;
+			right: 105px;
 		}
 
 		.music-player-top__next,
@@ -105,7 +118,7 @@
 	//767 было
 
 
-	.soundRS--horizontal{
+	.soundRS--horizontal {
 		height: 3px;
 	}
 
@@ -133,12 +146,13 @@
 		}
 
 		&__song-name {
-			margin-top: vw(21);
-			font-size: vw(13);
+			margin-top: vw(17);
+			font-size: vw(15);
+			line-height: vw(21);
 		}
 
 		&__song-artist {
-			margin-top: vw(8);
+			margin-top: vw(6);
 			font-size: vw(13);
 		}
 
@@ -166,8 +180,8 @@
 
 
 		.musicpl-bottom-controls {
-			margin-top: vw(22);
-			margin-bottom: vw(6);
+			margin-top: vw(12);
+			margin-bottom: vw(15);
 
 			&__orig_link {
 
@@ -203,17 +217,17 @@
 		}
 
 		.music-player-top__arrow--prev {
-			left: vw(27);
+			left: vw(32);
 		}
 
 		.music-player-top__arrow--next {
-			right: vw(27);
+			right: vw(32);
 		}
 
 		.music-player-top__arrow {
 			position: absolute;
 			top: vw(74);
-			width: vw(11);
+			width: vw(7);
 			height: vw(28);
 			cursor: pointer;
 		}
@@ -247,7 +261,9 @@
 			min-height: 12px;
 		}
 	}
-
+	.part-wsidebar__sidebar--article-master .music-player-wrap {
+		margin-bottom: vw(93);
+	}
 	.music-player-mainctrl__pause img,
 	.music-player-mainctrl__pause svg,
 	.music-player-mainctrl__play img,
@@ -325,7 +341,7 @@
 
 		width: vw(36);
 		height: vw(36);
-		  border-radius: vw(50);
+		border-radius: vw(50);
 
 		img {
 			width: vw(12);
