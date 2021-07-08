@@ -3,9 +3,10 @@
 	.reviews {
 		margin-top: 88px;
 
-		&--after-tabs-and-socials{
-				margin-top: 35px;
+		&--after-tabs-and-socials {
+			margin-top: 35px;
 		}
+
 		&:last-child {}
 	}
 
@@ -62,7 +63,9 @@
 
 
 
-	.reviews-form {}
+	.reviews-form {
+		margin-top: 18px;
+	}
 
 	.reviews-textarea {
 		&::placeholder {}
@@ -76,15 +79,20 @@
 		&:focus {}
 	}
 
-	.reviews-container {}
+	.reviews-container {
+		margin-top: 53px;
+	}
 
 	.reviews-item {
-		&__top {}
+		&__top {
+			font-size: 15px;
+			line-height: 22px;
+		}
 
 		&__name {
 			font-style: normal;
 			font-weight: normal;
-			font-size: 19px;
+			font-size: 15px;
 			line-height: 22px;
 			letter-spacing: -0.03em;
 			color: $dark;
@@ -95,6 +103,8 @@
 			line-height: 13px;
 			letter-spacing: -0.03em;
 			color: #AFB4BF;
+			margin-bottom: 3px;
+			margin-left: 21px;
 		}
 
 		&__text {
@@ -108,16 +118,18 @@
 			&--with-hide {
 				max-height: 24*4px;
 			}
+
 			&--with-hide {}
 
 			&--open {
-				max-height: 10000px;}
+				max-height: 10000px;
+			}
 
 			p {}
 		}
 
 		&+.reviews-item {
-			margin-top: 48px;
+			margin-top: 46px;
 		}
 	}
 
@@ -133,7 +145,9 @@
 		&__item {}
 	}
 
-	.reviews-loadmore-wrap {}
+	.reviews-loadmore-wrap {
+		margin-top: 41px;
+	}
 
 	.reviews-loadmore {
 		&__text {
@@ -152,9 +166,10 @@
 	.reviews {
 		margin-top: vw(88);
 
-		&--after-tabs-and-socials{
+		&--after-tabs-and-socials {
 			margin-top: 9.44444vw;
 		}
+
 		&:last-child {
 			margin-bottom: vw(-61);
 		}
@@ -173,18 +188,19 @@
 	}
 
 	.reviews-form {
-		margin-top: vw(26);
+		margin-top: vw(22);
 	}
 
 	.reviews-textarea {
 		padding: vw(10) vw(22);
-		border-radius: vw(21);
+		border-radius: 5px;
 		font-size: vw(13);
 		line-height: vw(21);
 	}
 
 	.reviews-send-btn {
-		width: vw(206);
+		width: vw(159);
+		min-width: vw(159);
 		height: vw(43);
 		margin-top: vw(14);
 	}
@@ -207,7 +223,7 @@
 		&__name {
 			font-style: normal;
 			font-weight: normal;
-			font-size: vw(19);
+			font-size: vw(15);
 			line-height: vw(22);
 			letter-spacing: -0.03em;
 			color: $dark;
@@ -219,7 +235,7 @@
 			letter-spacing: -0.03em;
 			color: #AFB4BF;
 			margin-bottom: vw(3);
-			margin-left: vw(15);
+			margin-left: vw(22);
 		}
 
 		&__text {
@@ -229,19 +245,21 @@
 			line-height: vw(24);
 			letter-spacing: -0.03em;
 			color: $dark;
-			margin-top: vw(23);
+			margin-top: vw(9);
 
 			&--with-hide {
-				max-height: vw(24*4);}
+				max-height: vw(24*4);
+			}
 
 			&--open {
-				max-height: 10000px;}
+				max-height: 10000px;
+			}
 
 			p {}
 		}
 
 		&+.reviews-item {
-			margin-top: vw(49);
+			margin-top: vw(47);
 		}
 	}
 
@@ -295,7 +313,7 @@
 	}
 
 	.reviews-top__count {
-		font-size: vw(19);
+		font-size: vw(15);
 		line-height: vw(39);
 		letter-spacing: -0.03em;
 		margin-left: vw(16);

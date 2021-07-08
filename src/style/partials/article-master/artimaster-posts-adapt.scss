@@ -26,9 +26,11 @@
 
 	.artimaster-posts {
 		margin-top: 29px;
+		margin-bottom: -51px;
 	}
 
 	.artimaster-post {
+		margin-bottom: 51px;
 		&__img-wrapper {
 			&::after {}
 		}
@@ -38,19 +40,20 @@
 		&__title {
 			font-style: normal;
 			font-weight: normal;
-			font-size: 24px;
-			line-height: 32px;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 24px;
 			color: $dark;
-			margin-top: 14px;
+			margin-top: 7px;
 		}
 
 		&__meta {
 			font-style: normal;
 			font-weight: 400;
-			font-size: 13px;
+			font-size: 15px;
 			line-height: 26px;
 			text-transform: uppercase;
-			margin-top: 5px;
+			margin-top: -1px;
 		}
 
 		&__img {}
@@ -65,8 +68,9 @@
 			font-style: normal;
 			font-weight: 400;
 			font-size: 15px;
-			line-height: 30px;
+			line-height: 24px;
 			color: $dark;
+			margin-top: -1px;
 		}
 
 		&:hover {}
@@ -76,14 +80,15 @@
 		&:focus {}
 
 		&--videos{
-			.artimaster-post__title{
+			/*.artimaster-post__title{
 				font-size: 19px;
 				line-height: 26px;
-			}
+			}*/
 		}
 	}
 
-	.artimaster-posts__pagination {}
+	.artimaster-posts__pagination {
+		margin-top: 87px;}
 
 }
 
@@ -92,8 +97,10 @@
 
 @media screen and (max-width: 749px) {
 	.artimaster-posts-section {
-		margin-top: vw(22);
-		margin-bottom: vw(93);
+		//margin-top: vw(22);
+		margin-top: 9.11111vw;
+		//margin-bottom: vw(93);
+		margin-bottom: 16.2vw;
 
 		&--videos {
 			margin-bottom: 16vw;
@@ -128,14 +135,16 @@
 	.artimaster-posts {
 		margin-top: vw(7);
 		margin-bottom: vw(-51);
+		&--videos{
+			margin-bottom: -14.4vw;
+		}
 	}
 
 	.artimaster-post {
 		width: 100%;
 		margin-bottom: vw(51);
 
-		&--videos {
-			margin-bottom: 13.4vw;
+		&--videos {    margin-bottom: 14.4vw;
 		}
 
 		&__img-wrapper {
@@ -143,7 +152,7 @@
 
 			&--videos {
 				&+.artimaster-post__title {
-					margin-top: vw(14);
+					margin-top: vw(7);
 				}
 			}
 		}
@@ -151,11 +160,11 @@
 		&__img {}
 
 		&__title {
-			margin-top: vw(18);
+			margin-top: vw(7);
 			font-style: normal;
 			//font-weight: 500;
-			font-size: vw(19);
-			line-height: vw(27);
+			font-size: vw(15);
+			line-height: vw(24);
 			/* identical to box height, or 137% */
 
 
@@ -165,9 +174,9 @@
 		&__meta {
 			font-style: normal;
 			font-weight: 400;
-			font-size: vw(13);
-			line-height: vw(26);
-			margin-top: vw(8);
+			font-size: vw(15);
+			line-height: vw(24);
+			margin-top: 0px;
 		}
 
 		&__img {}
@@ -188,7 +197,7 @@
 		}
 
 		&__desc {
-			margin-top: vw(5);
+			margin-top: vw(0);
 			font-style: normal;
 			font-weight: 400;
 			font-size: vw(15);
@@ -204,14 +213,13 @@
 
 		&--videos{
 			.artimaster-post__title{
-				font-size: vw(19);
-				line-height: vw(26);
+
 			}
 		}
 	}
 
 	.artimaster-posts__pagination {
-		margin-top: vw(51);
+		margin-top: vw(86);
 	}
 
 }

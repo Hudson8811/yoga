@@ -1,6 +1,7 @@
 @media screen and (max-width: 1150px) {
 	.section-category-slider {
-		padding-top: 31px;
+		//padding-top: 31px;
+		padding-top: 43px;
 		padding-bottom: 35px;
 
 		&__container {
@@ -120,7 +121,7 @@
 
 	//767 было
 	.section-category-slider {
-		padding-top: vw(20);
+		padding-top: vw(43);
 		padding-bottom: vw(58);
 
 		&__container {
@@ -192,13 +193,13 @@
 
 	.category-slider {
 		margin: 0;
-		margin-top: vw(8);
+		margin-top: vw(11);
 
 		.category-slide {
-			width: vw(170);
+			width: vw(154);
 			padding: 0;
 			margin: 0;
-			margin-right: vw(22);
+			margin-right: vw(12);
 
 			&__img-wrapper {
 				max-width: vw(228);

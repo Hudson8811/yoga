@@ -1,12 +1,14 @@
-.kriya-science-main>.reviews:last-child{
+.kriya-science-main>.reviews:last-child {
 	margin-bottom: 0;
 }
 
 .reviews {
 	margin-top: 81px;
-	&--after-tabs-and-socials{
+
+	&--after-tabs-and-socials {
 		margin-top: 26px;
 	}
+
 	&:last-child {
 
 		margin-bottom: -61px;
@@ -30,7 +32,7 @@
 .reviews-top__count {
 	display: inline-block;
 	font-weight: normal;
-	font-size: 22px;
+	font-size: 17px;
 	line-height: 59px;
 	letter-spacing: -0.03em;
 	color: #AFB4BF;
@@ -64,7 +66,7 @@
 }
 
 .reviews-form {
-	margin-top: 18px;
+	margin-top: 13px;
 }
 
 .reviews-textarea {
@@ -105,7 +107,7 @@
 }
 
 .reviews-container {
-	margin-top: 57px;
+	margin-top: 58px;
 }
 
 .reviews-item {
@@ -117,14 +119,14 @@
 	&__name {
 		letter-spacing: -0.03em;
 		color: $dark;
-		font-size: 22px;
-		font-weight: normal;
+		font-size: 17px;
 		line-height: 22px;
+		font-weight: normal;
 	}
 
 	&__days {
-		margin-bottom: 2px;
-		margin-left: 12px;
+		margin-bottom: 4px;
+		margin-left: 22px;
 		letter-spacing: -0.03em;
 		color: #AFB4BF;
 		font-size: 13px;
@@ -135,7 +137,7 @@
 
 	&__text {
 		position: relative;
-		margin-top: 23px;
+		margin-top: 8px;
 		letter-spacing: -0.55px;
 		color: $dark;
 		font-size: 17px;
@@ -156,7 +158,7 @@
 	}
 
 	&+.reviews-item {
-		margin-top: 47px;
+		margin-top: 44px;
 	}
 }
 
@@ -184,7 +186,7 @@
 .reviews-loadmore-wrap {
 	display: flex;
 	justify-content: center;
-	margin-top: 40px;
+    margin-top: 45px;
 }
 
 .reviews-loadmore {

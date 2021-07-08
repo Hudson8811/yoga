@@ -20,7 +20,7 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 19px;
-    margin-bottom: -83px;
+    margin-bottom: -48px;
 	&--videos{
 		margin-bottom: -49px;
 	}
@@ -29,7 +29,7 @@
 
 .artimaster-post {
 	width: calc(50% - 18px);
-    margin-bottom: 83px;
+    margin-bottom: 48px;
 
 
 
@@ -51,8 +51,11 @@
 			@include scalepic();
 		}
 		&--videos{
-			&+.artimaster-post__title {
-				margin-top: 21px;
+			@media screen and (min-width: 1151px){
+				&+.artimaster-post__title {
+					margin-top: 13px;
+				}
+
 			}
 			&::after {
 				padding-top: 62%;
@@ -102,18 +105,18 @@
 	&__title {
 		font-style: normal;
 		font-weight: 500;
-		font-size: 22px;
+		font-size: 17px;
 		line-height: 26px;
 		color: $dark;
-		margin-top: 18px;
+		margin-top: 16px;
 	}
 
 	&__meta {
 		font-weight: 300;
-		font-size: 13px;
+		font-size: 17px;
 		line-height: 26px;
 		text-transform: uppercase;
-		margin-top: 5px;
+		margin-top: 6px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -125,11 +128,13 @@
 	&__meta-theme {
 		color: #25378D;
 		margin-right: 12px;
+		text-transform: capitalize;
 	}
 
 	&__meta-date {
 		color: #AFB4BF;
 		margin-right: 14px;
+		text-transform: lowercase;
 	}
 
 	&__meta-share-icon {
@@ -161,14 +166,16 @@
 
 
 	&--videos{
-		margin-bottom: 49px;
-		.artimaster-post__title{
-			font-size: 17px;
-			line-height: 26px;
+		@media screen and (min-width: 1151px){
+			margin-bottom: 49px;
+			.artimaster-post__title{
+				font-size: 17px;
+				line-height: 26px;
+			}
 		}
 	}
 }
 
 .artimaster-posts__pagination{
-	margin-top: 48px;
+    margin-top: 50px;
 }
