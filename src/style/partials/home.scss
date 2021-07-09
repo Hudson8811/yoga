@@ -189,9 +189,14 @@
 		font-weight: normal;
 		font-style: normal;
 		line-height: 59px;
+
 		&--smallest-lh {
 			line-height: 49px;
 			padding-bottom: 7px;
+		}
+		&--small-d{
+			font-size: 35px;
+			line-height: 39px;
 		}
 	}
 
@@ -242,6 +247,10 @@
 
 		color: #FFFFFF;
 
+		&--small-d{
+			font-size: 58px;
+			line-height: 70px;
+		}
 	}
 }
 
@@ -274,7 +283,8 @@
 			opacity: .7;
 		}
 	}
-	&--type-nidra-course{
+
+	&--type-nidra-course {
 		display: inline-flex;
 		width: auto;
 		align-self: flex-start;
@@ -1696,7 +1706,7 @@ body {
 .custom-widget-title {
 	position: relative;
 	display: block;
-    padding-bottom: 19px;
+	padding-bottom: 19px;
 	text-align: center;
 	text-transform: uppercase;
 	color: $dark;
@@ -1706,7 +1716,7 @@ body {
 	font-style: normal;
 	line-height: 1;
 
-/*	&::after {
+	/*	&::after {
 		position: absolute;
 		top: auto;
 		bottom: 22px;
@@ -1803,7 +1813,7 @@ body {
 		text-transform: uppercase;
 		color: $dark;
 		font-size: 17px;
-		font-weight: 600;
+		font-weight: 500;
 		font-style: normal;
 		line-height: 1;
 	}
@@ -1921,6 +1931,31 @@ input.email-cinp {
 		font-style: normal;
 		line-height: 29px;
 	}
+
+
+	&__metas {
+		display: flex;
+		justify-content: center;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 16px;
+
+		text-transform: uppercase;
+		color: #AFB4BF;
+		flex-wrap: wrap;
+		margin-left: -14px;
+		margin-top: 1px;
+		padding-bottom: 5px;
+	}
+
+	&__metas-place {
+		margin-left: 14px;
+	}
+
+	&__metas-date {
+		margin-left: 14px;
+	}
 }
 
 .slnewsw-slider--video {
@@ -1983,7 +2018,7 @@ input.email-cinp {
 //////////////////////////////
 
 .newposts-widget {
-    margin-bottom: 52px;
+	margin-bottom: 52px;
 
 	&__title {}
 
@@ -2051,7 +2086,7 @@ input.email-cinp {
 
 .wnevents-widget {
 	position: relative;
-    margin-bottom: 51px;
+	margin-bottom: 51px;
 
 	&__item {
 		display: flex;
@@ -2103,7 +2138,7 @@ input.email-cinp {
 	box-sizing: border-box;
 	max-width: 100%;
 	margin: 0 auto;
-    padding: 6px 13px;
+	padding: 6px 13px;
 	text-align: center;
 	text-transform: uppercase;
 	color: $dark;
@@ -2113,7 +2148,7 @@ input.email-cinp {
 	background: #fff;
 	//margin-top: -15px;
 	font-family: 'Montserrat';
-    font-size: 15px;
+	font-size: 15px;
 	font-weight: 500;
 	font-style: normal;
 	line-height: 1;

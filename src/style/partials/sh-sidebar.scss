@@ -55,7 +55,7 @@
 
 .sh-sidebar-hr-after-top {
     margin-top: 36px;
-
+    background: none
 }
 
 .sh-sidebar__close {
@@ -84,13 +84,15 @@
 }
 
 .sh-sidebar-content {
-    padding-top: 36px;
+    padding-top: 21px;
 }
 
 .sh-sidebar-socials {
 
-    padding-top: 3px;
+    padding-top: 1px;
     margin-bottom: 53px;
     display: flex;
     justify-content: center;
 }
+
+

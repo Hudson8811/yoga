@@ -891,6 +891,9 @@
 
 			color: #FFFFFF;
 
+			&--small{
+
+			}
 		}
 	}
 
@@ -921,6 +924,11 @@
 			line-height: 39px;
 			padding-bottom: 1px;
 		}
+		&--small-t{
+			font-size: 24px;
+			font-size: 30px;
+		}
+
 	}
 
 	.hms-info__bottom {
@@ -1273,6 +1281,11 @@
 
 
 			}
+			&--small-m{
+				font-size: vw(24);
+				line-height: vw(30);
+
+			}
 		}
 
 		&__bottom {
@@ -1310,6 +1323,9 @@
 			line-height: vw(39);
 			text-align: center;
 
+			&--small{
+
+			}
 		}
 
 
@@ -1899,7 +1915,6 @@
 
 		&__title {
 			font-size: vw(15);
-			font-weight: 400;
 			line-height: vw(30);
 			padding-bottom: vw(13);
 			margin-bottom: vw(0);
@@ -2037,7 +2052,6 @@
 
 		&__title {
 			font-size: vw(17);
-			font-weight: 400;
 		}
 
 		&__logo {
@@ -2052,6 +2066,7 @@
 
 	.custom-widget-title {
 		font-weight: 500;
+		font-size: vw(15);
 	}
 
 	.slnewsw-slider--video .slick-arrow {

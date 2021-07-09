@@ -1197,6 +1197,15 @@ $(document).ready(function () {
 		imgHeight: 1862
 	})
 
+
+
+
+	$('.js-banner-jarallax-1').jarallax({
+		speed: 0.6,
+		imgSize: 'cover'
+	})
+
+
 	$(".js-top-btn").click(function () {
 		$("html, body").animate({
 			scrollTop: 0

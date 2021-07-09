@@ -1,0 +1,109 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'article-master'
+		};
+
+	-
+		var header_class_name="site-header--partial-static";
+
+
+block main
+	.kriya-science-main
+
+	h2 обычный(весь экран)
+	section.big-top-pic
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+
+
+	h2 обычный+более узкий(весь экран)
+	section.big-top-pic.big-top-pic--type-comments
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+
+
+	h2 альт(весь экран)
+	section.big-top-pic.big-top-pic--full-height-mob
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+
+	h2 альт+более узкий(весь экран)
+	section.big-top-pic.big-top-pic--full-height-mob.big-top-pic--type-comments
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+
+	h2 более узкий
+	section.big-top-pic.big-top-pic--type-comments
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/quotes-bg-new.jpg" media="(max-width: 1150px)")
+					source(srcset="img/quotes-bg-new.jpg" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/quotes-bg-new.jpg")
+
+	h2 более узкий с параллкасом
+
+	section.big-top-pic.big-top-pic--type-comments
+		.big-top-pic__container
+			.big-top-pic__relative.js-banner-jarallax-1
+				picture
+					source(srcset="img/quotes-bg-new.jpg" media="(max-width: 1150px)")
+					source(srcset="img/quotes-bg-new.jpg" media="(max-width: 749px)")
+					img.big-top-pic__img.jarallax-img(src="img/quotes-bg-new.jpg")
+
+	h2 квадратный
+	section.big-top-pic.big-top-pic--square-prop-mob
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+	h2 золотой
+	section.big-top-pic.big-top-pic--gold-prop-mob
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+	h2 золотой вертикальный
+	section.big-top-pic.big-top-pic--gold-vert-prop-mob
+		.big-top-pic__container
+			.big-top-pic__relative
+				picture
+					source(srcset="img/DEE6E9.png" media="(max-width: 1150px)")
+					source(srcset="img/DEE6E9.png" media="(max-width: 749px)")
+					img.big-top-pic__img(src="img/DEE6E9.png")
+
+	section.section-home-slider
+		.home-slider.home-slider--no-slider
+			.home-slider-slide.slick-active
+				picture
+					source(srcset="img/front-slider-mob.jpg", media="(max-width: 749px)")
+					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				.hms-info.hms-info--no-btn
+					.hms-info__top
+						.hms-info__title Семинар Крийя
+					.hms-info__bottom
+						.hms-info__area Москва
+						.hms-info__date 20 февраля 2021
