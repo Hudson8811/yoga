@@ -1072,7 +1072,10 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					speed: slickSpeedMain
+					speed: slickSpeedMain,
+					arrows: false,
+					dots: false,
+					variableWidth: true
 				}
 			}]
 		});
@@ -1120,7 +1123,12 @@ $(document).ready(function () {
 		}, {
 			breakpoint: 749,
 			settings: {
-				speed: slickSpeedMain
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				speed: slickSpeedMain,
+				arrows: false,
+				dots: false,
+				variableWidth: true
 			}
 		}]
 	});

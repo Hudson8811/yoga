@@ -748,8 +748,8 @@
 					}*/
 
 					&.slick-active {
-						background: #25378D;
-						border-color: #25378D;
+						background: #AFB4BF;
+						border-color: #AFB4BF;
 
 						&::before {
 							opacity: 1;
@@ -1467,13 +1467,27 @@
 		&::before {
 			display: none;
 		}
+		.slick-list{
+			margin: 0;
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
 	}
+
 
 	.hm-events-slide__wrap {
 		padding-left: 0;
 	}
 
 	.hm-events-slide {
+
+		&__wrap{
+			margin-right: vw(21);
+			width: vw(266);
+			margin-left: 0;
+		}
 
 		&__pic {
 			width: vw(266);
@@ -1486,15 +1500,15 @@
 		&__text {}
 
 		&__name {
-			font-size: vw(32);
+			font-size: vw(24);
 			line-height: 1.2;
-			margin-top: vw(29);
+			margin-top: vw(18);
 		}
 
 		&__meta {
 			font-size: vw(15);
 			line-height: vw(18);
-			margin-top: vw(9);
+			margin-top: vw(10);
 		}
 
 		.part-wsidebar__main {
@@ -1512,7 +1526,13 @@
 			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
-			margin-top: vw(12);
+			margin-top: vw(13);
+
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
 		}
 
 		&:hover {}
@@ -1557,11 +1577,10 @@
 	}
 
 	.hm-events-btn-wrap {
-		margin-top: vw(23);
-	}
-
-	.hm-events-btn-wrap {
 		margin-top: vw(36);
+		.btn{
+			width: vw(258);
+		}
 	}
 
 	.btn {
@@ -1840,10 +1859,17 @@
 	}
 
 	.hm-feedback-slide {
-		margin-bottom: vw(37);
+		margin-bottom: vw(51);
 
 		.slick-dots {
 			margin-top: vw(17);
+		}
+		.slick-list{
+			margin: 0;
+			&::before,
+			&::after {
+				display: none;
+			}
 		}
 	}
 
@@ -1861,25 +1887,32 @@
 		}
 
 		&__text {
-			padding-top: vw(31);
+			padding-top: vw(17);
 
 			&-title {
 				letter-spacing: vw(-0.2);
-				font-size: vw(32);
-				line-height: vw(32);
-				margin-bottom: vw(10);
+				font-size: vw(24);
+				line-height: 1.2;
+				margin-bottom: 0;
 			}
 
 			&-out {
 				font-size: vw(19);
-				line-height: vw(30);
-				margin-bottom: vw(3);
+				line-height: 1.2;
+				margin-bottom: 0;
+				margin-top: vw(3);
 			}
 
 			&-info {
 				font-size: vw(15);
 				line-height: vw(24);
-				margin-bottom: vw(12);
+				margin-bottom: 0;
+				margin-top: vw(10);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
 			}
 		}
 
@@ -1897,6 +1930,12 @@
 				height: vw(9);
 				margin: 0 vw(7);
 			}
+		}
+
+		.slick-slide{
+			width: vw(266);
+			margin-left: 0;
+			margin-right: vw(21);
 		}
 
 	}
