@@ -1,5 +1,5 @@
 .albums-section {
-	margin-top: 79px;
+	margin-top: 58px;
 
 	&:hover {
 		.albums-section-arrow {
@@ -8,12 +8,16 @@
 	}
 }
 
+.albums-hr{
+	margin-bottom: 76px;
+}
+
 .albums-title {
-	text-align: center;
+	text-align: left;
 }
 
 .albums-section-arrow {
-    top: 190px;
+    top: 153px;
 }
 
 .albums-slider {
@@ -22,12 +26,12 @@
 	}
 
 	.slick-list {
-		margin-left: -36px;
+		margin: 0;
 		z-index: 1;
 
 		&::before {
 			content: '';
-			display: block;
+			display: none;
 			background: #fff;
 			position: absolute;
 			height: 100%;
@@ -51,7 +55,9 @@
 }
 
 .albums-slide {
-	margin-left: 36px;
+	margin-left: 0;
+	margin-right: 36px;
+	width: 293px;
 
 	&__pic {
 		position: relative;
@@ -73,13 +79,12 @@
 
 	&__label {
 		font-style: normal;
-		font-weight: normal;
-		font-size: 22px;
-		line-height: 36px;
 		text-align: center;
 		letter-spacing: -0.03em;
-		margin-top: 26px;
-
+		margin-top: 19px;
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 1.2;
 		color: $dark;
 	}
 
@@ -91,7 +96,8 @@
 		line-height: 21px;
 		text-align: center;
 		color: #25378D;
-		margin-top: 6px;
+		margin-top: 12px;
+		letter-spacing: -0.055em;
 	}
 
 	&:hover {}

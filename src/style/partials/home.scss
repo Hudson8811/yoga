@@ -1598,7 +1598,7 @@ body {
 
 .master {
 	padding-top: 84px;
-	padding-bottom: 52px;
+	padding-bottom: 50px;
 
 	&_article {
 		padding-top: 48px;
@@ -1618,12 +1618,12 @@ body {
 
 	&__title {
 		position: relative;
-		margin-bottom: 7px;
+		margin-bottom: 6px;
 		padding-bottom: 6px;
 		text-transform: uppercase;
 		color: $dark;
-		font-weight: 500;
-		font-size: 17px;
+		font-weight: 600;
+		font-size: 13px;
 		line-height: 30px;
 
 		/*&::after {
@@ -1710,8 +1710,8 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	color: $dark;
-	font-weight: 500;
-	font-size: 17px;
+	font-weight: 600;
+	font-size: 13px;
 	line-height: 30px;
 	font-style: normal;
 	line-height: 1;
@@ -1798,7 +1798,7 @@ body {
 
 .csubscr-widget {
 	box-sizing: border-box;
-	margin-bottom: 57px;
+	margin-bottom: 61px;
 	padding: 34px 30px 32px;
 	border: 1px solid #DEE6E9;
 	-webkit-mask-image: -webkit-radial-gradient(white, #000);

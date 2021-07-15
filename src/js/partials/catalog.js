@@ -10,7 +10,7 @@ $(document).ready(function () {
 				let ceHeight = ce.find('.ce-i__left').innerHeight();
 				if (ceHeight > ceImageHeight){
 					let ceText = ce.find('.ce-i__text');
-					let ceMoreHtml = '<div class="ce-i__more"><span>... </span><a href="javascript:;">Развернуть</a></div>';
+					let ceMoreHtml = '<div class="ce-i__more"><span></span><a href="javascript:;">Развернуть</a></div>';
 					if (ceText.length){
 						let ceTextHeight = ceText.outerHeight();
 						let diffHeight = ceHeight - ceImageHeight;

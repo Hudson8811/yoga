@@ -1,11 +1,13 @@
 @media screen and (max-width: 1150px) {
 	.albums-section {
 
-		margin-top: 85px;
-
 		&:hover {
 			.albums-section-arrow {}
 		}
+	}
+
+	.albums-hr {
+		margin-bottom: 85px;
 	}
 
 	.albums-title {}
@@ -38,6 +40,7 @@
 	}
 
 	.albums-slide {
+		margin-right: 22px;
 		&__pic {
 
 			&::before {}
@@ -60,6 +63,7 @@
 			font-size: 15px;
 			line-height: 18px;
 			margin-top: 10px;
+			letter-spacing: normal;
 		}
 
 		&:hover {}
@@ -74,13 +78,15 @@
 @media screen and (max-width: 749px) {
 	.albums-section {
 
-		margin-top: vw(88);
+		margin-top: vw(58);
 
 		&:hover {
 			.albums-section-arrow {}
 		}
 	}
-
+	.albums-hr {
+		margin-bottom: vw(85);
+	}
 	.albums-title {}
 
 	.albums-section-arrow {
@@ -119,7 +125,8 @@
 	}
 
 	.albums-slide {
-
+		width: vw(268);
+		margin-right: vw(22);
 
 		&__pic {
 			width: vw(268);
@@ -132,15 +139,15 @@
 
 		&__label {
 			font-size: vw(19);
-			line-height: vw(26);
+			line-height: 1.2;
 			letter-spacing: 0;
-			margin-top: vw(16);
+			margin-top: vw(19);
 		}
 
 		&__listen {
 			font-size: vw(15);
 			line-height: vw(18);
-			margin-top: vw(11);
+			margin-top: vw(12);
 		}
 
 		&:hover {}

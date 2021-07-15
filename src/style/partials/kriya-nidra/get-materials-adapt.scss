@@ -43,15 +43,24 @@
 	.get-materials-title-big {
 		font-size: 24px;
 		line-height: 39px;
+		letter-spacing: normal;
 	}
 
 	.get-materials-subtitle {
 		font-size: 15px;
 		line-height: 24px;
-		margin-top: 3px;
+		margin-top: 4px;
 
 		&+.get-materials-row {
 			margin-top: 30px;
+		}
+	}
+
+	.get-materials .get-materials-calnedar{
+		margin-top: 12px;
+		padding-right: 2px;
+		.kspc-event-calendar__item{
+			margin-left: 22px;
 		}
 	}
 
@@ -89,7 +98,7 @@
 			}
 
 			&--has-title-big {
-				margin-top: vw(51);
+				margin-top: vw(55);
 			}
 
 		}
@@ -129,20 +138,37 @@
 	}
 
 	.get-materials-title-big {
-		font-weight: 600;
-		font-size: vw(15);
+		font-size: vw(24);
 		line-height: vw(24);
+		font-weight: normal;
+		span{
+			white-space: nowrap;
+		}
 	}
 
 	.get-materials-subtitle {
 		font-size: vw(15);
 		line-height: vw(24);
-		margin-top: vw(3);
+		margin-top: vw(10);
 
 		&+.get-materials-row {
 			margin-top: vw(29);
 		}
 	}
+
+	.get-materials .get-materials-calnedar{
+		margin-top: vw(12);
+		padding-right: 0;
+		margin-left: 0;
+		justify-content: space-between;
+		.kspc-event-calendar__item{
+			margin-left: 0;
+		}
+		+.get-materials-row{
+			margin-top: vw(32);
+		}
+	}
+
 
 	.get-materials-row {
 		flex-direction: column;

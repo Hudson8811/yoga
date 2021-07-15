@@ -45,6 +45,22 @@ $(document).ready(function () {
 
 	});
 
+	$(document).click(function (e) {
+		let menuBtn = $('#site-header>.site-header__inner>.sh-left>.sh-burger-wrap>.sh-burger'),
+				menu    = $('.sh-sidebar');
+		if ($(e.target).closest(menu).length === 0 && $(e.target).closest(menuBtn).length === 0) {
+			menuBtn.removeClass('sh-burger--active');
+			menu.removeClass('sh-sidebar--show');
+		};
+	});
+
+	$('.sh-menu-item,.sh-right').on('mouseenter',function (){
+		let menuBtn = $('#site-header>.site-header__inner>.sh-left>.sh-burger-wrap>.sh-burger'),
+			menu    = $('.sh-sidebar');
+		menuBtn.removeClass('sh-burger--active');
+		menu.removeClass('sh-sidebar--show');
+	})
+
 	$('.js-sh-sidebar__close').click(function () {
 		$('#site-header>.site-header__inner>.sh-left>.sh-burger-wrap>.sh-burger').removeClass('sh-burger--active');
 		$('.sh-sidebar').removeClass('sh-sidebar--show');
