@@ -5,7 +5,6 @@
 @import "partials/rangeslider.css";
 @import "partials/simplebar.css";
 
-
 //  @import "partials/animate.min.css";
 @import "partials/aos.css";
 
@@ -30,7 +29,6 @@
 
 @import "partials/music-player";
 @import "partials/music-player-adaptive";
-
 
 @import "partials/header-adaptive";
 @import "partials/footer-adaptive";
@@ -70,13 +68,6 @@
 @import "partials/kriya-nidra/participate-ocourse.scss";
 @import "partials/kriya-nidra/participate-ocourse-adapt.scss";
 
-
-
-
-
-
-
-
 @import "partials/article-master/article-master";
 
 @import "partials/article-master/maslider";
@@ -84,7 +75,6 @@
 
 @import "partials/article-master/artimaster-posts";
 @import "partials/article-master/artimaster-posts-adapt";
-
 
 @import "partials/kriya-science/subscribe.scss";
 @import "partials/kriya-science/subscribe-adapt.scss";
@@ -107,7 +97,6 @@
 @import "partials/kriya-science/ks-post-tas.scss";
 @import "partials/kriya-science/ks-post-tas-adaptive.scss";
 
-
 //seminar
 @import "partials/seminar/breadcrumbs.scss";
 @import "partials/seminar/breadcrumbs-adapt.scss";
@@ -115,11 +104,9 @@
 @import "partials/seminar/reviews.scss";
 @import "partials/seminar/reviews-adapt.scss";
 
-
 //edu
 @import "partials/edu/tabs";
 @import "partials/edu/kspc-numbered-list";
-
 
 //music
 @import "partials/components/component-hide.scss";
@@ -127,7 +114,6 @@
 
 @import "partials/music/release.scss";
 @import "partials/music/release-adapt.scss";
-
 
 @import "partials/music/albums.scss";
 @import "partials/music/albums-adapt.scss";
@@ -146,23 +132,17 @@
 @import "partials/music/music-form.scss";
 @import "partials/music/music-form-adapt.scss";
 
-
 @import "partials/music/preloader.scss";
 
 @import "partials/music/photogallery.scss";
 
-
-
 @import "partials/comments/reviews-slider.scss";
 @import "partials/comments/reviews-slider-adapt.scss";
-
 
 @import "partials/comments/course-cards.scss";
 @import "partials/comments/course-cards-adapt.scss";
 
-
 @import "partials/comments/comments-tabs.scss";
-
 
 @import "partials/catalog/catalog.scss";
 
@@ -185,13 +165,12 @@
 
 @import "partials/components/course-modal.scss";
 
-
-
 @import "partials/course-archive.scss";
 
 @import "partials/video/videos-correction.scss";
 
 @import "partials/custom-fonts.scss";
 
-
-
+// Weekly Events Page
+@import "partials/weekly/weekly";
+@import "partials/weekly/weekly-event";
