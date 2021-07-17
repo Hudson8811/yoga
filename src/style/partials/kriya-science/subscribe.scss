@@ -11,6 +11,11 @@
 	background: rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(25px);
 
+
+	&:not(#js-header-2){
+		position: static;
+	}
+
 	&__content {
 		display: flex;
 		align-items: center;

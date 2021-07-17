@@ -17,6 +17,9 @@ $(document).ready(function () {
 
 				$(this).addClass('sh-burger--active');
 				$('.sh-mmenu-mobile').scrollTop(0);
+				if ($(document).scrollTop() < 50){
+					$('html, body').scrollTop(0);
+				}
 				setTimeout(function () {
 					$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--open');
 

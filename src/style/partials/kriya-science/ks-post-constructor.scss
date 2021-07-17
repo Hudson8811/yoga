@@ -892,6 +892,11 @@
 
 	&__img {
 		@include relative_img();
+		@at-root {
+			iframe#{&} {
+				object-fit: unset;
+			}
+		}
 	}
 
 	&::before {

@@ -177,13 +177,12 @@ $(document).ready(function () {
 
 
 			setTimeout(function () {
-
 				if (newTab.find('.js-kspc-slider').length > 0) {
 					newTab.find('.js-kspc-slider.slick-slider').slick('unslick');
 				}
 				setTimeout(function () {
 					kspcSlidersInit(newTab);
-				}, 150);
+				}, 50);
 			}, 50);
 
 

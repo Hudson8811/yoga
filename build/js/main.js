@@ -533,6 +533,9 @@ $(document).ready(function () {
 
 				$(this).addClass('sh-burger--active');
 				$('.sh-mmenu-mobile').scrollTop(0);
+				if ($(document).scrollTop() < 50){
+					$('html, body').scrollTop(0);
+				}
 				setTimeout(function () {
 					$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--open');
 
@@ -2689,13 +2692,12 @@ $(document).ready(function () {
 
 
 			setTimeout(function () {
-
 				if (newTab.find('.js-kspc-slider').length > 0) {
 					newTab.find('.js-kspc-slider.slick-slider').slick('unslick');
 				}
 				setTimeout(function () {
 					kspcSlidersInit(newTab);
-				}, 150);
+				}, 50);
 			}, 50);
 
 
