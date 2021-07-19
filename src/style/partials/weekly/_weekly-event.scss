@@ -1,12 +1,16 @@
 .weekly-event {
   width: 100%;
-  padding: 65px 58px 53px;
+  padding: 59px 58px 49px;
   border-radius: 5px;
   border: 1px solid #dee6e9;
   background-color: #fff;
 
   @include media(1150) {
     padding: 33px 37px 31px;
+  }
+
+  @include media(620) {
+    padding: 23px 14px 27px;
   }
 
   &__heading {
@@ -16,6 +20,10 @@
 
     @include media(1150) {
       margin-bottom: 27px;
+    }
+
+    @include media(620) {
+      margin-bottom: 11px;
     }
 
     &-logo {
@@ -68,6 +76,10 @@
       @include media(1150) {
         margin-bottom: 20px;
       }
+
+      @include media(620) {
+        margin-bottom: 17px;
+      }
     }
 
     &-symbol {
@@ -80,6 +92,16 @@
 
     &-link {
       @include hov();
+
+      @include media(620) {
+        display: none;
+      }
+    }
+
+    &-dash {
+      @include media(620) {
+        display: none;
+      }
     }
   }
 
@@ -88,9 +110,15 @@
     width: 100%;
     height: 448px;
     border-radius: 5px;
+    overflow: hidden;
 
     @include media(1150) {
       height: 385px;
+    }
+
+    @include media(620) {
+      margin-bottom: 13px;
+      height: vw360(187.37);
     }
   }
 
@@ -169,6 +197,10 @@
         font-size: 13px;
         // line-height: 17px;
       }
+
+      @include media(620) {
+        display: none;
+      }
     }
   }
 
@@ -182,6 +214,10 @@
 
     @include media(1150) {
       font-size: 15px;
+    }
+
+    @include media(620) {
+      font-size: 13px;
     }
 
     &-main {
@@ -203,6 +239,12 @@
     &-icon {
       margin-right: 8px;
     }
+
+    &-video {
+      @include media(620) {
+        display: none;
+      }
+    }
   }
 
   &__likes {
@@ -211,6 +253,11 @@
       height: 18px;
       stroke: #afb4bf;
       fill: #ffffff;
+
+      @include media(620) {
+        width: 16px;
+        height: 15px;
+      }
     }
 
     &.liked {
@@ -224,6 +271,11 @@
     &-icon {
       width: 20px;
       height: 20px;
+
+      @include media(620) {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
@@ -231,6 +283,11 @@
     &-icon {
       width: 19.5px;
       height: 19px;
+
+      @include media(620) {
+        width: 15.5px;
+        height: 15px;
+      }
     }
   }
 }

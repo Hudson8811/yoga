@@ -101,11 +101,21 @@
   }
 
   // Элементы
+  &__banner {
+    @include media(450) {
+      height: vw360(365);
+    }
+  }
+
   &__heading {
     margin-bottom: 61px;
 
     @include media(1150) {
       margin-bottom: 51px;
+    }
+
+    @include media(620) {
+      margin-bottom: 14px;
     }
   }
 
@@ -143,9 +153,16 @@
     &__sidebar {
       position: relative;
 
+      @include media(1150) {
+        margin-top: 94px;
+      }
+
+      @include media(620) {
+        margin-top: 88px;
+      }
+
       &--weekly {
         @include media(1150) {
-          margin-top: 94px;
           border-top: 1px solid #dee6e9;
         }
       }
@@ -173,6 +190,41 @@
     padding-bottom: 9px;
     font-family: $mainFont;
     font-size: 13px;
+  }
+
+  .insta-widget {
+    @include media(1150) {
+      padding-bottom: 62px;
+    }
+  }
+
+  .csubscr-widget {
+    &__logo {
+      @include media(1150) {
+        margin-bottom: 13px;
+      }
+    }
+
+    &__title {
+      @include media(1150) {
+        font-size: 15px;
+        line-height: 30px;
+      }
+    }
+
+    &__description {
+      @include media(1150) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .slnewsw-slider-item__name {
+    @include media(1150) {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 29px;
+    }
   }
 
   // Прилипающий сайдбар
