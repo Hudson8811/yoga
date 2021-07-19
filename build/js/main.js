@@ -2157,7 +2157,7 @@ $(document).ready(function () {
 	$('.js-kspc-twpah-unwrap').click(function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.kspc-twpah').addClass('kspc-twpah--open');
 	});
-
+	kspc-simple-text--has-small-title
 
 	$('.js-simple-text-unwrap').click(function () {
 		$(this).addClass('kspc-twpah-unwrap--hide').closest('.kspc-simple-text').addClass('kspc-simple-text--open');

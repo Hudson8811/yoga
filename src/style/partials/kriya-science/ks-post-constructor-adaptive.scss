@@ -856,7 +856,7 @@
 			margin-top: vw(78);
 
 			&.kspc-simple-text--has-small-title {
-				margin-top: vw(125);
+				margin-top: vw(79);
 			}
 		}
 
@@ -995,6 +995,15 @@
 				&::before {
 					left: vw(14);
 				}
+			}
+		}
+
+		&--smaller-gap{
+			.kspc-simple-text__p p+ul{
+				margin-top: vw(20);
+			}
+			li+li{
+				margin-top: vw(8);
 			}
 		}
 	}

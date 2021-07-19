@@ -2,8 +2,19 @@
 	//padding: 82px 0 110px;
 	padding: 85px 0 83px;
 
+	&--small-on-all {
+		padding-top: 87px;
+		.ksquote-content {
+			&__title {
+				font-size: 45px;
+				line-height: 49px;
+				&+.ksquote-content-description{
+					margin-top: 16px;
+				}
+			}
+		}
+	}
 	&--small-on-tablet {
-
 		.ksquote-content {
 			&__title {
 				font-size: 39px;
@@ -23,6 +34,7 @@
 	&--retreat{
 		padding-top: 46px;
 	}
+
 }
 
 .ksquote-content {
