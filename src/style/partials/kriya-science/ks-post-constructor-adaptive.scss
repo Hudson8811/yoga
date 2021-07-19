@@ -999,7 +999,7 @@
 		}
 
 		&--smaller-gap{
-			.kspc-simple-text__p p+ul{
+			p+ul{
 				margin-top: vw(20);
 			}
 			li+li{
