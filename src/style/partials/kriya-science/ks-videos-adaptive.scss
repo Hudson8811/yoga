@@ -96,7 +96,9 @@
 	}
 
 	.ks-videos-item {
-		width: 100%;
+		width: vw(266);
+		margin-left: 0;
+		margin-right: vw(22);
 
 		&__video {
 
@@ -113,13 +115,10 @@
 
 		&__name {
 			font-style: normal;
-			font-weight: normal;
-			font-size: vw(19);
-			//line-height: vw(2);
-			line-height: 7.3vw;
-			/* identical to box height, or 137% */
-
-			margin-top: vw(18);
+			font-size: vw(15);
+			line-height: vw(24);
+			font-weight: 500;
+			margin-top: vw(7);
 
 			color: $dark;
 		}

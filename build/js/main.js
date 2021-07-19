@@ -1706,11 +1706,48 @@ $(document).ready(function () {
 
 		});
 	});
+
+
+
+	var doubleVideoInited = false;
+	var doubleVideoSlider = $('.js-doubleVideo-slider');
+	if (doubleVideoSlider.length > 0) {
+		initDoubleVideoSlider();
+		$(window).on('resize',function(){
+			initDoubleVideoSlider();
+		});
+	}
+
+	function initDoubleVideoSlider(){
+		var doubleVideoSlider = $('.js-doubleVideo-slider');
+		if (doubleVideoSlider.length > 0) {
+			if ($(window).width() <= 749){
+				if (!doubleVideoInited){
+					doubleVideoSlider.slick({
+						infinite: true,
+						slidesToShow: 1,
+						arrows: false,
+						speed: slickSpeedMain * 2,
+						variableWidth: true,
+						slidesToScroll: 1,
+						touchMove: false,
+						pauseOnHover: false,
+						dots: false
+					});
+					doubleVideoInited = true;
+				}
+			} else {
+				if (doubleVideoInited){
+					doubleVideoSlider.slick('unslick');
+					doubleVideoInited = false;
+				}
+			}
+		}
+	}
 });
 
 
 function openThanksModal() {
-
 	$.fancybox.open({
 		src: '#thanks-modal',
 		type: 'inline',
@@ -1732,8 +1769,6 @@ function openThanksModal() {
 
 			}
 		}
-
-
 	});
 }
 
