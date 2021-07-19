@@ -113,22 +113,6 @@ block main
                         .csubscr-widget__inp-wrap
                           input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
                         .btn.btn--square.csubscr-widget__btn отправить
-                //- .two-widgets-wrap-csubscr-and-wnevents
-                //-   .csubscr-widget
-                //-     .csubscr-widget__inner
-                //-       .csubscr-widget__logo
-                //-         img(src="img/subscr_logo.svg", alt="icon")
-                //-       .csubscr-widget__title  Присоединяйтесь
-                //-       .csubscr-widget__description Получите доступ к платформе Имрам Крийя
-                //-       .csubscr-widget__inp-wrap
-                //-         input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
-                //-       .btn.btn--square.csubscr-widget__btn отправить
-
-                //-   .wnevents-widget.hide--desktop
-                //-     a.wnevents-widget__item.wnevents-widget__item--big(href="")
-                //-       .wnevents-widget__pic
-                //-         img(src="img/wnevents-1.jpg", alt="")
-                //-       .wnevents-widget__title События недели
 
               .oh-wrap--on-mob
                 .container.container--extra-long.container--disable-on-desktop
@@ -149,7 +133,7 @@ block main
                             img(src="img/online-courses.jpg", alt="")
                           .slnewsw-slider-item__name Базовый курс медитации3
 
-                    .slider-news-widget
+                    .slider-news-widget.hide--mob
                       .slider-news-widget__title.custom-widget-title Видео недели
                       .slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
                         a.slnewsw-slider-item(href="")
@@ -169,21 +153,37 @@ block main
                             img(src="img/weekly/slider-news-image.jpg", alt="")
                           .slnewsw-slider-item__name Как развить осознанность4                          
 
-              .two-widgets-wrap-csubscr-and-wnevents
-                .container.container--extra-long.container--disable-on-desktop
-                  .wnevents-widget
+              .weekly-two-widgets
+                .container.container--extra-long.container--disable-on-desktop.weekly-two-widgets__container
+                  .wnevents-widget.wnevents-card
                     a.wnevents-widget__item.wnevents-widget__item--big(href="")
                       .wnevents-widget__pic
                         img(src="img/weekly/sidebar-articles.jpg", alt="")
                       .wnevents-widget__title Статьи мастера
 
-                  .wnevents-widget.hide--desktop
-                    a.wnevents-widget__item.wnevents-widget__item--big(href="")
-                      .wnevents-widget__pic
-                        img(src="img/wnevents-1.jpg", alt="")
-                      .wnevents-widget__title События недели
+                  .wnevents-list.hide--desktop
+                    h3.wnevents-list__title.custom-widget-title
+                      | Новые статьи
 
-              .container.container--extra-long.container--disable-on-desktop
+                    ul.wnevents-list__ul
+                      li.wnevents-list__item
+                        span.wnevents-list__heading
+                          | Что такое осознанность
+                        span.wnevents-list__date 
+                          | 28 Янв 2021
+                      li.wnevents-list__item
+                        span.wnevents-list__heading
+                          | Глубина общения
+                        span.wnevents-list__date 
+                          | 28 Янв 2021
+                      li.wnevents-list__item
+                        span.wnevents-list__heading
+                          | Как стать счастливым
+                        span.wnevents-list__date 
+                          | 28 Янв 2021                                                    
+
+
+              .container.container--extra-long.container--disable-on-desktop.container__weekly-music
                 .music-player-wrap
                   #music-player.music-player
                     .music-player-top
@@ -246,6 +246,81 @@ block main
                     #music-player__playlist-container-2.music-player__playlist-container-2(style="display:none;")
                       #music-player__playlist.music-player__playlist
                         #music-player__playlist-inner.music-player__playlist-inner
+
+    //- Модальное окно с комметариями
+    .modal
+      .modal__close
+
+      .modal__content
+        .weekly-event
+          .weekly-event__heading
+            img(src="img/weekly/event-logo.svg", alt="").weekly-event__heading-logo
+
+            span.weekly-event__heading-author
+              | Имрам Крийя
+            
+            span.weekly-event__heading-date
+              span.weekly-event__heading-date-counter
+                | 2 дня 
+              | назад
+
+          .weekly-event__info
+            p.weekly-event__info-title
+              img(src="img/weekly/symbol.png", alt="").weekly-event__info-symbol
+              | 31 июля - 1 августа пройдет Мини-Ретрит с Мастером Имрамом в Подмосковье
+              span.weekly-event__info-dash 
+                | -  
+              a(href="https://imram-kriya.com/retrit_new " target="_blank").weekly-event__info-link
+                | https://imram-kriya.com/retrit_new 
+
+            p.weekly-event__info-description
+              | "Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра... 
+
+          .weekly-event__media
+            .weekly-event__image
+              img(src="img/weekly/image-placeholder.jpg", alt="").weekly-event__image-item
+          
+          .weekly-event__social
+            .weekly-event__social-main
+              div(class=`weekly-event__social-item weekly-event__likes`)
+                svg.weekly-event__social-icon.weekly-event__likes-icon
+                  use(xlink:href="img/weekly/sprite.svg#like")
+
+                span.weekly-event__likes-counter
+                  | 257
+
+              a(href="#").weekly-event__social-item.weekly-event__comments
+                svg.weekly-event__social-icon.weekly-event__comments-icon   
+                  use(xlink:href="img/weekly/sprite.svg#comment")    
+
+                span.weekly-event__comments-text
+                  | 9 комментариев
+              
+              a(href="#").weekly-event__social-item.weekly-event__share
+                svg.weekly-event__share-icon
+                  use(xlink:href="img/weekly/sprite.svg#share")
+
+          hr.modal__content-hr
+
+          .modal__content-comments
+            h3.modal__comment-title
+              | Комментарии
+          
+            form.modal__comment-new.modal__form
+              .modal__form-group
+                input(type="text" placeholder="Имя*" required).modal__form-input.modal__form-froup-input
+                input(type="email" placeholder="Введите ваш Email").modal__form-input.modal__form-froup-input
+              
+              .modal__form-group
+                input(type="text" placeholder="Новый комментарий*").modal__form-input
+
+              button(type="submit").modal__form-button
+                | Отправить
+              
+              
+
+          
+        
 
   //- Галерея перед футером
   section.hm-galery

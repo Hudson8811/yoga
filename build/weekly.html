@@ -107,7 +107,7 @@
       
     </script>
   </head>
-  <body>
+  <body class="js-body-noscroll">
     <div class="sh-sidebar" id="sh-sidebar">
       <div class="sh-sidebar-inner">
         <div class="sh-sidebar-inner2">
@@ -1006,22 +1006,6 @@
                         <div class="btn btn--square csubscr-widget__btn">отправить</div>
                       </div>
                     </div>
-                    <div class="two-widgets-wrap-csubscr-and-wnevents">
-                      <div class="csubscr-widget">
-                        <div class="csubscr-widget__inner">
-                          <div class="csubscr-widget__logo"><img src="img/subscr_logo.svg" alt="icon"></div>
-                          <div class="csubscr-widget__title"> Присоединяйтесь</div>
-                          <div class="csubscr-widget__description">Получите доступ к платформе Имрам Крийя</div>
-                          <div class="csubscr-widget__inp-wrap">
-                            <input class="email-cinp" type="text" name="" placeholder="Введите ваш Email">
-                          </div>
-                          <div class="btn btn--square csubscr-widget__btn">отправить</div>
-                        </div>
-                      </div>
-                      <div class="wnevents-widget hide--desktop"><a class="wnevents-widget__item wnevents-widget__item--big" href="">
-                          <div class="wnevents-widget__pic"><img src="img/wnevents-1.jpg" alt=""></div>
-                          <div class="wnevents-widget__title">События недели</div></a></div>
-                    </div>
                   </div>
                   <div class="oh-wrap--on-mob">
                     <div class="container container--extra-long container--disable-on-desktop">
@@ -1036,7 +1020,7 @@
                               <div class="slnewsw-slider-item__pic"><img src="img/online-courses.jpg" alt=""></div>
                               <div class="slnewsw-slider-item__name">Базовый курс медитации3</div></a></div>
                         </div>
-                        <div class="slider-news-widget">
+                        <div class="slider-news-widget hide--mob">
                           <div class="slider-news-widget__title custom-widget-title">Видео недели</div>
                           <div class="slnewsw-slider slnewsw-slider--video js-slnewsw-slider"><a class="slnewsw-slider-item" href="">
                               <div class="slnewsw-slider-item__pic"><img src="img/weekly/slider-news-image.jpg" alt=""></div>
@@ -1051,17 +1035,25 @@
                       </div>
                     </div>
                   </div>
-                  <div class="two-widgets-wrap-csubscr-and-wnevents">
-                    <div class="container container--extra-long container--disable-on-desktop">
-                      <div class="wnevents-widget"><a class="wnevents-widget__item wnevents-widget__item--big" href="">
+                  <div class="weekly-two-widgets">
+                    <div class="container container--extra-long container--disable-on-desktop weekly-two-widgets__container">
+                      <div class="wnevents-widget wnevents-card"><a class="wnevents-widget__item wnevents-widget__item--big" href="">
                           <div class="wnevents-widget__pic"><img src="img/weekly/sidebar-articles.jpg" alt=""></div>
                           <div class="wnevents-widget__title">Статьи мастера</div></a></div>
-                      <div class="wnevents-widget hide--desktop"><a class="wnevents-widget__item wnevents-widget__item--big" href="">
-                          <div class="wnevents-widget__pic"><img src="img/wnevents-1.jpg" alt=""></div>
-                          <div class="wnevents-widget__title">События недели</div></a></div>
+                      <div class="wnevents-list hide--desktop">
+                        <h3 class="wnevents-list__title custom-widget-title">Новые статьи</h3>
+                        <ul class="wnevents-list__ul">
+                          <li class="wnevents-list__item"><span class="wnevents-list__heading">Что такое осознанность</span><span class="wnevents-list__date">
+                               28 Янв 2021</span></li>
+                          <li class="wnevents-list__item"><span class="wnevents-list__heading">Глубина общения</span><span class="wnevents-list__date">
+                               28 Янв 2021</span></li>
+                          <li class="wnevents-list__item"><span class="wnevents-list__heading">Как стать счастливым</span><span class="wnevents-list__date">
+                               28 Янв 2021                                                    </span></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div class="container container--extra-long container--disable-on-desktop">
+                  <div class="container container--extra-long container--disable-on-desktop container__weekly-music">
                     <div class="music-player-wrap">
                       <div class="music-player" id="music-player">
                         <div class="music-player-top">
@@ -1115,6 +1107,51 @@
             </div>
           </div>
         </section>
+        <div class="modal">
+          <div class="modal__close"></div>
+          <div class="modal__content">
+            <div class="weekly-event">
+              <div class="weekly-event__heading"><img class="weekly-event__heading-logo" src="img/weekly/event-logo.svg" alt=""><span class="weekly-event__heading-author">Имрам Крийя</span><span class="weekly-event__heading-date"><span class="weekly-event__heading-date-counter">2 дня </span>назад</span></div>
+              <div class="weekly-event__info">
+                <p class="weekly-event__info-title"><img class="weekly-event__info-symbol" src="img/weekly/symbol.png" alt="">31 июля - 1 августа пройдет Мини-Ретрит с Мастером Имрамом в Подмосковье<span class="weekly-event__info-dash">
+                     -  </span><a class="weekly-event__info-link" href="https://imram-kriya.com/retrit_new " target="_blank">https://imram-kriya.com/retrit_new </a></p>
+                <p class="weekly-event__info-description">"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра... </p>
+              </div>
+              <div class="weekly-event__media">
+                <div class="weekly-event__image"><img class="weekly-event__image-item" src="img/weekly/image-placeholder.jpg" alt=""></div>
+              </div>
+              <div class="weekly-event__social">
+                <div class="weekly-event__social-main">
+                  <div class="weekly-event__social-item weekly-event__likes">
+                    <svg class="weekly-event__social-icon weekly-event__likes-icon">
+                      <use xlink:href="img/weekly/sprite.svg#like"></use>
+                    </svg><span class="weekly-event__likes-counter">257</span>
+                  </div><a class="weekly-event__social-item weekly-event__comments" href="#">
+                    <svg class="weekly-event__social-icon weekly-event__comments-icon">  
+                      <use xlink:href="img/weekly/sprite.svg#comment">   </use>
+                    </svg><span class="weekly-event__comments-text">9 комментариев</span></a><a class="weekly-event__social-item weekly-event__share" href="#">
+                    <svg class="weekly-event__share-icon">
+                      <use xlink:href="img/weekly/sprite.svg#share"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <hr class="modal__content-hr">
+              <div class="modal__content-comments">
+                <h3 class="modal__comment-title">Комментарии</h3>
+                <form class="modal__comment-new modal__form">
+                  <div class="modal__form-group">
+                    <input class="modal__form-input modal__form-froup-input" type="text" placeholder="Имя*" required>
+                    <input class="modal__form-input modal__form-froup-input" type="email" placeholder="Введите ваш Email">
+                  </div>
+                  <div class="modal__form-group">
+                    <input class="modal__form-input" type="text" placeholder="Новый комментарий*">
+                  </div>
+                  <button class="modal__form-button" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <section class="hm-galery">
         <div class="container container--extra-long">
