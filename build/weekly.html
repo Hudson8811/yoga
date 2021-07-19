@@ -107,7 +107,7 @@
       
     </script>
   </head>
-  <body class="js-body-noscroll">
+  <body>
     <div class="sh-sidebar" id="sh-sidebar">
       <div class="sh-sidebar-inner">
         <div class="sh-sidebar-inner2">
@@ -1135,19 +1135,31 @@
                     </svg></a>
                 </div>
               </div>
-              <hr class="modal__content-hr">
-              <div class="modal__content-comments">
+              <div class="modal__content-hr"></div>
+              <div class="modal__content-comments modal__comment">
                 <h3 class="modal__comment-title">Комментарии</h3>
                 <form class="modal__comment-new modal__form">
                   <div class="modal__form-group">
-                    <input class="modal__form-input modal__form-froup-input" type="text" placeholder="Имя*" required>
-                    <input class="modal__form-input modal__form-froup-input" type="email" placeholder="Введите ваш Email">
+                    <input class="modal__form-input modal__form-group-input" type="text" placeholder="Имя*" required>
+                    <input class="modal__form-input modal__form-group-input" type="email" placeholder="Email">
                   </div>
                   <div class="modal__form-group">
-                    <input class="modal__form-input" type="text" placeholder="Новый комментарий*">
+                    <input class="modal__form-input" type="text" placeholder="Новый комментарий*" required>
                   </div>
-                  <button class="modal__form-button" type="submit">Отправить</button>
+                  <button class="modal__form-button btn btn--square" type="submit">Отправить</button>
                 </form>
+                <div class="modal__comment-item">
+                  <div class="modal__comment-heading"><span class="weekly-event__heading-author">Сергей Лятычевский</span><span class="weekly-event__heading-date"><span class="weekly-event__heading-date-counter">5 дней </span>назад</span></div>
+                  <p class="modal__comment-content"></p>Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял... 
+                </div>
+                <div class="modal__comment-item">
+                  <div class="modal__comment-heading"><span class="weekly-event__heading-author">Павел Владимиров</span><span class="weekly-event__heading-date"><span class="weekly-event__heading-date-counter">3 дня </span>назад</span></div>
+                  <p class="modal__comment-content"></p>Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял...
+                </div>
+                <div class="modal__comment-item">
+                  <div class="modal__comment-heading"><span class="weekly-event__heading-author">Сергей Реутов</span><span class="weekly-event__heading-date"><span class="weekly-event__heading-date-counter">4 дня </span>назад</span></div>
+                  <p class="modal__comment-content"></p>Благодарю, Мастер!
+                </div><a class="modal__comment-more" href="#"><span class="modal__comment-more-text">Еще <span class="modal__comment-more-counter">6 </span>комментариев</span><span class="modal__comment-more-arrow"></span></a>
               </div>
             </div>
           </div>
