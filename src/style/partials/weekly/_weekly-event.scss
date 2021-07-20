@@ -117,12 +117,24 @@
   &__unwrapper {
     position: absolute;
     top: 119px;
-    right: 19px;
+    right: 0;
     display: inline-block;
+    padding-left: 1px;
+    padding-right: 19px;
     background: #ffffff;
     opacity: 1;
     transition: 0.4s linear;
     cursor: pointer;
+
+    @include media(1150) {
+      top: 124px;
+      padding-right: 30px;
+    }
+
+    @include media(620) {
+      top: 121px;
+      padding-right: 27px;
+    }
 
     &-text {
       color: #afb4bf;
