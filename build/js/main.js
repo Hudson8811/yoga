@@ -3582,35 +3582,44 @@ $(document).ready(function () {
 });
 
 // Weekly Events page
-if (document.querySelector(".weekly")) {
-  const modal = document.querySelector(".modal");
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector(".weekly")) {
+    const modal = document.querySelector(".modal");
 
-  document.addEventListener("click", (event) => {
-    const target = event.target;
+    document.addEventListener("click", (event) => {
+      const target = event.target;
 
-    // Open modal on 'comments' click
-    if (target.closest(".weekly-event__comments") && !modal.classList.contains("active")) {
-      modal.classList.add("active");
-      document.body.classList.add("js-body-noscroll");
-    }
+      // Open modal on 'comments' click
+      if (target.closest(".weekly-event__comments") && !modal.classList.contains("active")) {
+        modal.classList.add("active");
+        document.body.classList.add("js-body-noscroll");
+      }
 
-    // Close modal on 'close' click
-    if (target.closest(".modal__close") && modal.classList.contains("active")) {
-      modal.classList.remove("active");
-      document.body.classList.remove("js-body-noscroll");
-    }
+      // Close modal on 'close' click
+      if (target.closest(".modal__close") && modal.classList.contains("active")) {
+        modal.classList.remove("active");
+        document.body.classList.remove("js-body-noscroll");
+      }
 
-    if (target.closest(".weekly-event__likes")) {
-      target.closest(".weekly-event__likes").classList.toggle("liked");
-    }
-  });
+      // Likes toggler
+      if (target.closest(".weekly-event__likes")) {
+        target.closest(".weekly-event__likes").classList.toggle("liked");
+      }
 
-  const stickySidebar = () => {
-    const stickyElement = document.querySelector(".part-wsidebar__sidebar--weekly");
+      // Text unwrapper
+      if (target.closest(".js-text-unwrapper")) {
+        target.closest(".js-text-unwrapper").classList.add("hidden");
+        target.closest(".weekly-event__info").classList.add("opened");
+      }
+    });
 
-    console.log(stickyElement);
-    console.log(stickyElement.getBoundingClientRect().top);
-  };
+    // const stickySidebar = () => {
+    //   const stickyElement = document.querySelector(".part-wsidebar__sidebar--weekly");
 
-  stickySidebar();
-}
+    //   console.log(stickyElement);
+    //   console.log(stickyElement.getBoundingClientRect().top);
+    // };
+
+    // stickySidebar();
+  }
+});
