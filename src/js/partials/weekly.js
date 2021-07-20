@@ -28,14 +28,5 @@ document.addEventListener("DOMContentLoaded", () => {
         target.closest(".weekly-event__info").classList.add("opened");
       }
     });
-
-    // const stickySidebar = () => {
-    //   const stickyElement = document.querySelector(".part-wsidebar__sidebar--weekly");
-
-    //   console.log(stickyElement);
-    //   console.log(stickyElement.getBoundingClientRect().top);
-    // };
-
-    // stickySidebar();
   }
 });
