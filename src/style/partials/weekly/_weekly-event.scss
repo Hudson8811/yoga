@@ -74,6 +74,10 @@
       line-height: 26px;
     }
 
+    @include media(620) {
+      max-height: 123px;
+    }
+
     &.opened {
       max-height: 10000px;
       transition: max-height 13s linear, height 13s linear;
@@ -132,8 +136,8 @@
     }
 
     @include media(620) {
-      top: 121px;
-      padding-right: 27px;
+      top: 95px;
+      padding-right: 17px;
     }
 
     &-text {
