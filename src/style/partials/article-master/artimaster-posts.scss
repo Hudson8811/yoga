@@ -80,10 +80,12 @@
 				background-size: contain;
 				opacity: 0;
 			}
-			&:hover {
+			@media screen and (min-width: 1151px) {
+				&:hover {
 
-				&::after,&::before,.videos-duration{
-					opacity: 1;
+					&::after, &::before, .videos-duration {
+						opacity: 1;
+					}
 				}
 			}
 		}

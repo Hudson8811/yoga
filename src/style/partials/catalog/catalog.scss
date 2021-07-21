@@ -161,8 +161,10 @@
 			//padding-right: 100px;
 		}
 		@media screen and (max-width: 749px) {
-			width: 100%;
+			width: auto;
 			padding: 0;
+			right: 0;
+			left: auto;
 			span{
 				display: none;
 			}

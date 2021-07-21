@@ -3,6 +3,10 @@
 		margin-top: 50px;
 	}
 
+	.hm-quote-practice--wrap-ks-constuctor + .medet-with-us{
+		margin-top: 85px;
+	}
+
 	.mwus-title {}
 
 	.mwus-sub-title {
@@ -40,6 +44,10 @@
 @media screen and (max-width: 749px) {
 	.medet-with-us {
 		margin-top: vw(50);
+	}
+
+	.hm-quote-practice--wrap-ks-constuctor + .medet-with-us{
+		margin-top: vw(83);
 	}
 
 	.mwus-title {}

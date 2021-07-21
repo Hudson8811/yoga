@@ -155,6 +155,7 @@
 
 		&+.kspc-slider-block {}
 
+
 		&+.kspc-text-with-pic-and-hide--has-title-top {
 			margin-top: 79px;
 		}
@@ -658,7 +659,7 @@
 		margin-top: 33px;
 		width: 202px;
 
-		font-weight: 600;
+		font-weight: 500;
 		font-size: 12px;
 		line-height: 21px;
 
@@ -960,6 +961,11 @@
 
 		&--open {
 			.kspc-simple-text__p {}
+		}
+
+
+		&+.kspc-text-with-pic-and-hide {
+			margin-top: vw(51);
 		}
 
 		&+.kspc-text-with-pic-and-hide--has-title-top {
@@ -1455,7 +1461,7 @@
 		max-width: 100%;
 		margin-top: vw(33);
 		width: vw(202);
-		font-weight: 600;
+		font-weight: 500;
 		font-size: vw(12);
 		line-height: vw(21);
 

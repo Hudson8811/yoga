@@ -56,12 +56,13 @@
 				background-size: contain;
 				opacity: 0;
 			}
+			@media screen and (min-width: 1151px) {
+				&:hover {
 
-			&:hover {
-
-				&::after,
-				&::before {
-					opacity: 1;
+					&::after,
+					&::before {
+						opacity: 1;
+					}
 				}
 			}
 		}
