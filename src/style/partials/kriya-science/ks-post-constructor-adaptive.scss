@@ -149,7 +149,7 @@
 			}
 		}
 
-		&+.kspc-media-wrap {
+		&+.kspc-media-wrap:not(.kspc-media-wrap--has-title) {
 			margin-top: 29px;
 		}
 
@@ -866,7 +866,7 @@
 			margin-top: vw(29);
 		}
 
-		&+.kspc-media-wrap {
+		&+.kspc-media-wrap:not(.kspc-media-wrap--has-title) {
 			margin-top: vw(51);
 		}
 
@@ -1180,6 +1180,10 @@
 		&+.kspc-simple-text {
 			margin-top: vw(51);
 		}
+		&+.kspc-simple-text--has-title,
+		&+.kspc-media-wrap--has-title{
+			margin-top: vw(86);
+		}
 	}
 
 	.quote-with-parallax--type-music {
@@ -1251,7 +1255,7 @@
 	}
 
 	.kspc-media-wrap+.kspc-simple-text--has-title {
-		margin-top: vw(88);
+		margin-top: vw(86);
 	}
 
 	.kspc-media-wrap+.kspc-simple-text:not(.kspc-simple-text--has-title) {
@@ -1259,7 +1263,7 @@
 	}
 
 	.kspc-media-wrap--has-label {
-		&+.kspc-simple-text {
+		&+.kspc-simple-text:not(.kspc-simple-text--has-title) {
 			margin-top: vw(46);
 		}
 	}

@@ -268,7 +268,7 @@
 		}
 	}
 
-	&+.kspc-media-wrap {
+	&+.kspc-media-wrap:not(.kspc-media-wrap--has-title) {
 		margin-top: 47px;
 	}
 
