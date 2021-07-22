@@ -1,0 +1,137 @@
+.article-template {
+  // Элементы article-template
+
+  // Контейнер
+  &__container {
+    @include media(1150) {
+      width: 100%;
+      max-width: calc(100% - 34px * 2);
+    }
+    @include media(749) {
+      max-width: calc(100% - #{vw(12)} * 2);
+    }
+  }
+
+  // Хлебные крошки
+  .crumbs {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 16px 0 41px;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: -0.03em;
+
+    @include media(620) {
+      padding-bottom: 22px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        &::after {
+          content: ">";
+          color: #afb4bf;
+          margin: 0 8px;
+        }
+      }
+
+      &__link {
+        text-decoration: none;
+        color: #afb4bf;
+        opacity: 1;
+        transition: opacity linear 0.4s;
+
+        @media screen and (min-width: 993px) {
+          &:hover {
+            opacity: 0.6;
+            transition: opacity linear 0.4s;
+          }
+        }
+      }
+    }
+  }
+
+  // Основной контент
+  .article {
+    &-heading {
+      &__title {
+        font-size: 45px;
+        line-height: 56px;
+        letter-spacing: -0.03em;
+
+        @include media(1150) {
+          font-size: 39px;
+          line-height: 49px;
+        }
+      }
+
+      &__info {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 26px;
+
+        @include media(1150) {
+          line-height: 16px;
+        }
+
+        &-category {
+          margin-right: 20px;
+          color: #25378d;
+        }
+
+        &-date {
+          color: #afb4bf;
+        }
+      }
+    }
+  }
+
+  /*
+    Стили для общих элементов на этой странице
+    ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||
+    \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/
+  */
+
+  // Плашка "подписаться"
+  .subscribe {
+    &__name {
+      font-size: 28px;
+      line-height: 59px;
+
+      @include media(1150) {
+        font-size: 24px;
+        line-height: 59px;
+      }
+
+      @include media(620) {
+        font-size: vw(19);
+      }
+    }
+
+    &__link {
+      min-width: 220px;
+      min-height: 44px;
+      text-transform: uppercase;
+
+      @include media(1150) {
+        min-width: auto;
+        min-height: auto;
+        text-transform: none;
+      }
+    }
+  }
+
+  // Сайдбар
+
+  // Блок "мастер"
+  .master {
+    padding-top: 0;
+
+    &__title {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}
