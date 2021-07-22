@@ -2,17 +2,17 @@ input,
 button,
 textarea,
 select {
-	font-size: inherit;
-	font-family: inherit;
-	margin: 0;
-	padding: 0;
-	border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 div,
@@ -28,12 +28,12 @@ h5,
 h6,
 a,
 span {
-	outline: none;
-	font-size: inherit;
-	background: transparent;
+  outline: none;
+  font-size: inherit;
+  background: transparent;
 }
 
-input:not([type=checkbox]):not([type=radio]),
+input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select {
   -webkit-appearance: none;
@@ -42,155 +42,163 @@ select {
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a,
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 textarea {
-	resize: none;
+  resize: none;
 }
 
 a {
-	color: inherit;
+  color: inherit;
 }
-
 
 body {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	color: $dark;
-	background: #ffffff;
-	font-family: $mainFont;
-	font-size: 16px;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: $dark;
+  background: #ffffff;
+  font-family: $mainFont;
+  font-size: 16px;
+  position: relative;
 }
 
-
 .main {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 
-.clearfix { clear: both; }
+.clearfix {
+  clear: both;
+}
 
 .container {
-	box-sizing: border-box;
-	width: 1200px;
-	max-width: 95%;
-	max-width: calc(100% - 30px * 2);
-	margin: 0 auto;
+  box-sizing: border-box;
+  width: 1200px;
+  max-width: 95%;
+  max-width: calc(100% - 30px * 2);
+  margin: 0 auto;
 }
 
-.slick-dots li:first-child:last-child{
-	opacity: 0 !important;
+.slick-dots li:first-child:last-child {
+  opacity: 0 !important;
 }
 
 //десктоп держим правками до 1151px включительно
 
-@media screen and (max-width: 1150px){//тут начинается планшетный вид
-	.container{
-		width: 582px;
-		max-width: calc(100% - 25px * 2);
-	}
-	.container--long{//этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
-		width: 697px;
-	}
+@media screen and (max-width: 1150px) {
+  //тут начинается планшетный вид
+  .container {
+    width: 582px;
+    max-width: calc(100% - 25px * 2);
+  }
+  .container--long {
+    //этот класс проаиши обёрткам .container дивов .hr и блоков которые этого требуют
+    width: 697px;
+  }
 }
 
 //планшетный вид нам адаптировать не приходится
 
-
-@media screen and (max-width: 749px ){//на 767 начинается мобилка. её делаем как на смм. Только в данном случае под 360
-	.container{//если где-то нужен другой контейнер - там прописывай его ширну доп классом
-		width: vw(337);
-		max-width: calc(100% - #{vw(12)} * 2);
-	}
-	.container--hr{//этот класс проаиши обёрткам .container дивов .hr
-		width: vw(337);
-	}
+@media screen and (max-width: 749px) {
+  //на 767 начинается мобилка. её делаем как на смм. Только в данном случае под 360
+  .container {
+    //если где-то нужен другой контейнер - там прописывай его ширну доп классом
+    width: vw(337);
+    max-width: calc(100% - #{vw(12)} * 2);
+  }
+  .container--hr {
+    //этот класс проаиши обёрткам .container дивов .hr
+    width: vw(337);
+  }
 }
 
-
-
 #jGrowl {
-	z-index: 999999;
+  z-index: 999999;
 }
 
 *:focus {
-	outline: none;
+  outline: none;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
 
-	-webkit-locale: auto;
-	white-space: normal;
+  -webkit-locale: auto;
+  white-space: normal;
 
-	&.compensate-for-scrollbar {
-		overflow: hidden;
-	}
+  &.compensate-for-scrollbar {
+    overflow: hidden;
+  }
 }
 
 html {
-	-moz-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-o-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .hr {
-	background: #DEE6E9;
-	 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 6px;
-	height: 1px;
-	width: 100%;
+  background: #dee6e9;
+  -webkit-mask-image: -webkit-radial-gradient(white, #000);
+  border-radius: 6px;
+  height: 1px;
+  width: 100%;
 }
 
 //START сбрасываем исходные
 
-ul li, ol li {
-    padding: 0px 0;
+ul li,
+ol li {
+  padding: 0px 0;
 }
 //END сбрасываем исходные
 .slick-dots {
-	li {
-		cursor: pointer;
-	}
+  li {
+    cursor: pointer;
+  }
 }
 .slick-arrow {
-	cursor: pointer;
+  cursor: pointer;
 }
 
-
-.oh-wrap{
-	overflow: hidden;
+.oh-wrap {
+  overflow: hidden;
 }
 
-.ui-loader.ui-corner-all.ui-loader-default.ui-body-a{
-	display: none !important;
+.ui-loader.ui-corner-all.ui-loader-default.ui-body-a {
+  display: none !important;
 }
 
-.customized-arrow.slick-arrow.slick-disabled{
-	display: none !important;
+.customized-arrow.slick-arrow.slick-disabled {
+  display: none !important;
+}
+
+// Отключение скролла у боди
+.js-body-noscroll {
+  overflow: hidden;
 }

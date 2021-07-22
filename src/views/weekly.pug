@@ -1,0 +1,390 @@
+extends layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'weekly'
+    };
+
+include components/weekly/event
+
+block main
+  //- Обертка для удобства
+  .weekly
+
+    //- Баннер
+    section.big-top-pic.big-top-pic--type-comments.weekly__banner
+      .big-top-pic__container
+        .big-top-pic__relative
+          picture
+            source(srcset="img/quotes-bg-new.jpg" media="(max-width: 1150px)")
+            source(srcset="img/quotes-bg-new.jpg" media="(max-width: 749px)")
+            img.big-top-pic__img(src="img/quotes-bg-new.jpg")
+
+    //- Рассылка
+    include components/weekly/subscribe
+
+    //- Основной контент
+    section.weekly__content
+      .container.weekly-container
+        .part-wsidebar.part-wsidebar--weekly
+
+          //- Основной контент в контейнере
+          .part-wsidebar__main.part-wsidebar__main--weekly
+
+            //- Заголовочная секция
+            .weekly-heading.weekly__heading
+              h1.weekly-heading__title
+                | События недели
+              
+              p.weekly-heading__description
+                span.weekly-heading__description-highlighted
+                  | Достижение Космического сознания или освобождения человека требует миллиона лет эволюции. 
+                | У&nbsp;нас с вами столько времени нет, но есть подарок в виде супертехники Крийя-йоги. Когда я говорю супертехника, знайте, что я вкладываю самое-самое… священное нечто, что связанно с общением.
+
+            //- События
+            .weekly-posts.weekly__posts
+              .weekly-posts__item
+                +weekly-event()
+              .weekly-posts__item
+                +weekly-event(true)
+              .weekly-posts__item
+                +weekly-event(false, "liked")
+              .weekly-posts__item
+                +weekly-event()
+              .weekly-posts__item
+                +weekly-event(true)
+              .weekly-posts__item
+                +weekly-event(false, "liked")
+              .weekly-posts__item
+                +weekly-event()
+              .weekly-posts__item
+                +weekly-event(true)
+              .weekly-posts__item
+                +weekly-event(false, "liked")
+              
+              .weekly-posts__more
+                .weekly-posts__more-item.weekly-posts__more-item--1
+                .weekly-posts__more-item.weekly-posts__more-item--2
+                .weekly-posts__more-item.weekly-posts__more-item--3
+
+          //- Сайдбар в контейнере
+          .part-wsidebar__sidebar 
+            .part-wsidebar__sidebar--weekly
+              .container.container--extra-long.container--disable-on-desktop
+                .master
+                  .master__content
+                    .master__title О мастере
+                    .master__img-wrapper
+                      img.master__img(src="img/weekly/sidebar-master.jpg")
+                    .master__info
+                      span Сознание Мастера вездесуще
+                      span и этот Мастер – Высшее Я
+                    .social.master__social
+                      a.social__link.master__social-link(href="#")
+                        include ../img/icons/social-insta.svg
+                      a.social__link.master__social-link(href="#")
+                        include ../img/icons/social-yt.svg
+                      a.social__link.master__social-link(href="#")
+                        include ../img/icons/social-fb.svg
+                      a.social__link.master__social-link(href="#")
+                        include ../img/icons/social-vk.svg
+
+              .container.container--extra-long.container--disable-on-desktop
+                .insta-widget.insta-widget--article-master
+                  .insta-widget__title.custom-widget-title INSTAGRAM
+                  .insta-widget__content
+                    a.insta-widget__item(href="")
+                      img(src="img/insta-widget/insta-1.jpg", alt="")
+                    a.insta-widget__item(href="")
+                      img(src="img/insta-widget/insta-2.jpg", alt="")
+                    a.insta-widget__item(href="")
+                      img(src="img/insta-widget/insta-3.jpg", alt="")
+                    a.insta-widget__item(href="")
+                      img(src="img/insta-widget/insta-4.jpg", alt="")
+
+              .container.container--extra-long.container--disable-on-desktop
+                .csubscr-widget
+                      .csubscr-widget__inner
+                        .csubscr-widget__logo
+                          img(src="img/subscr_logo.svg", alt="icon")
+                        .csubscr-widget__title  Присоединяйтесь
+                        .csubscr-widget__description Получите доступ к платформе Имрам Крийя
+                        .csubscr-widget__inp-wrap
+                          input.email-cinp(type="text", name="" placeholder="Введите ваш Email")
+                        .btn.btn--square.csubscr-widget__btn отправить
+
+              .oh-wrap--on-mob
+                .container.container--extra-long.container--disable-on-desktop
+                  .slider-news-widget-wrap
+                    .slider-news-widget
+                      .slider-news-widget__title.custom-widget-title Онлайн курсы
+                      .slnewsw-slider.js-slnewsw-slider
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/online-courses.jpg", alt="")
+                          .slnewsw-slider-item__name Базовый курс медитации
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/online-courses.jpg", alt="")
+                          .slnewsw-slider-item__name Базовый курс медитации2
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/online-courses.jpg", alt="")
+                          .slnewsw-slider-item__name Базовый курс медитации3
+
+                    .slider-news-widget.hide--mob
+                      .slider-news-widget__title.custom-widget-title Видео недели
+                      .slnewsw-slider.slnewsw-slider--video.js-slnewsw-slider
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/weekly/slider-news-image.jpg", alt="")
+                          .slnewsw-slider-item__name Как развить осознанность
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/weekly/slider-news-image.jpg", alt="")
+                          .slnewsw-slider-item__name Как развить осознанность2
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/weekly/slider-news-image.jpg", alt="")
+                          .slnewsw-slider-item__name Как развить осознанность3
+                        a.slnewsw-slider-item(href="")
+                          .slnewsw-slider-item__pic
+                            img(src="img/weekly/slider-news-image.jpg", alt="")
+                          .slnewsw-slider-item__name Как развить осознанность4                          
+
+              .weekly-two-widgets
+                .container.container--extra-long.container--disable-on-desktop.weekly-two-widgets__container
+                  .wnevents-widget.wnevents-card
+                    a.wnevents-widget__item.wnevents-widget__item--big(href="")
+                      .wnevents-widget__pic
+                        img(src="img/weekly/sidebar-articles.jpg", alt="")
+                      .wnevents-widget__title Статьи мастера
+
+                  .wnevents-list.hide--desktop
+                    h3.wnevents-list__title.custom-widget-title
+                      | Новые статьи
+
+                    ul.wnevents-list__ul
+                      li.wnevents-list__item
+                        span.wnevents-list__heading
+                          | Что такое осознанность
+                        span.wnevents-list__date 
+                          | 28 Янв 2021
+                      li.wnevents-list__item
+                        span.wnevents-list__heading
+                          | Глубина общения
+                        span.wnevents-list__date 
+                          | 28 Янв 2021
+                      li.wnevents-list__item
+                        span.wnevents-list__heading
+                          | Как стать счастливым
+                        span.wnevents-list__date 
+                          | 28 Янв 2021                                                    
+
+
+              .container.container--extra-long.container--disable-on-desktop.container__weekly-music
+                .music-player-wrap
+                  #music-player.music-player
+                    .music-player-top
+                      .amplitude-next.music-player-top__arrow.music-player-top__arrow--next <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.24336 18C0.999021 18.0007 0.759956 17.929 0.55634 17.7939L0.384583 17.6393L0.230003 17.4676C0.0804629 17.26 0 17.0106 0 16.7548C0 16.4989 0.0804629 16.2496 0.230003 16.042L0.350235 15.8359C0.408482 15.7559 0.48505 15.6912 0.573516 15.6469L6.77389 9.39504C6.83003 9.34206 6.87476 9.27817 6.90533 9.20728C6.9359 9.1364 6.95167 9.06002 6.95167 8.98283C6.95167 8.90563 6.9359 8.82925 6.90533 8.75837C6.87476 8.68749 6.83003 8.6236 6.77389 8.57061L0.504815 2.26718L0.367407 2.09543C0.1918 1.8761 0.0961205 1.6035 0.0961205 1.32253C0.0961205 1.04156 0.1918 0.768962 0.367407 0.549629L0.487639 0.395048L0.659392 0.240468C0.880267 0.0838807 1.14437 -0.000151287 1.41512 1.06603e-05C1.66487 -0.00100519 1.90953 0.0706024 2.11932 0.206117L2.29107 0.360697L9.38458 7.43703L10.0201 8.0897C10.2133 8.34242 10.3062 8.65771 10.2808 8.97483C10.2554 9.29195 10.1136 9.58846 9.88267 9.80725L2.15367 17.5534C2.04003 17.6856 1.90077 17.7933 1.7443 17.87C1.58783 17.9468 1.41741 17.991 1.24336 18Z" fill="#25378D"/><path d="M9.62513 9.66986L1.91331 17.3817C1.76238 17.5334 1.56365 17.6282 1.35078 17.6501C1.13792 17.672 0.924034 17.6197 0.74537 17.5019L0.607966 17.3817L0.487737 17.2443C0.387311 17.0944 0.333694 16.918 0.333694 16.7376C0.333694 16.5572 0.387311 16.3808 0.487737 16.2309L0.607966 16.0935C0.645347 16.0447 0.692054 16.0039 0.74537 15.9733L7.03162 9.66986C7.19579 9.49215 7.28696 9.25911 7.28696 9.01719C7.28696 8.77526 7.19579 8.54222 7.03162 8.36452L0.74537 2.09544L0.607966 1.90651C0.483849 1.75351 0.416111 1.56249 0.416111 1.36548C0.416111 1.16846 0.483849 0.977443 0.607966 0.824445L0.728194 0.687041L0.865598 0.566812C1.01812 0.464905 1.19743 0.410512 1.38086 0.410512C1.5643 0.410512 1.74361 0.464905 1.89613 0.566812L2.03354 0.687041L9.10987 7.74619L9.74536 8.39887C9.88795 8.58736 9.95471 8.82245 9.93245 9.05775C9.91019 9.29304 9.80054 9.51145 9.62513 9.66986Z" fill="#25378D"/></svg>
+
+
+
+                      .amplitude-prev.music-player-top__arrow.music-player-top__arrow--prev
+                        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.0418 3.706e-06C9.28614 -0.000675281 9.5252 0.0710438 9.72882 0.20611L9.90057 0.360691L10.0552 0.532448C10.2047 0.740033 10.2852 0.989394 10.2852 1.24523C10.2852 1.50107 10.2047 1.75043 10.0552 1.95802L9.93492 2.16412C9.87668 2.24405 9.80011 2.30884 9.71164 2.35305L3.51126 8.60496C3.45512 8.65794 3.4104 8.72183 3.37983 8.79272C3.34926 8.8636 3.33349 8.93998 3.33349 9.01717C3.33349 9.09437 3.34926 9.17075 3.37983 9.24163C3.4104 9.31251 3.45512 9.3764 3.51126 9.42939L9.78034 15.7328L9.91775 15.9046C10.0934 16.1239 10.189 16.3965 10.189 16.6775C10.189 16.9584 10.0934 17.231 9.91775 17.4504L9.79752 17.605L9.62576 17.7595C9.40489 17.9161 9.14079 18.0002 8.87004 18C8.62029 18.001 8.37563 17.9294 8.16584 17.7939L7.99408 17.6393L0.900581 10.563L0.265084 9.9103C0.0718577 9.65757 -0.021017 9.34228 0.0043524 9.02517C0.0297218 8.70805 0.171541 8.41154 0.402489 8.19275L8.13149 0.446569C8.24512 0.314426 8.38439 0.206713 8.54086 0.129955C8.69733 0.0531968 8.86775 0.00898778 9.0418 3.706e-06Z" fill="#25378D"/><path d="M0.660024 8.33014L8.37185 0.618316C8.52277 0.46662 8.72151 0.371777 8.93437 0.349865C9.14724 0.327953 9.36112 0.380319 9.53979 0.498087L9.67719 0.618317L9.79742 0.755722C9.89785 0.905617 9.95146 1.08197 9.95146 1.2624C9.95146 1.44283 9.89785 1.61919 9.79742 1.76908L9.67719 1.90648C9.63981 1.95527 9.5931 1.99614 9.53979 2.02671L3.25353 8.33014C3.08937 8.50785 2.9982 8.74089 2.9982 8.98281C2.9982 9.22474 3.08937 9.45778 3.25353 9.63548L9.53979 15.9046L9.67719 16.0935C9.80131 16.2465 9.86905 16.4375 9.86905 16.6345C9.86905 16.8315 9.80131 17.0226 9.67719 17.1756L9.55696 17.313L9.41956 17.4332C9.26704 17.5351 9.08773 17.5895 8.90429 17.5895C8.72086 17.5895 8.54154 17.5351 8.38902 17.4332L8.25162 17.313L1.17529 10.2538L0.539795 9.60113C0.397205 9.41264 0.330452 9.17755 0.35271 8.94225C0.374967 8.70696 0.484619 8.48855 0.660024 8.33014Z" fill="#25378D"/></svg>
+
+
+
+                    #music-player__swipe-area.music-player__swipe-area
+                    .music-player-center
+
+                      .music-player__album-art
+                        #mpl-icon-slider.mpl-icon-slider
+                        //img(data-amplitude-song-info='cover_art_url')
+                      .song-meta-data
+                      span.music-player__song-name(data-amplitude-song-info='name')
+                      span.music-player__song-artist(data-amplitude-song-info='artist')
+                      .music-player__time-progress
+                        .soundRS__progress-container
+                          input.amplitude-song-slider.js-song-progress-slider(type='range' min="0" max="100" value='0')
+                          progress#song-played-progress.amplitude-song-played-progress
+                          //progress#song-buffered-progress.amplitude-buffered-progress(value='0')
+                        .music-player__time-container
+                          span.music-player__current-time
+                            span.amplitude-custom-current-minutes#amplitude-custom-current-minutes
+                            | :
+                            span.amplitude-current-seconds
+                          span.music-player__duration
+                            span.amplitude-custom-duration-minutes#amplitude-custom-duration-minutes
+                            | :
+                            span.amplitude-custom-duration-seconds#amplitude-custom-duration-seconds
+
+
+                      .music-player__controls
+                        .amplitude-prev.music-player__prev
+                          img(src="img/player-controls/prev.svg", alt="")
+                        .amplitude-play-pause.music-player-mainctrl
+                          .music-player-mainctrl__pause
+                            img(src="img/player-controls/pause.svg", alt="")
+                          .music-player-mainctrl__play
+                            img(src="img/player-controls/play.svg", alt="")
+
+                        .amplitude-next.music-player__next
+                          img(src="img/player-controls/next.svg", alt="")
+
+                      .musicpl-bottom-controls
+                        .musicpl-bottom-controls__playlist
+                          img(src="img/player-controls/playlist.svg", alt="")
+                        a#song-orig-link.musicpl-bottom-controls__orig.musicpl-bottom-controls__orig_link(href="#")
+                          img(src="img/player-controls/star.svg", alt="")
+                        .musicpl-bottom-controls__volume
+                          .volumeRS-wrap
+                            input.amplitude-volume-slide.js-volume-slider(type='range' min="0" max="100" value='100')
+                          img(src="img/player-controls/volume.svg", alt="")
+                  #music-player__playlist-container.music-player__playlist-container
+                    #music-player__playlist-container-2.music-player__playlist-container-2(style="display:none;")
+                      #music-player__playlist.music-player__playlist
+                        #music-player__playlist-inner.music-player__playlist-inner
+
+    //- Модальное окно с комметариями
+    .modal
+      .modal__close
+
+      .modal__content
+        .weekly-event
+          .weekly-event__heading
+            img(src="img/weekly/event-logo.svg", alt="").weekly-event__heading-logo
+
+            span.weekly-event__heading-author
+              | Имрам Крийя
+            
+            span.weekly-event__heading-date
+              span.weekly-event__heading-date-counter
+                | 2 дня 
+              | назад
+
+          .weekly-event__info
+            p.weekly-event__info-title
+              img(src="img/weekly/symbol.png", alt="").weekly-event__info-symbol
+              | 31 июля - 1 августа пройдет Мини-Ретрит с Мастером Имрамом в Подмосковье
+              span.weekly-event__info-dash 
+                | -  
+              a(href="https://imram-kriya.com/retrit_new " target="_blank").weekly-event__info-link
+                | https://imram-kriya.com/retrit_new 
+
+            p.weekly-event__info-description
+              | "Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра
+
+            .weekly-event__unwrapper.js-text-unwrapper
+              span.weekly-event__unwrapper-dots
+                | ... 
+              span.weekly-event__unwrapper-text
+                | Развернуть           
+
+          .weekly-event__media
+            .weekly-event__image
+              img(src="img/weekly/image-placeholder.jpg", alt="").weekly-event__image-item
+          
+          .weekly-event__social
+            .weekly-event__social-main
+              div(class=`weekly-event__social-item weekly-event__likes`)
+                svg.weekly-event__social-icon.weekly-event__likes-icon
+                  use(xlink:href="img/weekly/sprite.svg#like")
+
+                span.weekly-event__likes-counter
+                  | 257
+
+              a(href="#").weekly-event__social-item.weekly-event__comments
+                svg.weekly-event__social-icon.weekly-event__comments-icon   
+                  use(xlink:href="img/weekly/sprite.svg#comment")    
+
+                span.weekly-event__comments-text
+                  | 9 комментариев
+              
+              a(href="#").weekly-event__social-item.weekly-event__share
+                svg.weekly-event__share-icon
+                  use(xlink:href="img/weekly/sprite.svg#share")
+
+          .modal__content-hr
+
+          .modal__content-comments.modal__comment
+            h3.modal__comment-title
+              | Комментарии
+          
+            form.modal__comment-new.modal__form
+              .modal__form-group
+                input(type="text" placeholder="Имя*" required).modal__form-input.modal__form-group-input
+                input(type="email" placeholder="Email").modal__form-input.modal__form-group-input
+              
+              .modal__form-group
+                input(type="text" placeholder="Новый комментарий*" required).modal__form-input
+
+              button(type="submit").modal__form-button.btn.btn--square
+                | Отправить
+            
+            .modal__comment-item
+              .modal__comment-heading
+                span.weekly-event__heading-author
+                  | Сергей Лятычевский
+                
+                span.weekly-event__heading-date
+                  span.weekly-event__heading-date-counter
+                    | 5 дней 
+                  | назад
+              
+              p.modal__comment-content
+              | Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял... 
+
+            .modal__comment-item
+              .modal__comment-heading
+                span.weekly-event__heading-author
+                  | Павел Владимиров
+                
+                span.weekly-event__heading-date
+                  span.weekly-event__heading-date-counter
+                    | 3 дня 
+                  | назад
+              
+              p.modal__comment-content
+              | Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял...
+
+            .modal__comment-item
+              .modal__comment-heading
+                span.weekly-event__heading-author
+                  | Сергей Реутов
+                
+                span.weekly-event__heading-date
+                  span.weekly-event__heading-date-counter
+                    | 4 дня 
+                  | назад
+              
+              p.modal__comment-content
+              | Благодарю, Мастер!
+            
+            a(href="#").modal__comment-more
+              span.modal__comment-more-text
+                | Еще 
+                span.modal__comment-more-counter
+                  |6 
+                | комментариев
+              span.modal__comment-more-arrow
+
+          
+        
+
+  //- Галерея перед футером
+  section.hm-galery
+    .container.container--extra-long
+      .hm-galery__row
+        .hm-galery__img-wrapper
+          img.hm-galery__img(src="img/gallery/photo1.jpg")
+        .hm-galery__img-wrapper
+          img.hm-galery__img(src="img/gallery/photo2.jpg")
+        .hm-galery__img-wrapper
+          img.hm-galery__img(src="img/gallery/photo3.jpg")
+        .hm-galery__img-wrapper
+          img.hm-galery__img(src="img/gallery/photo4.jpg")
+        a.hm-galery__white-box(href="#")
+          p Все<br/>фотографии
+      
