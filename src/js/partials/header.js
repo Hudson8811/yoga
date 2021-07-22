@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	var MobMenuOpened = false;
+
 	$('.sh-burger').click(function () {
 		if ($(this).closest('.sh-burger-wrap-right').length > 0) {//мобилка
 
@@ -14,9 +16,11 @@ $(document).ready(function () {
 
 			}
 			else {
-
 				$(this).addClass('sh-burger--active');
 				$('.sh-mmenu-mobile').scrollTop(0);
+				if ($(document).scrollTop() < 50){
+					$('html, body').scrollTop(0);
+				}
 				setTimeout(function () {
 					$('.sh-mmenu-mobile').addClass('sh-mmenu-mobile--open');
 
@@ -25,6 +29,7 @@ $(document).ready(function () {
 						$('html, body').css({
 							overflow: 'hidden',
 						});
+						MobMenuOpened = true;
 					}, 350);
 				}, 70);
 
@@ -122,9 +127,11 @@ $(document).ready(function () {
 					shScrolled = true;
 				}
 			} else {
-				if (shScrolled) {
+				if (shScrolled && !MobMenuOpened) {
 					$('#site-header:not(.site-header--static)').removeClass('sh-fixed sh-scrolled');
 					shScrolled = false;
+				} else if (MobMenuOpened) {
+					MobMenuOpened = false;
 				}
 			}
 		} else { //Есть дополнительная плавающая шапка с position sticky
@@ -172,13 +179,15 @@ $(document).ready(function () {
 				}
 
 			} else {
-				if (headerStatus !== 'default') {
+				if (headerStatus !== 'default' && !MobMenuOpened) {
 					$('#site-header').css({
 						'position': '',
 						'top': ''
 					})
 					$('#site-header').removeClass('sh-fixed sh-scrolled');
 					headerStatus = 'default';
+				} else if (MobMenuOpened) {
+					MobMenuOpened = false;
 				}
 			}
 

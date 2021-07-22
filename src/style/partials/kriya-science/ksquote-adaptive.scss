@@ -12,7 +12,18 @@
 		&--first-books{
 		}
 
-
+		&--small-on-all {
+			padding-top: 83px;
+			.ksquote-content {
+				&__title {
+					font-size: 45px;
+					line-height: 49px;
+					&+.ksquote-content-description{
+						margin-top: 21px;
+					}
+				}
+			}
+		}
 	}
 
 	.container--ksquote-wide {
@@ -38,6 +49,8 @@
 					margin-top: 21px;
 				}
 			}
+
+
 		}
 
 		&-description {
@@ -72,6 +85,19 @@
 		&--first-books{
 			padding-top: vw(49);
 			padding-bottom: vw(53);
+		}
+
+		&--small-on-all {
+			padding-top: vw(88);
+			.ksquote-content {
+				&__title {
+					font-size: vw(32);
+					line-height: vw(32);
+					&+.ksquote-content-description{
+						margin-top: vw(23);
+					}
+				}
+			}
 		}
 	}
 

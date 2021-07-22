@@ -173,6 +173,11 @@
 		&:last-child {
 			margin-bottom: vw(-61);
 		}
+		&--ended{
+			&:last-child {
+				margin-bottom: vw(-57);
+			}
+		}
 	}
 
 	.reviews-title {}

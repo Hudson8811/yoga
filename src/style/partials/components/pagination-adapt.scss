@@ -15,7 +15,7 @@
 			border: 1px solid #AFB4BF;
 			color: #AFB4BF;
 			font-weight: 300;
-			font-size: vw(17);
+			font-size: vw(15);
 			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
 			margin: 0 vw(4.5);
 			transition: .3s;
@@ -52,7 +52,7 @@
 			align-items: center;
 
 			svg {
-				width: vw(8);
+				width: vw(6);
 				height: auto;
 			}
 
@@ -68,7 +68,11 @@
 
 			}
 
-			&--next {}
+			&--next {
+				svg{
+					margin-left: vw(1);
+				}
+			}
 
 			&--prev {
 				svg {

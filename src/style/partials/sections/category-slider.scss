@@ -178,9 +178,11 @@
 			backdrop-filter: blur(5px);
 			transition: all .4s ease;
 		}
-		&:hover{
-			&::after{
-				opacity: 1;
+		@media screen and (min-width: 1151px) {
+			&:hover {
+				&::after {
+					opacity: 1;
+				}
 			}
 		}
 	}

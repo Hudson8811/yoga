@@ -57,10 +57,15 @@
 	}
 
 	.twoinrow-section {
-		margin-top: vw(51);
+		margin-top: vw(78);
+	}
+	.twoinrow-hr-wrap--before{
+		display: none;
 	}
 
-	.twoinrow-title {}
+	.twoinrow-title {
+		text-align: left;
+	}
 
 	.twoinrow {
 		margin-top: vw(28);

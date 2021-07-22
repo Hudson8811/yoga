@@ -84,8 +84,14 @@
 			.maslider-slide__inner {
 
 				&::before {
-					width: vw(59);
-					height: vw(59);
+					width: vw(22);
+					height: vw(22);
+					opacity: 1;
+					left: auto;
+					top: auto;
+					right: vw(9);
+					bottom: vw(9);
+					transform: none;
 				}
 
 			}

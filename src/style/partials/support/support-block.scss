@@ -1,12 +1,12 @@
 .ks-post-constructor--support-page {
-	padding: 26px 0 7px;
+	padding: 45px 0 7px;
 
 	@media screen and (max-width: 1150px) {
-		padding: 2px 0 7px;
+		padding: 12px 0 7px;
 	}
 
 	@media screen and (max-width: 749px) {
-		padding: vw(0) 0 vw(7);
+		padding: vw(15) 0 vw(7);
 	}
 }
 
@@ -247,14 +247,12 @@
 			width: 164px;
 			min-width: auto;
 			margin-top: 35px;
-			font-weight: 600;
 		}
 
 		@media screen and (max-width: 749px) {
 			width: vw(164);
 			min-width: auto;
 			margin-top: vw(35);
-			font-weight: 600;
 		}
 
 		&:hover {}
