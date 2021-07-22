@@ -47,6 +47,8 @@
 		img {
 			@include relative_img();
 		}
+
+		@include scalepic();
 	}
 
 	&__title {
