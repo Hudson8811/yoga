@@ -1,0 +1,208 @@
+.comments
+  .comments-top
+    h2.comments-title 
+      | Комментарии
+    .comments-top__count 
+      | 868 комментариев
+
+  form.comments-form
+    .comments-form__top
+      .comments-form__top-inp-wrap
+        input.comments-textarea(type="text" placeholder="Имя*")
+      .comments-form__top-inp-wrap
+        input.comments-textarea(type="text" placeholder="Email")
+
+    input.hide(type="text" value="Иванов Иван")
+
+    textarea.comments-textarea.js-textarea-autosize(name="make-review", placeholder="Новый отзыв*", rows="1")
+    
+    button.btn.comments-send-btn(type="submit") 
+      | Отправить
+
+  .comments-container    
+    //- Первый коммент
+    .comments-item
+      .comments-item__top
+        .comments-item__name 
+          | Павел Владимиров
+        .comments-item__days 
+          | 3 дня назад
+
+      .comments-item__text.comments-item__text--with-hide
+        p 
+          | Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam itaque enim sequi deserunt blanditiis, veniam reiciendis. Aut odio, labore dolor, magni quae voluptate quos omnis recusandae unde ex dolore iure minus error ab minima esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae possimus nam quis est distinctio, deleniti culpa tempora suscipit laudantium voluptate voluptatem aspernatur in? Delectus aliquam blanditiis optio eum eius aspernatur ea nihil praesentium. Perferendis nisi ex magni. Necessitatibus ipsa quibusdam error voluptas soluta aliquam eos alias voluptate, eius excepturi.
+        
+        div.kspc-twpah-unwrap.comments-unwrap.js-review-unwrap
+          span.kspc-twpah-unwrap__dots 
+            | ...
+          span.kspc-twpah-unwrap__text  
+            | Развернуть
+      
+      .comments-item__controls
+        a(href="").comments-item__controls-item.comments-item__controls-item--reply
+          | Ответить
+        a(href="").comments-item__controls-item.comments-item__controls-item--edit.comments-item__controls-item--hidden
+          | Редактировать 
+
+      .comments-item__has-replies.comments-item__has-replies--no-replies
+        img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+        .comments-item__has-replies-text
+          | 2 ответа                      
+
+    //- Второй коммент
+    .comments-item
+      .comments-item__top
+        .comments-item__name 
+          | Сергей Реутов
+        .comments-item__days 
+          | 4 дня назад
+
+      .comments-item__text.comments-item__text--with-hide
+        p 
+          | Благодарю, Мастер!
+      
+      .comments-item__controls
+        a(href="").comments-item__controls-item.comments-item__controls-item--reply
+          | Ответить  
+        a(href="").comments-item__controls-item.comments-item__controls-item--edit
+          | Редактировать 
+
+      .comments-item__has-replies.comments-item__has-replies--no-replies
+        img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+        .comments-item__has-replies-text
+          | 2 ответа               
+
+    //- Третий коммент
+    .comments-item
+      .comments-item__top
+        .comments-item__name 
+          | Сергей Лятычевский
+        .comments-item__days 
+          | 5 дней назад
+
+      .comments-item__text.comments-item__text--with-hide
+        p 
+          | Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял
+
+        div.kspc-twpah-unwrap.comments-unwrap.js-review-unwrap
+          span.kspc-twpah-unwrap__dots 
+            | ...
+          span.kspc-twpah-unwrap__text  
+            | Развернуть
+
+      .comments-item__controls
+        a(href="").comments-item__controls-item.comments-item__controls-item--reply
+          | Ответить  
+        a(href="").comments-item__controls-item.comments-item__controls-item--edit.comments-item__controls-item--hidden
+          | Редактировать
+
+      .comments-item__has-replies
+        img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+        .comments-item__has-replies-text
+          | 2 ответа    
+
+    //- Четвертый коммент
+    .comments-item
+      .comments-item__top
+        .comments-item__name 
+          | Сергей Лятычевский
+        .comments-item__days 
+          | 5 дней назад
+
+      .comments-item__text.comments-item__text--with-hide
+        p 
+          | Мастер Имрам, Благо Дарю за новую статью. Как всегда все объяснено доступным для каждого из нас языком. На несколько раз перечитала, медленно и вдумчиво. 🙏  Мастер Имрам, такой вопрос возник. В одной из медитаций, которую я пыталась применить на себе, там говорилось что-то об объединенной чакре, т.е.все чакры объединяют в одну общую, или я ошиблась и не так поняла тех людей, кто составлял
+
+        div.kspc-twpah-unwrap.comments-unwrap.js-review-unwrap
+          span.kspc-twpah-unwrap__dots 
+            | ...
+          span.kspc-twpah-unwrap__text  
+            | Развернуть
+
+      .comments-item__controls
+        a(href="").comments-item__controls-item.comments-item__controls-item--reply
+          | Ответить  
+        a(href="").comments-item__controls-item.comments-item__controls-item--edit.comments-item__controls-item--hidden
+          | Редактировать
+
+      .comments-item__has-replies.comments-item__has-replies--opened
+        img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+        .comments-item__has-replies-text
+          | 2 ответа                   
+
+      //- Пятый коммент
+      .comments-item.comments-item__reply
+        .comments-item__reply-line
+
+        .comments-item__top
+          .comments-item__name
+            img(src="img/weekly/event-logo.svg", alt="").comments-item__name-symbol 
+            | Имрам Крийя
+          .comments-item__days 
+            | 23 часа назад
+
+        .comments-item__text.comments-item__text--with-hide
+          p 
+            | Светлана, добрый день! Благодарим за ваши светлые и добрые комментарии. Ваш вопрос обязательно передадим Мастеру, всех благ 🙏✨
+
+        .comments-item__controls
+          a(href="").comments-item__controls-item.comments-item__controls-item--reply
+            | Ответить  
+          a(href="").comments-item__controls-item.comments-item__controls-item--edit.comments-item__controls-item--hidden
+            | Редактировать
+
+        .comments-item__has-replies.comments-item__has-replies--opened
+          img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+          .comments-item__has-replies-text
+            | 2 ответа
+
+        //- шестой коммент
+        .comments-item.comments-item__reply
+          .comments-item__reply-line
+
+          .comments-item__top
+            .comments-item__name              
+              | Сергей Лятычевский
+            .comments-item__days 
+              | 23 часа назад
+
+          .comments-item__text.comments-item__text--with-hide
+            p 
+              | Спасибо мастер! 🙏🙏🙏
+
+          .comments-item__controls
+            a(href="").comments-item__controls-item.comments-item__controls-item--reply
+              | Ответить  
+            a(href="").comments-item__controls-item.comments-item__controls-item--edit.comments-item__controls-item--hidden
+              | Редактировать
+
+          .comments-item__has-replies.comments-item__has-replies--opened
+            img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+            .comments-item__has-replies-text
+              | 2 ответа       
+
+      //- Седьмой коммент
+      .comments-item.comments-item__reply
+        .comments-item__reply-line
+
+        .comments-item__top
+          .comments-item__name
+            img(src="img/weekly/event-logo.svg", alt="").comments-item__name-symbol 
+            | Имрам Крийя
+          .comments-item__days 
+            | 23 часа назад
+
+        .comments-item__text.comments-item__text--with-hide
+          p 
+            | Светлана, добрый день! Благодарим за ваши светлые и добрые комментарии. Ваш вопрос обязательно передадим Мастеру, всех благ 🙏✨
+
+        .comments-item__controls
+          a(href="").comments-item__controls-item.comments-item__controls-item--reply
+            | Ответить  
+          a(href="").comments-item__controls-item.comments-item__controls-item--edit.comments-item__controls-item--hidden
+            | Редактировать
+
+        .comments-item__has-replies.comments-item__has-replies--opened
+          img(src="img/article-template/reply-icon.svg", alt="").comments-item__has-replies-icon
+          .comments-item__has-replies-text
+            | 2 ответа               

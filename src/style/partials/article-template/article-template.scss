@@ -1,5 +1,12 @@
 .article-template {
-  // Элементы article-template
+  /*
+    Элементы article-template
+  */
+
+  // Основной контейнер
+  &__main {
+    padding-bottom: 93px;
+  }
 
   // Контейнер
   &__container {
@@ -10,6 +17,23 @@
     @include media(749) {
       max-width: calc(100% - #{vw(12)} * 2);
     }
+  }
+
+  // Текстовые блоки
+  &__text {
+    padding-right: 8px;
+
+    &--p2 {
+      margin-top: 72px;
+      padding-right: 0;
+    }
+  }
+
+  // Блок tags-and-share
+  &__tags-and-share {
+    padding-top: 49px;
+    padding-bottom: 58px;
+    border-bottom: 1px solid #dee6e9;
   }
 
   // Хлебные крошки
@@ -53,6 +77,7 @@
 
   // Основной контент
   .article {
+    // Заголовчная секция
     &-heading {
       &__title {
         font-size: 45px;
@@ -78,12 +103,81 @@
         &-category {
           margin-right: 20px;
           color: #25378d;
+          transition: color linear 0.3s;
+
+          @include hov();
         }
 
         &-date {
           color: #afb4bf;
         }
       }
+    }
+
+    // Изображение на весь контейнер
+    &-picture {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      border-radius: 5px;
+
+      @include scalepic();
+
+      &__item {
+        @include relative_img();
+      }
+    }
+
+    // Фотография в середине статьи
+    &-photo {
+      &__text {
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: -0.03em;
+        color: #afb4bf;
+      }
+    }
+
+    // Обтекаемая фотграфия
+    &-float {
+      position: relative;
+      float: right;
+      margin-top: 9px;
+      margin-left: 37px;
+      margin-bottom: 41px;
+      height: 429px;
+
+      &__image {
+        float: none;
+        margin: 0;
+        width: 404px;
+        height: 404px;
+      }
+
+      &__text {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 13px;
+        line-height: 13px;
+        text-align: right;
+        letter-spacing: -0.03em;
+        color: #afb4bf;
+      }
+    }
+
+    // Элементы
+    &__heading {
+      margin-bottom: 27px;
+    }
+
+    &__picture {
+      margin-bottom: 76.6px;
+    }
+
+    &__photo {
+      margin-top: 24px;
     }
   }
 
@@ -122,7 +216,46 @@
     }
   }
 
-  // Сайдбар
+  // Блок с обтекаемой картиной внутри статьи
+
+  .kspc-text-with-pic-and-hide {
+    margin-top: 19px;
+  }
+
+  // Блок tags-and-share
+  .kspc-tas-flex {
+    justify-content: space-between;
+  }
+
+  // Слайдер новых статей
+  .new-article {
+    padding-top: 45px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #dee6e9;
+
+    &__title {
+      font-size: 45px;
+      line-height: 59px;
+      letter-spacing: -0.03em;
+    }
+
+    .slick-dots {
+      margin-top: 30px;
+    }
+  }
+
+  // Слайдер категорий
+  .section-category-slider {
+    padding-top: 19px;
+
+    .slick-dots {
+      display: none !important;
+    }
+  }
+
+  /*
+    Сайдбар
+  */
 
   // Блок "мастер"
   .master {
