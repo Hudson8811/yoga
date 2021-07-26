@@ -76,7 +76,7 @@ block main
               .article-photo__text
                 | Ретрит - Имрам Крийя Сочи
 
-            //- Вторая часть
+            //- Третья часть
             .kspc-simple-text.kspc-simple-text--has-title.article-template__text--p2
               .kspc-simple-text__h2
                 | Чакры и Божественный Сосуд
@@ -85,7 +85,7 @@ block main
                 p
                   | «Чакра» переводится как «колесо». Чакры – особые вращающиеся центры, сгустки энергии на астральном плане. В практике Крийя мы объединяем все чакры. Расстояние между центрами и есть двойственность. Люди, которые практикуют Крийя, идут к адвайте, к недвойственности. Выполняя особые практики Крийя, мы добиваемся того, что все центры объединяются в один мощный энергопотенциал, то есть, в Божественный Сосуд. Раскручивается аспект динамо-машины, и человек, пробуждая силы, поднимает Шакти, которая, проходя через эти центры, раскрывает все узлы, которые ограничивают этот подъём.
 
-            //- Третья часть (с обтекаемой картинкой)
+            //- Четвертая часть (с обтекаемой картинкой)
             .kspc-text-with-pic-and-hide
               .kspc-twpah.kspc-twpah--pic-right.kspc-twpah--non-hide
                 .article-float
@@ -137,6 +137,7 @@ block main
             //- Слайдер категорий
             include components/article-template/category-slider
 
+            //- Прелоадер следующей статьи
             .kspc-preloader
               span
               span
@@ -228,34 +229,32 @@ block main
                             img(src="img/weekly/slider-news-image.jpg", alt="")
                           .slnewsw-slider-item__name Как развить осознанность4                          
 
-              .weekly-two-widgets
-                .container.container--extra-long.container--disable-on-desktop.weekly-two-widgets__container
-                  .wnevents-widget.wnevents-card
-                    a.wnevents-widget__item.wnevents-widget__item--big(href="")
-                      .wnevents-widget__pic
-                        img(src="img/weekly/sidebar-articles.jpg", alt="")
-                      .wnevents-widget__title Статьи мастера
+              .container.container--extra-long.container--disable-on-desktop
+                .wnevents-widget
+                  a.wnevents-widget__item(href="")
+                    .wnevents-widget__pic
+                      img(src="img/wnevents-1.jpg", alt="")
+                    .wnevents-widget__title События недели
+                  a.wnevents-widget__item(href="")
+                    .wnevents-widget__pic
+                      img(src="img/wnevents-2.jpg", alt="")
+                    .wnevents-widget__title Статьи мастера 
 
-                  .wnevents-list.hide--desktop
-                    h3.wnevents-list__title.custom-widget-title
-                      | Новые статьи
-
-                    ul.wnevents-list__ul
-                      li.wnevents-list__item
-                        span.wnevents-list__heading
-                          | Что такое осознанность
-                        span.wnevents-list__date 
-                          | 28 Янв 2021
-                      li.wnevents-list__item
-                        span.wnevents-list__heading
-                          | Глубина общения
-                        span.wnevents-list__date 
-                          | 28 Янв 2021
-                      li.wnevents-list__item
-                        span.wnevents-list__heading
-                          | Как стать счастливым
-                        span.wnevents-list__date 
-                          | 28 Янв 2021                                                    
+                .category
+                  .category__title.custom-widget-title Категории
+                  ul.category__list
+                    li.category__list-item
+                      a.category__link(href="#") Новые статьи
+                    li.category__list-item
+                      a.category__link(href="#") Наука Крийя
+                    li.category__list-item
+                      a.category__link(href="#") Саморазвитие
+                    li.category__list-item
+                      a.category__link(href="#") Творчество
+                    li.category__list-item
+                      a.category__link(href="#") Здоровье
+                    li.category__list-item
+                      a.category__link(href="#") Семья и дети                                              
 
 
               .container.container--extra-long.container--disable-on-desktop.container__weekly-music
