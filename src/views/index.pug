@@ -17,6 +17,16 @@ block main
 					source(srcset="img/front-slider-mob.jpg", media="(max-width: 749px)")
 					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
 				.hms-info
+					a.hms-info-btn.hms-info-btn--open-vid(href="")
+						span.hms-info-btn__desk Посмотреть фильм
+						span.hms-info-btn__mob Посмотреть фильм
+						.hms-info-btn__icon
+							img(src="img/icon-vid-in-home-slider-button.svg", alt="")
+			//.home-slider-slide
+				picture
+					source(srcset="img/front-slider-mob.jpg", media="(max-width: 749px)")
+					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
+				.hms-info
 					.hms-info__top
 						.hms-info__title Семинар Крийя
 					.hms-info__bottom
@@ -25,7 +35,7 @@ block main
 					a.hms-info-btn(href="")
 						span.hms-info-btn__desk Зарегистрироваться
 						span.hms-info-btn__mob Регистрация
-			.home-slider-slide
+			//.home-slider-slide
 				picture
 					source(srcset="img/hmlearn2.jpg", media="(max-width: 749px)")
 					img.hms-pic(src="img/hmlearn2.jpg", alt="")
@@ -38,7 +48,7 @@ block main
 					a.hms-info-btn(href="")
 						span.hms-info-btn__desk Зарегистрироваться
 						span.hms-info-btn__mob Регистрация
-			.home-slider-slide
+			//.home-slider-slide
 				picture
 					source(srcset="img/front-slider-mob.jpg", media="(max-width: 749px)")
 					img.hms-pic(src="img/home-slider-pic.jpg", alt="")
@@ -63,7 +73,7 @@ block main
 	section.section-home-events
 		.hm-events-slider-cont-wrap
 			.container.container--ks--mob-no-r
-				.hm-events-slider.js-hm-events-slider
+				.hm-events-slider.js-hm-events-slider.hm-events-slider--left
 					each val in [1, 2,/* 3, 4, 5*/]
 						.hm-events-slide__wrap
 							a.hm-events-slide(href="")
@@ -215,7 +225,7 @@ block main
 					.container.container--ks--mob-no-r.container--extra-long.container--disable-on-desktop.mob-order--4
 						section.hm-feedback.no-desc
 							.container.container--ks--mob-no-r
-								.hm-feedback-slide
+								.hm-feedback-slide.hm-feedback-slide--left
 									.hm-feedback__content
 										a.hm-feedback__img-wrapper(href="https://youtu.be/0nTor2By_vg", data-fancybox)
 											img.hm-feedback__img(src="img/retrit-reviews.jpg")

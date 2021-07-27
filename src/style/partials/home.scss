@@ -194,7 +194,8 @@
 			line-height: 49px;
 			padding-bottom: 7px;
 		}
-		&--small-d{
+
+		&--small-d {
 			font-size: 35px;
 			line-height: 39px;
 		}
@@ -247,7 +248,7 @@
 
 		color: #FFFFFF;
 
-		&--small-d{
+		&--small-d {
 			font-size: 58px;
 			line-height: 70px;
 		}
@@ -289,6 +290,35 @@
 		width: auto;
 		align-self: flex-start;
 		padding: 15px 56px;
+	}
+
+	&__icon {
+		display: inline-block;
+		width: 22px;
+
+		img {
+			height: auto;
+			width: 100%;
+
+		}
+	}
+
+	&--open-vid {
+		text-transform: none;
+		font-size: 17px;
+		line-height: 21px;
+		font-weight: 400;
+		width: auto;
+		max-width: 100%;
+		padding: 10px 34px 11px;
+
+		.hms-info-btn__icon {
+			margin-left: 8px;
+			img {
+				box-shadow: 0px 0px 11px rgba(46, 54, 81, 0.1);
+				border-radius: 50%;
+			}
+		}
 	}
 }
 
