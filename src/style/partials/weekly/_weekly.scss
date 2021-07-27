@@ -3,98 +3,92 @@
     Основные стили только для этой страницы
   */
   &-heading {
-    &__title {
-      margin-bottom: 12px;
-      font-size: 45px;
-      line-height: 59px;
-      letter-spacing: -0.03em;
+    margin-top: 0;
 
-      @include media(1150) {
-        margin-bottom: 19px;
-        font-size: 32px;
-        line-height: 39px;
+    &__title {
+      margin-bottom: 19px;
+
+      @media (min-width: 1151) {
+        margin-bottom: 12px;
+        font-size: 45px;
+        line-height: 59px;
+        letter-spacing: -0.03em;
+      }
+
+      @include media(749) {
+        margin-bottom: vw(19);
+        font-size: vw(32);
+        line-height: vw(39);
       }
     }
 
     &__description {
-      font-size: 17px;
-      line-height: 30px;
-
-      @include media(1150) {
-        max-width: 695px;
-        font-size: 15px;
-        line-height: 24px;
-      }
-
-      &-highlighted {
-        display: block;
-        font-weight: 600;
-
+      br {
         @include media(1150) {
-          display: inline;
-          font-weight: 400;
+          display: none;
         }
       }
     }
+
+    // &__description {
+    //   font-size: 17px;
+    //   line-height: 30px;
+
+    //   @include media(1150) {
+    //     max-width: 695px;
+    //     font-size: 15px;
+    //     line-height: 24px;
+    //   }
+
+    //   &-highlighted {
+    //     display: block;
+    //     font-weight: 600;
+
+    //     @include media(1150) {
+    //       display: inline;
+    //       font-weight: 400;
+    //     }
+    //   }
+    // }
   }
 
   &-posts {
     &__item {
       margin-bottom: 36px;
+
+      @include media(749) {
+        margin-bottom: vw(36);
+      }
     }
 
     &__more {
-      margin-top: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding-top: 27px;
       cursor: pointer;
 
       @include media(1150) {
-        margin: 0;
+        padding-top: 0;
       }
 
-      @media screen and (min-width: 993px) {
-        &:hover {
-          .weekly-posts__more-item {
-            transition-duration: 0.4s;
-
-            &--1 {
-              background-color: #bbbbbb;
-            }
-            &--2 {
-              background-color: #eeeeee;
-            }
-            &--3 {
-              background-color: #d8d8d8;
-            }
-          }
-        }
-      }
-
-      &-item {
+      span {
         width: 14px;
         height: 14px;
-        border-radius: 50%;
-        transition-duration: 0.4s;
 
         @include media(1150) {
           width: 9px;
           height: 9px;
         }
 
-        &:not(:last-child) {
-          margin-right: 22px;
+        @include media(749) {
+          width: vw(9);
+          height: vw(9);
         }
 
-        &--1 {
-          background-color: #eeeeee;
-        }
-        &--2 {
-          background-color: #d8d8d8;
-        }
-        &--3 {
-          background-color: #bbbbbb;
+        &:not(:last-child) {
+          margin-right: 10px;
+
+          @include media(749) {
+            margin-right: vw(10);
+          }
         }
       }
     }
@@ -102,8 +96,8 @@
 
   // Элементы
   &__banner {
-    @include media(450) {
-      height: vw360(365);
+    @include media(749) {
+      height: vw(365);
     }
   }
 
@@ -114,8 +108,8 @@
       margin-bottom: 51px;
     }
 
-    @include media(620) {
-      margin-bottom: 14px;
+    @include media(749) {
+      margin-bottom: vw(14);
     }
   }
 
@@ -133,20 +127,32 @@
       padding: 0 36px 0 35px;
     }
 
-    @include media(767) {
+    @include media(749) {
       max-width: none;
-      padding: 0 vw360(14);
+      padding: 0 vw(14);
     }
   }
 
   .part-wsidebar {
     padding-bottom: 150px;
 
+    @include media(1150) {
+      padding-bottom: 35px;
+    }
+
+    @include media(749) {
+      padding-bottom: vw(35);
+    }
+
     &__main {
       padding-top: 45px;
 
       @include media(1150) {
         padding-top: 51px;
+      }
+
+      @include media(749) {
+        padding-top: vw(51);
       }
     }
 
@@ -157,15 +163,15 @@
         margin-top: 94px;
       }
 
-      @include media(620) {
-        margin-top: 88px;
+      @include media(749) {
+        margin-top: vw(91);
       }
 
       &--weekly {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        overflow-y: auto;
+        // position: sticky;
+        // top: 0;
+        // height: 100vh;
+        // overflow-y: auto;
 
         @include media(1150) {
           border-top: 1px solid #dee6e9;
@@ -189,11 +195,15 @@
         display: flex;
         justify-content: space-between;
 
-        @include media(620) {
+        @include media(749) {
           flex-direction: column-reverse;
           align-items: center;
         }
       }
+    }
+
+    @include media(749) {
+      margin-bottom: vw(80);
     }
   }
 
@@ -207,8 +217,8 @@
         }
       }
 
-      @include media(620) {
-        width: calc(100% - 34px);
+      @include media(749) {
+        width: calc(100% - #{vw(34)});
 
         .wnevents-widget__pic {
           padding-top: 23%;
@@ -219,23 +229,35 @@
     &-list {
       width: calc(50% - 18px);
 
-      @include media(620) {
-        margin-bottom: 89px;
-        width: calc(100% - 34px);
+      @include media(749) {
+        margin-bottom: vw(89);
+        width: calc(100% - #{vw(34)});
       }
 
       &__title {
         padding-bottom: 25px;
+
+        @include media(749) {
+          padding-bottom: vw(25);
+        }
       }
 
       &__ul {
         list-style-type: none;
         font-size: 15px;
+
+        @include media(749) {
+          font-size: vw(15);
+        }
       }
 
       &__item {
         &:not(:last-child) {
           margin-bottom: 19px;
+
+          @include media(749) {
+            margin-bottom: vw(19);
+          }
         }
       }
 
@@ -244,11 +266,19 @@
         margin-bottom: 1px;
         font-weight: 500;
         line-height: 29px;
+
+        @include media(749) {
+          line-height: vw(29);
+        }
       }
 
       &__date {
         line-height: 21px;
         color: #afb4bf;
+
+        @include media(749) {
+          line-height: vw(21);
+        }
       }
     }
   }
@@ -260,9 +290,17 @@
       padding-top: 50px;
     }
 
-    &__title {
+    @include media(749) {
+      padding-top: vw(50);
+    }
+
+    &__title--weekly {
       @include media(1150) {
         font-size: 13px;
+      }
+
+      @include media(749) {
+        font-size: vw(13);
       }
     }
   }
@@ -273,6 +311,12 @@
     padding-bottom: 9px;
     font-family: $mainFont;
     font-size: 13px;
+
+    @include media(749) {
+      min-width: vw(164);
+      padding: vw(9) 0;
+      font-size: vw(13);
+    }
   }
 
   .insta-widget {
@@ -280,23 +324,31 @@
       padding-bottom: 64px;
     }
 
-    @include media(620) {
-      padding-bottom: vw360(91);
+    @include media(749) {
+      padding-bottom: vw(91);
     }
   }
 
-  .custom-widget-title {
+  .custom-widget-title--weekly {
     font-size: 13px;
+
+    @include media(749) {
+      font-size: vw(13);
+    }
   }
 
   .csubscr-widget {
-    @include media(620) {
+    @include media(749) {
       padding: vw360(29) vw360(30) vw360(35);
     }
 
     &__logo {
       @include media(1150) {
         margin-bottom: 13px;
+      }
+
+      @include media(749) {
+        margin-bottom: vw(13);
       }
     }
 
@@ -306,7 +358,7 @@
         line-height: 30px;
       }
 
-      @include media(620) {
+      @include media(749) {
         font-size: vw360(17);
       }
     }
@@ -314,6 +366,10 @@
     &__description {
       @include media(1150) {
         margin-top: 8px;
+      }
+
+      @include media(749) {
+        margin-top: vw(8);
       }
     }
   }
@@ -324,24 +380,30 @@
       font-size: 15px;
       line-height: 29px;
     }
+
+    @include media(749) {
+      margin-top: vw(10);
+      font-size: vw(15);
+      line-height: vw(29);
+    }
   }
 
   .slider-news-widget {
     margin-bottom: 95px;
 
-    @include media(620) {
+    @include media(749) {
       margin-bottom: vw360(4);
     }
 
     &-wrap {
-      @include media(620) {
+      @include media(749) {
         padding-top: vw360(80);
       }
     }
   }
 
   .container__weekly-music {
-    @include media(450) {
+    @include media(749) {
       width: 100%;
       max-width: 100%;
     }
@@ -351,5 +413,15 @@
   .sticky-up {
     position: sticky;
     top: 0;
+  }
+}
+
+.big-top-pic__container--weekly {
+  @include media(749) {
+    height: 100%;
+
+    .big-top-pic__relative {
+      height: 100%;
+    }
   }
 }
