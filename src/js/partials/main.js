@@ -80,7 +80,7 @@ $(document).ready(function () {
 		//вызывается элемент галереи, соответствующий индексу слайда
 		$.fancybox.open(group !== '' ? itemsHrefs : ([{ 'src': $(this).attr('href') }]), {
 			speed: 600,
-			transitionDuration: 700,
+			transitionDuration: 1050,
 			backFocus: false,
 			loop: (group !== '' ? true : false),
 			buttons: group === '' ? ['close'] : ["slideShow", 'close'],
