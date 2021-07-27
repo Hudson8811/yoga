@@ -1,0 +1,22 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+				title: 'article-master'
+		};
+
+
+block main
+	.container
+		button.btn( onclick="openNewSiteModal();") openNewSiteModal
+
+
+
+
+	#new-site-modal.thanks-modal.thanks-modal--new-site(style="display:none;" onclick="openNewSiteModal();")
+		.thanks-modal__inner.thanks-modal__inner--new-site
+			.thanks-modal__title.thanks-modal__title--new-site Мы приступили к тестированию нового сайта
+			.thanks-modal__description.thanks-modal__description--new-site Наша старая версия сайта временно<br> доступна по ссылке ниже
+			a.thanks-modal__link(href="") Перейти
+

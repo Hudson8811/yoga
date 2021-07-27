@@ -20,6 +20,7 @@ $(document).on("mobileinit", function () {
 //= libs/jquery.touchSwipe.min.js
 //= libs/jquery.sticky.js
 //= libs/jquery.inputmask.min.js
+//= libs/js.cookie.min.js
 
 /* my scripts */
 

@@ -147,6 +147,9 @@
 	display: block;
 }
 
+
+
+
 .thanks-modal {
 	width: 521px;
 	max-width: 100%;
@@ -156,6 +159,10 @@
 	border-radius: 5px;
 	padding: 100px 58px 102px;
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+
+	&--new-site {
+		padding: 72px 58px 68px;
+	}
 
 	@media screen and (max-width: 749px) {
 		width: 100%;
@@ -170,6 +177,11 @@
 		color: $dark;
 		text-align: center;
 		letter-spacing: -0.03em;
+
+		&--new-site {
+			line-height: 39px;
+		}
+
 		@media screen and (max-width: 749px) {
 			font-size: vw(28);
 			line-height: vw(42);
@@ -185,6 +197,10 @@
 		text-align: center;
 		margin-top: 17px;
 
+		&--new-site {
+			line-height: 26px;
+		}
+
 		@media screen and (max-width: 749px) {
 			font-size: 4.16667vw;
 			line-height: 8.33333vw;
@@ -192,7 +208,23 @@
 		}
 	}
 
+	&__link {
+		display: block;
+		font-size: 17px;
+		line-height: 26px;
+		text-align: center;
+		color: #25378D;
+		margin-top: 7px;
+
+		@media screen and (max-width: 749px) {
+			font-size: 4.16667vw;
+			line-height: 8.33333vw;
+			margin-top: vw(7);
+		}
+	}
+
 	.fancybox-button.fancybox-close-small {
 		display: none;
 	}
+
 }
