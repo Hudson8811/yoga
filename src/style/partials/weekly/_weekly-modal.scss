@@ -131,10 +131,10 @@
       }
 
       &-heading {
-        margin-bottom: 17px;
+        margin-bottom: 9px;
 
         @include media(749) {
-          margin-bottom: vw(17);
+          margin-bottom: vw(9);
         }
       }
 
@@ -149,7 +149,7 @@
         }
 
         .weekly-event__unwrap {
-          padding-right: 105px;
+          padding-right: 385px;
 
           @include media(1150) {
             top: 72px;
