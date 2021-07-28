@@ -42,3 +42,6 @@ $(document).on("mobileinit", function () {
 
 // Weekly Events page
 //= partials/weekly.js
+
+// Article template page
+//= partials/articleTemplate.js

@@ -3739,19 +3739,22 @@ $(document).ready(function () {
 // Weekly Events page
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".weekly")) {
-    const modal = document.querySelector(".modal");
+    const modal = document.querySelector(".weekly-modal");
 
     document.addEventListener("click", (event) => {
       const target = event.target;
 
-      // Open modal on 'comments' click
-      if (target.closest(".weekly-event__comments") && !modal.classList.contains("active")) {
+      // Open modal
+      if (
+        (target.closest(".weekly-event__heading") || target.closest(".weekly-event__comments")) &&
+        !modal.classList.contains("active")
+      ) {
         modal.classList.add("active");
         document.body.classList.add("js-body-noscroll");
       }
 
       // Close modal on 'close' click
-      if (target.closest(".modal__close") && modal.classList.contains("active")) {
+      if (target.closest(".weekly-modal__close") && modal.classList.contains("active")) {
         modal.classList.remove("active");
         document.body.classList.remove("js-body-noscroll");
       }
@@ -3764,7 +3767,21 @@ document.addEventListener("DOMContentLoaded", () => {
       // Text unwrapper
       if (target.closest(".js-text-unwrapper")) {
         target.closest(".js-text-unwrapper").classList.add("hidden");
-        target.closest(".weekly-event__info").classList.add("opened");
+        target.closest(".js-text-wrapped").classList.add("opened");
+      }
+    });
+  }
+});
+
+// Article template page
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector(".article-template")) {
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+
+      // Text unwrapper
+      if (target.closest(".js-review-unwrap")) {
+        target.closest(".comments-item__text").classList.add("comments-item__text--open");
       }
     });
   }
