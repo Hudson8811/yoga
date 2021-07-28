@@ -366,8 +366,8 @@
 
   // Слайдер новых статей
   .new-article {
-    padding-top: 23px;
-    padding-bottom: 55px;
+    padding-top: 44px;
+    padding-bottom: 57px;
     border-bottom: 1px solid #dee6e9;
 
     @media screen and (min-width: 750px) and (max-width: 1150px) {
@@ -499,7 +499,7 @@
 
   // Слайдер категорий
   .section-category-slider {
-    padding-top: 19px;
+    padding-top: 21px;
 
     @include media(1150) {
       padding-top: 17px;
@@ -541,6 +541,12 @@
         margin: 0;
         max-width: none;
       }
+    }
+  }
+
+  .kspc-preloader {
+    @media (min-width: 1151px) {
+      padding-top: 66px;
     }
   }
 
