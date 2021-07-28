@@ -5,6 +5,8 @@
 		align-items: center;
 		justify-content: center;
 		padding-left: 0;
+		margin-left: vw(-10);
+		margin-right: vw(-10);
 
 		&__paginate {
 			width: vw(36);
@@ -14,7 +16,7 @@
 			justify-content: center;
 			border: 1px solid #AFB4BF;
 			color: #AFB4BF;
-			font-weight: 300;
+			font-weight: 400;
 			font-size: vw(15);
 			 -webkit-mask-image: -webkit-radial-gradient(white,#000); border-radius: 50%;
 			margin: 0 vw(4.5);
@@ -78,6 +80,10 @@
 				svg {
 					transform: rotate(180deg);
 				}
+			}
+			&--without-circle{
+				border: none !important;
+				width: vw(13);
 			}
 		}
 

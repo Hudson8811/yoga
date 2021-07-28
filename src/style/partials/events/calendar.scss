@@ -1183,6 +1183,8 @@ tr:first-child>td>.fc-day-grid-event {
 			}
 
 			a {
+				font-family: 'Montserrat';
+
 				color: #AFB4BF;
 				text-decoration: none;
 				position: relative;
@@ -1207,14 +1209,14 @@ tr:first-child>td>.fc-day-grid-event {
 					background: url(../img/arrow-more-gray.svg) no-repeat center center;
 					background-size: contain;
 					@media screen and (max-width: 1150px) {
-						width: 5px;
-						height: 9px;
-						margin-top: 1px;
+						width: 6px;
+						height: 10px;
+						margin-top: 0;
 					}
 					@media screen and (max-width: 749px) {
-						width: vw(5);
-						height: vw(9);
-						margin-top: 0.25vw;
+						width: vw(6);
+						height: vw(10);
+						margin-top: 0;
 						right: vw(-3);
 					}
 				}
