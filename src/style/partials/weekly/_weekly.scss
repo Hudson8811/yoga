@@ -8,7 +8,7 @@
     &__title {
       margin-bottom: 19px;
 
-      @media (min-width: 1151) {
+      @media (min-width: 1151px) {
         margin-bottom: 12px;
         font-size: 45px;
         line-height: 59px;
@@ -27,6 +27,12 @@
         @include media(1150) {
           display: none;
         }
+      }
+
+      @include media(749) {
+        margin-bottom: vw(67);
+        max-height: vw(101);
+        overflow: hidden;
       }
     }
 
@@ -102,7 +108,7 @@
   }
 
   &__heading {
-    margin-bottom: 61px;
+    margin-bottom: 65px;
 
     @include media(1150) {
       margin-bottom: 51px;
