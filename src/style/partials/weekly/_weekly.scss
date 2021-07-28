@@ -420,12 +420,13 @@
     position: sticky;
     top: 0;
   }
+
 }
 
 .big-top-pic__container--weekly {
   @include media(749) {
     height: 100%;
-
+    
     .big-top-pic__relative {
       height: 100%;
     }
