@@ -98,81 +98,11 @@
         }
       }
 
-      &-item {
-        @include media(1150) {
-          font-size: 15px;
-          line-height: 24px;
-        }
-
-        @include media(749) {
-          font-size: vw(15);
-          line-height: vw(24);
-        }
-
-        &:not(:last-of-type) {
-          margin-bottom: 43px;
-
-          @include media(1150) {
-            margin-bottom: 45px;
-          }
-
-          @include media(749) {
-            margin-bottom: vw(45);
-          }
-        }
-
-        &:last-of-type {
-          margin-bottom: 28px;
-
-          @include media(749) {
-            margin-bottom: vw(28);
-          }
-        }
-      }
-
-      &-heading {
-        margin-bottom: 9px;
-
-        @include media(749) {
-          margin-bottom: vw(9);
-        }
-      }
-
-      &-content {
-        position: relative;
-        max-height: 150px;
-        overflow: hidden;
-        letter-spacing: -0.03em;
-
-        @include media(1150) {
-          max-height: 96px;
-        }
-
-        .weekly-event__unwrap {
-          padding-right: 385px;
-
-          @include media(1150) {
-            top: 72px;
-            padding-right: 10px;
-          }
-
-          @include media(749) {
-            top: vw(72);
-            padding-right: vw(22);
-          }
-        }
-
-        &.opened {
-          max-height: 10000px;
-          transition: max-height 13s linear, height 13s linear;
-        }
-      }
-
       &-more {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
+        margin: 28px auto 0;
         font-size: 17px;
         line-height: 30px;
         color: #25378d;
@@ -183,6 +113,7 @@
         }
 
         @include media(749) {
+          margin-top: vw(28);
           font-size: vw(15);
           line-height: vw(30);
         }
@@ -272,6 +203,42 @@
           // max-width: vw(206);
           width: vw(206);
         }
+      }
+    }
+  }
+}
+
+.weekly-modal {
+  .reviews {
+    &-item__text--with-hide {
+      max-height: 150px;
+
+      @include media(1150) {
+        max-height: 96px;
+      }
+
+      &.opened {
+        max-height: 10000px;
+        transition: max-height 13s linear, height 13s linear;
+      }
+    }
+
+    &-unwrap {
+      top: 120px;
+      padding-right: 385px;
+
+      @include media(1150) {
+        top: 72px;
+        padding-right: 10px;
+      }
+
+      @include media(749) {
+        top: vw(72);
+        padding-right: vw(22);
+      }
+
+      &.hidden {
+        display: none;
       }
     }
   }
