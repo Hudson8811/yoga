@@ -2,9 +2,14 @@
 	.maslider-section+.breadcrumbs-wrap .breadcrumbs {
 		padding-top: 25px;
 	}
-
+	.breadcrumbs-wrap--in-archive-cat+.artimaster-posts-section {
+		margin-top: 14px;
+	}
 	.breadcrumbs {
 		padding-top: 18px;
+		&--in-archive-cat {
+			padding-top: 55px;
+		}
 	}
 
 	.breadcrumbs-item {
@@ -32,8 +37,15 @@
 		}
 	}
 
+	.breadcrumbs-wrap--in-archive-cat+.artimaster-posts-section {
+		margin-top: vw(8);
+	}
+
 	.breadcrumbs {
 		padding-top: vw(18);
+		&--in-archive-cat {
+			padding-top: vw(54);
+		}
 	}
 
 	.breadcrumbs-item {

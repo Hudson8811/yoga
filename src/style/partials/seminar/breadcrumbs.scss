@@ -1,35 +1,48 @@
 .container--breadcrumbs {
-	&+.ksquote{
+	&+.ksquote {
 		padding-top: 46px;
 	}
 }
-.maslider-section{
-	&+.breadcrumbs-wrap{
-		.breadcrumbs{
+
+.maslider-section {
+	&+.breadcrumbs-wrap {
+		.breadcrumbs {
 			padding-top: 55px;
 		}
 	}
 }
-.breadcrumbs-container--ks{}
+
+.breadcrumbs-container--ks {}
+
+.breadcrumbs-wrap--in-archive-cat+.artimaster-posts-section{
+	margin-top: 0;
+}
 .breadcrumbs {
 	display: flex;
 	align-items: center;
 	list-style: none;
-    padding-top: 33px;
+	padding-top: 33px;
 	flex-wrap: wrap;
+
+	&--in-archive-cat {
+		padding-top: 88px;
+	}
 }
-.breadcrumbs-delimiter{
+
+.breadcrumbs-delimiter {
 	display: inline-block;
 	background: url(../img/breadcrumbs-delimiter.svg) no-repeat center center;
 	background-size: contain;
 	min-width: 6px;
-    margin: 0 8px 0 10px;
-	&::before{
+	margin: 0 8px 0 10px;
+
+	&::before {
 		content: '';
 		display: block;
 		padding-top: 150%;
 	}
 }
+
 .breadcrumbs-item {
 	list-style: none;
 	display: inline-flex;
