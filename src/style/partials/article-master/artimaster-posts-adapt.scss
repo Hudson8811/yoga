@@ -49,11 +49,11 @@
 
 		&__meta {
 			font-style: normal;
-			font-weight: 400;
+		/*	font-weight: 400;
 			font-size: 15px;
 			line-height: 26px;
 			text-transform: uppercase;
-			margin-top: -1px;
+			margin-top: -1px;*/
 		}
 
 		&__img {}
@@ -65,12 +65,12 @@
 		&__meta-share-icon {}
 
 		&__desc {
-			font-style: normal;
+		/*	font-style: normal;
 			font-weight: 400;
 			font-size: 15px;
 			line-height: 24px;
 			color: $dark;
-			margin-top: -1px;
+			margin-top: -1px;*/
 		}
 
 		&:hover {}
@@ -171,10 +171,10 @@
 
 		&__meta {
 			font-style: normal;
-			font-weight: 400;
+		/*	font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
-			margin-top: 0px;
+			margin-top: 0px;*/
 		}
 
 		&__img {}
@@ -195,12 +195,12 @@
 		}
 
 		&__desc {
-			margin-top: vw(0);
+		/*	margin-top: vw(0);
 			font-style: normal;
 			font-weight: 400;
 			font-size: vw(15);
 			line-height: vw(24);
-			color: $dark;
+			color: $dark;*/
 		}
 
 		&:hover {}

@@ -113,15 +113,29 @@
 	}
 
 	&__meta {
-		font-weight: 300;
+		/*font-weight: 300;
 		font-size: 17px;
-		line-height: 26px;
+		line-height: 26px;*/
 		text-transform: uppercase;
 		margin-top: 6px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 26px;
+		margin-top: -3px;
+
+		@media screen and (max-width: 1150px) {
+			margin-top: -1px;
+		}
+
+		@media screen and (max-width: 749px) {
+			font-size: vw(13);
+			line-height: vw(26);
+			margin-top: 0;
+		}
 	}
 
 	&__img {}
@@ -134,7 +148,7 @@
 
 	&__meta-date {
 		color: #AFB4BF;
-		margin-right: 14px;
+		margin-right: 15px;
 		text-transform: lowercase;
 	}
 	.btn-more-about-course-wrap
@@ -148,15 +162,25 @@
 	}
 
 	&__desc {
-		font-size: 17px;
-		line-height: 30px;
+		font-size: 13px;
+		line-height: 22px;
 		color: $dark;
-		margin-top: 6px;
+		margin-top: 8px;
 		letter-spacing: -0.06px;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+
+
+		@media screen and (max-width: 1150px) {
+		}
+
+		@media screen and (max-width: 749px) {
+			font-size: vw(15);
+			line-height: vw(24);
+			margin-top: vw(6);
+		}
 	}
 
 	&:hover {}
@@ -177,6 +201,13 @@
 
 
 		// new
+		.artimaster-post__meta {
+
+			@media screen and (max-width: 749px) {
+				margin-top: vw(-3);
+			}
+		}
+		/*
 		.artimaster-post__meta {
 			font-weight: 400;
 			font-size: 13px;
@@ -201,7 +232,7 @@
 			@media screen and (max-width: 1150px) {}
 
 			@media screen and (max-width: 749px) {}
-		}
+		}*/
 	}
 }
 
