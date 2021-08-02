@@ -415,12 +415,12 @@
 		}
 	}
 	&__btn{
-		width: 315px;
+		//width: 315px;
 		@media screen and (max-width: 1150px) {
-			width: 258px;
+			//width: 258px;
 		}
 		@media screen and (max-width: 749px) {
-			width: vw(258);
+			//width: vw(258);
 		}
 	}
 }

@@ -240,18 +240,18 @@
 	&__btn {
 		max-width: 100%;
 		margin: 0 auto 0;
-		width: 216px;
+		//width: 216px;
 		margin-top: 22px;
 
 		@media screen and (max-width: 1150px) {
-			width: 164px;
-			min-width: auto;
+			//width: 164px;
+			//min-width: auto;
 			margin-top: 35px;
 		}
 
 		@media screen and (max-width: 749px) {
-			width: vw(164);
-			min-width: auto;
+			//width: vw(164);
+			//min-width: auto;
 			margin-top: vw(35);
 		}
 

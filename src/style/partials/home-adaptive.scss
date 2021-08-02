@@ -572,7 +572,7 @@
 
 		&__btn-wrap {
 			.btn {
-				width: 204px;
+			//	width: 204px;
 			}
 		}
 	}
@@ -909,7 +909,7 @@
 		line-height: 21px;
 		text-transform: none;
 		width: unset;
-		padding: 6px 34px;
+		padding: 6px 36px;
 		margin-top: 16px;
 		display: inline-flex;
 
@@ -917,7 +917,7 @@
 			text-transform: none;
 			font-size: 13px;
 			font-weight: 400;
-			padding: 7px 21px;
+			padding: 7px 36px;
 
 			.hms-info-btn__icon {
 				margin-left: 8px;
@@ -1164,8 +1164,11 @@
 		font-weight: 500;
 		font-size: 12px;
 		line-height: 21px;
-		width: auto;
-		min-width: 202px;
+		//width: auto;
+		//min-width: 202px;
+		padding-left: 36px;
+		padding-right: 36px;
+
 	}
 
 	//////////////////////////////
@@ -1365,7 +1368,7 @@
 		font-weight: 500;
 		font-size: vw(12);
 		line-height: vw(21);
-		padding: vw(6) vw(35) vw(7);
+		padding: vw(6) vw(36) vw(7);
 		margin-top: vw(16);
 
 		&--type-nidra-course {
@@ -1376,7 +1379,7 @@
 			text-transform: none;
 			font-size: vw(13);
 			font-weight: 400;
-			padding: vw(7) vw(22) vw(8);
+			padding: vw(7) vw(36) vw(8);
 
 			.hms-info-btn__icon {
 				margin-left: vw(7);
@@ -1665,7 +1668,7 @@
 		margin-top: vw(49);
 
 		.btn {
-			width: vw(258);
+		//	width: vw(258);
 		}
 	}
 
@@ -1675,8 +1678,8 @@
 		font-size: vw(12);
 		line-height: vw(21);
 		width: auto;
-		min-width: vw(202);
-		padding: vw(14) vw(15);
+		min-width: unset;
+		padding: vw(14) vw(36);
 	}
 
 	.section-cria-medet {
@@ -2183,6 +2186,7 @@
 
 		&__btn {
 			margin-top: vw(9);
+			width: 100%;
 		}
 
 		.email-cinp {

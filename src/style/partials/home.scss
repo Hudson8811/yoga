@@ -1,14 +1,13 @@
 .btn {
-	display: flex;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
 	//min-height: 43px;
-	width: 256px;
+	//width: 256px;
 	max-width: 100%;
-	padding: 14px 15px;
+	padding: 14px 58px;
 	cursor: pointer;
 	transition-duration: .2s;
 	text-align: center;
@@ -256,14 +255,14 @@
 }
 
 .hms-info-btn {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	width: 282px;
+	//width: 282px;
 	max-width: 100%;
 	margin-top: 31px;
-	padding: 15px 20px;
+	padding: 15px 58px;
 	transition: all .4s ease;
 	text-align: center;
 	text-transform: uppercase;
@@ -289,7 +288,7 @@
 		display: inline-flex;
 		width: auto;
 		align-self: flex-start;
-		padding: 15px 56px;
+		padding: 15px 58px;
 	}
 
 	&__icon {
@@ -310,7 +309,7 @@
 		font-weight: 400;
 		width: auto;
 		max-width: 100%;
-		padding: 10px 34px 11px;
+		padding: 10px 58px 11px;
 
 		.hms-info-btn__icon {
 			margin-left: 8px;
@@ -1349,7 +1348,7 @@ body {
 		justify-content: center;
 
 		.btn {
-			width: 266px;
+	//		width: 266px;
 		}
 	}
 
@@ -1896,6 +1895,8 @@ input.email-cinp {
 .csubscr-widget__btn {
 	margin-top: 20px;
 	margin-top: 9px;
+
+	width: 100%;
 }
 
 /////////////
