@@ -290,7 +290,7 @@
 
 	&--with-hide {
 		.kspc-simple-text__p {
-			max-height: 150px;
+			max-height: 150px;//5
 			height: auto;
 			overflow: hidden;
 			transition: max-height 13s linear, height 13s linear;
