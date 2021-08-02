@@ -45,6 +45,7 @@
 
 		&__preview {}
 
+
 	}
 
 	.ks-videos--type-comments {
@@ -126,8 +127,8 @@
 		&__preview {}
 
 		&+.ks-videos-item {
-			margin-top: vw(10);
-			margin-top: vw(50);
+			//margin-top: vw(10);
+			//margin-top: vw(50);
 		}
 
 	}
@@ -136,6 +137,7 @@
 		.ks-videos-title {
 			font-size: vw(32);
 			line-height: vw(39);
+			text-align: left;
 
 		}
 
@@ -148,8 +150,12 @@
 		}
 
 		.ks-videos-item__name {
-			text-align: center;
-			margin-top: vw(17);
+			text-align: left;
+			margin-top: vw(11);
+
+			font-weight: 500;
+			font-size: vw(19);
+			line-height: vw(26);
 		}
 	}
 }

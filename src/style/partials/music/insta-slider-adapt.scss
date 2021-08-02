@@ -64,12 +64,18 @@
 		&+.reviews {
 			margin-top: vw(86);
 		}
+		.container.container--ks{
+
+			max-width: calc(100% - 3.88889vw);
+			margin-right: 0;
+		}
 	}
 
 	.insta-slider-title {}
 
 	.insta-slider-arrow {
 		top: vw(56);
+		display: none !important;
 
 		&.customized-arrow--prev {
 			left: vw(-32);
@@ -82,22 +88,31 @@
 
 	.insta-slider {
 		margin-top: vw(27);
-		width: vw(266);
-
+		//width: vw(266);
+		width: 100%;
 		&:not(:first-child) {
 			margin-top: vw(27);
 		}
 
 		.slick-list {
-			&::before {}
+			margin: 0;
+			&::before {
+				display: none;
+			}
 
-			&::before {}
+			&::before {
+				display: none;
+			}
 		}
 
-		.slick-track {}
+		.slick-track {
+			margin: 0;}
 	}
 
 	.insta-slide {
+		width: vw(130);
+		margin: 0;
+		margin-right: vw(6);
 		&::before {}
 
 		img {}

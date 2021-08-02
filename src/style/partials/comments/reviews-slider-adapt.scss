@@ -113,7 +113,9 @@
 	.reviews-slider {
 		width: 100%;
 		margin-top: vw(18);
-
+		&:first-child{
+			margin-top: vw(-32);
+		}
 		.slick-dots {
 			margin-top: vw(26);}
 

@@ -2331,7 +2331,8 @@ function instaSlidersInit(tabJq) {
 			}, {
 				breakpoint: 749,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
+					variableWidth: true
 				}
 			}]
 		});
@@ -2369,7 +2370,8 @@ function musicPageSlidersInit(tabJq) {
 			}, {
 				breakpoint: 749,
 				settings: {
-					speed: slickSpeedMain
+					speed: slickSpeedMain,
+					variableWidth: true
 				}
 			}]
 		});
@@ -2605,6 +2607,8 @@ $(document).ready(function () {
 	var addLeftPad = 0;
 	var tabsList = $(".page-tabs");;
 	var initSwipe = false;
+	var tabTopOffset=10;
+	var isCommentsPage=false;
 
 	var swipeOptions = {
 		triggerOnTouchEnd: true,
@@ -2755,9 +2759,9 @@ $(document).ready(function () {
 
 
 		$('.page--tabs-blocks .page--tabs-blocks__tab').fadeOut(400).promise().done(function () {
-			if (document.documentElement.scrollTop > $("#tabTop").offset().top + 10) {
+			if (document.documentElement.scrollTop > $("#tabTop").offset().top + tabTopOffset) {
 				setTimeout(function () {
-					window.scrollTo(0, $("#tabTop").offset().top + 10);
+					window.scrollTo(0, $("#tabTop").offset().top + tabTopOffset);
 				}, 10);
 				//$('html, body').animate({ scrollTop: $("#tabTop").offset().top +10 }, 0);
 			}
@@ -3116,7 +3120,8 @@ $(document).ready(function () {
 		let loadedCount = [];
 		let imagesBlock = 0;
 		let mode = 'start';
-
+		tabTopOffset=0;
+		isCommentsPage=true;
 		$(window).on('resize scroll', function () {
 			if ($('#music-preloader').length) {
 				if ($('#music-preloader').isInViewport()) {
@@ -3132,7 +3137,7 @@ $(document).ready(function () {
 			//console.log($(tabLinks).eq(index).attr('data-com-title'));
 			//console.log($(tabLinks).eq(index).attr('data-page-id'));
 
-			console.log('tabRequest'+tabRequest);
+			//console.log('tabRequest'+tabRequest);
 			if (!tabRequest) {
 				if (typeof index === 'number') {
 					dataType = 'html';
@@ -3161,7 +3166,7 @@ $(document).ready(function () {
 					data.post__in=$(tabLinks).eq(index).attr('data-comments_ids');
 				}
 
-				console.log(data);
+				//console.log(data);
 
 				if (typeof (customCommentsPerPage) != "undefined" && customCommentsPerPage !== null) {
 					data['per_page'] = customCommentsPerPage;
@@ -3180,10 +3185,13 @@ $(document).ready(function () {
 						tabRequest = true;
 						if (typeof index === 'number') {
 							//if (index !== 3 && index !== 0)
+
+							/*
 							tabContainer.html('<div style="height: 100vh; max-height: 100vh;"></div>').siblings().html('');
 							setTimeout(function () {
 								tabContainer.siblings('.page--tabs-blocks__tab:not(.page--tabs-'+index+')').html('<div style="height: 100vh; max-height: 100vh;"></div>');
 							}, 400);
+							*/
 						}
 					},
 					success: function (data) {

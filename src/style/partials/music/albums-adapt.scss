@@ -126,7 +126,7 @@
 
 	.albums-slide {
 		width: vw(268);
-		margin-right: vw(22);
+		margin-right: vw(36);
 
 		&__pic {
 			width: vw(268);
@@ -142,12 +142,15 @@
 			line-height: 1.2;
 			letter-spacing: 0;
 			margin-top: vw(19);
+			text-align: left;
+			font-weight: 500;
 		}
 
 		&__listen {
 			font-size: vw(15);
 			line-height: vw(18);
 			margin-top: vw(12);
+			text-align: left;
 		}
 
 		&:hover {}

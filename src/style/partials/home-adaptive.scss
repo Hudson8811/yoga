@@ -1730,14 +1730,15 @@
 
 	.master-links {
 		flex-direction: column;
-		padding: vw(34) vw(32);
+		//padding: vw(34) vw(32);
+		padding: vw(34) 0;
 		order: 0;
 	}
 
 	.master-link {
 		&:not(:last-child) {
 			margin-right: 0;
-			margin-bottom: vw(92);
+			margin-bottom: vw(89);
 		}
 
 		&__title {
@@ -1748,9 +1749,12 @@
 		}
 
 		&__pic {
-			max-width: vw(266);
-			width: vw(266);
-			margin-bottom: vw(32);
+			/*max-width: vw(266);
+			width: vw(266);*/
+			max-width: 100%;
+			width: 100%;
+
+			margin-bottom: vw(20);
 		}
 	}
 
@@ -2197,6 +2201,7 @@
 
 		&__title {
 			font-size: vw(17);
+			font-weight: 600;
 		}
 
 		&__logo {
@@ -2210,7 +2215,7 @@
 	}
 
 	.custom-widget-title {
-		font-weight: 500;
+		font-weight: 600;
 		font-size: vw(15);
 	}
 
@@ -2353,8 +2358,7 @@
 				line-height: vw(21);
 				padding: vw(6) vw(10) vw(7);
 				width: vw(182);
-				font-weight: 500;
-				letter-spacing: -0.08em;
+				font-weight: 600;
 			}
 
 			&__pic {

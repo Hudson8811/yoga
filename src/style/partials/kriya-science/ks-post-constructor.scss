@@ -4,7 +4,23 @@
 	b {
 		font-weight: 600;
 	}
+	&--wait-alt-header-3{
+		padding-bottom: 0 !important;
+	}
+	&--delimiter{//сделано для возможности ограничения позишн стики второй альт шапки чтобы обойтиь без колдунства на js
+		padding-top: 0 !important;
 
+
+		@media screen and (max-width: 1150px){
+			padding-top: 0 !important;
+
+		}
+
+		@media screen and (max-width: 749px){
+				padding-top: 0 !important;
+
+		}
+	}
 }
 
 .kriya-science-main--training .ks-post-constructor.ks-post-constructor--type-home-lessons,

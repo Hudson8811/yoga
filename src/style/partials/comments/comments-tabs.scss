@@ -1,5 +1,5 @@
 .page-tabs-section--comments {
-	margin-top: 70px;
+	padding-top: 70px;
 
 	&+.reviews {
 		margin-top: 45px;
@@ -18,7 +18,7 @@
 //начало мобилки 767 было
 @media screen and (max-width: 749px) {
 	.page-tabs-section--comments {
-		margin-top: vw(74);
+		padding-top: vw(74);
 
 		&+.reviews {
 			margin-top: vw(48);

@@ -109,10 +109,15 @@
 		&+* {
 			margin-top: vw(51);
 		}
+
+		.container.container--ks{
+			max-width: calc(100% - 3.88889vw);
+			margin-right: 0;
+		}
 	}
 
 	.release-slider-arrow {
-		display: block !important;
+		display: none !important;
 		top: vw(124);
 
 		&.customized-arrow--prev {
@@ -127,10 +132,12 @@
 	.release-slider {
 
 		.slick-list {
-
+			margin: 0;
 
 			&::before,
-			&::after {}
+			&::after {
+				display: none;
+			}
 
 			&::before {}
 
@@ -141,11 +148,15 @@
 
 		&.custom-dots .slick-dots {
 			margin-top: vw(22);
+			display: none !important;
 		}
 	}
 
 	.release-slide {
 		display: block !important;
+		width: vw(266);
+		margin: 0;
+		margin-right: vw(36);
 
 		&__left {
 			width: vw(266);
@@ -165,14 +176,14 @@
 			width: 100%;
 			padding-left: 0;
 			padding-top: 0;
-			text-align: center;
-			margin-top: vw(17);
+			text-align: left;
+			margin-top: vw(18);
 		}
 
 		&__type {
 			font-style: normal;
 			font-weight: 300;
-			font-size: vw(24);
+			font-size: vw(19);
 			line-height: vw(28);
 			margin-top: 0;
 		}
@@ -180,10 +191,9 @@
 		&__title {
 			font-style: normal;
 			font-weight: normal;
-			font-size: vw(39);
-			line-height: vw(49);
-			margin-top: vw(5);
-			margin-top: vw(-3);
+			font-size: vw(24);
+			line-height: vw(28);
+			margin-top: vw(1);
 		}
 
 		&__date {
@@ -191,7 +201,7 @@
 			font-weight: normal;
 			font-size: vw(15);
 			line-height: vw(18);
-			margin-top: vw(-2);
+			margin-top: vw(3);
 		}
 
 
@@ -199,6 +209,7 @@
 
 		&__info {
 			margin-top: vw(11);
+			display: none;
 		}
 
 		&__link {
@@ -206,10 +217,10 @@
 			font-weight: normal;
 			font-size: vw(15);
 			line-height: vw(18);
-			text-align: center;
-			margin-top: vw(25);
+			text-align: left;
+			margin-top: vw(15);
 		}
 	}
 
-	.release-hr-wrap {}
+	.release-hr-wrap {margin-top: 44px;}
 }

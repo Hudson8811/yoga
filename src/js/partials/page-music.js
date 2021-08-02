@@ -31,7 +31,8 @@ function instaSlidersInit(tabJq) {
 			}, {
 				breakpoint: 749,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
+					variableWidth: true
 				}
 			}]
 		});
@@ -69,7 +70,8 @@ function musicPageSlidersInit(tabJq) {
 			}, {
 				breakpoint: 749,
 				settings: {
-					speed: slickSpeedMain
+					speed: slickSpeedMain,
+					variableWidth: true
 				}
 			}]
 		});

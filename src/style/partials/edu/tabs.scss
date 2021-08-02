@@ -25,7 +25,20 @@
       display: none;
     }
   }
+
+  &--sticky{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 51;
+  }
+
+  &--no-pt{
+    padding-top: 0 !important;
+  }
 }
+
+
 
 .page-tabs {
   margin: 0 auto;
