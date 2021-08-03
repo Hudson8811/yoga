@@ -92,7 +92,23 @@ $(document).ready(function () {
 	var header2pev;
 
 	if (hasHeader2) {
+
 		header2pev = $('#js-header-2').prev();
+
+		if(header2pev.length<1){
+			var tempHeader2Closest=$('#js-header-2');
+			var isInMain = true;
+			while(tempHeader2Closest.prev().length<1){
+				if(tempHeader2Closest.is('main, body, html')){
+					isInMain=fasle;
+					header2pev=$('main');
+				}
+				tempHeader2Closest=tempHeader2Closest.parent();
+			}
+			if(isInMain){
+				header2pev = tempHeader2Closest.prev();
+			}
+		}
 		header2TopInStatic = header2pev.offset().top + header2pev.height();
 	}
 

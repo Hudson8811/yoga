@@ -237,13 +237,16 @@ $(document).ready(function () {
 				});
 				AOS.refresh();
 			},100)
-
+			$('.slick-slider').slick('setPosition');
 			setTimeout(function (){
 				AOS.refresh();
+				$('.slick-slider').slick('setPosition');
 			},1000)
 			setTimeout(function (){
 				AOS.refresh();
+				$('.slick-slider').slick('setPosition');
 			},2000)
+
 
 			//console.log('----------------------------');
 			$('.page--tabs-blocks .page--tabs-blocks__tab').eq(index).css({
