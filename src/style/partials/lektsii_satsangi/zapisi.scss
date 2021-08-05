@@ -1,0 +1,279 @@
+.zapisi-vid {
+
+	margin-top: 76px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 51px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(51);
+	}
+
+	&:hover {
+		.zapisi-vid-slider-arrow {
+			opacity: 1;
+
+			@media screen and (max-width: 1150px) {}
+
+			@media screen and (max-width: 749px) {}
+		}
+	}
+
+	.container.container--ks {
+		@media screen and (max-width: 1150px) {
+			margin-right: 0;
+			width: calc(50% + 696px / 2);
+		}
+
+		@media screen and (max-width: 749px) {
+			max-width: calc(100% - 3.88889vw);
+		}
+	}
+}
+
+.zapisi-vid-slider-arrow {
+	top: 113px;
+
+	@media screen and (max-width: 1150px) {
+		display: none !important;
+	}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.zapisi-vid-slider {
+	margin-top: 17px;
+
+	@media screen and (max-width: 1150px) {
+		margin-top: 26px;
+	}
+
+	@media screen and (max-width: 749px) {
+		margin-top: vw(10);
+	}
+
+	.slick-list {
+		margin-left: -36px;
+		z-index: 1;
+
+		@media screen and (max-width: 1150px) {
+			margin-left: 0;
+		}
+
+		@media screen and (max-width: 749px) {}
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			background: #ffffff;
+			position: absolute;
+			height: 100%;
+			width: 37px;
+			z-index: 2;
+			top: 0;
+
+			@media screen and (max-width: 1150px) {
+				display: none;
+			}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+		&::before {
+			left: -1px;
+
+			@media screen and (max-width: 1150px) {}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+		&::after {
+			right: -1px;
+			display: none;
+
+			@media screen and (max-width: 1150px) {}
+
+			@media screen and (max-width: 749px) {}
+		}
+	}
+
+	.slick-track {
+		z-index: 1;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {}
+	}
+}
+
+.zapisi-vid-slide {
+	margin-left: 36px;
+
+	@media screen and (max-width: 1150px) {
+		width: 403px;
+		margin-left: 0;
+		margin-right: 36px;
+	}
+
+	@media screen and (max-width: 749px) {
+		width: vw(266);
+		margin-right: vw(23);
+	}
+
+	&__pic {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		-webkit-mask-image: -webkit-radial-gradient(white, #000);
+		border-radius: 6px;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {}
+
+		&::before {
+			padding-top: 61.8%;
+			content: '';
+			display: block;
+
+			@media screen and (max-width: 1150px) {}
+
+			@media screen and (max-width: 749px) {}
+		}
+
+		img {
+			z-index: 2;
+			@include relative_img();
+		}
+
+		.videos-duration {
+			@media screen and (min-width: 1151px) {
+				display: none;
+			}
+
+			@media screen and (max-width: 1150px) {}
+
+			@media screen and (max-width: 749px) {}
+		}
+	}
+
+	&__play {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 59px;
+		height: 59px;
+		background: url(../img/play-vid.svg) no-repeat center center;
+		background-size: contain;
+		z-index: 3;
+
+		@media screen and (max-width: 1150px) {
+			display: none;
+		}
+
+		@media screen and (max-width: 749px) {}
+	}
+
+	&__info {
+		margin-top: 16px;
+
+		@media screen and (max-width: 1150px) {
+			margin-top: 20px;
+		}
+
+		@media screen and (max-width: 749px) {
+			margin-top: vw(7);
+		}
+	}
+
+	&__info-name {
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 26px;
+		color: #53565A;
+		display: inline;
+		margin-right: 18px;
+
+		@media screen and (max-width: 1150px) {
+			font-size: 19px;
+		}
+
+		@media screen and (max-width: 749px) {
+			font-weight: 600;
+			font-size: vw(15);
+			line-height: vw(24);
+			margin-right: vw(18);
+		}
+	}
+
+	&__info-date {
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 26px;
+		color: #AFB4BF;
+		display: inline-block;
+
+		@media screen and (max-width: 1150px) {}
+
+		@media screen and (max-width: 749px) {
+			font-size: vw(13);
+			line-height: vw(24);
+			color: #9CA1AC;
+		}
+	}
+
+	&--lektsii {
+		.zapisi-vid-slide {
+			&__info {
+				display: block;
+
+				@media screen and (max-width: 1150px) {
+					margin-top: 15px;
+				}
+
+				@media screen and (max-width: 749px) {
+
+					margin-top: vw(7);
+				}
+			}
+
+			&__info-name {
+				display: block;
+				margin-right: 0;
+				@media screen and (max-width: 1150px) {
+
+					font-weight: 600;
+					font-size: 15px;
+					line-height: 24px;
+				}
+
+				@media screen and (max-width: 749px) {
+
+					font-weight: 600;
+					font-size: vw(15);
+					line-height: vw(24);
+
+				}
+			}
+
+			&__info-date {
+				display: block;
+				margin-top: 4px;
+
+				@media screen and (max-width: 1150px) {
+					margin-top: -1px;
+				}
+
+				@media screen and (max-width: 749px) {
+					line-height: 1;
+					margin-top: vw(5);
+
+				}
+			}
+		}
+	}
+}
