@@ -871,9 +871,11 @@ $(document).ready(function () {
 		var duration = Math.ceil((wrap.height()+0.1)/200)*250;
 		//console.log(duration);
 		$this=$(this);
+		setTimeout(function(){
+			wrap.addClass('reviews-item-childrens__wrap--show');
+		}, duration%1500);
 
 		$(this).parent().animate({height: wrap.height()},duration, function() {
-			wrap.addClass('reviews-item-childrens__wrap--show');
 			$this.parent().css('height', 'auto');
 		  });
 	});

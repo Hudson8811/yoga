@@ -427,8 +427,9 @@
 }
 
 .reviews-response-form-wrap {
-	overflow: hidden;
-	height: 0;
+/*	overflow: hidden;
+	height: 0;*/
+	display: none;
 
 	@media screen and (max-width: 1150px) {}
 
@@ -439,6 +440,7 @@
 	box-sizing: border-box;
 	padding-top: 16px;
 	padding-bottom: 21px;
+	margin: 0 !important;
 
 	@media screen and (max-width: 1150px) {}
 

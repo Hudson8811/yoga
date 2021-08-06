@@ -615,7 +615,12 @@ $(document).ready(function () {
 									tabContainer.find('.js-replace-title').html(
 										$.parseHTML($(tabLinks).eq(index).attr('data-com-title'))[0]['wholeText']
 										);
-									initCommentsLoadMore();
+										setTimeout(function () {
+											tabContainer.siblings().html('');
+											setTimeout(function () {
+												initCommentsLoadMore();
+											}, 50);
+										}, 50);
 								}
 								//mode = data[1];
 								//tippy(document.querySelectorAll('.js-share'), tippySettings);

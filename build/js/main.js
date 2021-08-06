@@ -1851,9 +1851,11 @@ $(document).ready(function () {
 		var duration = Math.ceil((wrap.height()+0.1)/200)*250;
 		//console.log(duration);
 		$this=$(this);
+		setTimeout(function(){
+			wrap.addClass('reviews-item-childrens__wrap--show');
+		}, duration%1500);
 
 		$(this).parent().animate({height: wrap.height()},duration, function() {
-			wrap.addClass('reviews-item-childrens__wrap--show');
 			$this.parent().css('height', 'auto');
 		  });
 	});
@@ -3314,7 +3316,12 @@ $(document).ready(function () {
 									tabContainer.find('.js-replace-title').html(
 										$.parseHTML($(tabLinks).eq(index).attr('data-com-title'))[0]['wholeText']
 										);
-									initCommentsLoadMore();
+										setTimeout(function () {
+											tabContainer.siblings().html('');
+											setTimeout(function () {
+												initCommentsLoadMore();
+											}, 50);
+										}, 50);
 								}
 								//mode = data[1];
 								//tippy(document.querySelectorAll('.js-share'), tippySettings);
