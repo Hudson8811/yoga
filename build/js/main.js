@@ -1845,18 +1845,21 @@ $(document).ready(function () {
 		$(this).removeClass('lang-switcher2__menu--open');
 	})
 
-	$('.js-reviews-item-childrens__quantity').click(function(){
+	$('body').on('click', '.js-reviews-item-childrens__quantity', function(){
 		$(this).addClass('reviews-item-childrens__quantity--hide');
 		var wrap=$(this).siblings('.reviews-item-childrens__wrap');
 		var duration = Math.ceil((wrap.height()+0.1)/200)*250;
-		console.log(duration);
+		//console.log(duration);
+		$this=$(this);
 
 		$(this).parent().animate({height: wrap.height()},duration, function() {
 			wrap.addClass('reviews-item-childrens__wrap--show');
+			$this.parent().css('height', 'auto');
 		  });
-
-
 	});
+
+
+
 });
 
 

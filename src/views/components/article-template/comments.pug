@@ -95,8 +95,20 @@
 									span.kspc-twpah-unwrap__dots ...
 									span.kspc-twpah-unwrap__text  Развернуть
 
+
 							.reviews-more-options
 								.reviews-more-options__item  Ответить
+								.reviews-response-form-wrap
+									form.reviews-response-form
+										.reviews-form__top
+											.reviews-form__top-inp-wrap
+												input.reviews-textarea(type="text" placeholder="Имя*")
+											.reviews-form__top-inp-wrap
+												input.reviews-textarea(type="text" placeholder="Email")
+										input.hide(type="text" value="Иванов Иван")
+										textarea.reviews-textarea.js-textarea-autosize(name="make-review", placeholder="Новый отзыв*", rows="1")
+										button.btn.reviews-send-btn(type="submit") Отправить
+
 
 							.reviews-item-childrens.reviews-item-childrens--non-hide
 								//У >1 depht этого не будет

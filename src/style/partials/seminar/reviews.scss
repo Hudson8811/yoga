@@ -416,11 +416,31 @@
 
 	@media screen and (max-width: 749px) {
 		padding-left: vw(34);
-		margin-top: vw(24);}
+		margin-top: vw(24);
+	}
 
 
 	&--show {
 		opacity: 1;
 		pointer-events: all;
 	}
+}
+
+.reviews-response-form-wrap {
+	overflow: hidden;
+	height: 0;
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
+}
+
+.reviews-response-form {
+	box-sizing: border-box;
+	padding-top: 16px;
+	padding-bottom: 21px;
+
+	@media screen and (max-width: 1150px) {}
+
+	@media screen and (max-width: 749px) {}
 }
