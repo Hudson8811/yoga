@@ -542,6 +542,72 @@ $(document).ready(function () {
 		});
 
 
+
+		selectTab = function(index, speed = 0){
+			changeTab = true;
+			if (typeof getScrollContent == 'function') {
+				getScrollContent(index);
+			}
+			tablineFunc(index);
+			if ($(window).width() < 750) {
+				scrollTabs(index, speed);
+			}
+
+			$('.page-tabs__item').eq(index).addClass('page-tabs__item--active').siblings().removeClass('page-tabs__item--active');
+
+			$('.page--tabs-blocks .page--tabs-blocks__tab--active').animate({
+				opacity: 0
+			}, 400, function () {
+
+
+				if (document.documentElement.scrollTop > $("#tabTop").offset().top + tabTopOffset) {
+					setTimeout(function () {
+						window.scrollTo(0, $("#tabTop").offset().top + tabTopOffset);
+					}, 10);
+					//$('html, body').animate({ scrollTop: $("#tabTop").offset().top +10 }, 0);
+				}
+
+
+				var newTab = $('.page--tabs-blocks .page--tabs-blocks__tab').eq(index); //открываемая вкладка
+
+
+
+
+
+
+				$('.page--tabs-blocks .aos-init').removeClass('aos-init aos-animate');
+				$('.page--tabs-blocks ~ .aos-init, .kriya-science-main ~ .aos-init').removeClass('aos-init aos-animate');
+				$('.page--tabs-blocks + *, .kriya-science-main + *').find('.aos-init').removeClass('aos-init aos-animate');
+				setTimeout(function (){
+					AOS.init({
+						disable: function () {
+							return (window.matchMedia("(max-width: 749px)").matches);
+						},
+						startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+						initClassName: 'aos-init', // class applied after initialization
+						animatedClassName: 'aos-animate', // class applied on animation
+						useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+						disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+						debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+						throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+						offset: 120, // offset (in px) from the original trigger point
+						delay: 0, // values from 0 to 3000, with step 50ms
+						duration: 1000, // values from 0 to 3000, with step 50ms
+						easing: 'ease', // default easing for AOS animations
+						once: true, // whether animation should happen only once - while scrolling down
+						mirror: false, // whether elements should animate out while scrolling past them
+						anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+					});
+					AOS.refresh();
+				},100)
+
+
+
+
+
+			});
+		}
+
 		function getScrollContent(index) {
 			//console.log('getScrollContent');
 			//console.log($(tabLinks).eq(index));
@@ -616,14 +682,44 @@ $(document).ready(function () {
 										$.parseHTML($(tabLinks).eq(index).attr('data-com-title'))[0]['wholeText']
 										);
 										setTimeout(function () {
-											tabContainer.siblings().html('');
-											setTimeout(function () {
-												initCommentsLoadMore();
-											}, 50);
+											initCommentsLoadMore();
 										}, 50);
+										/*setTimeout(function () {
+											tabContainer.siblings().html('');
+										}, 50);*/
 								}
 								//mode = data[1];
 								//tippy(document.querySelectorAll('.js-share'), tippySettings);
+								console.log(index);
+								var needActiveTab=$('.page--tabs-blocks .page--tabs-blocks__tab').eq(index);
+								$('.page--tabs-blocks').animate({
+									height: $('.page--tabs-blocks__tab--active').height()+20
+								}, 0, "linear", function() {
+									needActiveTab.css({
+										opacity: 0
+									});
+
+
+									needActiveTab.addClass('page--tabs-blocks__tab--active').siblings().removeClass('page--tabs-blocks__tab--active');
+									$('.page--tabs-blocks').animate({
+										height: needActiveTab.height()+20
+									}, 400, "linear",function(){
+										setTimeout(function () {
+											needActiveTab.animate({
+												opacity: 1
+											}, 300, "linear", function () {
+
+												changeTab = false;
+												changeLine = false;
+											});
+										}, 100);
+									});
+
+
+								});
+
+
+
 								setTimeout(function () {
 									AOS.init({
 										disable: false,
