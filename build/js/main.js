@@ -3147,6 +3147,8 @@ $(document).ready(function () {
 								$('.kspc-preloader').remove();
 							}
 
+							dataFancyInit();
+
 							tabRequest = false;
 						},
 						error: function (data) {

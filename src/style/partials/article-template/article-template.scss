@@ -19,7 +19,7 @@
 	// Контейнер
 	&__container {
 		@include media(1150) {
-		/*	width: 100%;
+			/*	width: 100%;
 			max-width: calc(100% - 34px * 2);*/
 		}
 
@@ -182,18 +182,42 @@
 					line-height: vw(13);
 				}
 			}
-			&--has-label{
-				&+.kspc-simple-text{
-						margin-top: 72px;
-						padding-right: 0;
 
-						@include media(1150) {
-							margin-top: 88px;
-						}
+			&--has-label {
+				&+.kspc-simple-text {
+					margin-top: 72px;
+					padding-right: 0;
 
-						@include media(749) {
-							margin-top: vw(84);
-						}
+					@include media(1150) {
+						margin-top: 88px;
+					}
+
+					@include media(749) {
+						margin-top: vw(84);
+					}
+
+				}
+			}
+
+			&+.kspc-simple-text {
+
+				@include media(1150) {
+				}
+
+				@include media(749) {
+
+				}
+			}
+			&+.kspc-simple-text--has-title {
+				margin-top: 77px;
+
+				@include media(1150) {
+					margin-top: 86px;
+
+				}
+
+				@include media(749) {
+					margin-top: vw(86);
 
 				}
 			}
