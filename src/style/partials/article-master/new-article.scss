@@ -250,9 +250,9 @@
 .videos-duration {
 	position: absolute;
 	right: 9px;
-	bottom: 10px;
+	bottom: 9px;
 	z-index: 8;
-    padding: 5px 9px 4px;
+    padding: 2px 9px 0px;
 	transition: all .4s ease;
 	background: rgba(255, 255, 255, 0.5);
 	border-radius: 10px;
@@ -263,7 +263,7 @@
 .videos-duration-text {
 
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 500;
 	font-size: 13px;
 	line-height: 13px;
 	/* or 100% */

@@ -27,7 +27,26 @@
 	&--in-archive-cat {
 		padding-top: 88px;
 	}
+	&--single-article{
+		padding: 16px 0 41px;
+
+		@include media(1150) {
+			padding: 20px 0 42px;
+		}
+
+		@include media(749) {
+			padding: vw(17) 0 vw(22);
+		}
+
+
+	}
+
 }
+
+
+
+
+
 
 .breadcrumbs-delimiter {
 	display: inline-block;

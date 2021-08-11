@@ -11,14 +11,14 @@ block main
   include components/article-template/subscribe
 
   //- Хлебные крошки
-  section.article-template.article-template__crumbs
-    .container.article-template__container
-        ol.crumbs
-          li.crumbs-item.crumbs__item
-            a(href="#").crumbs-item__link
-              | Статьи Мастера
-          li.crumbs-item.crumbs__item
-            | Чакры человека
+  .breadcrumbs-wrap
+    .container.container--ks-only-tab
+      ul.breadcrumbs.breadcrumbs--single-article
+        li.breadcrumbs-item
+          a.breadcrumbs-item_link(href="") Статьи Мастера
+          .breadcrumbs-delimiter
+        li.breadcrumbs-item
+          span.breadcrumbs-item_link.breadcrumbs-item_link--current(href="") Чакры человека
 
   //- Основной контент
   section.article-template.article-template__main

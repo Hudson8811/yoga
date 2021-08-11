@@ -10,7 +10,7 @@
 		margin-top: vw(50);
 	}
 
-	&+* {
+	&+*,&+.simple-add-to-calendar__hr-after-mob+* {
 
 		margin-top: 59px;
 
@@ -20,6 +20,12 @@
 
 		@media screen and (max-width: 749px) {
 			margin-top: vw(58);
+		}
+	}
+
+	&+.kspc-media-wrap,&+.simple-add-to-calendar__hr-after-mob+.kspc-media-wrap{
+		@media screen and (min-width: 1151px) {
+			margin-top: 93px;
 		}
 	}
 }

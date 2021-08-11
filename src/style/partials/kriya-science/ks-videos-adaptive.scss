@@ -33,9 +33,10 @@
 		}
 
 		&__name {
+			margin-top: 7px;
 			font-style: normal;
-			font-weight: normal;
-			font-size: 19px;
+			font-weight: 600;
+			font-size: 15px;
 			line-height: 26px;
 			/* identical to box height, or 137% */
 
@@ -69,6 +70,10 @@
 		.ks-videos-item__name {
 			text-align: center;
 			margin-top: 16px;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 26px;
 		}
 	}
 }
@@ -118,7 +123,7 @@
 			font-style: normal;
 			font-size: vw(15);
 			line-height: vw(24);
-			font-weight: 500;
+			font-weight: 600;
 			margin-top: vw(7);
 
 			color: $dark;
@@ -151,10 +156,10 @@
 
 		.ks-videos-item__name {
 			text-align: left;
-			margin-top: vw(11);
+			margin-top: vw(7);
 
-			font-weight: 500;
-			font-size: vw(19);
+			font-weight: 600;
+			font-size: vw(15);
 			line-height: vw(26);
 		}
 	}

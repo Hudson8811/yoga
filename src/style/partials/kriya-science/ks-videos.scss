@@ -97,10 +97,10 @@
 	}
 
 	&__name {
-		margin-top: 19px;
+		margin-top: 16px;
 		font-style: normal;
-		font-weight: 500;
-		font-size: 22px;
+		font-weight: 600;
+		font-size: 17px;
 		line-height: 26px;
 		color: $dark;
 	}
@@ -112,5 +112,18 @@
 
 	&.slick-slide{
 		margin-top: 0 !important;
+	}
+}
+
+.ks-videos--type-comments{
+	.ks-videos-item {
+		&__name {
+			margin-top: 15px;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 17px;
+			line-height: 26px;
+			color: $dark;
+		}
 	}
 }

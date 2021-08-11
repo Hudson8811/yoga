@@ -78,6 +78,8 @@
 @media screen and (max-width: 749px) {
 	.ksquote {
 		padding: vw(86) 0 vw(86);
+			padding-top: 13.9vw;
+
 		&--after-tabs{
 			padding-top: vw(16);
 			padding-bottom: vw(51);
@@ -88,7 +90,9 @@
 		}
 
 		&--small-on-all {
-			padding-top: vw(88);
+			//padding-top: vw(88);
+ 		   padding-top: 13.9vw;
+
 			.ksquote-content {
 				&__title {
 					font-size: vw(32);
@@ -98,6 +102,10 @@
 					}
 				}
 			}
+		}
+
+		&--mob-pt-93{
+			padding-top: vw(86);
 		}
 	}
 
