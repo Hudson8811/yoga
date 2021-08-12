@@ -192,6 +192,7 @@
 				top: 0;
 				height: 100vh;
 				overflow-y: auto;
+				overflow-x: hidden;
 
 				@include media(1150) {
 					border-top: 1px solid #dee6e9;
