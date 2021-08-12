@@ -42,6 +42,7 @@ $(document).on("mobileinit", function () {
 
 // Weekly Events page
 //= partials/weekly.js
+//= libs/theia-sticky-sidebar.min.js
 
 // Article template page
 //= partials/articleTemplate.js
