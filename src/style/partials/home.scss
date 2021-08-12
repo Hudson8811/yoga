@@ -1917,6 +1917,10 @@ input.email-cinp {
 	z-index: 1;
 	padding-bottom: 33px;
 
+	&--noarrow {
+		padding-bottom: 0;
+	}
+
 	.slick-dots {
 		display: none !important;
 	}
