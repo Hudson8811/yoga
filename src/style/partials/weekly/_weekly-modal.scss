@@ -7,7 +7,7 @@
     left: 0;
     z-index: 1000;
     overflow-y: auto;
-    padding: 87px 0 362px;
+    padding: 87px 0 93px;
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
@@ -16,10 +16,12 @@
 
     @include media(1150) {
       padding-top: 60px;
+			padding-bottom: 58px;
     }
 
     @include media(749) {
       padding-top: vw(52);
+			padding-bottom: vw(58);
     }
 
     &.active {
@@ -41,6 +43,10 @@
       opacity: 1;
 
       @include hov();
+
+			@include media(1150) {
+				position: absolute;
+			}
 
       @include media(749) {
         // top: vw(15);
