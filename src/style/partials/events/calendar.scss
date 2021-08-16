@@ -1169,17 +1169,17 @@ tr:first-child>td>.fc-day-grid-event {
 
 		&-link {
 			background: #ffffff;
-			padding-right: 65px;
+			padding-right: 32px;
 			position: absolute;
 			right: 0;
 			bottom: 0;
 
 			@media screen and (max-width: 1150px) {
-				padding-right: 20px;
+				padding-right: 13px;
 			}
 
 			@media screen and (max-width: 749px) {
-				padding-right: vw(10);
+				padding-right: vw(3);
 			}
 
 			a {
@@ -1200,23 +1200,23 @@ tr:first-child>td>.fc-day-grid-event {
 					top: 50%;
 					right: 0;
 					display: block;
-					width: 6px;
-					height: 12px;
-					margin-top: 2px;
+					width: 5px;
+					height: 11px;
+					margin-top: 1px;
 					content: '';
 					transition-duration: .2s;
 					transform: translate(0, -50%);
 					background: url(../img/arrow-more-gray.svg) no-repeat center center;
 					background-size: contain;
 					@media screen and (max-width: 1150px) {
-						width: 6px;
-						height: 10px;
-						margin-top: 0;
+						width: 5px;
+						height: 9px;
+						margin-top: 1px;
 					}
 					@media screen and (max-width: 749px) {
-						width: vw(6);
-						height: vw(10);
-						margin-top: 0;
+						width: vw(5);
+						height: vw(9);
+						margin-top: vw(1);
 						right: vw(-3);
 					}
 				}

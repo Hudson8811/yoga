@@ -177,8 +177,14 @@ $(document).ready(function () {
 			generatePlaylist(activeAlbum);
 			changeOrigLink(activeAlbum);
 			actualizePlaylist();
-			Amplitude.playSongAtIndex( 1 );
-			Amplitude.playSongAtIndex( 0 );
+			let isPlay = Amplitude.getPlayerState();
+			Amplitude.stop();
+			initPlayer();
+			updateCustomDuration(activeAlbum,0);
+			if (isPlay === 'playing') {
+				Amplitude.play();
+				$('.amplitude-paused').removeClass('amplitude-paused').addClass('amplitude-playing');
+			}
 			//Amplitude.playSongAtIndex(currentSlide);
 		});
 		$('#music-player__swipe-area').on("swipeleft", function (event) {
