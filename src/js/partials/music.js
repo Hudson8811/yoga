@@ -96,6 +96,7 @@ $(document).ready(function () {
 				"songs": startPlaylist,
 				"volume": 100,
 				//debug: true,
+				preload :"none",
 				callbacks: {
 					timeupdate: function () {
 						var w = soundRS__progressContainer.width();
