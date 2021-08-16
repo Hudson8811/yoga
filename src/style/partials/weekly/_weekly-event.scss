@@ -404,3 +404,69 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1151px){
+	.weekly-event__unwrap {
+		&--more{
+			&-x{
+				&-desktop{
+					&-left{
+						padding-right: calc(100% - 150px);
+					}
+					&-center{
+						padding-right: calc(50% - 60px);
+					}
+					&-right{
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1150px) and (min-width: 750px) {
+	.weekly-event__unwrap {
+		&--more{
+			&-x{
+				&-tablet{
+					&-left{
+						padding-right: calc(100% - 150px);
+					}
+					&-center{
+						padding-right: calc(50% - 60px);
+					}
+					&-right{
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 749px) {
+	.weekly-event__unwrap {
+		&--more{
+			&-x{
+				&-mobile{
+					&-left{
+						padding-right: 0;
+					}
+					&-center{
+						padding-right: calc(50% - 14vw);
+					}
+					&-right{
+						padding-right: calc(100% - 34vw);
+					}
+				}
+			}
+		}
+	}
+}
