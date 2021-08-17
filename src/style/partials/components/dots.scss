@@ -47,3 +47,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 749px) and (-webkit-min-device-pixel-ratio: 3) {
+	.custom-dots .slick-dots {
+		li {
+			width: 9px !important;
+			height: 9px !important;
+			margin: 0 7px !important;
+		}
+	}
+}

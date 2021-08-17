@@ -2454,3 +2454,21 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 749px) and (-webkit-min-device-pixel-ratio: 3) {
+	.home-slider,
+	.hm-quote-practice,
+	.hm-events-slider,
+	.hm-feedback,
+	.slider-news-widget-wrap .slnewsw-slider,
+	.slnewsw-slider	{
+		.slick-dots {
+			li {
+				width: 9px !important;
+				height: 9px !important;
+				margin: 0 7px !important;
+			}
+		}
+	}
+}

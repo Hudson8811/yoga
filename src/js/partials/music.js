@@ -172,14 +172,14 @@ $(document).ready(function () {
 		});
 
 		$('#mpl-icon-slider').on('afterChange', function (event, slick, currentSlide) {
+			let isPlay = Amplitude.getPlayerState();
+			Amplitude.stop();
 			removeAllSongs(activeAlbum);
 			activeAlbum = currentSlide;
 			addAllSongs(activeAlbum);
 			generatePlaylist(activeAlbum);
 			changeOrigLink(activeAlbum);
 			actualizePlaylist();
-			let isPlay = Amplitude.getPlayerState();
-			Amplitude.stop();
 			initPlayer();
 			updateCustomDuration(activeAlbum,0);
 			if (isPlay === 'playing') {
@@ -347,51 +347,5 @@ $(document).ready(function () {
 				track: 'simplebar-track'
 			}
 		});
-	}
-
-
-	if (typeof my_songs !== 'undefined') {
-
-
-		$('#mpl-icon-slider').on('afterChange', function (event, slick, currentSlide) {
-			//Amplitude.playSongAtIndex(currentSlide);
-		});
-
-		/*function soundRSevent() {
-		};
-		setInterval(soundRSevent, 1000);*/
-
-		/*mpVolumeRS.rangeslider({orientation: 'horizontal'});
-		mpVolumeRS.rangeslider({orientation: 'horizontal'});
-		mpVolumeRS.rangeslider({orientation: 'horizontal'});
-		mpVolumeRS.rangeslider({orientation: 'horizontal'});
-		mpVolumeRS.rangeslider({orientation: 'horizontal'});*/
-
-		//$("#js-song-progress-slider").rangeslider('update', true);
-
-		/*
-		$('input, div, progress').on('progress', function () {
-		console.log($(this).val());
-		});
-		*/
-		/*
-		$('#music-player__playlist-inner .custom-audio-playlist__duration').each(function (index, element) {
-		console.log(Amplitude.getSongDuration(index));
-		});*/
-		/*
-		//Shows the playlist
-		document.getElementsByClassName('show-playlist')[0].addEventListener('click', function () {
-		document.getElementById('white-player-playlist-container').classList.remove('slide-out-top');
-		document.getElementById('white-player-playlist-container').classList.add('slide-in-top');
-		document.getElementById('white-player-playlist-container').style.display = "block";
-		});
-
-		//Hides the playlist
-		document.getElementsByClassName('close-playlist')[0].addEventListener('click', function () {
-		document.getElementById('white-player-playlist-container').classList.remove('slide-in-top');
-		document.getElementById('white-player-playlist-container').classList.add('slide-out-top');
-		document.getElementById('white-player-playlist-container').style.display = "none";
-		});
-		*/
 	}
 });

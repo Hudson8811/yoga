@@ -150,6 +150,12 @@
 		padding-top: 46.1458%;
 		content: '';
 	}
+
+	&--no-gradient{
+		&::before{
+			display: none;
+		}
+	}
 }
 
 .hms-pic {

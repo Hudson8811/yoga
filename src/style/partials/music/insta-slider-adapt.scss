@@ -7,6 +7,9 @@
 		&+.reviews {
 			margin-top: 86px;
 		}
+		&--hr{
+			margin-top: 50px;
+		}
 	}
 
 	.insta-slider-title {}
@@ -56,6 +59,10 @@
 }
 
 @media screen and (max-width: 749px) {
+	.hr-before-insta{
+		margin-top: vw(54);
+	}
+
 	.insta-slider-section {
 		margin-top: vw(81);
 
@@ -68,6 +75,9 @@
 
 			max-width: calc(100% - 3.88889vw);
 			margin-right: 0;
+		}
+		&--hr{
+			margin-top: vw(50);
 		}
 	}
 

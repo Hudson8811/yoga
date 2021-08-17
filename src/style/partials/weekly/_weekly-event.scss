@@ -394,11 +394,13 @@
 
   &__share {
     &-icon {
-      width: 19.5px;
+      width: 20px;
       height: 19px;
+			object-fit: contain;
+			display: block;
 
       @include media(749) {
-        width: vw(15.5);
+        width: vw(16);
         height: vw(15);
       }
     }
