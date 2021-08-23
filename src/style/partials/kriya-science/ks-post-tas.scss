@@ -9,11 +9,20 @@
 	}
 }
 
+@media screen and (min-width: 750px){
+	.kspc-text-with-pic-and-hide {
+		&+.kspc-tags-and-share {
+			margin-top: 0;
+		}
+	}
+}
+
 .kspc-text-with-pic-and-hide {
-	&+.kspc-tags-and-share {
+	&+.kspc-tags-and-share--notag {
 		margin-top: 0;
 	}
 }
+
 
 .kspc-tas-flex {
 	display: flex;

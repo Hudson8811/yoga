@@ -532,25 +532,19 @@ $(document).ready(function () {
 				variableWidth: true,
 				speed: slickSpeedMain,
 				arrows: false
-				/*,
-									dots: false,*/
+			}
+		},
+		{
+			breakpoint: 749,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				variableWidth: true,
+				speed: slickSpeedMain,
+				arrows: false,
+				dots: false,
 			}
 		}
-			/*,
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}*/
 		]
 	});
 

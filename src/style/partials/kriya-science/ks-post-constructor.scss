@@ -1279,6 +1279,12 @@
 	}
 }
 
+.kspc-simple-text + .kspc-media-wrap--notitle{
+	.kspc-media{
+		margin-top: 0 !important;
+	}
+}
+
 .kspc-media-preview {
 
 	z-index: 1;

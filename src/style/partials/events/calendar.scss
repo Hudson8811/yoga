@@ -207,7 +207,7 @@
 	width: 100%;
 	box-sizing: border-box;
 	table-layout: fixed;
-	border-collapse: collapse;
+	border-collapse: separate;
 	border-spacing: 0;
 	font-size: 1em;
 }
@@ -241,6 +241,20 @@
 	padding: 0;
 	vertical-align: top;
 
+	&.fc-widget-content{
+		border-radius: 5px;
+		@media screen and (max-width: 749px) {
+			border-radius: 0;
+		}
+	}
+
+	&.fc-day{
+		border-radius: 5px;
+		@media screen and (max-width: 749px) {
+			border-radius: 0;
+		}
+	}
+
 	@media screen and (max-width: 749px) {
 		border-left: none;
 		border-right: none;
@@ -258,6 +272,7 @@
 	border-left: 0 hidden transparent;
 	border-right: 0 hidden transparent;
 	border-bottom: 0 hidden transparent;
+	border-collapse: collapse;
 }
 
 .fc-row:first-child table {

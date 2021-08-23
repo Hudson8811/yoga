@@ -2,6 +2,9 @@
 	.music-form-wrap {
 		margin-top: 1px;
 		margin-bottom: -57px;
+		&--music{
+			margin-bottom: -30px;
+		}
 	}
 
 	.music-form-title {
@@ -105,6 +108,9 @@
 	.music-form-wrap {
 		margin-top: vw(22);
 		margin-bottom: vw(-58);
+		&--music{
+			margin-bottom: vw(0);
+		}
 	}
 
 	.music-form-title {

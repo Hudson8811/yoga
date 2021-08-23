@@ -69,8 +69,9 @@
 	margin-bottom: 0;}
 
 	.course-cards-item {
-		width: 100%;
-		margin-bottom: 0;
+		width: vw(266);
+		margin-left: 0;
+		margin-right: vw(22);
 		&__pic {
 			&::before {}
 
@@ -78,10 +79,11 @@
 		}
 
 		&__name {
-			font-weight: 500;
-			font-size: vw(19);
-			line-height: vw(26);
-			margin-top: vw(17);
+			font-style: normal;
+			font-size: vw(15);
+			line-height: vw(24);
+			font-weight: 600;
+			margin-top: vw(7);
 		}
 
 		&:hover {}
@@ -89,8 +91,5 @@
 		&:active {}
 
 		&:focus {}
-		&+.course-cards-item{
-			margin-top: vw(51);
-		}
 	}
 }
