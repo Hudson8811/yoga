@@ -403,7 +403,26 @@
 		}
 
 		@include media(749) {
-			padding-bottom: vw(27);
+			padding-bottom: vw(51);
+		}
+
+		&--single{
+			padding-top: 80px;
+			padding-bottom: 93px;
+			border-bottom: 1px solid #dee6e9;
+			border-top: 1px solid #dee6e9;
+			margin-top: 35px;
+			@include media(1150) {
+				padding-top: 80px;
+				padding-bottom: 93px;
+				margin-top: 35px;
+			}
+
+			@include media(749) {
+				padding-top: vw(48);
+				padding-bottom: vw(51);
+				margin-top: vw(3);
+			}
 		}
 
 		&__title {

@@ -159,14 +159,6 @@
 		right: 12px;
 	}
 
-	.videos-duration-text {
-
-		font-size: 15px;
-		line-height: 15px;
-		font-weight: 500;
-
-	}
-
 
 }
 
@@ -314,14 +306,14 @@
 	.videos-duration {
 		right: vw(9);
 		bottom: vw(9);
-		border-radius: 50px;
-		padding: vw(2) vw(13) vw(1);
+		border-radius: vw(10);
+		padding: vw(2) vw(9) vw(1);
 	}
 
 	.videos-duration-text {
 
-		font-size: vw(15);
-		line-height: vw(15);
+		font-size: vw(13);
+		line-height: vw(13);
 		font-weight: 500;
 
 	}

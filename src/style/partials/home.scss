@@ -68,7 +68,7 @@
 		position: absolute;
 		z-index: 4;
 		top: 50%;
-		left: 94px;
+		left: 58px;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
@@ -185,6 +185,15 @@
 	opacity: 0;
 
 	//transform: translate(50%, 0);
+
+	&--side-left{
+		left: 103px;
+	}
+	&--side-right{
+		left: auto;
+		right: 103px;
+	}
+
 	&__top {}
 
 	&__title {

@@ -262,9 +262,13 @@ $(document).ready(function () {
 
 		$('#music-modal__title').html($(this).attr('data-title'));
 
+		$('#music-modal__description-container').html($(this).closest('.release-slide').find('.js-open-album-modal-hidden').find('.open-album-modal-hidden__description').html());
+		$('#music-modal-services').html($(this).closest('.release-slide').find('.js-open-album-modal-hidden').find('.open-album-modal-hidden__socials').html());
 
-		$('#music-modal__description-container').html($(this).siblings('.js-open-album-modal-hidden').find('.open-album-modal-hidden__description').html());
-		$('#music-modal-services').html($(this).siblings('.js-open-album-modal-hidden').find('.open-album-modal-hidden__socials').html());
+		let moreX = $(this).data('morex');
+		if (moreX){
+			$('#music-modal-bg .kspc-twpah-unwrap').removeClass().addClass('kspc-twpah-unwrap js-component-hide-unwrap '+moreX);
+		}
 
 		openAlbumModal();
 	});

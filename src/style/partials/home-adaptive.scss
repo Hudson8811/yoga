@@ -875,6 +875,14 @@
 		left: 36px;
 		bottom: 58px;
 
+		&--side-left{
+			left: 36px;
+		}
+		&--side-right{
+			left: auto;
+			right: 36px;
+		}
+
 		&__area,
 		&__date {
 			font-weight: 400;
@@ -1296,7 +1304,8 @@
 
 	.hms-info {
 		width: calc(100% - #{vw(40)});
-		left: vw(20);
+		left: vw(20) !important;
+		right: auto !important;
 		bottom: vw(90);
 		text-align: center;
 
@@ -2472,3 +2481,9 @@
 		}
 	}
 }
+
+
+
+
+
+

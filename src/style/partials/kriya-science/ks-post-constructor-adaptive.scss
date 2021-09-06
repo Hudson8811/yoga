@@ -581,7 +581,7 @@
 	.kspc-event__container-hr-1 {}
 
 	.kspc-event__container-main {
-		margin-top: 50px;
+		//margin-top: 50px;
 	}
 
 	.kspc-event__container-hr-2 {
@@ -1385,7 +1385,7 @@
 	.kspc-event__container-hr-1 {}
 
 	.kspc-event__container-main {
-		margin-top: vw(50);
+		//margin-top: vw(50);
 	}
 
 	.kspc-event__container-hr-2 {
@@ -1485,6 +1485,14 @@
 
 		&__time {
 			margin-left: vw(13);
+		}
+
+		&__add{
+			&-right{
+				&:not(:first-child){
+					margin-left: vw(13);
+				}
+			}
 		}
 
 		&+.kspc-event-info {
