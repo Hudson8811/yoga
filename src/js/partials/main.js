@@ -184,6 +184,52 @@ function initPostsPageLoadingSliders(){
 			}
 		}]
 	});
+
+
+	let tempSlider = $('.js-doubleVideo-slider:not(.temp-slider)')
+	if (tempSlider.length > 0){
+		tempSlider.addClass('temp-slider');
+		if ($(window).width() <= 749) {
+			if (!tempSlider.hasClass('slick-slider')){
+				tempSlider.slick({
+					infinite: true,
+					slidesToShow: 1,
+					arrows: false,
+					speed: slickSpeedMain * 2,
+					variableWidth: true,
+					slidesToScroll: 1,
+					touchMove: false,
+					pauseOnHover: false,
+					dots: false
+				});
+			}
+		} else {
+			if (tempSlider.hasClass('slick-slider')) {
+				tempSlider.slick('unslick');
+			}
+		}
+		$(window).on('resize', function () {
+			if ($(window).width() <= 749) {
+				if (!tempSlider.hasClass('slick-slider')){
+					tempSlider.slick({
+						infinite: true,
+						slidesToShow: 1,
+						arrows: false,
+						speed: slickSpeedMain * 2,
+						variableWidth: true,
+						slidesToScroll: 1,
+						touchMove: false,
+						pauseOnHover: false,
+						dots: false
+					});
+				}
+			} else {
+				if (tempSlider.hasClass('slick-slider')) {
+					tempSlider.slick('unslick');
+				}
+			}
+		});
+	}
 }
 
 

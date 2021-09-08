@@ -1164,6 +1164,52 @@ function initPostsPageLoadingSliders(){
 			}
 		}]
 	});
+
+
+	let tempSlider = $('.js-doubleVideo-slider:not(.temp-slider)')
+	if (tempSlider.length > 0){
+		tempSlider.addClass('temp-slider');
+		if ($(window).width() <= 749) {
+			if (!tempSlider.hasClass('slick-slider')){
+				tempSlider.slick({
+					infinite: true,
+					slidesToShow: 1,
+					arrows: false,
+					speed: slickSpeedMain * 2,
+					variableWidth: true,
+					slidesToScroll: 1,
+					touchMove: false,
+					pauseOnHover: false,
+					dots: false
+				});
+			}
+		} else {
+			if (tempSlider.hasClass('slick-slider')) {
+				tempSlider.slick('unslick');
+			}
+		}
+		$(window).on('resize', function () {
+			if ($(window).width() <= 749) {
+				if (!tempSlider.hasClass('slick-slider')){
+					tempSlider.slick({
+						infinite: true,
+						slidesToShow: 1,
+						arrows: false,
+						speed: slickSpeedMain * 2,
+						variableWidth: true,
+						slidesToScroll: 1,
+						touchMove: false,
+						pauseOnHover: false,
+						dots: false
+					});
+				}
+			} else {
+				if (tempSlider.hasClass('slick-slider')) {
+					tempSlider.slick('unslick');
+				}
+			}
+		});
+	}
 }
 
 
@@ -2562,7 +2608,7 @@ function musicPageSlidersInit(tabJq) {
 	if (tabJq !== false) {
 		albumsSlider = tabJq.find('.js-albums-slider:not(.slick-slider)');
 	} else {
-		albumsSlider = $('.js-albums-slider');
+		albumsSlider = $('.js-albums-slider').not('.slick-initialized');
 	}
 	if (albumsSlider.length > 0) {
 		albumsSlider.slick({
@@ -2742,12 +2788,12 @@ $(document).ready(function () {
 
 		$('#music-modal__title').html($(this).attr('data-title'));
 
-		$('#music-modal__description-container').html($(this).closest('.release-slide').find('.js-open-album-modal-hidden').find('.open-album-modal-hidden__description').html());
-		$('#music-modal-services').html($(this).closest('.release-slide').find('.js-open-album-modal-hidden').find('.open-album-modal-hidden__socials').html());
+		$('#music-modal__description-container').html($(this).closest('.release-slide, .albums-slide').find('.js-open-album-modal-hidden').find('.open-album-modal-hidden__description').html());
+		$('#music-modal-services').html($(this).closest('.release-slide, .albums-slide').find('.js-open-album-modal-hidden').find('.open-album-modal-hidden__socials').html());
 
-		let moreX = $(this).data('morex');
+		let moreX = $(this).data('moreX');
 		if (moreX){
-			$('#music-modal-bg .kspc-twpah-unwrap').removeClass().addClass('kspc-twpah-unwrap js-component-hide-unwrap '+moreX);
+			$('#music-modal .kspc-twpah-unwrap').removeClass().addClass('kspc-twpah-unwrap js-component-hide-unwrap '+moreX);
 		}
 
 		openAlbumModal();

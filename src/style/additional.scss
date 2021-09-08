@@ -1,12 +1,12 @@
 .section-home-events--single{
-	padding-top: 80px;
-	padding-bottom: 93px;
+	padding-top: 45px;
+	padding-bottom: 58px;
 	border-bottom: 1px solid #dee6e9;
 	border-top: 1px solid #dee6e9;
-	margin-top: 35px;
+	margin-top: 0px;
 	@include media(1150) {
-		padding-top: 80px;
-		padding-bottom: 93px;
+		padding-top: 45px;
+		padding-bottom: 58px;
 		margin-top: 35px;
 	}
 	@include media(749) {
@@ -29,19 +29,26 @@
 	.hm-events-slide__date{
 		color: #AFB4BF;
 	}
+	.home-events-events__title{
+		margin-bottom: 16px;
+		@include media(749) {
+			margin-bottom: vw(7);
+		}
+	}
 }
 
+.get-materials--single,
 .twoinrow-section--single,
 .ks-videos--single,
 .albums-section--section{
-	padding-top: 80px;
-	padding-bottom: 93px;
+	padding-top: 45px;
+	padding-bottom: 58px;
 	border-bottom: 1px solid #dee6e9;
 	border-top: 1px solid #dee6e9;
-	margin-top: 35px;
+	margin-top: 0px;
 	@include media(1150) {
-		padding-top: 80px;
-		padding-bottom: 93px;
+		padding-top: 45px;
+		padding-bottom: 58px;
 		margin-top: 35px;
 	}
 	@include media(749) {

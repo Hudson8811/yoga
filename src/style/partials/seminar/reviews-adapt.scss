@@ -8,7 +8,12 @@
 		}
 
 		&:last-child {}
+
+		&--post-page{
+			margin-top: 53px;
+		}
 	}
+
 
 	.reviews__info-after-title {
 		font-style: normal;
@@ -166,8 +171,14 @@
 	.reviews {
 		margin-top: vw(88);
 
+
+
 		&--after-tabs-and-socials {
 			margin-top: 9.44444vw;
+		}
+
+		&--post-page{
+			margin-top: vw(53);
 		}
 
 		&:last-child {

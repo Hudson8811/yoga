@@ -104,3 +104,37 @@
         margin-bottom: 82px;
     }
 }
+
+
+
+.single-video{
+	margin-bottom: 82px;
+	@include media(749) {
+		margin-bottom: vw(58);
+	}
+	&__iframe{
+		width: 100%;
+		position: relative;
+		margin-top: 27px;
+		padding-bottom: 56.66%;
+		@include media(749) {
+			margin-top: vw(27);
+		}
+		iframe{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+
+	.new-article--videos{
+		padding-bottom: 80px;
+		@include media(749) {
+			padding-bottom: vw(58);
+		}
+	}
+
+}
