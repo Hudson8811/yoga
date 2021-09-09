@@ -518,6 +518,12 @@ body {
 
 		z-index: 3;
 	}
+
+	&:hover {
+		.hm-events-arrow {
+			opacity: 1;
+		}
+	}
 }
 
 .hm-events-slide__wrap {

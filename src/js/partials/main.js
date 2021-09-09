@@ -123,7 +123,7 @@ function initPostsPageLoadingSliders(){
 		slidesToScroll: 1,
 		infinite: true,
 		arrows: true,
-		dots: true,
+		dots: false,
 		speed: slickSpeedMain,
 		touchMove: false,
 		pauseOnHover: false,
