@@ -291,7 +291,8 @@
 
 		.kspc-twpah__text {
 			@include media(749) {
-				margin-top: vw(8);
+				//margin-top: vw(8);
+				margin-top: 8.22222vw;
 			}
 		}
 

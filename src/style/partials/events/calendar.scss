@@ -36,12 +36,15 @@
 		}
 
 		&--list{
+			padding-bottom: 86px;
 			@media screen and (max-width: 1150px) {
 				margin-top: 32px;
+				padding-bottom: 30px;
 			}
 
 			@media screen and (max-width: 749px) {
 				margin-top: vw(34);
+				padding-bottom: 8.8vw;
 			}
 		}
 
@@ -952,7 +955,7 @@ tr:first-child>td>.fc-day-grid-event {
 
 	@media screen and (max-width: 749px) {
 		padding-top: vw(19);
-		border-bottom: vw(88);
+		padding-bottom: vw(88);
 	}
 
 	&__date {
