@@ -1,119 +1,119 @@
 @media screen and (min-width: 1151px) {
-	.d{
-		&m{
-			&t{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						margin-top: #{$i}px !important;
-					}
-				}
-			}
-			&b{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						margin-bottom: #{$i}px !important;
-					}
-				}
-			}
-		}
-		&p{
-			&t{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						padding-top: #{$i}px !important;
-					}
-				}
-			}
-			&b{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						padding-bottom: #{$i}px !important;
-					}
-				}
-			}
-		}
-		&hide{
-			display: none !important;
-		}
-	}
+    .d {
+        &m {
+            &t {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        margin-top: #{$i}px !important;
+                    }
+                }
+            }
+            &b {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        margin-bottom: #{$i}px !important;
+                    }
+                }
+            }
+        }
+        &p {
+            &t {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        padding-top: #{$i}px !important;
+                    }
+                }
+            }
+            &b {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        padding-bottom: #{$i}px !important;
+                    }
+                }
+            }
+        }
+        &hide {
+            display: none !important;
+        }
+    }
 }
 
 @media screen and (min-width: 750px) and (max-width: 1150px) {
-	.t{
-		&m{
-			&t{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						margin-top: #{$i}px !important;
-					}
-				}
-			}
-			&b{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						margin-bottom: #{$i}px !important;
-					}
-				}
-			}
-		}
-		&p{
-			&t{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						padding-top: #{$i}px !important;
-					}
-				}
-			}
-			&b{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						padding-bottom: #{$i}px !important;
-					}
-				}
-			}
-		}
-		&hide{
-			display: none !important;
-		}
-	}
+    .t {
+        &m {
+            &t {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        margin-top: #{$i}px !important;
+                    }
+                }
+            }
+            &b {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        margin-bottom: #{$i}px !important;
+                    }
+                }
+            }
+        }
+        &p {
+            &t {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        padding-top: #{$i}px !important;
+                    }
+                }
+            }
+            &b {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        padding-bottom: #{$i}px !important;
+                    }
+                }
+            }
+        }
+        &hide {
+            display: none !important;
+        }
+    }
 }
 
 @media screen and (max-width: 749px) {
-	.m{
-		&m{
-			&t{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						margin-top: vw($i) !important;
-					}
-				}
-			}
-			&b{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						margin-bottom: vw($i) !important;
-					}
-				}
-			}
-		}
-		&p{
-			&t{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						padding-top: vw($i) !important;
-					}
-				}
-			}
-			&b{
-				@for $i from 0 through 100 {
-					&#{$i} {
-						padding-bottom: vw($i) !important;
-					}
-				}
-			}
-		}
-		&hide{
-			display: none !important;
-		}
-	}
+    .m {
+        &m {
+            &t {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        margin-top: vw($i) !important;
+                    }
+                }
+            }
+            &b {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        margin-bottom: vw($i) !important;
+                    }
+                }
+            }
+        }
+        &p {
+            &t {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        padding-top: vw($i) !important;
+                    }
+                }
+            }
+            &b {
+                @for $i from 0 through 150 {
+                    &#{$i} {
+                        padding-bottom: vw($i) !important;
+                    }
+                }
+            }
+        }
+        &hide {
+            display: none !important;
+        }
+    }
 }

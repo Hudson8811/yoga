@@ -1,9 +1,10 @@
 /* libs */
 
 //= libs/jquery-3.3.1.min.js
-$(document).on("mobileinit", function () {
-  $.mobile.ignoreContentEnabled = true;
-  $.mobile.ajaxEnabled = false;
+$(document).on("mobileinit", function() {
+	$.mobile.ignoreContentEnabled = true;
+	$.mobile.ajaxEnabled = false;
+	$.mobile.loader = false;
 });
 //= libs/jquery.mobile.custom.min.js
 //= libs/jquery.fancybox.min.js
