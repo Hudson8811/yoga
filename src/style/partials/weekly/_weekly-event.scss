@@ -1,29 +1,31 @@
 .weekly-event {
   width: 100%;
-  padding: 59px 58px 49px;
+  padding: 56px 58px 46px;
   border-radius: 5px;
   border: 1px solid #dee6e9;
   background-color: #fff;
 
   @include media(1150) {
-    padding: 33px 37px 31px;
+    padding: 33px 37px 24px;
   }
 
   @include media(749) {
     padding: vw(20) vw(14) vw(27);
+    padding: 0;
+    border: unset;
   }
 
   &__heading {
-    margin-bottom: 28px;
+    margin-bottom: 17px;
     display: flex;
     align-items: center;
 
     @include media(1150) {
-      margin-bottom: 27px;
+      margin-bottom: 9px;
     }
 
     @include media(749) {
-      margin-bottom: vw(14);
+      margin-bottom: vw(9);
     }
 
     &-logo {
@@ -60,6 +62,7 @@
         margin-right: vw(12);
         font-size: vw(15);
         line-height: vw(30);
+        flex-grow: 1;
       }
     }
 
@@ -78,7 +81,7 @@
 
   &__info {
     position: relative;
-    margin-bottom: 26px;
+    margin-bottom: 19px;
     max-height: 149px;
     color: #5a5e64;
     overflow: hidden;
@@ -91,11 +94,16 @@
 
     @include media(1150) {
       max-height: 124px;
+
+      &.kspc-simple-text__p:not(:first-child) {
+        margin-top: 6px;
+        margin-bottom: 15px;
+      }
     }
 
     @include media(749) {
-      margin-top: vw(14) !important;
-      margin-bottom: vw(26);
+      margin-top: vw(4) !important;
+      margin-bottom: vw(2) !important;
       max-height: vw(124);
     }
 
@@ -151,6 +159,10 @@
       top: 96px;
     }
 
+    @media screen and (max-width: 1150px) and (min-width: 750px) {
+      padding-right: 80px;
+    }
+
     @include media(749) {
       top: vw(96);
       padding-right: vw(19);
@@ -197,26 +209,50 @@
   }
 
   &__media {
+    position: relative;
     margin-bottom: 16px;
     width: 100%;
-    height: 448px;
     border-radius: 5px;
     overflow: hidden;
 
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 61.7469879518%;
+    }
+
     @include media(1150) {
-      height: 385px;
+      margin-bottom: 10px;
     }
 
     @include media(749) {
-      margin-bottom: vw(12);
-      height: vw360(187.37);
+      margin-bottom: vw(8);
       border-radius: vw(5);
+      height: auto;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+
+      &--video {
+
+        &::before {
+          padding-top: 61.7469879518%;
+        }
+      }
     }
   }
 
   &__image {
     width: 100%;
     height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
 
     &-item {
       width: 100%;
@@ -232,6 +268,9 @@
     display: inline-block;
     width: 100%;
     height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     @media screen and (min-width: 993px) {
       &:hover {
@@ -240,6 +279,12 @@
           transition-duration: 0.4s;
         }
       }
+    }
+
+    @include media(749) {
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     &::after {
@@ -337,7 +382,7 @@
       @include hov();
 
       &:not(:last-child) {
-        margin-right: 23px;
+        margin-right: 22px;
 
         @include media(749) {
           margin-right: vw(23);
@@ -346,10 +391,14 @@
     }
 
     &-icon {
-      margin-right: 8px;
 
-      @include media(749) {
-        margin-right: vw(8);
+      &:not(:last-child),
+      &.weekly-event__likes-icon {
+        margin-right: 8px;
+
+        @include media(749) {
+          margin-right: vw(8);
+        }
       }
     }
 
@@ -396,8 +445,8 @@
     &-icon {
       width: 20px;
       height: 19px;
-			object-fit: contain;
-			display: block;
+      object-fit: contain;
+      display: block;
 
       @include media(749) {
         width: vw(16);
@@ -405,124 +454,287 @@
       }
     }
   }
+
+  &__view-comments-wrap {
+
+    @include media(1150) {}
+
+    @include media(749) {}
+  }
+
+  &__view-comments {
+    font-size: 17px;
+    line-height: 30px;
+    color: #AFB4BF;
+
+    @include media(1150) {
+
+      font-size: 15px;
+    }
+
+    @include media(749) {
+      font-size: vw(15);
+      line-height: vw(30);
+
+    }
+  }
 }
 
 
 
 
+.weekly-event__unwrap-tablet {
+  content: '';
+  display: block;
+  margin-top: -19px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #AFB4BF;
+  cursor: pointer;
+  transition-duration: .3s;
 
-
-
-
-
-@media screen and (min-width: 1151px){
-	.component-hide-block .kspc-twpah-unwrap,
-	.weekly-event__unwrap {
-		&--more{
-			&-x{
-				&-desktop{
-					&-lefttotal{
-						padding-right: 0;
-						width: 100%;
-					}
-					&-left{
-						padding-right: calc(100% - 150px);
-					}
-					&-center{
-						padding-right: calc(50% - 60px);
-					}
-					&-right{
-						padding-right: 0;
-					}
-				}
-			}
-		}
-	}
-
-	.weekly-event__info{
-		&--more{
-			&-y{
-				&-desktop{
-					max-height: 119px;
-					.weekly-event__unwrap{
-						top: 90px;
-					}
-				}
-			}
-		}
-	}
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
+
+
+
+
+@media screen and (min-width: 1151px) {
+  .weekly-event__unwrap {
+    padding-right: 75px;
+  }
+
+  .component-hide-block .kspc-twpah-unwrap,
+  .weekly-event__unwrap {
+    &--more {
+      &-x {
+        &-desktop {
+          &-lefttotal {
+            padding-right: 0;
+            width: 100%;
+          }
+
+          &-left {
+            padding-right: calc(100% - 150px);
+          }
+
+          &-center {
+            padding-right: calc(50% - 60px);
+          }
+
+          &-right {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .weekly-event__info {
+    &.kspc-simple-text__p {
+      margin-top: 12px;
+
+      @include media(749) {
+        margin-top: vw(12);
+      }
+    }
+
+    &--more {
+      &-y {
+        &-desktop {
+          max-height: 119px;
+
+          .weekly-event__unwrap {
+            top: 90px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1150px) and (min-width: 750px) {
-	.component-hide-block .kspc-twpah-unwrap,
-	.weekly-event__unwrap {
-		&--more{
-			&-x{
-				&-tablet{
-					&-lefttotal{
-						padding-right: 0;
-						width: 100%;
-					}
-					&-left{
-						padding-right: calc(100% - 150px);
-					}
-					&-center{
-						padding-right: calc(50% - 60px);
-					}
-					&-right{
-						padding-right: 0;
-					}
-				}
-			}
-		}
-	}
 
-	.weekly-event__info{
-		&--more{
-			&-y{
-				&-tablet{
-					max-height: 99px;
-					.weekly-event__unwrap{
-						top: 71px;
-					}
-				}
-			}
-		}
-	}
+  .component-hide-block .kspc-twpah-unwrap,
+  .weekly-event__unwrap {
+    &--more {
+      &-x {
+        &-tablet {
+          &-lefttotal {
+            padding-right: 0;
+            width: 100%;
+          }
+
+          &-left {
+            padding-right: calc(100% - 150px);
+          }
+
+          &-center {
+            padding-right: calc(50% - 60px);
+          }
+
+          &-right {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .weekly-event__info {
+    &--more {
+      &-y {
+        &-tablet {
+          max-height: 99px;
+
+          .weekly-event__unwrap {
+            top: 71px;
+          }
+        }
+      }
+    }
+  }
 }
-@media screen and (max-width: 749px) {
-	.component-hide-block .kspc-twpah-unwrap,
-	.weekly-event__unwrap {
-		&--more{
-			&-x{
-				&-mobile{
-					&-lefttotal{
-						padding-right: 0;
-						width: 100%;
-					}
-					&-left{
-						padding-right: calc(50% - 7vw);
-					}
-					&-center{
-						padding-right: calc(50% - 14vw);
-					}
-					&-right{
-						padding-right: calc(100% - 34vw);
-					}
-				}
-			}
-		}
-	}
 
-	.weekly-event__info{
-		&--more{
-			&-y{
-				&-mobile{
-					max-height: vw(99);
-					.weekly-event__unwrap{
-						top: vw(71);
-					}
-				}
-			}
-		}
-	}
+@media screen and (max-width: 749px) {
+
+  .component-hide-block .kspc-twpah-unwrap,
+  .weekly-event__unwrap {
+    &--more {
+      &-x {
+        &-mobile {
+          &-lefttotal {
+            padding-right: 0;
+            width: 100%;
+          }
+
+          &-left {
+            padding-right: calc(50% - 7vw);
+          }
+
+          &-center {
+            padding-right: calc(50% - 14vw);
+          }
+
+          &-right {
+            padding-right: calc(100% - 34vw);
+          }
+        }
+      }
+    }
+  }
+
+  .weekly-event__info {
+    &--more {
+      &-y {
+        &-mobile {
+          max-height: vw(99);
+
+          .weekly-event__unwrap {
+            top: vw(71);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.weekly .part-wsidebar__main.part-wsidebar__main--weekly-single {
+
+  @media screen and (min-width: 1151px) {}
+
+  @media screen and (max-width: 1150px) {
+    padding-top: 23px;
+
+  }
+
+  @media screen and (max-width: 749px) {
+    padding-top: vw(24);
+  }
+}
+
+.weekly-event--single+.weekly-event--single {
+  padding-top: 0;
+  margin-top: 58px;
+
+  @media screen and (max-width: 1150px) {
+    margin-top: 58px;
+  }
+
+  @media screen and (max-width: 749px) {
+    margin-top: vw(58);
+  }
+}
+
+.weekly-event--single {
+  padding: 5px 0 0;
+  border: 0;
+
+  @media screen and (max-width: 749px) {
+    padding: vw(5) 0 0;
+  }
+
+  .weekly-event__info.kspc-simple-text__p {
+    max-height: 100% !important;
+
+    @media screen and (min-width: 1151px) {
+      margin-top: 32px;
+    }
+
+    @media screen and (max-width: 1150px) {
+      margin-top: 32px;
+      margin-bottom: 23px;
+    }
+
+    @media screen and (max-width: 749px) {
+
+      margin-top: vw(33) !important;
+      margin-bottom: vw(21) !important;
+    }
+  }
+
+  .weekly-event__heading-author {
+    flex-grow: 0;
+  }
+
+  .weekly-event__unwrap {
+    display: none;
+
+    @media screen and (max-width: 1150px) {}
+
+    @media screen and (max-width: 749px) {}
+  }
+
+  .reviews:last-child {
+    margin-bottom: 0;
+
+    @media screen and (max-width: 1150px) {}
+
+    @media screen and (max-width: 749px) {}
+  }
+
+  .reviews {
+
+    @media screen and (min-width: 1151px) {
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 1150px) {}
+
+    @media screen and (max-width: 749px) {}
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+
+      @media screen and (max-width: 1150px) {}
+
+      @media screen and (max-width: 749px) {}
+    }
+  }
 }
