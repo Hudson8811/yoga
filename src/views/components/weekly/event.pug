@@ -29,7 +29,7 @@ mixin weekly-event(video = false, likedClass="")
     //-     span.weekly-event__unwrapper-text
     //-       | Развернуть
 
-    .weekly-event__media(class= (video ? " weekly-event__media--video " : ""))
+    .weekly-event__media(class= (video ? " weekly-event__media--video " : " weekly-event__media--slider "))
       if(video)
         a(href="https://youtu.be/0nTor2By_vg").weekly-event__video
           img(src="img/weekly/image-placeholder.jpg", alt="").weekly-event__video-preview
@@ -38,7 +38,17 @@ mixin weekly-event(video = false, likedClass="")
             span.weekly-event__video-duration-text
               | 15:23
       else
-        .weekly-event__image
+        .weekly-event__media-slider.custom-dots.js-weekly-event__media-slider
+          .weekly-event__media-slider-slide
+            .weekly-event__image
+              img(src="https://via.placeholder.com/150/FF0000/808080/?text=Down.com", alt="").weekly-event__image-item
+          .weekly-event__media-slider-slide
+            .weekly-event__image
+              img(src="https://via.placeholder.com/150/FF0000/808080/?text=Down.com", alt="").weekly-event__image-item
+          .weekly-event__media-slider-slide
+            .weekly-event__image
+              img(src="https://via.placeholder.com/150/FF0000/808080/?text=Down.com", alt="").weekly-event__image-item
+        //.weekly-event__image
           img(src="img/weekly/image-placeholder.jpg", alt="").weekly-event__image-item
 
     .weekly-event__social
@@ -96,7 +106,7 @@ mixin weekly-event(video = false, likedClass="")
       p
         | "Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра"Этот мини-Ретрит по концентрации энергии будет таким же как и большой Ретрит, но по времени займет всего два дня. За эти два дня вы сможете, не выходя из пра
 
-      .kspc-twpah-unwrap.weekly-event__unwrap.js-text-unwrapper
+      .kspc-twpah-unwrap.weekly-event__unwrap.js-text-unwrapper.mhide.thide.dhide
         span.kspc-twpah-unwrap__dots
           | ...
         span.kspc-twpah-unwrap__text
@@ -104,7 +114,7 @@ mixin weekly-event(video = false, likedClass="")
           span.mhide.thide  ещё
           span.dhide.thide  ещё
 
-    .weekly-event__unwrap-bottom.js-weekly-event__unwrap-bottom.dhide.thide ...ещё
+    .weekly-event__unwrap-bottom.js-weekly-event__unwrap-bottom ...ещё
 
 
     .weekly-event__view-comments-wrap
